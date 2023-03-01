@@ -9,15 +9,6 @@
         --fondo-btn-hover: #324352;
     }
 
-    /* Estilos caja de busqueda */
-    #master-searcher{
-        margin: 8px;
-        border-radius: 1rem;
-    }
-    .pull-right{
-        width: 100%;
-    }
-
     .main-content {
         background-color: white !important;
     }
@@ -1359,6 +1350,15 @@
             overflow: hidden;
             padding: 7px;
         }
+
+         /* Estilos caja de busqueda */
+    #master-searcher{
+        margin: 8px;
+        border-radius: 1rem;
+    }
+    .pull-right{
+        width: 100%;
+    }
     }
 
     @media (max-width: 564px) {
