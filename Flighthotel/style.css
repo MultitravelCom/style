@@ -9,6 +9,15 @@
         --fondo-btn-hover: #324352;
     }
 
+    /* Estilos caja de busqueda */
+    #master-searcher{
+        margin: 8px;
+        border-radius: 1rem;
+    }
+    .pull-right{
+        width: 100%;
+    }
+
     .main-content {
         background-color: white !important;
     }
