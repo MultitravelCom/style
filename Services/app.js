@@ -1,3 +1,7 @@
-const hola ="<h1>Hola</h1>";
+class App extend React.Component {
+    render(){
+        return <h1>Hola</h1>
+    }
+}
 
-reactDOM.render(hola, document.getElementById('root'));
+ReactDOM.render(<app/>, document.getElementById('root'));
