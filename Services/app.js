@@ -1,4 +1,4 @@
-import Componente from "https://multitravelcom.github.io/style/Services/Componente.js"
+import Componente from ".Componente";
 
 function Test(){
     return(
