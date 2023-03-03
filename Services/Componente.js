@@ -1,4 +1,4 @@
-import React, {Cmponente} from "react";
+import React, {Componente} from "react";
 
 function Componente() {
     return(
