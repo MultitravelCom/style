@@ -10,4 +10,4 @@ function App() {
 
 
 
-ReactDOM.render(<Test />, document.querySelector("#root"));
+ReactDOM.render(<App />, document.querySelector("#root"));
