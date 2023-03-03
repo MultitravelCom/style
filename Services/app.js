@@ -1,4 +1,4 @@
-import Componente from "/Componente.js"
+import Componente from "./Componente"
 
 function Test(){
     return(
