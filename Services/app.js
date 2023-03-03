@@ -1,6 +1,8 @@
+import Componente from "Componente.js"
+
 function Test(){
     return(
-        <h1>Hola, que tal?</h1>
+        <Componente />
     )
 }
 ReactDOM.render(<Test />, document.querySelector("#root"));
