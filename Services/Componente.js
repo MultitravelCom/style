@@ -1,4 +1,3 @@
-import React, {Componente} from "react";
 
 function Componente() {
     return(
