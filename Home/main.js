@@ -1,2 +1,3 @@
-let solapaFlight = document.querySelectorAll('ul.nav-elem li:nth-child(2)')[0]
+// Resaltar solpa Fligh en la home.
+let solapaFlight = document.querySelectorAll('.nav-ele li:nth-child(2)')[0]
     solapaFlight.classList.add('active');
