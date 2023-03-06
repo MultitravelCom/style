@@ -1,6 +1,6 @@
 // Resaltar solpa Fligh en la home.
-window.addEventListener("load", function() {
-  var nav = document.querySelector("#main-menu ul.nav");
-  var firstLi = nav.querySelector("li:nth-child(2)");
-  firstLi.classList.add("active");
+window.addEventListener('load', () => {
+    let secondNavItem = document.querySelector('#main-menu-products li:first-child');
+    secondNavItem.classList.add('nav-elem');
+    console.log('El código se ha ejecutado correctamente');
 });
