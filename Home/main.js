@@ -1,7 +1,5 @@
 // Resaltar solpa Fligh en la home.
 document.addEventListener('DOMContentLoaded', () => {
-    let solapaFlight = document.querySelector(".nav-elem");
-    solapaFlight.classList.add('active');
-  });
-
-
+    let secondNavItem = document.querySelector('#main-menu-products ul li:nth-child(2)');
+    secondNavItem.classList.add('active');
+});
