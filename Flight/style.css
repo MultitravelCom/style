@@ -10,6 +10,12 @@
     }
 }
 /* --- */
+/* Resultados de vuelo */
+/* 1+/-1 */
+.flight-result__change-dates{
+    display: none;
+}
+/* --- */
 /* Estilos newsletter */
 .fix-margin>.newsletter__container{
    background: #f7f7f7 !important;
