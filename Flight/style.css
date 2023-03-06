@@ -15,7 +15,6 @@
 .flight-result__change-dates{
     display: none;
 }
-<<<<<<< HEAD
 
 /* Caja ed busqueda */
 .singledestination-only{
@@ -25,8 +24,6 @@
     justify-content: flex-start;
 }
 
-=======
->>>>>>> 612a6411dc12813d18fc03d69de4ab045648a550
 /* --- */
 /* Estilos newsletter */
 .fix-margin>.newsletter__container{
