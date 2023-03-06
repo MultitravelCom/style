@@ -2,5 +2,5 @@
 let solapaFlight = document.querySelector('.nav-elem')[2];
 
 document.addEventListener('DOMContentLoadedd', () =>{
-    solapaFlight.classList.toggle('active');
+    solapaFlight.classList.add('active');
 });
