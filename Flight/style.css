@@ -1,16 +1,15 @@
-
 /* Vuelos */
+/* mejor precio */
 .flight-bestprices{
     border-radius: 1rem;
 }
-.btn-tertiary {
-    background-color: brown;
-    color: white;
+
+@media (max-width: 767px) {
+    .flight-bestprices{
+        display: none;
+    }
 }
-.hotel-result{
-    border-radius: 1rem;
-    overflow: hidden;
-}
+/* --- */
 /* Estilos newsletter */
 .fix-margin>.newsletter__container{
    background: #f7f7f7 !important;
