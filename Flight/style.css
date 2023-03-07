@@ -32,6 +32,10 @@
     .result-option__select-option>input{
         display: block !important;
     }
+    /* Mostrar vuelta en mobile */
+    .flight-result__route, .flight-result__route--return{
+        display: inline-block !important;
+    }
     
     /* Estilos newsletter */
     .fix-margin>.newsletter__container {
