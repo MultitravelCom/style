@@ -20,7 +20,7 @@
         display:none;
     }
 .search-summary{
-   display: inline-flex;
+   display: inline-flex !important;
 }
 
 /* Estilos newsletter */
