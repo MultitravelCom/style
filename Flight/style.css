@@ -24,7 +24,7 @@
         display: none;
     }
   /* Caja de busqueda vuelos*/
-    #flight-searcher-more-options, .supsearcher{
+    .btn-more-options{
         display:none;
     }
 }
