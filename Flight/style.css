@@ -19,6 +19,8 @@
     .btn-more-options{
         display:none;
     }
+.search-summary{
+   display: inline-flex;
 }
 
 /* Estilos newsletter */
