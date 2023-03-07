@@ -1,29 +1,41 @@
 /* Vuelos */
 /* mejor precio */
-.flight-bestprices{
+.flight-bestprices {
     border-radius: 1rem;
 }
+
 /* --- */
 /* Resultados de vuelo */
 /* 1+/-1 */
-.flight-result__change-dates{
+.flight-result__change-dates {
     display: none;
 }
+
 /* --- */
 /* MEDIA MOBILE */
 @media (max-width: 767px) {
-    .flight-bestprices{
+    .flight-bestprices {
         display: none;
     }
-  /* Caja de busqueda vuelos*/
-    .btn-more-options{
-        display:none;
+    /* Caja de busqueda vuelos*/
+    .btn-more-options {
+        display: none;
     }
-.search-summary{
-   display: inline-flex !important;
-}
-
-/* Estilos newsletter */
-.fix-margin>.newsletter__container{
-   background: #f7f7f7 !important;
+    .search-summary {
+        display: inline-flex !important;
+    }
+    /* Resultadso de busqueda */
+    /* Checkbox */
+    .result-option__select-option{
+        width: 10%;
+        padding: 0;
+    }
+    .result-option__select-option>input{
+        display: block;
+    }
+    
+    /* Estilos newsletter */
+    .fix-margin>.newsletter__container {
+        background: #f7f7f7 !important;
+    }
 }
