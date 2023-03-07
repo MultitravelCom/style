@@ -1,4 +1,4 @@
-windows.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', ()=>{
 // Mover div fuera del mas opciones.
     let divToMove = document.getElementsByClassName("checkbox")[0];
     let divDestination = document.getElementsByClassName("searcher-row")[0];
