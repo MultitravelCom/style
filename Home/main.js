@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     divDestination.appendChild(divToMove);
 
     //    Cambio de copy de Multiple vuelos a multiple destinos.
-       document.getElementById("flights-searcher-roundtrip-multi").nextSibling.nodeValue = "Multidestino";
-        document.querySelector('.radio').style.display = 'inline-block';
+    document.getElementById("flights-searcher-roundtrip-multi").nextSibling.nodeValue = "Multidestino";
+    document.querySelector('.radio').style.display = 'inline-block';
     // Activa la solapa vuelos
-    document.querySelectorAll('#main-menu-products li')[1].classList.add('active');
+    document.querySelectorAll('#main-menu-products li')[2].classList.add('active');
 });
