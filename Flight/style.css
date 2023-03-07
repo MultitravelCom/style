@@ -28,6 +28,7 @@
     /* Checkbox */
     .result-option__select-option, .result-option__select-option{
         width: 10% !important;
+        margin: auto !important;
     }
     .result-option__select-option>input{
         display: block !important;
