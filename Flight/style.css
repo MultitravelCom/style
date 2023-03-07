@@ -9,14 +9,6 @@
 .flight-result__change-dates{
     display: none;
 }
-
-/* Caja ed busqueda */
-/* .singledestination-only{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: flex-start; */
-}
 /* --- */
 /* MEDIA MOBILE */
 @media (max-width: 767px) {
