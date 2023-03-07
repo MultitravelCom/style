@@ -27,10 +27,8 @@
     #flight-searcher-more-options, .supsearcher{
         display:none;
     }
-/*  Caja de busqueda Alojamiento    */
-    .searcher__on-product-fixed-hidden>btn-more-options{
-        display: none;
 }
+
 /* Estilos newsletter */
 .fix-margin>.newsletter__container{
    background: #f7f7f7 !important;
