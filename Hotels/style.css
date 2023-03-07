@@ -8,6 +8,10 @@
    background: #f7f7f7 !important;
 }
 
+#hotel-searcher{
+width: 100%;
+}
+
 /* MEDIA MOBILE */
 @media (max-width: 767px) {
 /*  Caja de busqueda Alojamiento    */
