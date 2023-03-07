@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-// Mover div fuera del mas opciones.
-    let divToMove = document.getElementsByClassName("checkbox")[0];
-    let divDestination = document.getElementsByClassName("searcher-row")[0];
-
-    divDestination.appendChild(divToMove);
+    // Mover div fuera del mas opciones.
+        let divToMove = document.getElementsByClassName("checkbox")[0];
+        let divDestination = document.getElementsByClassName("searcher-row")[0];
     
-//    Cambio de copy de Multiple vuelos a multiple destinos.
-document.getElementById("flight-searcher-roundtrip-multi").nextSibling.nodeValue = "Multidestino";
+        divDestination.appendChild(divToMove);
+        
+    //    Cambio de copy de Multiple vuelos a multiple destinos.
+    let radioMulti = document.getElementById("flight-searcher-roundtrip-multi");
+    radioMulti.nextElementSibling.querySelector('label').textContent = "Multidestino";   
 });
+    
