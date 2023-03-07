@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', ()=>{
+window.addEventListener('load', ()=>{
 // Mover div fuera del mas opciones.
     let divToMove = document.getElementsByClassName("checkbox")[0];
     let divDestination = document.getElementsByClassName("searcher-row")[0];
@@ -9,4 +9,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
 let multiFlightRadioLabel = document.querySelector('label[for="flight-searcher-roundtrip-multi"]');
 multiFlightRadioLabel.textContent = "Multidestino";
 });
+
 
