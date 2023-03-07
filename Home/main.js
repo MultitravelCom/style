@@ -9,5 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("flights-searcher-roundtrip-multi").nextSibling.nodeValue = "Multidestino";
     document.querySelector('.radio').style.display = 'inline-block';
     // Activa la solapa vuelos
-    document.querySelectorAll('#main-menu-products li')[2].classList.add('active');
+    let liActive= document.querySelectorAll('#main-menu-products .nav-elem');
+    liActive[2].classList.add('active');
+    liActive[1].classList.remove('active');
 });
