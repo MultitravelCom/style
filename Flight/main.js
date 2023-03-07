@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
     divDestination.appendChild(divToMove);
     
 //    Cambio de copy de Multiple vuelos a multiple destinos.
-    let flightRadio = document.getElementById("flight-searcher-roundtrip-multi");
-        flightRadio.nextElementSibling.textContent = "Multidestino";
+    let multiFlightRadio = document.getElementById("flight-searcher-roundtrip-multi");
+    if (multiFlightRadio) {
+        multiFlightRadio.nextElementSibling.textContent = "Multidestino";
+        multiFlightRadio.nextElementSibling.setAttribute('for', 'flight-searcher-roundtrip-multidestino');
+        multiFlightRadio.id = 'flight-searcher-roundtrip-multidestino';
+        multiFlightRadio.value = 'multidestino';
+      }
 });
+
