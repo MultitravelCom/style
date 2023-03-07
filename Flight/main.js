@@ -1,4 +1,5 @@
 window.addEventListener('load', ()=>{
+// Mover div fuera del mas opciones.
     let divToMove = document.getElementsByClassName("checkbox")[0];
     let divDestination = document.getElementsByClassName("searcher-row")[0];
 
@@ -6,5 +7,5 @@ window.addEventListener('load', ()=>{
     
 //    Cambio de copy de Multiple vuelos a multiple destinos.
     let flightRadio = document.getElementById("flight-searcher-roundtrip-multi");
-        flightRadio.parentNode.textContent = "Multidestinos";
+        flightRadio.nextElementSibling.textContent = "Multidestino";
 });
