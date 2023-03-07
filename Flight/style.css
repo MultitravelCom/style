@@ -27,8 +27,8 @@
     /* Resultadso de busqueda */
     /* Checkbox */
     .result-option__select-option{
-        width: 10%;
-        padding: 0;
+        width: 10% !important;
+        padding: 0  !important;
     }
     .result-option__select-option>input{
         display: block;
