@@ -1,15 +1,8 @@
 
-/* Vuelos */
-.flight-bestprices{
-    border-radius: 1rem;
-}
-.btn-tertiary {
-    background-color: brown;
-    color: white;
-}
-.hotel-result{
-    border-radius: 1rem;
-    overflow: hidden;
+/* Home */
+/* Ocultar Multiples vuelos  */
+.radio label:nth-child(3) {
+  display: none;
 }
 /* Estilos newsletter */
 .fix-margin>.newsletter__container{
