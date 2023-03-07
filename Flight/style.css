@@ -23,8 +23,17 @@
     width: 100%;
     justify-content: flex-start;
 }
-
 /* --- */
+/* MEDIA MOBILE */
+@media (max-width: 767px) {
+    .flight-bestprices{
+        display: none;
+    }
+  /* Caja de busqueda */
+    .supsearcher{
+        display:none;
+    }
+}
 /* Estilos newsletter */
 .fix-margin>.newsletter__container{
    background: #f7f7f7 !important;
