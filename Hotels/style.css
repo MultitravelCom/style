@@ -11,6 +11,6 @@
 /* MEDIA MOBILE */
 @media (max-width: 767px) {
 /*  Caja de busqueda Alojamiento    */
-    .searcher__on-product-fixed-hidden>btn-more-options{
+    .searcher__on-product-fixed-hidden>.btn-more-options{
         display: none;
 }
