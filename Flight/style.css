@@ -23,10 +23,13 @@
     .flight-bestprices{
         display: none;
     }
-  /* Caja de busqueda */
+  /* Caja de busqueda vuelos*/
     #flight-searcher-more-options, .supsearcher{
         display:none;
     }
+/*  Caja de busqueda Alojamiento    */
+    .searcher__on-product-fixed-hidden>btn-more-options{
+        display: none;
 }
 /* Estilos newsletter */
 .fix-margin>.newsletter__container{
