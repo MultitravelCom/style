@@ -5,6 +5,6 @@ window.addEventListener('load', ()=>{
     divDestination.appendChild(divToMove);
     
 //    Cambio de copy de Multiple vuelos a multiple destinos.
-    let flightRadio = documente.getElementById("flight-searcher-roundtrip-multi");
+    let flightRadio = document.getElementById("flight-searcher-roundtrip-multi");
         flightRadio.parentNode.textContent = "Multidestinos";
 });
