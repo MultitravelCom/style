@@ -26,12 +26,12 @@
     }
     /* Resultadso de busqueda */
     /* Checkbox */
-    .result-option__select-option{
+    .result-option__select-option, .result-option__select-option{
         width: 10% !important;
         padding: 0  !important;
     }
     .result-option__select-option>input{
-        display: block;
+        display: block !important;
     }
     
     /* Estilos newsletter */
