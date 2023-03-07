@@ -3,12 +3,6 @@
 .flight-bestprices{
     border-radius: 1rem;
 }
-
-@media (max-width: 767px) {
-    .flight-bestprices{
-        display: none;
-    }
-}
 /* --- */
 /* Resultados de vuelo */
 /* 1+/-1 */
