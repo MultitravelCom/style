@@ -1,12 +1,4 @@
-
-/* Vuelos */
-.flight-bestprices{
-    border-radius: 1rem;
-}
-.btn-tertiary {
-    background-color: brown;
-    color: white;
-}
+/* Alojamiento */
 .hotel-result{
     border-radius: 1rem;
     overflow: hidden;
@@ -14,4 +6,11 @@
 /* Estilos newsletter */
 .fix-margin>.newsletter__container{
    background: #f7f7f7 !important;
+}
+
+/* MEDIA MOBILE */
+@media (max-width: 767px) {
+/*  Caja de busqueda Alojamiento    */
+    .searcher__on-product-fixed-hidden>btn-more-options{
+        display: none;
 }
