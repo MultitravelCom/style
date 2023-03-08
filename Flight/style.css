@@ -22,9 +22,23 @@
     /* Caja de busqueda vuelos*/
     .btn-more-options {
         display: none;
-    }
+    }   
 .search-summary{
    display: inline-flex !important;
+}
+/* Cambios btn - MULT-50 */
+.flight-selection__booking{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flight-selection__change-button, .flight-selection__booking-button{
+    min-width: 47% !important;
+    border-radius: 40px !important; 
+}
+.btn-quaternary{
+    background-color: white !important;
+    border-color: #9b0023 !important;
 }
  /* Resultadso de busqueda */
     /* Checkbox */
