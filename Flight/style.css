@@ -13,7 +13,7 @@
     display: none;
 }
 .checkbox{
-    left: 11px;
+    margin-top: 1rem;
 }
 
 /* Resultados de vuelo */
@@ -90,7 +90,7 @@
     /* Posicionamiento Solo directos / +/- 3 -  */
     .checkbox{
         display: flex;
-    margin: 15px 0;
+    margin: 16px 0;
     width: 100%;
     }
     
