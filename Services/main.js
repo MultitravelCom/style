@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     // Mover div fuera del mas opciones.
-    let divToMove = document.getElementById("home-content-1");
+    let divToMove = document.getElementById("home-sliding-offers-2");
     let divDestination = document.getElementById("test-card");
     
-        divDestination.append(divToMove);
+        divDestination.appendChild(divToMove);
     });
