@@ -1,7 +1,8 @@
-document.addEventListener('DOMContentLoaded', ()=>{
-    // Mover div fuera del mas opciones.
+document.addEventListener('DOMContentLoaded', () => {
     let divToMove = document.getElementById("home-sliding-offers-2");
     let divDestination = document.getElementById("test-card");
-    
-        divDestination.appendChild(divToMove);
-    });
+  
+    if (divToMove && divDestination) { // Verifica si los elementos existen
+      divDestination.appendChild(divToMove);
+    }
+  });
