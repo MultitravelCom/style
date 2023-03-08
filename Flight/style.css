@@ -11,8 +11,11 @@
 /* ocultar radius */
 .radio {
     display: none;
-  }
-/* --- */
+}
+.checkbox{
+    left: 11px;
+}
+
 /* Resultados de vuelo */
 /* 1+/-1 */
 .flight-result__change-dates {
@@ -72,7 +75,7 @@
     .flight-row{
         margin-bottom: 20px;
     }
-    /* Checkbox */
+    /* Radius resultados de vuelos */
     .result-option__select-option, .result-option__select-option{
         width: 10% !important;
         margin: auto !important;
@@ -87,7 +90,7 @@
     /* Posicionamiento Solo directos / +/- 3 -  */
     .checkbox{
         display: flex;
-    margin: 15px;
+    margin: 15px 0;
     width: 100%;
     }
     
