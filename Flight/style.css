@@ -61,6 +61,12 @@
 }
 
  /* Resultadso de busqueda */
+ /* Mejoras caja de busqueda - Estilos */
+    
+ /* Radios solo ida - i/d - Multedestino */
+    .flight-row{
+        margin-bottom: 20px;
+    }
     /* Checkbox */
     .result-option__select-option, .result-option__select-option{
         width: 10% !important;
@@ -73,6 +79,13 @@
     .flight-result__route, .flight-result__route--return{
         display: inline-block !important;
     }
+    /* Posicionamiento Solo directos / +/- 3 -  */
+    .checkbox{
+        display: flex;
+    margin: 15px;
+    width: 100%;
+    }
+    
 
 /* Estilos newsletter */
 .fix-margin>.newsletter__container{
