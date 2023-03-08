@@ -3,5 +3,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
     let divToMove = document.getElementById("home-content-1");
     let divDestination = document.getElementById("test-card");
     
-        divDestination.appendChild(divToMove);
+        divDestination.append(divToMove);
     });
