@@ -1,4 +1,6 @@
-const homeContent1 = document.getElementById("home-sliding-offers-2");
-const destinationDiv = document.querySelector(".main__conteiner main__conteiner-principal");
+const homeContent2 = document.getElementById("home-content-2");
+const nuevoDiv = document.createElement("p");
 
-destinationDiv.appendChild(homeContent1);
+nuevoDiv.textContent = "Hola";
+
+homeContent2.appendChild(nuevoDiv);
