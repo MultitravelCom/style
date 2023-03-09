@@ -3,4 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let divDestination = document.getElementById("test-card");
   
         divDestination.appendChild(divToMove);
+
+        console.log(divToMove,divDestination );
   });
