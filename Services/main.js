@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let divToMove = document.querySelector(".sliding-offers-v3");
+    let divToMove = document.querySelector("#home-content-1");
     let divDestination = document.getElementById("test-card");
   
         divDestination.appendChild(divToMove);
