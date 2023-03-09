@@ -21,6 +21,10 @@
 .flight-result__change-dates {
     display: none;
 }
+/* Resultado de vuelos */
+.results-list__item > * {
+    border-radius: 8px;
+}
 /* --- */
 /* MEDIA MOBILE */
 @media (max-width: 767px) {
