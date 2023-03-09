@@ -94,7 +94,7 @@
     width: 100%;
     }
     .results-list__item > * {
-        border: 1px solid red;
+        border-radius: 8px;
     }
 
 /* Estilos newsletter */
