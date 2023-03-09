@@ -1,8 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let divToMove = document.querySelector("#home-content-1");
-    let divDestination = document.getElementById("test-card");
-  
-        divDestination.appendChild(divToMove);
+const homeContent1 = document.getElementById("home-content-1");
+const destinationDiv = document.getElementById("test-card");
 
-        console.log(divToMove,divDestination );
-});
+destinationDiv.appendChild(homeContent1);
