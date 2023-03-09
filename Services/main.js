@@ -1,6 +1,6 @@
-const homeContent2 = document.getElementById("home-content-2");
-const nuevoDiv = document.createElement("p");
+document.addEventListener('DOMContentLoaded', ()=>{
+    let moverDiv = document.querySelector('#home-content-1');
+    let moverA = document.querySelector('.main_conteiner__s1_medio__paquetes');
 
-nuevoDiv.textContent = "Hola";
-
-homeContent2.appendChild(nuevoDiv);
+    moverA.insertBefore(moverDiv, moverA.firstChild);
+});
