@@ -93,8 +93,23 @@
     margin: 16px 0;
     width: 100%;
     }
+    /* Resultados de busqueda Vuelos */
     .results-list__item > * {
         border-radius: 8px;
+    }
+    .flight-result__route {
+        border: 1px solid #cccccc;
+        border-radius: 0 0 1rem 1rem;
+        overflow: hidden;
+    }
+    .result{
+        background-color: transparent !important;
+    }
+    .info-card__content{
+        background-color: white !important;
+    }
+    .flight-result__route:last-child{
+        border-radius: 1rem;
     }
 
 /* Estilos newsletter */
