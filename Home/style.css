@@ -7,6 +7,10 @@
 .supsearcher{
   display: none;
 }
+.singledestination-only>.checkbox{
+  margin-top: 4px !important;
+  margin-bottom: 21px !important;
+}
 .radio {
     display: none;
   }
