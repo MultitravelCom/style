@@ -21,8 +21,11 @@
 .flight-result__change-dates {
     display: none;
 }
-/* Resultado de vuelos */
 .results-list__item > * {
+    border-radius: 8px;
+}
+/* Boder radius caja vuelo seleccionado */
+.flight-selection__box{
     border-radius: 8px;
 }
 /* --- */
