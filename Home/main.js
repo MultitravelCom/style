@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.radio').style.display = 'inline-block';
     
     // Activa la solapa vuelos
-    let ulProducts = document.querySelector('#main-menu-products ul');
+    let ulProducts = document.querySelector('.navbar ul');
     let secondNavItem = ulProducts.querySelector('.nav-elem:nth-child(2)');
     secondNavItem.classList.add('active');
 });
