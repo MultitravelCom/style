@@ -98,22 +98,29 @@
     width: 100%;
     }
     /* Resultados de busqueda Vuelos */
+    /* Border-Radius resultados*/
     .results-list__item > * {
         border-radius: 8px;
+        border-radius: 8px 8px 0 0;
+    }
+    .flight-result__booking{
+        border-radius: 8px 8px 0 0 !important;
     }
     .flight-result__route {
         border: 1px solid #cccccc;
-        border-radius: 0 0 1rem 1rem;
         overflow: hidden;
+    }
+    .flight-result__route--departure{
+        margin-bottom: -5px !important;
+    }
+    .flight-result__route--return{
+        border-radius: 0 0 8px 8px !important;
     }
     .result{
         background-color: transparent !important;
     }
     .info-card__content{
         background-color: white !important;
-    }
-    .flight-result__route:last-child{
-        border-radius: 1rem;
     }
 
 /* Estilos newsletter */
