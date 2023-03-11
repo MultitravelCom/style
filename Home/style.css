@@ -1,7 +1,12 @@
 
 /* Home */
 /* Caja de busqueda */
+/* Ocultar btn mas opciones */
+
 /* ocultar radius */
+.singledestination-only{
+  display: none;
+}
 .radio {
     display: none;
   }
