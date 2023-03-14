@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-    let moverDiv = document.querySelector('#home-content-1');
-    let moverA = document.querySelector('.main_conteiner__s1_medio__paquetes');
-
-    moverA.appendChild(moverDiv);
+    // Acomoda #bannerCentral al top y cambia la clase de none a inline.
+    let moverA = document.querySelector('#home-content-1');
+    let moverEn = document.querySelector('#banner__central')
+    let primerHijo = moverA.firstChild;
+    
+    moverA.insertBefore(moverEn, primerHijo);
+    primerHijo.style.display = 'inline-block';
 });
