@@ -431,6 +431,7 @@ source>img {
     .col-inline-block {
         width: 88%;
        padding-right: 0 !important;
+       padding-left: 6px !important;
     }
 
     /* Estilos btn buscar mobile */
