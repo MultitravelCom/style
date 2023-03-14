@@ -4,5 +4,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
     let primerHijo = moverA.firstChild;
     
     moverA.insertBefore(moverEn, primerHijo);
-    primerHijo.style.display = 'inline-block';
+    moverEn.style.display = 'inline-block';
 });
