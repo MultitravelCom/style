@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
 
     const btnLesft = document.querySelector('.btnLeft');
     const btnRight = document.querySelector('.btnRight');
