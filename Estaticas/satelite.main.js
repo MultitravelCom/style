@@ -1,6 +1,6 @@
 window.addEventListener('load', function (e) {
     event.preventDefault()
-    new Glider(document.querySelector(".carusel__lista"), {
+    new Glider(document.querySelector(".carrusel__lista"), {
         slidesToShow: 1,
         slidesToScroll: 2,
         draggable: true,
