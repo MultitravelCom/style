@@ -428,10 +428,16 @@ source>img {
         display: block;
     }
 
+    /* estilo cards - GAP */
+
     .col-inline-block {
         width: 88%;
        padding-right: 0 !important;
        padding-left: 6px !important;
+    }
+
+    .panel>.row{
+        margin-left: -4.5px !important;
     }
 
     /* Estilos btn buscar mobile */
