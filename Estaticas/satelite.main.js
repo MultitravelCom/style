@@ -1,7 +1,7 @@
 window.addEventListener('load', function () {
 
-    const btnLesft = document.getElementById('btnLeft');
-    const btnRight = document.getElementById('btnRight');
+    const btnLesft = document.querySelector('.btnLeft');
+    const btnRight = document.querySelector('.btnRight');
 
     btnLesft.addEventListener('click', function(event) {
     event.preventDefault(); // Evita que la página se recargue
