@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
     { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' }
   ];
 
-  items.forEach(function (item) {
-    const btnLesft = document.querySelector('.item.btnLeft');
-    const btnRight = document.querySelector('.item.btnRight');
+  items.forEach(function(item) {
+    const btnLesft = document.querySelector(item.btnLeft);
+    const btnRight = document.querySelector(item.btnRight);
 
     btnLesft.addEventListener('click', function (event) {
       event.preventDefault();
