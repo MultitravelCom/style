@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
           slidesToScroll: 1,
           draggable: true,
           arrows: {
-              prev: '.carrusel__anterior',
-              next: '.carrusel__siguiente'
+              prev: '.btnLeft2',
+              next: '.btnRight2'
           },
           responsive: [
               {
