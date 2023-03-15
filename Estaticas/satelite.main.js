@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnLesft2 = document.querySelector('.btnLeft2');
     const btnRight2 = document.querySelector('.btnRight2');
 
-    const btnLesft3 = document.querySelector('.btnLeft2');
-    const btnRight3 = document.querySelector('.btnRight2');
+    const btnLesft3 = document.querySelector('.btnLeft3');
+    const btnRight3 = document.querySelector('.btnRight3');
 
     btnLesft.addEventListener('click', function(event) {
     event.preventDefault(); 
