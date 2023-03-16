@@ -789,6 +789,7 @@ span .glyphicon {
 
     body.home.home--default .home-v5 .sliding-offers-v3 .panel .row {
         display: block;
+        margin-left: -3px;
     }
 
     .col-inline-block {
