@@ -79,15 +79,14 @@
 }
  /* Estilo cards Juniper */
  .sliding-offers__image-holder>picture>img{
-    padding:6px;
-    border-radius: 1rem;
+    padding:6px !important;
+    border-radius: 1rem !important;
 }
 .sliding-offers__image-holder img {
     max-width: 100%;
     max-height: 150px;
     
 }
-
 .sliding-offers__image-holder {
     position: relative;
     overflow: hidden;
@@ -95,6 +94,9 @@
 .caption>.force-pull-left{
     position: absolute;
     bottom: 28px;
+}
+.scrollable-step{
+    padding: 0 !important;
 }
 
 /********** SECCION DESTACODOS *****************/
@@ -774,8 +776,8 @@ span .glyphicon {
         width: 0;
     }
 
-    body.home.home--default .home-v5 .sliding-offers-v3 .panel .row {
-        display: block;
+    body.home.home--default .home-v5 .sliding-offers-v3 .panel .thumbnail {
+        min-height: none;
     }
 
     .col-inline-block {
@@ -783,11 +785,11 @@ span .glyphicon {
         margin: auto;
     }
     .sliding-offers-v3 .panel .caption.main {
-        min-height: 212px;
+        min-height: 212px !important;
 }
 
+}
 /* Estilos newsletter */
 .fix-margin>.newsletter__container {
     background: #f7f7f7 !important;
-}
 }
