@@ -61,9 +61,8 @@
     letter-spacing: 0.1px;
 }
 
-/* Seccion Cards */
+/************ Seccion Cards *****************/
 /* Titulos */
-
 .sliding-offers-v3>.offer-title {
     margin: 0 !important;
 }
@@ -78,8 +77,20 @@
     font-size: 20px;
     letter-spacing: 0.1px;
 }
+ /* Estilo cards Juniper */
+ .sliding-offers__image-holder>picture>img{
+    padding-top: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 16px;
+}
+.sliding-offers__image-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-/* SECCION DESTACODOS */
+/********** SECCION DESTACODOS *****************/
 .main__conteiner__s1__destacado {
     display: flex;
     justify-content: center;
