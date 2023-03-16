@@ -95,9 +95,6 @@
     position: absolute;
     bottom: 28px;
 }
-.scrollable-step{
-    padding: 0 !important;
-}
 
 /********** SECCION DESTACODOS *****************/
 .main__conteiner__s1__destacado {
@@ -776,9 +773,9 @@ span .glyphicon {
         width: 0;
     }
 
-    body.home.home--default .home-v5 .sliding-offers-v3 .panel .thumbnail {
+    /* body.home.home--default .home-v5 .sliding-offers-v3 .panel .thumbnail {
         min-height: none;
-    }
+    } */
 
     .col-inline-block {
         width: 78%;
@@ -786,6 +783,9 @@ span .glyphicon {
     }
     .sliding-offers-v3 .panel .caption.main {
         min-height: 212px !important;
+}
+.scrollable-step{
+    padding: 0 !important;
 }
 
 }
