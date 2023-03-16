@@ -9,7 +9,7 @@
     --fondo-btn-hover: #324352;
 }
 /* Caja de busqueda */
-.home-carousel>.home-carousel{
+#home-carousel>.carousel-inner{
     min-width: 290px;
 }
 /* nuevo espacio */
@@ -570,7 +570,7 @@ span .glyphicon {
 }
 
 #quote-carousel>.carousel-inner {
-    max-height: 100% !important;
+    max-height: 100%;
 }
 
 /**
