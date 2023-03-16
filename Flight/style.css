@@ -10,7 +10,7 @@
 }
 /* Caja de busqueda */
 #home-carousel>.carousel-inner{
-    min-width: 290px;
+    height: 290px;
 }
 /* nuevo espacio */
 #home-content-5 {
