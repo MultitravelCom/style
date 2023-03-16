@@ -569,7 +569,7 @@ span .glyphicon {
     background: #333333;
 }
 
-.carousel-inner {
+#quote-carousel>.carousel-inner {
     max-height: 100% !important;
 }
 
