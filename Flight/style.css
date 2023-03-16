@@ -450,7 +450,7 @@
     flex-wrap: wrap;
 }
 
-.comentarios_seccion::scrollbar {
+.comentarios_seccion::-webkit-scrollbar {
     width: 0;
 }
 
@@ -783,9 +783,6 @@ span .glyphicon {
     }
     .sliding-offers-v3 .panel .caption.main {
         min-height: 212px !important;
-}
-.scrollable-step{
-    padding: 0 !important;
 }
 
 }
