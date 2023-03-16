@@ -702,8 +702,8 @@ span .glyphicon {
 
     /* SECCION 2 */
     .main__conteiner__s2 {
-        margin-bottom: 3rem;
         margin: 0;
+        margin-bottom: 3rem;
     }
 
     .main__conteiner__s2__pagos {
