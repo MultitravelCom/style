@@ -78,7 +78,7 @@
     letter-spacing: 0.1px;
 }
  /* Estilo cards Juniper */
- /* .sliding-offers__image-holder>picture>img{
+ .sliding-offers__image-holder>picture>img{
     padding:6px !important;
     border-radius: 1rem !important;
 }
@@ -94,7 +94,7 @@
 .caption>.force-pull-left{
     position: absolute;
     bottom: 28px;
-} */
+}
 
 /********** SECCION DESTACODOS *****************/
 .main__conteiner__s1__destacado {
@@ -772,14 +772,16 @@ span .glyphicon {
     .sliding-offers-v3>.panel::-webkit-scrollbar {
         width: 0;
     }
-
+    body.home.home--default .home-v5 .sliding-offers-v3 .panel .row{
+        display: block;
+    }
     .col-inline-block {
         width: 78%;
         margin: auto;
     }
-    /* .sliding-offers-v3 .panel .caption.main {
+    .sliding-offers-v3 .panel .caption.main {
         min-height: 212px !important;
-} */
+}
 
 }
 /* Estilos newsletter */
