@@ -78,7 +78,7 @@
     letter-spacing: 0.1px;
 }
  /* Estilo cards Juniper */
- .sliding-offers__image-holder>picture>img{
+ /* .sliding-offers__image-holder>picture>img{
     padding:6px !important;
     border-radius: 1rem !important;
 }
@@ -94,7 +94,7 @@
 .caption>.force-pull-left{
     position: absolute;
     bottom: 28px;
-}
+} */
 
 /********** SECCION DESTACODOS *****************/
 .main__conteiner__s1__destacado {
