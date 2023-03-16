@@ -773,17 +773,13 @@ span .glyphicon {
         width: 0;
     }
 
-    /* body.home.home--default .home-v5 .sliding-offers-v3 .panel .thumbnail {
-        min-height: none;
-    } */
-
     .col-inline-block {
         width: 78%;
         margin: auto;
     }
-    .sliding-offers-v3 .panel .caption.main {
+    /* .sliding-offers-v3 .panel .caption.main {
         min-height: 212px !important;
-}
+} */
 
 }
 /* Estilos newsletter */
