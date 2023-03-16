@@ -8,26 +8,31 @@
     --fondo-btn: #0d4e88;
     --fondo-btn-hover: #324352;
 }
+
 /****** Caja de busqueda*********** */
-#home-carousel>.carousel-inner{
+#home-carousel>.carousel-inner {
     height: 290px;
 }
+
 /* Ocultar mas opciones en caja de busqueda */
 #flight-searcher-more-options,
-.btn-more-options
-{
+.btn-more-options {
     display: none;
 }
+
 /* nuevo espacio */
 #home-content-5 {
     display: none;
 }
+
 #home-top {
     margin-bottom: 1rem !important;
 }
+
 .main-content {
     background-color: white !important;
 }
+
 .promo_mobile {
     display: revert;
 }
@@ -77,26 +82,31 @@
     font-size: 20px;
     letter-spacing: 0.1px;
 }
- /* Estilo cards Juniper */
- .sliding-offers__image-holder>picture>img{
-    padding:6px !important;
+
+/* Estilo cards Juniper */
+.sliding-offers__image-holder>picture>img {
+    padding: 6px !important;
     border-radius: 1rem !important;
 }
+
 .sliding-offers__image-holder img {
     width: 100%;
     height: 100%;
-    
+
 }
+
 .sliding-offers__image-holder {
     position: relative;
     overflow: hidden;
 }
-.caption>.force-pull-left{
+
+.caption>.force-pull-left {
     position: absolute;
     bottom: 28px;
 }
-.sliding-offers__image-holder picture{
-    position:inherit !important;
+
+.sliding-offers__image-holder picture {
+    position: inherit !important;
 }
 
 /********** SECCION DESTACODOS *****************/
@@ -775,18 +785,27 @@ span .glyphicon {
     .sliding-offers-v3>.panel::-webkit-scrollbar {
         width: 0;
     }
-    body.home.home--default .home-v5 .sliding-offers-v3 .panel .row{
+
+    body.home.home--default .home-v5 .sliding-offers-v3 .panel .row {
         display: block;
     }
+
     .col-inline-block {
         width: 78%;
         margin: auto;
     }
+
     .sliding-offers-v3 .panel .caption.main {
         min-height: 212px !important;
-}
+    }
+
+    .scrollable-step {
+        padding: 0 !important;
+        padding-left: 3px !important;
+    }
 
 }
+
 /* Estilos newsletter */
 .fix-margin>.newsletter__container {
     background: #f7f7f7 !important;
