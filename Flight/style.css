@@ -8,20 +8,20 @@
     --fondo-btn: #0d4e88;
     --fondo-btn-hover: #324352;
 }
-
+/* Caja de busqueda */
+.home-carousel>.home-carousel{
+    min-width: 290px;
+}
 /* nuevo espacio */
 #home-content-5 {
     display: none;
 }
-
 #home-top {
     margin-bottom: 1rem !important;
 }
-
 .main-content {
     background-color: white !important;
 }
-
 .promo_mobile {
     display: revert;
 }
@@ -757,12 +757,9 @@ span .glyphicon {
         width: 88%;
         margin: auto;
     }
-
-
 }
 
 /* Estilos newsletter */
 .fix-margin>.newsletter__container {
     background: #f7f7f7 !important;
-}
 }
