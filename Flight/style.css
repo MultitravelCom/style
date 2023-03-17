@@ -809,7 +809,7 @@ span .glyphicon {
         padding-left: 3px !important;
     }
     .sliding-offers__image-holder img {
-        min-height: 150px;
+        min-height: 150px !important; 
     
     }
 }
