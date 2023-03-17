@@ -85,6 +85,9 @@
 .subtitle{
     margin-bottom: -10px !important;
 }
+.sliding-offers-v3 .panel{
+    margin-bottom: 0 !important;
+}
 
 /* Estilo cards Juniper */
 .sliding-offers__image-holder>picture>img {
@@ -112,6 +115,7 @@
     position: inherit !important;
     top: 0 !important;
 }
+/* ******************************************************** */
 
 /********** SECCION DESTACODOS *****************/
 .main__conteiner__s1__destacado {
