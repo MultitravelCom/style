@@ -57,7 +57,7 @@
         display: flex;
         justify-content: space-between;
         gap: 16px;
-        margin-bottom: 3rem;
+        margin: 3rem 0;
     }
     .main__container__s1__personalizado__uno, .main__container__s1__personalizado__dos{
         border-radius: 16px;

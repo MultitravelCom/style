@@ -19,7 +19,7 @@
 
 /****** Caja de busqueda*********** */
     #home-carousel>.carousel-inner {
-        height: 290px;
+        min-height: 290px;
     }
 
 /* Estilos newsletter */
