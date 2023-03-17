@@ -818,3 +818,136 @@ span .glyphicon {
 .fix-margin>.newsletter__container {
     background: #f7f7f7 !important;
 }
+
+
+/* **************** RESULTADO DE BUSQUEDA ****************************/
+
+/* mejor precio */
+.flight-bestprices {
+    border-radius: 1rem;
+}
+/* Mejoras caja de busqueda - Estilos */
+/* oculta Mas opciones y Loyalti */
+.supsearcher{
+    display: none;
+}
+/* ocultar radius */
+.radio {
+    display: none;
+}
+.checkbox{
+    margin-top: 1rem;
+}
+
+/* Resultados de vuelo */
+/* 1+/-1 */
+.flight-result__change-dates {
+    display: none;
+}
+.results-list__item > * {
+    border-radius: 8px;
+}
+/* Boder radius caja vuelo seleccionado */
+.flight-selection__box{
+    border-radius: 8px;
+}
+/* --- */
+/* MEDIA MOBILE */
+@media (max-width: 767px) {
+    .flight-bestprices {
+        display: none;
+    }
+    /* Caja de busqueda vuelos*/
+    .btn-more-options {
+        display: none;
+    }   
+.search-summary{
+   display: inline-flex !important;
+}
+/* Cambios btn - MULT-50 */
+.flight-selection__booking{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flight-selection__change-button, .flight-selection__booking-button{
+    min-width: 47% !important;
+    border-radius: 40px !important; 
+}
+.btn-quaternary{
+    background-color: white !important;
+    border-color: #9b0023 !important;
+    color: #9b0023 !important;
+}
+/* Btn Filtrar - MULT-43 */
+.results-list__filter-toggle-wrapper{
+    position: fixed;
+    bottom: 30px;
+    z-index: 1;
+    left: 9%;
+    width: 80%;
+}
+.whatsAppFixes {
+    display: none;
+}
+.results-list__filter-toggle{
+    color: #FFFFFF !important;
+    background-color: #DF0032 !important;
+    border-color: #DF0032 !important;
+    border-radius: 40px !important; 
+
+}
+
+ /* Resultadso de busqueda */
+ /* Mejoras caja de busqueda - Estilos */
+    
+ /* Radios solo ida - i/d - Multedestino */
+    .flight-row{
+        margin-bottom: 20px;
+    }
+    /* Radius resultados de vuelos */
+    .result-option__select-option, .result-option__select-option{
+        width: 10% !important;
+        margin: auto !important;
+    }
+    .result-option__select-option>input{
+        display: block !important;
+    }
+    /* Mostrar vuelta en mobile */
+    .flight-result__route, .flight-result__route--return{
+        display: inline-block !important;
+    }
+    /* Posicionamiento Solo directos / +/- 3 -  */
+    .checkbox{
+        display: flex;
+    margin: 16px 0;
+    width: 100%;
+    }
+    /* Resultados de busqueda Vuelos */
+    /* Border-Radius resultados*/
+    .results-list__item > * {
+        border-radius: 8px;
+        border-radius: 8px 8px 0 0;
+    }
+    .flight-result__booking{
+        border-radius: 8px 8px 0 0 !important;
+    }
+    .flight-result__route {
+        border: 1px solid #cccccc;
+        overflow: hidden;
+    }
+    .flight-result__route--departure{
+        margin-bottom: -5px !important;
+    }
+    .flight-result__route--return{
+        border-radius: 0 0 8px 8px !important;
+    }
+    .result{
+        background-color: transparent !important;
+    }
+    .info-card__content{
+        background-color: white !important;
+    }
+}
+
+/* *************************************************************************** */
