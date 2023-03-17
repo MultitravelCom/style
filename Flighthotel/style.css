@@ -9,6 +9,13 @@
         --fondo-btn-hover: #324352;
     }
 
+    #home-content-5 {
+        display: block !important;
+    }
+    .home-row{
+        margin-bottom: 0 !important;
+    }
+
     .main-content {
         background-color: white !important;
     }
