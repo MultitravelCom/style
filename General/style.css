@@ -1,4 +1,3 @@
-
 /* Estilos generales de la web */
 /* nuevo espacio */
 #home-content-5 {
@@ -17,6 +16,11 @@
     border-radius: 1rem;
     overflow: hidden;
 }
+
+/****** Caja de busqueda*********** */
+    #home-carousel>.carousel-inner {
+        height: 290px;
+    }
 
 /* Estilos newsletter */
 .fix-margin>.newsletter__container{
