@@ -1,12 +1,6 @@
 
 /* Estilos generales de la web */
 
-/* Circuito */
-.super-package-searcher{
-    margin: 8px;
-    border-radius: 1rem;
-}
-
 /* Vuelos */
 .flight-bestprices{
     border-radius: 1rem;
@@ -19,6 +13,15 @@
     border-radius: 1rem;
     overflow: hidden;
 }
+
+@media (max-width: 1023px) {
+    /* Circuito */
+    .super-package-searcher{
+        margin: 8px;
+        border-radius: 1rem;
+    }    
+}
+
 /* Estilos newsletter */
 .fix-margin>.newsletter__container{
    background: #f7f7f7 !important;
