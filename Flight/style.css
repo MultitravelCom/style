@@ -9,11 +9,6 @@
     --fondo-btn-hover: #324352;
 }
 
-/****** Caja de busqueda*********** */
-#home-carousel>.carousel-inner {
-    height: 290px;
-}
-
 /* Ocultar mas opciones en caja de busqueda */
 #flight-searcher-more-options,
 .btn-more-options {
@@ -425,10 +420,6 @@ span .glyphicon {
     max-height: 100%;
 }
 
-/**
-      MEDIA QUERIES
-    */
-
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 868px) {
     #quote-carousel {
@@ -444,7 +435,6 @@ span .glyphicon {
         height: auto;
     }
 }
-
 
 /* Small devices (tablets, up to 768px) */
 @media (max-width: 868px) {
@@ -524,11 +514,6 @@ span .glyphicon {
 
     .comentarios_seccion::-webkit-scrollbar {
         width: 0;
-    }
-
-    /* SECCION 1 */
-    .main__conteiner__s1 {
-        margin-bottom: 0;
     }
 
     /* SECCION 2 */
