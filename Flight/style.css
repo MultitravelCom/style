@@ -83,10 +83,7 @@
     letter-spacing: 0.1px;
 }
 .subtitle{
-    margin-bottom: 16px !important;
-}
-.panel .thumbnail {
-    min-height: 378px !important;
+    margin-bottom: 15px !important;
 }
 
 /* Estilo cards Juniper */
@@ -788,6 +785,10 @@ span .glyphicon {
         overflow-x: scroll;
         white-space: nowrap;
         margin-bottom: 0 !important;
+    }
+
+    .panel .thumbnail {
+        min-height: 378px !important;
     }
 
     .sliding-offers-v3>.panel::-webkit-scrollbar {
