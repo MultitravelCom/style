@@ -781,6 +781,10 @@ span .glyphicon {
     .sliding-offers-v3>.panel {
         overflow-x: scroll;
         white-space: nowrap;
+        margin-bottom: 0 !important;
+    }
+    .subtitle{
+        margin-bottom: 16px !important;
     }
     .panel .thumbnail {
         min-height: 378px !important;
