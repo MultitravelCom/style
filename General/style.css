@@ -1,10 +1,14 @@
 
 /* Estilos generales de la web */
-
-/* Vuelos */
-.flight-bestprices{
-    border-radius: 1rem;
+/* nuevo espacio */
+#home-content-5 {
+    display: none;
 }
+
+#home-top {
+    margin-bottom: 1rem !important;
+}
+
 .btn-tertiary {
     background-color: brown;
     color: white;
@@ -14,15 +18,100 @@
     overflow: hidden;
 }
 
-@media (max-width: 1023px) {
-    /* Circuito */
-    .super-package-searcher{
-        margin: 8px;
-        border-radius: 1rem;
-    }    
-}
-
 /* Estilos newsletter */
 .fix-margin>.newsletter__container{
    background: #f7f7f7 !important;
 }
+
+/************ Seccion Cards *****************/
+/* Titulos */
+.sliding-offers-v3>.offer-title {
+    margin: 0 !important;
+}
+
+.text-center {
+    text-align: left !important;
+}
+
+.title>b {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+}
+.subtitle{
+    margin-bottom: -10px !important;
+}
+.sliding-offers-v3 .panel{
+    margin-bottom: 0 !important;
+}
+
+/* Estilo cards Juniper */
+.sliding-offers__image-holder>picture>img {
+    padding: 6px !important;
+    border-radius: 1rem !important;
+}
+
+.sliding-offers__image-holder img {
+    width: 100%;
+    height: 150px !important;
+
+}
+
+.sliding-offers__image-holder {
+    position: relative;
+    overflow: hidden;
+}
+
+.caption>.force-pull-left {
+    position: absolute;
+    bottom: 28px;
+}
+
+.sliding-offers__image-holder picture {
+    position: inherit !important;
+    top: 0 !important;
+}
+
+@media (max-width: 564px) {
+
+    /* Scroll Cards Juniper */
+    .sliding-offers-v3>.panel {
+        overflow-x: scroll;
+        white-space: nowrap;
+        margin-bottom: 0 !important;
+    }
+
+    .panel .thumbnail {
+        min-height: 378px !important;
+    }
+
+    .sliding-offers-v3>.panel::-webkit-scrollbar {
+        width: 0;
+    }
+
+    body.home.home--default .home-v5 .sliding-offers-v3 .panel .row {
+        display: block;
+        margin-left: -3px;
+    }
+
+    .col-inline-block {
+        width: 78%;
+        margin: auto;
+    }
+
+    .sliding-offers-v3 .panel .caption.main {
+        min-height: 212px !important;
+    }
+
+    .scrollable-step {
+        padding: 0 !important;
+        padding-left: 3px !important;
+    }
+    .sliding-offers__image-holder img {
+        min-height: 150px !important; 
+    
+    }
+}
+
+/* ******************************************************** */

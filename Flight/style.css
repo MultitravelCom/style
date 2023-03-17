@@ -783,53 +783,27 @@ span .glyphicon {
         padding: 9px;
     }
 
-
-    /* Scroll Cards Juniper */
-    .sliding-offers-v3>.panel {
-        overflow-x: scroll;
-        white-space: nowrap;
-        margin-bottom: 0 !important;
-    }
-
-    .panel .thumbnail {
-        min-height: 378px !important;
-    }
-
-    .sliding-offers-v3>.panel::-webkit-scrollbar {
-        width: 0;
-    }
-
-    body.home.home--default .home-v5 .sliding-offers-v3 .panel .row {
-        display: block;
-        margin-left: -3px;
-    }
-
-    .col-inline-block {
-        width: 78%;
-        margin: auto;
-    }
-
-    .sliding-offers-v3 .panel .caption.main {
-        min-height: 212px !important;
-    }
-
-    .scrollable-step {
-        padding: 0 !important;
-        padding-left: 3px !important;
-    }
-    .sliding-offers__image-holder img {
-        min-height: 150px !important; 
-    
-    }
-}
-
-/* Estilos newsletter */
-.fix-margin>.newsletter__container {
-    background: #f7f7f7 !important;
 }
 
 
 /* **************** RESULTADO DE BUSQUEDA ****************************/
+
+/* Vuelos */
+.flight-bestprices{
+    border-radius: 1rem;
+}
+.btn-tertiary {
+    background-color: brown;
+    color: white;
+}
+
+@media (max-width: 1023px) {
+    /* Circuito */
+    .super-package-searcher{
+        margin: 8px;
+        border-radius: 1rem;
+    }    
+}
 
 /* mejor precio */
 .flight-bestprices {
