@@ -12,6 +12,12 @@
     #home-content-5 {
         display: block !important;
     }
+
+    /****** Caja de busqueda*********** */
+    #home-carousel>.carousel-inner {
+        min-height: 290px;
+    }
+
     .home-row{
         margin-bottom: 0 !important;
     }
