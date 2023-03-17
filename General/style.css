@@ -1,6 +1,16 @@
 
 /* Estilos generales de la web */
 
+#home-top{
+    background-color: ;
+}
+
+/* Circuito */
+.super-package-searcher{
+    margin: 8px;
+    border-radius: 1rem;
+}
+
 /* Vuelos */
 .flight-bestprices{
     border-radius: 1rem;
