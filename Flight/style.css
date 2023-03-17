@@ -91,7 +91,7 @@
 
 .sliding-offers__image-holder img {
     width: 100%;
-    min-height: 140px;
+    min-height: 150px !important;
 
 }
 
@@ -782,6 +782,9 @@ span .glyphicon {
         overflow-x: scroll;
         white-space: nowrap;
     }
+    .panel .thumbnail {
+        min-height: 378px !important;
+    }
 
     .sliding-offers-v3>.panel::-webkit-scrollbar {
         width: 0;
@@ -805,7 +808,10 @@ span .glyphicon {
         padding: 0 !important;
         padding-left: 3px !important;
     }
-
+    .sliding-offers__image-holder img {
+        min-height: 150px;
+    
+    }
 }
 
 /* Estilos newsletter */
