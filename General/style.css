@@ -37,7 +37,7 @@
     text-align: left !important;
 }
 
-.title {
+.title>b {
   font-weight: 700;
   margin-bottom: 1rem;
   font-size: 20px;
