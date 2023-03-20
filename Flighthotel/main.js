@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-    const flighthotel = document.querySelector('.flighthotel');
-    const displayMaster =flighthotel.document.querySelector('.master-selector');
-    const removeHidden = document.querySelector(".master-selector-option");
+    let flighthotel = document.querySelector('.flighthotel');
+    let displayMaster = flighthotel.document.querySelector('.master-selector');
+    let removeHidden = document.querySelector(".master-selector-option");
    
     if(removeHidden.classList.contains("hidden")){
         removeHidden.classList.remove("hidden");
