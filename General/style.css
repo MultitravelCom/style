@@ -37,16 +37,10 @@
     text-align: left !important;
 }
 
-.title>b {
-  font-weight: 700;
-  margin-bottom: 1rem;
-  font-size: 20px;
-  letter-spacing: 0.1px;
-}
-.title>h2 {
+.title {
     font-weight: 700;
     margin-bottom: 1rem;
-    font-size: 20px;
+    font-size: 20px !important;
     letter-spacing: 0.1px;
   }
 .subtitle{
