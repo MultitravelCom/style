@@ -1,5 +1,5 @@
 window.addEventListener('load', ()=>{
-  let changeIcon = document.querySelectorAll('.result-option-package__item-product');
+  let changeIcon = document.querySelectorAll('.glyphicon-supplement');
 
     changeIcon.forEach(el => {
      if(el.classList.contains("glyphicon-supplement")){
