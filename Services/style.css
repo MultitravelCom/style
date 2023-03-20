@@ -395,23 +395,6 @@
             display: none
         }
 
-
-        /* Scroll Cards Juniper */
-        .sliding-offers-v3>.panel{
-            overflow-x: scroll;
-            white-space: nowrap;
-        }
-        .sliding-offers-v3>.panel::-webkit-scrollbar {
-            width: 0;
-        }
-        body.home.home--default .home-v5 .sliding-offers-v3 .panel .row{
-            display: block;
-        }
-        .col-inline-block{
-            width: 88%;
-             margin: auto;
-        }
-
 /* Estilos btn buscar mobile */
         .pull-right{
             width:100%;
@@ -423,8 +406,6 @@
             margin: 8px;
         }
         }
-    
-
     /* COMENTARIOS */
     .main__container__carrusell {
         margin-bottom: 3rem;
