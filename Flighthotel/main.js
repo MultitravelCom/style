@@ -1,4 +1,4 @@
-windows.addEventListener("load", ()=>{
+window.addEventListener('load', ()=>{
     let flighthotel = document.querySelector('.flighthotel');
     let displayMaster = flighthotel.document.querySelector('.master-selector');
     let removeHidden = document.querySelector(".master-selector-option");
