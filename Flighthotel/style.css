@@ -631,6 +631,9 @@
 
 /* Cambio caja de busqueda */
 /* Mostrar contenido de mas opciones */
-.searcher.master-searcher .master-selector .label.more-master-selector-options{
+.more-master-selector-options{
+    display: none;
+}
+.master-selector{
     display: none;
 }

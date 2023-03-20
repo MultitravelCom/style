@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", ()=>{
     const removeHidden = document.querySelectorAll(".master-selector-option");
+    const displayMaster = document.querySelector(".master-selector");
    
     if(removeHidden.classList.contains("hidden")){
         removeHidden.classList.remove("hidden");
-        document.querySelector(".master-selector").style.display = 'inline-block';
+        displayMaster.style.display = 'inline-block';
     };
 });
