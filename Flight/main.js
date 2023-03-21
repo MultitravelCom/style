@@ -18,4 +18,21 @@ textBtn.textContent = 'Filtrar';
 textBtn.appendChild(icon);
 
 document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
+
+const breakpoint = window.matchMedia('(max-width: 767px)');
+
+function aplicarEstilos() {
+    if (breakpoint.matches) {
+        document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
+      elemento.style.backgroundColor = 'red';
+    } else {
+        document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'none';
+      elemento.style.backgroundColor = 'blue';
+    }
+  };
+
+  aplicarEstilos();
+
+  window.addEventListener('resize', aplicarEstilos);
+
 });
