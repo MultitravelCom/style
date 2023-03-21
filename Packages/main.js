@@ -1,4 +1,4 @@
-window.addEventListener('load', ()=>{
+document.addEventListener('load', ()=>{
   let changeIcon = document.querySelectorAll('.glyphicon-supplement');
 
     changeIcon.forEach(el => {

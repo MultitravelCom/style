@@ -89,7 +89,6 @@
         margin-bottom: 3rem;
         margin-top: 3rem;
 }
-
     .main__conteiner__titulo {
         font-weight: 700;
         margin-bottom: 1rem;
@@ -626,14 +625,6 @@
 }
 .pull-right{
     width: 100%;
-}      
 }
-
-/* Cambio caja de busqueda */
-/* Mostrar contenido de mas opciones */
-.more-master-selector-options{
-    display: none;
-}
-.master-selector{
-    display: none;
-}
+        
+    }
