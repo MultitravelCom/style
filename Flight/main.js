@@ -10,5 +10,5 @@ document.querySelector('.radio').style.display = 'inline-block';
 });
 
 // Cambiar texto al btn filtrar.
-let filtrar = Document.querySelector('.results-list__filter-toggle-wrapper').nextSibling.nodeValue = "Filtrar";
+document.querySelector('.results-list__filter-toggle').nodeValue = "Filtrar";
 
