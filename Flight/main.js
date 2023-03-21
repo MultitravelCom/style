@@ -10,5 +10,6 @@ document.querySelector('.radio').style.display = 'inline-block';
 });
 
 // Cambiar texto al btn filtrar.
-document.querySelector('.results-list__filter-toggle').nodeValue = "Filtrar";
+const textBtn = document.querySelector('.results-list__filter-toggle');
+textBtn.textContent = 'Filtrar';
 
