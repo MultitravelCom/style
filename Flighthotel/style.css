@@ -17,6 +17,12 @@
     #home-carousel>.carousel-inner {
         min-height: 290px;
     }
+    #master-searcher{
+        padding-bottom: 0 !important;
+    }
+    .searcher{
+        top:26px !important;
+    }
     .more-master-selector-options{
         display: none;
     }
