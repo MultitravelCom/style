@@ -5,6 +5,9 @@
     padding: 0 5px;
     color: green;
 }
+.glyphicon-supplement {
+    display: none;
+}
 
 /* ************************************************* */
 .flight-bestprices{
