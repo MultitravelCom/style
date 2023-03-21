@@ -11,7 +11,11 @@
 .home-row{
   margin-bottom: 0 !important;
 }
-
+/* CAja de busqueda  */
+#flight-searcher-onlydirects{
+  display: none;
+}
+/*  */
 .main__conteiner>img {
   width: 100%;
   height: 100%;
