@@ -13,12 +13,8 @@ document.querySelector('.radio').style.display = 'inline-block';
 const icon = document.createElement('i');
 icon.className = 'glyphicon glyphicon-loungroom';
 
-const containerBtn = document.querySelector('.results-list__filter-toggle-wrapper');
-containerBtn.appendChild(icon);
-
 const textBtn = document.querySelector('.btn-tertiary');
 textBtn.textContent = 'Filtrar';
+textBtn.appendChild(icon);
 
 });
-
-

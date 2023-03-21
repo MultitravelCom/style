@@ -668,6 +668,12 @@ span .glyphicon {
     border-radius: 40px !important;
     font-weight: 700; 
     letter-spacing: 2px;
+    padding-left: 17%;
+}
+.glyphicon-loungroom{
+    position: absolute;
+    top: 11px;
+    left: 41px;
 }
 
  /* Resultadso de busqueda */
