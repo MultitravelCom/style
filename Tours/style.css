@@ -3,7 +3,10 @@
 .home-v5__carousel {
     background-color: rgba(241,241,241,0.9);
 }
-
+/* Ocultar logo special */
+.info-card__logo{
+    display: none;
+}
 @media (max-width: 1023px) {
     /* Circuito */
     .super-package-searcher{
