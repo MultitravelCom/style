@@ -1,4 +1,12 @@
-/* Vuelos */
+/* CSS PAQUETES */
+
+/* Estilos icons check */
+.glyphicon-check-whl{
+    padding: 0 5px;
+    color: green;
+}
+
+/* ************************************************* */
 .flight-bestprices{
     border-radius: 1rem;
 }
@@ -9,8 +17,4 @@
 .hotel-result{
     border-radius: 1rem;
     overflow: hidden;
-}
-/* Estilos newsletter */
-.fix-margin>.newsletter__container{
-   background: #f7f7f7 !important;
 }
