@@ -17,4 +17,5 @@ const textBtn = document.querySelector('.btn-tertiary');
 textBtn.textContent = 'Filtrar';
 textBtn.appendChild(icon);
 
+document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 });
