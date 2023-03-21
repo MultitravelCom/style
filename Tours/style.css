@@ -5,7 +5,7 @@
 }
 /* Ocultar logo special */
 .info-card__logo{
-    display: none;
+    display: none !important;
 }
 @media (max-width: 1023px) {
     /* Circuito */
