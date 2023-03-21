@@ -107,13 +107,16 @@
     .sliding-offers-v3 .panel .caption.main {
         min-height: 212px !important;
     }
+    .sliding-offers-v3 .panel .caption.main p.price{
+        bottom: 11px !important;
+    }
 
     .scrollable-step {
         padding: 0 !important;
         padding-left: 3px !important;
     }
     .sliding-offers__image-holder img {
-        min-height: 150px !important; 
+        min-height: 160px !important; 
     
     }
 }
