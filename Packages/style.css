@@ -8,6 +8,12 @@
 .glyphicon-supplement {
     display: none;
 }
+/* Ocultar segudno btn Reservas */
+@media (max-width: 481px ) {
+    .info-card__book{
+        display: none;
+    }
+}
 
 /* ************************************************* */
 .flight-bestprices{
