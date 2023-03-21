@@ -17,6 +17,9 @@
     #home-carousel>.carousel-inner {
         min-height: 290px;
     }
+    .more-master-selector-options{
+        display: none;
+    }
 
     .home-row{
         margin-bottom: 0 !important;
