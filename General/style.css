@@ -100,7 +100,7 @@
     }
 
     .col-inline-block {
-        width: 78%;
+        max-width: 255px;
         margin: auto;
     }
 
