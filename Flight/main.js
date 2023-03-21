@@ -8,9 +8,14 @@ window.addEventListener('load', ()=>{
 document.getElementById("flight-searcher-roundtrip-multi").nextSibling.nodeValue = "Multidestino";
 document.querySelector('.radio').style.display = 'inline-block';
 
-// Cambiar texto al btn filtrar.
+// Cambiar texto al btn filtrar y agregar un icons.
+
+const icon = document.createElement('i');
+icon.className = 'glyphicon glyphicon-loungroom';
+
 const textBtn = document.querySelector('.btn-tertiary');
 textBtn.textContent = 'Filtrar';
+textBtn.appendChild(icon);
 
 });
 

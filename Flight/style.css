@@ -579,16 +579,11 @@ span .glyphicon {
 
 }
 
-
 /* **************** RESULTADO DE BUSQUEDA ****************************/
 
 /* Vuelos */
 .flight-bestprices{
     border-radius: 1rem;
-}
-.btn-tertiary {
-    background-color: brown;
-    color: white;
 }
 
 @media (max-width: 1023px) {
@@ -672,6 +667,7 @@ span .glyphicon {
     border-color: #DF0032 !important;
     border-radius: 40px !important;
     font-weight: 700; 
+    letter-spacing: 2px;
 }
 
  /* Resultadso de busqueda */
