@@ -20,6 +20,9 @@
     .more-master-selector-options{
         display: none;
     }
+    .master-selector{
+        display: none;
+    }
 
     .home-row{
         margin-bottom: 0 !important;
