@@ -661,18 +661,16 @@ span .glyphicon {
     position: fixed;
     bottom: 30px;
     z-index: 1;
-    left: 9%;
-    width: 80%;
+    left: 24%;
 }
 .whatsAppFixes {
     display: none;
 }
 .results-list__filter-toggle{
-    color: #FFFFFF !important;
-    background-color: #DF0032 !important;
+    color: #000000 !important;
+    background-color: #ffffff !important;
     border-color: #DF0032 !important;
     border-radius: 40px !important; 
-
 }
 
  /* Resultadso de busqueda */
