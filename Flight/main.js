@@ -7,9 +7,11 @@ window.addEventListener('load', ()=>{
 //    Cambio de copy de Multiple vuelos a multiple destinos.
 document.getElementById("flight-searcher-roundtrip-multi").nextSibling.nodeValue = "Multidestino";
 document.querySelector('.radio').style.display = 'inline-block';
-});
 
 // Cambiar texto al btn filtrar.
 const textBtn = document.querySelector('.btn-tertiary');
 textBtn.textContent = 'Filtrar';
+
+});
+
 
