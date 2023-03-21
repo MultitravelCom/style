@@ -1,5 +1,4 @@
 /* CSS PAQUETES */
-
 /* Estilos icons check */
 .glyphicon-check-whl{
     padding: 0 5px;
@@ -9,12 +8,12 @@
     display: none;
 }
 /* Ocultar segudno btn Reservas */
-@media (max-width: 481px ) {
-    .info-card__book{
-        display: none;
-    }
+.info-card__book{
+    display: none;
 }
-
+.info-card__content{
+    width: 255px;
+}
 /* ************************************************* */
 .flight-bestprices{
     border-radius: 1rem;
