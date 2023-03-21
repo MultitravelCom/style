@@ -670,7 +670,8 @@ span .glyphicon {
     color: #000000 !important;
     background-color: #ffffff !important;
     border-color: #DF0032 !important;
-    border-radius: 40px !important; 
+    border-radius: 40px !important;
+    font-weight: 700; 
 }
 
  /* Resultadso de busqueda */
