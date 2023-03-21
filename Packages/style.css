@@ -8,8 +8,10 @@
     display: none;
 }
 /* Ocultar segudno btn Reservas */
-.info-card__book{
-    display: none;
+@media (max-width: 481px) {
+    .info-card__book{
+        display: none;
+    }
 }
 /* ************************************************* */
 .flight-bestprices{
