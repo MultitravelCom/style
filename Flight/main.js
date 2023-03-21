@@ -10,12 +10,12 @@ document.querySelector('.radio').style.display = 'inline-block';
 
 // Cambiar texto al btn filtrar y agregar un icons.
 
-const icon = document.createElement('i');
-icon.className = 'glyphicon glyphicon-loungroom';
+// const icon = document.createElement('i');
+// icon.className = 'glyphicon glyphicon-loungroom';
+// textBtn.appendChild(icon);
 
 const textBtn = document.querySelector('.btn-tertiary');
 textBtn.textContent = 'Filtrar';
-textBtn.appendChild(icon);
 
 document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
