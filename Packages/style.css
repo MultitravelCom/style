@@ -13,6 +13,13 @@
         display: none;
     }
 }
+/* CIRCUITOS */
+
+/* Ocultar logo special */
+.info-card__logo{
+    display: none !important;
+}
+
 /* ************************************************* */
 .flight-bestprices{
     border-radius: 1rem;
