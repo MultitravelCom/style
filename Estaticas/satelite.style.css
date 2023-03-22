@@ -1,0 +1,223 @@
+/* <!-- CSS --> */
+    .main__conteiner>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main__conteiner-principal {
+        margin-top: -32px;
+    }
+
+    source>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-content {
+        background-color: white !important;
+    }
+
+    .main__conteiner__titulo {
+        font-weight: 700;
+        margin-bottom: 1rem;
+        font-size: 20px;
+        letter-spacing: 0.1px;
+    }
+
+    /* Lo mejor de Multitravel.com */
+    .main__conteiner__s1__titulo {
+        padding: 16px 0;
+        font-size: 20px;
+    }
+
+    .main__conteiner__s1__destacado {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        height: 320px;
+        gap: 1rem;
+        overflow: hidden;
+        margin-bottom: 4rem;
+    }
+
+    .main__conteiner__s1__destacado__texto {
+        padding-right: 0px;
+    }
+
+    .main__conteiner__s1__destacado__texto>h1 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+        margin-bottom: 0.4rem;
+    }
+
+    .main__conteiner__s1__destacado__texto>p {
+        font-size: 16px;
+    }
+
+    .main__conteiner__s1__destacado__card {
+        overflow: hidden;
+    }
+
+    .main__conteiner__s1__destacado__card:hover {
+        box-shadow: var(--box-shadow);
+    }
+
+    .main__conteiner__s1__destacado__card__img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .uno {
+        border-radius: 40px 8px 8px 8px;
+    }
+
+    .dos,
+    .tres {
+        border-radius: 8px;
+    }
+
+    .cuatro {
+        border-radius: 8px 8px 40px 8px;
+    }
+
+    /* Carrusel */
+    .carrusel__contenedor {
+        position: relative;
+        margin-bottom: 3rem;
+
+    }
+
+    .carrusel__anterior,
+    .carrusel__siguiente {
+        position: absolute;
+        display: block;
+        width: 34px;
+        height: 35px;
+        border: none;
+        top: calc(50% - 24px);
+        cursor: pointer;
+        line-height: 35px;
+        color: #ccc;
+        background: gray;
+        font-size: 2rem;
+        z-index: 1;
+        border-radius: 50%;
+        opacity: 50%;
+    }
+
+    .carrusel__anterior:hover,
+    .carrusel__siguiente:hover {
+        opacity: 100%;
+    }
+
+    .carrusel__anterior {
+        left: -6px;
+    }
+
+    .carrusel__siguiente {
+        right: -6px;
+    }
+
+    .carrusel__elemento {
+        margin: 10px;
+    }
+
+    /* ---*-*-*-*-*-*-*-*-*-*- */
+
+    /* MOBILE */
+
+    @media (max-width: 964px) {
+        .main__conteiner__s1__destacado {
+            max-height: 600px;
+            display: flex;
+            justify-content: space-between;
+            overflow-x: auto;
+            gap: 1rem;
+        }
+
+        .main__conteiner__s1__destacado::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .uno,
+        .dos,
+        .tres,
+        .cuatro,
+        .cinco,
+        .seis {
+            min-width: 90%;
+            line-height: 110px;
+            text-align: center;
+            background-color: #ddd;
+        }
+
+        .main__conteiner__s1>.main__conteiner__titulos {
+            padding-block: 0px;
+        }
+
+        .pagos__card__texto__btn {
+            display: none
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        /* Estilos btn buscar mobile */
+        .pull-right {
+            width: 100%;
+        }
+
+        /* Estilo caja de busqueda */
+        .multi-searcher {
+            margin: 8px;
+        }
+
+        .multi-searcher__content {
+            border-radius: 1rem !important;
+        }
+
+        .show-more {
+            display: none;
+        }
+
+        #flights-searcher {
+            margin: 8px;
+        }
+    }
+
+
+    /**
+MEDIA QUERIES
+*/
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 868px) {
+
+
+        .main__conteiner-principal {
+            margin-top: 0;
+        }
+    }
+
+    @media (max-width: 564px) {
+
+        /* SECCION 1 */
+        .main__conteiner__s1 {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .main__conteiner__s1__titulo {
+            display: inline;
+            margin-bottom: 1rem;
+        }
+
+        .main__conteiner__s1__destacado__texto {
+            display: none;
+        }
+
+        .main__conteiner__s1 {
+            margin-bottom: 0;
+        }
+    }
