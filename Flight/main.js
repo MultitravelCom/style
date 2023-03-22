@@ -32,5 +32,7 @@ function aplicarEstilos() {
   aplicarEstilos();
 
   window.addEventListener('resize', aplicarEstilos);
+// Cambiar comportamiento del btn editar en caja de busqueda!
+let btnEditar = document.querySelector('.search-summary__button');
 
 });
