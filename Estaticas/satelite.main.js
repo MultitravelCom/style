@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
           }
         }
-      ]
+      ],
+      rewind: true 
     });
   });
 });
