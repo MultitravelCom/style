@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     new Glider(document.querySelector(item.carrusel), {
-      slidesToShow: 1.5,
+      slidesToShow: 1.20,
       slidesToScroll: 1,
       draggable: true,
       arrows: {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
           breakpoint: 450,
           settings: {
             // Set to `auto` and provide item width to adjust to viewport
-            slidesToShow: '2.5',
+            slidesToShow: '2.20',
             slidesToScroll: '1',
           }
         }, {
