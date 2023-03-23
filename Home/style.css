@@ -15,6 +15,9 @@
 #flight-searcher-onlydirects{
   display: none;
 }
+#flights-searcher-more-options{
+  display: none
+}
 /*  */
 .main__conteiner>img {
   width: 100%;

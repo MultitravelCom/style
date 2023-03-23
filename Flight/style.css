@@ -14,7 +14,9 @@
 .btn-more-options {
     display: none;
 }
-
+#results-searcher{
+    flex-direction: column;
+}
 
 /* nuevo espacio */
 #home-content-5 {

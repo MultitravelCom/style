@@ -1,7 +1,6 @@
 window.addEventListener('load', () => {
     // Activa la solapa vuelos
-    const secondNavItem = document.querySelector('.nav-tabs').getElementsByTagName('li')[1];
-
+    const secondNavItem = document.querySelectorAll('#main-menu-products .nav-elem')[1];
     secondNavItem.classList.contains('active') ? null : secondNavItem.classList.add('active');
 
     // Mover div fuera del mas opciones.
