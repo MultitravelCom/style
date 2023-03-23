@@ -58,6 +58,7 @@
 .sliding-offers__image-holder {
     position: relative;
     overflow: hidden;
+    border-radius: 1rem !important;
 }
 
 .caption>.force-pull-left {
