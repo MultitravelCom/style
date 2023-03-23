@@ -5,5 +5,4 @@ const Componente = () => {
       </div>
     );
 }
-
 export default Componente;
