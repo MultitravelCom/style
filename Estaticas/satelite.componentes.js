@@ -1,6 +1,8 @@
 const Componente = () => {
     return(
-        <h2>Otro componente</h2>
+        <div>
+        <p>Este es mi subcomponente.</p>
+      </div>
     );
 }
 
