@@ -1,4 +1,4 @@
-import Componente from  "https://multitravelcom.github.io/style/Estaticas/satelite.componentes.js"
+import Componente from "https://multitravelcom.github.io/style/Estaticas/satelite.componentes.js";
 
 const Banners = () => {
     return (
