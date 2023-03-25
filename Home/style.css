@@ -153,10 +153,6 @@ source>img {
   margin-top: 1rem;
 }
 
-.top_mkt {
-  margin-top: 4rem;
-}
-
 /* Medios de pago */
 .main__conteiner__s2__pagos__card {
   border: var(--border-solid-card);
