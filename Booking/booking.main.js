@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     newDiv.innerHTML = `
         <h1>Test</h1>
     `;
-    divs[4].insertAdjacentElement('beforebegin', newDiv);
+    divs[6].insertAdjacentElement('beforebegin', newDiv);
 });
 
 
