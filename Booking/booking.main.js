@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    let bookingData = document.querySelector('.confirm-booking__insurances');
+    let bookingData = document.querySelector('.booking-data__data');
     let divs = bookingData.querySelectorAll('div');
     let newDiv = document.createElement('div');
     newDiv.innerHTML = `
