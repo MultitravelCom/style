@@ -4,6 +4,11 @@ window.addEventListener('load', () => {
     let newDiv = document.createElement('div');
     newDiv.innerHTML = `
         <h1>Test</h1>
-    `
-    bookingData.appendChild(newDiv, divs[4]);
+    `;
+    divs[4].insertAdjacentElement('beforebegin', newDiv);
 });
+
+
+
+
+
