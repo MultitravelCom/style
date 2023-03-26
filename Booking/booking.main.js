@@ -5,5 +5,5 @@ window.addEventListener('load', () => {
     newDiv.innerHTML = `
         <h1>Test</h1>
     `
-    bookingData.insertBefore(newDiv, divs[3]);
+    bookingData.appendChild(newDiv, divs[3]);
 });
