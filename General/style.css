@@ -92,6 +92,9 @@
 }
 
 @media (max-width: 564px) {
+    #home-content-1>.home-row{
+        margin-bottom: 10px !important;
+    }
 
     /* Scroll Cards Juniper */
     .sliding-offers-v3>.panel {
