@@ -1,6 +1,6 @@
 const App = () => {
     render()
-        return
+        return (
         <>
             <h2 classNameName="main__conteiner__titulo">Multitravel.com piensa en todo</h2>
             <div className="main__conteiner">
@@ -29,6 +29,7 @@ const App = () => {
                 </div>
             </div>
         </>
+        );
 };
 
 ReactDOM.render(<app />, document.getElementById('root__s3'));
