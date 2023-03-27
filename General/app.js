@@ -1,4 +1,3 @@
-import React from "react";
 import { props } from "./secciones";
 
 const App = () => {
