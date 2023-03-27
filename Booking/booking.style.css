@@ -5,6 +5,7 @@
     position: relative;
     border-radius: 4px 4px 40px 4px !important;
     min-height: 96px;
+    padding: 25px 4px !important;
 }
 .promo__ar{
     display: flex;
