@@ -15,9 +15,6 @@
     #master-searcher{
         padding-bottom: 0 !important;
     }
-    #home-top{
-        margin-bottom: 1rem !important;
-    }
     .searcher{
         top:26px !important;
     }
@@ -26,10 +23,6 @@
     }
     .master-selector{
         display: none;
-    }
-
-    .home-row {
-        margin-bottom: 24px;
     }
 
     .main-content {
