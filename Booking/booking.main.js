@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
                 <i class="glyphicon glyphicon-agent" aria-hidden="true"></i>
             </div>
             <div class="promo__ar_parrafo">
-                <p>Pagá en 6 cuotas sin interes tus vuelos con Aerolineas Argentinas.</p>
+                <p>Pagá en 6 cuotas sin interes tus vuelos con Aerolíneas Argentinas a través de nuestra atención personalizada.</p>
             </div>
             <button class="btn btn-primary promo__ar__btn">Descubrir</button>
         </div>
