@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Seccions } from 'https://raw.githubusercontent.com/MultitravelCom/style/main/General/componentSeccion.js';
+import { Seccions } from 'https://cdn.jsdelivr.net/gh/multitravelcom/style/General/componentSeccion.js';
 
 const App = () => {
     return (
