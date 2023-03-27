@@ -11,6 +11,9 @@
     border-radius: 1rem;
     overflow: hidden;
 }
+.home-content-4>.home-row{
+    margin-bottom: 0 !important;
+}
 /* Banner general */
  .main_conteiner__s1_medio__paquetes {
     border-radius: 32px;
