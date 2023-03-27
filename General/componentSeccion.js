@@ -1,4 +1,4 @@
-const App = () => {
+export const SeccionsComponent = () =>{
     return (
         <>
             <h2 className="main__conteiner__titulo">Multitravel.com piensa en todo</h2>
@@ -30,5 +30,3 @@ const App = () => {
         </>
     );
 };
-
-ReactDOM.render(<App />, document.getElementById('root__s3'));
