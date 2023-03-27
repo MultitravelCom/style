@@ -8,9 +8,6 @@
   --fondo-btn: #0d4e88;
   --fondo-btn-hover: #324352;
 }
-.home-row{
-  margin-bottom: 0 !important;
-}
 /* CAja de busqueda  */
 #flight-searcher-onlydirects{
   display: none;
