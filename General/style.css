@@ -133,7 +133,8 @@
         padding-left: 3px !important;
     }
     .sliding-offers__image-holder img {
-        height: 170px !important; 
+        height: 160px !important; 
+        object-fit: fill;
     
     }
 }
