@@ -1,6 +1,8 @@
-export const props = {
+const propiedades = {
     titulo: "Multitravel.com piensa en todo",
-    alojamiento: "Alojamiento",
+    alojamientos: "Alojamientos",
     vuelos: "Vuelos",
     paquetes: "Paquetes"
   };
+  
+  export default propiedades;
