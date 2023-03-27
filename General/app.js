@@ -1,5 +1,3 @@
-import { Seccions } from 'https://unpkg.com/browse/multitravel@latest/style/General/componentSeccion.js'
-
 const App = () => {
     return (
         <>
