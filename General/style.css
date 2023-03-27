@@ -132,11 +132,11 @@
         padding: 0 !important;
         padding-left: 3px !important;
     }
-    .sliding-offers__image-holder img {
+    /* .sliding-offers__image-holder img {
         height: 160px !important; 
         object-fit: fill;
     
-    }
+    } */
 }
 
 /* ******************************************************** */
