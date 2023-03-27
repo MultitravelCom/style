@@ -18,10 +18,6 @@
     flex-direction: column;
 }
 
-#home-top {
-    margin-bottom: 1rem !important;
-}
-
 .main-content {
     background-color: white !important;
 }
@@ -445,7 +441,7 @@ span .glyphicon {
     }
 
     .main__conteiner-principal {
-        margin-top: -40px;
+        margin-top: -34px;
     }
 
 
