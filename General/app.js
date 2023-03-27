@@ -1,4 +1,4 @@
-import { props } from "./secciones";
+import { props } from "https://raw.githubusercontent.com/MultitravelCom/style/main/General/secciones.js";
 
 const App = () => {
     return (
