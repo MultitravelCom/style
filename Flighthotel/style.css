@@ -254,9 +254,6 @@
 
     @media (max-width: 600px) {
 
-        .main__conteiner-principal {
-            margin-top: -22px;
-        }
         .uno,
         .dos,
         .tres {
@@ -488,11 +485,6 @@
         .promo_mobile {
             display: revert;
         }
-    
-        .main__conteiner-principal {
-            margin-top: -40px;
-        }
-    
     
         .promo_mobile_cards {
             display: revert;

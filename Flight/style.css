@@ -439,12 +439,6 @@ span .glyphicon {
     .promo_mobile {
         display: revert;
     }
-
-    .main__conteiner-principal {
-        margin-top: -40px;
-    }
-
-
     .promo_mobile_cards {
         display: revert;
     }
