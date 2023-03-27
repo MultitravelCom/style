@@ -9,10 +9,10 @@ window.addEventListener('load', () => {
             <div class="promo__ar__icon">
                 <i class="glyphicon glyphicon-agent" aria-hidden="true"></i>
             </div>
-            <div class="">
+            <div class="promo__ar_parrafo">
                 <p>Pagá en 6 cuotas sin interes tus vuelos con Aerolineas Argentinas.</p>
             </div>
-            <button>Descubrir</button>
+            <button class="btn btn-primary promo__ar__btn">Descubrir</button>
         </div>
     </div>
     `;
