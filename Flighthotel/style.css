@@ -104,7 +104,9 @@
     }
 
     /* Medios de pago */
+    .main__conteiner-principal{
 
+    }
     .main__conteiner__s2__pagos__card {
         border: var(--border-solid-card);
         overflow: hidden;
