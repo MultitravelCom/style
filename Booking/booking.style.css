@@ -13,19 +13,20 @@
     padding: 7px;
 }
 .glyphicon-agent{
-    font-size: 48px;
+    font-size: 43px;
     margin: 0 5px;
 }
-.promo__ar_parrafo{
+.promo__ar_parrafo>p{
     font-size: 16px;
     font-weight: 700;
-    padding: 0 !important;
+    margin: 0 !important;
 }
 .promo__ar__btn{
     border-radius: 40px;
     width: 110px;
     height: 33px;
     font-size: 14px;
+    margin: 0 51px;
 }
 
 /* Mobile */
