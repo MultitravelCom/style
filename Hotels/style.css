@@ -213,11 +213,6 @@
     /* SCROLL CARDS */
 
     @media (max-width: 600px) {
- 
-        .main__conteiner-principal {
-        margin-top: -40px;
-        }
-
         .main__conteiner__s2__doble {
             display: flex;
             flex-wrap: wrap;
@@ -444,11 +439,6 @@ span .glyphicon {
     .promo_mobile {
         display: revert;
     }
-
-    .main__conteiner-principal {
-        margin-top: -40px;
-    }
-
 
     .promo_mobile_cards {
         display: revert;

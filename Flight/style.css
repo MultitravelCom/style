@@ -432,6 +432,10 @@ span .glyphicon {
 
 /* Small devices (tablets, up to 768px) */
 @media (max-width: 868px) {
+    #home-content-1>.home-row{
+        margin-bottom: 15px !important;
+    }
+
     #quote-carousel .carousel-indicators {
         bottom: -100px !important;
     }
