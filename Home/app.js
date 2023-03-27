@@ -1,8 +1,7 @@
 const App = () => {
-    render()
-        return (
+    return (
         <>
-            <h2 classNameName="main__conteiner__titulo">Multitravel.com piensa en todo</h2>
+            <h2 className="main__conteiner__titulo">Multitravel.com piensa en todo</h2>
             <div className="main__conteiner">
                 <div className="main__conteiner__s3__piensa row-cols-3">
                     <div className="col-md-4 col-xs-12 uno__s3 hover__s3">
@@ -29,7 +28,7 @@ const App = () => {
                 </div>
             </div>
         </>
-        );
+    );
 };
 
 ReactDOM.render(<App />, document.getElementById('root__s3'));
