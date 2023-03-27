@@ -32,4 +32,4 @@ const App = () => {
         );
 };
 
-ReactDOM.render(<app />, document.getElementById('root__s3'));
+ReactDOM.render(<App />, document.getElementById('root__s3'));
