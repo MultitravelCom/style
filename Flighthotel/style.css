@@ -28,8 +28,8 @@
         display: none;
     }
 
-    .home-row{
-        margin-bottom: 0 !important;
+    .home-row {
+        margin-bottom: 24px;
     }
 
     .main-content {
