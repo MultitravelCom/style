@@ -11,6 +11,16 @@
     border-radius: 1rem;
     overflow: hidden;
 }
+/* Banner general */
+ .main_conteiner__s1_medio__paquetes {
+    border-radius: 32px;
+    overflow: hidden;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+}
+.page-header-bar{
+    padding: 0 !important;
+}
 
 /****** Caja de busqueda*********** */
     #home-carousel>.carousel-inner {
