@@ -1,4 +1,4 @@
-import { Seccions } from 'https://raw.githubusercontent.com/MultitravelCom/style/main/General/componentSeccion.js'
+import { Seccions } from 'https://unpkg.com/browse/multitravel@latest/style/General/componentSeccion.js'
 
 const App = () => {
     return (
