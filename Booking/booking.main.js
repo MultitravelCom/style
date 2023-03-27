@@ -13,7 +13,9 @@ window.addEventListener('load', () => {
                 <h3>¿Sabías que tenemos 6 cuotas sin interés con Aerolíneas Argentinas?</h3>
                 <p>Estas son ofertas exclusivas offline en vuelos por Argentina</p>
             </div>
-            <button class="btn btn-primary promo__ar__btn">Contactarme</button>
+            <a target="_blank" href="https://wa.link/v9ejqn">
+                <button class="btn btn-primary promo__ar__btn">Contactarme</button>
+            </a>
         </div>
     </div>
     `;
