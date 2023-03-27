@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
                 <p>Estas son ofertas exclusivas offline en vuelos por Argentina</p>
             </div>
                 <button class="btn btn-primary promo__ar__btn">
-                    <a target="_blank" href="https://wa.link/v9ejqn">Contactarme </a>
+                    <a style="color: white; text-decoration: none" target="_blank" href="https://wa.link/v9ejqn">Contactarme</a>
                 </button>
         </div>
     </div>
