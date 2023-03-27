@@ -8,11 +8,6 @@
         --fondo-btn: #0d4e88;
         --fondo-btn-hover: #324352;
     }
-
-    #home-content-5 {
-        display: block !important;
-    }
-
     /****** Caja de busqueda*********** */
     #home-carousel>.carousel-inner {
         min-height: 290px;
