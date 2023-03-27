@@ -25,6 +25,9 @@
 .top_mkt{
     margin-top: 2rem !important;
 }
+.home-row {
+    margin-bottom: 24px !important;
+}
 
 /****** Caja de busqueda*********** */
     #home-carousel>.carousel-inner {
