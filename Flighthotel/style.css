@@ -108,13 +108,6 @@
         display: none;
     }
 
-    /* Arma tu paquete */
-    .main_conteiner__s1_medio__paquetes{
-        border-radius: 32px;
-        overflow: hidden;
-        margin-bottom: 4rem;
-}
-
     .main__conteiner__titulo {
         font-weight: 700;
         margin-bottom: 1rem;

@@ -53,13 +53,6 @@ source > img {
 .promo_mobile { 
     display: none;
 }
- /* Arma tu paquete */
- .main_conteiner__s1_medio__paquetes {
-    border-radius: 32px;
-    overflow: hidden;
-    margin-bottom: 4rem;
-    margin-top: 1rem;
-}s
 
 /* Lo mejor de Multitravel.com  */
 .main__conteiner__s1{
@@ -126,14 +119,6 @@ border-radius: 8px 8px 8px 40px;
 }
 .main__conteiner__s1__destacado__doble__derecha{
 border-radius: 8px 40px 8px 8px;
-}
-
-/* Arma tu paquete */
-.main_conteiner__s1_medio__paquetes{
-border-radius: 32px;
-overflow: hidden;
-margin-bottom: 4rem;
-margin-top: 1rem;
 }
 
 .top_mkt {

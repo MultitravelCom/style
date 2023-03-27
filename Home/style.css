@@ -145,14 +145,6 @@ source>img {
   border-radius: 8px 40px 8px 8px;
 }
 
-/* Arma tu paquete */
-.main_conteiner__s1_medio__paquetes {
-  border-radius: 32px;
-  overflow: hidden;
-  margin-bottom: 4rem;
-  margin-top: 1rem;
-}
-
 /* Medios de pago */
 .main__conteiner__s2__pagos__card {
   border: var(--border-solid-card);
