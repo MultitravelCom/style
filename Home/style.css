@@ -587,10 +587,6 @@ MEDIA QUERIES
   .container__card {
     height: auto;
   }
-
-  .main__conteiner-principal {
-    margin-top: 30px;
-  }
 }
 
 /* Small devices (tablets, up to 768px) */
