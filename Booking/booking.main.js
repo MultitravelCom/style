@@ -10,7 +10,8 @@ window.addEventListener('load', () => {
                 <i class="glyphicon glyphicon-agent" aria-hidden="true"></i>
             </div>
             <div class="promo__ar_parrafo">
-                <p>¿Sabías que tenemos 6 cuotas sin interés con Aerolíneas Argentinas? Estas son ofertas exclusivas offline en vuelos por Argentina</p>
+                <h3>¿Sabías que tenemos 6 cuotas sin interés con Aerolíneas Argentinas?</h3>
+                <p>Estas son ofertas exclusivas offline en vuelos por Argentina</p>
             </div>
             <button class="btn btn-primary promo__ar__btn">Contactarme</button>
         </div>
