@@ -22,6 +22,10 @@
     padding: 0 !important;
 }
 
+.top_mkt{
+    margin-top: 2rem;
+}
+
 /****** Caja de busqueda*********** */
     #home-carousel>.carousel-inner {
         height: 290px;
