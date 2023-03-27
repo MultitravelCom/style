@@ -15,6 +15,9 @@
     #master-searcher{
         padding-bottom: 0 !important;
     }
+    #home-top{
+        margin-bottom: 1rem !important;
+    }
     .searcher{
         top:26px !important;
     }
