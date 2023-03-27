@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
     let payment = bookingData.querySelector('.booking-payment');
     let newDiv = document.createElement('div');
     newDiv.innerHTML = `
-    <div class="confirm-booking__section">    
+    <div class="confirm-booking__section banner__promo">    
         <div class="promo__ar">
             <div class="promo__ar__icon">
                 <i class="glyphicon glyphicon-agent" aria-hidden="true"></i>

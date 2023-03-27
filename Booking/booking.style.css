@@ -1,9 +1,9 @@
 /* Promo AR */
-.confirm-booking__section{
+.banner__promo{
     display: flex;
     align-items: center;
     position: relative;
-    border-radius: 4px 4px 40px 4px;
+    border-radius: 4px 4px 40px 4px !important;
     height: 96px;
 }
 .promo__ar{
