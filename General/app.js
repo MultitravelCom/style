@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { Seccions } from 'https://raw.githubusercontent.com/MultitravelCom/style/main/General/componentSeccion.js';
 
 const App = () => {
