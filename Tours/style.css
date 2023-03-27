@@ -16,11 +16,6 @@
     .img-horizontal {
         width: 100%;
     }
-
-    .main__conteiner-principal {
-        margin-top: -32px;
-    }
-
     .carousel-inner {
         height: 286px;
     }
@@ -549,10 +544,6 @@
         .container__card {
             height: auto;
         }
-
-        .main__conteiner-principal {
-        margin-top: -130px;
-    }
 
     }
 
