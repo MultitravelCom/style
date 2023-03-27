@@ -1,6 +1,6 @@
 export const props = {
     titulo: "Multitravel.com piensa en todo",
-    alojamiento: "Alojamientos",
+    alojamiento: "Alojamiento",
     vuelos: "Vuelos",
     paquetes: "Paquetes"
   };
