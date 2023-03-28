@@ -7,3 +7,5 @@ class Seccions extends React.Component {
         );
     }
 };
+
+export default Seccions;

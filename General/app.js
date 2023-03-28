@@ -1,5 +1,5 @@
 import React from "react";
-import { Seccions } from '.componentSeccion';
+import { Seccions } from './componentSeccion';
 
 const App = () => {
     return (
