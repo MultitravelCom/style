@@ -1,7 +1,9 @@
-export const Seccions = () => {
-    return (
-            <>
-            <h2>Test</h2>
-            </>
-    );
+class Seccions extends React.Component {
+    render(){
+        return (
+                <>
+                <h2>Test</h2>
+                </>
+        );
+    }
 };

@@ -1,3 +1,4 @@
+import React from "react";
 import { Seccions } from 'https://cdn.jsdelivr.net/gh/multitravelcom/style/General/componentSeccion.js';
 
 const App = () => {
