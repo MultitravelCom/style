@@ -19,7 +19,7 @@ const Secciones = (props) => {
 const App = () => {
     const path = window.location.pathname;
 
-    if (path === '/flights') {
+    if (path === 'https://www.multitravel.com/flights/') {
         return (
             <>
                 <h2 className="main__conteiner__titulo">Multitravel.com piensa en todo</h2>
