@@ -1,6 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
 const Secciones = (props) => {
     const { className } = props;
     return (
@@ -19,7 +16,7 @@ const Secciones = (props) => {
 const App = () => {
     const path = window.location.pathname;
 
-    if (path === 'https://www.multitravel.com/flights/') {
+    if (path === '/flights/') {
         return (
             <>
                 <h2 className="main__conteiner__titulo">Multitravel.com piensa en todo</h2>
