@@ -1,16 +1,16 @@
-const Component = () => {
+const Secciones = (props) => {
     return (
         <>
-            <div className="col-md-4 col-xs-12 dos__s3 hover__s3">
-                <a href="https://www.multitravel.com/flights/" target="_blank">
+            <div className="col-md-4 col-xs-12 hover__s3">
+                <a href={props.url} target="_blank">
                     <div className="main__conteiner__s3__piensa__parrafo">
-                        <p>Alojamientos</p>
+                        <p>{props.seccion}</p>
                     </div>
                 </a>
             </div>
         </>
     );
-}
+};
 
 const App = () => {
     return (
@@ -18,21 +18,9 @@ const App = () => {
             <h2 className="main__conteiner__titulo">Multitravel.com piensa en todo</h2>
             <div className="main__conteiner">
                 <div className="main__conteiner__s3__piensa row-cols-3">
-                    <Component />
-                    <div className="col-md-4 col-xs-12 dos__s3 hover__s3">
-                        <a href="https://www.multitravel.com/flights/" target="_blank">
-                            <div className="main__conteiner__s3__piensa__parrafo">
-                                <p>Vuelos</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="col-md-4 col-xs-12 tres__s3 hover__s3">
-                        <a href="https://www.multitravel.com/packages/" target="_blank">
-                            <div className="main__conteiner__s3__piensa__parrafo">
-                                <p>Paquetes</p>
-                            </div>
-                        </a>
-                    </div>
+                    <Secciones seccion="Alojamientos" url="https://www.multitravel.com/hotels/"/>
+                    <Secciones seccion="Vuelos" url="https://www.multitravel.com/flights/"/>
+                    <Secciones seccion="Paquetes" url="https://www.multitravel.com/packages/flighthotel/"/>
                 </div>
             </div>
         </>
