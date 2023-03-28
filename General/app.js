@@ -1,4 +1,4 @@
-import { Seccions } from 'https://cdn.jsdelivr.net/gh/multitravelcom/style/General/componentSeccion.js';
+import { Seccions } from './componentSeccion.js';
 
 const App = () => {
     return (
