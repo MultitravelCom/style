@@ -29,7 +29,7 @@ const App = () => {
                 </div>
             </>
         );
-    } else if (path === '/hotels') {
+    } else if (path === '/hotels/') {
         return (
             <>
                 <h2 className="main__conteiner__titulo">Multitravel.com piensa en todo</h2>
@@ -42,7 +42,7 @@ const App = () => {
                 </div>
             </>
         );
-    }else if (path === '/flighthotel') {
+    }else if (path === '/flighthotel/') {
         return (
             <>
                 <h2 className="main__conteiner__titulo">Multitravel.com piensa en todo</h2>
