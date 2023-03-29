@@ -13,8 +13,37 @@ const Secciones = (props) => {
     );
 };
 
+// Componente BennerTop
 
-const App = () => {
+const BannerTop = () => {
+  return(
+    <>
+        <div className="main_conteiner__s1_medio bannerTop">
+            <div className="main_conteiner__s1_medio__paquetes">
+                <a href="https://www.multitravel.com/venta-personalizada/travelsale" target="_blank">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="
+                        https://multitravelcom.github.io/MT/TravelSale2023/Banners/BannerProductos%20(1).jpg
+                " />
+                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="
+                        https://multitravelcom.github.io/MT/TravelSale2023/Banners/BannerProductos%20(2).jpg
+                " />
+                        <source media="(max-width: 767px)" srcset="
+                        https://multitravelcom.github.io/MT/TravelSale2023/Banners/BannerProductos%20(3).jpg
+                " />
+                        <img src="https://multitravelcom.github.io/MT/TravelSale2023/Banners/BannerProductos%20(1).jpg"
+                            alt="Imagen banner promociones" />
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </>
+  ); 
+};
+
+// Lo mejor de Multitravel.com
+
+const LoMejorDe = () => {
     const path = window.location.pathname;
 
     if (path === '/flights/') {
@@ -72,4 +101,5 @@ const App = () => {
     };
 }
 
-    ReactDOM.render(<App />, document.getElementById('root__s3'));
+ReactDOM.render(<LoMejorDe />, document.getElementById('root__s3'));
+ReactDOM.render(<BannerTop />, document.getElementById('home-content-5'));
