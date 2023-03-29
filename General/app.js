@@ -26,29 +26,7 @@ const BannerTop = () => {
 };
 
 // Lo mejor de Multitravel.com
-// SECCIONES
-const ofertasData = {
-    alojamientos: {
-      nombre: "Alojamientos",
-      url: "https://www.multitravel.com/hotels/",
-      className: "uno__s3",
-    },
-    paquetes: {
-      nombre: "Paquetes",
-      url: "https://www.multitravel.com/packages/flighthotel/",
-      className: "dos__s3",
-    },
-    asistencias: {
-      nombre: "Asistencias",
-      url: "https://www.multitravel.com/insurances/",
-      className: "tres__s3",
-    },
-    vuelos: {
-      nombre: "Vuelos",
-      url: "https://www.multitravel.com/flights/",
-      className: "cuatro__s3",
-    },
-  };
+
 
 const Secciones = ({ seccion, url, className }) => {
     return (
@@ -65,32 +43,20 @@ const Secciones = ({ seccion, url, className }) => {
 };
 
 
-const Ofertas = ({ seccion1, seccion2, seccion3 }) => {
+const Ofertas = (props) => {
     return (
-      <>
-        <h2 className="main__conteiner__titulo">Más ofertas en TravelSale</h2>
-        <div className="main__conteiner">
-          <div className="main__conteiner__s3__piensa row-cols-3">
-            <Secciones
-              seccion={ofertasData[seccion1].nombre}
-              url={ofertasData[seccion1].url}
-              className={ofertasData[seccion1].className}
-            />
-            <Secciones
-              seccion={ofertasData[seccion2].nombre}
-              url={ofertasData[seccion2].url}
-              className={ofertasData[seccion2].className}
-            />
-            <Secciones
-              seccion={ofertasData[seccion3].nombre}
-              url={ofertasData[seccion3].url}
-              className={ofertasData[seccion3].className}
-            />
-          </div>
-        </div>
-      </>
+        <>
+            <h2 className="main__conteiner__titulo">Más ofertas en TravelSale</h2>
+            <div className="main__conteiner">
+                <div className="main__conteiner__s3__piensa row-cols-3">
+                    <Secciones seccion={props.seccion1} url={props.url1} className={props.className1} />
+                    <Secciones seccion={props.seccion2} url={props.url2} className={props.className2} />
+                    <Secciones seccion={props.seccion3} url={props.url3} className={props.className3} />
+                </div>
+            </div>
+        </>
     );
-  };
+}
 
 const LoMejorDe = () => {
     const path = window.location.pathname;
@@ -164,3 +130,4 @@ const LoMejorDe = () => {
 
 ReactDOM.render(<LoMejorDe />, document.getElementById('root__s3'));
 ReactDOM.render(<BannerTop />, document.getElementById('home-content-5'));
+
