@@ -48,7 +48,7 @@ const LoMejorDe = () => {
     if (path === '/flights/') {
         return (
             <>
-                <h2 className="main__conteiner__titulo">Multitravel.com piensa en todo</h2>
+                <h2 className="main__conteiner__titulo">Más ofertas en TravelSale</h2>
                 <div className="main__conteiner">
                     <div className="main__conteiner__s3__piensa row-cols-3">
                         <Secciones seccion="Alojamientos" url="https://www.multitravel.com/hotels/" className="uno__s3" />
@@ -61,7 +61,7 @@ const LoMejorDe = () => {
     } else if (path === '/hotels/') {
         return (
             <>
-                <h2 className="main__conteiner__titulo">Multitravel.com piensa en todo</h2>
+                <h2 className="main__conteiner__titulo">Más ofertas en TravelSale</h2>
                 <div className="main__conteiner">
                     <div className="main__conteiner__s3__piensa row-cols-3">
                         <Secciones seccion="Paquetes" url="https://www.multitravel.com/hotels/" className="uno__s3" />
@@ -74,7 +74,7 @@ const LoMejorDe = () => {
     }else if (path === '/packages/flighthotel/') {
         return (
             <>
-                <h2 className="main__conteiner__titulo">Multitravel.com piensa en todo</h2>
+                <h2 className="main__conteiner__titulo">Más ofertas en TravelSale</h2>
                 <div className="main__conteiner">
                     <div className="main__conteiner__s3__piensa row-cols-3">
                     <Secciones seccion="Alojamientos" url="https://www.multitravel.com/hotels/" className="uno__s3" />
@@ -87,7 +87,7 @@ const LoMejorDe = () => {
     } else {
         return (
             <>
-                <h2 className="main__conteiner__titulo">Multitravel.com piensa en todo</h2>
+                <h2 className="main__conteiner__titulo">Más ofertas en TravelSale</h2>
                 <div className="main__conteiner">
                     <div className="main__conteiner__s3__piensa row-cols-3">
                         <Secciones seccion="Alojamientos" url="https://www.multitravel.com/hotels/" className="uno__s3" />
