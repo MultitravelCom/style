@@ -19,7 +19,7 @@
 }
 /* Banner general */
  .main_conteiner__s1_medio__paquetes {
-    border-radius: 32px;
+    border-radius: 8px 40px 8px 40px;
     overflow: hidden;
     margin-bottom: 1rem;
     margin-top: 1rem;
