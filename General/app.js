@@ -128,6 +128,6 @@ const LoMejorDe = () => {
     };
 }
 
-ReactDOM.render(<LoMejorDe />, document.getElementById('root__s3'));
-ReactDOM.render(<BannerTop />, document.getElementById('home-content-5'));
+ReactDOM.createRoot(document.getElementById('root__s3')).render(<LoMejorDe />);
+ReactDOM.createRoot(document.getElementById('home-content-5')).render(<BannerTop />);
 
