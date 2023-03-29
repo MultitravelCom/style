@@ -1,4 +1,8 @@
 /* Estilos generales de la web */
+/* **** Fechas calendario **** */
+.ui-icon:before{
+    color: #6c6464 !important;
+}
 /* nuevo espacio */
 #home-content-5 {
     display: block !important;
