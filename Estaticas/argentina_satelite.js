@@ -1,3 +1,5 @@
+import React, { useEffect } from 'react';
+
 const destinos = [
     {
         id: 1,
