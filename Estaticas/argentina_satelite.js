@@ -25,7 +25,7 @@ const Card = ({ linkWa, destino, img }) => {
                         <picture>
                             <source media="(min-width: 1024px)" srcSet={`${img}`} />
                             <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${img}`} />
-                            <source media="(max-width: 767px)" srcSet={`${imageBasePath}`} />
+                            <source media="(max-width: 767px)" srcSet={`${img}`} />
                             <img src={`${img}`} alt={`Imagen banner ${destino}`} />
                         </picture>
                     </a>
