@@ -22,6 +22,24 @@ const destinos = [
 const Card = ({ linkWa, destino, img, className }) => {
     return (
         <>
+            <div className={`main__conteiner__s1__destacado__card ${className}`} style={{ height: '100%', width: '100%' }}>
+                <a href={linkWa} target="_blank">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcSet={`${img}`} />
+                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${img}`} />
+                        <source media="(max-width: 767px)" srcSet={`${img}`} />
+                        <img src={`${img}`} alt={`Imagen banner ${destino}`} />
+                    </picture>
+                </a>
+            </div>
+        </>
+    )
+}
+
+const DestinosList = () => {
+
+    return (
+        <>
             <div className="main__conteiner__s1">
                 <div className="main__conteiner__s1__titulo">
                     <h3><strong>Descuentos Imbatibles por Argentina</strong></h3>
@@ -33,39 +51,21 @@ const Card = ({ linkWa, destino, img, className }) => {
                 </button>
                 <div className="carrusel__lista">
                     <div className="carrusel__elemento">
-                        <div className={`main__conteiner__s1__destacado__card ${className}`} style={{ height: '100%', width: '100%' }}>
-                            <a href={linkWa} target="_blank">
-                                <picture>
-                                    <source media="(min-width: 1024px)" srcSet={`${img}`} />
-                                    <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${img}`} />
-                                    <source media="(max-width: 767px)" srcSet={`${img}`} />
-                                    <img src={`${img}`} alt={`Imagen banner ${destino}`} />
-                                </picture>
-                            </a>
-                        </div>
+                        {destinos.map((destino) => (
+                            <Card
+                                key={destino.id}
+                                linkWa={`https://wa.link/${destino.destino}`}
+                                destino={destino.destino}
+                                img={destino.img}
+                                className={destino.className}
+                            />
+                        ))}
                     </div>
                 </div>
                 <button aria-label="Siguiente" className="carrusel__siguiente btnRight">
                     <i className="fa fa-chevron-right" aria-hidden="true"></i>
                 </button>
             </div>
-        </>
-    )
-}
-
-const DestinosList = () => {
-
-    return (
-        <>
-            {destinos.map((destino) => (
-                <Card
-                    key={destino.id}
-                    linkWa={`https://wa.link/${destino.destino}`}
-                    destino={destino.destino}
-                    img={destino.img}
-                    className={destino.className}
-                />
-            ))}
         </>
     );
 };
