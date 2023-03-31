@@ -38,89 +38,20 @@ const Card = ({ linkWa, destino, img, className }) => {
     )
 }
 
-const DestinosList = ({ destinos }) => {
-  return (
-    <>
-      {destinos.map((destino) => (
-        <Card
-          key={destino.id}
-          linkWa={`https://wa.link/${destino.destino}`}
-          destino={destino.destino}
-          img={destino.img}
-          className={destino.className}
-        />
-      ))}
-    </>
-  );
+const DestinosList = () => {
+    return (
+        <>
+            {destinos.map((destino) => (
+                <Card
+                    key={destino.id}
+                    linkWa={`https://wa.link/${destino.destino}`}
+                    destino={destino.destino}
+                    img={destino.img}
+                    className={destino.className}
+                />
+            ))}
+        </>
+    );
 };
 
-const Carrusel = ({ destinos }) => {
-  const [gliderLoaded, setGliderLoaded] = useState(false);
-
-  useEffect(() => {
-    if (!gliderLoaded) {
-      const items = [
-        { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista_uno' },
-        { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista_dos' }
-      ];
-  
-      items.forEach(function(item) {
-        const btnLeft = document.querySelector(item.btnLeft);
-        const btnRight = document.querySelector(item.btnRight);
-    
-        btnLeft.addEventListener('click', function (event) {
-          event.preventDefault();
-        });
-    
-        btnRight.addEventListener('click', function (event) {
-          event.preventDefault();
-        });
-    
-        new Glider(document.querySelector(item.carrusel), {
-          slidesToShow: 1.2,
-          slidesToScroll: 0.5,
-          draggable: true,
-          arrows: {
-            prev: item.btnLeft,
-            next: item.btnRight
-          },
-          responsive: [
-            {
-              // screens greater than >= 775px
-              breakpoint: 450,
-              settings: {
-                // Set to `auto` and provide item width to adjust to viewport
-                slidesToShow: '2.2',
-                slidesToScroll: '1',
-              }
-            }, {
-              // screens greater than >= 1024px
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-              }
-            }
-          ],
-          rewind: true 
-        });
-
-        setGliderLoaded(true);
-      });
-    }
-  }, [gliderLoaded]);
-
-  return (
-    <div className="carrusel">
-      <div className="carrusel__lista_uno">
-        <DestinosList destinos={destinos} />
-      </div>
-      <div className="carrusel__lista_dos">
-        <DestinosList destinos={destinos} />
-      </div>
-    </div>
-  );
-};
-
-
-ReactDOM.createRoot(document.getElementById('carrusel__lista_uno')).render(<Carrusel />);
+ReactDOM.createRoot(document.getElementById('carrusel__lista_uno')).render(<DestinosList />);
