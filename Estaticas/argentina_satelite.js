@@ -7,7 +7,7 @@ const destinos = [
     {
         id: 1,
         destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo%20(1).jpg",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
     },
     {
         id: 1,
