@@ -1,16 +1,16 @@
 // Componente BennerTop
 const BannerTop = () => {
-    const imageBasePath = 'https://multitravelcom.github.io/MT/TravelSale2023/Banners/BannerProductos';
+    const imageBasePath = 'https://multitravelcom.github.io/MT/TravelSale2023/Banners/BannerProductos%20';
 
     return (
         <div className="main_conteiner__s1_medio bannerTop">
             <div className="main_conteiner__s1_medio__paquetes">
                 <a href="https://www.multitravel.com/venta-personalizada/travelsale" target="_blank">
                     <picture>
-                        <source media="(min-width: 1024px)" srcSet={`${imageBasePath} (1).jpg`} />
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${imageBasePath} (2).jpg`} />
-                        <source media="(max-width: 767px)" srcSet={`${imageBasePath} (3).jpg`} />
-                        <img src={`${imageBasePath} (1).jpg`} alt="Imagen banner promociones" />
+                        <source media="(min-width: 1024px)" srcSet={`${imageBasePath}(1).jpg`} />
+                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${imageBasePath}(2).jpg`} />
+                        <source media="(max-width: 767px)" srcSet={`${imageBasePath}(3).jpg`} />
+                        <img src={`${imageBasePath}(1).jpg`} alt="Imagen banner promociones" />
                     </picture>
                 </a>
             </div>
