@@ -18,10 +18,7 @@ const BannerTop = () => {
     );
 };
 
-
 // Lo mejor de Multitravel.com
-
-
 const Secciones = ({ seccion, url, className }) => {
     return (
         <>
@@ -35,7 +32,6 @@ const Secciones = ({ seccion, url, className }) => {
         </>
     );
 };
-
 
 const Ofertas = (props) => {
     return (
