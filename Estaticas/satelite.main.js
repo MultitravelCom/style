@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-
   const items = [
     { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista' },
     { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' }
   ];
 
   items.forEach(function(item) {
-    const btnLesft = document.querySelector(item.btnLeft);
+    const btnLeft = document.querySelector(item.btnLeft);
     const btnRight = document.querySelector(item.btnRight);
 
-    btnLesft.addEventListener('click', function (event) {
+    btnLeft.addEventListener('click', function (event) {
       event.preventDefault();
     });
 
