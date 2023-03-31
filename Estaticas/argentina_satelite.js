@@ -20,7 +20,7 @@ const Card = ({ linkWa, destino, img }) => {
     return (
         <>
             <div className="carrusel__elemento">
-                <div className="main__conteiner__s1__destacado__card" style="height: 100%; width: 100%;">
+                <div className="main__conteiner__s1__destacado__card" style={{ height: '100%', width: '100%'}}>
                     <a href={linkWa} target="_blank">
                         <picture>
                             <source media="(min-width: 1024px)" srcSet={`${img}`} />
