@@ -123,4 +123,4 @@ const Carrusel = ({ destinos }) => {
 };
 
 
-ReactDOM.createRoot(document.getElementById('carrusel__lista_uno')).render(<DestinosList />);
+ReactDOM.createRoot(document.getElementById('carrusel__lista_uno')).render(<Carrusel />);
