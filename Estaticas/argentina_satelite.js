@@ -40,17 +40,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const CardCarrusel = () => {
         return (
-            <div className="carrusel__elemento">
-                {destinos.map((destino) => (
-                    <Card
-                        key={destino.id}
-                        linkWa={`https://wa.link/${destino.destino}`}
-                        destino={destino.destino}
-                        img={destino.img}
-                        className={destino.className}
-                    />
-                ))}
-            </div>
+            <>
+            {
+                destinos.map((destino) => (
+                    <div className="carrusel__elemento">
+                        <Card
+                            key={destino.id}
+                            linkWa={`https://wa.link/${destino.destino}`}
+                            destino={destino.destino}
+                            img={destino.img}
+                            className={destino.className}
+                        />
+                    </div>
+                ))
+            }
+            </>
         )
     };
 
@@ -116,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return (
             <>
-                <CardCarrusel destinos={destinos}/>
+                <CardCarrusel destinos={destinos} />
             </>
         );
     };
