@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         )
     }
 
-    const CardCarrusel = (destinos) => {
+    const CardCarrusel = () => {
         return (
             <div className="carrusel__elemento">
                 {destinos.map((destino) => (
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return (
             <>
-                <CardCarrusel />
+                <CardCarrusel destinos={destinos}/>
             </>
         );
     };
