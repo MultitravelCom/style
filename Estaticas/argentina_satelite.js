@@ -25,7 +25,6 @@ const Card = ({ destinos }) => {
             {destinos.map((destino) => (
                 <div
                     className={`main__conteiner__s1__destacado__card ${destino.className}`}
-                    style={{ height: "100%", width: "100%" }}
                 >
                     <a href={destino.linkWa} target="_blank">
                         <picture>
