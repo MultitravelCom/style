@@ -38,6 +38,9 @@ const Card = ({ linkWa, destino, img, className }) => {
 
 const DestinosList = () => {
 
+
+
+
     return (
         <>
             <div className="main__conteiner__s1">
@@ -49,7 +52,7 @@ const DestinosList = () => {
                 <button aria-label="Anterior" className="carrusel__anterior btnLeft">
                     <i className="fa fa-chevron-left" aria-hidden="true"></i>
                 </button>
-                <div className="carrusel__lista">
+                <div className="carrusel__lista" onLoad={initGlider}>
                     <div className="carrusel__elemento">
                         {destinos.map((destino) => (
                             <Card
