@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     const DestinosList = () => {
-        const [gliderInitialized, setGliderInitialized] = useState(false);
+        const [gliderInitialized, setGliderInitialized] = React.useState(false);
       
-        useEffect(() => {
+        React.useEffect(() => {
           if (!gliderInitialized) {
             const items = [
               {
