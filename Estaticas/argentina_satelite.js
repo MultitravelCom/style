@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-
     const destinos = [
         {
             id: 1,
@@ -54,5 +52,3 @@ document.addEventListener("DOMContentLoaded", function () {
       };
       
       ReactDOM.render(<DestinosList />, document.getElementById("carrusel__lista_uno"));
-      
-});
