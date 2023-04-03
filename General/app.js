@@ -36,7 +36,7 @@ const Secciones = ({ seccion, url, className }) => {
 const Ofertas = (props) => {
     return (
         <>
-            <h2 className="main__conteiner__titulo">Más ofertas en TravelSale</h2>
+            <h2 className="main__conteiner__titulo">Más ofertas en MultiTravel Sale</h2>
             <div className="main__conteiner">
                 <div className="main__conteiner__s3__piensa row-cols-3">
                     <Secciones seccion={props.seccion1} url={props.url1} className={props.className1} />
