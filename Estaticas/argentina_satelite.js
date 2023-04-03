@@ -79,7 +79,6 @@ const initGlider = () => {
                     settings: {
                         slidesToShow: 4,
                         slidesToScroll: 1,
-
                     }
                 }
             ],
@@ -90,6 +89,14 @@ const initGlider = () => {
 
 
 const DestinosList = () => {
+    const [gliderLoaded, setGliderLoaded] = React.useState(false);
+
+    React.useEffect(() => {
+        if (gliderLoaded) {
+          initGlider();
+        }
+      }, [gliderLoaded]);
+
     return (
         <>
             <div className="main__conteiner__s1">
@@ -101,7 +108,7 @@ const DestinosList = () => {
                 <button aria-label="Anterior" className="carrusel__anterior btnLeft">
                     <i className="fa fa-chevron-left" aria-hidden="true"></i>
                 </button>
-                <div className="carrusel__lista" onLoad={initGlider}>
+                <div className="carrusel__lista" onLoad={() => setGliderLoaded(true)}>
                     <div className="carrusel__elemento">
                         {destinos.map((destino) => (
                             <Card
