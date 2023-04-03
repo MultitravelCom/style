@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", function () {
 
     const destinos = [
         {
@@ -116,24 +116,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         return (
             <>
-                <div className="main__conteiner__s1">
-                    <div className="main__conteiner__s1__titulo">
-                        <h3>
-                            <strong>Descuentos Imbatibles por Argentina</strong>
-                        </h3>
-                    </div>
-                </div>
-                <div className="carrusel__contenedor">
-                    <button aria-label="Anterior" className="carrusel__anterior btnLeft">
-                        <i className="fa fa-chevron-left" aria-hidden="true"></i>
-                    </button>
-                    <div className="carrusel__lista">
-                        <CardCarrusel />
-                    </div>
-                    <button aria-label="Siguiente" className="carrusel__siguiente btnRight">
-                        <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                    </button>
-                </div>
+                <CardCarrusel />
             </>
         );
     };
