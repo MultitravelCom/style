@@ -24,7 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const Card = ({ linkWa, destino, img, className }) => {
         return (
             <>
-                <div className={`main__conteiner__s1__destacado__card ${className}`} style={{ height: '100%', width: '100%' }}>
+                {
+                destinos.map((destino) => (
+                    <div className="carrusel__elemento">
+                         <div className={`main__conteiner__s1__destacado__card ${className}`} style={{ height: '100%', width: '100%' }}>
                     <a href={linkWa} target="_blank">
                         <picture>
                             <source media="(min-width: 1024px)" srcSet={`${img}`} />
@@ -34,29 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         </picture>
                     </a>
                 </div>
-            </>
-        )
-    }
-
-    const CardCarrusel = () => {
-        return (
-            <>
-            {
-                destinos.map((destino) => (
-                    <div className="carrusel__elemento">
-                        <Card
-                            key={destino.id}
-                            linkWa={`https://wa.link/${destino.destino}`}
-                            destino={destino.destino}
-                            img={destino.img}
-                            className={destino.className}
-                        />
                     </div>
                 ))
             }
             </>
         )
-    };
+    }
 
     const DestinosList = () => {
         const [gliderInitialized, setGliderInitialized] = React.useState(false);
@@ -120,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return (
             <>
-                <CardCarrusel destinos={destinos} />
+                <Card destinos={destinos} />
             </>
         );
     };
