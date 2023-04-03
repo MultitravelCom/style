@@ -43,7 +43,6 @@ const Card = ({ linkWa, destino, img, className }) => {
     )
 }
 
-
 const initGlider = () => {
 
     items.forEach(function (item) {
@@ -89,15 +88,12 @@ const initGlider = () => {
     });
 }
 
-
 const DestinosList = () => {
     const [gliderLoaded, setGliderLoaded] = React.useState(false);
 
     React.useEffect(() => {
-        if (gliderLoaded) {
           initGlider();
-        }
-      }, [gliderLoaded]);
+        }, []);
 
     return (
         <>
