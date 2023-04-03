@@ -132,5 +132,5 @@ document.addEventListener("DOMContentLoaded", function (event) {
         );
       };
 
-    ReactDOM.createRoot(document.getElementById('carrusel__lista_uno')).render(<DestinosList />);
+      ReactDOM.render(<DestinosList />, document.getElementById("carrusel__lista_uno"));
 });
