@@ -23,20 +23,18 @@ const Card = ({ destinos }) => {
     return (
         <div className="carrusel__elemento">
             {destinos.map((destino) => (
-                <div className="carrusel__elemento">
-                    <div
-                        className={`main__conteiner__s1__destacado__card ${destino.className}`}
-                        style={{ height: "100%", width: "100%" }}
-                    >
-                        <a href={destino.linkWa} target="_blank">
-                            <picture>
-                                <source media="(min-width: 1024px)" srcSet={`${destino.img}`} />
-                                <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${destino.img}`} />
-                                <source media="(max-width: 767px)" srcSet={`${destino.img}`} />
-                                <img src={`${destino.img}`} alt={`Imagen banner ${destino.destino}`} />
-                            </picture>
-                        </a>
-                    </div>
+                <div
+                    className={`main__conteiner__s1__destacado__card ${destino.className}`}
+                    style={{ height: "100%", width: "100%" }}
+                >
+                    <a href={destino.linkWa} target="_blank">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcSet={`${destino.img}`} />
+                            <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${destino.img}`} />
+                            <source media="(max-width: 767px)" srcSet={`${destino.img}`} />
+                            <img src={`${destino.img}`} alt={`Imagen banner ${destino.destino}`} />
+                        </picture>
+                    </a>
                 </div>
             ))}
         </div>
