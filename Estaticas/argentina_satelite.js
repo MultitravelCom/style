@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     const DestinosList = () => {
 
-        React.useEffect(() => {
+        React.useLayoutEffect(() => {
             const initGlider = () => {
 
                 const items = [
