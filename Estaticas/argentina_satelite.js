@@ -92,7 +92,7 @@ const DestinosList = () => {
     const [gliderLoaded, setGliderLoaded] = React.useState(false);
 
     React.useEffect(() => {
-          initGlider();
+          initGlider(true);
         }, []);
 
     return (
@@ -106,7 +106,7 @@ const DestinosList = () => {
                 <button aria-label="Anterior" className="carrusel__anterior btnLeft">
                     <i className="fa fa-chevron-left" aria-hidden="true"></i>
                 </button>
-                <div className="carrusel__lista" onLoad={() => setGliderLoaded(true)}>
+                <div className="carrusel__lista">
                     <div className="carrusel__elemento">
                         {destinos.map((destino) => (
                             <Card
