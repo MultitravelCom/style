@@ -91,14 +91,27 @@ const destinos = [
     },
 ];
 
+function Button(){
+    const stylesButton = {
+        backgroundColor: props.color || "purple",
+        color: "white",
+        padding: "4px 10px",
+        borderRadius: "8px",
+      };
+
+    return (
+        <button className="btn" style={stylesButton} onClick={props.onTouchButton}>
+          {props.children}
+        </button>
+      );
+}
+
 const Card = ({ destinos }) => {
     return (
         <>
             {destinos.map((destino) => (
                 <div className="carrusel__elemento">
-                    <div
-                        className={`main__conteiner__s1__destacado__card ${destino.className}`}
-                    >
+                    <div className={`main__conteiner__s1__destacado__card ${destino.className}`}>
                         <a href={destino.linkWa} target="_blank">
                             <picture>
                                 <source media="(min-width: 1024px)" srcSet={`${destino.img}`} />
@@ -107,6 +120,7 @@ const Card = ({ destinos }) => {
                                 <img src={`${destino.img}`} alt={`Imagen banner ${destino.destino}`} />
                             </picture>
                         </a>
+                        <Button>Contactarme</Button>
                     </div>
                 </div>
             ))}
@@ -177,6 +191,12 @@ const DestinosList = () => {
 
     return (
         <>
+            <div class="carrusel__lista">
+                <Card destinos={destinos} />
+            </div>
+            <div class="carrusel__lista">
+                <Card destinos={destinos} />
+            </div>
             <div class="carrusel__lista">
                 <Card destinos={destinos} />
             </div>
