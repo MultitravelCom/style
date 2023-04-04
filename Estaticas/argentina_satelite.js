@@ -198,4 +198,4 @@ const DestinosList = () => {
     );
 };
 
-ReactDOM.render(<DestinosList />, document.getElementById("carrusel__lista_uno"));
+ReactDOM.render(<DestinosList />, document.getElementById("container_carrusel"));
