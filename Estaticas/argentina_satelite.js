@@ -93,22 +93,24 @@ const destinos = [
 
 const Card = ({ destinos }) => {
     return (
-        <div className="carrusel__elemento">
+        <>
             {destinos.map((destino) => (
-                <div
-                    className={`main__conteiner__s1__destacado__card ${destino.className}`}
-                >
-                    <a href={destino.linkWa} target="_blank">
-                        <picture>
-                            <source media="(min-width: 1024px)" srcSet={`${destino.img}`} />
-                            <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${destino.img}`} />
-                            <source media="(max-width: 767px)" srcSet={`${destino.img}`} />
-                            <img src={`${destino.img}`} alt={`Imagen banner ${destino.destino}`} />
-                        </picture>
-                    </a>
+                <div className="carrusel__elemento">
+                    <div
+                        className={`main__conteiner__s1__destacado__card ${destino.className}`}
+                    >
+                        <a href={destino.linkWa} target="_blank">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcSet={`${destino.img}`} />
+                                <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${destino.img}`} />
+                                <source media="(max-width: 767px)" srcSet={`${destino.img}`} />
+                                <img src={`${destino.img}`} alt={`Imagen banner ${destino.destino}`} />
+                            </picture>
+                        </a>
+                    </div>
                 </div>
             ))}
-        </div>
+        </>
     );
 };
 
@@ -175,9 +177,9 @@ const DestinosList = () => {
 
     return (
         <>
-        <div class="carrusel__lista">
-            <Card destinos={destinos} />
-        </div>
+            <div class="carrusel__lista">
+                <Card destinos={destinos} />
+            </div>
         </>
     );
 };
