@@ -10,18 +10,18 @@ window.addEventListener('load', () => {
 
 
   // no-results
-  let noResultDiv = document.createElement("div");
-  noResultDiv.className = "msg-box msg-box--no-results";
-  noResultDiv.innerHTML =
-    `
-    <h2 class="no-results__title">Lo sentimos</h2>
-    <div class="no-results__content">           
-        <p>En este momento no contamos con disponibilidad para esta búsqueda</p>
-        <p>Te invitamos a modificar la fecha o a comunicarte con nuestro equipo de atención personalizada</p>
-    </div>
-    <div class="btnNoResult">
-        <button type="button" class="btn btnNoResultStyle">Contactarme</button>
-    </div>
-  `;
-  document.querySelector(".results-list__body").appendChild(noResultDiv);
+  // let noResultDiv = document.createElement("div");
+  // noResultDiv.className = "msg-box msg-box--no-results";
+  // noResultDiv.innerHTML =
+  //   `
+  //   <h2 class="no-results__title">Lo sentimos</h2>
+  //   <div class="no-results__content">           
+  //       <p>En este momento no contamos con disponibilidad para esta búsqueda</p>
+  //       <p>Te invitamos a modificar la fecha o a comunicarte con nuestro equipo de atención personalizada</p>
+  //   </div>
+  //   <div class="btnNoResult">
+  //       <button type="button" class="btn btnNoResultStyle">Contactarme</button>
+  //   </div>
+  // `;
+  // document.querySelector(".results-list__body").appendChild(noResultDiv);
 });
