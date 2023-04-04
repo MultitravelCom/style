@@ -18,42 +18,6 @@ const destinos = [
         className: "tres",
     },
     {
-        id: 1,
-        destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
-        className: "uno",
-    },
-    {
-        id: 2,
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
-        className: "dos",
-    },
-    {
-        id: 3,
-        destino: "El calafate",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
-        className: "tres",
-    },
-    {
-        id: 1,
-        destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
-        className: "uno",
-    },
-    {
-        id: 2,
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
-        className: "dos",
-    },
-    {
-        id: 3,
-        destino: "El calafate",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
-        className: "tres",
-    },
-    {
         id: 4,
         destino: "Mendoza",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
@@ -88,6 +52,12 @@ const destinos = [
         destino: "El calafate",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
         className: "tres",
+    },
+    {
+        id: 10,
+        destino: "Mendoza",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
+        className: "uno",
     },
 ];
 
