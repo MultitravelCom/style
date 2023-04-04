@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
 
   // no-results
   let noResultDiv = document.createElement("div");
-  noResultDiv.className = "msg-box-b msg-box--no-results-b";
+  noResultDiv.className = "msg-box msg-box--no-results";
   noResultDiv.innerHTML =
     `
     <h2 class="no-results__title">Lo sentimos</h2>
@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
         <p>Te invitamos a modificar la fecha o a comunicarte con nuestro equipo de atención personalizada</p>
     </div>
     <div class="btnNoResult">
-        <button type="button" class="btn btn-primary">Contactarme</button>
+        <button type="button" class="btn btnNoResultStyle">Contactarme</button>
     </div>
   `;
   document.querySelector(".results-list__body").appendChild(noResultDiv);
