@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
   let noResultDiv = document.querySelector(".results-list__body");
   noResultDiv.innerHTML =
     `
-  <div class="msg-box msg-box--no-results">
+  <div class="msg-box-b msg-box--no-results-b">
     <h2 class="no-results__title">Lo sentimos</h2>
     <div class="no-results__content">           
             <p>En este momento no contamos con disponibilidad para esta búsqueda</p>
