@@ -61,6 +61,23 @@ const destinos = [
     },
 ];
 
+const CarruselContenedor = () => {
+
+    return (
+        <div className="carrusel__contenedor">
+            <button aria-label="Anterior" className="carrusel__anterior btnLeft">
+                <i className="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <div id="container_carrusel">
+                <Card destinos={destinos} />
+            </div>
+            <button aria-label="Siguiente" className="carrusel__siguiente btnRight">
+                <i className="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    )
+};
+
 const Card = ({ destinos }) => {
     return (
         <>
@@ -77,6 +94,9 @@ const Card = ({ destinos }) => {
                         </a>
                     </div>
                 </div>
+
+
+
             ))}
         </>
     );
@@ -156,13 +176,13 @@ const DestinosList = () => {
     return (
         <>
             <div className="carrusel__lista">
-                <Card destinos={destinos} />
+                <CarruselContenedor />
             </div>
             <div className="carrusel__lista2">
-                <Card destinos={destinos} />
+                <CarruselContenedor />
             </div>
             <div className="carrusel__lista3">
-                <Card destinos={destinos} />
+                <CarruselContenedor />
             </div>
         </>
     );
