@@ -188,12 +188,6 @@ const DestinosList = () => {
             <div className="carrusel__lista">
                 <Card destinos={destinos} />
             </div>
-            <div className="carrusel__lista2">
-                <Card destinos={destinos} />
-            </div>
-            <div className="carrusel__lista3">
-                <Card destinos={destinos} />
-            </div>
         </>
     );
 };
