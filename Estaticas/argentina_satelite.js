@@ -132,7 +132,7 @@ const DestinosList = () => {
                 {
                     btnLeft: ".btnLeft3",
                     btnRight: ".btnRight3",
-                    carrusel: ".carrusel__lista2",
+                    carrusel: ".carrusel__lista3",
                 },
             ];
 
