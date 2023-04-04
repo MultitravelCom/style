@@ -180,7 +180,7 @@ const DestinosList = () => {
 
     return (
         <>
-            <div class="carrusel__lista">
+            <div className="carrusel__lista">
                 <Card destinos={destinos} />
             </div>
         </>
