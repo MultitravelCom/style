@@ -124,6 +124,11 @@ const DestinosList = () => {
                     btnRight: ".btnRight",
                     carrusel: ".carrusel__lista",
                 },
+                {
+                    btnLeft: ".btnLeft",
+                    btnRight: ".btnRight",
+                    carrusel: ".carrusel__lista",
+                },
             ];
 
             items.forEach(function (item) {
@@ -175,12 +180,6 @@ const DestinosList = () => {
 
     return (
         <>
-            <div class="carrusel__lista">
-                <Card destinos={destinos} />
-            </div>
-            <div class="carrusel__lista">
-                <Card destinos={destinos} />
-            </div>
             <div class="carrusel__lista">
                 <Card destinos={destinos} />
             </div>
