@@ -91,21 +91,6 @@ const destinos = [
     },
 ];
 
-function Button(){
-    const stylesButton = {
-        backgroundColor: props.color || "purple",
-        color: "white",
-        padding: "4px 10px",
-        borderRadius: "8px",
-      };
-
-    return (
-        <button className="btn" style={stylesButton} onClick={props.onTouchButton}>
-          {props.children}
-        </button>
-      );
-}
-
 const Card = ({ destinos }) => {
     return (
         <>
@@ -120,7 +105,6 @@ const Card = ({ destinos }) => {
                                 <img src={`${destino.img}`} alt={`Imagen banner ${destino.destino}`} />
                             </picture>
                         </a>
-                        <Button>Contactarme</Button>
                     </div>
                 </div>
             ))}
