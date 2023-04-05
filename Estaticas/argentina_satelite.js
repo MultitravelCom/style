@@ -61,17 +61,23 @@ const destinos = [
     },
 ];
 
-const CarruselContenedor = () => {
+const items = [
+    { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista' },
+    { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' },
+    { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
+  ];
+
+const CarruselContenedor = ( items ) => {
     return (
         <> 
         <div className="carrusel__contenedor">
-            <button aria-label="Anterior" className="carrusel__anterior btnLeft">
+            <button aria-label="Anterior" className={`carrusel__anterior ${items.btnLeft}`}>
                 <i className="fa fa-chevron-left" aria-hidden="true"></i>
             </button>
-            <div id="container_carrusel">
+            <div className={items.carrusel}>
                 <Card destinos={destinos} />
             </div>
-            <button aria-label="Siguiente" className="carrusel__siguiente btnRight">
+            <button aria-label="Siguiente" className={`carrusel__siguiente ${items.btnRight}`}>
                 <i className="fa fa-chevron-right" aria-hidden="true"></i>
             </button>
         </div>
@@ -120,11 +126,6 @@ const DestinosList = () => {
 
     React.useEffect(() => {
         if (!gliderInitialized) {
-            const items = [
-                { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista' },
-                { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' },
-                { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
-              ];
 
             items.forEach(function (item) {
                 const btnLeft = document.querySelector(item.btnLeft);
