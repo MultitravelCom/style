@@ -62,9 +62,12 @@ const destinos = [
 ];
 
 const CarruselContenedor = () => {
+    const titulo = "Your Title Goes Here";
 
     return (
-        <> <div className="carrusel__contenedor">
+        <> 
+        <Titulos titulo={titulo} />
+        <div className="carrusel__contenedor">
             <button aria-label="Anterior" className="carrusel__anterior btnLeft">
                 <i className="fa fa-chevron-left" aria-hidden="true"></i>
             </button>
@@ -78,13 +81,13 @@ const CarruselContenedor = () => {
         </>
     )
 };
-const Titulos = () => {
+const Titulos = (props) => {
 
     return (
         <>
             <div className="main__conteiner__s1">
                 <div className="main__conteiner__s1__titulo">
-                    <h3><strong>{titulo}</strong></h3>
+                    <h3><strong>{props.titulo}</strong></h3>
                 </div>
             </div>
         </>
@@ -187,15 +190,12 @@ const DestinosList = () => {
 
     return (
         <>
-            <Titulos />
             <div className="carrusel__lista">
                 <CarruselContenedor />
             </div>
-            <Titulos />
             <div className="carrusel__lista2">
                 <CarruselContenedor />
             </div>
-            <Titulos />
             <div className="carrusel__lista3">
                 <CarruselContenedor />
             </div>
