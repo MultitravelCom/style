@@ -121,12 +121,10 @@ const DestinosList = () => {
     React.useEffect(() => {
         if (!gliderInitialized) {
             const items = [
-                {
-                    btnLeft: ".btnLeft",
-                    btnRight: ".btnRight",
-                    carrusel: ".carrusel__lista",
-                },
-            ];
+                { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista' },
+                { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' },
+                { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
+              ];
 
             items.forEach(function (item) {
                 const btnLeft = document.querySelector(item.btnLeft);
