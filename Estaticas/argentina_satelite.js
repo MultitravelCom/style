@@ -126,16 +126,6 @@ const DestinosList = () => {
                     btnRight: ".btnRight",
                     carrusel: ".carrusel__lista",
                 },
-                {
-                    btnLeft: ".btnLeft2",
-                    btnRight: ".btnRight2",
-                    carrusel: ".carrusel__lista2"
-                },
-                {
-                    btnLeft: ".btnLeft3",
-                    btnRight: ".btnRight3",
-                    carrusel: ".carrusel__lista3"
-                },
             ];
 
             items.forEach(function (item) {
