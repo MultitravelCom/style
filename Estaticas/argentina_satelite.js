@@ -96,11 +96,11 @@ const CarruselContenedor = ({ items, destinos, carruselClass }) => {
         </>
     )
 };
-const DestinosList = () => {
+const DestinosList = ({ items }) => {
 
     const [gliderInitialized, setGliderInitialized] = React.useState(false);
 
-    React.useEffect((items) => {
+    React.useEffect(() => {
         if (!gliderInitialized) {
 
             items.forEach(function (item) {
