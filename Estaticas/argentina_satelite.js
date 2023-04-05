@@ -151,9 +151,9 @@ const DestinosList = () => {
 
     return (
         <>
-            <CarruselContenedor destinos={destinos} carruselClass="carrusel__lista" />
-            <CarruselContenedor destinos={destinos} carruselClass="carrusel__lista2" />
-            <CarruselContenedor destinos={destinos} carruselClass="carrusel__lista3" />
+            <CarruselContenedor items={items} destinos={destinos} carruselClass="carrusel__lista" />
+            <CarruselContenedor items={items} destinos={destinos} carruselClass="carrusel__lista2" />
+            <CarruselContenedor items={items} destinos={destinos} carruselClass="carrusel__lista3" />
         </>
     );
 };
