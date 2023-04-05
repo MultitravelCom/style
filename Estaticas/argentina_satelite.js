@@ -78,7 +78,7 @@ const CarruselContenedor = () => {
         </>
     )
 };
-const Titulos = ({ titulo }) => {
+const Titulos = () => {
 
     return (
         <>
