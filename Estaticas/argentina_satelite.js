@@ -187,15 +187,15 @@ const DestinosList = () => {
 
     return (
         <>
-            <Titulos titulo={"titulo 1"} />
+            <Titulos />
             <div className="carrusel__lista">
                 <CarruselContenedor />
             </div>
-            <Titulos titulo={"titulo 2"} />
+            <Titulos />
             <div className="carrusel__lista2">
                 <CarruselContenedor />
             </div>
-            <Titulos titulo={"titulo 3"} />
+            <Titulos />
             <div className="carrusel__lista3">
                 <CarruselContenedor />
             </div>
