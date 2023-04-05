@@ -100,7 +100,7 @@ const DestinosList = () => {
 
     const [gliderInitialized, setGliderInitialized] = React.useState(false);
 
-    React.useEffect(() => {
+    React.useEffect((items) => {
         if (!gliderInitialized) {
 
             items.forEach(function (item) {
