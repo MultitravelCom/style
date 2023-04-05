@@ -152,9 +152,9 @@ const DestinosList = ({ items }) => {
 
     return (
         <>
-            <CarruselContenedor items={items[0]} destinos={destinos} carruselClass="carrusel__lista" />
-            <CarruselContenedor items={items[1]} destinos={destinos} carruselClass="carrusel__lista2" />
-            <CarruselContenedor items={items[2]} destinos={destinos} carruselClass="carrusel__lista3" />
+            <CarruselContenedor destinos={destinos} carruselClass="carrusel__lista" />
+            <CarruselContenedor destinos={destinos} carruselClass="carrusel__lista2" />
+            <CarruselContenedor destinos={destinos} carruselClass="carrusel__lista3" />
         </>
     );
 };
