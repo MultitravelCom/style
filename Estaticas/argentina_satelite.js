@@ -62,11 +62,8 @@ const destinos = [
 ];
 
 const CarruselContenedor = () => {
-    const titulo = "Your Title Goes Here";
-
     return (
         <> 
-        <Titulos titulo={titulo} />
         <div className="carrusel__contenedor">
             <button aria-label="Anterior" className="carrusel__anterior btnLeft">
                 <i className="fa fa-chevron-left" aria-hidden="true"></i>
@@ -81,20 +78,20 @@ const CarruselContenedor = () => {
         </>
     )
 };
-const Titulos = (props) => {
+// const Titulos = (props) => {
 
-    return (
-        <>
-            <div className="main__conteiner__s1">
-                <div className="main__conteiner__s1__titulo">
-                    <h3><strong>{props.titulo}</strong></h3>
-                </div>
-            </div>
-        </>
+//     return (
+//         <>
+//             <div className="main__conteiner__s1">
+//                 <div className="main__conteiner__s1__titulo">
+//                     <h3><strong>{props.titulo}</strong></h3>
+//                 </div>
+//             </div>
+//         </>
 
 
-    )
-}
+//     )
+// }
 
 const Card = ({ destinos }) => {
     return (
