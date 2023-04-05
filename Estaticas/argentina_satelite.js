@@ -67,7 +67,7 @@ const items = [
     { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
   ];
 
-const CarruselContenedor = ( items ) => {
+const CarruselContenedor = ({ items, destinos }) => {
     return (
         <> 
         <div className="carrusel__contenedor">
@@ -75,7 +75,20 @@ const CarruselContenedor = ( items ) => {
                 <i className="fa fa-chevron-left" aria-hidden="true"></i>
             </button>
             <div className={items.carrusel}>
-                <Card destinos={destinos} />
+                {destinos.map((destino) => (
+                    <div className="carrusel__elemento">
+                        <div className={`main__conteiner__s1__destacado__card ${destino.className}`}>
+                            <a href={destino.linkWa} target="_blank">
+                                <picture>
+                                    <source media="(min-width: 1024px)" srcSet={`${destino.img}`} />
+                                    <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${destino.img}`} />
+                                    <source media="(max-width: 767px)" srcSet={`${destino.img}`} />
+                                    <img src={`${destino.img}`} alt={`Imagen banner ${destino.destino}`} />
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                ))}
             </div>
             <button aria-label="Siguiente" className={`carrusel__siguiente ${items.btnRight}`}>
                 <i className="fa fa-chevron-right" aria-hidden="true"></i>
@@ -84,41 +97,27 @@ const CarruselContenedor = ( items ) => {
         </>
     )
 };
-// const Titulos = (props) => {
 
+// const Card = ({ destinos }) => {
 //     return (
 //         <>
-//             <div className="main__conteiner__s1">
-//                 <div className="main__conteiner__s1__titulo">
-//                     <h3><strong>{props.titulo}</strong></h3>
+//             {destinos.map((destino) => (
+//                 <div className="carrusel__elemento">
+//                     <div className={`main__conteiner__s1__destacado__card ${destino.className}`}>
+//                         <a href={destino.linkWa} target="_blank">
+//                             <picture>
+//                                 <source media="(min-width: 1024px)" srcSet={`${destino.img}`} />
+//                                 <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${destino.img}`} />
+//                                 <source media="(max-width: 767px)" srcSet={`${destino.img}`} />
+//                                 <img src={`${destino.img}`} alt={`Imagen banner ${destino.destino}`} />
+//                             </picture>
+//                         </a>
+//                     </div>
 //                 </div>
-//             </div>
+//             ))}
 //         </>
-
-
-//     )
-// }
-
-const Card = ({ destinos }) => {
-    return (
-        <>
-            {destinos.map((destino) => (
-                <div className="carrusel__elemento">
-                    <div className={`main__conteiner__s1__destacado__card ${destino.className}`}>
-                        <a href={destino.linkWa} target="_blank">
-                            <picture>
-                                <source media="(min-width: 1024px)" srcSet={`${destino.img}`} />
-                                <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${destino.img}`} />
-                                <source media="(max-width: 767px)" srcSet={`${destino.img}`} />
-                                <img src={`${destino.img}`} alt={`Imagen banner ${destino.destino}`} />
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-            ))}
-        </>
-    );
-};
+//     );
+// };
 
 const DestinosList = () => {
 
@@ -176,15 +175,7 @@ const DestinosList = () => {
 
     return (
         <>
-            <div className="carrusel__lista">
-                <CarruselContenedor />
-            </div>
-            <div className="carrusel__lista2">
-                <CarruselContenedor />
-            </div>
-            <div className="carrusel__lista3">
-                <CarruselContenedor />
-            </div>
+            <CarruselContenedor />
         </>
     );
 };
