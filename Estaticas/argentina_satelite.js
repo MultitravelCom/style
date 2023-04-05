@@ -203,4 +203,4 @@ const DestinosList = () => {
     );
 };
 
-ReactDOM.render(<DestinosList />, document.getElementById("container_carrusel"));
+ReactDOM.render(<DestinosList />, document.getElementById("componenteReact"));
