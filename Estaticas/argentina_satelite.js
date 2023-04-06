@@ -74,10 +74,23 @@ const items = [
     { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' },
     { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
 ];
+const titles = [
+    { title: 'Descuentos Imbatibles por Argentina'},
+]
+
+const TitleContainer = ({ title }) =>{
+    return (
+        <div className="main__conteiner__s1">
+                <div className="main__conteiner__s1__titulo">
+                    <h3><strong>{ title }</strong></h3>
+                </div>
+        </div>
+    );
+};
 
 const CardContainer = ({ items }) => {
     return (
-        <>
+        <div class="carrusel__contenedor">
             <button aria-label="Anterior" className={`carrusel__anterior ${items.btnLeft}`}>
                 <i className="fa fa-chevron-left" aria-hidden="true"></i>
             </button>
@@ -87,7 +100,7 @@ const CardContainer = ({ items }) => {
             <button aria-label="Siguiente" className={`carrusel__siguiente ${items.btnRight}`}>
                 <i className="fa fa-chevron-right" aria-hidden="true"></i>
             </button>
-        </>
+        </div>
     );
 };
 
@@ -108,6 +121,13 @@ const Card = ({ destinos }) => {
         </div>
     ));
 };
+
+const MainContainer = () =>{
+    <>
+        <TitleContainer title={titles} />
+        <CardContainer items={items} />
+    </>
+}
 
 const App = () => {
 
@@ -165,8 +185,10 @@ const App = () => {
     // }, [gliderInitialized]);
 
     return (
-        <CardContainer items={items} />
+        <>
+            <MainContainer />
+        </>
     );
 };
 
-ReactDOM.render(<App />, document.getElementById("cardContainer"));
+ReactDOM.render(<App />, document.getElementById("containerCarrusel"));
