@@ -4,42 +4,49 @@ const destinos = [
         destino: "Mendoza",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
         className: "uno",
+        linkWa: "https://wa.link/wc5s7c",
     },
     {
         id: 2,
         destino: "Bariloche",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
         className: "dos",
+        linkWa: "https://wa.link/wc5s7c",
     },
     {
         id: 3,
         destino: "El calafate",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
         className: "tres",
+        linkWa: "https://wa.link/wc5s7c",
     },
     {
         id: 4,
         destino: "Mendoza",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
         className: "uno",
+        linkWa: "https://wa.link/wc5s7c",
     },
     {
         id: 5,
         destino: "Bariloche",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
         className: "dos",
+        linkWa: "https://wa.link/wc5s7c",
     },
     {
         id: 6,
         destino: "El calafate",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
         className: "tres",
+        linkWa: "https://wa.link/wc5s7c",
     },
     {
         id: 7,
         destino: "Mendoza",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
         className: "uno",
+        linkWa: "https://wa.link/wc5s7c",
     },
     {
         id: 8,
@@ -52,14 +59,34 @@ const destinos = [
         destino: "El calafate",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
         className: "tres",
+        linkWa: "https://wa.link/wc5s7c",
     },
     {
         id: 10,
         destino: "Mendoza",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
         className: "uno",
+        linkWa: "https://wa.link/wc5s7c",
     },
 ];
+
+const Card = ({ destinos }) => {
+    return destinos.map((destino) => (
+        <div className="carrusel__elemento">
+            <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
+                <picture>
+                    <map name="image-map">
+                        <area target="_blank" alt="bariloche" title={destino.destino} href={destino.linkWa} coords="35.97%, 64.23%, 77.62%, 78.34%" shape="rect" />
+                    </map>
+                    <source media="(min-width: 1024px)" srcSet={destino.img} />
+                    <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
+                    <source media="(max-width: 767px)" srcSet={destino.img} />
+                    <img src={destino.img} useMap="#image-map" />
+                </picture>
+            </div>
+        </div>
+    ));
+};
 
 const App = () => {
 
@@ -122,25 +149,7 @@ const App = () => {
     // }, [gliderInitialized]);
 
     return (
-        <div className="carrusel__elemento">
-                <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
-                    <picture>
-                        <map name="image-map">
-                            <area target="_blank" alt="bariloche" title="bariloche" href="https://wa.link/ncvo1x" coords="35.97%, 64.23%, 77.62%, 78.34%" shape="rect" />
-                        </map>
-                        <source media="(min-width: 1024px)" srcSet="
-        https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp
-      " />
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet="
-        https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(2).webp
-      " />
-                        <source media="(max-width: 767px)" srcSet="
-        https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(3).webp
-      " />
-                        <img src="https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp" useMap="#image-map" />
-                    </picture>
-                </div>
-        </div>
+        <Card  destinos={destinos}  />
     );
 };
 
