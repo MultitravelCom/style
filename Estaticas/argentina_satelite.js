@@ -75,7 +75,9 @@ const items = [
     { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
 ];
 const titles = [
-    { title: 'Descuentos Imbatibles por Argentina' },
+    { 
+        title: 'Descuentos Imbatibles por Argentina', 
+},
 ]
 
 const TitleContainer = ({ title }) => {
