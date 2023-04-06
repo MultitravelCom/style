@@ -63,63 +63,63 @@ const destinos = [
 
 const App = () => {
 
-    const [gliderInitialized, setGliderInitialized] = React.useState(false);
+    // const [gliderInitialized, setGliderInitialized] = React.useState(false);
 
-    React.useEffect(() => {
-        if (!gliderInitialized) {
+    // React.useEffect(() => {
+    //     if (!gliderInitialized) {
 
-            const items = [
-                { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista' },
-                { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' },
-                { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
-            ];
+    //         const items = [
+    //             { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista' },
+    //             { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' },
+    //             { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
+    //         ];
 
-            items.forEach(function (item) {
-                // const btnLeft = document.querySelector(item.btnLeft);
-                // const btnRight = document.querySelector(item.btnRight);
+    //         items.forEach(function (item) {
+    //             const btnLeft = document.querySelector(item.btnLeft);
+    //             const btnRight = document.querySelector(item.btnRight);
 
-                // btnLeft.addEventListener("click", function (event) {
-                //     event.preventDefault();
-                // });
+    //             btnLeft.addEventListener("click", function (event) {
+    //                 event.preventDefault();
+    //             });
 
-                // btnRight.addEventListener("click", function (event) {
-                //     event.preventDefault();
-                // });
+    //             btnRight.addEventListener("click", function (event) {
+    //                 event.preventDefault();
+    //             });
 
-                new Glider(document.querySelector(item.carrusel), {
-                    slidesToShow: 1.2,
-                    slidesToScroll: 0.5,
-                    draggable: true,
-                    arrows: {
-                        prev: item.btnLeft,
-                        next: item.btnRight,
-                    },
-                    responsive: [
-                        {
-                            // screens greater than >= 775px
-                            breakpoint: 450,
-                            settings: {
-                                // Set to `auto` and provide item width to adjust to viewport
-                                slidesToShow: "2.2",
-                                slidesToScroll: "1",
-                            },
-                        },
-                        {
-                            // screens greater than >= 1024px
-                            breakpoint: 1024,
-                            settings: {
-                                slidesToShow: 4,
-                                slidesToScroll: 1,
-                            },
-                        },
-                    ],
-                    rewind: true,
-                });
-            });
+    //             new Glider(document.querySelector(item.carrusel), {
+    //                 slidesToShow: 1.2,
+    //                 slidesToScroll: 0.5,
+    //                 draggable: true,
+    //                 arrows: {
+    //                     prev: item.btnLeft,
+    //                     next: item.btnRight,
+    //                 },
+    //                 responsive: [
+    //                     {
+    //                         // screens greater than >= 775px
+    //                         breakpoint: 450,
+    //                         settings: {
+    //                             // Set to `auto` and provide item width to adjust to viewport
+    //                             slidesToShow: "2.2",
+    //                             slidesToScroll: "1",
+    //                         },
+    //                     },
+    //                     {
+    //                         // screens greater than >= 1024px
+    //                         breakpoint: 1024,
+    //                         settings: {
+    //                             slidesToShow: 4,
+    //                             slidesToScroll: 1,
+    //                         },
+    //                     },
+    //                 ],
+    //                 rewind: true,
+    //             });
+    //         });
 
-            setGliderInitialized(true);
-        }
-    }, [gliderInitialized]);
+    //         setGliderInitialized(true);
+    //     }
+    // }, [gliderInitialized]);
 
     return (
         <div className="carrusel__elemento">
