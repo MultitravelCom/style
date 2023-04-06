@@ -60,24 +60,43 @@ const destinos = [
         className: "uno",
     },
 ];
+const items = [
+    { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista' },
+    { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' },
+    { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
+];
 
-const CarruselContenedor = () => {
-
+const CarruselContenedor = ({ items, destinos, carruselClass }) => {
     return (
-        <> <div className="carrusel__contenedor">
-            <button aria-label="Anterior" className="carrusel__anterior btnLeft">
-                <i className="fa fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <div id="container_carrusel">
-                <Card destinos={destinos} />
+        <>
+            <div className="carrusel__contenedor">
+                <button aria-label="Anterior" className={`carrusel__anterior ${items.btnLeft}`}>
+                    <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <div className={`${carruselClass}`}>
+                    {destinos.map((destino) => (
+                        <div className="carrusel__elemento">
+                            <div className={`main__conteiner__s1__destacado__card ${destino.className}`}>
+                                <a href={destino.linkWa} target="_blank">
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcSet={`${destino.img}`} />
+                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${destino.img}`} />
+                                        <source media="(max-width: 767px)" srcSet={`${destino.img}`} />
+                                        <img src={`${destino.img}`} alt={`Imagen banner ${destino.destino}`} />
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <button aria-label="Siguiente" className={`carrusel__siguiente ${items.btnRight}`}>
+                    <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                </button>
             </div>
-            <button aria-label="Siguiente" className="carrusel__siguiente btnRight">
-                <i className="fa fa-chevron-right" aria-hidden="true"></i>
-            </button>
-        </div>
         </>
     )
 };
+<<<<<<< HEAD
 const Titulos = ({ titulo }) => {
 
     return (
@@ -113,30 +132,14 @@ const Card = ({ destinos }) => {
     );
 };
 
+=======
+>>>>>>> ec55a573ac43ae0264dffc3a150bdecbdd718e30
 const DestinosList = () => {
 
     const [gliderInitialized, setGliderInitialized] = React.useState(false);
 
     React.useEffect(() => {
         if (!gliderInitialized) {
-            const items = [
-                {
-                    btnLeft: ".btnLeft",
-                    btnRight: ".btnRight",
-                    carrusel: ".carrusel__lista",
-                },
-                {
-                    btnLeft: ".btnLeft2",
-                    btnRight: ".btnRight2",
-                    carrusel: ".carrusel__lista2"
-                },
-                {
-                    btnLeft: ".btnLeft3",
-                    btnRight: ".btnRight3",
-                    carrusel: ".carrusel__lista3"
-                },
-            ];
-
             items.forEach(function (item) {
                 const btnLeft = document.querySelector(item.btnLeft);
                 const btnRight = document.querySelector(item.btnRight);
@@ -186,18 +189,9 @@ const DestinosList = () => {
 
     return (
         <>
-            <Titulos titulo={"titulo 1"} />
-            <div className="carrusel__lista">
-                <CarruselContenedor />
-            </div>
-            <Titulos titulo={"titulo 2"} />
-            <div className="carrusel__lista2">
-                <CarruselContenedor />
-            </div>
-            <Titulos titulo={"titulo 3"} />
-            <div className="carrusel__lista3">
-                <CarruselContenedor />
-            </div>
+            <CarruselContenedor items={items} destinos={destinos} carruselClass="carrusel__lista" />
+            <CarruselContenedor items={items} destinos={destinos} carruselClass="carrusel__lista2" />
+            <CarruselContenedor items={items} destinos={destinos} carruselClass="carrusel__lista3" />
         </>
     );
 };
