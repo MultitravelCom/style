@@ -66,38 +66,7 @@ const items = [
     { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
 ];
 
-const CarruselContenedor = ({ items, destinos, carruselClass }) => {
-    return (
-        <>
-            <div className="carrusel__contenedor">
-                <button aria-label="Anterior" className={`carrusel__anterior ${items.btnLeft}`}>
-                    <i className="fa fa-chevron-left" aria-hidden="true"></i>
-                </button>
-                <div className={`${carruselClass}`}>
-                    {destinos.map((destino) => (
-                        <div className="carrusel__elemento">
-                            <div className={`main__conteiner__s1__destacado__card ${destino.className}`}>
-                                <a href={destino.linkWa} target="_blank">
-                                    <picture>
-                                        <source media="(min-width: 1024px)" srcSet={`${destino.img}`} />
-                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${destino.img}`} />
-                                        <source media="(max-width: 767px)" srcSet={`${destino.img}`} />
-                                        <img src={`${destino.img}`} alt={`Imagen banner ${destino.destino}`} />
-                                    </picture>
-                                </a>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <button aria-label="Siguiente" className={`carrusel__siguiente ${items.btnRight}`}>
-                    <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                </button>
-            </div>
-        </>
-    )
-};
-
-const DestinosList = () => {
+const App = () => {
 
     const [gliderInitialized, setGliderInitialized] = React.useState(false);
 
@@ -152,11 +121,27 @@ const DestinosList = () => {
 
     return (
         <>
-            <CarruselContenedor items={items} destinos={destinos} carruselClass="carrusel__lista" />
-            <CarruselContenedor items={items} destinos={destinos} carruselClass="carrusel__lista2" />
-            <CarruselContenedor items={items} destinos={destinos} carruselClass="carrusel__lista3" />
+            <div className="carrusel__elemento">
+                <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
+                    <picture>
+                        <map name="image-map">
+                            <area target="_blank" alt="bariloche" title="bariloche" href="https://wa.link/ncvo1x" coords="35.97%, 64.23%, 77.62%, 78.34%" shape="rect" />
+                        </map>
+                        <source media="(min-width: 1024px)" srcSet="
+        https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp
+      " />
+                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet="
+        https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(2).webp
+      " />
+                        <source media="(max-width: 767px)" srcSet="
+        https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(3).webp
+      " />
+                        <img src="https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp" useMap="#image-map" />
+                    </picture>
+                </div>
+            </div>
         </>
     );
 };
 
-ReactDOM.render(<DestinosList />, document.getElementById("componenteReact"));
+ReactDOM.render(<App />, document.getElementById("seccionBariloche"));
