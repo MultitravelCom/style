@@ -118,14 +118,12 @@
         padding: 0 !important;
         padding-left: 3px !important;
     }
-    /* .sliding-offers__image-holder img {
-        height: 160px !important; 
-        object-fit: fill;
-    } */
-
+}
+@media (max-width: 767px) {
     /* Icono calendario */
     .ui-icon:before{
         font-size: 2.2rem !important;
     }
 }
+
 /* ******************************************************** */
