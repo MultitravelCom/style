@@ -69,6 +69,27 @@ const destinos = [
         linkWa: "https://wa.link/wc5s7c",
     },
 ];
+const items = [
+    { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista' },
+    { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' },
+    { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
+];
+
+const CardContainer = ({ items }) => {
+    return (
+        <>
+            <button aria-label="Anterior" className={`carrusel__anterior ${items.btnLeft}`}>
+                <i className="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <div className={items.carrusel} id="seccionBariloche">
+                <Card destinos={destinos} />
+            </div>
+            <button aria-label="Siguiente" className={`carrusel__siguiente ${items.btnRight}`}>
+                <i className="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </>
+    );
+};
 
 const Card = ({ destinos }) => {
     return destinos.map((destino) => (
@@ -95,11 +116,6 @@ const App = () => {
     // React.useEffect(() => {
     //     if (!gliderInitialized) {
 
-    //         const items = [
-    //             { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista' },
-    //             { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' },
-    //             { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
-    //         ];
 
     //         items.forEach(function (item) {
     //             const btnLeft = document.querySelector(item.btnLeft);
@@ -149,8 +165,8 @@ const App = () => {
     // }, [gliderInitialized]);
 
     return (
-        <Card  destinos={destinos}  />
+        <Card destinos={destinos} />
     );
 };
 
-ReactDOM.render(<App />, document.getElementById("seccionBariloche"));
+ReactDOM.render(<App />, document.getElementById("cardContainer"));
