@@ -96,44 +96,7 @@ const CarruselContenedor = ({ items, destinos, carruselClass }) => {
         </>
     )
 };
-<<<<<<< HEAD
-const Titulos = ({ titulo }) => {
 
-    return (
-        <>
-            <div className="main__conteiner__s1">
-                <div className="main__conteiner__s1__titulo">
-                    <h3><strong>{titulo}</strong></h3>
-                </div>
-            </div>
-        </>
-
-    )
-}
-
-const Card = ({ destinos }) => {
-    return (
-        <>
-            {destinos.map((destino) => (
-                <div className="carrusel__elemento">
-                    <div className={`main__conteiner__s1__destacado__card ${destino.className}`}>
-                        <a href={destino.linkWa} target="_blank">
-                            <picture>
-                                <source media="(min-width: 1024px)" srcSet={`${destino.img}`} />
-                                <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${destino.img}`} />
-                                <source media="(max-width: 767px)" srcSet={`${destino.img}`} />
-                                <img src={`${destino.img}`} alt={`Imagen banner ${destino.destino}`} />
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-            ))}
-        </>
-    );
-};
-
-=======
->>>>>>> ec55a573ac43ae0264dffc3a150bdecbdd718e30
 const DestinosList = () => {
 
     const [gliderInitialized, setGliderInitialized] = React.useState(false);
