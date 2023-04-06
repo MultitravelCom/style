@@ -75,15 +75,15 @@ const items = [
     { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
 ];
 const titles = [
-    { title: 'Descuentos Imbatibles por Argentina'},
+    { title: 'Descuentos Imbatibles por Argentina' },
 ]
 
-const TitleContainer = ({ title }) =>{
+const TitleContainer = ({ title }) => {
     return (
         <div className="main__conteiner__s1">
-                <div className="main__conteiner__s1__titulo">
-                    <h3><strong>{ title }</strong></h3>
-                </div>
+            <div className="main__conteiner__s1__titulo">
+                <h3><strong>{title}</strong></h3>
+            </div>
         </div>
     );
 };
@@ -122,12 +122,15 @@ const Card = ({ destinos }) => {
     ));
 };
 
-const MainContainer = () =>{
-    <>
-        <TitleContainer title={titles} />
-        <CardContainer items={items} />
-    </>
-}
+const MainContainer = () => {
+    return (
+        <>
+            <TitleContainer title={titles} />
+            <CardContainer items={items} />
+        </>
+    );
+};
+
 
 const App = () => {
 
