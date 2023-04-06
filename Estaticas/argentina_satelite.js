@@ -165,7 +165,7 @@ const App = () => {
     // }, [gliderInitialized]);
 
     return (
-        <CardContainer destinos={items} />
+        <CardContainer items={items} />
     );
 };
 
