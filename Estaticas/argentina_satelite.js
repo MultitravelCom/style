@@ -124,14 +124,14 @@ const Card = ({ destinos }) => {
     ));
 };
 
-const MainContainer = ({ titles, items}) => {
+const MainContainer = ({ titles, items }) => {
     return (
-        <>
-            <TitleContainer title={titles} />
-            <CardContainer items={items} />
-        </>
+      <div>
+        <TitleContainer title={titles} />
+        <CardContainer items={items} />
+      </div>
     );
-};
+  };
 
 const App = () => {
 
