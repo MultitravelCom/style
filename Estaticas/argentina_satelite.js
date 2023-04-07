@@ -73,6 +73,12 @@ const titles = [
     { title: 'Descuentos Imbatibles por Argentina' },
 ];
 
+const items = [
+    { btnLeft: ".btnLeft", btnRight: ".btnRight", carrusel: ".carrusel__lista" },
+    { btnLeft: ".btnLeft2", btnRight: ".btnRight2", carrusel: ".carrusel__lista2" },
+    { btnLeft: ".btnLeft3", btnRight: ".btnRight3", carrusel: ".carrusel__lista3" },
+  ]
+
 const initializeGlider = (items) => {
     items.forEach(function (item) {
       const btnLeft = document.querySelector(item.btnLeft);
@@ -131,11 +137,6 @@ const TitleContainer = ({ titles }) => {
   };
 
   const CardContainer = ({ items }) => {
-      const items = [
-          { btnLeft: ".btnLeft", btnRight: ".btnRight", carrusel: ".carrusel__lista" },
-          { btnLeft: ".btnLeft2", btnRight: ".btnRight2", carrusel: ".carrusel__lista2" },
-          { btnLeft: ".btnLeft3", btnRight: ".btnRight3", carrusel: ".carrusel__lista3" },
-        ]
       React.useEffect(() => {
         initializeGlider(items);
       }, []);
