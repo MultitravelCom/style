@@ -111,57 +111,57 @@ const Card = ({ destinos }) => {
 
 const CardContainer = ({ btnStyles }) => {
 
-    React.useEffect(()=>{
-        const btnLeft = document.querySelector(".btnLeft");
-        const btnRight = document.querySelector(".btnRight");
-    
-        btnLeft.addEventListener('click', function (event) {
-          event.preventDefault();
-        });
-    
-        btnRight.addEventListener('click', function (event) {
-          event.preventDefault();
-        });
-
+    React.useEffect(() => {
         btnStyles.forEach((style) => {
-            new Glider(document.querySelector(`.${style.carrusel}`), {
-              slidesToShow: 1.2,
-              slidesToScroll: 0.5,
-              draggable: true,
-              arrows: {
-                prev: btnLeft,
-                next: btnRight,
-              },
-              responsive: [
-                {
-                  // screens greater than >= 775px
-                  breakpoint: 450,
-                  settings: {
-                    // Set to `auto` and provide item width to adjust to viewport
-                    slidesToShow: "2.2",
-                    slidesToScroll: "1",
-                  },
-                },
-                {
-                  // screens greater than >= 1024px
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                  },
-                },
-              ],
-              rewind: true,
+            const btnLeft = document.querySelector(`.${style.btnLeft}`);
+            const btnRight = document.querySelector(`.${style.btnRight}`);
+
+            btnLeft.addEventListener('click', function (event) {
+                event.preventDefault();
             });
-          });
-        }, [btnStyles]);
+
+            btnRight.addEventListener('click', function (event) {
+                event.preventDefault();
+            });
+
+            new Glider(document.querySelector(`.${style.carrusel}`), {
+                slidesToShow: 1.2,
+                slidesToScroll: 0.5,
+                draggable: true,
+                arrows: {
+                    prev: btnLeft,
+                    next: btnRight,
+                },
+                responsive: [
+                    {
+                        // screens greater than >= 775px
+                        breakpoint: 450,
+                        settings: {
+                            // Set to `auto` and provide item width to adjust to viewport
+                            slidesToShow: "2.2",
+                            slidesToScroll: "1",
+                        },
+                    },
+                    {
+                        // screens greater than >= 1024px
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1,
+                        },
+                    },
+                ],
+                rewind: true,
+            });
+        });
+    }, [btnStyles]);
 
     return (
         btnStyles.map((item) => (
             <div className="carrusel__contenedor">
                 <button
                     aria-label="Anterior"
-                    className={`carrusel__anterior btnLeft`}
+                    className={`carrusel__anterior ${item.btnLeft}`}
                 >
                     <i className="fa fa-chevron-left" aria-hidden="true"></i>
                 </button>
@@ -170,27 +170,26 @@ const CardContainer = ({ btnStyles }) => {
                 </div>
                 <button
                     aria-label="Siguiente"
-                    className={`carrusel__siguiente btnRight`}
+                    className={`carrusel__siguiente ${item.btnRight}`}
                 >
                     <i className="fa fa-chevron-right" aria-hidden="true"></i>
                 </button>
             </div>
-    )));
-    
+        )));
+
 };
 
 const App = () => {
 
     const btnStyles = [
-        { carrusel: "carrusel__lista" },
-        { carrusel: "carrusel__lista2" },
-        { carrusel: "carrusel__lista3" },
-      ];
+        { carrusel: ".carrusel__lista", btnLeft: ".btnLeft", btnRight: ".btnRight" },
+        { carrusel: ".carrusel__lista2", btnLeft: ".btnLeft2", btnRight: ".btnRight2" },
+    ];
 
     return (
         <>
             <TitleContainer titles={titles} />
-            <CardContainer btnStyles={btnStyles}/>
+            <CardContainer btnStyles={btnStyles} />
         </>
     );
 }
