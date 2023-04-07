@@ -177,8 +177,8 @@ const CardContainer = ({ btnStyles }) => {
 const App = () => {
 
     const btnStyles = [
-        { carrusel: ".carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight" },
-        { carrusel: ".carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2" },
+        { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight" },
+        { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2" },
     ];
 
     return (
