@@ -173,14 +173,14 @@ const Card = ({ destinos }) => {
 };
 
 const App = () => {
-    const [gliderInitialized, setGliderInitialized] = React.useState(false);
+    // const [gliderInitialized, setGliderInitialized] = React.useState(false);
   
-    React.useEffect(() => {
-      if (!gliderInitialized) {
-        initializeGlider(items);
-        setGliderInitialized(true);
-      }
-    }, [gliderInitialized]);
+    // React.useEffect(() => {
+    //   if (!gliderInitialized) {
+    //     initializeGlider(items);
+    //     setGliderInitialized(true);
+    //   }
+    // }, [gliderInitialized]);
   
     return (
       <>
