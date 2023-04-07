@@ -101,17 +101,11 @@ const CardContainer = () => {
             <button type="button" className="slider-nav"></button>
             <button type="button" className="slider-nav slider-nav-next"></button>
 
-            <ul className="slider-indicators">
-                <li className=""></li>
-                <li></li>
-                <li className=""></li>
-                <li className=""></li>
-                <li></li>
-                <li className="active"></li>
-                <li className=""></li>
-                <li></li>
-                <li className=""></li>
-            </ul>
+            <div className="slider-indicators">
+                <button className="active"></button>
+                <button></button>
+                <button></button>
+            </div>
         </div>
     );
 };
