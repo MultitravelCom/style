@@ -93,38 +93,9 @@ const TitleContainer = ({ titles }) => {
 const CardContainer = () => {
 
     return (
-
         <div className="swiffy-slider slider-item-show4 slider-nav-round slider-nav-sm slider-nav-visible slider-indicators-outside">
             <ul className="slider-container">
-                <li>
-                    <div id="slide1">
-                        <Card destinos={destinos} />
-                    </div>
-                </li>
-                <li>
-                    <div id="slide2"></div>
-                </li>
-                <li>
-                    <div id="slide3"></div>
-                </li>
-                <li>
-                    <div id="slide4"></div>
-                </li>
-                <li>
-                    <div id="slide5"></div>
-                </li>
-                <li>
-                    <div id="slide6"></div>
-                </li>
-                <li>
-                    <div id="slide7"></div>
-                </li>
-                <li>
-                    <div id="slide8"></div>
-                </li>
-                <li>
-                    <div id="slide9"></div>
-                </li>
+                <Card destinos={destinos} />
             </ul>
 
             <button type="button" className="slider-nav"></button>
@@ -148,19 +119,23 @@ const CardContainer = () => {
 const Card = ({ destinos }) => {
     return (
         destinos.map((destino) => (
-            <div key={destino.id} className="carrusel__elemento">
-                <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
-                    <picture>
-                        <map name="image-map">
-                            <area target="_blank" alt="bariloche" title={destino.destino} href={destino.linkWa} coords="35.97%, 64.23%, 77.62%, 78.34%" shape="rect" />
-                        </map>
-                        <source media="(min-width: 1024px)" srcSet={destino.img} />
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
-                        <source media="(max-width: 767px)" srcSet={destino.img} />
-                        <img src={destino.img} useMap="#image-map" />
-                    </picture>
+            <li key={destino.id}>
+                <div id={`slide${destino.id}`}>
+                    <div className="carrusel__elemento">
+                        <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
+                            <picture>
+                                <map name="image-map">
+                                    <area target="_blank" alt="bariloche" title={destino.destino} href={destino.linkWa} coords="35.97%, 64.23%, 77.62%, 78.34%" shape="rect" />
+                                </map>
+                                <source media="(min-width: 1024px)" srcSet={destino.img} />
+                                <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
+                                <source media="(max-width: 767px)" srcSet={destino.img} />
+                                <img src={destino.img} useMap="#image-map" />
+                            </picture>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </li>
         )));
 };
 
