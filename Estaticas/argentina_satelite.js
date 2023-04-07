@@ -138,7 +138,7 @@ const App = () => {
 
     return (
         <>
-            <TitleContainer title={titles} />
+            <TitleContainer titles={titles} />
             <CardContainer items={items} />
         </>
     );
