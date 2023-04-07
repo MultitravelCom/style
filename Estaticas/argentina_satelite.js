@@ -180,7 +180,7 @@ const App = () => {
     return (
       <>
         <TitleContainer titles={titles} />
-        <CardContainer items={{ btnLeft: ".btnLeft", btnRight: ".btnRight", carrusel: ".carrusel__lista" }} />
+        <CardContainer items={{ btnLeft: "btnLeft", btnRight: "btnRight", carrusel: "carrusel__lista" }} />
       </>
     );
   };
