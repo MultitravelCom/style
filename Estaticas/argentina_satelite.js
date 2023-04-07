@@ -135,27 +135,6 @@ const TitleContainer = ({ titles }) => {
     );
   };
 
-  const CardContainer = ({ items }) => {
-    return (
-      <div className="carrusel__contenedor">
-        <button
-          aria-label="Anterior"
-          className={`carrusel__anterior ${items.btnLeft}`}
-        >
-          <i className="fa fa-chevron-left" aria-hidden="true"></i>
-        </button>
-        <div className={items.carrusel} id="seccionBariloche">
-          <Card destinos={destinos} />
-        </div>
-        <button
-          aria-label="Siguiente"
-          className={`carrusel__siguiente ${items.btnRight}`}
-        >
-          <i className="fa fa-chevron-right" aria-hidden="true"></i>
-        </button>
-      </div>
-    );
-  };
 
 const Card = ({ destinos }) => {
     return (
@@ -196,6 +175,28 @@ const App = () => {
       </>
     );
   }
+
+  const CardContainer = ({ items }) => {
+    return (
+      <div className="carrusel__contenedor">
+        <button
+          aria-label="Anterior"
+          className={`carrusel__anterior ${items.btnLeft}`}
+        >
+          <i className="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <div className={items.carrusel} id="seccionBariloche">
+          <Card destinos={destinos} />
+        </div>
+        <button
+          aria-label="Siguiente"
+          className={`carrusel__siguiente ${items.btnRight}`}
+        >
+          <i className="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    );
+  };
 ReactDOM.render(<App />, document.getElementById("containerCarrusel"));
 
 
