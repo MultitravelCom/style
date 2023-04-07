@@ -138,7 +138,7 @@ const App = () => {
     return (
         <>
         <div>
-            <MainContainer title={titles}  items={items}/>
+            <MainContainer titles={titles}  items={items}/>
         </div>
         </>
     );
