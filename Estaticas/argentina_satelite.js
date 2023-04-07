@@ -125,7 +125,7 @@ const Card = ({ destinos }) => {
         )));
 };
 
-const initializeGlider = () => {
+const initializeGlider = (items) => {
     items.forEach(function (item) {
       const btnLeft = document.querySelector(item.btnLeft);
       const btnRight = document.querySelector(item.btnRight);
