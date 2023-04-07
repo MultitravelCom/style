@@ -135,7 +135,7 @@ const App = () => {
     return (
         <>
             <TitleContainer titles={titles} />
-            <CardContainer btnStyle={btnStyle} />
+            <CardContainer btnStyle={btnStyle[0]} />
         </>
     );
 }
