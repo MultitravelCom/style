@@ -73,9 +73,9 @@ const titles = [
     { title: 'Descuentos Imbatibles por Argentina' },
 ];
 const items = [
-    { btnLeft: "btnLeft", btnRight: "btnRight", carrusel: "carrusel__lista" },
-    { btnLeft: "btnLeft2", btnRight: "btnRight2", carrusel: "carrusel__lista2" },
-    { btnLeft: "btnLeft3", btnRight: "btnRight3", carrusel: "carrusel__lista3" },
+    { btnLeft: ".btnLeft", btnRight: ".btnRight", carrusel: ".carrusel__lista" },
+    { btnLeft: ".btnLeft2", btnRight: ".btnRight2", carrusel: ".carrusel__lista2" },
+    { btnLeft: ".btnLeft3", btnRight: ".btnRight3", carrusel: ".carrusel__lista3" },
 ]
 
 const TitleContainer = ({ titles }) => {
@@ -91,63 +91,6 @@ const TitleContainer = ({ titles }) => {
 };
 
 const CardContainer = ({ items }) => {
-
-    React.useEffect(() => {
-        items.forEach((item) => {
-            const btnLeft = document.querySelector(item.btnLeft);
-            const btnRight = document.querySelector(item.btnRight);
-
-            btnLeft.addEventListener('click', function (event) {
-                event.preventDefault();
-            });
-
-            btnRight.addEventListener('click', function (event) {
-                event.preventDefault();
-            });
-
-            // Aquí se llama a la función que contiene la lógica del carrusel
-            setupGlider(item.carrusel, item.btnLeft, item.btnRight);
-        });
-    }, [items]);
-
-    async function setupGlider(carrusel, btnLeft, btnRight) {
-        // Aquí se espera a que se carguen los valores necesarios antes de continuar
-        await Promise.all([
-            document.readyState === 'complete',
-            window.innerWidth > 767
-        ]);
-
-        // Aquí se inicializa el carrusel Glider con los valores recibidos
-        new Glider(document.querySelector(carrusel), {
-            slidesToShow: 1.20,
-            slidesToScroll: 0.50,
-            draggable: true,
-            arrows: {
-                prev: btnLeft,
-                next: btnRight
-            },
-            responsive: [
-                {
-                    // screens greater than >= 775px
-                    breakpoint: 450,
-                    settings: {
-                        // Set to `auto` and provide item width to adjust to viewport
-                        slidesToShow: '2.20',
-                        slidesToScroll: '1',
-                    }
-                }, {
-                    // screens greater than >= 1024px
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
-                    }
-                }
-            ],
-            rewind: true
-        });
-    }
-
     return (
         items.map((item) => (
             <div className="carrusel__contenedor">
