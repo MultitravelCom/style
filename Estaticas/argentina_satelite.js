@@ -72,10 +72,10 @@ const destinos = [
 const titles = [
     { title: 'Descuentos Imbatibles por Argentina' },
 ];
-const items = [
-    { btnLeft: ".btnLeft", btnRight: ".btnRight", carrusel: ".carrusel__lista" },
-    { btnLeft: ".btnLeft2", btnRight: ".btnRight2", carrusel: ".carrusel__lista2" },
-    { btnLeft: ".btnLeft3", btnRight: ".btnRight3", carrusel: ".carrusel__lista3" },
+const btnStyle = [
+    { btnLeft: "btnLeft", btnRight: "btnRight", carrusel: "carrusel__lista" },
+    { btnLeft: "btnLeft2", btnRight: "btnRight2", carrusel: "carrusel__lista2" },
+    { btnLeft: "btnLeft3", btnRight: "btnRight3", carrusel: "carrusel__lista3" },
 ]
 
 const TitleContainer = ({ titles }) => {
@@ -90,9 +90,9 @@ const TitleContainer = ({ titles }) => {
     );
 };
 
-const CardContainer = ({ items }) => {
+const CardContainer = ({ btnStyle }) => {
     return (
-        items.map((item) => (
+        btnStyle.map((item) => (
             <div className="carrusel__contenedor">
                 <button
                     aria-label="Anterior"
@@ -135,7 +135,7 @@ const App = () => {
     return (
         <>
             <TitleContainer titles={titles} />
-            <CardContainer items={items} />
+            <CardContainer btnStyle={btnStyle} />
         </>
     );
 }
