@@ -78,8 +78,6 @@ const titles = [
     { title: 'Descuentos Imbatibles por Argentina' },
 ];
 
-const [gliderInitialized, setGliderInitialized] = React.useState(false);
-
 const initializeGlider = (items) => {
   items.forEach(function (item) {
     const btnLeft = document.querySelector(item.btnLeft);
