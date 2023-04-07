@@ -78,52 +78,6 @@ const items = [
     { btnLeft: "btnLeft3", btnRight: "btnRight3", carrusel: "carrusel__lista3" },
 ]
 
-const useGlider = (items) => {
-    React.useEffect(() => {
-      items.forEach((item) => {
-        const btnLeft = document.querySelector(item.btnLeft);
-        const btnRight = document.querySelector(item.btnRight);
-  
-        btnLeft.addEventListener('click', function (event) {
-          event.preventDefault();
-        });
-  
-        btnRight.addEventListener('click', function (event) {
-          event.preventDefault();
-        });
-  
-        new Glider(document.querySelector(item.carrusel), {
-          slidesToShow: 1.20,
-          slidesToScroll: 0.50,
-          draggable: true,
-          arrows: {
-            prev: item.btnLeft,
-            next: item.btnRight
-          },
-          responsive: [
-            {
-              // screens greater than >= 775px
-              breakpoint: 450,
-              settings: {
-                // Set to `auto` and provide item width to adjust to viewport
-                slidesToShow: '2.20',
-                slidesToScroll: '1',
-              }
-            }, {
-              // screens greater than >= 1024px
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-              }
-            }
-          ],
-          rewind: true 
-        });
-      });
-    }, [items]);
-  };
-
 const TitleContainer = ({ titles }) => {
     return (
         <div className="main__conteiner__s1">
@@ -138,27 +92,70 @@ const TitleContainer = ({ titles }) => {
 
 const CardContainer = ({ items }) => {
 
-    useGlider(items);
+    // React.useEffect(() => {
+    //     items.forEach((item) => {
+    //       const btnLeft = document.querySelector(item.btnLeft);
+    //       const btnRight = document.querySelector(item.btnRight);
+    
+    //       btnLeft.addEventListener('click', function (event) {
+    //         event.preventDefault();
+    //       });
+    
+    //       btnRight.addEventListener('click', function (event) {
+    //         event.preventDefault();
+    //       });
+    
+    //       new Glider(document.querySelector(item.carrusel), {
+    //         slidesToShow: 1.20,
+    //         slidesToScroll: 0.50,
+    //         draggable: true,
+    //         arrows: {
+    //           prev: item.btnLeft,
+    //           next: item.btnRight
+    //         },
+    //         responsive: [
+    //           {
+    //             // screens greater than >= 775px
+    //             breakpoint: 450,
+    //             settings: {
+    //               // Set to `auto` and provide item width to adjust to viewport
+    //               slidesToShow: '2.20',
+    //               slidesToScroll: '1',
+    //             }
+    //           }, {
+    //             // screens greater than >= 1024px
+    //             breakpoint: 1024,
+    //             settings: {
+    //               slidesToShow: 4,
+    //               slidesToScroll: 1,
+    //             }
+    //           }
+    //         ],
+    //         rewind: true 
+    //       });
+    //     });
+    //   }, [items]);
 
     return (
-        <div className="carrusel__contenedor">
-            <button
-                aria-label="Anterior"
-                className={`carrusel__anterior ${items.btnLeft}`}
-            >
-                <i className="fa fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <div className={items.carrusel} id="seccionBariloche">
-                <Card destinos={destinos} />
+        items.map((item) => (
+            <div className="carrusel__contenedor">
+                <button
+                    aria-label="Anterior"
+                    className={`carrusel__anterior ${item.btnLeft}`}
+                >
+                    <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <div className={item.carrusel} id="seccionBariloche">
+                    <Card destinos={destinos} />
+                </div>
+                <button
+                    aria-label="Siguiente"
+                    className={`carrusel__siguiente ${item.btnRight}`}
+                >
+                    <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                </button>
             </div>
-            <button
-                aria-label="Siguiente"
-                className={`carrusel__siguiente ${items.btnRight}`}
-            >
-                <i className="fa fa-chevron-right" aria-hidden="true"></i>
-            </button>
-        </div>
-    );
+        )));
 };
 
 const Card = ({ destinos }) => {
@@ -185,8 +182,7 @@ const App = () => {
     return (
         <>
             <TitleContainer titles={titles} />
-            <CardContainer items={items[0]} />
-            <CardContainer items={items[1]} />
+            <CardContainer items={items} />
         </>
     );
 }
