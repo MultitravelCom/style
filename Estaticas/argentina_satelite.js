@@ -90,6 +90,25 @@ const TitleContainer = ({ titles }) => {
     );
 };
 
+const Card = ({ destinos }) => {
+    return (
+        destinos.map((destino) => (
+            <div key={destino.id} className="carrusel__elemento">
+                <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
+                    <picture>
+                        <map name="image-map">
+                            <area target="_blank" alt="bariloche" title={destino.destino} href={destino.linkWa} coords="35.97%, 64.23%, 77.62%, 78.34%" shape="rect" />
+                        </map>
+                        <source media="(min-width: 1024px)" srcSet={destino.img} />
+                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
+                        <source media="(max-width: 767px)" srcSet={destino.img} />
+                        <img src={destino.img} useMap="#image-map" />
+                    </picture>
+                </div>
+            </div>
+        )));
+};
+
 const CardContainer = ({ btnStyles }) => {
 
     React.useEffect(()=>{
@@ -103,37 +122,39 @@ const CardContainer = ({ btnStyles }) => {
         btnRight.addEventListener('click', function (event) {
           event.preventDefault();
         });
-    
-        new Glider(document.querySelector(".carrusel__lista"), {
-          slidesToShow: 1.20,
-          slidesToScroll: 0.50,
-          draggable: true,
-          arrows: {
-            prev: btnLeft,
-            next: btnRight
-          },
-          responsive: [
-            {
-              // screens greater than >= 775px
-              breakpoint: 450,
-              settings: {
-                // Set to `auto` and provide item width to adjust to viewport
-                slidesToShow: '2.20',
-                slidesToScroll: '1',
-              }
-            }, {
-              // screens greater than >= 1024px
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-    
-              }
-            }
-          ],
-          rewind: true 
-        });
-      }, [btnStyles]);
+        
+        btnStyles.forEach((style) => {
+            new Glider(document.querySelector(`.${style.carrusel}`), {
+              slidesToShow: 1.2,
+              slidesToScroll: 0.5,
+              draggable: true,
+              arrows: {
+                prev: btnLeft,
+                next: btnRight,
+              },
+              responsive: [
+                {
+                  // screens greater than >= 775px
+                  breakpoint: 450,
+                  settings: {
+                    // Set to `auto` and provide item width to adjust to viewport
+                    slidesToShow: "2.2",
+                    slidesToScroll: "1",
+                  },
+                },
+                {
+                  // screens greater than >= 1024px
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                  },
+                },
+              ],
+              rewind: true,
+            });
+          });
+        }, [btnStyles]);[btnStyles]);
 
     return (
         btnStyles.map((item) => (
@@ -157,28 +178,15 @@ const CardContainer = ({ btnStyles }) => {
     )));
     
 };
-const Card = ({ destinos }) => {
-    return (
-        destinos.map((destino) => (
-            <div key={destino.id} className="carrusel__elemento">
-                <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
-                    <picture>
-                        <map name="image-map">
-                            <area target="_blank" alt="bariloche" title={destino.destino} href={destino.linkWa} coords="35.97%, 64.23%, 77.62%, 78.34%" shape="rect" />
-                        </map>
-                        <source media="(min-width: 1024px)" srcSet={destino.img} />
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
-                        <source media="(max-width: 767px)" srcSet={destino.img} />
-                        <img src={destino.img} useMap="#image-map" />
-                    </picture>
-                </div>
-            </div>
-        )));
-};
 
 const App = () => {
 
-    const btnStyles = [{carrusel: carrusel__lista}];
+    const btnStyles = [
+        { carrusel: "carrusel__lista" },
+        { carrusel: "carrusel__lista2" },
+        { carrusel: "carrusel__lista3" },
+      ];
+
     return (
         <>
             <TitleContainer titles={titles} />
