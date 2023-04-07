@@ -90,21 +90,21 @@ const TitleContainer = ({ titles }) => {
     );
 };
 
-const CardContainer = () => {
+const CardContainer = ({ items }) => {
     return (
         <div className="carrusel__contenedor">
             <button
                 aria-label="Anterior"
-                className={`carrusel__anterior ${btnLeft}`}
+                className={`carrusel__anterior ${items.btnLeft}`}
             >
                 <i className="fa fa-chevron-left" aria-hidden="true"></i>
             </button>
-            <div className={carrusel} id="seccionBariloche">
+            <div className={items.carrusel} id="seccionBariloche">
                 <Card destinos={destinos} />
             </div>
             <button
                 aria-label="Siguiente"
-                className={`carrusel__siguiente ${btnRight}`}
+                className={`carrusel__siguiente ${items.btnRight}`}
             >
                 <i className="fa fa-chevron-right" aria-hidden="true"></i>
             </button>
@@ -136,7 +136,8 @@ const App = () => {
     return (
         <>
             <TitleContainer titles={titles} />
-            <CardContainer items={items} />
+            <CardContainer items={items[0]} />
+            <CardContainer items={items[1]} />
         </>
     );
 }
