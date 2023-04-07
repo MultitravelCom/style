@@ -91,6 +91,63 @@ const TitleContainer = ({ titles }) => {
 };
 
 const CardContainer = ({ items }) => {
+
+    React.useEffect(() => {
+        items.forEach((item) => {
+            const btnLeft = document.querySelector(item.btnLeft);
+            const btnRight = document.querySelector(item.btnRight);
+
+            btnLeft.addEventListener('click', function (event) {
+                event.preventDefault();
+            });
+
+            btnRight.addEventListener('click', function (event) {
+                event.preventDefault();
+            });
+
+            // Aquí se llama a la función que contiene la lógica del carrusel
+            setupGlider(item.carrusel, item.btnLeft, item.btnRight);
+        });
+    }, [items]);
+
+    async function setupGlider(carrusel, btnLeft, btnRight) {
+        // Aquí se espera a que se carguen los valores necesarios antes de continuar
+        await Promise.all([
+            document.readyState === 'complete',
+            window.innerWidth > 767
+        ]);
+
+        // Aquí se inicializa el carrusel Glider con los valores recibidos
+        new Glider(document.querySelector(carrusel), {
+            slidesToShow: 1.20,
+            slidesToScroll: 0.50,
+            draggable: true,
+            arrows: {
+                prev: btnLeft,
+                next: btnRight
+            },
+            responsive: [
+                {
+                    // screens greater than >= 775px
+                    breakpoint: 450,
+                    settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: '2.20',
+                        slidesToScroll: '1',
+                    }
+                }, {
+                    // screens greater than >= 1024px
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    }
+                }
+            ],
+            rewind: true
+        });
+    }
+
     return (
         items.map((item) => (
             <div className="carrusel__contenedor">
@@ -112,7 +169,6 @@ const CardContainer = ({ items }) => {
             </div>
         )));
 };
-
 const Card = ({ destinos }) => {
     return (
         destinos.map((destino) => (
@@ -133,55 +189,6 @@ const Card = ({ destinos }) => {
 };
 
 const App = () => {
-    // React.useEffect(() => {
-    //     items.forEach((item) => {
-    //         // const btnLeft = document.getElementsByClassName(item.btnLeft);
-    //         // const btnRight = document.getElementsByClassName(item.btnRight);
-        
-    //         // btnLeft.addEventListener('click', function (event) {
-    //         //     event.preventDefault();
-    //         // });
-        
-    //         // btnRight.addEventListener('click', function (event) {
-    //         //     event.preventDefault();
-    //         // });
-        
-    //         const glider = new Glider(document.getElementsByClassName(item.carrusel), {
-    //             slidesToShow: 1.20,
-    //             slidesToScroll: 0.50,
-    //             draggable: true,
-    //             arrows: {
-    //                 prev: item.btnLeft,
-    //                 next: item.btnRight
-    //             },
-    //             responsive: [
-    //                 {
-    //                     // screens greater than >= 775px
-    //                     breakpoint: 450,
-    //                     settings: {
-    //                         // Set to `auto` and provide item width to adjust to viewport
-    //                         slidesToShow: '2.20',
-    //                         slidesToScroll: '1',
-    //                     }
-    //                 }, {
-    //                     // screens greater than >= 1024px
-    //                     breakpoint: 1024,
-    //                     settings: {
-    //                         slidesToShow: 4,
-    //                         slidesToScroll: 1,
-    //                     }
-    //                 }
-    //             ],
-    //             rewind: true
-    //         });
-        
-    //         if (glider && glider._glider) {
-    //             // Acceder a la propiedad `_glider` solo si el objeto Glider y su propiedad `_glider` existen
-    //             console.log(glider._glider);
-    //         }
-    //     });
-    //   }, []);
-
     return (
         <>
             <TitleContainer titles={titles} />
