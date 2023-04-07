@@ -78,10 +78,6 @@ const items = [
     { btnLeft: ".btnLeft3", btnRight: ".btnRight3", carrusel: ".carrusel__lista3" },
 ]
 
-const initializeGlider = (items) => {
-
-};
-
 const TitleContainer = ({ titles }) => {
     return (
         <div className="main__conteiner__s1">
@@ -190,7 +186,7 @@ const App = () => {
     return (
         <>
             <TitleContainer titles={titles} />
-            <CardContainer items={items[1]} />
+            <CardContainer items={items} />
         </>
     );
 }
