@@ -90,26 +90,57 @@ const TitleContainer = ({ titles }) => {
     );
 };
 
-const CardContainer = ({ items }) => {
-    const { carrusel, btnLeft, btnRight } = items;
+const CardContainer = () => {
 
     return (
-        <div className="carrusel__contenedor">
-            <button
-                aria-label="Anterior"
-                className={`carrusel__anterior ${btnLeft}`}
-            >
-                <i className="fa fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <div className={carrusel} id="seccionBariloche">
-                <Card destinos={destinos} />
-            </div>
-            <button
-                aria-label="Siguiente"
-                className={`carrusel__siguiente ${btnRight}`}
-            >
-                <i className="fa fa-chevron-right" aria-hidden="true"></i>
-            </button>
+
+        <div className="swiffy-slider slider-item-show4 slider-nav-round slider-nav-sm slider-nav-visible slider-indicators-outside">
+            <ul className="slider-container">
+                <li>
+                    <div id="slide1">
+                        <Card destinos={destinos} />
+                    </div>
+                </li>
+                <li>
+                    <div id="slide2"></div>
+                </li>
+                <li>
+                    <div id="slide3"></div>
+                </li>
+                <li>
+                    <div id="slide4"></div>
+                </li>
+                <li>
+                    <div id="slide5"></div>
+                </li>
+                <li>
+                    <div id="slide6"></div>
+                </li>
+                <li>
+                    <div id="slide7"></div>
+                </li>
+                <li>
+                    <div id="slide8"></div>
+                </li>
+                <li>
+                    <div id="slide9"></div>
+                </li>
+            </ul>
+
+            <button type="button" className="slider-nav"></button>
+            <button type="button" className="slider-nav slider-nav-next"></button>
+
+            <ul className="slider-indicators">
+                <li className=""></li>
+                <li></li>
+                <li className=""></li>
+                <li className=""></li>
+                <li></li>
+                <li className="active"></li>
+                <li className=""></li>
+                <li></li>
+                <li className=""></li>
+            </ul>
         </div>
     );
 };
@@ -138,7 +169,7 @@ const App = () => {
     return (
         <>
             <TitleContainer titles={titles} />
-            <CardContainer items={items[0]} />
+            <CardContainer items={items} />
         </>
     );
 }
