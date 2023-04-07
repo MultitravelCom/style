@@ -124,7 +124,7 @@ const Card = ({ destinos }) => {
     ));
 };
 
-const MainContainer = () => {
+const MainContainer = ({ titles, items}) => {
     return (
         <>
             <TitleContainer title={titles} />
