@@ -158,7 +158,7 @@ const CardContainer = ({ items }) => {
 const Card = ({ destinos }) => {
     return (
         destinos.map((destino) => (
-            <div  key={index} className="carrusel__elemento">
+            <div  key={destino.id} className="carrusel__elemento">
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
                     <picture>
                         <map name="image-map">
