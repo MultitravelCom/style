@@ -72,11 +72,6 @@ const destinos = [
 const titles = [
     { title: 'Descuentos Imbatibles por Argentina' },
 ];
-// const items = [
-//     { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista' },
-//     { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' },
-//     { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
-// ];
 
 const initializeGlider = (items) => {
     items.forEach(function (item) {
@@ -135,6 +130,36 @@ const TitleContainer = ({ titles }) => {
     );
   };
 
+  const CardContainer = ({ items }) => {
+      React.useEffect(() => {
+        const items = [
+            { btnLeft: ".btnLeft", btnRight: ".btnRight", carrusel: ".carrusel__lista" },
+            { btnLeft: ".btnLeft2", btnRight: ".btnRight2", carrusel: ".carrusel__lista2" },
+            { btnLeft: ".btnLeft3", btnRight: ".btnRight3", carrusel: ".carrusel__lista3" },
+          ]
+        initializeGlider(items);
+      }, []);
+  
+    return (
+      <div className="carrusel__contenedor">
+        <button
+          aria-label="Anterior"
+          className={`carrusel__anterior ${items.btnLeft}`}
+        >
+          <i className="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <div className={items.carrusel} id="seccionBariloche">
+          <Card destinos={destinos} />
+        </div>
+        <button
+          aria-label="Siguiente"
+          className={`carrusel__siguiente ${items.btnRight}`}
+        >
+          <i className="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    );
+  };
 
 const Card = ({ destinos }) => {
     return (
@@ -160,43 +185,11 @@ const App = () => {
     return (
       <>
         <TitleContainer titles={titles} />
-        <CardContainer items={items[0]} />
-        <CardContainer items={items[1]} />
-        <CardContainer items={items[2]} />
+        <CardContainer  />
       </>
     );
   }
 
-  const CardContainer = ({ items }) => {
-      React.useEffect(() => {
-        const items = [
-            { btnLeft: ".btnLeft", btnRight: ".btnRight", carrusel: ".carrusel__lista" },
-            { btnLeft: ".btnLeft2", btnRight: ".btnRight2", carrusel: ".carrusel__lista2" },
-            { btnLeft: ".btnLeft3", btnRight: ".btnRight3", carrusel: ".carrusel__lista3" },
-          ]
-        initializeGlider(items);
-      }, []);
-
-    return (
-      <div className="carrusel__contenedor">
-        <button
-          aria-label="Anterior"
-          className={`carrusel__anterior ${items.btnLeft}`}
-        >
-          <i className="fa fa-chevron-left" aria-hidden="true"></i>
-        </button>
-        <div className={items.carrusel} id="seccionBariloche">
-          <Card destinos={destinos} />
-        </div>
-        <button
-          aria-label="Siguiente"
-          className={`carrusel__siguiente ${items.btnRight}`}
-        >
-          <i className="fa fa-chevron-right" aria-hidden="true"></i>
-        </button>
-      </div>
-    );
-  };
   
 ReactDOM.render(<App />, document.getElementById("containerCarrusel"));
 
