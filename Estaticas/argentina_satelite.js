@@ -81,9 +81,13 @@ const titles = [
 const TitleContainer = ({ titles }) => {
     return (
         <div className="main__conteiner__s1">
-            <div className="main__conteiner__s1__titulo">
-                <h3><strong>{titles.title}</strong></h3>
-            </div>
+            {titles.map((title) => (
+                <div className="main__conteiner__s1__titulo" key={title}>
+                    <h3>
+                        <strong>{title}</strong>
+                    </h3>
+                </div>
+            ))}
         </div>
     );
 };
@@ -125,20 +129,20 @@ const Card = ({ destinos }) => {
 
 const MainContainer = ({ titles, items }) => {
     return (
-      <div>
-        <TitleContainer title={titles} />
-        <CardContainer items={items} />
-      </div>
+        <div>
+            <TitleContainer title={titles} />
+            <CardContainer items={items} />
+        </div>
     );
-  };
+};
 
 const App = () => {
 
     return (
         <>
-        <div>
-            <MainContainer titles={titles}  items={items}/>
-        </div>
+            <div>
+                <MainContainer titles={titles} items={items} />
+            </div>
         </>
     );
 };
