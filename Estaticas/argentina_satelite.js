@@ -93,50 +93,6 @@ const TitleContainer = ({ titles }) => {
 const CardContainer = ({ items }) => {
     const { carrusel, btnLeft, btnRight } = items;
 
-    const initializeGlider = () => {
-        const carruselEl = document.querySelector(carrusel);
-        const btnLeftEl = document.querySelector(btnLeft);
-        const btnRightEl = document.querySelector(btnRight);
-
-        btnLeftEl.addEventListener("click", function (event) {
-            event.preventDefault();
-        });
-
-        btnRightEl.addEventListener("click", function (event) {
-            event.preventDefault();
-        });
-
-        new Glider(carruselEl, {
-            slidesToShow: 1.2,
-            slidesToScroll: 0.5,
-            draggable: true,
-            arrows: {
-                prev: btnLeft,
-                next: btnRight,
-            },
-            responsive: [
-                {
-                    // screens greater than >= 775px
-                    breakpoint: 450,
-                    settings: {
-                        // Set to `auto` and provide item width to adjust to viewport
-                        slidesToShow: "2.2",
-                        slidesToScroll: "1",
-                    },
-                },
-                {
-                    // screens greater than >= 1024px
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
-                    },
-                },
-            ],
-            rewind: true,
-        });
-    }
-
     React.useEffect(() => {
         initializeGlider();
     }, [carrusel, btnLeft, btnRight]);
@@ -186,7 +142,7 @@ const App = () => {
     return (
         <>
             <TitleContainer titles={titles} />
-            <CardContainer items={items} />
+            <CardContainer items={items[0]} />
         </>
     );
 }
