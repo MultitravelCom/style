@@ -72,11 +72,11 @@ const destinos = [
 const titles = [
     { title: 'Descuentos Imbatibles por Argentina' },
 ];
-const btnStyle = [
-    { btnLeft: "btnLeft", btnRight: "btnRight", carrusel: "carrusel__lista" },
-    { btnLeft: "btnLeft2", btnRight: "btnRight2", carrusel: "carrusel__lista2" },
-    { btnLeft: "btnLeft3", btnRight: "btnRight3", carrusel: "carrusel__lista3" },
-]
+// const btnStyle = [
+//     { btnLeft: "btnLeft", btnRight: "btnRight", carrusel: "carrusel__lista" },
+//     { btnLeft: "btnLeft2", btnRight: "btnRight2", carrusel: "carrusel__lista2" },
+//     { btnLeft: "btnLeft3", btnRight: "btnRight3", carrusel: "carrusel__lista3" },
+// ]
 
 const TitleContainer = ({ titles }) => {
     return (
@@ -90,7 +90,7 @@ const TitleContainer = ({ titles }) => {
     );
 };
 
-const CardContainer = ({ btnStyle }) => {
+const CardContainer = ({ btnStyles }) => {
 
 React.useEffect(()=>{
     const btnLeft = document.querySelector(".btnLeft");
@@ -136,7 +136,7 @@ React.useEffect(()=>{
   }, []);
 
     return (
-        // btnStyle.map((item) => (
+        btnStyles.map((item) => (
             <div className="carrusel__contenedor">
                 <button
                     aria-label="Anterior"
@@ -144,7 +144,7 @@ React.useEffect(()=>{
                 >
                     <i className="fa fa-chevron-left" aria-hidden="true"></i>
                 </button>
-                <div className="carrusel__lista" id="seccionBariloche">
+                <div className={item.carrusel} id="seccionBariloche">
                     <Card destinos={destinos} />
                 </div>
                 <button
@@ -154,7 +154,8 @@ React.useEffect(()=>{
                     <i className="fa fa-chevron-right" aria-hidden="true"></i>
                 </button>
             </div>
-        );
+    )));
+    
 };
 const Card = ({ destinos }) => {
     return (
@@ -176,10 +177,11 @@ const Card = ({ destinos }) => {
 };
 
 const App = () => {
+    const btnStyles = [{carrusel: carrusel__lista}];
     return (
         <>
             <TitleContainer titles={titles} />
-            <CardContainer />
+            <CardContainer btnStyles={btnStyles}/>
         </>
     );
 }
