@@ -131,12 +131,12 @@ const TitleContainer = ({ titles }) => {
   };
 
   const CardContainer = ({ items }) => {
+      const items = [
+          { btnLeft: ".btnLeft", btnRight: ".btnRight", carrusel: ".carrusel__lista" },
+          { btnLeft: ".btnLeft2", btnRight: ".btnRight2", carrusel: ".carrusel__lista2" },
+          { btnLeft: ".btnLeft3", btnRight: ".btnRight3", carrusel: ".carrusel__lista3" },
+        ]
       React.useEffect(() => {
-        const items = [
-            { btnLeft: ".btnLeft", btnRight: ".btnRight", carrusel: ".carrusel__lista" },
-            { btnLeft: ".btnLeft2", btnRight: ".btnRight2", carrusel: ".carrusel__lista2" },
-            { btnLeft: ".btnLeft3", btnRight: ".btnRight3", carrusel: ".carrusel__lista3" },
-          ]
         initializeGlider(items);
       }, []);
   
