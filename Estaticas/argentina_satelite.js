@@ -79,7 +79,7 @@ const items = [
 ]
 
 const useGlider = (items) => {
-    useEffect(() => {
+    React.useEffect(() => {
       items.forEach((item) => {
         const btnLeft = document.querySelector(item.btnLeft);
         const btnRight = document.querySelector(item.btnRight);
