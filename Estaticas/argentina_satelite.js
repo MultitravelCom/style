@@ -92,49 +92,6 @@ const TitleContainer = ({ titles }) => {
 
 const CardContainer = ({ btnStyles }) => {
 
-React.useEffect(()=>{
-    const btnLeft = document.querySelector(".btnLeft");
-    const btnRight = document.querySelector(".btnRight");
-
-    btnLeft.addEventListener('click', function (event) {
-      event.preventDefault();
-    });
-
-    btnRight.addEventListener('click', function (event) {
-      event.preventDefault();
-    });
-
-    new Glider(document.querySelector(".carrusel__lista"), {
-      slidesToShow: 1.20,
-      slidesToScroll: 0.50,
-      draggable: true,
-      arrows: {
-        prev: btnLeft,
-        next: btnRight
-      },
-      responsive: [
-        {
-          // screens greater than >= 775px
-          breakpoint: 450,
-          settings: {
-            // Set to `auto` and provide item width to adjust to viewport
-            slidesToShow: '2.20',
-            slidesToScroll: '1',
-          }
-        }, {
-          // screens greater than >= 1024px
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1,
-
-          }
-        }
-      ],
-      rewind: true 
-    });
-  }, []);
-
     return (
         btnStyles.map((item) => (
             <div className="carrusel__contenedor">
@@ -177,6 +134,50 @@ const Card = ({ destinos }) => {
 };
 
 const App = () => {
+
+    React.useEffect(()=>{
+        const btnLeft = document.querySelector(".btnLeft");
+        const btnRight = document.querySelector(".btnRight");
+    
+        btnLeft.addEventListener('click', function (event) {
+          event.preventDefault();
+        });
+    
+        btnRight.addEventListener('click', function (event) {
+          event.preventDefault();
+        });
+    
+        new Glider(document.querySelector(".carrusel__lista"), {
+          slidesToShow: 1.20,
+          slidesToScroll: 0.50,
+          draggable: true,
+          arrows: {
+            prev: btnLeft,
+            next: btnRight
+          },
+          responsive: [
+            {
+              // screens greater than >= 775px
+              breakpoint: 450,
+              settings: {
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: '2.20',
+                slidesToScroll: '1',
+              }
+            }, {
+              // screens greater than >= 1024px
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+    
+              }
+            }
+          ],
+          rewind: true 
+        });
+      }, []);
+
     const btnStyles = [{carrusel: carrusel__lista}];
     return (
         <>
