@@ -156,15 +156,6 @@ const Card = ({ destinos }) => {
 };
 
 const App = () => {
-    const items = [
-      { btnLeft: ".btnLeft", btnRight: ".btnRight", carrusel: ".carrusel__lista" },
-      { btnLeft: ".btnLeft2", btnRight: ".btnRight2", carrusel: ".carrusel__lista2" },
-      { btnLeft: ".btnLeft3", btnRight: ".btnRight3", carrusel: ".carrusel__lista3" },
-    ];
-  
-    React.useEffect(() => {
-      initializeGlider(items);
-    }, []);
   
     return (
       <>
@@ -177,6 +168,15 @@ const App = () => {
   }
 
   const CardContainer = ({ items }) => {
+      React.useEffect(() => {
+        const items = [
+            { btnLeft: ".btnLeft", btnRight: ".btnRight", carrusel: ".carrusel__lista" },
+            { btnLeft: ".btnLeft2", btnRight: ".btnRight2", carrusel: ".carrusel__lista2" },
+            { btnLeft: ".btnLeft3", btnRight: ".btnRight3", carrusel: ".carrusel__lista3" },
+          ]
+        initializeGlider(items);
+      }, []);
+
     return (
       <div className="carrusel__contenedor">
         <button
@@ -197,6 +197,7 @@ const App = () => {
       </div>
     );
   };
+  
 ReactDOM.render(<App />, document.getElementById("containerCarrusel"));
 
 
