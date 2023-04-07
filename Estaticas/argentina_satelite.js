@@ -104,7 +104,7 @@ React.useEffect(()=>{
       event.preventDefault();
     });
 
-    new Glider(document.querySelector("carrusel__lista"), {
+    new Glider(document.querySelector(".carrusel__lista"), {
       slidesToShow: 1.20,
       slidesToScroll: 0.50,
       draggable: true,
