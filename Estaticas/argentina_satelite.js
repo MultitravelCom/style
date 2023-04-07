@@ -69,11 +69,6 @@ const destinos = [
         linkWa: "https://wa.link/wc5s7c",
     },
 ];
-const items = [
-    { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista' },
-    { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' },
-    { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
-];
 const titles = [
     { title: 'Descuentos Imbatibles por Argentina' },
 ];
@@ -126,6 +121,11 @@ const Card = ({ destinos }) => {
 };
 
 const initializeGlider = (items) => {
+    const items = [
+        { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista' },
+        { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' },
+        { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
+    ];
     items.forEach(function (item) {
       const btnLeft = document.querySelector(item.btnLeft);
       const btnRight = document.querySelector(item.btnRight);
