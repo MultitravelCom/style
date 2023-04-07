@@ -135,25 +135,27 @@ const TitleContainer = ({ titles }) => {
     );
   };
 
-const CardContainer = ({ items }) => {
-    React.useEffect(() => {
-        initializeGlider(items);
-      }, [items]);
-
+  const CardContainer = ({ items }) => {
     return (
-        <div class="carrusel__contenedor">
-            <button aria-label="Anterior" className={`carrusel__anterior ${items.btnLeft}`}>
-                <i className="fa fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <div className={items.carrusel} id="seccionBariloche">
-                <Card destinos={destinos} />
-            </div>
-            <button aria-label="Siguiente" className={`carrusel__siguiente ${items.btnRight}`}>
-                <i className="fa fa-chevron-right" aria-hidden="true"></i>
-            </button>
+      <div className="carrusel__contenedor">
+        <button
+          aria-label="Anterior"
+          className={`carrusel__anterior ${items.btnLeft}`}
+        >
+          <i className="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <div className={items.carrusel} id="seccionBariloche">
+          <Card destinos={destinos} />
         </div>
+        <button
+          aria-label="Siguiente"
+          className={`carrusel__siguiente ${items.btnRight}`}
+        >
+          <i className="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
     );
-};
+  };
 
 const Card = ({ destinos }) => {
     return (
@@ -175,15 +177,25 @@ const Card = ({ destinos }) => {
 };
 
 const App = () => {
+    const items = [
+      { btnLeft: ".btnLeft", btnRight: ".btnRight", carrusel: ".carrusel__lista" },
+      { btnLeft: ".btnLeft2", btnRight: ".btnRight2", carrusel: ".carrusel__lista2" },
+      { btnLeft: ".btnLeft3", btnRight: ".btnRight3", carrusel: ".carrusel__lista3" },
+    ];
+  
+    React.useEffect(() => {
+      initializeGlider(items);
+    }, []);
   
     return (
       <>
         <TitleContainer titles={titles} />
-        <CardContainer items={{ btnLeft: "btnLeft", btnRight: "btnRight", carrusel: "carrusel__lista" }} />
+        <CardContainer items={items[0]} />
+        <CardContainer items={items[1]} />
+        <CardContainer items={items[2]} />
       </>
     );
-  };
-
+  }
 ReactDOM.render(<App />, document.getElementById("containerCarrusel"));
 
 
