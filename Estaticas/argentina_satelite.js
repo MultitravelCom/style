@@ -94,16 +94,16 @@ const CardContainer = ({ items }) => {
 
     React.useEffect(() => {
         items.forEach((item) => {
-            const btnLeft = document.getElementsByClassName(item.btnLeft);
-            const btnRight = document.getElementsByClassName(item.btnRight);
+            // const btnLeft = document.getElementsByClassName(item.btnLeft);
+            // const btnRight = document.getElementsByClassName(item.btnRight);
         
-            btnLeft.addEventListener('click', function (event) {
-                event.preventDefault();
-            });
+            // btnLeft.addEventListener('click', function (event) {
+            //     event.preventDefault();
+            // });
         
-            btnRight.addEventListener('click', function (event) {
-                event.preventDefault();
-            });
+            // btnRight.addEventListener('click', function (event) {
+            //     event.preventDefault();
+            // });
         
             const glider = new Glider(document.getElementsByClassName(item.carrusel), {
                 slidesToShow: 1.20,
