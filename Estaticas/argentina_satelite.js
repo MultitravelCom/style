@@ -94,16 +94,18 @@ const CardContainer = ({ items }) => {
 
     React.useEffect(() => {
         const gliders = items.map((item) => {
-          const btnLeft = document.querySelector(item.btnLeft);
-          const btnRight = document.querySelector(item.btnRight);
-    
-          btnLeft.addEventListener('click', function (event) {
-            event.preventDefault();
-          });
-    
-          btnRight.addEventListener('click', function (event) {
-            event.preventDefault();
-          });
+            const btnLeft = document.querySelector(item.btnLeft);
+            const btnRight = document.querySelector(item.btnRight);
+            
+            if (btnLeft && btnRight) {
+              btnLeft.addEventListener('click', function (event) {
+                event.preventDefault();
+              });
+            
+              btnRight.addEventListener('click', function (event) {
+                event.preventDefault();
+              });
+            }
     
           return new Glider(document.querySelector(item.carrusel), {
             slidesToShow: 1.20,
