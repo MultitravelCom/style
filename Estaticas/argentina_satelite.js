@@ -78,52 +78,54 @@ const titles = [
     { title: 'Descuentos Imbatibles por Argentina' },
 ];
 
-// const initializeGlider = (items) => {
-//   items.forEach(function (item) {
-//     const btnLeft = document.querySelector(item.btnLeft);
-//     const btnRight = document.querySelector(item.btnRight);
-
-//     btnLeft.addEventListener("click", function (event) {
-//       event.preventDefault();
-//     });
-
-//     btnRight.addEventListener("click", function (event) {
-//       event.preventDefault();
-//     });
-
-//     new Glider(document.querySelector(item.carrusel), {
-//       slidesToShow: 1.2,
-//       slidesToScroll: 0.5,
-//       draggable: true,
-//       arrows: {
-//         prev: item.btnLeft,
-//         next: item.btnRight,
-//       },
-//       responsive: [
-//         {
-//           // screens greater than >= 775px
-//           breakpoint: 450,
-//           settings: {
-//             // Set to `auto` and provide item width to adjust to viewport
-//             slidesToShow: "2.2",
-//             slidesToScroll: "1",
-//           },
-//         },
-//         {
-//           // screens greater than >= 1024px
-//           breakpoint: 1024,
-//           settings: {
-//             slidesToShow: 4,
-//             slidesToScroll: 1,
-//           },
-//         },
-//       ],
-//       rewind: true,
-//     });
-//   });
-
-//   setGliderInitialized(true);
-// };
+const initializeGlider = (items) => {
+  
+    items.forEach(function (item) {
+      const btnLeft = document.querySelector(item.btnLeft);
+      const btnRight = document.querySelector(item.btnRight);
+  
+      btnLeft.addEventListener("click", function (event) {
+        event.preventDefault();
+      });
+  
+      btnRight.addEventListener("click", function (event) {
+        event.preventDefault();
+      });
+  
+      new Glider(document.querySelector(item.carrusel), {
+        slidesToShow: 1.2,
+        slidesToScroll: 0.5,
+        draggable: true,
+        arrows: {
+          prev: item.btnLeft,
+          next: item.btnRight,
+        },
+        responsive: [
+          {
+            // screens greater than >= 775px
+            breakpoint: 450,
+            settings: {
+              // Set to `auto` and provide item width to adjust to viewport
+              slidesToShow: "2.2",
+              slidesToScroll: "1",
+            },
+          },
+          {
+            // screens greater than >= 1024px
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+        rewind: true,
+      });
+    });
+  
+    return Promise.resolve();
+  };
+  
 
 const TitleContainer = ({ titles }) => {
     return (
@@ -156,7 +158,7 @@ const CardContainer = ({ items }) => {
 const Card = ({ destinos }) => {
     return (
         destinos.map((destino) => (
-            <div className="carrusel__elemento">
+            <div  key={index} className="carrusel__elemento">
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
                     <picture>
                         <map name="image-map">
@@ -174,51 +176,6 @@ const Card = ({ destinos }) => {
 
 const App = () => {
     const [items, setItems] = React.useState([]);
-  
-    const initializeGlider = () => {
-      items.forEach(function (item) {
-        const btnLeft = document.querySelector(item.btnLeft);
-        const btnRight = document.querySelector(item.btnRight);
-  
-        btnLeft.addEventListener("click", function (event) {
-          event.preventDefault();
-        });
-  
-        btnRight.addEventListener("click", function (event) {
-          event.preventDefault();
-        });
-  
-        new Glider(document.querySelector(item.carrusel), {
-          slidesToShow: 1.2,
-          slidesToScroll: 0.5,
-          draggable: true,
-          arrows: {
-            prev: item.btnLeft,
-            next: item.btnRight,
-          },
-          responsive: [
-            {
-              // screens greater than >= 775px
-              breakpoint: 450,
-              settings: {
-                // Set to `auto` and provide item width to adjust to viewport
-                slidesToShow: "2.2",
-                slidesToScroll: "1",
-              },
-            },
-            {
-              // screens greater than >= 1024px
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-              },
-            },
-          ],
-          rewind: true,
-        });
-      });
-    };
   
     React.useEffect(() => {
       initializeGlider();
