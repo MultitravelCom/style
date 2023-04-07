@@ -142,7 +142,7 @@ const App = () => {
 
 document.addEventListener('DOMContentLoaded', function () {
   
-    items.forEach(function(item) {
+    
       const btnLeft = document.querySelector(".btnLeft");
       const btnRight = document.querySelector(".btnRight");
   
@@ -185,7 +185,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   
-  });
   
 
 ReactDOM.render(<App />, document.getElementById("containerCarrusel"));
