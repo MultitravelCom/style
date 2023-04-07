@@ -76,21 +76,19 @@ const items = [
 ];
 const titles = [
     { title: 'Descuentos Imbatibles por Argentina' },
-]
+];
 
 const TitleContainer = ({ titles }) => {
     return (
-        <div className="main__conteiner__s1">
-            {titles.map((title) => (
-                <div className="main__conteiner__s1__titulo" key={title}>
-                    <h3>
-                        <strong>{title}</strong>
-                    </h3>
-                </div>
-            ))}
+      <div className="main__conteiner__s1">
+        <div className="main__conteiner__s1__titulo">
+          <h3>
+            <strong>{titles[0].title}</strong>
+          </h3>
         </div>
+      </div>
     );
-};
+  };
 
 const CardContainer = ({ items }) => {
     return (
