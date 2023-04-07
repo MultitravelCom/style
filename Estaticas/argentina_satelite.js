@@ -92,7 +92,7 @@ const TitleContainer = ({ titles }) => {
 
 const CardContainer = ({ btnStyle }) => {
     return (
-        btnStyle.map((item) => (
+        // btnStyle.map((item) => (
             <div className="carrusel__contenedor">
                 <button
                     aria-label="Anterior"
@@ -110,7 +110,7 @@ const CardContainer = ({ btnStyle }) => {
                     <i className="fa fa-chevron-right" aria-hidden="true"></i>
                 </button>
             </div>
-        )));
+        );
 };
 const Card = ({ destinos }) => {
     return (
