@@ -122,7 +122,7 @@ const CardContainer = ({ btnStyles }) => {
         btnRight.addEventListener('click', function (event) {
           event.preventDefault();
         });
-        
+
         btnStyles.forEach((style) => {
             new Glider(document.querySelector(`.${style.carrusel}`), {
               slidesToShow: 1.2,
@@ -154,7 +154,7 @@ const CardContainer = ({ btnStyles }) => {
               rewind: true,
             });
           });
-        }, [btnStyles]);[btnStyles]);
+        }, [btnStyles]);
 
     return (
         btnStyles.map((item) => (
