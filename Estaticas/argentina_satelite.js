@@ -96,16 +96,16 @@ const CardContainer = ({ btnStyle }) => {
             <div className="carrusel__contenedor">
                 <button
                     aria-label="Anterior"
-                    className={`carrusel__anterior ${item.btnLeft}`}
+                    className={`carrusel__anterior btnLeft`}
                 >
                     <i className="fa fa-chevron-left" aria-hidden="true"></i>
                 </button>
-                <div className={item.carrusel} id="seccionBariloche">
+                <div className="carrusel__lista" id="seccionBariloche">
                     <Card destinos={destinos} />
                 </div>
                 <button
                     aria-label="Siguiente"
-                    className={`carrusel__siguiente ${item.btnRight}`}
+                    className={`carrusel__siguiente btnRight`}
                 >
                     <i className="fa fa-chevron-right" aria-hidden="true"></i>
                 </button>
@@ -135,21 +135,16 @@ const App = () => {
     return (
         <>
             <TitleContainer titles={titles} />
-            <CardContainer btnStyle={btnStyle[0]} />
+            <CardContainer />
         </>
     );
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const items = [
-      { btnLeft: '.btnLeft', btnRight: '.btnRight', carrusel: '.carrusel__lista' },
-      { btnLeft: '.btnLeft2', btnRight: '.btnRight2', carrusel: '.carrusel__lista2' },
-      { btnLeft: '.btnLeft3', btnRight: '.btnRight3', carrusel: '.carrusel__lista3' },
-    ];
   
     items.forEach(function(item) {
-      const btnLeft = document.querySelector(item.btnLeft);
-      const btnRight = document.querySelector(item.btnRight);
+      const btnLeft = document.querySelector(".btnLeft");
+      const btnRight = document.querySelector(".btnRight");
   
       btnLeft.addEventListener('click', function (event) {
         event.preventDefault();
@@ -159,13 +154,13 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
       });
   
-      new Glider(document.querySelector(item.carrusel), {
+      new Glider(document.querySelector("carrusel__lista"), {
         slidesToShow: 1.20,
         slidesToScroll: 0.50,
         draggable: true,
         arrows: {
-          prev: item.btnLeft,
-          next: item.btnRight
+          prev: btnLeft,
+          next: btnRight
         },
         responsive: [
           {
