@@ -141,25 +141,23 @@ const TitleContainer = ({ titles }) => {
     //   }, []);
   
     return (
-        items.map((item) =>{
-        <div className="carrusel__contenedor">
-            <button
-            aria-label="Anterior"
-            className={`carrusel__anterior ${item.btnLeft}`}
-            >
-            <i className="fa fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <div className={item.carrusel} id="seccionBariloche">
-            <Card destinos={destinos} />
-            </div>
-            <button
-            aria-label="Siguiente"
-            className={`carrusel__siguiente ${item.btnRight}`}
-            >
-            <i className="fa fa-chevron-right" aria-hidden="true"></i>
-            </button>
+      <div className="carrusel__contenedor">
+        <button
+          aria-label="Anterior"
+          className={`carrusel__anterior ${items.btnLeft}`}
+        >
+          <i className="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <div className={items.carrusel} id="seccionBariloche">
+          <Card destinos={destinos} />
         </div>
-        })
+        <button
+          aria-label="Siguiente"
+          className={`carrusel__siguiente ${items.btnRight}`}
+        >
+          <i className="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
     );
   };
 
@@ -187,7 +185,7 @@ const App = () => {
     return (
       <>
         <TitleContainer titles={titles} />
-        <CardContainer  items={items} />
+        <CardContainer  items={items[1]} />
       </>
     );
   }
