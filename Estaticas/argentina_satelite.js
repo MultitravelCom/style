@@ -176,7 +176,7 @@ const App = () => {
           ],
           rewind: true 
         });
-      }, []);
+      }, [CardContainer]);
 
     const btnStyles = [{carrusel: carrusel__lista}];
     return (
