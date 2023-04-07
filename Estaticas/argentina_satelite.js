@@ -90,13 +90,7 @@ const TitleContainer = ({ titles }) => {
     );
 };
 
-const CardContainer = ({ items }) => {
-    const { carrusel, btnLeft, btnRight } = items;
-
-    React.useEffect(() => {
-        initializeGlider();
-    }, [carrusel, btnLeft, btnRight]);
-
+const CardContainer = () => {
     return (
         <div className="carrusel__contenedor">
             <button
