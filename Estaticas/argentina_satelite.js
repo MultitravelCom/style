@@ -125,22 +125,21 @@ const Card = ({ destinos }) => {
         )));
 };
 
-const MainContainer = ({ titles, items }) => {
-    return (
-        <div>
-            <TitleContainer title={titles} />
-            <CardContainer items={items} />
-        </div>
-    );
-};
+// const MainContainer = ({ titles, items }) => {
+//     return (
+//         <div>
+//             <TitleContainer title={titles} />
+//             <CardContainer items={items} />
+//         </div>
+//     );
+// };
 
 const App = () => {
 
     return (
         <>
-            <div>
-                <MainContainer titles={titles} items={items} />
-            </div>
+            <TitleContainer title={titles} />
+            <CardContainer items={items} />
         </>
     );
 };
