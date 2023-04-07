@@ -133,54 +133,54 @@ const Card = ({ destinos }) => {
 };
 
 const App = () => {
-    React.useEffect(() => {
-        items.forEach((item) => {
-            // const btnLeft = document.getElementsByClassName(item.btnLeft);
-            // const btnRight = document.getElementsByClassName(item.btnRight);
+    // React.useEffect(() => {
+    //     items.forEach((item) => {
+    //         // const btnLeft = document.getElementsByClassName(item.btnLeft);
+    //         // const btnRight = document.getElementsByClassName(item.btnRight);
         
-            // btnLeft.addEventListener('click', function (event) {
-            //     event.preventDefault();
-            // });
+    //         // btnLeft.addEventListener('click', function (event) {
+    //         //     event.preventDefault();
+    //         // });
         
-            // btnRight.addEventListener('click', function (event) {
-            //     event.preventDefault();
-            // });
+    //         // btnRight.addEventListener('click', function (event) {
+    //         //     event.preventDefault();
+    //         // });
         
-            const glider = new Glider(document.getElementsByClassName(item.carrusel), {
-                slidesToShow: 1.20,
-                slidesToScroll: 0.50,
-                draggable: true,
-                arrows: {
-                    prev: item.btnLeft,
-                    next: item.btnRight
-                },
-                responsive: [
-                    {
-                        // screens greater than >= 775px
-                        breakpoint: 450,
-                        settings: {
-                            // Set to `auto` and provide item width to adjust to viewport
-                            slidesToShow: '2.20',
-                            slidesToScroll: '1',
-                        }
-                    }, {
-                        // screens greater than >= 1024px
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 4,
-                            slidesToScroll: 1,
-                        }
-                    }
-                ],
-                rewind: true
-            });
+    //         const glider = new Glider(document.getElementsByClassName(item.carrusel), {
+    //             slidesToShow: 1.20,
+    //             slidesToScroll: 0.50,
+    //             draggable: true,
+    //             arrows: {
+    //                 prev: item.btnLeft,
+    //                 next: item.btnRight
+    //             },
+    //             responsive: [
+    //                 {
+    //                     // screens greater than >= 775px
+    //                     breakpoint: 450,
+    //                     settings: {
+    //                         // Set to `auto` and provide item width to adjust to viewport
+    //                         slidesToShow: '2.20',
+    //                         slidesToScroll: '1',
+    //                     }
+    //                 }, {
+    //                     // screens greater than >= 1024px
+    //                     breakpoint: 1024,
+    //                     settings: {
+    //                         slidesToShow: 4,
+    //                         slidesToScroll: 1,
+    //                     }
+    //                 }
+    //             ],
+    //             rewind: true
+    //         });
         
-            if (glider && glider._glider) {
-                // Acceder a la propiedad `_glider` solo si el objeto Glider y su propiedad `_glider` existen
-                console.log(glider._glider);
-            }
-        });
-      }, []);
+    //         if (glider && glider._glider) {
+    //             // Acceder a la propiedad `_glider` solo si el objeto Glider y su propiedad `_glider` existen
+    //             console.log(glider._glider);
+    //         }
+    //     });
+    //   }, []);
 
     return (
         <>
