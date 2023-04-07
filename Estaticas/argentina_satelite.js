@@ -135,13 +135,13 @@ const App = () => {
             const btnLeft = document.querySelector(item.btnLeft);
             const btnRight = document.querySelector(item.btnRight);
   
-            btnLeft.addEventListener("click", function (event) {
-              event.preventDefault();
-            });
+            // btnLeft.addEventListener("click", function (event) {
+            //   event.preventDefault();
+            // });
   
-            btnRight.addEventListener("click", function (event) {
-              event.preventDefault();
-            });
+            // btnRight.addEventListener("click", function (event) {
+            //   event.preventDefault();
+            // });
   
             new Glider(document.querySelector(item.carrusel), {
               slidesToShow: 1.2,
