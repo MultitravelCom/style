@@ -84,14 +84,10 @@ const btnStyles = [
 const TitleContainer = ({ titles }) => {
     return (
         titles.map((title) =>
-        <div className="main__conteiner__s1">
-            <div className="main__conteiner__s1__titulo">
-                <h3>
-                    <strong>{title.title}</strong>
-                </h3>
-            </div>
-        </div>
-    ));
+            <h3>
+                <strong>{title.title}</strong>
+            </h3>
+        ));
 };
 
 const Card = ({ destinos }) => {
@@ -161,35 +157,40 @@ const CardContainer = ({ btnStyles }) => {
     }, [btnStyles]);
 
     return (
-        <>
-        {btnStyles.map((item) => (
-            <div className="carrusel__contenedor">
-                <button
-                    aria-label="Anterior"
-                    className={`carrusel__anterior ${item.btnLeft}`}
-                >
-                    <i className="fa fa-chevron-left" aria-hidden="true"></i>
-                </button>
-                <div className={item.carrusel} id="seccionBariloche">
-                    <Card destinos={destinos} />
+        <div>
+            {btnStyles.map((item) => (
+                <div key={item.title} className="main__conteiner__s1">
+                    <div className="main__conteiner__s1__titulo">
+                        <TitleContainer titles={titles} />
+                    </div>
+                    <div className="carrusel__contenedor">
+                        <button
+                            aria-label="Anterior"
+                            className={`carrusel__anterior ${item.btnLeft}`}
+                        >
+                            <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <div className={item.carrusel} id="seccionBariloche">
+                            <Card destinos={destinos} />
+                        </div>
+                        <button
+                            aria-label="Siguiente"
+                            className={`carrusel__siguiente ${item.btnRight}`}
+                        >
+                            <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
-                <button
-                    aria-label="Siguiente"
-                    className={`carrusel__siguiente ${item.btnRight}`}
-                >
-                    <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                </button>
-            </div>
-        ))}
-        </>
-        );
+            ))}
+        </div>
+    );
+
 
 };
 
-const MainContainer = ({ titles, btnStyles }) => {
+const MainContainer = ({ btnStyles }) => {
     return (
         <>
-            <TitleContainer titles={titles} />
             <CardContainer btnStyles={btnStyles} />
         </>
     );
