@@ -191,7 +191,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
 const App = () => {
 
     return (
-        <>  <TitleContainer btnStyles={title} />
+        <>  <TitleContainer btnStyles={btnStyles} />
             <CardContainer btnStyles={btnStyles}/>;
         </>
     );
