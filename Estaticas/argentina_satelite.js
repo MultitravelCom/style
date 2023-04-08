@@ -69,27 +69,27 @@ const destinos = [
         linkWa: "https://wa.link/wc5s7c",
     },
 ];
-const btnStyles = [
-    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Descuentos Imbatibles por Argentina' },
-    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Descuentos Imbatibles por Argentina2' },
-    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Descuentos Imbatibles por Argentina3' },
+const titles = [
+    { title: 'Descuentos Imbatibles por Argentina' },
 ];
+const btnStyles = [
+        { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight" },
+        { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2" },
+        { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3" },
+    ];
 
 
-// const TitleContainer = ({ btnStyles }) => {
-//     return (
-//         btnStyles.map((title) => (
-//             <div className="main__conteiner__s1">
-//                 <div className="main__conteiner__s1__titulo">
-//                     <h3>
-//                         <strong>{title.title}</strong>
-//                     </h3>
-//                 </div>
-//             </div>
-//         )
-//         )
-//     );
-// };
+const TitleContainer = ({ titles }) => {
+    return (
+        <div className="main__conteiner__s1">
+            <div className="main__conteiner__s1__titulo">
+                <h3>
+                    <strong>{titles[0].title}</strong>
+                </h3>
+            </div>
+        </div>
+    );
+};
 
 const Card = ({ destinos }) => {
     return (
@@ -110,7 +110,7 @@ const Card = ({ destinos }) => {
         )));
 };
 
-const CardContainer = ({ btnStyles, destinos }) => {
+const CardContainer = ({ btnStyles }) => {
 
     React.useEffect(() => {
         btnStyles.forEach((style) => {
@@ -158,42 +158,42 @@ const CardContainer = ({ btnStyles, destinos }) => {
     }, [btnStyles]);
 
     return (
-        <>
-            {btnStyles.map((item) => (
-                <div key={item.title} className="main__conteiner__s1">
-                    <div className="main__conteiner__s1__titulo">
-                        <h3>
-                            <strong>{item.title}</strong>
-                        </h3>
-                    </div>
-                    <div key={item.carrusel} className="carrusel__contenedor">
-                        <button
-                            aria-label="Anterior"
-                            className={`carrusel__anterior ${item.btnLeft}`}
-                        >
-                            <i className="fa fa-chevron-left" aria-hidden="true"></i>
-                        </button>
-                        <div className={item.carrusel} id="seccionBariloche">
-                            <Card destinos={destinos} />
-                        </div>
-                        <button
-                            aria-label="Siguiente"
-                            className={`carrusel__siguiente ${item.btnRight}`}
-                        >
-                            <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                        </button>
-                    </div>
+        btnStyles.map((item) => (
+            <div className="carrusel__contenedor">
+                <button
+                    aria-label="Anterior"
+                    className={`carrusel__anterior ${item.btnLeft}`}
+                >
+                    <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <div className={item.carrusel} id="seccionBariloche">
+                    <Card destinos={destinos} />
                 </div>
-            ))}
+                <button
+                    aria-label="Siguiente"
+                    className={`carrusel__siguiente ${item.btnRight}`}
+                >
+                    <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        )));
+
+};
+
+const MainContainer = ({ titles, btnStyles }) => {
+    return (
+        <>
+            <TitleContainer titles={titles} />
+            <CardContainer btnStyles={btnStyles} />
         </>
-    );    
+    );
 };
 
 const App = () => {
 
     return (
         <>
-            <CardContainer btnStyles={btnStyles} />;
+            <Container titles={titles} btnStyles={btnStyles} />;
         </>
     );
 }
