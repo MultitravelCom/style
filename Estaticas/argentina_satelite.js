@@ -76,20 +76,20 @@ const btnStyles = [
 ];
 
 
-const TitleContainer = ({ btnStyles }) => {
-    return (
-        btnStyles.map((title) => (
-            <div className="main__conteiner__s1">
-                <div className="main__conteiner__s1__titulo">
-                    <h3>
-                        <strong>{title.title}</strong>
-                    </h3>
-                </div>
-            </div>
-        )
-        )
-    );
-};
+// const TitleContainer = ({ btnStyles }) => {
+//     return (
+//         btnStyles.map((title) => (
+//             <div className="main__conteiner__s1">
+//                 <div className="main__conteiner__s1__titulo">
+//                     <h3>
+//                         <strong>{title.title}</strong>
+//                     </h3>
+//                 </div>
+//             </div>
+//         )
+//         )
+//     );
+// };
 
 const Card = ({ destinos }) => {
     return (
