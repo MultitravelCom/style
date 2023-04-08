@@ -86,7 +86,7 @@ const TitleContainer = ({ titles }) => {
         <div className="main__conteiner__s1">
             <div className="main__conteiner__s1__titulo">
                 <h3>
-                    <strong>{titles[0].title}</strong>
+                    <strong>{titles.title}</strong>
                 </h3>
             </div>
         </div>
