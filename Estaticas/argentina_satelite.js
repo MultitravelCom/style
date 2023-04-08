@@ -200,7 +200,7 @@ const App = () => {
 
     return (
         <>
-            <MainContainer titles={titles} btnStyles={btnStyles} />;
+            <MainContainer btnStyles={btnStyles} />;
         </>
     );
 }
