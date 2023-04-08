@@ -69,21 +69,16 @@ const destinos = [
         linkWa: "https://wa.link/wc5s7c",
     },
 ];
-const titles = [
-    { title: 'Descuentos Imbatibles por Argentina' },
-    { title: 'Descuentos Imbatibles por Argentina' },
-    { title: 'Descuentos Imbatibles por Argentina' },
-];
 const btnStyles = [
-    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight" },
-    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2" },
-    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3" },
+    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Descuentos Imbatibles por Argentina'},
+    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Descuentos Imbatibles por Argentina2'},
+    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Descuentos Imbatibles por Argentina3'},
 ];
 
 
-const TitleContainer = ({ titles }) => {
+const TitleContainer = ({ btnStyles }) => {
     return (
-        titles.map((title) =>
+        btnStyles.map((title) =>
         <div className="main__conteiner__s1">
             <div className="main__conteiner__s1__titulo">
                 <h3>
@@ -187,19 +182,19 @@ const CardContainer = ({ titles, btnStyles }) => {
         );
 };
 
-const MainContainer = ({ titles, btnStyles }) => {
-    return (
-        <>
-            <CardContainer btnStyles={btnStyles} titles={titles} />
-        </>
-    );
-};
+// const MainContainer = ({ titles, btnStyles }) => {
+//     return (
+//         <>
+//             <CardContainer btnStyles={btnStyles} />
+//         </>
+//     );
+// };
 
 const App = () => {
 
     return (
         <>
-            <MainContainer btnStyles={btnStyles} titles={titles} />;
+            <CardContainer btnStyles={btnStyles} titles={titles} />;
         </>
     );
 }
