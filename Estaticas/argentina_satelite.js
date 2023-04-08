@@ -165,7 +165,7 @@ const CardContainer = ({ btnStyles }) => {
             isLoading ? ( <p>Cargando...</p> )
             :
           (
-            <div>
+            <>
                 {btnStyles.map((item) => (
                     <div key={item.title} className="main__conteiner__s1">
                         <div className="main__conteiner__s1__titulo">
@@ -190,7 +190,7 @@ const CardContainer = ({ btnStyles }) => {
                         </div>
                     </div>
                 ))}
-            </div>
+            </>
           )}
         </>
     );
