@@ -8,14 +8,14 @@ const destinos = [
     },
     {
         id: 2,
-        destino: "Bariloche",
+        destino: "Mendoza",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
         className: "dos",
         linkWa: "https://wa.link/wc5s7c",
     },
     {
         id: 3,
-        destino: "El calafate",
+        destino: "Mendoza",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
         className: "tres",
         linkWa: "https://wa.link/wc5s7c",
@@ -36,14 +36,14 @@ const destinos = [
     },
     {
         id: 6,
-        destino: "El calafate",
+        destino: "Bariloche",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
         className: "tres",
         linkWa: "https://wa.link/wc5s7c",
     },
     {
         id: 7,
-        destino: "Mendoza",
+        destino: "Bariloche",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
         className: "uno",
         linkWa: "https://wa.link/wc5s7c",
@@ -63,7 +63,7 @@ const destinos = [
     },
     {
         id: 10,
-        destino: "Mendoza",
+        destino: "El calafate",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
         className: "uno",
         linkWa: "https://wa.link/wc5s7c",
@@ -71,7 +71,15 @@ const destinos = [
 ];
 const titles = [
     { title: 'Descuentos Imbatibles por Argentina' },
+    { title: 'Descuentos Imbatibles por Argentina' },
+    { title: 'Descuentos Imbatibles por Argentina' },
 ];
+const btnStyles = [
+    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight" },
+    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2" },
+    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3" },
+];
+
 
 const TitleContainer = ({ titles }) => {
     return (
@@ -174,18 +182,20 @@ const CardContainer = ({ btnStyles }) => {
 
 };
 
-const App = () => {
-
-    const btnStyles = [
-        { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight" },
-        { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2" },
-        { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3" },
-    ];
-
+const MainContainer = ({ titles, btnStyles }) => {
     return (
         <>
             <TitleContainer titles={titles} />
             <CardContainer btnStyles={btnStyles} />
+        </>
+    );
+};
+
+const App = () => {
+
+    return (
+        <>
+            <MainContainer Container titles={titles} btnStyles={btnStyles} />;
         </>
     );
 }
