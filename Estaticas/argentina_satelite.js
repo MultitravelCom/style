@@ -157,10 +157,9 @@ const CardContainer = ({ titles, btnStyles }) => {
 
     return (
         <>
-        <TitleContainer titles={titles} />
-        {
-        btnStyles.map((item) => (
-            <div className="carrusel__contenedor">
+        {btnStyles.map((item) => (
+            <div key={item.carrusel} className="carrusel__contenedor">
+                <TitleContainer titles={titles} />
                 <button
                     aria-label="Anterior"
                     className={`carrusel__anterior ${item.btnLeft}`}
@@ -177,8 +176,8 @@ const CardContainer = ({ titles, btnStyles }) => {
                     <i className="fa fa-chevron-right" aria-hidden="true"></i>
                 </button>
             </div>
-        ))};
-        </>
+        ))}
+    </>
         );
 };
 
@@ -194,7 +193,7 @@ const App = () => {
 
     return (
         <>
-            <CardContainer btnStyles={btnStyles} titles={titles} />;
+            <CardContainer btnStyles={btnStyles}/>;
         </>
     );
 }
