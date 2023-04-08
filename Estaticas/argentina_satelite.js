@@ -108,96 +108,104 @@ const Card = ({ destinos }) => {
 };
 
 const CardContainer = ({ btnStyles }) => {
-    const [isLoading, setIsLoading] = React.useState(true);
-  
-    React.useEffect(() => {
-      setIsLoading(false);
-    }, []);
-  
-    if (isLoading) {
-      return <p>Cargando...</p>;
-    }
-  
-    // El carrusel se inicializa aquí
-    btnStyles.forEach((style) => {
-      const btnLeft = document.querySelector(`.${style.btnLeft}`);
-      const btnRight = document.querySelector(`.${style.btnRight}`);
-  
-      btnLeft.addEventListener("click", function (event) {
-        event.preventDefault();
-      });
-  
-      btnRight.addEventListener("click", function (event) {
-        event.preventDefault();
-      });
-  
-      new Glider(document.querySelector(`.${style.carrusel}`), {
-        slidesToShow: 1.2,
-        slidesToScroll: 0.5,
-        draggable: true,
-        arrows: {
-          prev: btnLeft,
-          next: btnRight,
-        },
-        responsive: [
-          {
-            // screens greater than >= 775px
-            breakpoint: 450,
-            settings: {
-              // Set to `auto` and provide item width to adjust to viewport
-              slidesToShow: "2.2",
-              slidesToScroll: "1",
-            },
-          },
-          {
-            // screens greater than >= 1024px
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 4,
-              slidesToScroll: 1,
-            },
-          },
-        ],
-        rewind: true,
-      });
-    });
-  
-    return (
-      <>
-        {btnStyles.map((item) => (
-          <div key={item.title} className="main__conteiner__s1">
-            <div className="main__conteiner__s1__titulo">
-              <TitleContainer titles={titles} />
-            </div>
-            <div className="carrusel__contenedor">
-              <button
-                aria-label="Anterior"
-                className={`carrusel__anterior ${item.btnLeft}`}
-              >
-                <i className="fa fa-chevron-left" aria-hidden="true"></i>
-              </button>
-              <div className={item.carrusel} id="seccionBariloche">
-                <Card destinos={destinos} />
-              </div>
-              <button
-                aria-label="Siguiente"
-                className={`carrusel__siguiente ${item.btnRight}`}
-              >
-                <i className="fa fa-chevron-right" aria-hidden="true"></i>
-              </button>
-            </div>
-          </div>
-        ))}
-      </>
-    );
-  };
-  
 
-const App = () => {
+    const [isLoading, setIsLoading] = React.useState(true);
+
+    React.useEffect(() => {
+        btnStyles.forEach((style) => {
+            const btnLeft = document.querySelector(`.${style.btnLeft}`);
+            const btnRight = document.querySelector(`.${style.btnRight}`);
+
+            btnLeft.addEventListener('click', function (event) {
+                event.preventDefault();
+            });
+
+            btnRight.addEventListener('click', function (event) {
+                event.preventDefault();
+            });
+
+            new Glider(document.querySelector(`.${style.carrusel}`), {
+                slidesToShow: 1.2,
+                slidesToScroll: 0.5,
+                draggable: true,
+                arrows: {
+                    prev: btnLeft,
+                    next: btnRight,
+                },
+                responsive: [
+                    {
+                        // screens greater than >= 775px
+                        breakpoint: 450,
+                        settings: {
+                            // Set to `auto` and provide item width to adjust to viewport
+                            slidesToShow: "2.2",
+                            slidesToScroll: "1",
+                        },
+                    },
+                    {
+                        // screens greater than >= 1024px
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1,
+                        },
+                    },
+                ],
+                rewind: true,
+            });
+        });
+
+        setIsLoading(false);
+
+    }, []);
 
     return (
         <>
-            <CardContainer btnStyles={btnStyles} />
+            {btnStyles.map((item) => (
+                <div key={item.title} className="main__conteiner__s1">
+                    <div className="main__conteiner__s1__titulo">
+                        <TitleContainer titles={titles} />
+                    </div>
+                    <div className="carrusel__contenedor">
+                        <button
+                            aria-label="Anterior"
+                            className={`carrusel__anterior ${item.btnLeft}`}
+                        >
+                            <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <div className={item.carrusel} id="seccionBariloche">
+                            <Card destinos={destinos} />
+                        </div>
+                        <button
+                            aria-label="Siguiente"
+                            className={`carrusel__siguiente ${item.btnRight}`}
+                        >
+                            <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            ))}
+        </>
+    )
+};
+
+function App() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    // Simular una espera de 2 segundos antes de establecer isLoading en falso
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+    }, []);
+
+    return (
+        <>
+            {isLoading ? (
+                <p>Cargando...</p>
+            ) : (
+                <CardContainer btnStyles={btnStyles} />
+            )}
         </>
     );
 }
