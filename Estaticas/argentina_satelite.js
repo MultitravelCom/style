@@ -161,7 +161,8 @@ const CardContainer = ({ btnStyles }) => {
     }, [btnStyles]);
 
     return (
-        btnStyles.map((item) => (
+        <>
+        {btnStyles.map((item) => (
             <div className="carrusel__contenedor">
                 <button
                     aria-label="Anterior"
@@ -179,7 +180,9 @@ const CardContainer = ({ btnStyles }) => {
                     <i className="fa fa-chevron-right" aria-hidden="true"></i>
                 </button>
             </div>
-        )));
+        ))}
+        </>
+        );
 
 };
 
