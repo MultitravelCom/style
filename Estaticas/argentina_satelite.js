@@ -91,7 +91,7 @@ const TitleContainer = ({ titles }) => {
                 </h3>
             </div>
         </div>
-    );
+    ));
 };
 
 const Card = ({ destinos }) => {
