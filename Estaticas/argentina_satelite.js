@@ -83,10 +83,11 @@ const btnStyles = [
 
 const TitleContainer = ({ titles }) => {
     return (
+        titles.map((title) =>
         <div className="main__conteiner__s1">
             <div className="main__conteiner__s1__titulo">
                 <h3>
-                    <strong>{titles.title}</strong>
+                    <strong>{title.title}</strong>
                 </h3>
             </div>
         </div>
