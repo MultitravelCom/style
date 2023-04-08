@@ -76,15 +76,18 @@ const btnStyles = [
 ];
 
 
-const TitleContainer = ({ title }) => {
+const TitleContainer = ({ btnStyles }) => {
     return (
-        <div className="main__conteiner__s1">
-            <div className="main__conteiner__s1__titulo">
-                <h3>
-                    <strong>{title}</strong>
-                </h3>
+        btnStyles.map((title)=>(
+            <div className="main__conteiner__s1">
+                <div className="main__conteiner__s1__titulo">
+                    <h3>
+                        <strong>{title.title}</strong>
+                    </h3>
+                </div>
             </div>
-        </div>
+        )
+        )
     );
 };
 
@@ -107,7 +110,7 @@ const Card = ({ destinos }) => {
         )));
 };
 
-const CardContainer = ({ btnStyles, titles, destinos }) => {
+const CardContainer = ({ btnStyles, destinos }) => {
 
     React.useEffect(() => {
         btnStyles.forEach((style) => {
@@ -157,7 +160,6 @@ const CardContainer = ({ btnStyles, titles, destinos }) => {
     return (
         btnStyles.map((item) => (
             <div key={item.carrusel} className="carrusel__contenedor">
-                <TitleContainer titles={item.title} />
                 <button
                     aria-label="Anterior"
                     className={`carrusel__anterior ${item.btnLeft}`}
@@ -165,7 +167,7 @@ const CardContainer = ({ btnStyles, titles, destinos }) => {
                     <i className="fa fa-chevron-left" aria-hidden="true"></i>
                 </button>
                 <div className={item.carrusel} id="seccionBariloche">
-                    <Card destinos={destinos} />
+                    <Card key={item.carrusel} destinos={destinos} />
                 </div>
                 <button
                     aria-label="Siguiente"
@@ -189,7 +191,7 @@ const CardContainer = ({ btnStyles, titles, destinos }) => {
 const App = () => {
 
     return (
-        <>
+        <>  <TitleContainer btnStyles={title} />
             <CardContainer btnStyles={btnStyles}/>;
         </>
     );
