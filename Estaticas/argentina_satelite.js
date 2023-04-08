@@ -159,7 +159,7 @@ const CardContainer = ({ titles, btnStyles }) => {
         <>
         {btnStyles.map((item) => (
             <div key={item.carrusel} className="carrusel__contenedor">
-                <TitleContainer titles={titles} />
+                <TitleContainer titles={item.titles} />
                 <button
                     aria-label="Anterior"
                     className={`carrusel__anterior ${item.btnLeft}`}
