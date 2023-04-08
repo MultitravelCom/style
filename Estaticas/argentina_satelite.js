@@ -196,21 +196,11 @@ const CardContainer = ({ btnStyles }) => {
     );
 };
 
-const MainContainer = ({ btnStyles }) => {
+const App = () => {
+
     return (
         <>
             <CardContainer btnStyles={btnStyles} />
-        </>
-    );
-};
-
-const App = () => {
-
-    
-
-    return (
-        <>
-            <MainContainer btnStyles={btnStyles} />;
         </>
     );
 }
