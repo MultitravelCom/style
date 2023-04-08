@@ -190,10 +190,10 @@ const CardContainer = ({ btnStyles }) => {
 };
 
 function App() {
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = React.useState(true);
 
     // Simular una espera de 2 segundos antes de establecer isLoading en falso
-    useEffect(() => {
+    React.useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
         }, 2000);
