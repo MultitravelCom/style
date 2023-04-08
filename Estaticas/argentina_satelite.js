@@ -71,24 +71,27 @@ const destinos = [
 ];
 const titles = [
     { title: 'Descuentos Imbatibles por Argentina' },
+    { title: 'Descuentos Imbatibles por Argentina' },
+    { title: 'Descuentos Imbatibles por Argentina' },
 ];
 const btnStyles = [
-        { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight" },
-        { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2" },
-        { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3" },
-    ];
+    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight" },
+    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2" },
+    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3" },
+];
 
 
 const TitleContainer = ({ titles }) => {
     return (
+        titles.map((title) =>
         <div className="main__conteiner__s1">
             <div className="main__conteiner__s1__titulo">
                 <h3>
-                    <strong>{titles[0].title}</strong>
+                    <strong>{title.title}</strong>
                 </h3>
             </div>
         </div>
-    );
+    ));
 };
 
 const Card = ({ destinos }) => {
@@ -193,7 +196,7 @@ const App = () => {
 
     return (
         <>
-            <Container titles={titles} btnStyles={btnStyles} />;
+            <MainContainer titles={titles} btnStyles={btnStyles} />;
         </>
     );
 }
