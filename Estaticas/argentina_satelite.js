@@ -113,7 +113,7 @@ const Card = ({ destinos }) => {
         )));
 };
 
-const CardContainer = ({ btnStyles }) => {
+const CardContainer = ({ titles, btnStyles }) => {
 
     React.useEffect(() => {
         btnStyles.forEach((style) => {
