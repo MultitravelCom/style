@@ -83,11 +83,10 @@ const btnStyles = [
 
 const TitleContainer = ({ titles }) => {
     return (
-        titles.map((title) =>
-            <h3>
-                <strong>{title.title}</strong>
-            </h3>
-        ));
+        <h3>
+            <strong>{titles.title}</strong>
+        </h3>
+    )
 };
 
 const Card = ({ destinos }) => {
