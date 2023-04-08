@@ -80,6 +80,15 @@ const btnStyles = [
     { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3" },
 ];
 
+const Loader = () => {
+    return (
+      <div className="loader">
+        <div className="spinner">Cargando...</div>
+      </div>
+    );
+  };
+  
+
 const TitleContainer = ({ titles }) => {
     return (
         <h3>
@@ -190,22 +199,10 @@ const CardContainer = ({ btnStyles }) => {
 };
 
 function App() {
-    const [isLoading, setIsLoading] = React.useState(true);
-
-    // Simular una espera de 2 segundos antes de establecer isLoading en falso
-    React.useEffect(() => {
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 2000);
-    }, []);
 
     return (
         <>
-            {isLoading ? (
-                <p>Cargando...</p>
-            ) : (
-                <CardContainer btnStyles={btnStyles} />
-            )}
+            {item.destino === undefined ? <Loader /> : !item.destino && <CardContainer btnStyles={btnStyles} />}
         </>
     );
 }
