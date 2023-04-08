@@ -161,8 +161,11 @@ const CardContainer = ({ btnStyles }) => {
 
     return (
         <>
-
-            {btnStyles.map((item) => (
+          {isLoading ? (
+            <p>Cargando...</p>
+          ) : (
+            <>
+              {btnStyles.map((item) => (
                 <div key={item.title} className="main__conteiner__s1">
                     <div className="main__conteiner__s1__titulo">
                         <TitleContainer titles={titles} />
@@ -186,9 +189,11 @@ const CardContainer = ({ btnStyles }) => {
                     </div>
                 </div>
             ))}
+            </>
+          )}
         </>
-    );
-};
+      );
+    };
 
 const App = () => {
 
