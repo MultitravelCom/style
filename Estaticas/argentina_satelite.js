@@ -190,7 +190,7 @@ const CardContainer = ({ titles, btnStyles }) => {
 const MainContainer = ({ titles, btnStyles }) => {
     return (
         <>
-            <CardContainer btnStyles={btnStyles} />
+            <CardContainer btnStyles={btnStyles} titles={titles} />
         </>
     );
 };
@@ -199,7 +199,7 @@ const App = () => {
 
     return (
         <>
-            <MainContainer Container titles={titles} btnStyles={btnStyles} />;
+            <MainContainer btnStyles={btnStyles} titles={titles} />;
         </>
     );
 }
