@@ -108,7 +108,7 @@ const Card = ({ destinos }) => {
         )));
 };
 
-const CardContainer = ({ titles, btnStyles }) => {
+const CardContainer = ({ btnStyles }) => {
 
     React.useEffect(() => {
         btnStyles.forEach((style) => {
@@ -156,10 +156,9 @@ const CardContainer = ({ titles, btnStyles }) => {
     }, [btnStyles]);
 
     return (
-        <>
-        {btnStyles.map((item) => (
+        btnStyles.map((item) => (
             <div key={item.carrusel} className="carrusel__contenedor">
-                <TitleContainer titles={item.titles} />
+                <TitleContainer titles={btnStyles} />
                 <button
                     aria-label="Anterior"
                     className={`carrusel__anterior ${item.btnLeft}`}
@@ -176,8 +175,7 @@ const CardContainer = ({ titles, btnStyles }) => {
                     <i className="fa fa-chevron-right" aria-hidden="true"></i>
                 </button>
             </div>
-        ))}
-    </>
+        ))
         );
 };
 
