@@ -157,7 +157,7 @@ const CardContainer = ({ btnStyles }) => {
 
         setIsLoading(false);
 
-    }, [btnStyles]);
+    }, []);
 
     return (
         <>
