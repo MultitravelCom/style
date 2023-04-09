@@ -76,30 +76,30 @@ const destinos = [
 // ];
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Descuentos Imbatibles por Argentina' },
-    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2",title: 'Descuentos Imbatibles por Argentina' },
+    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Descuentos Imbatibles por Argentina' },
     { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Descuentos Imbatibles por Argentina' },
 ];
 
 const Loader = () => {
     return (
-      <div className="loader">
-        <div className="spinner">Cargando...</div>
-      </div>
+        <div className="loader">
+            <div className="spinner">Cargando...</div>
+        </div>
     );
- };
-  
-
- const TitleContainer = ({ btnStyles }) => {
-    return (
-        <>
-            {btnStyles.map(({ title }) => (
-                <h3 key={title}>
-                    <strong>{title}</strong>
-                </h3>
-            ))}
-        </>
-    )
 };
+
+
+// const TitleContainer = ({ btnStyles }) => {
+//     return (
+//         <>
+//             {btnStyles.map(({ title }) => (
+// <h3 key={title}>
+//     <strong>{title}</strong>
+// </h3>
+//             ))}
+//         </>
+//     )
+// };
 
 const Card = ({ destinos }) => {
     return (
@@ -173,7 +173,9 @@ const CardContainer = ({ btnStyles }) => {
             {btnStyles.map((item) => (
                 <div key={item.title} className="main__conteiner__s1">
                     <div className="main__conteiner__s1__titulo">
-                        <TitleContainer titles={item.titles} />
+                        <h3 key={item.title}>
+                            <strong>{item.title}</strong>
+                        </h3>
                     </div>
                     <div className="carrusel__contenedor">
                         <button
@@ -201,9 +203,10 @@ const CardContainer = ({ btnStyles }) => {
 function App() {
 
     return (
-        <>
+
+        <div className="carrusel">
             <CardContainer btnStyles={btnStyles} />
-        </>
+        </div>
     );
 }
 
