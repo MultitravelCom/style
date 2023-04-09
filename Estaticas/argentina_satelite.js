@@ -107,34 +107,32 @@ const CardContainer = ({ btnStyles, destino }) => {
 
     return (
         <>
-            {btnStyles.map((item) => (
-                <div key={item.title} className="main__conteiner__s1">
-                    <div className="main__conteiner__s1__titulo">
-                        <h3 key={item.title}>
-                            <strong>{item.title}</strong>
-                        </h3>
-                    </div>
-                    <div className="carrusel__contenedor">
-                        <button
-                            aria-label="Anterior"
-                            className={`carrusel__anterior ${item.btnLeft}`}
-                        >
-                            <i className="fa fa-chevron-left" aria-hidden="true"></i>
-                        </button>
-                        <div className={item.carrusel} id="seccionBariloche">
-                            <Card destinos={destinosFiltrados} />
-                        </div>
-                        <button
-                            aria-label="Siguiente"
-                            className={`carrusel__siguiente ${item.btnRight}`}
-                        >
-                            <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                        </button>
-                    </div>
+            <div key={destino} className="main__conteiner__s1">
+                <div className="main__conteiner__s1__titulo">
+                    <h3>
+                        <strong>{`Las mejores ofertas de ${destino}`}</strong>
+                    </h3>
                 </div>
-            ))}
+                <div className="carrusel__contenedor">
+                    <button
+                        aria-label="Anterior"
+                        className={`carrusel__anterior ${btnStyles.btnLeft}`}
+                    >
+                        <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <div className={btnStyles.carrusel}>
+                        <Card destinos={destinosFiltrados} />
+                    </div>
+                    <button
+                        aria-label="Siguiente"
+                        className={`carrusel__siguiente ${btnStyles.btnRight}`}
+                    >
+                        <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
         </>
-    )
+    );
 };
 
 function App() {
