@@ -8,64 +8,16 @@ const destinos = [
     },
     {
         id: 2,
-        destino: "Mendoza",
+        destino: "Bariloche",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
         className: "dos",
         linkWa: "https://wa.link/wc5s7c",
     },
     {
         id: 3,
-        destino: "Mendoza",
+        destino: "Iguazu",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
         className: "tres",
-        linkWa: "https://wa.link/wc5s7c",
-    },
-    {
-        id: 4,
-        destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
-        className: "uno",
-        linkWa: "https://wa.link/wc5s7c",
-    },
-    {
-        id: 5,
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
-        className: "dos",
-        linkWa: "https://wa.link/wc5s7c",
-    },
-    {
-        id: 6,
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
-        className: "tres",
-        linkWa: "https://wa.link/wc5s7c",
-    },
-    {
-        id: 7,
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
-        className: "uno",
-        linkWa: "https://wa.link/wc5s7c",
-    },
-    {
-        id: 8,
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
-        className: "dos",
-    },
-    {
-        id: 9,
-        destino: "El calafate",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
-        className: "tres",
-        linkWa: "https://wa.link/wc5s7c",
-    },
-    {
-        id: 10,
-        destino: "El calafate",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
-        className: "uno",
         linkWa: "https://wa.link/wc5s7c",
     },
 ];
@@ -103,7 +55,9 @@ const Card = ({ destinos }) => {
         )));
 };
 
-const CardContainer = ({ btnStyles }) => {
+const CardContainer = ({ btnStyles, destino }) => {
+
+    const destinosFiltrados = destinos.filter(destinoItem => destinoItem.destino === destino);
 
     React.useEffect(() => {
         btnStyles.forEach((style) => {
@@ -168,7 +122,7 @@ const CardContainer = ({ btnStyles }) => {
                             <i className="fa fa-chevron-left" aria-hidden="true"></i>
                         </button>
                         <div className={item.carrusel} id="seccionBariloche">
-                            <Card destinos={destinos} />
+                            <Card destinos={destinosFiltrados} />
                         </div>
                         <button
                             aria-label="Siguiente"
@@ -188,7 +142,9 @@ function App() {
     return (
 
         <div className="carrusel">
-            <CardContainer btnStyles={btnStyles} />
+            {destinos.map((destino) => (
+                <CardContainer key={destino.destino} btnStyles={btnStyles[destino.id - 1]} destino={destino.destino} />
+            ))}
         </div>
     );
 }
