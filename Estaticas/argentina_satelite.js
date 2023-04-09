@@ -69,15 +69,11 @@ const destinos = [
         linkWa: "https://wa.link/wc5s7c",
     },
 ];
-// const titles = [
-//     { title: 'Descuentos Imbatibles por Argentina' },
-//     { title: 'Descuentos Imbatibles por Argentina' },
-//     { title: 'Descuentos Imbatibles por Argentina' },
-// ];
+
 const btnStyles = [
-    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Descuentos Imbatibles por Argentina' },
-    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Descuentos Imbatibles por Argentina' },
-    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Descuentos Imbatibles por Argentina' },
+    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Las mejores ofertas de Bariloche' },
+    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Descuentos imperdibles en Iguazú' },
+    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Mendoza a precios bajos' },
 ];
 
 const Loader = () => {
@@ -87,19 +83,6 @@ const Loader = () => {
         </div>
     );
 };
-
-
-// const TitleContainer = ({ btnStyles }) => {
-//     return (
-//         <>
-//             {btnStyles.map(({ title }) => (
-// <h3 key={title}>
-//     <strong>{title}</strong>
-// </h3>
-//             ))}
-//         </>
-//     )
-// };
 
 const Card = ({ destinos }) => {
     return (
