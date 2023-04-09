@@ -69,15 +69,15 @@ const destinos = [
         linkWa: "https://wa.link/wc5s7c",
     },
 ];
-const titles = [
-    { title: 'Descuentos Imbatibles por Argentina' },
-    { title: 'Descuentos Imbatibles por Argentina' },
-    { title: 'Descuentos Imbatibles por Argentina' },
-];
+// const titles = [
+//     { title: 'Descuentos Imbatibles por Argentina' },
+//     { title: 'Descuentos Imbatibles por Argentina' },
+//     { title: 'Descuentos Imbatibles por Argentina' },
+// ];
 const btnStyles = [
-    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight" },
-    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2" },
-    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3" },
+    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Descuentos Imbatibles por Argentina' },
+    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2",title: 'Descuentos Imbatibles por Argentina' },
+    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Descuentos Imbatibles por Argentina' },
 ];
 
 const Loader = () => {
@@ -86,14 +86,18 @@ const Loader = () => {
         <div className="spinner">Cargando...</div>
       </div>
     );
-  };
+ };
   
 
-const TitleContainer = ({ titles }) => {
+ const TitleContainer = ({ btnStyles }) => {
     return (
-        <h3>
-            <strong>{titles.title}</strong>
-        </h3>
+        <>
+            {btnStyles.map(({ title }) => (
+                <h3 key={title}>
+                    <strong>{title}</strong>
+                </h3>
+            ))}
+        </>
     )
 };
 
@@ -117,8 +121,6 @@ const Card = ({ destinos }) => {
 };
 
 const CardContainer = ({ btnStyles }) => {
-
-    const [isLoading, setIsLoading] = React.useState(true);
 
     React.useEffect(() => {
         btnStyles.forEach((style) => {
@@ -164,8 +166,6 @@ const CardContainer = ({ btnStyles }) => {
             });
         });
 
-        setIsLoading(false);
-
     }, []);
 
     return (
@@ -173,7 +173,7 @@ const CardContainer = ({ btnStyles }) => {
             {btnStyles.map((item) => (
                 <div key={item.title} className="main__conteiner__s1">
                     <div className="main__conteiner__s1__titulo">
-                        <TitleContainer titles={titles} />
+                        <TitleContainer titles={item.titles} />
                     </div>
                     <div className="carrusel__contenedor">
                         <button
@@ -202,7 +202,7 @@ function App() {
 
     return (
         <>
-            {item.destino === undefined ? <Loader /> : !item.destino && <CardContainer btnStyles={btnStyles} />}
+            <CardContainer btnStyles={btnStyles} />
         </>
     );
 }
