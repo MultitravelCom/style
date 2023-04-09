@@ -55,9 +55,7 @@ const Card = ({ destinos }) => {
         )));
 };
 
-const CardContainer = ({ btnStyles, destino }) => {
-
-    const destinosFiltrados = destinos.filter(destinoItem => destinoItem.destino === destino);
+const CardContainer = ({ btnStyles }) => {
 
     React.useEffect(() => {
         btnStyles.forEach((style) => {
@@ -107,32 +105,34 @@ const CardContainer = ({ btnStyles, destino }) => {
 
     return (
         <>
-            <div key={destino} className="main__conteiner__s1">
-                <div className="main__conteiner__s1__titulo">
-                    <h3>
-                        <strong>{`Las mejores ofertas de ${destino}`}</strong>
-                    </h3>
-                </div>
-                <div className="carrusel__contenedor">
-                    <button
-                        aria-label="Anterior"
-                        className={`carrusel__anterior ${btnStyles.btnLeft}`}
-                    >
-                        <i className="fa fa-chevron-left" aria-hidden="true"></i>
-                    </button>
-                    <div className={btnStyles.carrusel}>
-                        <Card destinos={destinosFiltrados} />
+            {btnStyles.map((item) => (
+                <div key={item.title} className="main__conteiner__s1">
+                    <div className="main__conteiner__s1__titulo">
+                        <h3 key={item.title}>
+                            <strong>{item.title}</strong>
+                        </h3>
                     </div>
-                    <button
-                        aria-label="Siguiente"
-                        className={`carrusel__siguiente ${btnStyles.btnRight}`}
-                    >
-                        <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                    </button>
+                    <div className="carrusel__contenedor">
+                        <button
+                            aria-label="Anterior"
+                            className={`carrusel__anterior ${item.btnLeft}`}
+                        >
+                            <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <div className={item.carrusel} id="seccionBariloche">
+                            <Card destinos={destinos} />
+                        </div>
+                        <button
+                            aria-label="Siguiente"
+                            className={`carrusel__siguiente ${item.btnRight}`}
+                        >
+                            <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            ))}
         </>
-    );
+    )
 };
 
 function App() {
@@ -140,9 +140,7 @@ function App() {
     return (
 
         <div className="carrusel">
-            {destinos.map((destino) => (
-                <CardContainer key={destino.destino} btnStyles={btnStyles[destino.id - 1]} destino={destino.destino} />
-            ))}
+            <CardContainer btnStyles={btnStyles} />
         </div>
     );
 }
