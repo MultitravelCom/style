@@ -41,7 +41,7 @@ const destinos = [
         carrusel: "carrusel__lista2"
     },
     {
-        id: 6,
+        id: 3,
         destino: "Iguazu",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
         className: "tres",
@@ -89,7 +89,7 @@ const BannerTop = () => {
 }
 const Card = ({ destinos }) => {
     return (
-        destinos && destinos.map((destino) => (
+        destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
                     <picture>
@@ -105,105 +105,92 @@ const Card = ({ destinos }) => {
             </div>
         )));
 };
-const CardContainer = ({ btnStyles, destinosPorCarrusel }) => {
-    const [destinosPorCarrusel, setDestinosPorCarrusel] = React.useState({});
-  
+const CardContainer = ({ btnStyles }) => {
+
     React.useEffect(() => {
-      btnStyles.forEach((style, index) => {
-        const btnLeft = document.querySelector(`.${style.btnLeft}`);
-        const btnRight = document.querySelector(`.${style.btnRight}`);
-  
-        btnLeft.addEventListener('click', function (event) {
-          event.preventDefault();
+        btnStyles.forEach((style) => {
+            const btnLeft = document.querySelector(`.${style.btnLeft}`);
+            const btnRight = document.querySelector(`.${style.btnRight}`);
+
+            btnLeft.addEventListener('click', function (event) {
+                event.preventDefault();
+            });
+
+            btnRight.addEventListener('click', function (event) {
+                event.preventDefault();
+            });
+
+            new Glider(document.querySelector(`.${style.carrusel}`), {
+                slidesToShow: 1.2,
+                slidesToScroll: 0.5,
+                draggable: true,
+                arrows: {
+                    prev: btnLeft,
+                    next: btnRight,
+                },
+                responsive: [
+                    {
+                        // screens greater than >= 775px
+                        breakpoint: 450,
+                        settings: {
+                            // Set to `auto` and provide item width to adjust to viewport
+                            slidesToShow: "2.2",
+                            slidesToScroll: "1",
+                        },
+                    },
+                    {
+                        // screens greater than >= 1024px
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1,
+                        },
+                    },
+                ],
+                rewind: true,
+            });
         });
-  
-        btnRight.addEventListener('click', function (event) {
-          event.preventDefault();
-        });
-  
-        new Glider(document.querySelector(`#${style.carrusel}`), {
-          slidesToShow: 1.2,
-          slidesToScroll: 0.5,
-          draggable: true,
-          arrows: {
-            prev: btnLeft,
-            next: btnRight,
-          },
-          responsive: [
-            {
-              // screens greater than >= 775px
-              breakpoint: 450,
-              settings: {
-                // Set to `auto` and provide item width to adjust to viewport
-                slidesToShow: "2.2",
-                slidesToScroll: "1",
-              },
-            },
-            {
-              // screens greater than >= 1024px
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-              },
-            },
-          ],
-          rewind: true,
-        });
-      });
-  
-      const destinosAgrupados = destinos.reduce((acc, destino) => {
-        if (!acc[destino.carrusel]) {
-          acc[destino.carrusel] = [];
-        }
-        acc[destino.carrusel].push(destino);
-        return acc;
-      }, {});
-      setDestinosPorCarrusel(destinosAgrupados);
-    }, [btnStyles, destinos]);
-  
+
+    }, []);
+
     return (
-      <>
-        {btnStyles.map((item, index) => (
-          <div key={item.title} className="main__conteiner__s1">
-            <div className="main__conteiner__s1__titulo">
-              <h3 key={item.title}>
-                <strong>{item.title}</strong>
-              </h3>
-            </div>
-            <div className="carrusel__contenedor">
-              <button
-                aria-label="Anterior"
-                className={`carrusel__anterior ${item.btnLeft}`}
-              >
-                <i className="fa fa-chevron-left" aria-hidden="true"></i>
-              </button>
-              <div className="glider-contain">
-                <div
-                  className={`carrusel ${item.carrusel}`}
-                  id={`seccion-${index}`}
-                >
-                  <Card destinos={destinosPorCarrusel[item.carrusel]} />
+        <>
+            {btnStyles.map((item) => (
+                <div key={item.title} className="main__conteiner__s1">
+                    <div className="main__conteiner__s1__titulo">
+                        <h3 key={item.title}>
+                            <strong>{item.title}</strong>
+                        </h3>
+                    </div>
+                    <div className="carrusel__contenedor">
+                        <button
+                            aria-label="Anterior"
+                            className={`carrusel__anterior ${item.btnLeft}`}
+                        >
+                            <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <div className={item.carrusel} id="seccionBariloche">
+                            <Card destinos={destinos} />
+                        </div>
+                        <button
+                            aria-label="Siguiente"
+                            className={`carrusel__siguiente ${item.btnRight}`}
+                        >
+                            <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
-              </div>
-              <button
-                aria-label="Siguiente"
-                className={`carrusel__siguiente ${item.btnRight}`}
-              >
-                <i className="fa fa-chevron-right" aria-hidden="true"></i>
-              </button>
-            </div>
-          </div>
-        ))}
-      </>
-    );
-  };
+            ))}
+        </>
+    )
+};
 const Loader = () => {
     return (
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     );
 };
 // ************************************************
+
 function App() {
     const [loaded, setLoaded] = React.useState(false);
   
