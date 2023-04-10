@@ -105,7 +105,7 @@ const Card = ({ destinos }) => {
             </div>
         )));
 };
-const CardContainer = ({ btnStyles, destinos }) => {
+const CardContainer = ({ btnStyles, destinosPorCarrusel }) => {
     const [destinosPorCarrusel, setDestinosPorCarrusel] = React.useState({});
   
     React.useEffect(() => {
