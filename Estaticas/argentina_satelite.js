@@ -6,6 +6,7 @@ const destinos = [
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
         className: "uno",
         linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista"
     },
     {
         id: 2,
@@ -13,6 +14,7 @@ const destinos = [
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
         className: "dos",
         linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista2"
     },
     {
         id: 3,
@@ -20,6 +22,31 @@ const destinos = [
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
         className: "tres",
         linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista3"
+    },
+    {
+        id: 4,
+        destino: "Mendoza",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
+        className: "uno",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista"
+    },
+    {
+        id: 5,
+        destino: "Bariloche",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
+        className: "dos",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista2"
+    },
+    {
+        id: 6,
+        destino: "Iguazu",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
+        className: "tres",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista3"
     },
 ];
 const btnStyles = [
@@ -126,9 +153,13 @@ const CardContainer = ({ btnStyles }) => {
 
     }, []);
 
+    const destinosCarrusel = destinos.map((destino, index) => {
+        return { ...destino, carruselIndex: index };
+      });
+
     return (
         <>
-            {btnStyles.map((item) => (
+            {btnStyles.map((item, index) => (
                 <div key={item.title} className="main__conteiner__s1">
                     <div className="main__conteiner__s1__titulo">
                         <h3 key={item.title}>
@@ -142,8 +173,8 @@ const CardContainer = ({ btnStyles }) => {
                         >
                             <i className="fa fa-chevron-left" aria-hidden="true"></i>
                         </button>
-                        <div className={item.carrusel} id="seccionBariloche">
-                            <Card destinos={destinos} />
+                        <div className={item.carrusel} id={`seccion-${index}`}>
+                            <Card destinos={destinosCarrusel} />
                         </div>
                         <button
                             aria-label="Siguiente"
