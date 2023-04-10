@@ -94,7 +94,7 @@
         margin-bottom: 0 !important;
     }
     .panel .thumbnail {
-        min-height: 378px !important;
+        max-height: 325px !important;
     }
     .sliding-offers-v3>.panel::-webkit-scrollbar {
         width: 0;
