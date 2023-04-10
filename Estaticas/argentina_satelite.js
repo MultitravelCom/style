@@ -160,17 +160,18 @@ const CardContainer = ({ btnStyles }) => {
 const Loader = () => {
     return (
         <div className="loader">
-            <div className="spinner">Cargando...</div>
+            <div className="spinner">
+                <h2>Cargando...</h2>
+            </div>
         </div>
     );
 };
 // ************************************************
 
 function App() {
-    const [loaded, setLoaded] = useState(false);
+    const [loaded, setLoaded] = React.useState(false);
   
-    useEffect(() => {
-      // simulación de tiempo de carga
+    React.useEffect(() => {
       setTimeout(() => {
         setLoaded(true);
       }, 2000);
