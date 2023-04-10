@@ -55,7 +55,6 @@ const btnStyles = [
     { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Mendoza a precios bajos' },
 ];
 // *****************************************************
-const destinosFiltrados = destinos.filter(destino => destino.destino === 'Destino 1');
 // ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
@@ -171,9 +170,9 @@ const CardContainer = ({ btnStyles, destinos }) => {
                             <i className="fa fa-chevron-left" aria-hidden="true"></i>
                         </button>
                         <div className={item.carrusel} id="seccionBariloche">
-                            {destinos.map((destino, index) => (
+                            {destinos.map((destinos, index) => (
                                 <div key={index} className="carrusel">
-                                    <Card destinos={destino.destinos} />
+                                    <Card destinos={destinos.destinos} />
                                 </div>
                             ))}
                         </div>
