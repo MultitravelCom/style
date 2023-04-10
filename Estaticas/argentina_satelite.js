@@ -55,6 +55,7 @@ const btnStyles = [
     { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Mendoza a precios bajos' },
 ];
 // *****************************************************
+
 // ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
@@ -105,7 +106,7 @@ const Card = ({ destinos }) => {
             </div>
         )));
 };
-const CardContainer = ({ btnStyles, destinos }) => {
+const CardContainer = ({ btnStyles }) => {
 
     React.useEffect(() => {
         btnStyles.forEach((style) => {
@@ -170,11 +171,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
                             <i className="fa fa-chevron-left" aria-hidden="true"></i>
                         </button>
                         <div className={item.carrusel} id="seccionBariloche">
-                            {destinos.map((destinos, index) => (
-                                <div key={index} className="carrusel">
-                                    <Card destinos={destinos.destinos} />
-                                </div>
-                            ))}
+                            <Card destinos={destinos} />
                         </div>
                         <button
                             aria-label="Siguiente"
@@ -197,31 +194,31 @@ const Loader = () => {
 
 function App() {
     const [loaded, setLoaded] = React.useState(false);
-
+  
     React.useEffect(() => {
-        setTimeout(() => {
-            setLoaded(true);
-        }, 2000);
+      setTimeout(() => {
+        setLoaded(true);
+      }, 2000);
     }, []);
-
+  
     return (
-        <>
-            {loaded ? (
-                <>
-                    <div className="main_conteiner__s1_medio top_mkt">
-                        <BannerTop />
-                    </div>
-                    <div className="main__conteiner main__conteiner-principal container">
-                        <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles} destinos={destinos}/>
-                        </div>
-                    </div>
-                </>
-            ) : (
-                <Loader />
-            )}
-        </>
+      <>
+        {loaded ? (
+          <>
+            <div className="main_conteiner__s1_medio top_mkt">
+              <BannerTop />
+            </div>
+            <div className="main__conteiner main__conteiner-principal container">
+              <div className="carrusel">
+                <CardContainer btnStyles={btnStyles} />
+              </div>
+            </div>
+          </>
+        ) : (
+            <Loader />
+        )}
+      </>
     );
-}
+  }
 
 ReactDOM.render(<App />, document.getElementById("root"));
