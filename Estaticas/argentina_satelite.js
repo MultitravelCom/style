@@ -55,9 +55,6 @@ const btnStyles = [
     { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Mendoza a precios bajos' },
 ];
 // *****************************************************
-function filtrarPorDestino(destinos, destino) {
-    return destinos.filter(item => item.destino === destino);
-  }
 // ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
@@ -90,9 +87,7 @@ const BannerTop = () => {
         </div>
     )
 }
-
 const Card = ({ destinos }) => {
-
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
@@ -174,8 +169,8 @@ const CardContainer = ({ btnStyles }) => {
                         >
                             <i className="fa fa-chevron-left" aria-hidden="true"></i>
                         </button>
-                        <div className={item.carrusel} id={destino.destino}>
-                            <Card destinos={filtrarCard(destinos, item.carrusel)} />
+                        <div className={item.carrusel} id="seccionBariloche">
+                            <Card destinos={destinos} />
                         </div>
                         <button
                             aria-label="Siguiente"
@@ -198,37 +193,31 @@ const Loader = () => {
 
 function App() {
     const [loaded, setLoaded] = React.useState(false);
-
-    const carruseles = {
-        mendoza: filtrarPorDestino(destinos, "mendoza"),
-        bariloche: filtrarPorDestino(destinos, "bariloche"),
-        iguazu: filtrarPorDestino(destinos, "iguazu")
-      };
-
+  
     React.useEffect(() => {
-        setTimeout(() => {
-            setLoaded(true);
-        }, 2000);
+      setTimeout(() => {
+        setLoaded(true);
+      }, 2000);
     }, []);
-
+  
     return (
-        <>
-            {loaded ? (
-                <>
-                    <div className="main_conteiner__s1_medio top_mkt">
-                        <BannerTop />
-                    </div>
-                    <div className="main__conteiner main__conteiner-principal container">
-                        <div className="carrusel">
-                        <CardContainer btnStyles={btnStyles} destinos={carruseles[destino]} />
-                        </div>
-                    </div>
-                </>
-            ) : (
-                <Loader />
-            )}
-        </>
+      <>
+        {loaded ? (
+          <>
+            <div className="main_conteiner__s1_medio top_mkt">
+              <BannerTop />
+            </div>
+            <div className="main__conteiner main__conteiner-principal container">
+              <div className="carrusel">
+                <CardContainer btnStyles={btnStyles} />
+              </div>
+            </div>
+          </>
+        ) : (
+            <Loader />
+        )}
+      </>
     );
-}
+  }
 
 ReactDOM.render(<App />, document.getElementById("root"));
