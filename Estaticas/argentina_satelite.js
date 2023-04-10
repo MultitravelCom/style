@@ -1,3 +1,4 @@
+// BD
 const destinos = [
     {
         id: 1,
@@ -26,45 +27,36 @@ const btnStyles = [
     { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Descuentos imperdibles en Iguazú' },
     { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Mendoza a precios bajos' },
 ];
-
-const Loader = () => {
-    return (
-        <div className="loader">
-            <div className="spinner">Cargando...</div>
-        </div>
-    );
-};
-
+// *****************************************************
+// ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
-        <div className="main_conteiner__s1_medio top_mkt">
-            <div className="main_conteiner__s1_medio__paquetes">
-                <picture>
-                    <source
-                        media="(min-width: 1024px)"
-                        srcSet="
+        <div className="main_conteiner__s1_medio__paquetes">
+            <picture>
+                <source
+                    media="(min-width: 1024px)"
+                    srcSet="
             https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/bannerLanding%20(1).webp
           "
-                    />
-                    <source
-                        media="(min-width: 768px) and (max-width: 1023px)"
-                        srcSet="
+                />
+                <source
+                    media="(min-width: 768px) and (max-width: 1023px)"
+                    srcSet="
             https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/bannerLanding%20(2).webp
           "
-                    />
-                    <source
-                        media="(max-width: 767px)"
-                        srcSet="
+                />
+                <source
+                    media="(max-width: 767px)"
+                    srcSet="
             https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/bannerLanding%20(3).webp
           "
-                    />
-                    <img
-                        className="main_conteiner__s1_medio__paquetes__img"
-                        src="https://multitravelcom.github.io/MT/TravelSale2023/Banners/BannerLanding%20(1).jpg"
-                        alt="Imagen banner promociones"
-                    />
-                </picture>
-            </div>
+                />
+                <img
+                    className="main_conteiner__s1_medio__paquetes__img"
+                    src="https://multitravelcom.github.io/MT/TravelSale2023/Banners/BannerLanding%20(1).jpg"
+                    alt="Imagen banner promociones"
+                />
+            </picture>
         </div>
     )
 }
@@ -165,21 +157,43 @@ const CardContainer = ({ btnStyles }) => {
         </>
     )
 };
+const Loader = () => {
+    return (
+        <div className="loader">
+            <div className="spinner">Cargando...</div>
+        </div>
+    );
+};
+// ************************************************
 
 function App() {
-
+    const [loaded, setLoaded] = useState(false);
+  
+    useEffect(() => {
+      // simulación de tiempo de carga
+      setTimeout(() => {
+        setLoaded(true);
+      }, 2000);
+    }, []);
+  
     return (
-        <>
-            <BannerTop />
-            <div class="main__conteiner main__conteiner-principal container" >
-                <div className="carrusel">
-                    <CardContainer btnStyles={btnStyles} />
-                </div>
+      <>
+        {loaded ? (
+          <>
+            <div className="main_conteiner__s1_medio top_mkt">
+              <BannerTop />
             </div>
-        </>
+            <div className="main__conteiner main__conteiner-principal container">
+              <div className="carrusel">
+                <CardContainer btnStyles={btnStyles} />
+              </div>
+            </div>
+          </>
+        ) : (
+            <Loader />
+        )}
+      </>
     );
-}
+  }
 
 ReactDOM.render(<App />, document.getElementById("root"));
-
-
