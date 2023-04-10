@@ -6,7 +6,8 @@ const destinos = [
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
         className: "uno",
         linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista"
+        carrusel: "carrusel__lista",
+        item: "1"
     },
     {
         id: 2,
@@ -14,7 +15,8 @@ const destinos = [
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
         className: "dos",
         linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista2"
+        carrusel: "carrusel__lista2",
+        item: "3"
     },
     {
         id: 3,
@@ -22,7 +24,8 @@ const destinos = [
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
         className: "tres",
         linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista3"
+        carrusel: "carrusel__lista3",
+        item: "3"
     },
     {
         id: 4,
@@ -30,7 +33,8 @@ const destinos = [
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
         className: "uno",
         linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista"
+        carrusel: "carrusel__lista",
+        item: "2"
     },
     {
         id: 5,
@@ -38,7 +42,8 @@ const destinos = [
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
         className: "dos",
         linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista2"
+        carrusel: "carrusel__lista2",
+        item: "2"
     },
     {
         id: 3,
@@ -46,7 +51,8 @@ const destinos = [
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
         className: "tres",
         linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista3"
+        carrusel: "carrusel__lista3",
+        item: "1"
     },
 ];
 const btnStyles = [
@@ -55,6 +61,14 @@ const btnStyles = [
     { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Mendoza a precios bajos' },
 ];
 // *****************************************************
+const destinosPorItem = destinos.reduce((acc, destino) => {
+    const item = destino.item;
+    if (!acc[item]) {
+      acc[item] = [];
+    }
+    acc[item].push(destino);
+    return acc;
+  }, {});
 
 // ************** COMPONENTES ********************
 const BannerTop = () => {
@@ -156,34 +170,41 @@ const CardContainer = ({ btnStyles }) => {
 
     return (
         <>
-            {btnStyles.map((item) => (
-                <div key={item.title} className="main__conteiner__s1">
-                    <div className="main__conteiner__s1__titulo">
-                        <h3 key={item.title}>
-                            <strong>{item.title}</strong>
-                        </h3>
-                    </div>
-                    <div className="carrusel__contenedor">
-                        <button
-                            aria-label="Anterior"
-                            className={`carrusel__anterior ${item.btnLeft}`}
-                        >
-                            <i className="fa fa-chevron-left" aria-hidden="true"></i>
-                        </button>
-                        <div className={item.carrusel} id="seccionBariloche">
-                            <Card destinos={destinos} />
-                        </div>
-                        <button
-                            aria-label="Siguiente"
-                            className={`carrusel__siguiente ${item.btnRight}`}
-                        >
-                            <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                        </button>
-                    </div>
+          {btnStyles.map((item) => {
+            const destinosDeEsteItem = destinosPorItem[item.item];
+            return (
+              <div key={item.title} className="main__conteiner__s1">
+                <div className="main__conteiner__s1__titulo">
+                  <h3 key={item.title}>
+                    <strong>{item.title}</strong>
+                  </h3>
                 </div>
-            ))}
+                <div className="carrusel__contenedor">
+                  <button
+                    aria-label="Anterior"
+                    className={`carrusel__anterior ${item.btnLeft}`}
+                  >
+                    <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                  </button>
+                  <div className={item.carrusel} id={`seccion${item.title}`}>
+                    {destinosDeEsteItem.map((destino, index) => (
+                      <div key={index} className="carrusel">
+                        <Card destinos={destino.destinos} />
+                      </div>
+                    ))}
+                  </div>
+                  <button
+                    aria-label="Siguiente"
+                    className={`carrusel__siguiente ${item.btnRight}`}
+                  >
+                    <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            );
+          })}
         </>
-    )
+      );
 };
 const Loader = () => {
     return (
