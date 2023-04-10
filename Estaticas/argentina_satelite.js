@@ -214,7 +214,7 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles} />
+                            <CardContainer btnStyles={btnStyles} destinos={destinos}/>
                         </div>
                     </div>
                 </>
