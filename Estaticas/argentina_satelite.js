@@ -55,6 +55,9 @@ const btnStyles = [
     { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Mendoza a precios bajos' },
 ];
 // *****************************************************
+function filtrarPorDestino(destinos, destino) {
+    return destinos.filter(item => item.destino === destino);
+  }
 // ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
@@ -87,14 +90,16 @@ const BannerTop = () => {
         </div>
     )
 }
+
 const Card = ({ destinos }) => {
+
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
                     <picture>
                         <map name="image-map">
-                            <area target="_blank" alt="bariloche" title={destino.destino} href={destino.linkWa} coords="35.97%, 64.23%, 77.62%, 78.34%" shape="rect" />
+                            <area target="_blank" alt={destino.destino} title={destino.destino} href={destino.linkWa} coords="35.97%, 64.23%, 77.62%, 78.34%" shape="rect" />
                         </map>
                         <source media="(min-width: 1024px)" srcSet={destino.img} />
                         <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
@@ -169,8 +174,8 @@ const CardContainer = ({ btnStyles }) => {
                         >
                             <i className="fa fa-chevron-left" aria-hidden="true"></i>
                         </button>
-                        <div className={item.carrusel} id="seccionBariloche">
-                            <Card destinos={destinos} />
+                        <div className={item.carrusel} id={destino.destino}>
+                            <Card destinos={filtrarCard(destinos, item.carrusel)} />
                         </div>
                         <button
                             aria-label="Siguiente"
@@ -193,31 +198,37 @@ const Loader = () => {
 
 function App() {
     const [loaded, setLoaded] = React.useState(false);
-  
+
+    const carruseles = {
+        mendoza: filtrarPorDestino(destinos, "mendoza"),
+        bariloche: filtrarPorDestino(destinos, "bariloche"),
+        iguazu: filtrarPorDestino(destinos, "iguazu")
+      };
+
     React.useEffect(() => {
-      setTimeout(() => {
-        setLoaded(true);
-      }, 2000);
+        setTimeout(() => {
+            setLoaded(true);
+        }, 2000);
     }, []);
-  
+
     return (
-      <>
-        {loaded ? (
-          <>
-            <div className="main_conteiner__s1_medio top_mkt">
-              <BannerTop />
-            </div>
-            <div className="main__conteiner main__conteiner-principal container">
-              <div className="carrusel">
-                <CardContainer btnStyles={btnStyles} />
-              </div>
-            </div>
-          </>
-        ) : (
-            <Loader />
-        )}
-      </>
+        <>
+            {loaded ? (
+                <>
+                    <div className="main_conteiner__s1_medio top_mkt">
+                        <BannerTop />
+                    </div>
+                    <div className="main__conteiner main__conteiner-principal container">
+                        <div className="carrusel">
+                        <CardContainer btnStyles={btnStyles} destinos={carruseles[destino]} />
+                        </div>
+                    </div>
+                </>
+            ) : (
+                <Loader />
+            )}
+        </>
     );
-  }
+}
 
 ReactDOM.render(<App />, document.getElementById("root"));
