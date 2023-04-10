@@ -159,11 +159,7 @@ const CardContainer = ({ btnStyles }) => {
 };
 const Loader = () => {
     return (
-        <div className="loader">
-            <div className="spinner">
-                <h2>Cargando...</h2>
-            </div>
-        </div>
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     );
 };
 // ************************************************
