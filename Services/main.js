@@ -6,4 +6,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
     
     moverA.insertBefore(moverEn, primerHijo);
     moverEn.style.display = 'inline-block';
+
+// Cambiar Copy B1
+const textBtn = document.querySelector('.booking-data__section-subtitle');
+textBtn.textContent = 'Indica el detalle de tu vuelo y hotel';
+
+document.querySelector('.booking-data__section-subtitle').style.display = 'inline-block';
+
 });

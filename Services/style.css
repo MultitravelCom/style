@@ -52,7 +52,6 @@
     .promo_mobile { 
         display: none;
     }
-
     /* Lo mejor de Multitravel.com  */
     .main__conteiner__s1{
         display: flex;
@@ -717,4 +716,8 @@
             padding: 9px;
         }
 
+    }
+    /* Ocultar copy B1 - MULT-98 */
+    .booking-data__section-subtitle{
+        display: none;
     }
