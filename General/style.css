@@ -42,6 +42,21 @@
 .fix-margin>.newsletter__container{
    background: #f7f7f7 !important;
 }
+/* ************** B1 ************************ */
+/* Ocultar Sr/Sra */
+.booking-paxes__pax-field--treatment{
+    display: none !important;
+}
+/* Ocultar comentarios pax */
+.booking-data__notes{
+    display: none !important;
+}
+.booking-paxes__fidelity{
+    display: none !important;
+}
+.booking-data__login{
+    margin-bottom: 30px !important;
+}
 /************ Seccion Cards *****************/
 /* Titulos */
 .sliding-offers-v3>.offer-title {
