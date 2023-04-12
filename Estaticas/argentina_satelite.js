@@ -207,7 +207,7 @@ const Card = ({ destinos }) => {
 };
 const CardContainer = ({ btnStyles, destinos }) => {
 
-    const { destinos, title, btnRight, btnLeft, carrusel } = btnStyles;
+    const { title, btnRight, btnLeft, carrusel } = btnStyles;
 
     React.useEffect(() => {
         const btnLeft = document.querySelector(`.${btnStyles.btnLeft}`);
