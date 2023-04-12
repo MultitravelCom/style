@@ -137,7 +137,7 @@ const Card = ({ destinos }) => {
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
                     <picture>
                         <map name={destino.id}>
-                            <area target="_blank" alt={destino.destino} title={destino.destino} href={destino.linkWa} coords={destino.coordenadas} shape="rect" />
+                            <area target="_blank" alt={destino.destino} title={destino.destino} href={destino.linkWa} coords={destino.coords} shape="rect" />
                         </map>
                         <source media="(min-width: 1024px)" srcSet={destino.img} />
                         <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
