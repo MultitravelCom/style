@@ -175,14 +175,13 @@ const BannerTop = () => {
 }
 
 function Button(props) {
-
     const handleClick = (event) => {
         event.preventDefault();
       window.open(props.link, '_blank');
     }
   
     return (
-      <button className="btnStyle" onClick={handleClick}>{props.text}</button>
+      <button className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
     );
   }
   
@@ -200,7 +199,7 @@ const Card = ({ destinos }) => {
                         <source media="(max-width: 767px)" srcSet={destino.img} />
                         <img alt={`Imagen banner paquete ${destino.destino}`} src={destino.img} useMap={`#${destino.id}`} />
                     </picture>
-                    <Button link={destino.linkWa} text="Contactarme" />
+                    <Button id={destino.id} link={destino.linkWa} text="Contactarme" />
                 </div>
             </div>
         )));
