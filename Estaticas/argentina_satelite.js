@@ -1,5 +1,5 @@
 // BD
-const destinos = [
+const destinos1 = [
     {
         id: 1,
         destino: "Mendoza",
@@ -41,7 +41,107 @@ const destinos = [
         carrusel: "carrusel__lista2"
     },
     {
+        id: 6,
+        destino: "Iguazu",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
+        className: "tres",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista3"
+    },
+];
+const destinos2 = [
+    {
+        id: 1,
+        destino: "Mendoza",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
+        className: "uno",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista"
+    },
+    {
+        id: 2,
+        destino: "Bariloche",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
+        className: "dos",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista2"
+    },
+    {
         id: 3,
+        destino: "Iguazu",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
+        className: "tres",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista3"
+    },
+    {
+        id: 4,
+        destino: "Mendoza",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
+        className: "uno",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista"
+    },
+    {
+        id: 5,
+        destino: "Bariloche",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
+        className: "dos",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista2"
+    },
+    {
+        id: 6,
+        destino: "Iguazu",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
+        className: "tres",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista3"
+    },
+];
+const destinos3 = [
+    {
+        id: 1,
+        destino: "Mendoza",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
+        className: "uno",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista"
+    },
+    {
+        id: 2,
+        destino: "Bariloche",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
+        className: "dos",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista2"
+    },
+    {
+        id: 3,
+        destino: "Iguazu",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
+        className: "tres",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista3"
+    },
+    {
+        id: 4,
+        destino: "Mendoza",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
+        className: "uno",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista"
+    },
+    {
+        id: 5,
+        destino: "Bariloche",
+        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
+        className: "dos",
+        linkWa: "https://wa.link/wc5s7c",
+        carrusel: "carrusel__lista2"
+    },
+    {
+        id: 6,
         destino: "Iguazu",
         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
         className: "tres",
@@ -88,7 +188,6 @@ const BannerTop = () => {
     )
 }
 const Card = ({ destinos }) => {
-
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
@@ -109,79 +208,74 @@ const Card = ({ destinos }) => {
 const CardContainer = ({ btnStyles }) => {
 
     React.useEffect(() => {
-        btnStyles.forEach((style) => {
-            const btnLeft = document.querySelector(`.${style.btnLeft}`);
-            const btnRight = document.querySelector(`.${style.btnRight}`);
+        const btnLeft = document.querySelector(`.${btnStyles.btnLeft}`);
+        const btnRight = document.querySelector(`.${btnStyles.btnRight}`);
 
-            btnLeft.addEventListener('click', function (event) {
-                event.preventDefault();
-            });
-
-            btnRight.addEventListener('click', function (event) {
-                event.preventDefault();
-            });
-
-            new Glider(document.querySelector(`.${style.carrusel}`), {
-                slidesToShow: 1.2,
-                slidesToScroll: 0.5,
-                draggable: true,
-                arrows: {
-                    prev: btnLeft,
-                    next: btnRight,
-                },
-                responsive: [
-                    {
-                        // screens greater than >= 775px
-                        breakpoint: 450,
-                        settings: {
-                            // Set to `auto` and provide item width to adjust to viewport
-                            slidesToShow: "2.2",
-                            slidesToScroll: "1",
-                        },
-                    },
-                    {
-                        // screens greater than >= 1024px
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 4,
-                            slidesToScroll: 1,
-                        },
-                    },
-                ],
-                rewind: true,
-            });
+        btnLeft.addEventListener('click', function (event) {
+            event.preventDefault();
         });
 
-    }, []);
+        btnRight.addEventListener('click', function (event) {
+            event.preventDefault();
+        });
+
+        new Glider(document.querySelector(`.${btnStyles.carrusel}`), {
+            slidesToShow: 1.2,
+            slidesToScroll: 0.5,
+            draggable: true,
+            arrows: {
+                prev: btnLeft,
+                next: btnRight,
+            },
+            responsive: [
+                {
+                    // screens greater than >= 775px
+                    breakpoint: 450,
+                    settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: "2.2",
+                        slidesToScroll: "1",
+                    },
+                },
+                {
+                    // screens greater than >= 1024px
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    },
+                },
+            ],
+            rewind: true,
+        });
+    }, [btnStyles]);
 
     return (
         <>
-            {btnStyles.map((item) => (
-                <div key={item.title} className="main__conteiner__s1">
-                    <div className="main__conteiner__s1__titulo">
-                        <h3 key={item.title}>
-                            <strong>{item.title}</strong>
-                        </h3>
-                    </div>
-                    <div className="carrusel__contenedor">
-                        <button
-                            aria-label="Anterior"
-                            className={`carrusel__anterior ${item.btnLeft}`}
-                        >
-                            <i className="fa fa-chevron-left" aria-hidden="true"></i>
-                        </button>
-                        <div className={item.carrusel} id="seccionBariloche">
-                            <Card destinos={destinos} />
-                        </div>
-                        <button
-                            aria-label="Siguiente"
-                            className={`carrusel__siguiente ${item.btnRight}`}
-                        >
-                            <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                        </button>
-                    </div>
+            <div key={item.title} className="main__conteiner__s1">
+                <div className="main__conteiner__s1__titulo">
+                    <h3 key={item.title}>
+                        <strong>{item.title}</strong>
+                    </h3>
                 </div>
-            ))}
+                <div className="carrusel__contenedor">
+                    <button
+                        aria-label="Anterior"
+                        className={`carrusel__anterior ${item.btnLeft}`}
+                    >
+                        <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <div className={item.carrusel} id="seccionBariloche">
+                        <Card destinos={destinos} />
+                    </div>
+                    <button
+                        aria-label="Siguiente"
+                        className={`carrusel__siguiente ${item.btnRight}`}
+                    >
+                        <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
         </>
     )
 };
@@ -194,31 +288,32 @@ const Loader = () => {
 
 function App() {
     const [loaded, setLoaded] = React.useState(false);
-  
+
     React.useEffect(() => {
-      setTimeout(() => {
-        setLoaded(true);
-      }, 2000);
+        setTimeout(() => {
+            setLoaded(true);
+        }, 2000);
     }, []);
-  
+
     return (
-      <>
-        {loaded ? (
-          <>
-            <div className="main_conteiner__s1_medio top_mkt">
-              <BannerTop />
-            </div>
-            <div className="main__conteiner main__conteiner-principal container">
-              <div className="carrusel">
-                <CardContainer btnStyles={btnStyles} />
-              </div>
-            </div>
-          </>
-        ) : (
-            <Loader />
-        )}
-      </>
+        <>
+            {loaded ? (
+                <>
+                    <div className="main_conteiner__s1_medio top_mkt">
+                        <BannerTop />
+                    </div>
+                    <div className="main__conteiner main__conteiner-principal container">
+                        <div className="carrusel">
+                        <CardContainer btnStyles={btnStyles[1]} />
+                        <CardContainer btnStyles={btnStyles[0]} />
+                        </div>
+                    </div>
+                </>
+            ) : (
+                <Loader />
+            )}
+        </>
     );
-  }
+}
 
 ReactDOM.render(<App />, document.getElementById("root"));
