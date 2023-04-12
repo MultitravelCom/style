@@ -41,106 +41,57 @@ const destinos1 = [
         coords: "109,252,263,307"
     },
 ];
-const destinos2 = [
-    {
-        id: 1,
-        destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
-        className: "uno",
-        linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista"
-    },
-    {
-        id: 2,
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
-        className: "dos",
-        linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista2"
-    },
-    {
-        id: 3,
-        destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
-        className: "tres",
-        linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista3"
-    },
-    {
-        id: 4,
-        destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
-        className: "uno",
-        linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista"
-    },
-    {
-        id: 5,
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
-        className: "dos",
-        linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista2"
-    },
-    {
-        id: 6,
-        destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
-        className: "tres",
-        linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista3"
-    },
-];
-const destinos3 = [
-    {
-        id: 1,
-        destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
-        className: "uno",
-        linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista"
-    },
-    {
-        id: 2,
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
-        className: "dos",
-        linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista2"
-    },
-    {
-        id: 3,
-        destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
-        className: "tres",
-        linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista3"
-    },
-    {
-        id: 4,
-        destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
-        className: "uno",
-        linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista"
-    },
-    {
-        id: 5,
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
-        className: "dos",
-        linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista2"
-    },
-    {
-        id: 6,
-        destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
-        className: "tres",
-        linkWa: "https://wa.link/wc5s7c",
-        carrusel: "carrusel__lista3"
-    },
-];
+// const destinos2 = [
+//     {
+//         id: 1,
+//         destino: "Mendoza",
+//         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
+//         className: "uno",
+//         linkWa: "https://wa.link/wc5s7c",
+//         carrusel: "carrusel__lista"
+//     },
+//     {
+//         id: 2,
+//         destino: "Bariloche",
+//         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
+//         className: "dos",
+//         linkWa: "https://wa.link/wc5s7c",
+//         carrusel: "carrusel__lista2"
+//     },
+//     {
+//         id: 3,
+//         destino: "Iguazu",
+//         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
+//         className: "tres",
+//         linkWa: "https://wa.link/wc5s7c",
+//         carrusel: "carrusel__lista3"
+//     },
+//     {
+//         id: 4,
+//         destino: "Mendoza",
+//         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/mendoza%20(1).jpg",
+//         className: "uno",
+//         linkWa: "https://wa.link/wc5s7c",
+//         carrusel: "carrusel__lista"
+//     },
+//     {
+//         id: 5,
+//         destino: "Bariloche",
+//         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg",
+//         className: "dos",
+//         linkWa: "https://wa.link/wc5s7c",
+//         carrusel: "carrusel__lista2"
+//     },
+//     {
+//         id: 6,
+//         destino: "Iguazu",
+//         img: "https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/calafate%20(1).jpg",
+//         className: "tres",
+//         linkWa: "https://wa.link/wc5s7c",
+//         carrusel: "carrusel__lista3"
+//     },
+// ];
+
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Las mejores ofertas de Bariloche' },
     { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Descuentos imperdibles en Iguazú' },
@@ -199,7 +150,6 @@ const Card = ({ destinos }) => {
 };
 const CardContainer = ({ btnStyles, destinos }) => {
     const { destino } = destinos;
-
     const { title, btnRight, btnLeft, carrusel } = btnStyles;
 
     React.useEffect(() => {
@@ -299,8 +249,7 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} />
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos3} />
+                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
                         </div>
                     </div>
                 </>
