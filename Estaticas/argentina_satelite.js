@@ -167,6 +167,7 @@ const BannerTop = () => {
 function Button(props) {
 
     const handleClick = () => {
+        event.preventDefault();
       window.open(props.link, '_blank');
     }
   
