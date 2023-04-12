@@ -1,12 +1,11 @@
 const head = document.head || document.getElementsByTagName('head')[0];
-
 const meta = document.createElement('meta');
 
 meta.setAttribute('name', 'description');
 meta.setAttribute('content', 'Descripción de mi sitio web.');
 
 head.appendChild(meta);
-document.title = "Mi sitio web"
+document.title = "Argentina | Multitravel.com"
 
 // BD
 const destinos1 = [
