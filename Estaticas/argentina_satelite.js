@@ -214,11 +214,18 @@ const BannerTop = () => {
         </div>
     )
 }
-const BtnWa = () =>{
-    return(
-       <button></button> 
-    )
-}
+
+function Button(props) {
+
+    const handleClick = () => {
+      window.open(props.link, '_blank');
+    }
+  
+    return (
+      <button className="btnStyle" onClick={handleClick}>{props.text}</button>
+    );
+  }
+  
 const Card = ({ destinos }) => {
     return (
         destinos.map((destino) => (
@@ -231,14 +238,14 @@ const Card = ({ destinos }) => {
                         <source media="(min-width: 1024px)" srcSet={destino.img} />
                         <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
                         <source media="(max-width: 767px)" srcSet={destino.img} />
-                        <img alt={`Imagen banner paquete ${destino.destino}`} src={destino.img} useMap={`#${destino.id}`}/>
+                        <img alt={`Imagen banner paquete ${destino.destino}`} src={destino.img} useMap={`#${destino.id}`} />
                     </picture>
+                    <Button link={destino.linkWa} text="Contactarme" />
                 </div>
             </div>
         )));
 };
 const CardContainer = ({ btnStyles, destinos }) => {
-    const { destino } = destinos;
     const { title, btnRight, btnLeft, carrusel } = btnStyles;
 
     React.useEffect(() => {
@@ -287,7 +294,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
     return (
         <>
             <div key={title} className="main__conteiner__s1">
-                <div className={`main__conteiner__s1__titulo id=seccion${destino}`}>
+                <div className={`main__conteiner__s1__titulo id=seccion${destinos.destino}`}>
                     <h2 key={title}>
                         <strong>{title}</strong>
                     </h2>
