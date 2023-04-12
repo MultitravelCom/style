@@ -205,7 +205,9 @@ const Card = ({ destinos }) => {
             </div>
         )));
 };
-const CardContainer = ({ btnStyles }) => {
+const CardContainer = ({ btnStyles, destinos }) => {
+
+    const { destinos, title, btnRight, btnLeft, carrusel } = btnStyles;
 
     React.useEffect(() => {
         const btnLeft = document.querySelector(`.${btnStyles.btnLeft}`);
@@ -252,25 +254,25 @@ const CardContainer = ({ btnStyles }) => {
 
     return (
         <>
-            <div key={item.title} className="main__conteiner__s1">
+            <div key={title} className="main__conteiner__s1">
                 <div className="main__conteiner__s1__titulo">
-                    <h3 key={item.title}>
-                        <strong>{item.title}</strong>
+                    <h3 key={title}>
+                        <strong>{title}</strong>
                     </h3>
                 </div>
                 <div className="carrusel__contenedor">
                     <button
                         aria-label="Anterior"
-                        className={`carrusel__anterior ${item.btnLeft}`}
+                        className={`carrusel__anterior ${btnLeft}`}
                     >
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
-                    <div className={item.carrusel} id="seccionBariloche">
+                    <div className={carrusel} id="seccionBariloche">
                         <Card destinos={destinos} />
                     </div>
                     <button
                         aria-label="Siguiente"
-                        className={`carrusel__siguiente ${item.btnRight}`}
+                        className={`carrusel__siguiente ${btnRight}`}
                     >
                         <i className="fa fa-chevron-right" aria-hidden="true"></i>
                     </button>
@@ -304,8 +306,8 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                        <CardContainer btnStyles={btnStyles[1]} />
-                        <CardContainer btnStyles={btnStyles[0]} />
+                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2}/>
+                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos3}/>
                         </div>
                     </div>
                 </>
