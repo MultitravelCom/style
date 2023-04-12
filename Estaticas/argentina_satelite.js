@@ -15,7 +15,7 @@ const destinos1 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/ncvo1x",
-        title: "Paquete a Bariloche"
+        title: "Paquete a Bariloche 7 noches"
     },
     {
         id: "a2",
@@ -23,7 +23,7 @@ const destinos1 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-b%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/s507zo",
-        title: "Paquete a Bariloche"
+        title: "Paquete a Bariloche 5 noches"
     },
     {
         id: "a3",
