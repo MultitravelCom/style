@@ -307,7 +307,7 @@ function App() {
             {loaded ? (
                 <>
                     <div className="main_conteiner__s1_medio top_mkt">
-                        <h1><BannerTop /></h1>
+                        <BannerTop />
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
