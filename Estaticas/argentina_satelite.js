@@ -41,6 +41,90 @@ const destinos1 = [
         coords: "109,252,263,307"
     },
 ];
+const destinos2 = [
+    {
+        id: "b1",
+        destino: "Iguazu",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-a%20(1).webp",
+        className: "uno",
+        linkWa: "https://wa.link/hxjkgq",
+        coords: "109,252,263,307"
+    },
+    {
+        id: "b2",
+        destino: "Iguazu",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-b%20(1).webp",
+        className: "uno",
+        linkWa: "https://wa.link/2rmvhq",
+        coords: "109,252,263,307"
+    },
+    {
+        id: "b3",
+        destino: "Iguazu",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-c%20(1).webp",
+        className: "uno",
+        linkWa: "https://wa.link/wbq74i",
+        coords: "109,252,263,307"
+    },
+    {
+        id: "b4",
+        destino: "Iguazu",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-d%20(1).webp",
+        className: "uno",
+        linkWa: "https://wa.link/s6nxus",
+        coords: "109,252,263,307"
+    },
+    {
+        id: "b5",
+        destino: "Iguazu",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-e%20(1).webp",
+        className: "uno",
+        linkWa: "https://wa.link/37zsyv",
+        coords: "109,252,263,307"
+    },
+];
+const destinos3 = [
+    {
+        id: "c1",
+        destino: "Mendoza",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-a%20(1).webp",
+        className: "uno",
+        linkWa: "https://wa.link/doh4b9",
+        coords: "109,252,263,307"
+    },
+    {
+        id: "c2",
+        destino: "Mendoza",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-b%20(1).webp",
+        className: "uno",
+        linkWa: "https://wa.link/sbfl7y",
+        coords: "109,252,263,307"
+    },
+    {
+        id: "c3",
+        destino: "Mendoza",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-c%20(1).webp",
+        className: "uno",
+        linkWa: "https://wa.link/u8ym55",
+        coords: "109,252,263,307"
+    },
+    {
+        id: "c4",
+        destino: "Mendoza",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-d%20(1).webp",
+        className: "uno",
+        linkWa: "https://wa.link/u8ym55",
+        coords: "109,252,263,307"
+    },
+    {
+        id: "c5",
+        destino: "Mendoza",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-e%20(1).webp",
+        className: "uno",
+        linkWa: "https://wa.link/wz0152",
+        coords: "109,252,263,307"
+    },
+];
 // const destinos2 = [
 //     {
 //         id: 1,
@@ -250,6 +334,8 @@ function App() {
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
+                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} />
+                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
                         </div>
                     </div>
                 </>
