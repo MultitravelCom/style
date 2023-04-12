@@ -16,7 +16,7 @@ const destinos1 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/ncvo1x",
-        coords: "109,252,263,307"
+        title: "Paquete a Bariloche"
     },
     {
         id: "a2",
@@ -24,7 +24,7 @@ const destinos1 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-b%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/s507zo",
-        coords: "109,252,263,307"
+        title: "Paquete a Bariloche"
     },
     {
         id: "a3",
@@ -32,7 +32,7 @@ const destinos1 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-c%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/s507zo",
-        coords: "109,252,263,307"
+        title: "Hotel Villa Sofia"
     },
     {
         id: "a4",
@@ -40,7 +40,7 @@ const destinos1 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-d%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/2z5hpp",
-        coords: "109,252,263,307"
+        title: "Hotel Desing Suites"
     },
     {
         id: "a5",
@@ -48,7 +48,7 @@ const destinos1 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-e%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
-        coords: "109,252,263,307"
+        title: "Vuelo a Bariloche"
     },
 ];
 const destinos2 = [
@@ -58,7 +58,7 @@ const destinos2 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-a%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/hxjkgq",
-        coords: "109,252,263,307"
+        title: "Paquete Iguazú 5 noches"
     },
     {
         id: "b2",
@@ -66,7 +66,7 @@ const destinos2 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-b%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/2rmvhq",
-        coords: "109,252,263,307"
+        title: "Paquete Iguazú 3 noches"
     },
     {
         id: "b3",
@@ -74,7 +74,7 @@ const destinos2 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-c%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/wbq74i",
-        coords: "109,252,263,307"
+        title: "Hotel Kelta"
     },
     {
         id: "b4",
@@ -82,7 +82,7 @@ const destinos2 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-d%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/s6nxus",
-        coords: "109,252,263,307"
+        title: "Hotel Raices Esturión"
     },
     {
         id: "b5",
@@ -90,7 +90,7 @@ const destinos2 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-e%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
-        coords: "109,252,263,307"
+        title: "Vuelo a Iguzú"
     },
 ];
 const destinos3 = [
@@ -99,8 +99,7 @@ const destinos3 = [
         destino: "Mendoza",
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-a%20(1).webp",
         className: "uno",
-        linkWa: "https://wa.link/doh4b9",
-        coords: "109,252,263,307"
+        title: "Paquete Mendoza 7 noches"
     },
     {
         id: "c2",
@@ -108,7 +107,7 @@ const destinos3 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-b%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/sbfl7y",
-        coords: "109,252,263,307"
+        title: "Paquete Mendoza 5 noches"
     },
     {
         id: "c3",
@@ -116,7 +115,7 @@ const destinos3 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-c%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/u8ym55",
-        coords: "109,252,263,307"
+        title: "Hotel Cordón del Plata"
     },
     {
         id: "c4",
@@ -124,7 +123,7 @@ const destinos3 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-d%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/u8ym55",
-        coords: "109,252,263,307"
+        title: "Hotel Raices Aconcagua"
     },
     {
         id: "c5",
@@ -132,7 +131,7 @@ const destinos3 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-e%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/wz0152",
-        coords: "109,252,263,307"
+        title: "Vuelo a Mendoza"
     },
 ];
 const btnStyles = [
@@ -192,12 +191,12 @@ const Card = ({ destinos }) => {
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
                     <picture>
                         <map name={destino.id}>
-                            <area target="_blank" alt={destino.destino} title={destino.destino} href={destino.linkWa} coords={destino.coords} shape="rect" />
+                            <area target="_blank" alt={destino.title} title={destino.title} href={destino.linkWa} coords={destino.coords} shape="rect" />
                         </map>
                         <source media="(min-width: 1024px)" srcSet={destino.img} />
                         <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
                         <source media="(max-width: 767px)" srcSet={destino.img} />
-                        <img alt={`Imagen banner paquete ${destino.destino}`} src={destino.img} useMap={`#${destino.id}`} />
+                        <img alt={`Imagen banner ${destino.title}`} src={destino.img} useMap={`#${destino.id}`} />
                     </picture>
                     <Button id={destino.id} link={destino.linkWa} text="Contactarme" />
                 </div>
