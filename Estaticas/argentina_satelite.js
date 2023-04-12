@@ -214,6 +214,11 @@ const BannerTop = () => {
         </div>
     )
 }
+const BtnWa = () =>{
+    return(
+       <button></button> 
+    )
+}
 const Card = ({ destinos }) => {
     return (
         destinos.map((destino) => (
@@ -226,7 +231,7 @@ const Card = ({ destinos }) => {
                         <source media="(min-width: 1024px)" srcSet={destino.img} />
                         <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
                         <source media="(max-width: 767px)" srcSet={destino.img} />
-                        <img alt={`Imagen banner paquete ${destino.destino}`} src={destino.img} useMap={destino.id}/>
+                        <img alt={`Imagen banner paquete ${destino.destino}`} src={destino.img} useMap={`#${destino.id}`}/>
                     </picture>
                 </div>
             </div>
