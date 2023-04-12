@@ -261,7 +261,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
     return (
         <>
             <div key={title} className="main__conteiner__s1">
-                <div className={`main__conteiner__s1__titulo id=seccion${destinos.destino}`}>
+                <div className="main__conteiner__s1__titulo" id={`seccion${destinos.destino}`}>
                     <h2 key={title}>
                         <strong>{title}</strong>
                     </h2>
@@ -273,7 +273,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
                     >
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
-                    <div className={carrusel} id="seccionBariloche">
+                    <div className={carrusel} id={destinos.title}>
                         <Card destinos={destinos} />
                     </div>
                     <button
