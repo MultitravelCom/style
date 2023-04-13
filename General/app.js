@@ -17,6 +17,42 @@
 //         </div>
 //     );
 // };
+// Componente medios de pago.
+const MediosDePagos = () => {
+    return (
+        <>
+        <h2 className="main__conteiner__titulo">
+            Medios de pago
+        </h2>
+        <div className="main__conteiner__s2__pagos">
+            <div className="main__conteiner__s2__pagos__card uno__s2">
+                <div className="main__conteiner__s2__pagos__card__texto">
+                    <h4>Vos decid&#237;s</h4>
+                    <p>Encontr&#225; todos los medios de pagos exclusivos para vos</p>
+                    <button className="main__conteiner__s2__pagos__btn">
+                        <a href="https://www.multitravel.com/medios-de-pago" target="_blank"
+                            style={{ color: "white", textDecoration: "none" }}>Descubrir</a>
+                    </button>
+                </div>
+                <div className="main__conteiner__s2__pagos__card__img">
+                    <source media="(min-width: 1024px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/mediospagos-01.webp" />
+                    <source media="(min-width: 768px) and (max-width: 1023px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/mediospagos-02.webp" />
+                    <source media="(max-width: 767px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/mediospagos-03.webp" />
+                    <img alt={`Imagen banner`} src="https://multitravelcom.github.io/MT/Secciones/MediosPagos/mediospagos-01.webp" />
+                </div>
+            </div>
+            <div className="main__conteiner__s2__pagos__card dos__s2">
+                <a href="https://www.multitravel.com/ahora12" target="_blank">
+                    <source media="(min-width: 1024px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/ahora12/ahora12-01.webp" />
+                    <source media="(min-width: 768px) and (max-width: 1023px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/ahora12/ahora12-02.webp" />
+                    <source media="(max-width: 767px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/ahora12/ahora12-03.webp" />
+                    <img alt={`Imagen banner Ahora12`} src="https://multitravelcom.github.io/MT/Secciones/MediosPagos/ahora12/ahora12-01.webp" />
+                </a>
+            </div>
+        </div>
+    </>
+    )
+}
 
 // Lo mejor de Multitravel.com
 const Secciones = ({ seccion, url, className }) => {
@@ -118,6 +154,8 @@ const LoMejorDe = () => {
     };
 }
 
+
 ReactDOM.createRoot(document.getElementById('root__s3')).render(<LoMejorDe />);
-ReactDOM.createRoot(document.getElementById('home-content-5')).render(<BannerTop />);
+ReactDOM.createRoot(document.getElementById('mediosDePago')).render(<MediosDePagos />);
+// ReactDOM.createRoot(document.getElementById('home-content-5')).render(<BannerTop />);
 
