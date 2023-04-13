@@ -363,4 +363,24 @@
         padding: 9px;
     }
 
+    .main__conteiner__s2__doble {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .main__conteiner__s3__triple{
+      flex-direction: column;
+  }
+  .main__conteiner__s3__triple__card {
+      display: flex;
+      flex-direction: row-reverse;
+      height: 77px;
+  }
+  .main__conteiner__s3__triple__card__texto{
+      width: 100%;
+  }
+  .main__conteiner__s3__triple__card__img{
+      border-radius: 0 8px;
+      width: 147px;
+  }
+
 }
