@@ -7,6 +7,7 @@ meta.setAttribute('content', 'Compará paquetes a Argentina y conseguí los mejo
 head.appendChild(meta);
 document.title = "Paquetes turísticos a Argentina | Multitravel.com"
 
+
 // BD
 const destinos1 = [
     {
@@ -30,7 +31,7 @@ const destinos1 = [
         destino: "Bariloche",
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-c%20(1).webp",
         className: "uno",
-        linkWa: "https://wa.link/s507zo",
+        linkWa: "https://wa.link/duchkz",
         title: "Hotel Villa Sofia"
     },
     {
@@ -98,6 +99,7 @@ const destinos3 = [
         destino: "Mendoza",
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-a%20(1).webp",
         className: "uno",
+        linkWa: "https://wa.link/xetnro",
         title: "Paquete Mendoza 7 noches"
     },
     {
@@ -113,7 +115,7 @@ const destinos3 = [
         destino: "Mendoza",
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-c%20(1).webp",
         className: "uno",
-        linkWa: "https://wa.link/u8ym55",
+        linkWa: "https://wa.link/vs8baw",
         title: "Hotel Cordón del Plata"
     },
     {
