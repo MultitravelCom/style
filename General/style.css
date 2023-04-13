@@ -142,3 +142,100 @@
 }
 
 /* ******************************************************** */
+/* Piensa en todo */
+
+/* Multitravel.com piensa en todo */
+.main__conteiner__s3__piensa {
+    height: 248px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }
+  
+  .main__conteiner__s3>.container {
+    padding: 0;
+  }
+  
+  .uno__s3 {
+    background-image: url(https://multitravelcom.github.io/MT/Secciones/EnTodo/product-alojamiento.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px 8px 8px 40px;
+    height: 100%;
+    padding-inline: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .dos__s3 {
+    background-image: url(https://multitravelcom.github.io/MT/Secciones/EnTodo/product-vuelo.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    height: 100%;
+    padding-inline: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tres__s3 {
+    background-image: url(https://multitravelcom.github.io/MT/Secciones/EnTodo/product-paquetes.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px 40px 8px 8px;
+    height: 100%;
+    padding-inline: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hover__s3:hover {
+    box-shadow: var(--box-shadow);
+  }
+  
+  .main__conteiner__s3__piensa__parrafo {
+    background-color: #1B88E7;
+    font-size: 18px;
+    opacity: 90%;
+    width: 100%;
+    height: 61px;
+    text-align: inherit;
+    padding: 1.2rem;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    padding-left: 40px;
+    letter-spacing: 1px;
+  }
+
+@media (max-width: 564px) {
+
+    /*  Piensa en todo */
+
+    .main__conteiner__s3__piensa {
+        flex-direction: column;
+    }
+
+    .uno__s3,
+    .dos__s3,
+    .tres__s3 {
+        border-radius: 8px;
+        background-position-y: -65px;
+    }
+
+    .main__conteiner__s3__piensa__parrafo {
+        width: 200px;
+        height: 100%;
+        left: 0;
+    }
+
+    .main__conteiner__s3__piensa__parrafo>p {
+        padding: 9px;
+    }
+
+}
+
+/* ******************************************************************* */
