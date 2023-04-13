@@ -27,9 +27,6 @@
 .page-header-bar{
     padding: 0 !important;
 }
-.top_mkt{
-    margin-top: 2rem !important;
-}
 .home-row {
     margin-bottom: 24px !important;
 }
@@ -140,6 +137,13 @@
         font-size: 2.2rem !important;
     }
 }
+#bannerRedes,
+#mediosDePago,
+#loMejorDe{
+  margin-top: 3rem;
+}
+
+.
 /* ******************************************************************* */
 /* Medios de pago */
 .main__conteiner__s2__pagos__card {
