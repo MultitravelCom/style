@@ -184,12 +184,21 @@ const LoMejorDe = () => {
 }
 
 const App = () => {
-
+    return (
+        <>
+            <div id="mediosDePago">
+                <MediosDePagos />
+            </div>
+            <div id="bannerRedes">
+                <BannerRedes />
+            </div>
+            <div id="loMejorDe" class="main__conteiner__s3">
+                <LoMejorDe />
+            </div>
+        </>
+    )
 }
 
-
-ReactDOM.createRoot(document.getElementById('root__s3')).render(<LoMejorDe />);
-ReactDOM.createRoot(document.getElementById('mediosDePago')).render(<MediosDePagos />);
-ReactDOM.createRoot(document.getElementById('bannerRedes')).render(<BannerRedes />);
+ReactDOM.createRoot(document.getElementById('rootHome')).render(<App />);
 // ReactDOM.createRoot(document.getElementById('home-content-5')).render(<BannerTop />);
 
