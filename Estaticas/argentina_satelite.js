@@ -99,7 +99,7 @@ const destinos3 = [
         destino: "Mendoza",
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-a%20(1).webp",
         className: "uno",
-        linkWa: "https://wa.link/frrkpl",
+        linkWa: "https://wa.link/61efbi",
         title: "Paquete Mendoza 7 noches"
     },
     {
