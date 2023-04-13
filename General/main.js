@@ -1,22 +1,25 @@
 
-document.addEventListener('DOMContentLoaded', () => {
-    const bodyNode = document.querySelector('body');
-    const observerConfig = { childList: true, subtree: true };
-    
-    const handleMutation = (mutationList) => {
-      mutationList.forEach((mutation) => {
-        const addedNodes = mutation.addedNodes;
-        addedNodes.forEach((node) => {
-          if (node.classList && node.classList.contains('bestprice')) {
-            const newDivBestprice = document.createElement('div');
-            newDivBestprice.className = 'bestprice__title';
-            newDivBestprice.innerHTML = `<span>Impuestos incluidos</span>`;
-            node.appendChild(newDivBestprice);
-          }
-        });
+// Selecciona el elemento que quieres observar
+const resultsWrapper = document.querySelector('.js-results-wrapper');
+
+// Crea un nuevo observador de mutaciones
+const observer = new MutationObserver((mutationsList) => {
+  for(let mutation of mutationsList) {
+    if (mutation.type === 'childList' && mutation.addedNodes.length) {
+      mutation.addedNodes.forEach((node) => {
+        // Si el nodo agregado tiene la clase 'bestprice'
+        if (node.classList && node.classList.contains('bestprice')) {
+          // Agrega el contenido deseado
+          const newDivBestprice = document.createElement('div');
+          newDivBestprice.className = 'bestprice__title';
+          newDivBestprice.innerHTML = '<span>Impuestos incluidos</span>';
+
+          node.appendChild(newDivBestprice);
+        }
       });
-    };
-    
-    const observer = new MutationObserver(handleMutation);
-    observer.observe(bodyNode, observerConfig);
+    }
+  }
 });
+
+// Configura el observador para que observe cambios en el DOM
+observer.observe(resultsWrapper, { childList: true, subtree: true });
