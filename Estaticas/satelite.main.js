@@ -49,21 +49,3 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
-
-const telefonoAr = document.querySelector(".pull-left hidden-xs");
-
-const div = document.createElement(div);
-
-div.innerHTML = `
-<div class="btn-group upper-menu__phone-wrapper">
-  <a target="_blank" href="https://wa.link/v9ejqn">
-
-    <span class="glyphicon glyphicon-whatsapp-bottomless" aria-hidden="true"></span>
-
-    <span class="sr-only">Teléfono</span>
-
-    <span id="upper-menu-phone-container"><span class="text-nowrap phone text-nowrap quicklink-elem-label phone" dir="ltr">11 4979 1876</span></span>
-  </a>
-</div>
-`
-telefonoAr.appendChild(div);
