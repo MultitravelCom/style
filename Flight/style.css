@@ -148,7 +148,7 @@
 }
 
 .uno__s3 {
-    background-image: url(https://www.multitravel.com/images/upload//LandingPage/Vuelos/alojamineto-vuelos.jpg);
+    background-image: url(https://multitravelcom.github.io/MT/Secciones/EnTodo/product-alojamiento.webp);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px 8px 8px 40px;
@@ -156,11 +156,10 @@
     padding-inline: 0;
     position: relative;
     overflow: hidden;
-
-}
-
-.dos__s3 {
-    background-image: url(https://www.multitravel.com/images/upload//LandingPage/Vuelos/paquetes-vuelos.jpg);
+  }
+  
+  .dos__s3 {
+    background-image: url(https://multitravelcom.github.io/MT/Secciones/EnTodo/product-vuelo.webp);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px;
@@ -168,10 +167,10 @@
     padding-inline: 0;
     position: relative;
     overflow: hidden;
-}
-
-.tres__s3 {
-    background-image: url(https://www.multitravel.com/images/upload//LandingPage/Vuelos/actividades-vuelos.jpg);
+  }
+  
+  .tres__s3 {
+    background-image: url(https://multitravelcom.github.io/MT/Secciones/EnTodo/product-paquetes.webp);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px 40px 8px 8px;
@@ -179,8 +178,8 @@
     padding-inline: 0;
     position: relative;
     overflow: hidden;
-}
-
+  }
+  
 .hover__s3:hover {
     box-shadow: var(--box-shadow);
 }
