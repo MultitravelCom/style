@@ -1,5 +1,6 @@
 
-// Selecciona el elemento que quieres observar
+document.addEventListener('DOMContentLoaded', () => {
+   // Selecciona el elemento que quieres observar
 const resultsWrapper = document.querySelector('.js-results-wrapper');
 
 // Crea un nuevo observador de mutaciones
@@ -23,3 +24,4 @@ const observer = new MutationObserver((mutationsList) => {
 
 // Configura el observador para que observe cambios en el DOM
 observer.observe(resultsWrapper, { childList: true, subtree: true });
+});
