@@ -1,10 +1,12 @@
 
+document.addEventListener('DOMContentLoaded', () => {
+    let divBestprices = document.querySelectorAll('.bestprice');
+    divBestprices.forEach((divBestprice) => {
 
-document.addEventListener('DOMContentLoaded', ()=>{
-    let divBestprice = document.querySelector('.bestprice');
-    let newDivBestprice = document.createElement('div');
-    newDivBestprice.className = 'bestprice__title';
-    newDivBestprice.innerHTML = `<span>Impuestos incluidos</span>`;
-    
-    divBestprice.appendChild(newDivBestprice);
+        let newDivBestprice = document.createElement('div');
+        newDivBestprice.className = 'bestprice__title';
+        newDivBestprice.innerHTML = `<span>Impuestos incluidos</span>`;
+
+        divBestprice.appendChild(newDivBestprice);
+    })
 });
