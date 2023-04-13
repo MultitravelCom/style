@@ -9,8 +9,10 @@ document.title = "Paquetes turísticos a Argentina | Multitravel.com"
 
 const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
 const linkWaFixed = document.querySelector('.whatsAppFixes a');
+const linkWaHeaderMobile = document.querySelector('.upper-menu__phone-wrapper a');
 linkWaHeader.href = 'https://wa.link/xetnro';
 linkWaFixed.href = 'https://wa.link/xetnro';
+linkWaHeaderMobile.href = 'https://wa.link/xetnro';
 
 
 // BD
