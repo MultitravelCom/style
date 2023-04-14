@@ -190,7 +190,24 @@ function Button(props) {
     return (
       <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
     );
+}
+
+  function mostrarSeccion() {
+    var url = window.location.href; // Obtener la URL completa
+    var hash = url.substring(url.indexOf("#") + 1); // Obtener el ancla de la URL
+
+    var seccion = document.getElementById(hash); // Buscar el elemento con el ID del ancla
+
+    if (seccion) {
+      seccion.scrollIntoView(); // Mostrar la sección si existe
+    } else {
+      setTimeout(mostrarSeccion, 500); // Intentar nuevamente después de 500 milisegundos
+    }
   }
+
+  mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
+
+
   
 const Card = ({ destinos }) => {
     return (
