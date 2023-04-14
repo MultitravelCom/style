@@ -28,20 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const divTaxes = document.querySelectorAll('.results-list__item');
         const divCopyTaxes = document.querySelectorAll('.bestprice__amount')
         if (divTaxes.length > 0) {
-          divTaxes.forEach((divTax, index) => {
-            const newDivTax = document.createElement('span');
-            newDivTax.className = 'renderPriceTag';
-            newDivTax.innerHTML = '<span>Precio Final</span>';
-            divTax.appendChild(newDivTax);
-            divTax.appendChild(divCopyTaxes[index]);
-          });
+            for (let i = 0; i < divCopyTaxes.length; i++) {
+              const newDivTax = document.createElement('span');
+              newDivTax.className = 'renderPriceTag';
+              newDivTax.innerHTML = '<span>Precio Final</span>';
+              divCopyTaxes[i].insertBefore(newDivTax, divCopyTaxes[i].firstChild);
+            }
           break;
         }
         // Esperar 100ms y volver a intentar
         await new Promise(resolve => setTimeout(resolve, 100));
       }
     }
-  
+    
     // Llamar a la función para esperar a que se cargue la clase .bestprice
     waitForElementFlight();
-  });
+});
