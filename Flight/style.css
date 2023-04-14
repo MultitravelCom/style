@@ -13,6 +13,9 @@
 .renderPriceTagStyle{
     font-size: 1.1rem;
 }
+.flight-selection__breakdown-concept:nth-child(2) {
+    display: none;
+  }
 
 /* Ocultar mas opciones en caja de busqueda */
 #flight-searcher-more-options,
