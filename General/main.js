@@ -39,13 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // Esperar 100ms y volver a intentar
         await new Promise(resolve => setTimeout(resolve, 100));
-
-        const seleccionFlighCopyTax = document.querySelectorAll('.flight-selection__breakdown-concept');
-        seleccionFlighCopyTax.textContent = 'PRECIO FINAL';
       }
 
     }
     
+    const seleccionFlighCopyTax = document.querySelectorAll('.flight-selection__breakdown-concept');
+        seleccionFlighCopyTax.textContent = 'PRECIO FINAL';
+        
     // Llamar a la función para esperar a que se cargue la clase .bestprice
     waitForElementFlight();
 });
