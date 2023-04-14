@@ -35,12 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     async function waitForElement() {
       while (true) {
         const divTaxes = document.querySelectorAll('.results-list__item');
+        const divCopyTaxes = document.querySelectorAll('.bestprice__amount')
         if (divTaxes.length > 0) {
             divTaxes.forEach((divTax) => {
             const newDivTax = document.createElement('span');
             newDivTax.className = 'renderPriceTag';
             newDivTax.innerHTML = '<span>Precio Final</span>';
-            divTax.appendChild(newDivTax);
+            divTax.appendChild(divCopyTaxes);
           });
           break;
         }
