@@ -42,25 +42,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
-    const waitForElement = async () => {
-        while (true) {
-          const totalLineDivs = document.querySelectorAll('.flight-selection__breakdown-line--total');
-          const conceptDivs = document.querySelectorAll('.flight-selection__breakdown-concept');
-          if (totalLineDivs.length > 0 && conceptDivs.length > 0) {
-            totalLineDivs.forEach((totalLineDiv, index) => {
-              const newSpan = document.createElement('span');
-              newSpan.className = 'flight-selection__breakdown-concept';
-              newSpan.textContent = 'Precio Final';
-              totalLineDiv.insertBefore(newSpan, totalLineDiv.firstChild);
-              conceptDivs[index].style.display = 'none';
-            });
-            break;
-          }
-          // Esperar 100ms y volver a intentar
-          await new Promise(resolve => setTimeout(resolve, 100));
-        }
+ // Función para esperar la carga de elementos en el modal
+const waitForElement = async () => {
+    while (true) {
+      const totalLineDiv = document.querySelector('.flight-selection__breakdown-line--total');
+      const conceptDiv = document.querySelector('.flight-selection__breakdown-concept');
+      if (totalLineDiv && conceptDiv) {
+        const newSpan = document.createElement('span');
+        newSpan.className = 'flight-selection__breakdown-concept';
+        newSpan.textContent = 'Precio Final';
+        totalLineDiv.insertBefore(newSpan, totalLineDiv.firstChild);
+        conceptDiv.style.display = 'none';
+        break;
       }
-      
+      // Esperar 100ms y volver a intentar
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+  }
+  
+  // Función para detectar la selección de los checkboxes
+  const handleCheckboxSelection = () => {
+    const departureCheckbox = document.querySelector('input[name="result-option-radio-departure"]:checked');
+    const returnCheckbox = document.querySelector('input[name="result-option-radio-return"]:checked');
+    if (departureCheckbox && returnCheckbox) {
+      // Ambos checkboxes están seleccionados, activar la función de espera
       waitForElement();
+    }
+  }
+  
+  // Agregar evento de escucha a los checkboxes
+  const departureCheckbox = document.querySelector('input[name="result-option-radio-departure"]');
+  const returnCheckbox = document.querySelector('input[name="result-option-radio-return"]');
+  departureCheckbox.addEventListener('change', handleCheckboxSelection);
+  returnCheckbox.addEventListener('change', handleCheckboxSelection);
+  
     waitForElementFlight();
 });
