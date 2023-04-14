@@ -44,13 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const waitForElement = async () => {
         while (true) {
-          const totalLineDiv = document.querySelector('.flight-selection__breakdown-line--total');
-          const conceptDiv = document.querySelector('.flight-selection__breakdown-concept');
-          if (totalLineDiv && conceptDiv) {
-            const newSpan = document.createElement('span');
-            newSpan.className = 'flight-selection__breakdown-concept';
-            newSpan.textContent = 'Precio Final';
-            totalLineDiv.insertBefore(newSpan, totalLineDiv.firstChild);
+          const totalLineDivs = document.querySelectorAll('.flight-selection__breakdown-line--total');
+          const conceptDivs = document.querySelectorAll('.flight-selection__breakdown-concept');
+          if (totalLineDivs.length > 0 && conceptDivs.length > 0) {
+            totalLineDivs.forEach((totalLineDiv, index) => {
+              const newSpan = document.createElement('span');
+              newSpan.className = 'flight-selection__breakdown-concept';
+              newSpan.textContent = 'Precio Final';
+              totalLineDiv.insertBefore(newSpan, totalLineDiv.firstChild);
+              conceptDivs[index].style.display = 'none';
+            });
             break;
           }
           // Esperar 100ms y volver a intentar
