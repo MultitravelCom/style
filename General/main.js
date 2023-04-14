@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
     const seleccionFlighCopyTax = document.querySelectorAll('.flight-selection__breakdown-concept');
-    seleccionFlighCopyTax.innerHTML = 'Precio Final';
+    seleccionFlighCopyTax.textContent = 'Precio Final';
     // Llamar a la función para esperar a que se cargue la clase .bestprice
     waitForElementFlight();
 });
