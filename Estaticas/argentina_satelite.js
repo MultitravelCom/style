@@ -143,9 +143,9 @@ const destinos3 = [
     },
 ];
 const btnStyles = [
-    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche' },
-    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Vuelos Iguazú – Alojamientos Cataratas – Paquetes Cataratas' },
-    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Vuelos Mendoza – Alojamientos Mendoza – Paquetes Mendoza' },
+    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
+    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Vuelos Iguazú – Alojamientos Cataratas – Paquetes Cataratas', destino: "Iguazu" },
+    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Vuelos Mendoza – Alojamientos Mendoza – Paquetes Mendoza' , destino: "Mendoza" },
 ];
 // *****************************************************
 // ************** COMPONENTES ********************
@@ -212,7 +212,7 @@ const Card = ({ destinos }) => {
         )));
 };
 const CardContainer = ({ btnStyles, destinos }) => {
-    const { title, btnRight, btnLeft, carrusel } = btnStyles;
+    const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
     React.useEffect(() => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
@@ -269,7 +269,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
     return (
         <>
             <div key={title} className="main__conteiner__s1">
-                <div className="main__conteiner__s1__titulo" id={`seccion${destinos.destino}`}>
+                <div className="main__conteiner__s1__titulo" id={`seccion${destino}`}>
                     <h2 key={title}>
                         <strong>{title}</strong>
                     </h2>
