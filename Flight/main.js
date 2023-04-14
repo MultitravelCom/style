@@ -34,10 +34,10 @@ function aplicarEstilos() {
 document.addEventListener('DOMContentLoaded', () => {
     async function waitForElement() {
       while (true) {
-        const divTaxes = document.querySelectorAll('.flight-result__price');
+        const divTaxes = document.querySelectorAll('.results-list__item');
         if (divTaxes.length > 0) {
             divTaxes.forEach((divTax) => {
-            const newDivTax = document.createElement('div');
+            const newDivTax = document.createElement('span');
             newDivTax.className = 'renderPriceTag';
             newDivTax.innerHTML = '<span>Precio Final</span>';
             divTax.appendChild(newDivTax);
