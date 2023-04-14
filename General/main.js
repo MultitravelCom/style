@@ -44,15 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     async function waitForElement() {
         while (true) {
-          const seleccionFlighCopyTax = document.querySelector('.flight-selection__breakdown-concept span');
-          if (seleccionFlighCopyTax) {
-            seleccionFlighCopyTax.textContent = 'Precio Final';
-            break;
-          }
-          await new Promise(resolve => setTimeout(resolve, 100));
+            const divTotal = document.querySelector('.flight-selection__breakdown-line--total');
+            const divConcept = document.querySelector('.flight-selection__breakdown-concept');
+            if (divTotal && divConcept) {
+                const newSpan = document.createElement('span');
+                newSpan.textContent = 'Precio Final';
+                divTotal.appendChild(newSpan);
+                divConcept.style.display = 'none';
+                break;
+            }
+            await new Promise(resolve => setTimeout(resolve, 100));
         }
-      }
-      waitForElement();
+    }
 
     waitForElement();
     waitForElementFlight();
