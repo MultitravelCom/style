@@ -1,22 +1,23 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Función para agregar el nuevo div con el texto "Impuestos incluidos"
-function addTaxes() {
-    const divBestprices = document.querySelectorAll('.bestprice');
-    divBestprices.forEach((divBestprice) => {
-      const newDivBestprice = document.createElement('div');
-      newDivBestprice.className = 'bestprice__title';
-      newDivBestprice.innerHTML = '<span>Impuestos incluidos</span>';
-      divBestprice.appendChild(newDivBestprice);
-    });
-  }
-  
-  // Intervalo para comprobar si el elemento ya está presente en el DOM
-  const interval = setInterval(() => {
+async function waitForElement() {
+  while (true) {
     const divBestprices = document.querySelectorAll('.bestprice');
     if (divBestprices.length > 0) {
-      clearInterval(interval);
-      addTaxes();
+      // La clase .bestprice existe, entonces ejecutar tu función aquí
+      divBestprices.forEach((divBestprice) => {
+        const newDivBestprice = document.createElement('div');
+        newDivBestprice.className = 'bestprice__title';
+        newDivBestprice.innerHTML = '<span>Impuestos incluidos</span>';
+        divBestprice.appendChild(newDivBestprice);
+      });
+      break;
     }
-  }, 1000);
+    // Esperar 100ms y volver a intentar
+    await new Promise(resolve => setTimeout(resolve, 100));
+  }
+}
+
+// Llamar a la función para esperar a que se cargue la clase .bestprice
+waitForElement();
 });
