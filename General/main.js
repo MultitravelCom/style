@@ -44,14 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     async function waitForElement() {
         while (true) {
-            const seleccionFlighCopyTax = document.querySelector('.flight-selection__breakdown-concept');
-            if (seleccionFlighCopyTax) {
-                seleccionFlighCopyTax.textContent = 'Precio Final';
-                break;
-            }
-            await new Promise(resolve => setTimeout(resolve, 100));
+          const seleccionFlighCopyTax = document.querySelector('.flight-selection__breakdown-concept span');
+          if (seleccionFlighCopyTax) {
+            seleccionFlighCopyTax.textContent = 'Precio Final';
+            break;
+          }
+          await new Promise(resolve => setTimeout(resolve, 100));
         }
-    }
+      }
+      waitForElement();
 
     waitForElement();
     waitForElementFlight();
