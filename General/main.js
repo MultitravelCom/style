@@ -42,21 +42,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
-    async function waitForElement() {
+    const waitForElement = async () => {
         while (true) {
-            const divTotal = document.querySelector('.flight-selection__breakdown-line--total');
-            const divConcept = document.querySelector('.flight-selection__breakdown-concept');
-            if (divTotal && divConcept) {
-                const newSpan = document.createElement('span');
-                newSpan.textContent = 'Precio Final';
-                divTotal.appendChild(newSpan);
-                divConcept.style.display = 'none';
-                break;
-            }
-            await new Promise(resolve => setTimeout(resolve, 100));
+          const totalLineDiv = document.querySelector('.flight-selection__breakdown-line--total');
+          const conceptDiv = document.querySelector('.flight-selection__breakdown-concept');
+          if (totalLineDiv && conceptDiv) {
+            const newSpan = document.createElement('span');
+            newSpan.className = 'flight-selection__breakdown-concept';
+            newSpan.textContent = 'Precio Final';
+            totalLineDiv.insertBefore(newSpan, totalLineDiv.firstChild);
+            break;
+          }
+          // Esperar 100ms y volver a intentar
+          await new Promise(resolve => setTimeout(resolve, 100));
         }
-    }
-
-    waitForElement();
+      }
+      
+      waitForElement();
     waitForElementFlight();
 });
