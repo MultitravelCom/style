@@ -27,15 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
         while (true) {
             const divTaxes = document.querySelectorAll('.results-list__item');
             const divCopyTaxes = document.querySelectorAll('.bestprice__amount');
-            const seleccionFlighCopyTax = document.querySelectorAll('.flight-selection__breakdown-concept');
-
         if (divTaxes.length > 0) {
             for (let i = 0; i < divCopyTaxes.length; i++) {
               const newDivTax = document.createElement('span');
               newDivTax.className = 'renderPriceTag';
               newDivTax.className = 'renderPriceTagStyle';
               newDivTax.innerHTML = '<span>Precio Final</span>';
-              seleccionFlighCopyTax.innerHTML = 'Precio Final';
               divCopyTaxes[i].insertBefore(newDivTax, divCopyTaxes[i].firstChild);
             }
           break;
@@ -46,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
     const seleccionFlighCopyTax = document.querySelectorAll('.flight-selection__breakdown-concept');
+    seleccionFlighCopyTax.innerHTML = 'Precio Final';
     // Llamar a la función para esperar a que se cargue la clase .bestprice
     waitForElementFlight();
 });
