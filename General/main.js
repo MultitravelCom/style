@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Seleccionar el div que contiene la clase .js-results-wrapper
-const resultsWrapper = document.querySelector('.js-results-wrapper');
+  // Seleccionar el div que contiene la clase .bestprice
+const resultsWrapper = document.querySelector('.bestprice');
 
 // Crear un observador de mutación
 const observer = new MutationObserver(() => {
