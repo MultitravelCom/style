@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
               newDivTax.className = 'renderPriceTag';
               newDivTax.className = 'renderPriceTagStyle';
               newDivTax.innerHTML = '<span>Precio Final</span>';
-              seleccionFlighCopyTax.newDivTax = 'Precio Final';
+              seleccionFlighCopyTax.innerHTML = 'Precio Final';
               divCopyTaxes[i].insertBefore(newDivTax, divCopyTaxes[i].firstChild);
             }
           break;
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
     }
-    
+    const seleccionFlighCopyTax = document.querySelectorAll('.flight-selection__breakdown-concept');
     // Llamar a la función para esperar a que se cargue la clase .bestprice
     waitForElementFlight();
 });
