@@ -269,7 +269,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
     return (
         <>
             <div key={title} className="main__conteiner__s1">
-                <div className="main__conteiner__s1__titulo" id={`seccion${destinos[index].destino}`}>
+                <div className="main__conteiner__s1__titulo" id={`seccion${destinos.destino}`}>
                     <h2 key={title}>
                         <strong>{title}</strong>
                     </h2>
