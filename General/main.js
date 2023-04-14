@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < divCopyTaxes.length; i++) {
               const newDivTax = document.createElement('span');
               newDivTax.className = 'renderPriceTag';
+              newDivTax.className = 'renderPriceTagStyle';
               newDivTax.innerHTML = '<span>Precio Final</span>';
               divCopyTaxes[i].insertBefore(newDivTax, divCopyTaxes[i].firstChild);
             }

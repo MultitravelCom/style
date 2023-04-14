@@ -9,6 +9,11 @@
     --fondo-btn-hover: #324352;
 }
 
+/* Estilo Precio Final resultados */
+.renderPriceTagStyle{
+    font-size: 1.1rem;
+}
+
 /* Ocultar mas opciones en caja de busqueda */
 #flight-searcher-more-options,
 .btn-more-options {
