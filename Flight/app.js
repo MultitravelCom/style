@@ -1,9 +1,7 @@
 const BannerSearchResult = () => {
     return (
         <>
-            <div className='container'>
-                <h1>Test</h1>
-            </div>
+            <h1>Test</h1>
         </>
     );
 };
