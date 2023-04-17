@@ -19,8 +19,10 @@
 // };
 
 
-const placeholder = document.querySelector('.results-list__body.js-results-list-placeholder');
-const firstChild = placeholder.firstChild;
-const newDiv = document.createElement('div');
-newDiv.id = 'newDiv';
-placeholder.insertBefore(newDiv, firstChild.nextSibling);
+document.addEventListener('DOMContentLoaded', () => {
+    const placeholder = document.querySelector('.results-list__body.js-results-list-placeholder');
+    const firstChild = placeholder.firstChild;
+    const newDiv = document.createElement('div');
+    newDiv.id = 'newDiv';
+    placeholder.insertBefore(newDiv, firstChild.nextSibling);
+});
