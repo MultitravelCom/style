@@ -26,8 +26,9 @@ function RenderizarBannerSearchResult() {
         placeholder.insertBefore(newDiv, firstChild.nextSibling);
 
         // Renderizar componente dentro del nuevo div
-        ReactDOM.render(<BannerSearchResult />, newDiv);
     }, []);
-
+    
     return <div />;
 };
+
+ReactDOM.render(<BannerSearchResult />, newDiv);
