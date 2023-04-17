@@ -145,7 +145,7 @@ const destinos3 = [
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
     { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Vuelos Iguazú – Alojamientos Cataratas – Paquetes Cataratas', destino: "Iguazu" },
-    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Vuelos Mendoza – Alojamientos Mendoza – Paquetes Mendoza' , destino: "Mendoza" },
+    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Vuelos Mendoza – Alojamientos Mendoza – Paquetes Mendoza', destino: "Mendoza" },
 ];
 // *****************************************************
 // ************** COMPONENTES ********************
@@ -184,31 +184,30 @@ const BannerTop = () => {
 function Button(props) {
     const handleClick = (event) => {
         event.preventDefault();
-      window.open(props.link, '_blank');
+        window.open(props.link, '_blank');
     }
-  
+
     return (
-      <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
+        <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
     );
 }
 
-  function mostrarSeccion() {
+function mostrarSeccion() {
     var url = window.location.href; // Obtener la URL completa
     var hash = url.substring(url.indexOf("#") + 1); // Obtener el ancla de la URL
 
     var seccion = document.getElementById(hash); // Buscar el elemento con el ID del ancla
 
     if (seccion) {
-      seccion.scrollIntoView(); // Mostrar la sección si existe
+        seccion.scrollIntoView(); // Mostrar la sección si existe
     } else {
-      setTimeout(mostrarSeccion, 500); // Intentar nuevamente después de 500 milisegundos
+        setTimeout(mostrarSeccion, 500); // Intentar nuevamente después de 500 milisegundos
     }
-  }
+}
 
-  mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
+mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
 
 
-  
 const Card = ({ destinos }) => {
     return (
         destinos.map((destino) => (
