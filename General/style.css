@@ -407,8 +407,8 @@
 }
 .main__container__text{
   color: #0A3964;
-  width: 359px;
-    padding: 2rem;
+  max-width: 358px;
+  padding: 1.5rem;
 }
 .main__container__text>h2{
   font-weight: 600;
@@ -444,7 +444,7 @@
     margin-top: 30px;
   }
   .main__container__text{
-    width: 318px;
+    width: 100%;
   }
   .main__container__img{
     width: 100%;
@@ -457,6 +457,6 @@
 }
 .btnStyleBannerSearch{
   right: 7%;
-  top: 49%;
+  top: 45%;
 }
 }
