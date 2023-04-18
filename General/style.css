@@ -407,7 +407,7 @@
 }
 .main__container__text{
   color: #0A3964;
-    min-width: 318px;
+  width: 359px;
     padding: 2rem;
 }
 .main__container__text>h2{
@@ -442,6 +442,9 @@
     height: 100%;
     flex-direction: column;  
     margin-top: 30px;
+  }
+  .main__container__text{
+    width: 318px;
   }
   .main__container__img{
     width: 100%;
