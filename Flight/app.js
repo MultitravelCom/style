@@ -1,3 +1,14 @@
+function Button(props) {
+    const handleClick = (event) => {
+        event.preventDefault();
+        window.open("https://wa.link/5s5eba", '_blank');
+    }
+
+    return (
+        <button id={props.id} className="btnStyleBannerSearch" onClick={handleClick}>{props.text}</button>
+    );
+}
+
 const BannerSearchResult = () => {
     return (
         <>
@@ -14,13 +25,13 @@ const BannerSearchResult = () => {
                         <img className="main__container__img__img" src="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" alt="Imagen banner contacto personalizado" />
                     </picture>
                 </div>
-                <button className="btnStyleBannerSearch">Contactarme</button>
+                <Button id={destino.title} link={destino.linkWa} text="Contactarme" />
             </div>
         </>
     );
 };
 
-const insertNewDivSearchResult = async () => {
+const insertNewDivSearchResultFlight = async () => {
     while (true) {
         const parentDiv = document.querySelector('.results-list__body');
         const firstChdtDiv = document.querySelector('.results-list__item');
@@ -36,4 +47,4 @@ const insertNewDivSearchResult = async () => {
     }
 }
 
-insertNewDivSearchResult();
+insertNewDivSearchResultFlight();
