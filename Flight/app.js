@@ -1,11 +1,12 @@
 function Button(props) {
+
     const handleClick = (event) => {
         event.preventDefault();
-        window.open("https://wa.link/5s5eba", '_blank');
+        window.open(props.link, '_blank');
     }
 
     return (
-        <button id={props.id} className="btnStyleBannerSearch" onClick={handleClick}>{props.text}</button>
+        <button className="btnStyleBannerSearch" onClick={handleClick}>{props.text}</button>
     );
 }
 
@@ -25,7 +26,7 @@ const BannerSearchResult = () => {
                         <img className="main__container__img__img" src="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" alt="Imagen banner contacto personalizado" />
                     </picture>
                 </div>
-                <Button id={destino.title} link={destino.linkWa} text="Contactarme" />
+                <Button link="https://wa.link/5s5eba" text="Contactarme" />
             </div>
         </>
     );
