@@ -1,12 +1,12 @@
-const BannerSearchResult = () => {
-    return (
-        <>
-            <h1>Test</h1>
-        </>
-    );
-};
-
 document.addEventListener('DOMContentLoaded', () => {
+    const BannerSearchResult = () => {
+        return (
+            <>
+                <h1>Test</h1>
+            </>
+        );
+    };
+
     async function crearDivYRenderizarComponente(componente) {
         let placeholder = document.querySelector('.results-list__body');
 
