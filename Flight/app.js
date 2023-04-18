@@ -8,10 +8,10 @@ const BannerSearchResult = () => {
                 </div>
                 <div className="main__container__img">
                     <picture>
-                        <source media="(min-width: 1024px)" srcset="https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg" />
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-2.jpg" />
-                        <source media="(max-width: 767px)" srcset="https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-3.jpg" />
-                        <img src="https://multitravelcom.github.io/MT/TravelSale2023/LandingOFF/Nacional/barilo-1.jpg" alt="Imagen banner Bariloche promo" />
+                        <source media="(min-width: 1024px)" srcset="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
+                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
+                        <source media="(max-width: 767px)" srcset="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
+                        <img src="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" alt="Imagen banner contacto personalizado" />
                     </picture>
                 </div>
                 <button className="btnStyleBannerSearch">Contactarme</button>
