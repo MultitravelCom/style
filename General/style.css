@@ -405,15 +405,16 @@
 }
 .main__container__text{
   color: #0A3964;
+    max-width: 362px;
+    padding: 2rem;
 }
 .main__container__text>h2{
   font-weight: 600;
 }
 .main__container__img{
   width: 333px;
-    height: 100%;
 }
-.main__container__img>img{
+.main__container__img__img{
   width: 100%;
     height: 100%;
     border-radius: 40px 8px 40px 8px;
@@ -423,7 +424,7 @@
   width: 147px;
     height: 37px;
     position: absolute;
-    right: 50%;
+    right: 35%;
     border-radius: 40px;
     background: #00DF16;
     color: #FFFFFF;

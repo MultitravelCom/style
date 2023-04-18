@@ -11,7 +11,7 @@ const BannerSearchResult = () => {
                         <source media="(min-width: 1024px)" srcset="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
                         <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
                         <source media="(max-width: 767px)" srcset="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
-                        <img src="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" alt="Imagen banner contacto personalizado" />
+                        <img className="main__container__img__img" src="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" alt="Imagen banner contacto personalizado" />
                     </picture>
                 </div>
                 <button className="btnStyleBannerSearch">Contactarme</button>
