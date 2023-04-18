@@ -1,7 +1,7 @@
 const BannerSearchResult = () => {
     return (
         <>
-            <div className="container">
+            <div className="container_fluid">
                 <div className="main__container__text">
                     <h2>¿Necesitas ayuda con tu reserva?</h2>
                     <p>Contactate con nosotros a través de WhatsApp y recibí atención personalizada</p>
