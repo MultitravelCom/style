@@ -1,30 +1,23 @@
-const BannerSearchResult = () => {
-    return (
-      <div>
-        <h1>Test</h1>
-      </div>
-    );
-  };
+// const BannerSearchResult = () => {
+//     return (
+//       <div>
+//         <h1>Test</h1>
+//       </div>
+//     );
+//   };
   
-  const ExampleComponent = () => {
-    const [shouldRender, setShouldRender] = React.useState(false);
+  const waitForElement = async () => {
+    while (true) {
+      const parentDiv = document.querySelector('.results-list__body');
+      const firstItemDiv = parentDiv.querySelector('.results-list__item');
+      if (parentDiv && firstItemDiv) {
+        const newDiv = document.createElement('div');
+        newDiv.textContent = 'Nuevo div creado';
+        parentDiv.insertBefore(newDiv, firstItemDiv.nextSibling);
+        break;
+      }
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+  }
   
-    React.useEffect(() => {
-      const checkForElements = () => {
-        const totalLineDiv = document.querySelector(".results-list__body");
-        const conceptDiv = document.querySelector(".results-list__item").nextElementSibling;
-        if (totalLineDiv && conceptDiv) {
-          setShouldRender(true);
-        } else {
-          setTimeout(checkForElements, 100);
-        }
-      };
-      checkForElements();
-    }, []);
-  
-    return shouldRender ? (
-      <div className="results-list__body">
-        <span className="flight-selection__breakdown-concept">TEST</span>
-      </div>
-    ) : null;
-  };
+  waitForElement();
