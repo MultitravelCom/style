@@ -6,21 +6,25 @@ const BannerSearchResult = () => {
     );
   };
   
-  const waitForElement = async () => {
-    while (true) {
-      const totalLineDiv = document.querySelector('.results-list__body');
-      const conceptDiv = document.querySelector('.results-list__item').nextSibling;
-      if (totalLineDiv && conceptDiv) {
-        const newSpan = document.createElement('span');
-        newSpan.className = 'flight-selection__breakdown-concept';
-        newSpan.textContent = 'TEST';
-        totalLineDiv.insertBefore(newSpan, totalLineDiv.firstChild);
-        break;
-      }
-      
-      await new Promise(resolve => setTimeout(resolve, 100));
-    }
-  }
+  const ExampleComponent = () => {
+    const [shouldRender, setShouldRender] = React.useState(false);
   
-  waitForElement();
+    React.useEffect(() => {
+      const checkForElements = () => {
+        const totalLineDiv = document.querySelector(".results-list__body");
+        const conceptDiv = document.querySelector(".results-list__item").nextElementSibling;
+        if (totalLineDiv && conceptDiv) {
+          setShouldRender(true);
+        } else {
+          setTimeout(checkForElements, 100);
+        }
+      };
+      checkForElements();
+    }, []);
   
+    return shouldRender ? (
+      <div className="results-list__body">
+        <span className="flight-selection__breakdown-concept">TEST</span>
+      </div>
+    ) : null;
+  };
