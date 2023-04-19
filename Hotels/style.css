@@ -387,3 +387,8 @@ span .glyphicon {
         display: none;
 }
 }
+
+/* Ocular telefono - MULT61 */
+.details-card__phone{
+    display: none;
+}
