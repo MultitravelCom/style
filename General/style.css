@@ -461,4 +461,12 @@
       top: 56%;
   }
 }
+}
 /* Atencion personalizada. */
+.summaryStyle{
+  display: flex;
+  border: 1px solid #1C5B94;
+  border-radius: 40px;
+  color: #295A81;
+  width: 217px;
+}
