@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
         while (true) {
             const divBestprices = document.querySelectorAll('.bestprice');
             if (divBestprices.length > 0) {
-                // La clase .bestprice existe, entonces ejecutar tu función aquí
                 divBestprices.forEach((divBestprice) => {
                     const newDivBestprice = document.createElement('div');
                     newDivBestprice.className = 'bestprice__title';
@@ -41,23 +40,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
-    const waitForElement = async () => {
-        while (true) {
-          const totalLineDiv = document.querySelector('.flight-selection__breakdown-line--total');
-          const conceptDiv = document.querySelector('.flight-selection__breakdown-concept');
-          if (totalLineDiv && conceptDiv) {
-            const newSpan = document.createElement('span');
-            newSpan.className = 'flight-selection__breakdown-concept';
-            newSpan.textContent = 'Precio Final';
-            totalLineDiv.insertBefore(newSpan, totalLineDiv.firstChild);
-            conceptDiv.style.display = 'none';
-            break;
-          }
-          // Esperar 100ms y volver a intentar
-          await new Promise(resolve => setTimeout(resolve, 100));
-        }
-      }
-      
-      waitForElement();
     waitForElementFlight();
 });
