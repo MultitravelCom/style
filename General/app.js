@@ -184,6 +184,7 @@ const LoMejorDe = () => {
 }
 
 const BannerTopPreViaje = () => {
+    return(
     <>
         <div className="container">
             <row className="rowStyle">
@@ -213,6 +214,7 @@ const BannerTopPreViaje = () => {
             </row>
         </div>
     </>
+    )
 }
 
 const App = () => {
