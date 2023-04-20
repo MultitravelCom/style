@@ -224,7 +224,7 @@ const App = () => {
             <div id="bannerRedes">
                 <BannerRedes />
             </div>
-            <div id="loMejorDe" class="main__conteiner__s3">
+            <div id="loMejorDe" className="main__conteiner__s3">
                 <LoMejorDe />
             </div>
         </>

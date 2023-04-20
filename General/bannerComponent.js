@@ -1,4 +1,4 @@
-const insertNewDivSearchResultFlight = async () => {
+const insertNewDivSearchResult = async () => {
     while (true) {
         const parentDiv = document.querySelector('.results-list__body');
         const firstChdtDiv = document.querySelector('.results-list__item');
@@ -14,7 +14,7 @@ const insertNewDivSearchResultFlight = async () => {
     }
 }
 
-insertNewDivSearchResultFlight();
+insertNewDivSearchResult();
 
 function Button(props) {
 
