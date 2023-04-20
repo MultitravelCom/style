@@ -183,6 +183,20 @@ const LoMejorDe = () => {
     };
 }
 
+// PreViaje
+
+function Button(props) {
+
+    const handleClick = (event) => {
+        event.preventDefault();
+        window.open(props.link, '_blank');
+    }
+
+    return (
+        <button className="btn btnStyleBannerPre" onClick={handleClick}>{props.text}</button>
+    );
+}
+
 const BannerTopPreViaje = () => {
     return(
     <>
@@ -209,7 +223,7 @@ const BannerTopPreViaje = () => {
                             srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerMobile.webp" />
                         <img alt="" src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
                     </picture>
-                    <button className="btn btnStyleBannerPre">Ver más</button>
+                    <Button link="https://www.multitravel.com/promociones/previaje" text="Ver más" />
                 </div>
             </row>
         </div>
