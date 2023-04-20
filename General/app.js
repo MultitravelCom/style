@@ -187,7 +187,7 @@ const BannerTopPreViaje = () => {
     <>
         <div className="container">
             <row className="rowStyle">
-                <div class="main__container__left col-8">
+                <div className="main__container__left col-8">
                     <picture>
                         <source media="(min-width: 1024px)"
                             srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
