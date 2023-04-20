@@ -183,6 +183,38 @@ const LoMejorDe = () => {
     };
 }
 
+const BannerTopPreViaje = () => {
+    <>
+        <div className="container">
+            <row className="rowStyle">
+                <div class="main__container__left col-8">
+                    <picture>
+                        <source media="(min-width: 1024px)"
+                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
+                        <source media="(min-width: 768px) and (max-width: 1023px)"
+                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
+                        <source media="(max-width: 767px)"
+                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
+                        <img alt="" src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
+                    </picture>
+                </div>
+                <div className="main__container__right col-4">
+                    <picture>
+                        <source media="(min-width: 1024px)"
+                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
+                        <source media="(min-width: 768px) and (max-width: 1023px)"
+                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
+                        <source media="(max-width: 767px)"
+                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerMobile.webp" />
+                        <img alt="" src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
+                    </picture>
+                    <button className="btn btnStyleBannerPre">Ver más</button>
+                </div>
+            </row>
+        </div>
+    </>
+}
+
 const App = () => {
     return (
         <>
@@ -200,4 +232,4 @@ const App = () => {
 }
 
 ReactDOM.createRoot(document.getElementById('rootHome')).render(<App />);
-// ReactDOM.createRoot(document.getElementById('home-content-5')).render(<BannerTop />);
+ReactDOM.createRoot(document.getElementById('home-content-5')).render(<BannerTopPreViaje />);
