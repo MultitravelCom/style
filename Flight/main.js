@@ -15,20 +15,38 @@ window.addEventListener('load', () => {
 
     document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
-    const breakpoint = window.matchMedia('(max-width: 992px)');
+    const calendarContainer = document.querySelector('.js-calendar-container');
+const button = document.querySelector('.results-list__filter-toggle');
+const breakpoint = window.matchMedia('(max-width: 992px)');
 
-    function aplicarEstilos() {
-        if (breakpoint.matches) {
-            document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
-        } else {
-            document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'none';
-        }
-    };
+function aplicarEstilos() {
+  if (breakpoint.matches) {
+    button.style.display = 'inline-block';
+  } else {
+    button.style.display = 'none';
+  }
+}
 
-    aplicarEstilos();
+const observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    // Comprueba si se han añadido o eliminado las clases 'opened' o 'closed'
+    if (calendarContainer.classList.contains('opened')) {
+      // Oculta el botón
+      button.style.display = 'none';
+    } else if (calendarContainer.classList.contains('closed')) {
+      // Muestra el botón
+      aplicarEstilos();
+    }
+  });
+});
+
+// Observa cambios en la clase del calendario
+observer.observe(calendarContainer, { attributes: true });
+
+// Aplica estilos al cargar la página
+aplicarEstilos();
 
     window.addEventListener('resize', aplicarEstilos);
-    
 
 });
 
