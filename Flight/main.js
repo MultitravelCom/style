@@ -15,8 +15,6 @@ window.addEventListener('load', () => {
 
     // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
-    const breakpoint = window.matchMedia('(max-width: 992px)');
-
     function ocultarBoton() {
         document.querySelector('.results-list__filter-toggle').style.display = 'none';
       }
@@ -44,5 +42,9 @@ window.addEventListener('load', () => {
           mostrarBoton();
         }
       }
+
+      const breakpoint = window.matchMedia('(max-width: 768px)');
+        breakpoint.addListener(aplicarEstilos);
+    aplicarEstilos();
 });
 
