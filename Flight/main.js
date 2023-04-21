@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
     const textBtn = document.querySelector('.btn-tertiary');
     textBtn.textContent = 'Filtrar';
 
-    const calendar = document.getElementById('calendar-container');
+    const calendar = document.querySelector('.calendar-container');
     calendar.addEventListener('change', function () {
         if (calendar.value === 'closed') {
             textBtn.style.display = 'block';
