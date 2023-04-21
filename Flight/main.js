@@ -13,12 +13,14 @@ window.addEventListener('load', () => {
     const textBtn = document.querySelector('.btn-tertiary');
     textBtn.textContent = 'Filtrar';
 
+    const btnFiltrar = document.querySelector('.results-list__filter-toggle-wrapper');
+
     const calendar = document.querySelector('.calendar-container');
     calendar.addEventListener('change', function () {
         if (calendar.value === 'closed') {
-            textBtn.style.display = 'block';
+            btnFiltrar.style.display = 'block';
         } else {
-            textBtn.style.display = 'none';
+            btnFiltrar.style.display = 'none';
         }
     });
 
