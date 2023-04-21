@@ -31,3 +31,23 @@ window.addEventListener('load', () => {
 
 });
 
+const startDate = document.querySelector('.date.start-date');
+const filterToggle = document.querySelector('.results-list__filter-toggle');
+
+// Crea una nueva instancia del observador de mutaciones
+const observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    // Comprueba si se ha añadido o eliminado la clase 'active'
+    if (startDate.classList.contains('active')) {
+      // Añade el z-index
+      filterToggle.style.zIndex = '-1';
+    } else {
+      // Elimina el z-index
+      filterToggle.style.zIndex = '';
+    }
+  });
+});
+
+// Observa los cambios en el elemento con la clase 'date start-date'
+observer.observe(startDate, { attributes: true });
+
