@@ -14,13 +14,13 @@ window.addEventListener('load', () => {
     textBtn.textContent = 'Filtrar';
 
     const btnFiltrar = document.querySelector('.results-list__filter-toggle');
-    const calendar = document.querySelector('.calendar-container');
+    const calendar = document.querySelector('.date.start-date');
 
     calendar.addEventListener('change', function () {
-        if (calendar.classList.contains('closed')) {
-            btnFiltrar.style.display = 'block';
-        } else {
+        if (calendar.classList.contains('active')) {
             btnFiltrar.style.display = 'none';
+        } else {
+            btnFiltrar.style.display = 'flex';
         }
     });
 
