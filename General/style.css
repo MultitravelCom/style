@@ -37,7 +37,8 @@
 
 /* Estilos newsletter */
 .fix-margin>.newsletter__container{
-   background: #f7f7f7 !important;
+   background: transparent !important;
+   display: none;
 }
 /* ************** B1 ************************ */
 /* Ocultar comentarios pax */

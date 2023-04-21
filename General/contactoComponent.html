@@ -4,10 +4,16 @@
   rel="stylesheet"
 />
 <style>
+    #upper-menu{
+        display: flex;
+    }
+    details{
+        width: 217px
+    }
 .summaryStyle{
  display: flex;
  align-items: center;
-    justify-content: space-around;
+justify-content: space-around;
  border: 1px solid #F0F0F0;
  border-radius: 40px;
  color: #295a81;
@@ -26,6 +32,7 @@
     color: #000000;
     margin-top: 4px;
     margin-left: 16px;
+    font-weight: 600;
 }
 .acordeonStyleWa{
     border: 1px solid #F0F0F0;
@@ -40,16 +47,27 @@
     color: #26BD4C;
     font-size: 20px;
 }
-
+.acordeonStyleCall{
+    padding: 4px 0;
+}
+.upper-menu__phone-wrapper{
+    display: none;
+}
 </style>
-<details>
+<details id="divAccord">
     <summary class="summaryStyle">
     <i class='bx bxs-phone-call bxSummary'></i>
         <div>Atencion personalizada</div>
         <div><i class="bx bx-chevron-down"></i></div>
     </summary>
     <div class="acordeonStyle">
-        <div class="acordeonStyleWa"><i class='bx bxl-whatsapp bxAccord' ></i></i>11 4979 1877</div>
+        <div class="acordeonStyleWa"><i class='bx bxl-whatsapp bxAccord'></i></i>11 4979 1877</div>
         <div class="acordeonStyleCall"><i class="bx bxs-phone-call bxAccord"></i>0800 348 0003</div>
     </div>
 </details>
+
+<script>
+    const divParent = document.querySelector("#upper-menu");
+    const divAccord = document.querySelector("#divAccord");
+    divParent.insertBefore(divAccord, divParent.firstChild)
+</script>
