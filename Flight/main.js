@@ -29,16 +29,28 @@ window.addEventListener('load', () => {
 
     window.addEventListener('resize', aplicarEstilos);
 
-    const btnFiltrar = document.querySelector('.results-list__filter-toggle-wrapper');
-    const calendar = document.querySelector('.start-date');
+    // Selecciona el elemento que quieres observar
+const calendarContainer = document.querySelector('.js-calendar-container');
 
-    calendar.addEventListener('change', function () {
-        if (calendar.classList.contains('opened')) {
-            btnFiltrar.style.display = 'none';
-        } else {
-            btnFiltrar.style.display = 'inline-block';
-        }
-    });
+// Crea una instancia del MutationObserver
+const observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    // Comprueba si se han añadido o eliminado las clases 'opened' o 'closed'
+    if (calendarContainer.classList.contains('opened')) {
+      // Oculta el botón
+      document.querySelector('.results-list__filter-toggle').style.display = 'none';
+    } else if (calendarContainer.classList.contains('closed')) {
+      // Muestra el botón
+      document.querySelector('.results-list__filter-toggle').style.display = 'block';
+    }
+  });
+});
+
+// Configura las opciones del MutationObserver
+const config = { attributes: true };
+
+// Inicia el MutationObserver y observa los cambios en el elemento
+observer.observe(calendarContainer, config);
 
 });
 
