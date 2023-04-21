@@ -13,17 +13,6 @@ window.addEventListener('load', () => {
     const textBtn = document.querySelector('.btn-tertiary');
     textBtn.textContent = 'Filtrar';
 
-    const btnFiltrar = document.querySelector('.results-list__filter-toggle');
-    const calendar = document.querySelector('.date.start-date');
-
-    calendar.addEventListener('change', function () {
-        if (calendar.classList.contains('active')) {
-            btnFiltrar.style.display = 'none';
-        } else {
-            btnFiltrar.style.display = 'flex';
-        }
-    });
-
     document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
     const breakpoint = window.matchMedia('(max-width: 992px)');
@@ -39,6 +28,17 @@ window.addEventListener('load', () => {
     aplicarEstilos();
 
     window.addEventListener('resize', aplicarEstilos);
+
+    const btnFiltrar = document.querySelector('.results-list__filter-toggle');
+    const calendar = document.querySelector('.date.start-date');
+
+    calendar.addEventListener('change', function () {
+        if (calendar.classList.contains('active')) {
+            btnFiltrar.style.display = 'none';
+        } else {
+            btnFiltrar.style.display = 'flex';
+        }
+    });
 
 });
 
