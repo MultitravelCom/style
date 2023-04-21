@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
     const textBtn = document.querySelector('.btn-tertiary');
     textBtn.textContent = 'Filtrar';
 
-    document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
+    // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
     const calendarContainer = document.querySelector('.js-calendar-container');
 const button = document.querySelector('.results-list__filter-toggle');
