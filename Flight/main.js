@@ -29,14 +29,14 @@ window.addEventListener('load', () => {
 
     window.addEventListener('resize', aplicarEstilos);
 
-    const btnFiltrar = document.querySelector('.results-list__filter-toggle');
+    const btnFiltrar = document.querySelector('.results-list__filter-toggle-wrapper');
     const calendar = document.querySelector('.date.start-date');
 
     calendar.addEventListener('change', function () {
         if (calendar.classList.contains('active')) {
             btnFiltrar.style.display = 'none';
         } else {
-            btnFiltrar.style.display = 'flex';
+            btnFiltrar.style.display = 'inline-block';
         }
     });
 
