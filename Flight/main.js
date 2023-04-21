@@ -19,7 +19,18 @@ window.addEventListener('load', () => {
 
     function aplicarEstilos() {
         if (breakpoint.matches) {
-            // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                  // Comprueba si se han añadido o eliminado las clases 'opened' o 'closed'
+                  if (calendarContainer.classList.contains('opened')) {
+                    // Oculta el botón
+                    document.querySelector('.results-list__filter-toggle').style.display = 'none';
+                  } else if (calendarContainer.classList.contains('closed')) {
+                    // Muestra el botón
+                    document.querySelector('.results-list__filter-toggle').style.display = 'inline-block';
+                  }
+                });
+              });
         } else {
             document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'none';
         }
