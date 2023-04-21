@@ -24,7 +24,7 @@ function Button(props) {
     }
 
     return (
-        <button className="btnStyleBannerSearch" onClick={handleClick}>{props.text}</button>
+        <button id="btnStyleBannerSearch" className="btnStyleBannerSearch" onClick={handleClick}>{props.text}</button>
     );
 }
 
