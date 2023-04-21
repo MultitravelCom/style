@@ -18,5 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
-    waitForElementFlight();
+    if (window.location.pathname.includes("/flights/")) {
+        waitForElementFlight();
+      }
 });
