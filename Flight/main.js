@@ -14,10 +14,10 @@ window.addEventListener('load', () => {
     textBtn.textContent = 'Filtrar';
 
     const btnFiltrar = document.querySelector('.results-list__filter-toggle-wrapper');
-
     const calendar = document.querySelector('.calendar-container');
+
     calendar.addEventListener('change', function () {
-        if (calendar.value === 'closed') {
+        if (calendar.classList.contains('closed')) {
             btnFiltrar.style.display = 'block';
         } else {
             btnFiltrar.style.display = 'none';
