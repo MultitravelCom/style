@@ -370,7 +370,6 @@ function App() {
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
-                            <BannerTopPreViaje />
                             <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} />
                             <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
                         </div>
