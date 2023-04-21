@@ -15,38 +15,38 @@ window.addEventListener('load', () => {
 
     // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
-    const calendarContainer = document.querySelector('.start-date');
-const button = document.querySelector('.results-list__filter-toggle-wrapper');
-const breakpoint = window.matchMedia('(max-width: 992px)');
-
-function aplicarEstilos() {
-  if (breakpoint.matches) {
-    button.style.display = 'inline-block';
-  } else {
-    button.style.display = 'none';
-  }
-}
-
-const observer = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {
-    // Comprueba si se han añadido o eliminado las clases 'opened' o 'closed'
-    if (calendarContainer.classList.contains('active')) {
-      // Oculta el botón
-      button.style.display = 'none';
-    } else {
-      // Muestra el botón
-      aplicarEstilos();
+    const calendarContainer = document.querySelector('.js-calendar-container');
+    const button = document.querySelector('.results-list__filter-toggle');
+    const breakpoint = window.matchMedia('(max-width: 992px)');
+    
+    function aplicarEstilos() {
+      if (breakpoint.matches) {
+        button.style.display = 'inline-block';
+      } else {
+        button.style.display = 'none';
+      }
     }
-  });
-});
-
-// Observa cambios en la clase del calendario
-observer.observe(calendarContainer, { attributes: true });
-
-// Aplica estilos al cargar la página
-aplicarEstilos();
-
-    window.addEventListener('resize', aplicarEstilos);
+    
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        // Comprueba si se han añadido o eliminado las clases 'opened' o 'closed'
+        if (calendarContainer.classList.contains('opened')) {
+          // Oculta el botón y le pone z-index -1
+          button.style.display = 'none';
+          button.style.zIndex = '-1';
+        } else if (calendarContainer.classList.contains('closed')) {
+          // Muestra el botón y le pone z-index 1
+          aplicarEstilos();
+          button.style.zIndex = '1';
+        }
+      });
+    });
+    
+    // Observa cambios en la clase del calendario
+    observer.observe(calendarContainer, { attributes: true });
+    
+    // Aplica estilos al cargar la página
+    aplicarEstilos();
 
 });
 
