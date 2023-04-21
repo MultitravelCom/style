@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
     // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
     const calendarContainer = document.querySelector('.js-calendar-container');
-const button = document.querySelector('.results-list__filter-toggle');
+const button = document.querySelector('.results-list__filter-toggle-wrapper');
 const breakpoint = window.matchMedia('(max-width: 992px)');
 
 function aplicarEstilos() {
