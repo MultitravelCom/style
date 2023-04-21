@@ -444,6 +444,7 @@ span .glyphicon {
 }
 /* Btn Filtrar - MULT-43 */
 .results-list__filter-toggle-wrapper{
+    display: none;
     position: fixed;
     bottom: 30px;
     z-index: 1;
