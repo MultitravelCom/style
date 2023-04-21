@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
 
     // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
-    const calendarContainer = document.querySelector('.js-calendar-container');
+    const calendarContainer = document.querySelector('.start-date');
 const button = document.querySelector('.results-list__filter-toggle-wrapper');
 const breakpoint = window.matchMedia('(max-width: 992px)');
 
@@ -30,10 +30,10 @@ function aplicarEstilos() {
 const observer = new MutationObserver(function(mutations) {
   mutations.forEach(function(mutation) {
     // Comprueba si se han añadido o eliminado las clases 'opened' o 'closed'
-    if (calendarContainer.classList.contains('opened')) {
+    if (calendarContainer.classList.contains('active')) {
       // Oculta el botón
       button.style.display = 'none';
-    } else if (calendarContainer.classList.contains('closed')) {
+    } else {
       // Muestra el botón
       aplicarEstilos();
     }
