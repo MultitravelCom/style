@@ -33,7 +33,7 @@ window.addEventListener('load', () => {
     const calendar = document.querySelector('.start-date');
 
     calendar.addEventListener('change', function () {
-        if (calendar.classList.contains('active')) {
+        if (calendar.classList.contains('opened')) {
             btnFiltrar.style.display = 'none';
         } else {
             btnFiltrar.style.display = 'inline-block';
