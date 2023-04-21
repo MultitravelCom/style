@@ -17,51 +17,32 @@ window.addEventListener('load', () => {
 
     const breakpoint = window.matchMedia('(max-width: 992px)');
 
-    function aplicarEstilos() {
+    function ocultarBoton() {
+        document.querySelector('.results-list__filter-toggle').style.display = 'none';
+      }
+      
+      function mostrarBoton() {
+        document.querySelector('.results-list__filter-toggle').style.display = 'inline-block';
+      }
+      
+      function aplicarEstilos() {
+        const calendarContainer = document.querySelector('.js-calendar-container');
+        const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (calendarContainer.classList.contains('opened')) {
+              ocultarBoton();
+            } else if (calendarContainer.classList.contains('closed')) {
+              mostrarBoton();
+            }
+          });
+        });
+        observer.observe(calendarContainer, { attributes: true });
+      
         if (breakpoint.matches) {
-            const observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                  // Comprueba si se han añadido o eliminado las clases 'opened' o 'closed'
-                  if (calendarContainer.classList.contains('opened')) {
-                    // Oculta el botón
-                    document.querySelector('.results-list__filter-toggle').style.display = 'none';
-                  } else if (calendarContainer.classList.contains('closed')) {
-                    // Muestra el botón
-                    document.querySelector('.results-list__filter-toggle').style.display = 'inline-block';
-                  }
-                });
-              });
+          ocultarBoton();
         } else {
-            document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'none';
+          mostrarBoton();
         }
-    };
-
-    aplicarEstilos();
-
-    window.addEventListener('resize', aplicarEstilos);
-
-    // Selecciona el elemento que quieres observar
-const calendarContainer = document.querySelector('.js-calendar-container');
-
-// Crea una instancia del MutationObserver
-const observer = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {
-    // Comprueba si se han añadido o eliminado las clases 'opened' o 'closed'
-    if (calendarContainer.classList.contains('opened')) {
-      // Oculta el botón
-      document.querySelector('.results-list__filter-toggle').style.display = 'none';
-    } else if (calendarContainer.classList.contains('closed')) {
-      // Muestra el botón
-      document.querySelector('.results-list__filter-toggle').style.display = 'inline-block';
-    }
-  });
-});
-
-// Configura las opciones del MutationObserver
-const config = { attributes: true };
-
-// Inicia el MutationObserver y observa los cambios en el elemento
-observer.observe(calendarContainer, config);
-
+      }
 });
 
