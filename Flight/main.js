@@ -13,6 +13,15 @@ window.addEventListener('load', () => {
     const textBtn = document.querySelector('.btn-tertiary');
     textBtn.textContent = 'Filtrar';
 
+    const calendar = document.getElementById('calendar-container');
+    calendar.addEventListener('change', function () {
+        if (calendar.value === 'closed') {
+            textBtn.style.display = 'block';
+        } else {
+            textBtn.style.display = 'none';
+        }
+    });
+
     document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
     const breakpoint = window.matchMedia('(max-width: 992px)');
