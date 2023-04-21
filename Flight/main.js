@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
     window.addEventListener('resize', aplicarEstilos);
 
     const btnFiltrar = document.querySelector('.results-list__filter-toggle-wrapper');
-    const calendar = document.querySelector('.date.start-date');
+    const calendar = document.querySelector('.start-date');
 
     calendar.addEventListener('change', function () {
         if (calendar.classList.contains('active')) {
