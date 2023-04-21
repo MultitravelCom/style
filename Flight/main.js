@@ -13,38 +13,22 @@ window.addEventListener('load', () => {
     const textBtn = document.querySelector('.btn-tertiary');
     textBtn.textContent = 'Filtrar';
 
-    // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
+    document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
-    function ocultarBoton() {
-        document.querySelector('.results-list__filter-toggle').style.display = 'none';
-      }
-      
-      function mostrarBoton() {
-        document.querySelector('.results-list__filter-toggle').style.display = 'inline-block';
-      }
-      
-      function aplicarEstilos() {
-        const calendarContainer = document.querySelector('.js-calendar-container');
-        const observer = new MutationObserver(function(mutations) {
-          mutations.forEach(function(mutation) {
-            if (calendarContainer.classList.contains('opened')) {
-              ocultarBoton();
-            } else if (calendarContainer.classList.contains('closed')) {
-              mostrarBoton();
-            }
-          });
-        });
-        observer.observe(calendarContainer, { attributes: true });
-      
+    const breakpoint = window.matchMedia('(max-width: 992px)');
+
+    function aplicarEstilos() {
         if (breakpoint.matches) {
-          ocultarBoton();
+            document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
         } else {
-          mostrarBoton();
+            document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'none';
         }
-      }
+    };
 
-      const breakpoint = window.matchMedia('(max-width: 768px)');
-        breakpoint.addListener(aplicarEstilos);
     aplicarEstilos();
+
+    window.addEventListener('resize', aplicarEstilos);
+    
+
 });
 
