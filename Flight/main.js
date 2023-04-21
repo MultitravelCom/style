@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
 
     function aplicarEstilos() {
         if (breakpoint.matches) {
-            document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
+            // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
         } else {
             document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'none';
         }
@@ -41,7 +41,7 @@ const observer = new MutationObserver(function(mutations) {
       document.querySelector('.results-list__filter-toggle').style.display = 'none';
     } else if (calendarContainer.classList.contains('closed')) {
       // Muestra el botón
-      document.querySelector('.results-list__filter-toggle').style.display = 'flex';
+      document.querySelector('.results-list__filter-toggle').style.display = 'inline-block';
     }
   });
 });
