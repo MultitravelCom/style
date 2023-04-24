@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (infoCard) {
                 infoCard.classList.add('deals-available');
                 infoCard.style.backgroundColor = 'red';
+                console.log("test");
                 break;
             }
             await new Promise(resolve => setTimeout(resolve, 100));
