@@ -1,6 +1,4 @@
 
-insertNewDivSearchResult();
-
 function Button(props) {
     
     const handleClick = (event) => {
@@ -12,7 +10,6 @@ function Button(props) {
         <button id="btnStyleBannerSearch" className="btnStyleBannerSearch" onClick={handleClick}>{props.text}</button>
         );
 }
-
 const BannerSearchResult = () => {
     return (
         <>
@@ -48,6 +45,5 @@ const insertNewDivSearchResult = async () => {
 
         await new Promise(resolve => setTimeout(resolve, 100));
     }
-}
-
+};
 insertNewDivSearchResult();
