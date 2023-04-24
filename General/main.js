@@ -21,4 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.location.pathname.includes("/flights/")) {
         waitForElementFlight();
       }
+
+
+      async function recommendedStyle(){
+        while (true) {
+            const infoCard = document.querySelector('.info-card__content:has(.deals)');
+            if (infoCard) {
+                infoCard.classList.add('deals-available');
+                infoCard.style.backgroundColor = 'red';
+                break;
+              }
+        await new Promise(resolve => setTimeout(resolve, 100));
+      }
+    }
+    if (window.location.pathname.includes("/hotels/results.aspx")) {
+        recommendedStyle();
+      }
 });
