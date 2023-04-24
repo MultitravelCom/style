@@ -525,6 +525,7 @@
     @media (min-width: 1025px){
       .btnStyleBannerSearch {
         right: 85%;
+        bottom: 34%;
       }
 }
 
