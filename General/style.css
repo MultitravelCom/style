@@ -473,7 +473,7 @@
   width: 124px;
   height: 37px;
   position: absolute;
-  right: 35%;
+  right: 33%;
   border-radius: 40px;
   background: #00DF16;
   color: #FFFFFF;
@@ -513,8 +513,8 @@
 
   @media (max-width: 345px) {
     .btnStyleBannerSearch {
-      right: 7%;
-      top: 56%;
+      right: 13%;
+      top: 70%;
     }
   }
 }
