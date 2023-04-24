@@ -442,7 +442,6 @@
   background-color: #F0F7FF;
   border: 1px solid #0D4E88;
   border-radius: 8px 8px 40px 8px;
-  position: relative;
   align-items: center;
   overflow: hidden;
   margin-bottom: 30px;
@@ -460,6 +459,7 @@
 
 .main__container__img {
   width: 333px;
+  position: relative;
 }
 
 .main__container__img__img {

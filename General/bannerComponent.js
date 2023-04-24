@@ -43,8 +43,8 @@ const BannerSearchResult = () => {
                         <source media="(max-width: 767px)" srcset="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
                         <img className="main__container__img__img" src="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" alt="Imagen banner contacto personalizado" />
                     </picture>
+                    <Button link="https://wa.link/j47nea" text="Contactarme" />
                 </div>
-                <Button link="https://wa.link/j47nea" text="Contactarme" />
             </div>
         </>
     );
