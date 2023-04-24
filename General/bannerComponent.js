@@ -1,31 +1,16 @@
-const insertNewDivSearchResult = async () => {
-    while (true) {
-        const parentDiv = document.querySelector('.results-list__body');
-        const firstChdtDiv = document.querySelector('.results-list__item');
-
-        if (parentDiv && firstChdtDiv) {
-            const newDiv = document.createElement('div');
-            firstChdtDiv.after(newDiv);
-            ReactDOM.render(<BannerSearchResult />, newDiv);
-            break;
-        }
-
-        await new Promise(resolve => setTimeout(resolve, 100));
-    }
-}
 
 insertNewDivSearchResult();
 
 function Button(props) {
-
+    
     const handleClick = (event) => {
         event.preventDefault();
         window.open(props.link, '_blank');
     }
-
+    
     return (
         <button id="btnStyleBannerSearch" className="btnStyleBannerSearch" onClick={handleClick}>{props.text}</button>
-    );
+        );
 }
 
 const BannerSearchResult = () => {
@@ -43,9 +28,26 @@ const BannerSearchResult = () => {
                         <source media="(max-width: 767px)" srcSet="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
                         <img className="main__container__img__img" src="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" alt="Imagen banner contacto personalizado" />
                     </picture>
-                <Button link="https://wa.link/j47nea" text="Contactarme" />
+                    <Button link="https://wa.link/j47nea" text="Contactarme" />
                 </div>
             </div>
         </>
     );
 };
+const insertNewDivSearchResult = async () => {
+    while (true) {
+        const parentDiv = document.querySelector('.results-list__body');
+        const firstChdtDiv = document.querySelector('.results-list__item');
+
+        if (parentDiv && firstChdtDiv) {
+            const newDiv = document.createElement('div');
+            firstChdtDiv.after(newDiv);
+            ReactDOM.render(<BannerSearchResult />, newDiv);
+            break;
+        }
+
+        await new Promise(resolve => setTimeout(resolve, 100));
+    }
+}
+
+insertNewDivSearchResult();
