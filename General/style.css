@@ -513,8 +513,8 @@
 
   @media (min-width: 768px) and (max-width: 1023px){
   .btnStyleBannerSearch {
-      right: 9%;
-      top: 74%;
+    right: 74%;
+    top: 35%;
   }
 }
 
