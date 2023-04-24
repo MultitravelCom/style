@@ -18,11 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
-    if (window.location.pathname.includes("/flights/")) {
-        waitForElementFlight();
-    }
-
-
     async function recommendedStyle() {
         while (true) {
             const infoCard = document.querySelector('.info-card__content:has(.deals)');
@@ -35,7 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
             await new Promise(resolve => setTimeout(resolve, 100));
         }
     }
-    if (window.location.pathname.includes("/hotels/results.aspx")) {
+    if (window.location.pathname.includes("/hotels/")) {
         recommendedStyle();
+    }
+    if (window.location.pathname.includes("/flights/")) {
+        waitForElementFlight();
     }
 });
