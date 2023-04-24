@@ -490,6 +490,7 @@
     flex-direction: column;
     margin-top: 30px;
   }
+}
 
   .main__container__text {
     width: 100%;
@@ -511,11 +512,10 @@
     top: 45%;
   }
 
-  @media (max-width: 345px) {
-    .btnStyleBannerSearch {
-      right: 13%;
-      top: 70%;
-    }
+  @media (max-width: 345px){
+  .btnStyleBannerSearch {
+      right: 9%;
+      top: 74%;
   }
 }
 
