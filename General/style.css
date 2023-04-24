@@ -510,19 +510,20 @@
     top: 30%;
   }
 }
-
   @media (min-width: 768px) and (max-width: 1023px){
   .btnStyleBannerSearch {
     right: 74%;
-    top: 35%;
   }
 }
-
-  @media (min-width: 1024px){
+  @media (width: 1024px){
     .btnStyleBannerSearch {
-      right: 81%;
-      bottom: 34%;
+      right: 71%;
     }
+  }
+    @media (min-width: 1025px){
+      .btnStyleBannerSearch {
+        right: 85%;
+      }
 }
 
 /* Atencion personalizada. */
