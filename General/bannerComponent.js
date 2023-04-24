@@ -38,13 +38,13 @@ const BannerSearchResult = () => {
                 </div>
                 <div className="main__container__img">
                     <picture>
-                        <source media="(min-width: 1024px)" srcset="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
-                        <source media="(max-width: 767px)" srcset="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
+                        <source media="(min-width: 1024px)" srcSet="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
+                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
+                        <source media="(max-width: 767px)" srcSet="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
                         <img className="main__container__img__img" src="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" alt="Imagen banner contacto personalizado" />
                     </picture>
+                <Button link="https://wa.link/j47nea" text="Contactarme" />
                 </div>
-                    <Button link="https://wa.link/j47nea" text="Contactarme" />
             </div>
         </>
     );
