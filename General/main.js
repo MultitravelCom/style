@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     if (window.location.pathname.includes("/hotels/")) {
-        recommendedStyle();
+        setTimeout(recommendedStyle, 500);
     }
     if (window.location.pathname.includes("/flights/")) {
         waitForElementFlight();
