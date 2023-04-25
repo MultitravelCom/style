@@ -216,7 +216,7 @@ function ocultarBannerSetInteval() {
     }
   }
 
-  let intervalo = setInterval(agregarClase, 1000);
+  let intervalo = setInterval(ocultarBannerSetInteval, 1000);
 
 const Card = ({ destinos }) => {
     return (
