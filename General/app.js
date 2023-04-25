@@ -199,30 +199,15 @@ function Button(props) {
 
 const BannerTopPreViaje = () => {
 
-    // const [ocultarComponente, setOcultarComponente] = React.useState(true);
-
-    // React.useEffect(() => {
-    //     setTimeout(() => {
-    //         setLoaded(true);
-    //     }, 2000);
-
-    //     const intervalo = setInterval(() => {
-    //         const fechaDeseada = new Date("2023-04-25T23:59:00");
-    //         const fechaActual = new Date();
-      
-    //         if (fechaActual >= fechaDeseada) {
-    //           setOcultarComponente(false);
-    //           clearInterval(intervalo);
-    //         }
-    //       }, 1000);
-      
-    //       return () => clearInterval(intervalo);
-
-    // }, []);
+    const fechaDeseada = new Date("2023-04-25T21:57:00");
+    const fechaActual = new Date();
+  
+    if (fechaActual >= fechaDeseada) {
+      return null;
+    }
 
     return(
     <>
-    {/* {!ocultarComponente ? null : */}
         <div id="containerPreViaje" className="container containerPreViaje">
             <row className="rowStyle">
                 <div className="main__container__left col-8">
@@ -254,26 +239,6 @@ const BannerTopPreViaje = () => {
     )
 }
 
-function BannerTopPreViajeConditional() {
-    const [showBanner, setShowBanner] = React.useState(true);
-  
-    React.useEffect(() => {
-      const interval = setInterval(() => {
-        const fechaDeseada = new Date('2023-04-25T23:59:00');
-        const fechaActual = new Date();
-  
-        if (fechaActual >= fechaDeseada) {
-          setShowBanner(false);
-          clearInterval(interval);
-        }
-      }, 1000);
-  
-      return () => clearInterval(interval);
-    }, []);
-  
-    return showBanner ? <BannerTopPreViaje /> : null;
-  }
-
 const App = () => {
     return (
         <>
@@ -291,4 +256,4 @@ const App = () => {
 }
 
 ReactDOM.createRoot(document.getElementById('rootHome')).render(<App />);
-ReactDOM.createRoot(document.getElementById('home-content-5')).render(<BannerTopPreViajeConditional />);
+ReactDOM.createRoot(document.getElementById('home-content-5')).render(<BannerTopPreViaje />);
