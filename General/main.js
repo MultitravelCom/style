@@ -19,18 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
     async function recommendedStyle() {
-        const resultsListItems = document.querySelectorAll('.results-list__item');
-
-        resultsListItems.forEach((item) => {
-            if (item.querySelector('.deals')) {
-                const hotelResultItems = item.querySelectorAll('.hotel-result');
-                hotelResultItems.forEach((hotelResult) => {
-                    hotelResult.classList.add('recomendado');
-                });
-                console.log("test");
-            }
-        })
-    }
+        const itemsWithDeals = document.querySelectorAll('.results-list__item .deals');
+        
+        itemsWithDeals.forEach((item) => {
+          const hotelResult = item.closest('.results-list__item').querySelector('.hotel-result');
+          if (hotelResult) {
+            hotelResult.classList.add('recomendado');
+          }
+        });
+      }
     if (window.location.pathname.includes("/hotels/")) {
         recommendedStyle();
     }
