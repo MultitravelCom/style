@@ -22,8 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const resultsListItems = document.querySelectorAll('.results-list__item');
 
         resultsListItems.forEach((item) => {
-            if (item.querySelector('.deals')) {
+            if(item.querySelector('.deals')) {
                 item.querySelector('.hotel-result').classList.add('recomendado');
+                console.log("test");
             }
         })
     }
