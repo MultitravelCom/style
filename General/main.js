@@ -22,8 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const resultsListItems = document.querySelectorAll('.results-list__item');
 
         resultsListItems.forEach((item) => {
-            if(item.querySelector('.deals')) {
-                item.querySelector('.hotel-result').classList.add('recomendado');
+            if (item.querySelector('.deals')) {
+                const hotelResultItems = item.querySelectorAll('.hotel-result');
+                hotelResultItems.forEach((hotelResult) => {
+                    hotelResult.classList.add('recomendado');
+                });
                 console.log("test");
             }
         })
