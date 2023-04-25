@@ -207,6 +207,16 @@ function mostrarSeccion() {
 
 mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
 
+function ocultarBannerSetInteval() {
+    let fechaDeseada = new Date("2023-04-2519:30:00");
+    let fechaActual = new Date();
+    if (fechaActual >= fechaDeseada) {
+      document.getElementById("containerPreViaje").classList.add("hidden");
+      clearInterval(intervalo);
+    }
+  }
+
+  let intervalo = setInterval(agregarClase, 1000);
 
 const Card = ({ destinos }) => {
     return (
