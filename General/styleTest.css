@@ -40,9 +40,9 @@
     display: flex;
   }
   
-  .upper-menu__login-button {
+  /* .upper-menu__login-button {
     display: none;
-  }
+  } */
   
   details {
     width: 217px;
