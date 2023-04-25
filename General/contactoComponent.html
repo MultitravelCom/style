@@ -5,10 +5,15 @@
         display: flex;
     }
 
+    .upper-menu__login-button {
+        display: none;
+    }
+
     details {
         width: 217px;
         background-color: white;
         z-index: 9;
+        cursor: pointer;
     }
 
     .summaryStyle {
@@ -23,8 +28,12 @@
         font-size: 14px;
         font-weight: 600;
         text-align: center;
-        padding: 5px
+        padding: 5px;
+        border-left: 6px solid #0d4e88;
     }
+    .summaryStyle:active {
+  background-color: #283747 ;
+}
 
     .acordeonStyle {
         border: 1px solid #F0F0F0;
@@ -34,10 +43,26 @@
         color: #000000;
         margin-top: 4px;
         font-weight: 600;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    }
+
+    .acordeonStyle>a {
+        text-decoration: none;
     }
 
     .acordeonStyleWa {
         border-bottom: 1px solid #F0F0F0;
+    }
+
+    .summaryStyle:hover {
+        background-color: #0d4e88;
+        color: #F0F0F0;
+    }
+
+    .accordHover:hover {
+        background-color: #D9D9D9;
+        color: #333;
     }
 
     .bxAccord {
@@ -59,6 +84,48 @@
     .upper-menu__phone-wrapper {
         display: none;
     }
+
+    #datailsIdMobile {
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+        .acordeonStyle .mobile-number {
+            display: none;
+        }
+
+        .acordeonStyle .desktop-number {
+            display: inline-block;
+        }
+
+        #datailsId {
+            display: none;
+        }
+
+        #datailsIdMobile {
+            font-size: 21px;
+            line-height: 0;
+            display: inline-block;
+            background: #f0f0f0;
+            border-radius: 40px;
+            margin: 3px 14px 0px 0;
+            border-left: 6px solid #0d4e88;
+        }
+
+        .acordeonStyleCallMobile {
+            padding: 4px;
+            color: #1C5B94;
+        }
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px) {
+        #datailsId {
+            width: 217px;
+            background-color: white;
+            z-index: 9;
+            margin: 0px -11px;
+        }
+    }
 </style>
 <details id="datailsId">
     <summary class="summaryStyle">
@@ -67,117 +134,56 @@
         <div><i class="bx bx-chevron-down"></i></div>
     </summary>
     <div class="acordeonStyle">
-        <div class="acordeonStyleWa"><i class='bx bxl-whatsapp bxAccord'></i></i>11 4979 1877</div>
-        <div class="acordeonStyleCall"><i class="bx bxs-phone-call bxAccord"></i>0800 348 0003</div>
+        <a href="https://wa.link/5s5eba" target="_blank">
+            <div class="acordeonStyleWa accordHover"><i class='bx bxl-whatsapp bxAccord'></i>11 4979
+                1877
+            </div>
+        </a>
+        <div class="acordeonStyleCall accordHover"><i class="bx bxs-phone-call bxAccord"></i>
+            <span class="desktop-number">0800 348 0003</span>
+        </div>
+    </div>
     </div>
 </details>
+
+<div id="datailsIdMobile">
+    <a href="tel:08003480003" class="mobile-number">
+        <div class="acordeonStyleCallMobile"><i class="bx bxs-phone-call"></i>
+    </a>
+</div>
+</div>
+
 <script>
     const divParent = document.querySelector("#upper-menu");
     const DivNew = document.querySelector("#datailsId");
 
     divParent.insertBefore(DivNew, divParent.firstChild);
+
+    const divParentTwo = document.querySelector(".top-row.d-flex");
+    const DivNewTwo = document.querySelector("#datailsIdMobile");
+
+    divParentTwo.insertBefore(DivNewTwo, divParentTwo.childNodes[3]);
+
+    function addHoverClass(element) {
+        element.addEventListener('mouseenter', function () {
+            this.classList.add('hovered');
+        });
+
+        element.addEventListener('mouseleave', function () {
+            this.classList.remove('hovered');
+        });
+    }
+
+    const summary = document.querySelector('#datailsId summary');
+    addHoverClass(summary);
+
+    const accordHover = document.querySelector(".accordHover");
+    addHoverClass(accordHover);
+
+    const details = document.querySelector('#datailsId');
+    document.addEventListener('click', function (event) {
+        if (!details.contains(event.target)) {
+            details.open = false;
+        }
+    });
 </script>
-
-
-<style>
-    .rowStyle {
-        display: flex;
-        gap: 20px;
-    }
-
-    .main__container__left,
-    .main__container__right {
-        border-radius: 40px 8px;
-        overflow: hidden;
-        box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-        -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-    }
-
-    .main__container__right {
-        position: relative;
-    }
-
-    .btnStyleBannerPre {
-        position: absolute;
-        bottom: 8%;
-        right: 18%;
-        width: 64%;
-        height: 15%;
-        border-radius: 12px;
-        background: #0D4E88;
-        color: #F3F3F3;
-    }
-
-    @media (max-width: 767px) {
-        .rowStyle {
-            flex-direction: column;
-        }
-
-        .main__container__left {
-            display: none;
-        }
-
-        .main__container__right {
-            max-width: 334px;
-            margin: auto;
-
-        }
-
-        .btnStyleBannerPre {
-            position: absolute;
-            bottom: 6%;
-            right: 20%;
-            width: 58%;
-            height: 15%;
-            border-radius: 12px;
-            background: #0D4E88;
-            color: #F3F3F3;
-        }
-    }
-
-    @media (min-width: 768px) and (max-width: 1023px) {
-        .btnStyleBannerPre {
-            display: none;
-        }
-
-        .btnStyleBannerPre {
-            bottom: 23px;
-            right: 51px;
-            width: 59%;
-            height: 13%;
-            border-radius: 12px;
-            background: #0D4E88;
-            color: #F3F3F3;
-            padding: 3px 0 0 0;
-        }
-    }
-</style>
-
-<div class="container">
-    <row class="rowStyle">
-        <div class="main__container__left col-8">
-            <picture>
-                <source media="(min-width: 1024px)"
-                    srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                <source media="(min-width: 768px) and (max-width: 1023px)"
-                    srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                <source media="(max-width: 767px)"
-                    srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                <img alt=src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-            </picture>
-        </div>
-        <div class="main__container__right col-4">
-            <picture>
-                <source media="(min-width: 1024px)"
-                    srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                <source media="(min-width: 768px) and (max-width: 1023px)"
-                    srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                <source media="(max-width: 767px)"
-                    srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerMobile.webp" />
-                <img alt=src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-            </picture>
-            <button class="btn btnStyleBannerPre">Ver más</button>
-        </div>
-    </row>
-</div>
