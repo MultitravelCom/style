@@ -628,8 +628,8 @@
 }
 /* ***************************************** */
 /* MULTI-126 */
-.master-selector div:nth-child(2),
-.master-selector div:nth-child(3) {
+.master-selector label:nth-child(2),
+.master-selector label:nth-child(3) {
   display: none;
 }
 
