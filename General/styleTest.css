@@ -19,6 +19,7 @@
     font-size: 14px;
     font-weight: 600;
     border-radius: 8px 0 0 8px !important;
+    padding: 0.5rem !important;
 }
 @media (max-width: 767px) {
     .deals {
