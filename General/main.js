@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const infoCard = document.querySelector('.info-card__content:has(.deals)');
             if (infoCard) {
                 infoCard.classList.add('deals-available');
-                infoCard.style.backgroundColor = 'red';
                 console.log("test");
                 break;
             }
