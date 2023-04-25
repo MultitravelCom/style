@@ -1,11 +1,13 @@
 /* ******************************************* */
 /* MULT-71 */
-.result>.hotel-result{
+.hotel-result{
   border: solid #1585e6;
     border-width: 2px 4px 2px 4px;
 }
 .deals{
   position: absolute;
+  right: 0;
+  padding-right: 0 !important;
 }
 .deals-available{
 
