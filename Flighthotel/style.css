@@ -413,12 +413,3 @@ span .glyphicon {
     }
 
 }
-
-/* ***************************************** */
-/* MULTI-126 */
-.master-selector label:nth-of-type(2),
-.master-selector label:nth-of-type(3) {
-    display: none;
-}
-
-/* **************************************** */
