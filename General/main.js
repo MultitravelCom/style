@@ -19,15 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
     async function recommendedStyle() {
-        while (true) {
-            const infoCard = document.querySelector('.info-card__content:has(.deals)');
-            if (infoCard) {
-                infoCard.classList.add('deals-available');
-                console.log("test");
-                break;
+        const resultsListItems = document.querySelectorAll('.results-list__item');
+
+        resultsListItems.forEach((item) => {
+            if (item.querySelector('.deals')) {
+                item.querySelector('.hotel-result').classList.add('recomendado');
             }
-            await new Promise(resolve => setTimeout(resolve, 100));
-        }
+        })
     }
     if (window.location.pathname.includes("/hotels/")) {
         recommendedStyle();
