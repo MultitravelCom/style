@@ -20,3 +20,12 @@
     font-weight: 600;
     border-radius: 8px 0 0 8px !important;
 }
+@media (max-width: 767px) {
+    .deals {
+        bottom: 16px;
+        left: 16px;
+    }
+    .deals>.label-info {
+        border-radius: 8px !important;
+    }
+}
