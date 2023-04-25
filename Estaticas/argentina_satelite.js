@@ -327,25 +327,8 @@ function ButtonPre(props) {
     );
 }
 const BannerTopPreViaje = () => {
-    const [ocultarComponente, setOcultarComponente] = React.useState(true);
-  
-    React.useEffect(() => {
-      const intervalo = setInterval(() => {
-        const fechaDeseada = new Date("2023-04-25T19:40:00");
-        const fechaActual = new Date();
-  
-        if (fechaActual >= fechaDeseada) {
-          setOcultarComponente(false);
-          clearInterval(intervalo);
-        }
-      }, 1000);
-  
-      return () => clearInterval(intervalo);
-    }, []);
-  
     return(
     <>
-    {!ocultarComponente ? null : (
         <div id="containerPreViaje" className="container containerPreViaje">
             <row className="rowStyle">
                 <div className="main__container__left col-8">
@@ -373,7 +356,6 @@ const BannerTopPreViaje = () => {
                 </div>
             </row>
         </div>
-          )}
     </>
     )
 }
@@ -381,24 +363,38 @@ const BannerTopPreViaje = () => {
 
 function App() {
     const [loaded, setLoaded] = React.useState(false);
+    const [ocultarComponente, setOcultarComponente] = React.useState(true);
 
     React.useEffect(() => {
         setTimeout(() => {
             setLoaded(true);
         }, 2000);
+
+        const intervalo = setInterval(() => {
+            const fechaDeseada = new Date("2023-04-25T19:40:00");
+            const fechaActual = new Date();
+      
+            if (fechaActual >= fechaDeseada) {
+              setOcultarComponente(false);
+              clearInterval(intervalo);
+            }
+          }, 1000);
+      
+          return () => clearInterval(intervalo);
+
     }, []);
 
     return (
         <>
             {loaded ? (
                 <>
-                    <div id=""className="main_conteiner__s1_medio top_mkt">
+                    <div className="main_conteiner__s1_medio top_mkt">
                         <BannerTop />
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
-                            <BannerTopPreViaje />
+                            {!ocultarComponente ? null : ( <BannerTopPreViaje />   )}
                             <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} />
                             <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
                         </div>
