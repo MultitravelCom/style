@@ -18,6 +18,8 @@
     top: 46px !important;
 }
 
-.label-info {
+.deals>.label-info {
     background-color: #1585e6 !important;
+    font-size: 14px;
+    font-weight: 600;
 }
