@@ -207,7 +207,7 @@ const BannerTopPreViaje = () => {
         }, 2000);
 
         const intervalo = setInterval(() => {
-            const fechaDeseada = new Date("2023-04-25T20:32:00");
+            const fechaDeseada = new Date("2023-04-25T23:59:00");
             const fechaActual = new Date();
       
             if (fechaActual >= fechaDeseada) {
