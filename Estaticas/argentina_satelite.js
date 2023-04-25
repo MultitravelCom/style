@@ -340,7 +340,7 @@ function ButtonPre(props) {
 const BannerTopPreViaje = () => {
     return(
     <>
-        <div className="container containerPreViaje">
+        <div id="containerPreViaje" className="container containerPreViaje">
             <row className="rowStyle">
                 <div className="main__container__left col-8">
                     <picture>
