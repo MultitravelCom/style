@@ -207,17 +207,6 @@ function mostrarSeccion() {
 
 mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
 
-function ocultarBannerSetInteval() {
-    let fechaDeseada = new Date("2023-04-2519:30:00");
-    let fechaActual = new Date();
-    if (fechaActual >= fechaDeseada) {
-      document.getElementById("containerPreViaje").classList.add("hidden");
-      clearInterval(intervalo);
-    }
-  }
-
-  let intervalo = setInterval(ocultarBannerSetInteval, 1000);
-
 const Card = ({ destinos }) => {
     return (
         destinos.map((destino) => (
@@ -338,8 +327,25 @@ function ButtonPre(props) {
     );
 }
 const BannerTopPreViaje = () => {
+    const [ocultarComponente, setOcultarComponente] = React.useState(false);
+  
+    React.useEffect(() => {
+      const intervalo = setInterval(() => {
+        const fechaDeseada = new Date("2023-04-25T19:40:00");
+        const fechaActual = new Date();
+  
+        if (fechaActual >= fechaDeseada) {
+          setOcultarComponente(true);
+          clearInterval(intervalo);
+        }
+      }, 1000);
+  
+      return () => clearInterval(intervalo);
+    }, []);
+  
     return(
     <>
+    {!ocultarComponente && (
         <div id="containerPreViaje" className="container containerPreViaje">
             <row className="rowStyle">
                 <div className="main__container__left col-8">
@@ -367,6 +373,7 @@ const BannerTopPreViaje = () => {
                 </div>
             </row>
         </div>
+          )}
     </>
     )
 }
