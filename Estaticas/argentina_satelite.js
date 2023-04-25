@@ -193,10 +193,10 @@ function Button(props) {
 }
 
 function mostrarSeccion() {
-    var url = window.location.href; // Obtener la URL completa
-    var hash = url.substring(url.indexOf("#") + 1); // Obtener el ancla de la URL
+    let url = window.location.href; // Obtener la URL completa
+    let hash = url.substring(url.indexOf("#") + 1); // Obtener el ancla de la URL
 
-    var seccion = document.getElementById(hash); // Buscar el elemento con el ID del ancla
+    let seccion = document.getElementById(hash); // Buscar el elemento con el ID del ancla
 
     if (seccion) {
         seccion.scrollIntoView(); // Mostrar la sección si existe
@@ -394,7 +394,7 @@ function App() {
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
-                            {!ocultarComponente ? null : ( <BannerTopPreViaje />   )}
+                            {!ocultarComponente ? null : ( <BannerTopPreViaje />)}
                             <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} />
                             <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
                         </div>

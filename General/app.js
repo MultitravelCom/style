@@ -198,8 +198,31 @@ function Button(props) {
 }
 
 const BannerTopPreViaje = () => {
+
+    const [ocultarComponente, setOcultarComponente] = React.useState(true);
+
+    React.useEffect(() => {
+        setTimeout(() => {
+            setLoaded(true);
+        }, 2000);
+
+        const intervalo = setInterval(() => {
+            const fechaDeseada = new Date("2023-04-25T20:32:00");
+            const fechaActual = new Date();
+      
+            if (fechaActual >= fechaDeseada) {
+              setOcultarComponente(false);
+              clearInterval(intervalo);
+            }
+          }, 1000);
+      
+          return () => clearInterval(intervalo);
+
+    }, []);
+
     return(
     <>
+    {!ocultarComponente ? null :
         <div id="containerPreViaje" className="container containerPreViaje">
             <row className="rowStyle">
                 <div className="main__container__left col-8">
@@ -227,6 +250,7 @@ const BannerTopPreViaje = () => {
                 </div>
             </row>
         </div>
+        }
     </>
     )
 }
