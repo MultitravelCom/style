@@ -769,3 +769,6 @@ MEDIA QUERIES
 .fix-margin>.newsletter__container {
   background: #f7f7f7 !important;
 }
+body.home.home--default .home-v5 .home-row:last-child {
+  margin-bottom: 0;
+}

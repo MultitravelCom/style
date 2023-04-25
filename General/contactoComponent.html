@@ -1,6 +1,59 @@
 // <!-- ICONO -->
 <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 <style>
+<<<<<<< HEAD
+    #upper-menu{
+        display: flex;
+    }
+    details{
+        width: 217px
+    }
+.summaryStyle{
+ display: flex;
+ align-items: center;
+justify-content: space-around;
+ border: 1px solid #F0F0F0;
+ border-radius: 40px;
+ color: #295a81;
+ width: 217px;
+ background: #F0F0F0;
+ font-size: 14px;
+ font-weight: 600;
+ text-align: center;
+ padding: 5px
+}
+.acordeonStyle{
+    border: 1px solid #F0F0F0;
+    border-radius: 10px;
+    width: 218px;
+    height: 88px;
+    color: #000000;
+    margin-top: 4px;
+    margin-left: 16px;
+    font-weight: 600;
+}
+.acordeonStyleWa{
+    border: 1px solid #F0F0F0;
+}
+.bxAccord{
+   margin-right: 6px;
+   margin-left: 14px;
+   padding: 13px 0;
+   color: #1C5B94;  
+}
+.bxl-whatsapp{
+    color: #26BD4C;
+    font-size: 20px;
+}
+.acordeonStyleCall{
+    padding: 4px 0;
+}
+.upper-menu__phone-wrapper{
+    display: none;
+}
+</style>
+<details id="divAccord">
+=======
     #upper-menu {
         display: flex;
     }
@@ -128,6 +181,7 @@
     }
 </style>
 <details id="datailsId">
+>>>>>>> 4f5c947cac30f44fcd9d71a951602b66346ef40d
     <summary class="summaryStyle">
         <i class='bx bxs-phone-call bxSummary'></i>
         <div>Atencion personalizada</div>
@@ -145,6 +199,7 @@
     </div>
     </div>
 </details>
+<<<<<<< HEAD
 
 <div id="datailsIdMobile">
     <a href="tel:08003480003" class="mobile-number">
@@ -153,6 +208,16 @@
 </div>
 </div>
 
+=======
+<<<<<<< HEAD
+
+<script>
+    const divParent = document.querySelector("#upper-menu");
+    const divAccord = document.querySelector("#divAccord");
+    divParent.insertBefore(divAccord, divParent.firstChild)
+</script>
+=======
+>>>>>>> 0887e75daac1ba04ecfad253c6c6878debd62355
 <script>
     const divParent = document.querySelector("#upper-menu");
     const DivNew = document.querySelector("#datailsId");
@@ -185,5 +250,77 @@
         if (!details.contains(event.target)) {
             details.open = false;
         }
+<<<<<<< HEAD
     });
 </script>
+=======
+
+        .main__container__left {
+            display: none;
+        }
+
+        .main__container__right {
+            max-width: 334px;
+            margin: auto;
+
+        }
+
+        .btnStyleBannerPre {
+            position: absolute;
+            bottom: 6%;
+            right: 20%;
+            width: 58%;
+            height: 15%;
+            border-radius: 12px;
+            background: #0D4E88;
+            color: #F3F3F3;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .btnStyleBannerPre {
+            display: none;
+        }
+
+        .btnStyleBannerPre {
+            bottom: 23px;
+            right: 51px;
+            width: 59%;
+            height: 13%;
+            border-radius: 12px;
+            background: #0D4E88;
+            color: #F3F3F3;
+            padding: 3px 0 0 0;
+        }
+    }
+</style>
+
+<div class="container">
+    <row class="rowStyle">
+        <div class="main__container__left col-8">
+            <picture>
+                <source media="(min-width: 1024px)"
+                    srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
+                <source media="(min-width: 768px) and (max-width: 1023px)"
+                    srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
+                <source media="(max-width: 767px)"
+                    srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
+                <img alt=src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
+            </picture>
+        </div>
+        <div class="main__container__right col-4">
+            <picture>
+                <source media="(min-width: 1024px)"
+                    srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
+                <source media="(min-width: 768px) and (max-width: 1023px)"
+                    srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
+                <source media="(max-width: 767px)"
+                    srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerMobile.webp" />
+                <img alt=src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
+            </picture>
+            <button class="btn btnStyleBannerPre">Ver más</button>
+        </div>
+    </row>
+</div>
+>>>>>>> 4f5c947cac30f44fcd9d71a951602b66346ef40d
+>>>>>>> 0887e75daac1ba04ecfad253c6c6878debd62355
