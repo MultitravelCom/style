@@ -626,11 +626,3 @@
     margin-top: 40px
   }
 }
-/* ***************************************** */
-/* MULTI-126 */
-.master-selector label:nth-child(2),
-.master-selector label:nth-child(3) {
-  display: none;
-}
-
-/* **************************************** */
