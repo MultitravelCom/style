@@ -266,58 +266,61 @@ const CardContainer = ({ btnStyles }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
     const [destinos, setDestinos1] = React.useState([]);
 
-    React.useEffect(() => {
+    const initializeGlider = () => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
         const btnRightElement = document.querySelector(`.${btnRight}`);
-
-        btnLeftElement.addEventListener('click', function (event) {
-            event.preventDefault();
-        });
-
-        btnRightElement.addEventListener('click', function (event) {
-            event.preventDefault();
-        });
-
-        new Glider(document.querySelector(`.${carrusel}`), {
+        const carruselElement = document.querySelector(`.${carrusel}`);
+    
+        if (btnLeftElement && btnRightElement && carruselElement) {
+          new Glider(carruselElement, {
             slidesToShow: 1.2,
             slidesToScroll: 0.5,
             draggable: true,
             arrows: {
-                prev: btnLeftElement,
-                next: btnRightElement,
+              prev: btnLeftElement,
+              next: btnRightElement,
             },
             responsive: [
-                {
-                    // screens greater than >= 775px
-                    breakpoint: 450,
-                    settings: {
-                        // Set to `auto` and provide item width to adjust to viewport
-                        slidesToShow: "2.2",
-                        slidesToScroll: "1",
-                    },
+              {
+                // screens greater than >= 775px
+                breakpoint: 450,
+                settings: {
+                  // Set to `auto` and provide item width to adjust to viewport
+                  slidesToShow: "2.2",
+                  slidesToScroll: "1",
                 },
-                {
-                    // screens greater than >= 775px
-                    breakpoint: 760,
-                    settings: {
-                        // Set to `auto` and provide item width to adjust to viewport
-                        slidesToShow: "3.2",
-                        slidesToScroll: "1",
-                    },
+              },
+              {
+                // screens greater than >= 775px
+                breakpoint: 760,
+                settings: {
+                  // Set to `auto` and provide item width to adjust to viewport
+                  slidesToShow: "3.2",
+                  slidesToScroll: "1",
                 },
-                {
-                    // screens greater than >= 1024px
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
-                    },
+              },
+              {
+                // screens greater than >= 1024px
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 1,
                 },
+              },
             ],
             rewind: true,
-        });
-        fetchDestinos().then(data => setDestinos1(data.destinos1));
-    }, [btnLeft, btnRight, carrusel]);
+          });
+        }
+      };
+    
+      React.useEffect(() => {
+        window.onload = () => {
+          initializeGlider();
+        };
+    
+        fetchDestinos().then((data) => setDestinos1(data.destinos1));
+      }, [btnLeft, btnRight, carrusel]);
+    
 
     return (
         <>
