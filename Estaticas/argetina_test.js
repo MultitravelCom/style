@@ -262,103 +262,110 @@ const Card = () => {
         </>
     );
 };
-const CardContainer = ({ btnStyles }) => {
+const CardContainer = ({ btnStyles, destinos }) => {
+    const [loaded, setLoaded] = React.useState(false);
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
-    const [destinos, setDestinos1] = React.useState([]);
-
-    const initializeGlider = () => {
-        const btnLeftElement = document.querySelector(`.${btnLeft}`);
-        const btnRightElement = document.querySelector(`.${btnRight}`);
-        const carruselElement = document.querySelector(`.${carrusel}`);
-
-        btnLeftElement.addEventListener('click', function (event) {
-            event.preventDefault();
+  
+    const btnLeftRef = React.useRef(null);
+    const btnRightRef = React.useRef(null);
+    const carruselRef = React.useRef(null);
+  
+    React.useEffect(() => {
+      Promise.all([fetchDestinosData(destinos)]).then(([destinosData]) => {
+        setDestinos1(destinosData);
+        setLoaded(true);
+      });
+    }, [destinos]);
+  
+    React.useEffect(() => {
+      if (loaded) {
+        const btnLeftElement = btnLeftRef.current;
+        const btnRightElement = btnRightRef.current;
+        const carruselElement = carruselRef.current;
+  
+        btnLeftElement.addEventListener("click", function (event) {
+          event.preventDefault();
         });
-
-        btnRightElement.addEventListener('click', function (event) {
-            event.preventDefault();
+  
+        btnRightElement.addEventListener("click", function (event) {
+          event.preventDefault();
         });
-    
-        if (btnLeftElement && btnRightElement && carruselElement) {
-          new Glider(carruselElement, {
-            slidesToShow: 1.2,
-            slidesToScroll: 0.5,
-            draggable: true,
-            arrows: {
-              prev: btnLeftElement,
-              next: btnRightElement,
+  
+        new Glider(carruselElement, {
+          slidesToShow: 1.2,
+          slidesToScroll: 0.5,
+          draggable: true,
+          arrows: {
+            prev: btnLeftElement,
+            next: btnRightElement,
+          },
+          responsive: [
+            {
+              // screens greater than >= 775px
+              breakpoint: 450,
+              settings: {
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: "2.2",
+                slidesToScroll: "1",
+              },
             },
-            responsive: [
-              {
-                // screens greater than >= 775px
-                breakpoint: 450,
-                settings: {
-                  // Set to `auto` and provide item width to adjust to viewport
-                  slidesToShow: "2.2",
-                  slidesToScroll: "1",
-                },
+            {
+              // screens greater than >= 775px
+              breakpoint: 760,
+              settings: {
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: "3.2",
+                slidesToScroll: "1",
               },
-              {
-                // screens greater than >= 775px
-                breakpoint: 760,
-                settings: {
-                  // Set to `auto` and provide item width to adjust to viewport
-                  slidesToShow: "3.2",
-                  slidesToScroll: "1",
-                },
+            },
+            {
+              // screens greater than >= 1024px
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
               },
-              {
-                // screens greater than >= 1024px
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 4,
-                  slidesToScroll: 1,
-                },
-              },
-            ],
-            rewind: true,
-          });
-        }
-      };
-    
-      React.useEffect(() => {
-        window.onload = () => {
-          initializeGlider();
-        };
-    
-        fetchDestinos().then((data) => setDestinos1(data.destinos1));
-      }, [btnLeft, btnRight, carrusel]);
-    
-
+            },
+          ],
+          rewind: true,
+        });
+      }
+    }, [btnLeftRef, btnRightRef, carruselRef, loaded]);
+  
+    if (!loaded) {
+      return <Loader />;
+    }
+  
     return (
-        <>
-            <div key={title} className="main__conteiner__s1">
-                <div className="main__conteiner__s1__titulo" id={`seccion${destino}`}>
-                    <h2 key={title}>
-                        <strong>{title}</strong>
-                    </h2>
-                </div>
-                <div className="carrusel__contenedor">
-                    <button
-                        aria-label="Anterior"
-                        className={`carrusel__anterior ${btnLeft}`}
-                    >
-                        <i className="fa fa-chevron-left" aria-hidden="true"></i>
-                    </button>
-                    <div className={carrusel} id={destinos.title}>
-                        <Card destinos={destinos} />
-                    </div>
-                    <button
-                        aria-label="Siguiente"
-                        className={`carrusel__siguiente ${btnRight}`}
-                    >
-                        <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
-        </>
-    )
-};
+      <div key={title} className="main__conteiner__s1">
+        <div className="main__conteiner__s1__titulo" id={`seccion${destino}`}>
+          <h2 key={title}>
+            <strong>{title}</strong>
+          </h2>
+        </div>
+        <div className="carrusel__contenedor">
+          <button
+            aria-label="Anterior"
+            className={`carrusel__anterior ${btnLeft}`}
+            ref={btnLeftRef}
+          >
+            <i className="fa fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <div className={carrusel} id={destinos.title} ref={carruselRef}>
+            <Card destinos={destinos} />
+          </div>
+          <button
+            aria-label="Siguiente"
+            className={`carrusel__siguiente ${btnRight}`}
+            ref={btnRightRef}
+          >
+            <i className="fa fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    );
+  };
+  
 const Loader = () => {
     return (
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
@@ -370,35 +377,35 @@ const Loader = () => {
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [destinos1, setDestinos1] = React.useState([]);
-  
+
     React.useEffect(() => {
-      fetchDestinos().then(data => {
-        setDestinos1(data.destinos1);
-        setLoaded(true);
-      });
+        fetchDestinos().then(data => {
+            setDestinos1(data.destinos1);
+            setLoaded(true);
+        });
     }, []);
-  
+
     return (
-      <>
-        {!loaded && <Loader />}
-  
-        {loaded && (
-          <>
-            <div className="main_conteiner__s1_medio top_mkt">
-              <BannerTop />
-            </div>
-            <div className="main__conteiner main__conteiner-principal container">
-              <div className="carrusel">
-                <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
-                <CardContainer btnStyles={btnStyles[1]} destinos={destinos1} />
-                <CardContainer btnStyles={btnStyles[2]} destinos={destinos1} />
-              </div>
-            </div>
-          </>
-        )}
-      </>
+        <>
+            {!loaded && <Loader />}
+
+            {loaded && (
+                <>
+                    <div className="main_conteiner__s1_medio top_mkt">
+                        <BannerTop />
+                    </div>
+                    <div className="main__conteiner main__conteiner-principal container">
+                        <div className="carrusel">
+                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
+                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos1} />
+                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos1} />
+                        </div>
+                    </div>
+                </>
+            )}
+        </>
     );
-  }
+}
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
