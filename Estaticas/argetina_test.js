@@ -235,7 +235,7 @@ const Card = () => {
 
     React.useEffect(() => {
         fetchDestinos().then(data => setDestinos1(data.destinos1));
-        console.log(data.destinos1);
+        console.log(destinos);
     }, []);
 
     return (
