@@ -261,7 +261,7 @@ const Card = () => {
             </div>
         )));
 };
-const CardContainer = ({ btnStyles, destinos }) => {
+const CardContainer = ({ btnStyles }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
     const [destinos, setDestinos] = React.useState([]);
 
