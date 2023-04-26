@@ -21,148 +21,149 @@ const btnStyles = [
     { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Vuelos Iguazú – Alojamientos Cataratas – Paquetes Cataratas', destino: "Iguazu" },
     { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Vuelos Mendoza – Alojamientos Mendoza – Paquetes Mendoza', destino: "Mendoza" },
 ];
-const destinos1 = [
-    {
-        id: "a1",
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/ncvo1x",
-        title: "Paquete a Bariloche 7 noches",
-        price: "$142.300"
-    },
-    {
-        id: "a2",
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-b%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/s507zo",
-        title: "Paquete a Bariloche 5 noches",
-        price: "$119.100"
-    },
-    {
-        id: "a3",
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-c%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/duchkz",
-        title: "Hotel Villa Sofia",
-        price: "$24.200"
-    },
-    {
-        id: "a4",
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-d%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/2z5hpp",
-        title: "Hotel Desing Suites",
-        price: "$35.300"
-    },
-    {
-        id: "a5",
-        destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-e%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/dv0ucs",
-        title: "Vuelo a Bariloche",
-        price: "$18.600"
-    },
-];
-const destinos2 = [
-    {
-        id: "b1",
-        destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-a%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/hxjkgq",
-        title: "Paquete Iguazú 5 noches",
-        price: "$85.800"
-    },
-    {
-        id: "b2",
-        destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-b%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/2rmvhq",
-        title: "Paquete Iguazú 3 noches",
-        price: "$66.500"
-    },
-    {
-        id: "b3",
-        destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-c%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/wbq74i",
-        title: "Hotel Kelta",
-        price: "$17.700"
-    },
-    {
-        id: "b4",
-        destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-d%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/s6nxus",
-        title: "Hotel Raices Esturión",
-        price: "$24.700"
-    },
-    {
-        id: "b5",
-        destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-e%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/37zsyv",
-        title: "Vuelo a Iguzú",
-        price: "$22.900"
-    },
-];
-const destinos3 = [
-    {
-        id: "c1",
-        destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-a%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/61efbi",
-        title: "Paquete Mendoza 7 noches",
-        price: "$117.200"
-    },
-    {
-        id: "c2",
-        destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-b%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/sbfl7y",
-        title: "Paquete Mendoza 5 noches",
-        price: "$99.800"
-    },
-    {
-        id: "c3",
-        destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-c%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/vs8baw",
-        title: "Hotel Cordón del Plata",
-        price: "$15.900"
-    },
-    {
-        id: "c4",
-        destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-d%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/u8ym55",
-        title: "Hotel Raices Aconcagua",
-        price: "$28.200"
-    },
-    {
-        id: "c5",
-        destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-e%20(1).webp",
-        className: "uno",
-        linkWa: "https://wa.link/wz0152",
-        title: "Vuelo a Mendoza",
-        price: "$24.100"
+// const destinos1 = [
+//     {
+//         id: "a1",
+//         destino: "Bariloche",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/ncvo1x",
+//         title: "Paquete a Bariloche 7 noches",
+//         price: "$142.300"
+//     },
+//     {
+//         id: "a2",
+//         destino: "Bariloche",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-b%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/s507zo",
+//         title: "Paquete a Bariloche 5 noches",
+//         price: "$119.100"
+//     },
+//     {
+//         id: "a3",
+//         destino: "Bariloche",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-c%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/duchkz",
+//         title: "Hotel Villa Sofia",
+//         price: "$24.200"
+//     },
+//     {
+//         id: "a4",
+//         destino: "Bariloche",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-d%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/2z5hpp",
+//         title: "Hotel Desing Suites",
+//         price: "$35.300"
+//     },
+//     {
+//         id: "a5",
+//         destino: "Bariloche",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-e%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/dv0ucs",
+//         title: "Vuelo a Bariloche",
+//         price: "$18.600"
+//     },
+// ];
+// const destinos2 = [
+//     {
+//         id: "b1",
+//         destino: "Iguazu",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-a%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/hxjkgq",
+//         title: "Paquete Iguazú 5 noches",
+//         price: "$85.800"
+//     },
+//     {
+//         id: "b2",
+//         destino: "Iguazu",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-b%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/2rmvhq",
+//         title: "Paquete Iguazú 3 noches",
+//         price: "$66.500"
+//     },
+//     {
+//         id: "b3",
+//         destino: "Iguazu",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-c%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/wbq74i",
+//         title: "Hotel Kelta",
+//         price: "$17.700"
+//     },
+//     {
+//         id: "b4",
+//         destino: "Iguazu",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-d%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/s6nxus",
+//         title: "Hotel Raices Esturión",
+//         price: "$24.700"
+//     },
+//     {
+//         id: "b5",
+//         destino: "Iguazu",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-e%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/37zsyv",
+//         title: "Vuelo a Iguzú",
+//         price: "$22.900"
+//     },
+// ];
+// const destinos3 = [
+//     {
+//         id: "c1",
+//         destino: "Mendoza",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-a%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/61efbi",
+//         title: "Paquete Mendoza 7 noches",
+//         price: "$117.200"
+//     },
+//     {
+//         id: "c2",
+//         destino: "Mendoza",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-b%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/sbfl7y",
+//         title: "Paquete Mendoza 5 noches",
+//         price: "$99.800"
+//     },
+//     {
+//         id: "c3",
+//         destino: "Mendoza",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-c%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/vs8baw",
+//         title: "Hotel Cordón del Plata",
+//         price: "$15.900"
+//     },
+//     {
+//         id: "c4",
+//         destino: "Mendoza",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-d%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/u8ym55",
+//         title: "Hotel Raices Aconcagua",
+//         price: "$28.200"
+//     },
+//     {
+//         id: "c5",
+//         destino: "Mendoza",
+//         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-e%20(1).webp",
+//         className: "uno",
+//         linkWa: "https://wa.link/wz0152",
+//         title: "Vuelo a Mendoza",
+//         price: "$24.100"
 
-    },
-];
+//     },
+// ];
+
 // *****************************************************
 // ************** COMPONENTES ********************
 const BannerTop = () => {
@@ -223,7 +224,16 @@ function mostrarSeccion() {
 
 mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
 
-const Card = ({ destinos }) => {
+const Card = () => {
+
+    const [destinos, setDestinos] = React.useState([]);
+
+    React.useEffect(() => {
+        fetch("https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json")
+          .then(response => response.json())
+          .then(data => setDestinos(data));
+      }, []);
+
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
