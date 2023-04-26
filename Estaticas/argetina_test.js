@@ -16,6 +16,14 @@ linkWaHeaderMobile.href = 'https://wa.link/xetnro';
 
 
 // BD
+
+const fetchDestinos = () => {
+    return fetch('https://ruta-a-tu-archivo/data.json')
+      .then(response => response.json())
+      .then(data => data.destinos)
+      .catch(error => console.log(error));
+  };
+
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
     { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Vuelos Iguazú – Alojamientos Cataratas – Paquetes Cataratas', destino: "Iguazu" },
@@ -229,9 +237,7 @@ const Card = () => {
     const [destinos, setDestinos] = React.useState([]);
 
     React.useEffect(() => {
-        fetch("https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json")
-          .then(response => response.json())
-          .then(data => setDestinos(data));
+        fetchDestinos().then(data => setDestinos(data));
       }, []);
 
     return (
@@ -393,6 +399,7 @@ const BannerTopPreViaje = () => {
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [ocultarComponente, setOcultarComponente] = React.useState(true);
+    const [destinos, setDestinos] = React.useState([]);
 
     React.useEffect(() => {
         setTimeout(() => {
@@ -408,8 +415,10 @@ function App() {
                 clearInterval(intervalo);
             }
         }, 1000);
-
+        
+        fetchDestinos().then(data => setDestinos(data));
         return () => clearInterval(intervalo);
+
 
     }, []);
 
