@@ -14,7 +14,21 @@ linkWaHeader.href = 'https://wa.link/xetnro';
 linkWaFixed.href = 'https://wa.link/xetnro';
 linkWaHeaderMobile.href = 'https://wa.link/xetnro';
 
+// ************** Ancla *****************************
+function mostrarSeccion() {
+    let url = window.location.href; // Obtener la URL completa
+    let hash = url.substring(url.indexOf("#") + 1); // Obtener el ancla de la URL
 
+    let seccion = document.getElementById(hash); // Buscar el elemento con el ID del ancla
+
+    if (seccion) {
+        seccion.scrollIntoView(); // Mostrar la sección si existe
+    } else {
+        setTimeout(mostrarSeccion, 500); // Intentar nuevamente después de 500 milisegundos
+    }
+}
+mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
+// ************************************************
 // BD
   const fetchDestinos = async () => {
     const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
@@ -172,6 +186,18 @@ const btnStyles = [
 
 // *****************************************************
 // ************** COMPONENTES ********************
+
+function Button(props) {
+    const handleClick = (event) => {
+        event.preventDefault();
+        window.open(props.link, '_blank');
+    }
+
+    return (
+        <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
+    );
+}
+
 const BannerTop = () => {
     return (
         <div className="main_conteiner__s1_medio__paquetes">
@@ -203,33 +229,6 @@ const BannerTop = () => {
         </div>
     )
 }
-
-function Button(props) {
-    const handleClick = (event) => {
-        event.preventDefault();
-        window.open(props.link, '_blank');
-    }
-
-    return (
-        <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
-    );
-}
-
-function mostrarSeccion() {
-    let url = window.location.href; // Obtener la URL completa
-    let hash = url.substring(url.indexOf("#") + 1); // Obtener el ancla de la URL
-
-    let seccion = document.getElementById(hash); // Buscar el elemento con el ID del ancla
-
-    if (seccion) {
-        seccion.scrollIntoView(); // Mostrar la sección si existe
-    } else {
-        setTimeout(mostrarSeccion, 500); // Intentar nuevamente después de 500 milisegundos
-    }
-}
-
-mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
-
 const Card = () => {
 
     const [destinos, setDestinos] = React.useState([]);
@@ -350,17 +349,7 @@ const Loader = () => {
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     );
 };
-function ButtonPre(props) {
 
-    const handleClick = (event) => {
-        event.preventDefault();
-        window.open(props.link, '_blank');
-    }
-
-    return (
-        <button className="btn btnStyleBannerPre" onClick={handleClick}>{props.text}</button>
-    );
-}
 // ************************************************
 
 function App() {
