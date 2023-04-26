@@ -30,11 +30,11 @@ function mostrarSeccion() {
 mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
 // ************************************************
 // BD
-  const fetchDestinos = async () => {
+const fetchDestinos = async () => {
     const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
     const data = await response.json();
     return data;
-  };
+};
 
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
@@ -231,35 +231,36 @@ const BannerTop = () => {
 }
 const Card = () => {
 
-    const [destinos, setDestinos] = React.useState([]);
+    const [destinos, setDestinos1] = React.useState([]);
 
     React.useEffect(() => {
-        fetchDestinos().then(data => setDestinos(data));
-      }, []);
+        fetchDestinos().then(data => setDestinos1(data.destinos1));
+        console.log(data.destinos1);
+    }, []);
 
     return (
         <>
-        {destinos.length > 0 && destinos.map((destino) => (
-            <div key={destino.id} className="carrusel__elemento">
-                <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
-                    <picture>
-                        <map name={destino.id}>
-                            <area target="_blank" alt={destino.title} title={destino.title} href={destino.linkWa} coords={destino.coords} shape="rect" />
-                        </map>
-                        <source media="(min-width: 1024px)" srcSet={destino.img} />
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
-                        <source media="(max-width: 767px)" srcSet={destino.img} />
-                        <img alt={`Imagen banner ${destino.title}`} src={destino.img} useMap={`#${destino.id}`} />
-                    </picture>
-                    <div className="priceStyle">
-                        {destino.price}
+            {destinos.length > 0 && destinos.map((destino) => (
+                <div key={destino.id} className="carrusel__elemento">
+                    <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
+                        <picture>
+                            <map name={destino.id}>
+                                <area target="_blank" alt={destino.title} title={destino.title} href={destino.linkWa} coords={destino.coords} shape="rect" />
+                            </map>
+                            <source media="(min-width: 1024px)" srcSet={destino.img} />
+                            <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
+                            <source media="(max-width: 767px)" srcSet={destino.img} />
+                            <img alt={`Imagen banner ${destino.title}`} src={destino.img} useMap={`#${destino.id}`} />
+                        </picture>
+                        <div className="priceStyle">
+                            {destino.price}
+                        </div>
+                        <Button id={destino.id} link={destino.linkWa} text="Contactarme" />
                     </div>
-                    <Button id={destino.id} link={destino.linkWa} text="Contactarme" />
                 </div>
-            </div>
-        ))}
+            ))}
         </>
-        );
+    );
 };
 const CardContainer = ({ btnStyles }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
@@ -363,10 +364,10 @@ function App() {
         setTimeout(() => {
             setLoaded(true);
         }, 2000);
-        
+
         fetchDestinos().then(data => {
             setDestinos1(data.destinos1);
-          });
+        });
 
         return () => clearInterval(intervalo);
     }, []);
