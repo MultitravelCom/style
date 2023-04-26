@@ -270,6 +270,14 @@ const CardContainer = ({ btnStyles }) => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
         const btnRightElement = document.querySelector(`.${btnRight}`);
         const carruselElement = document.querySelector(`.${carrusel}`);
+
+        btnLeftElement.addEventListener('click', function (event) {
+            event.preventDefault();
+        });
+
+        btnRightElement.addEventListener('click', function (event) {
+            event.preventDefault();
+        });
     
         if (btnLeftElement && btnRightElement && carruselElement) {
           new Glider(carruselElement, {
