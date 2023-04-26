@@ -265,17 +265,18 @@ const Card = () => {
 const CardContainer = ({ btnStyles, destinos }) => {
     const [loaded, setLoaded] = React.useState(false);
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
+    const [destinos1, setDestinos1] = React.useState([]);
   
     const btnLeftRef = React.useRef(null);
     const btnRightRef = React.useRef(null);
     const carruselRef = React.useRef(null);
   
-    React.useEffect(() => {
-      Promise.all([fetchDestinos(destinos)]).then(([destinosData]) => {
-        setDestinos1(destinosData);
-        setLoaded(true);
-      });
-    }, [destinos]);
+    eact.useEffect(() => {
+        fetchDestinos().then(data => {
+            setDestinos1(data.destinos1);
+            setLoaded(true);
+        });
+    }, []);
   
     React.useEffect(() => {
       if (loaded) {
