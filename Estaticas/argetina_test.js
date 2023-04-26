@@ -374,13 +374,13 @@ function App() {
     React.useEffect(() => {
       fetchDestinos().then(data => {
         setDestinos1(data.destinos1);
-        setLoaded(true); // se establece en true una vez que se cargan los destinos
+        setLoaded(true);
       });
     }, []);
   
     return (
       <>
-        {!loaded && <Loader />} {/* Mostrar Loader mientras se carga el DOM */}
+        {!loaded && <Loader />}
   
         {loaded && (
           <>
@@ -391,6 +391,7 @@ function App() {
               <div className="carrusel">
                 <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
                 <CardContainer btnStyles={btnStyles[1]} destinos={destinos1} />
+                <CardContainer btnStyles={btnStyles[2]} destinos={destinos1} />
               </div>
             </div>
           </>
