@@ -238,7 +238,8 @@ const Card = () => {
       }, []);
 
     return (
-        destinos.map((destino) => (
+        <>
+        {destinos.length > 0 && destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
                     <picture>
@@ -256,7 +257,9 @@ const Card = () => {
                     <Button id={destino.id} link={destino.linkWa} text="Contactarme" />
                 </div>
             </div>
-        )));
+        ))}
+        </>
+        );
 };
 const CardContainer = ({ btnStyles }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
