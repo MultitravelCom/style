@@ -24,7 +24,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche 7 noches",
-        price: "$142.300"
+        price:"$142.300"
     },
     {
         id: "a2",
@@ -33,7 +33,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/s507zo",
         title: "Paquete a Bariloche 5 noches",
-        price: "$119.100"
+        price:"$119.100"
     },
     {
         id: "a3",
@@ -42,7 +42,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/duchkz",
         title: "Hotel Villa Sofia",
-        price: "$24.200"
+        price:"$24.200"
     },
     {
         id: "a4",
@@ -51,7 +51,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/2z5hpp",
         title: "Hotel Desing Suites",
-        price: "$35.300"
+        price:"$35.300"
     },
     {
         id: "a5",
@@ -60,7 +60,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
         title: "Vuelo a Bariloche",
-        price: "$18.600"
+        price:"$18.600"
     },
 ];
 const destinos2 = [
@@ -71,7 +71,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/hxjkgq",
         title: "Paquete Iguazú 5 noches",
-        price: "$85.800"
+        price:"$85.800"
     },
     {
         id: "b2",
@@ -80,7 +80,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/2rmvhq",
         title: "Paquete Iguazú 3 noches",
-        price: "$66.500"
+        price:"$66.500"
     },
     {
         id: "b3",
@@ -89,7 +89,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/wbq74i",
         title: "Hotel Kelta",
-        price: "$17.700"
+        price:"$17.700"
     },
     {
         id: "b4",
@@ -98,7 +98,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/s6nxus",
         title: "Hotel Raices Esturión",
-        price: "$24.700"
+        price:"$24.700"
     },
     {
         id: "b5",
@@ -107,7 +107,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
         title: "Vuelo a Iguzú",
-        price: "$22.900"
+        price:"$22.900"
     },
 ];
 const destinos3 = [
@@ -118,7 +118,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/61efbi",
         title: "Paquete Mendoza 7 noches",
-        price: "$117.200"
+        price:"$117.200"
     },
     {
         id: "c2",
@@ -127,7 +127,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/sbfl7y",
         title: "Paquete Mendoza 5 noches",
-        price: "$99.800"
+        price:"$99.800"
     },
     {
         id: "c3",
@@ -136,7 +136,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/vs8baw",
         title: "Hotel Cordón del Plata",
-        price: "$15.900"
+        price:"$15.900"
     },
     {
         id: "c4",
@@ -145,7 +145,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/u8ym55",
         title: "Hotel Raices Aconcagua",
-        price: "$28.200"
+        price:"$28.200"
     },
     {
         id: "c5",
@@ -154,7 +154,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/wz0152",
         title: "Vuelo a Mendoza",
-        price: "$24.100"
+        price:"$24.100"
 
     },
 ];
@@ -343,36 +343,36 @@ function ButtonPre(props) {
     );
 }
 const BannerTopPreViaje = () => {
-    return (
-        <>
-            <div id="containerPreViaje" className="container containerPreViaje">
-                <row className="rowStyle">
-                    <div className="main__container__left col-8">
-                        <picture>
-                            <source media="(min-width: 1024px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                            <source media="(min-width: 768px) and (max-width: 1023px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                            <source media="(max-width: 767px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                            <img alt="" src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                        </picture>
-                    </div>
-                    <div className="main__container__right col-4">
-                        <picture>
-                            <source media="(min-width: 1024px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                            <source media="(min-width: 768px) and (max-width: 1023px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                            <source media="(max-width: 767px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerMobile.webp" />
-                            <img alt="" src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                        </picture>
-                        <ButtonPre link="https://www.multitravel.com/promociones/previaje" text="Ver más" />
-                    </div>
-                </row>
-            </div>
-        </>
+    return(
+    <>
+        <div id="containerPreViaje" className="container containerPreViaje">
+            <row className="rowStyle">
+                <div className="main__container__left col-8">
+                    <picture>
+                        <source media="(min-width: 1024px)"
+                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
+                        <source media="(min-width: 768px) and (max-width: 1023px)"
+                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
+                        <source media="(max-width: 767px)"
+                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
+                        <img alt="" src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
+                    </picture>
+                </div>
+                <div className="main__container__right col-4">
+                    <picture>
+                        <source media="(min-width: 1024px)"
+                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
+                        <source media="(min-width: 768px) and (max-width: 1023px)"
+                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
+                        <source media="(max-width: 767px)"
+                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerMobile.webp" />
+                        <img alt="" src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
+                    </picture>
+                    <ButtonPre link="https://www.multitravel.com/promociones/previaje" text="Ver más" />
+                </div>
+            </row>
+        </div>
+    </>
     )
 }
 // ************************************************
@@ -389,14 +389,14 @@ function App() {
         const intervalo = setInterval(() => {
             const fechaDeseada = new Date("2023-04-25T19:40:00");
             const fechaActual = new Date();
-
+      
             if (fechaActual >= fechaDeseada) {
-                setOcultarComponente(false);
-                clearInterval(intervalo);
+              setOcultarComponente(false);
+              clearInterval(intervalo);
             }
-        }, 1000);
-
-        return () => clearInterval(intervalo);
+          }, 1000);
+      
+          return () => clearInterval(intervalo);
 
     }, []);
 
@@ -410,7 +410,7 @@ function App() {
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
-                            {!ocultarComponente ? null : (<BannerTopPreViaje />)}
+                            {!ocultarComponente ? null : ( <BannerTopPreViaje />)}
                             <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} />
                             <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
                         </div>
