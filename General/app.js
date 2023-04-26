@@ -71,7 +71,7 @@ const MediosDePagos = () => {
                     </div>
                 </div>
                 <div className="main__conteiner__s2__pagos__card dos__s2">
-                    <a href="https://www.multitravel.com/promociones/previaje" target="_blank">
+                    <a href="https://www.multitravel.com/ahora12" target="_blank">
                         <source media="(min-width: 1024px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/ahora12/ahora12-01.webp" />
                         <source media="(min-width: 768px) and (max-width: 1023px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/ahora12/ahora12-02.webp" />
                         <source media="(max-width: 767px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/ahora12/ahora12-03.webp" />
