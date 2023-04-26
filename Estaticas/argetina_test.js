@@ -16,13 +16,11 @@ linkWaHeaderMobile.href = 'https://wa.link/xetnro';
 
 
 // BD
-
-const fetchDestinos = () => {
-    return fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json')
-      .then(response => response.json())
-      .then(data => data.destinos)
-      .catch(error => console.log(error));
-};
+  const fetchDestinos = async () => {
+    const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
+    const data = await response.json();
+    return data;
+  };
 
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
@@ -263,7 +261,7 @@ const Card = () => {
 };
 const CardContainer = ({ btnStyles }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
-    const [destinos, setDestinos] = React.useState([]);
+    const [destinos, setDestinos1] = React.useState([]);
 
     React.useEffect(() => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
@@ -315,7 +313,7 @@ const CardContainer = ({ btnStyles }) => {
             ],
             rewind: true,
         });
-        fetchDestinos().then(data => setDestinos(data));
+        fetchDestinos().then(data => setDestinos1(data.destinos1));
     }, [btnLeft, btnRight, carrusel]);
 
     return (
@@ -418,7 +416,9 @@ function App() {
             }
         }, 1000);
         
-        fetchDestinos().then(data => setDestinos1(data));
+        fetchDestinos().then(data => {
+            setDestinos1(data.destinos1);
+          });
 
         return () => clearInterval(intervalo);
     }, []);
