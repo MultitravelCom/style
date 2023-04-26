@@ -271,12 +271,12 @@ const CardContainer = ({ btnStyles, destinos }) => {
     const btnRightRef = React.useRef(null);
     const carruselRef = React.useRef(null);
   
-    eact.useEffect(() => {
-        fetchDestinos().then(data => {
-            setDestinos1(data.destinos1);
-            setLoaded(true);
-        });
-    }, []);
+    React.useEffect(() => {
+      Promise.all([fetchDestinos(destinos)]).then(([destinosData]) => {
+        setDestinos1(destinosData);
+        setLoaded(true);
+      });
+    }, [destinos]);
   
     React.useEffect(() => {
       if (loaded) {
