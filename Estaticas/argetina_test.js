@@ -266,108 +266,108 @@ const CardContainer = ({ btnStyles, destinos }) => {
     const [loaded, setLoaded] = React.useState(false);
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
     const [destinos1, setDestinos1] = React.useState([]);
-  
+
+    const carruselRef = React.useRef(null);
     const btnLeftRef = React.useRef(null);
     const btnRightRef = React.useRef(null);
-    const carruselRef = React.useRef(null);
-  
+
     React.useEffect(() => {
-      Promise.all([fetchDestinos(destinos)]).then(([destinosData]) => {
-        setDestinos1(destinosData);
-        setLoaded(true);
-      });
+        Promise.all([fetchDestinos(destinos)]).then(([destinosData]) => {
+            setDestinos1(destinosData);
+            setLoaded(true);
+        });
     }, [destinos]);
 
     React.useEffect(() => {
-        const interval = setInterval(() => {
-          const carruselElement = carruselRef.current;
-          const btnLeftElement = btnLeftRef.current;
-          const btnRightElement = btnRightRef.current;
+        const carruselElement = carruselRef.current;
+        const btnLeftElement = btnLeftRef.current;
+        const btnRightElement = btnRightRef.current;
 
-          btnLeftElement.addEventListener("click", function (event) {
-            event.preventDefault();
-          });
-    
-          btnRightElement.addEventListener("click", function (event) {
-            event.preventDefault();
-          });
-      
-          if (carruselElement && btnLeftElement && btnRightElement) {
-            new Glider(carruselElement, {
-              slidesToShow: 1.2,
-              slidesToScroll: 0.5,
-              draggable: true,
-              arrows: {
-                prev: btnLeftElement,
-                next: btnRightElement,
-              },
-              responsive: [
-                {
-                  breakpoint: 450,
-                  settings: {
-                    slidesToShow: "2.2",
-                    slidesToScroll: "1",
-                  },
-                },
-                {
-                  breakpoint: 760,
-                  settings: {
-                    slidesToShow: "3.2",
-                    slidesToScroll: "1",
-                  },
-                },
-                {
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                  },
-                },
-              ],
-              rewind: true,
-            });
-            clearInterval(interval);
-          }
-        }, 100);
-      
-        return () => clearInterval(interval);
-      }, [btnLeftRef, btnRightRef, carruselRef]);
-  
+        const initializeGlider = () => {
+            if (carruselElement && btnLeftElement && btnRightElement) {
+                new Glider(carruselElement, {
+                    slidesToShow: 1.2,
+                    slidesToScroll: 0.5,
+                    draggable: true,
+                    arrows: {
+                        prev: btnLeftElement,
+                        next: btnRightElement,
+                    },
+                    responsive: [
+                        {
+                            breakpoint: 450,
+                            settings: {
+                                slidesToShow: "2.2",
+                                slidesToScroll: "1",
+                            },
+                        },
+                        {
+                            breakpoint: 760,
+                            settings: {
+                                slidesToShow: "3.2",
+                                slidesToScroll: "1",
+                            },
+                        },
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 4,
+                                slidesToScroll: 1,
+                            },
+                        },
+                    ],
+                    rewind: true,
+                });
+            }
+        };
+
+        if (loaded) {
+            initializeGlider();
+        } else {
+            const interval = setInterval(() => {
+                initializeGlider();
+                if (loaded) {
+                    clearInterval(interval);
+                }
+            }, 100);
+            return () => clearInterval(interval);
+        }
+    }, [loaded, carruselRef, btnLeftRef, btnRightRef]);
 
     if (!loaded) {
-      return <Loader />;
+        return <Loader />;
     }
-  
+
     return (
-      <div key={title} className="main__conteiner__s1">
-        <div className="main__conteiner__s1__titulo" id={`seccion${destino}`}>
-          <h2 key={title}>
-            <strong>{title}</strong>
-          </h2>
+        <div key={title} className="main__conteiner__s1">
+            <div className="main__conteiner__s1__titulo" id={`seccion${destino}`}>
+                <h2 key={title}>
+                    <strong>{title}</strong>
+                </h2>
+            </div>
+            <div className="carrusel__contenedor">
+                <button
+                    aria-label="Anterior"
+                    className={`carrusel__anterior ${btnLeft}`}
+                    ref={btnLeftRef}
+                >
+                    <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <div className={carrusel} id={destinos.title} ref={carruselRef}>
+                    <Card destinos={destinos} />
+                </div>
+                <button
+                    aria-label="Siguiente"
+                    className={`carrusel__siguiente ${btnRight}`}
+                    ref={btnRightRef}
+                >
+                    <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
         </div>
-        <div className="carrusel__contenedor">
-          <button
-            aria-label="Anterior"
-            className={`carrusel__anterior ${btnLeft}`}
-            ref={btnLeftRef}
-          >
-            <i className="fa fa-chevron-left" aria-hidden="true"></i>
-          </button>
-          <div className={carrusel} id={destinos.title} ref={carruselRef}>
-            <Card destinos={destinos} />
-          </div>
-          <button
-            aria-label="Siguiente"
-            className={`carrusel__siguiente ${btnRight}`}
-            ref={btnRightRef}
-          >
-            <i className="fa fa-chevron-right" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
     );
-  };
-  
+};
+
 const Loader = () => {
     return (
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
