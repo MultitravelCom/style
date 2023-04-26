@@ -238,10 +238,10 @@ const Card = ({ destinos }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} useMap={`#${destino.id}`} />
                     </picture>
                     <div className="">
-                        <div>
+                        <div className="preciStyle">
                             {destino.price}
                         </div>
-                        <div>
+                        <div className="">
                             <Button id={destino.title} link={destino.linkWa} text="Contactarme" />
                         </div>
                     </div>
