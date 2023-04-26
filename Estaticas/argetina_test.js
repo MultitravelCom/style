@@ -18,11 +18,11 @@ linkWaHeaderMobile.href = 'https://wa.link/xetnro';
 // BD
 
 const fetchDestinos = () => {
-    return fetch('https://ruta-a-tu-archivo/data.json')
+    return fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json')
       .then(response => response.json())
       .then(data => data.destinos)
       .catch(error => console.log(error));
-  };
+};
 
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
@@ -431,10 +431,10 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
+                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos} />
                             {!ocultarComponente ? null : (<BannerTopPreViaje />)}
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} />
-                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
+                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos} />
+                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos} />
                         </div>
                     </div>
                 </>
