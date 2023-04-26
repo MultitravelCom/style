@@ -361,39 +361,6 @@ function ButtonPre(props) {
         <button className="btn btnStyleBannerPre" onClick={handleClick}>{props.text}</button>
     );
 }
-const BannerTopPreViaje = () => {
-    return (
-        <>
-            <div id="containerPreViaje" className="container containerPreViaje">
-                <row className="rowStyle">
-                    <div className="main__container__left col-8">
-                        <picture>
-                            <source media="(min-width: 1024px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                            <source media="(min-width: 768px) and (max-width: 1023px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                            <source media="(max-width: 767px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                            <img alt="" src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                        </picture>
-                    </div>
-                    <div className="main__container__right col-4">
-                        <picture>
-                            <source media="(min-width: 1024px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                            <source media="(min-width: 768px) and (max-width: 1023px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                            <source media="(max-width: 767px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerMobile.webp" />
-                            <img alt="" src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                        </picture>
-                        <ButtonPre link="https://www.multitravel.com/promociones/previaje" text="Ver más" />
-                    </div>
-                </row>
-            </div>
-        </>
-    )
-}
 // ************************************************
 
 function App() {
@@ -405,16 +372,6 @@ function App() {
         setTimeout(() => {
             setLoaded(true);
         }, 2000);
-
-        const intervalo = setInterval(() => {
-            const fechaDeseada = new Date("2023-04-25T19:40:00");
-            const fechaActual = new Date();
-
-            if (fechaActual >= fechaDeseada) {
-                setOcultarComponente(false);
-                clearInterval(intervalo);
-            }
-        }, 1000);
         
         fetchDestinos().then(data => {
             setDestinos1(data.destinos1);
@@ -433,9 +390,6 @@ function App() {
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
-                            {!ocultarComponente ? null : (<BannerTopPreViaje />)}
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos} />
-                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos} />
                         </div>
                     </div>
                 </>
