@@ -370,34 +370,34 @@ const Loader = () => {
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [destinos1, setDestinos1] = React.useState([]);
-
+  
     React.useEffect(() => {
-        fetchDestinos().then(data => {
-            setDestinos1(data.destinos1);
-            setLoaded(true)
-        });
+      fetchDestinos().then(data => {
+        setDestinos1(data.destinos1);
+        setLoaded(true); // se establece en true una vez que se cargan los destinos
+      });
     }, []);
-
+  
     return (
-        <>
-            {loaded ? (
-                <>
-                    <div className="main_conteiner__s1_medio top_mkt">
-                        <BannerTop />
-                    </div>
-                    <div className="main__conteiner main__conteiner-principal container">
-                        <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos1} />
-                        </div>
-                    </div>
-                </>
-            ) : (
-                <Loader />
-            )}
-        </>
+      <>
+        {!loaded && <Loader />} {/* Mostrar Loader mientras se carga el DOM */}
+  
+        {loaded && (
+          <>
+            <div className="main_conteiner__s1_medio top_mkt">
+              <BannerTop />
+            </div>
+            <div className="main__conteiner main__conteiner-principal container">
+              <div className="carrusel">
+                <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
+                <CardContainer btnStyles={btnStyles[1]} destinos={destinos1} />
+              </div>
+            </div>
+          </>
+        )}
+      </>
     );
-}
+  }
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
