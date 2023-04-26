@@ -272,68 +272,63 @@ const CardContainer = ({ btnStyles, destinos }) => {
     const btnRightRef = React.useRef(null);
 
     React.useEffect(() => {
-        Promise.all([fetchDestinos(destinos)]).then(([destinosData]) => {
-            setDestinos1(destinosData);
+        fetchDestinos().then(data => {
+            setDestinos1(data.destinos1);
             setLoaded(true);
         });
     }, [destinos]);
 
     React.useEffect(() => {
-        const carruselElement = carruselRef.current;
-        const btnLeftElement = btnLeftRef.current;
-        const btnRightElement = btnRightRef.current;
+        const btnLeftElement = document.querySelector(`.${btnLeft}`);
+        const btnRightElement = document.querySelector(`.${btnRight}`);
 
-        const initializeGlider = () => {
-            if (carruselElement && btnLeftElement && btnRightElement) {
-                new Glider(carruselElement, {
-                    slidesToShow: 1.2,
-                    slidesToScroll: 0.5,
-                    draggable: true,
-                    arrows: {
-                        prev: btnLeftElement,
-                        next: btnRightElement,
+        btnLeftElement.addEventListener('click', function (event) {
+            event.preventDefault();
+        });
+
+        btnRightElement.addEventListener('click', function (event) {
+            event.preventDefault();
+        });
+
+        new Glider(document.querySelector(`.${carrusel}`), {
+            slidesToShow: 1.2,
+            slidesToScroll: 0.5,
+            draggable: true,
+            arrows: {
+                prev: btnLeftElement,
+                next: btnRightElement,
+            },
+            responsive: [
+                {
+                    // screens greater than >= 775px
+                    breakpoint: 450,
+                    settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: "2.2",
+                        slidesToScroll: "1",
                     },
-                    responsive: [
-                        {
-                            breakpoint: 450,
-                            settings: {
-                                slidesToShow: "2.2",
-                                slidesToScroll: "1",
-                            },
-                        },
-                        {
-                            breakpoint: 760,
-                            settings: {
-                                slidesToShow: "3.2",
-                                slidesToScroll: "1",
-                            },
-                        },
-                        {
-                            breakpoint: 1024,
-                            settings: {
-                                slidesToShow: 4,
-                                slidesToScroll: 1,
-                            },
-                        },
-                    ],
-                    rewind: true,
-                });
-            }
-        };
-
-        if (loaded) {
-            initializeGlider();
-        } else {
-            const interval = setInterval(() => {
-                initializeGlider();
-                if (loaded) {
-                    clearInterval(interval);
-                }
-            }, 100);
-            return () => clearInterval(interval);
-        }
-    }, [loaded, carruselRef, btnLeftRef, btnRightRef]);
-
+                },
+                {
+                    // screens greater than >= 775px
+                    breakpoint: 760,
+                    settings: {
+                        // Set to `auto` and provide item width to adjust to viewport
+                        slidesToShow: "3.2",
+                        slidesToScroll: "1",
+                    },
+                },
+                {
+                    // screens greater than >= 1024px
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    },
+                },
+            ],
+            rewind: true,
+        });
+    }, [btnLeft, btnRight, carrusel]);
     if (!loaded) {
         return <Loader />;
     }
