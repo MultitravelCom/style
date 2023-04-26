@@ -271,7 +271,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
     const carruselRef = React.useRef(null);
   
     React.useEffect(() => {
-      Promise.all([fetchDestinosData(destinos)]).then(([destinosData]) => {
+      Promise.all([fetchDestinos(destinos)]).then(([destinosData]) => {
         setDestinos1(destinosData);
         setLoaded(true);
       });
