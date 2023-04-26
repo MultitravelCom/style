@@ -263,6 +263,7 @@ const Card = () => {
 };
 const CardContainer = ({ btnStyles, destinos }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
+    const [destinos, setDestinos] = React.useState([]);
 
     React.useEffect(() => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
@@ -314,6 +315,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
             ],
             rewind: true,
         });
+        fetchDestinos().then(data => setDestinos(data));
     }, [btnLeft, btnRight, carrusel]);
 
     return (
