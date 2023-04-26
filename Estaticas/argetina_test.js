@@ -365,7 +365,6 @@ function ButtonPre(props) {
 
 function App() {
     const [loaded, setLoaded] = React.useState(false);
-    const [ocultarComponente, setOcultarComponente] = React.useState(true);
     const [destinos1, setDestinos1] = React.useState([]);
 
     React.useEffect(() => {
