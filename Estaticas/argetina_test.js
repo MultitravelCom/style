@@ -277,62 +277,63 @@ const CardContainer = ({ btnStyles, destinos }) => {
         setLoaded(true);
       });
     }, [destinos]);
-  
+
     React.useEffect(() => {
-      if (loaded) {
-        const btnLeftElement = btnLeftRef.current;
-        const btnRightElement = btnRightRef.current;
-        const carruselElement = carruselRef.current;
-  
-        btnLeftElement.addEventListener("click", function (event) {
-          event.preventDefault();
-        });
-  
-        btnRightElement.addEventListener("click", function (event) {
-          event.preventDefault();
-        });
-  
-        new Glider(carruselElement, {
-          slidesToShow: 1.2,
-          slidesToScroll: 0.5,
-          draggable: true,
-          arrows: {
-            prev: btnLeftElement,
-            next: btnRightElement,
-          },
-          responsive: [
-            {
-              // screens greater than >= 775px
-              breakpoint: 450,
-              settings: {
-                // Set to `auto` and provide item width to adjust to viewport
-                slidesToShow: "2.2",
-                slidesToScroll: "1",
+        const interval = setInterval(() => {
+          const carruselElement = carruselRef.current;
+          const btnLeftElement = btnLeftRef.current;
+          const btnRightElement = btnRightRef.current;
+
+          btnLeftElement.addEventListener("click", function (event) {
+            event.preventDefault();
+          });
+    
+          btnRightElement.addEventListener("click", function (event) {
+            event.preventDefault();
+          });
+      
+          if (carruselElement && btnLeftElement && btnRightElement) {
+            new Glider(carruselElement, {
+              slidesToShow: 1.2,
+              slidesToScroll: 0.5,
+              draggable: true,
+              arrows: {
+                prev: btnLeftElement,
+                next: btnRightElement,
               },
-            },
-            {
-              // screens greater than >= 775px
-              breakpoint: 760,
-              settings: {
-                // Set to `auto` and provide item width to adjust to viewport
-                slidesToShow: "3.2",
-                slidesToScroll: "1",
-              },
-            },
-            {
-              // screens greater than >= 1024px
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-              },
-            },
-          ],
-          rewind: true,
-        });
-      }
-    }, [btnLeftRef, btnRightRef, carruselRef, loaded]);
+              responsive: [
+                {
+                  breakpoint: 450,
+                  settings: {
+                    slidesToShow: "2.2",
+                    slidesToScroll: "1",
+                  },
+                },
+                {
+                  breakpoint: 760,
+                  settings: {
+                    slidesToShow: "3.2",
+                    slidesToScroll: "1",
+                  },
+                },
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                  },
+                },
+              ],
+              rewind: true,
+            });
+            clearInterval(interval);
+          }
+        }, 100);
+      
+        return () => clearInterval(interval);
+      }, [btnLeftRef, btnRightRef, carruselRef]);
   
+
     if (!loaded) {
       return <Loader />;
     }
