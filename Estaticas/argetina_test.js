@@ -256,7 +256,7 @@ const Card = () => {
                     <div className="priceStyle">
                         {destino.price}
                     </div>
-                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" />
+                    <Button id={destino.id} link={destino.linkWa} text="Contactarme" />
                 </div>
             </div>
         )));
