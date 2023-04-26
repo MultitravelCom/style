@@ -401,7 +401,7 @@ const BannerTopPreViaje = () => {
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [ocultarComponente, setOcultarComponente] = React.useState(true);
-    const [destinos, setDestinos] = React.useState([]);
+    const [destinos1, setDestinos1] = React.useState([]);
 
     React.useEffect(() => {
         setTimeout(() => {
@@ -418,10 +418,9 @@ function App() {
             }
         }, 1000);
         
-        fetchDestinos().then(data => setDestinos(data));
+        fetchDestinos().then(data => setDestinos1(data));
+
         return () => clearInterval(intervalo);
-
-
     }, []);
 
     return (
@@ -433,7 +432,7 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos} />
+                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
                             {!ocultarComponente ? null : (<BannerTopPreViaje />)}
                             <CardContainer btnStyles={btnStyles[1]} destinos={destinos} />
                             <CardContainer btnStyles={btnStyles[2]} destinos={destinos} />
