@@ -361,15 +361,10 @@ function App() {
     const [destinos1, setDestinos1] = React.useState([]);
 
     React.useEffect(() => {
-        setTimeout(() => {
-            setLoaded(true);
-        }, 2000);
-
         fetchDestinos().then(data => {
             setDestinos1(data.destinos1);
+            setLoaded(true)
         });
-
-        return () => clearInterval(intervalo);
     }, []);
 
     return (
