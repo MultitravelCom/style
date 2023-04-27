@@ -18,10 +18,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border: 1px solid #CCCCCC;
+        border: 2px solid #CCCCCC;
         border-radius: 1rem;
         margin: 64px 0;
 
+    }
+
+    .bannerNoResultr_text {
+        width: 54%;
     }
 
     .bannerNoResultr_text>h2 {
@@ -40,15 +44,51 @@
         margin-bottom: 1rem;
 
     }
+
     .bannerNoResultr_img {
         width: 137px;
         height: 206px;
     }
-    .btn_Style_NoResult{
+
+    .btn_Style_NoResult {
         width: 180px;
         height: 44px;
         border-radius: 40px;
+        border: 0;
         background-color: #00DF16;
+        color: #FFFFFF;
+    }
+    .btn_Style_NoResult:hover{
+        background-color: #00a610;
+    }
+
+    @media (max-width: 767px) {
+        .container__bannerNoResultr {
+            flex-direction: column-reverse;
+            border: 0;
+            height: auto;
+            margin: 32px 0;
+        }
+
+        .bannerNoResultr_img {
+            width: 52px;
+            height: 78px;
+        }
+
+        .bannerNoResultr_text {
+            width: 100%;
+            text-align: center;
+        }
+
+        .bannerNoResultr_text>h2 {
+            font-size: 40px;
+        }
+
+        .bannerNoResultr_text__p1,
+        .bannerNoResultr_text__p2 {
+            font-size: 16px;
+        }
+
     }
 </style>
 <div class="container__" id="root"></div>

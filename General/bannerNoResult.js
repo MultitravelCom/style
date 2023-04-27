@@ -5,7 +5,7 @@ function Button(props) {
     }
 
     return (
-        <button id={props.id} className="btn_Style_NoResult" onClick={handleClick}>{props.text}</button>
+        <button id={props.id} className={props.style} onClick={handleClick}>{props.text}</button>
     );
 }
 
@@ -17,7 +17,7 @@ return(
         <h2>Lo sentimos</h2>
             <p className= "bannerNoResultr_text__p1">En este momento no contamos con disponibilidad para esta búsqueda</p>
             <p className= "bannerNoResultr_text__p2">Te invitamos a modificar la fecha o a comunicarte con nuestro equipo de atención personalizada</p>
-            <Button link="https://wa.link/j47nea" text="Contactarme" />
+            <Button className="btn btn_Style_NoResult" link="https://wa.link/j47nea" text="Contactarme" />
         </div>
         <div className="bannerNoResultr_img">
             <img alt="icono signo de interrogación" src="https://multitravelcom.github.io/style/General/img/iconresultado.png" />
