@@ -29,7 +29,7 @@ function mostrarSeccion() {
 }
 mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
 // ************************************************
-// BD
+// ***************************  Conexion a BD ***************************************
 const fetchDestinos = async () => {
     const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
     const data = await response.json();
