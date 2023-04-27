@@ -9,7 +9,7 @@ function Button(props) {
     );
 }
 
-const BannerNoResult= () => {
+const BannerNoResult = () => {
 return(
   <>
     <div className ="container">
@@ -26,3 +26,5 @@ return(
   </>  
 )
 }
+
+ReactDOM.createRoot(document.getElementById('root')).render(<BannerNoResult />);
