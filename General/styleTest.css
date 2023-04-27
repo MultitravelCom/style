@@ -204,6 +204,9 @@ details {
   border: 0;
   background-color: #00DF16;
   color: #FFFFFF;
+  font-weight: 600;
+
+letter-spacing: 1px;
 }
 
 .btn_Style_NoResult:hover {
