@@ -263,104 +263,119 @@ const Card = () => {
     );
 };
 const CardContainer = ({ btnStyles, destinos }) => {
-    const [loaded, setLoaded] = React.useState(false);
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
-    const [destinos1, setDestinos1] = React.useState([]);
-
-    const carruselRef = React.useRef(null);
-    const btnLeftRef = React.useRef(null);
-    const btnRightRef = React.useRef(null);
-
-    React.useEffect(() => {
-        fetchDestinos().then(data => {
-            setDestinos1(data.destinos1);
-            setLoaded(true);
-        });
-    }, [destinos]);
 
     React.useEffect(() => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
         const btnRightElement = document.querySelector(`.${btnRight}`);
-
+    
         btnLeftElement.addEventListener('click', function (event) {
             event.preventDefault();
         });
-
+    
         btnRightElement.addEventListener('click', function (event) {
             event.preventDefault();
         });
-
-        new Glider(document.querySelector(`.${carrusel}`), {
-            slidesToShow: 1.2,
-            slidesToScroll: 0.5,
-            draggable: true,
-            arrows: {
-                prev: btnLeftElement,
-                next: btnRightElement,
-            },
-            responsive: [
-                {
-                    // screens greater than >= 775px
-                    breakpoint: 450,
-                    settings: {
-                        // Set to `auto` and provide item width to adjust to viewport
-                        slidesToShow: "2.2",
-                        slidesToScroll: "1",
-                    },
+    
+        const loadStylesheet = () => {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://cdn.jsdelivr.net/npm/glider-js@1.7.11/glider.min.css';
+    
+            document.head.appendChild(link);
+        }
+    
+        const loadGlider = () => {
+            new Glider(document.querySelector(`.${carrusel}`), {
+                slidesToShow: 1.2,
+                slidesToScroll: 0.5,
+                draggable: true,
+                arrows: {
+                    prev: btnLeftElement,
+                    next: btnRightElement,
                 },
-                {
-                    // screens greater than >= 775px
-                    breakpoint: 760,
-                    settings: {
-                        // Set to `auto` and provide item width to adjust to viewport
-                        slidesToShow: "3.2",
-                        slidesToScroll: "1",
+                responsive: [
+                    {
+                        // screens greater than >= 775px
+                        breakpoint: 450,
+                        settings: {
+                            // Set to `auto` and provide item width to adjust to viewport
+                            slidesToShow: "2.2",
+                            slidesToScroll: "1",
+                        },
                     },
-                },
-                {
-                    // screens greater than >= 1024px
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
+                    {
+                        // screens greater than >= 775px
+                        breakpoint: 760,
+                        settings: {
+                            // Set to `auto` and provide item width to adjust to viewport
+                            slidesToShow: "3.2",
+                            slidesToScroll: "1",
+                        },
                     },
-                },
-            ],
-            rewind: true,
-        });
+                    {
+                        // screens greater than >= 1024px
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1,
+                        },
+                    },
+                ],
+                rewind: true,
+            });
+        }
+    
+        if (typeof Glider === 'undefined') {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.js';
+            script.async = true;
+            script.onload = () => {
+                loadStylesheet();
+                loadGlider();
+            };
+    
+            document.head.appendChild(script);
+    
+            setTimeout(() => {
+                if (typeof Glider === 'undefined') {
+                    console.error('Failed to load Glider.');
+                }
+            }, 100);
+        } else {
+            loadStylesheet();
+            loadGlider();
+        }
     }, [btnLeft, btnRight, carrusel]);
-    if (!loaded) {
-        return <Loader />;
-    }
 
     return (
-        <div key={title} className="main__conteiner__s1">
-            <div className="main__conteiner__s1__titulo" id={`seccion${destino}`}>
-                <h2 key={title}>
-                    <strong>{title}</strong>
-                </h2>
-            </div>
-            <div className="carrusel__contenedor">
-                <button
-                    aria-label="Anterior"
-                    className={`carrusel__anterior ${btnLeft}`}
-                    ref={btnLeftRef}
-                >
-                    <i className="fa fa-chevron-left" aria-hidden="true"></i>
-                </button>
-                <div className={carrusel} id={destinos.title} ref={carruselRef}>
-                    <Card destinos={destinos} />
+        <>
+            <div key={title} className="main__conteiner__s1">
+                <div className="main__conteiner__s1__titulo" id={`seccion${destino}`}>
+                    <h2 key={title}>
+                        <strong>{title}</strong>
+                    </h2>
                 </div>
-                <button
-                    aria-label="Siguiente"
-                    className={`carrusel__siguiente ${btnRight}`}
-                    ref={btnRightRef}
-                >
-                    <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                </button>
+                <div className="carrusel__contenedor">
+                    <button
+                        aria-label="Anterior"
+                        className={`carrusel__anterior ${btnLeft}`}
+                    >
+                        <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <div className={carrusel} id={destinos.title}>
+                        <Card destinos={destinos} />
+                    </div>
+                    <button
+                        aria-label="Siguiente"
+                        className={`carrusel__siguiente ${btnRight}`}
+                    >
+                        <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-    );
+        </>
+    )
 };
 
 const Loader = () => {
