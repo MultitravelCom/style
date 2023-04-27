@@ -20,7 +20,7 @@ return(
             <Button link={destino.linkWa} text="Contactarme" />
         </div>
         <div className="bannerNoResultr_img">
-            <img alt="icono signo de interrogación" src="" />
+            <img alt="icono signo de interrogación" src="https://multitravelcom.github.io/style/General/img/iconresultado.png" />
         </div>
     </div>
   </>  
