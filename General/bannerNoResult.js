@@ -27,4 +27,4 @@ return(
 )
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<BannerNoResult />);
+ReactDOM.createRoot(document.querySelector('.msg-box--no-results')).render(<BannerNoResult />);
