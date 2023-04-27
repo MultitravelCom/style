@@ -27,4 +27,26 @@ return(
 )
 }
 
-ReactDOM.createRoot(document.querySelector('.msg-box--no-results')).render(<BannerNoResult />);
+// Función que renderiza el componente <BannerNoResult />
+function renderBannerNoResult() {
+    ReactDOM.createRoot(document.querySelector('.msg-box--no-results')).render(<BannerNoResult />);
+  }
+  
+  // Función que comprueba si la clase msg-box--no-results está disponible en el DOM
+  function checkForClass() {
+    const el = document.querySelector('.msg-box--no-results');
+    if (el) {
+      // Si la clase está disponible, se renderiza el componente
+      renderBannerNoResult();
+      observer.disconnect();
+    }
+  }
+  
+  // Crea una instancia de MutationObserver
+  const observer = new MutationObserver(checkForClass);
+  
+  // Observa los cambios en el cuerpo del documento
+  observer.observe(document.body, { childList: true, subtree: true });
+  
+  // Comprueba si la clase ya está disponible en el DOM
+  checkForClass();
