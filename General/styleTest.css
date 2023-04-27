@@ -144,9 +144,3 @@
     margin: 0px -11px;
   }
   }
-
-
-  /* TASK MULT-30 */
-  .msg-box .msg-box--no-results{
-    display: none;
-  }
