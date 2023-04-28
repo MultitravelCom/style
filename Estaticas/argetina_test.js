@@ -151,6 +151,7 @@ const Card = () => {
     );
 };
 const CardContainer = ({ btnStyles, destinos }) => {
+    console.log("Data llegó a CardContainer:", destinos);
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
     const setupGlider = () => {
@@ -268,7 +269,6 @@ function App() {
 
     React.useEffect(() => {
         fetchDestinos().then(data => {
-            console.log(data);
             setDestinos(data.destinos);
             setLoaded(true);
         });
