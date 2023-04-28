@@ -50,7 +50,6 @@ mostrarSeccion();
 const fetchDestinos = async () => {
     const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
     const data = await response.json();
-    console.log(data);
 
     return data;
 
@@ -113,6 +112,7 @@ const Card = () => {
 
     React.useEffect(() => {
         fetchDestinos().then(data => {
+            console.log(data.destinos);
             setDestinos(data.destinos);
             setLoaded(true);
         });
