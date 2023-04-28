@@ -12,9 +12,9 @@
 #flight-searcher-onlydirects{
   display: none;
 }
-#flights-searcher-more-options{
+/* #flights-searcher-more-options{
   display: none
-}
+} */
 /*  */
 .main__conteiner>img {
   width: 100%;
@@ -408,9 +408,9 @@ source>img {
     border-radius: 1rem !important;
   }
 
-  .show-more {
+  /* .show-more {
     display: none;
-  }
+  } */
 
   #flights-searcher {
     margin: 8px;
