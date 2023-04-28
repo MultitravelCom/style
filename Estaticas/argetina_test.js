@@ -105,15 +105,15 @@ const BannerTop = () => {
 }
 const Card = () => {
 
-    const [destinos, setDestinos1] = React.useState([]);
+    const [destinos, setDestinos] = React.useState([]);
 
     React.useEffect(() => {
-        fetchDestinos().then(data => setDestinos1(data.destinos1));
+        fetchDestinos().then(data => setDestinos(data.destinos));
     }, []);
 
     return (
         <>
-            {destinos.map((destino) => (
+            {destinos.length > 0 && destinos.map((destino) => (
                 <div key={destino.id} className="carrusel__elemento">
                     <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
                         <picture>
