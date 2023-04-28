@@ -268,6 +268,7 @@ function App() {
 
     React.useEffect(() => {
         fetchDestinos().then(data => {
+            console.log(data);
             setDestinos(data.destinos);
             setLoaded(true);
         });
