@@ -15,7 +15,6 @@ function addGliderStylesheet() {
     head.appendChild(meta);
     head.appendChild(link);
 }
-
 addGliderStylesheet();
 
 const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
@@ -38,7 +37,7 @@ function mostrarSeccion() {
         setTimeout(mostrarSeccion, 500); // Intentar nuevamente después de 500 milisegundos
     }
 }
-mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
+mostrarSeccion(); 
 // ************************************************
 // ***************************  Conexion a BD ***************************************
 const fetchDestinos = async () => {
@@ -132,7 +131,7 @@ const Card = () => {
 const CardContainer = ({ btnStyles, destinos }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
-    React.useEffect(() => {
+    React.useLayoutEffect(() => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
         const btnRightElement = document.querySelector(`.${btnRight}`);
 
@@ -200,7 +199,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div className={carrusel} id={destinos.title}>
-                        <Card destinos={destinos} />
+                    {destinos && <Card destinos={destinos} />}
                     </div>
                     <button
                         aria-label="Siguiente"
