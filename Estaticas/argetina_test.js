@@ -113,13 +113,18 @@ const Card = () => {
         fetchDestinos()
           .then(data => {
             setDestinos(data.destinos);
-            setLoaded(true);
-            console.log(destinos);
+            if (data.destinos.length > 0) {
+              setLoaded(true);
+            } else {
+              setLoaded(true);
+              setNoDestinos(true);
+            }
           })
           .catch(error => {
             console.log(error);
           });
       }, []);
+      
   
     return (
       <>
