@@ -110,19 +110,11 @@ const Card = () => {
 
     const [destinos, setDestinos] = React.useState([]);
 
-    const getDestinos = () => {
-        fetchDestinos()
-          .then(data => {
-            setDestinos(data.destinos);
-            console.log(data.destinos);
-          })
-          .catch(error => {
-            console.log(error);
-          });
-      };
-
     React.useEffect(() => {
-        getDestinos();
+        fetchDestinos().then(data => {
+            setDestinos(data.destinos);
+            setLoaded(true);
+        });
     }, []);
 
     return (
