@@ -4,6 +4,7 @@ function addHeaderLinks() {
     const bannerNoResult = document.createElement('script');
 
     bannerNoResult.src = 'https://multitravelcom.github.io/style/General/bannerNoResult.js';
+    bannerNoResult.type = "text/babel";
 
 
     head.appendChild(bannerNoResult);
