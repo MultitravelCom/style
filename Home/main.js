@@ -1,7 +1,4 @@
 window.addEventListener('load', () => {
-    // Activa la solapa vuelos
-    const secondNavItem = document.querySelectorAll('#main-menu-products .nav-elem')[1];
-    secondNavItem.classList.contains('active') ? null : secondNavItem.classList.add('active');
 
     // Mover div fuera del mas opciones.
     let divToMove = document.getElementsByClassName("checkbox")[0];

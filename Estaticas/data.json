@@ -2,49 +2,49 @@
     "destinos": {
         "destinos1": [
             {
-            "id": "a1",
-            "destino": "Bariloche",
-            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp",
-            "className": "uno",
-            "linkWa": "https://wa.link/ncvo1x",
-            "title": "Paquete a Bariloche 7 noches",
-            "price": "$142.300"
+                "id": "a1",
+                "destino": "Bariloche",
+                "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp",
+                "className": "uno",
+                "linkWa": "https://wa.link/ncvo1x",
+                "title": "Paquete a Bariloche 7 noches",
+                "price": "$142.300"
             },
             {
-            "id": "a2",
-            "destino": "Bariloche",
-            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-b%20(1).webp",
-            "className": "uno",
-            "linkWa": "https://wa.link/s507zo",
-            "title": "Paquete a Bariloche 5 noches",
-            "price": "$119.100"
+                "id": "a2",
+                "destino": "Bariloche",
+                "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-b%20(1).webp",
+                "className": "uno",
+                "linkWa": "https://wa.link/s507zo",
+                "title": "Paquete a Bariloche 5 noches",
+                "price": "$119.100"
             },
             {
-            "id": "a3",
-            "destino": "Bariloche",
-            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-c%20(1).webp",
-            "className": "uno",
-            "linkWa": "https://wa.link/duchkz",
-            "title": "Hotel Villa Sofia",
-            "price": "$24.200"
+                "id": "a3",
+                "destino": "Bariloche",
+                "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-c%20(1).webp",
+                "className": "uno",
+                "linkWa": "https://wa.link/duchkz",
+                "title": "Hotel Villa Sofia",
+                "price": "$24.200"
             },
             {
-            "id": "a4",
-            "destino": "Bariloche",
-            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-d%20(1).webp",
-            "className": "uno",
-            "linkWa": "https://wa.link/2z5hpp",
-            "title": "Hotel Desing Suites",
-            "price": "$35.300"
+                "id": "a4",
+                "destino": "Bariloche",
+                "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-d%20(1).webp",
+                "className": "uno",
+                "linkWa": "https://wa.link/2z5hpp",
+                "title": "Hotel Desing Suites",
+                "price": "$35.300"
             },
             {
-            "id": "a5",
-            "destino": "Bariloche",
-            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-e%20(1).webp",
-            "className": "uno",
-            "linkWa": "https://wa.link/dv0ucs",
-            "title": "Vuelo a Bariloche",
-            "price": "$18.600"
+                "id": "a5",
+                "destino": "Bariloche",
+                "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-e%20(1).webp",
+                "className": "uno",
+                "linkWa": "https://wa.link/dv0ucs",
+                "title": "Vuelo a Bariloche",
+                "price": "$18.600"
             }
         ],
         "destinos2": [
@@ -94,7 +94,7 @@
                 "price": "$22.900"
             }
         ],
-        "destinos3":[
+        "destinos3": [
             {
                 "id": "c1",
                 "destino": "Mendoza",
