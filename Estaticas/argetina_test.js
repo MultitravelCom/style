@@ -109,6 +109,7 @@ const BannerTop = () => {
 const Card = () => {
 
     const [destinos, setDestinos] = React.useState([]);
+    const [loaded, setLoaded] = React.useState(false);
 
     React.useEffect(() => {
         fetchDestinos().then(data => {
@@ -143,7 +144,6 @@ const Card = () => {
     );
 };
 const CardContainer = ({ btnStyles, destinos }) => {
-    console.log("Data llegó a CardContainer:", destinos);
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
     const setupGlider = () => {
