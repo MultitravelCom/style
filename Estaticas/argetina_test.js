@@ -112,14 +112,14 @@ const Card = () => {
 
     const getDestinos = () => {
         fetchDestinos()
-            .then(data => {
-                setDestinos(data.destinos);
-                console.log(data.destinos);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    };
+          .then(data => {
+            setDestinos(data.destinos);
+            console.log(data.destinos);
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      };
 
     React.useEffect(() => {
         getDestinos();
@@ -267,14 +267,14 @@ function App() {
     const [destinos, setDestinos] = React.useState([]);
 
     React.useEffect(() => {
-        fetchDestinos()
-            .then(data => {
-                setDestinos(data.destinos);
-                console.log(data.destinos);
-            })
-            .catch(error => {
-                console.log(error);
-            });
+       fetchDestinos()
+          .then(data => {
+            setDestinos(data.destinos);
+            console.log(data.destinos);
+          })
+          .catch(error => {
+            console.log(error);
+          });
     }, []);
 
     return (
