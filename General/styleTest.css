@@ -152,6 +152,10 @@ details {
 }
 /* *********************************************************************************************** */
 /* TASK MULT-30 */
+.msg-box, 
+.msg-box--no-results{
+  display: none;
+}
 .page-header-bar {
   padding: 0 !important;
 }
@@ -169,7 +173,7 @@ details {
 
 .bannerNoResultr_text {
   width: 54%;
-  text-align: left
+  text-align: left;
 }
 
 .bannerNoResultr_text>h2 {
