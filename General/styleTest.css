@@ -152,8 +152,7 @@ details {
 }
 /* *********************************************************************************************** */
 /* TASK MULT-30 */
-.msg-box, 
-.msg-box--no-results{
+.msg-box{
   display: none;
 }
 .page-header-bar {
