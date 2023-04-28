@@ -107,8 +107,13 @@ const Card = () => {
 
     const [destinos, setDestinos] = React.useState([]);
 
+    const getDestinos = async () => {
+        const data = await fetchDestinos();
+        setDestinos(data.destinos);
+    };
+
     React.useEffect(() => {
-        fetchDestinos().then(data => setDestinos(data.destinos));
+        getDestinos();
     }, []);
 
     return (
@@ -132,7 +137,7 @@ const Card = () => {
                     </div>
                 </div>
             ))
-        ):( <Loader /> )}
+            ) : (<Loader />)}
         </>
     );
 };
