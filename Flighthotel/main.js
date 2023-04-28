@@ -1,15 +1,14 @@
-// window.addEventListener('load', ()=>{
-//     let displayMaster = document.querySelector('.master-selector');
-//     let removeHidden = document.querySelectorAll(".master-selector-option");
-    
-//     removeHidden.forEach(el =>{
-//         el.classList.remove("hidden")
-//     });
-//         displayMaster.style.display = 'inline-block';
+function addHeaderLinks() {
+  const head = document.head || document.getElementsByTagName('head')[0];
+  const meta = document.createElement('meta');
 
-// });
+  const bannerNoResult = document.createElement('script');
+  bannerNoResult.src = 'https://multitravelcom.github.io/style/General/bannerNoResult.js';
+  bannerNoResult.textContent = "text/babel";
 
-// /* MULTI-126 */
+  head.appendChild(bannerNoResult);
+}
+addHeaderLinks();
 
 window.addEventListener('load', () => {
     let displayMaster = document.querySelector('.master-selector');
