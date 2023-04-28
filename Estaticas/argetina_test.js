@@ -129,90 +129,103 @@ const Card = () => {
         </>
     );
 };
-const CardContainer = ({ btnStyles, destinos }) => {
-    const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
-
-    React.useEffect(() => {
-        const btnLeftElement = document.querySelector(`.${btnLeft}`);
-        const btnRightElement = document.querySelector(`.${btnRight}`);
-
-        btnLeftElement.addEventListener('click', function (event) {
-            event.preventDefault();
-        });
-
-        btnRightElement.addEventListener('click', function (event) {
-            event.preventDefault();
-        });
-
-        new Glider(document.querySelector(`.${carrusel}`), {
-            slidesToShow: 1.2,
-            slidesToScroll: 0.5,
-            draggable: true,
-            arrows: {
-                prev: btnLeftElement,
-                next: btnRightElement,
+class CardContainer extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        // Inicializa el estado de ser necesario
+      };
+    }
+  
+    componentDidMount() {
+      const { btnStyles } = this.props;
+      const { btnLeft, btnRight, carrusel } = btnStyles;
+  
+      const btnLeftElement = document.querySelector(`.${btnLeft}`);
+      const btnRightElement = document.querySelector(`.${btnRight}`);
+  
+      btnLeftElement.addEventListener('click', function (event) {
+        event.preventDefault();
+      });
+  
+      btnRightElement.addEventListener('click', function (event) {
+        event.preventDefault();
+      });
+  
+      new Glider(document.querySelector(`.${carrusel}`), {
+        slidesToShow: 1.2,
+        slidesToScroll: 0.5,
+        draggable: true,
+        arrows: {
+          prev: btnLeftElement,
+          next: btnRightElement,
+        },
+        responsive: [
+          {
+            // screens greater than >= 775px
+            breakpoint: 450,
+            settings: {
+              // Set to `auto` and provide item width to adjust to viewport
+              slidesToShow: "2.2",
+              slidesToScroll: "1",
             },
-            responsive: [
-                {
-                    // screens greater than >= 775px
-                    breakpoint: 450,
-                    settings: {
-                        // Set to `auto` and provide item width to adjust to viewport
-                        slidesToShow: "2.2",
-                        slidesToScroll: "1",
-                    },
-                },
-                {
-                    // screens greater than >= 775px
-                    breakpoint: 760,
-                    settings: {
-                        // Set to `auto` and provide item width to adjust to viewport
-                        slidesToShow: "3.2",
-                        slidesToScroll: "1",
-                    },
-                },
-                {
-                    // screens greater than >= 1024px
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
-                    },
-                },
-            ],
-            rewind: true,
-        });
-    }, [btnLeft, btnRight, carrusel]);
-
-    return (
+          },
+          {
+            // screens greater than >= 775px
+            breakpoint: 760,
+            settings: {
+              // Set to `auto` and provide item width to adjust to viewport
+              slidesToShow: "3.2",
+              slidesToScroll: "1",
+            },
+          },
+          {
+            // screens greater than >= 1024px
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+        rewind: true,
+      });
+    }
+  
+    render() {
+      const { btnStyles, destinos } = this.props;
+      const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
+  
+      return (
         <>
-            <div key={title} className="main__conteiner__s1">
-                <div className="main__conteiner__s1__titulo" id={`seccion${destino}`}>
-                    <h2 key={title}>
-                        <strong>{title}</strong>
-                    </h2>
-                </div>
-                <div className="carrusel__contenedor">
-                    <button
-                        aria-label="Anterior"
-                        className={`carrusel__anterior ${btnLeft}`}
-                    >
-                        <i className="fa fa-chevron-left" aria-hidden="true"></i>
-                    </button>
-                    <div className={carrusel} id={destinos.title}>
-                        <Card destinos={destinos} />
-                    </div>
-                    <button
-                        aria-label="Siguiente"
-                        className={`carrusel__siguiente ${btnRight}`}
-                    >
-                        <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                    </button>
-                </div>
+          <div key={title} className="main__conteiner__s1">
+            <div className="main__conteiner__s1__titulo" id={`seccion${destino}`}>
+              <h2 key={title}>
+                <strong>{title}</strong>
+              </h2>
             </div>
+            <div className="carrusel__contenedor">
+              <button
+                aria-label="Anterior"
+                className={`carrusel__anterior ${btnLeft}`}
+              >
+                <i className="fa fa-chevron-left" aria-hidden="true"></i>
+              </button>
+              <div className={carrusel} id={destinos.title}>
+                <Card destinos={destinos} />
+              </div>
+              <button
+                aria-label="Siguiente"
+                className={`carrusel__siguiente ${btnRight}`}
+              >
+                <i className="fa fa-chevron-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
         </>
-    )
-};
+      );
+    }
+  }
 
 const Loader = () => {
     return (
