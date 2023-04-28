@@ -106,43 +106,67 @@ const BannerTop = () => {
     )
 }
 const Card = () => {
-
     const [destinos, setDestinos] = React.useState([]);
     const [loaded, setLoaded] = React.useState(false);
-
+  
     React.useEffect(() => {
-        fetchDestinos().then(data => {
-            console.log(data.destinos);
-            setDestinos(data.destinos);
-            setLoaded(true);
-        });
+      fetchDestinos().then(data => {
+        setDestinos(data.destinos);
+        setLoaded(true);
+      });
     }, []);
-
+  
     return (
-        <>
-            {destinos.length > 0 ? (destinos.map((destino) => (
-                <div key={destino.id} className="carrusel__elemento">
-                    <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
-                        <picture>
-                            <map name={destino.id}>
-                                <area target="_blank" alt={destino.title} title={destino.title} href={destino.linkWa} coords={destino.coords} shape="rect" />
-                            </map>
-                            <source media="(min-width: 1024px)" srcSet={destino.img} />
-                            <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
-                            <source media="(max-width: 767px)" srcSet={destino.img} />
-                            <img alt={`Imagen banner ${destino.title}`} src={destino.img} useMap={`#${destino.id}`} />
-                        </picture>
-                        <div className="priceStyle">
-                            {destino.price}
-                        </div>
-                        <Button id={destino.id} link={destino.linkWa} text="Contactarme" />
-                    </div>
+      <>
+        {loaded ? (
+          destinos.length > 0 ? (
+            destinos.map(destino => (
+              <div key={destino.id} className="carrusel__elemento">
+                <div
+                  className="main__conteiner__s1__destacado__card uno"
+                  style={{ height: "100%", width: "100%" }}
+                >
+                  <picture>
+                    <map name={destino.id}>
+                      <area
+                        target="_blank"
+                        alt={destino.title}
+                        title={destino.title}
+                        href={destino.linkWa}
+                        coords={destino.coords}
+                        shape="rect"
+                      />
+                    </map>
+                    <source media="(min-width: 1024px)" srcSet={destino.img} />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1023px)"
+                      srcSet={destino.img}
+                    />
+                    <source media="(max-width: 767px)" srcSet={destino.img} />
+                    <img
+                      alt={`Imagen banner ${destino.title}`}
+                      src={destino.img}
+                      useMap={`#${destino.id}`}
+                    />
+                  </picture>
+                  <div className="priceStyle">{destino.price}</div>
+                  <Button
+                    id={destino.id}
+                    link={destino.linkWa}
+                    text="Contactarme"
+                  />
                 </div>
+              </div>
             ))
-            ) : (<Loader />)}
-        </>
+          ) : (
+            <p>No hay destinos disponibles.</p>
+          )
+        ) : (
+          <Loader />
+        )}
+      </>
     );
-};
+  };
 const CardContainer = ({ btnStyles, destinos }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
