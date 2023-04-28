@@ -108,18 +108,18 @@ const BannerTop = () => {
 }
 const Card = () => {
 
-    const [destinos, setDestinos] = React.useState([]);
+    const [cards, setDestinos] = React.useState([]);
 
     const getDestinos = () => {
         fetchDestinos()
-          .then(data => {
-            setDestinos(data.destinos);
-            console.log(data.destinos);
-          })
-          .catch(error => {
-            console.log(error);
-          });
-      };
+            .then(data => {
+                setDestinos(data.cards);
+                console.log(data.cards);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    };
 
     React.useEffect(() => {
         getDestinos();
@@ -264,13 +264,17 @@ const Loader = () => {
 
 function App() {
     const [loaded, setLoaded] = React.useState(false);
-    const [destinos, setDestinos] = React.useState([]);
+    const [cards, setDestinos] = React.useState([]);
 
     React.useEffect(() => {
-        fetchDestinos().then(data => {
-            setDestinos(data.destinos);
-            setLoaded(true);
-        });
+        fetchDestinos()
+            .then(data => {
+                setDestinos(data.cards);
+                console.log(data.cards);
+            })
+            .catch(error => {
+                console.log(error);
+            });
     }, []);
 
     return (
@@ -284,9 +288,9 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos.destinos1} />
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos.destinos2} />
-                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos.destinos3} />
+                            <CardContainer btnStyles={btnStyles[0]} destinos={cards.destinos1} />
+                            <CardContainer btnStyles={btnStyles[1]} destinos={cards.destinos2} />
+                            <CardContainer btnStyles={btnStyles[2]} destinos={cards.destinos3} />
                         </div>
                     </div>
                 </>
