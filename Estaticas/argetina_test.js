@@ -1,11 +1,20 @@
-const head = document.head || document.getElementsByTagName('head')[0];
-const meta = document.createElement('meta');
+function addGliderStylesheet() {
+    const head = document.head || document.getElementsByTagName('head')[0];
+    const meta = document.createElement('meta');
 
-meta.setAttribute('name', 'description');
-meta.setAttribute('content', 'Compará paquetes a Argentina y conseguí los mejores precios en alojamiento y vuelos a Bariloche, Iguazú y Mendoza. Solicitá atención personalizada por whatsapp');
+    document.title = "Paquetes turísticos a Argentina | Multitravel.com"
 
-head.appendChild(meta);
-document.title = "Paquetes turísticos a Argentina | Multitravel.com"
+    meta.setAttribute('name', 'description');
+    meta.setAttribute('content', 'Compará paquetes a Argentina y conseguí los mejores precios en alojamiento y vuelos a Bariloche, Iguazú y Mendoza. Solicitá atención personalizada por whatsapp');
+
+    const link = document.createElement('link');
+
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.jsdelivr.net/npm/glider-js/glider.min.css';
+
+    head.appendChild(meta);
+    head.appendChild(link);
+}
 
 const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
 const linkWaFixed = document.querySelector('.whatsAppFixes a');
@@ -92,7 +101,6 @@ const Card = () => {
 
     React.useEffect(() => {
         fetchDestinos().then(data => setDestinos1(data.destinos1));
-        console.log(destinos);
     }, []);
 
     return (
