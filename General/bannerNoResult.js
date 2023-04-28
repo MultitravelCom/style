@@ -29,7 +29,7 @@ return(
 
 // Función que renderiza el componente <BannerNoResult />
 function renderBannerNoResult() {
-    ReactDOM.createRoot(document.querySelector('js-results-list-placeholder')).render(<BannerNoResult />);
+    ReactDOM.createRoot(document.querySelector('.results-list__body')).render(<BannerNoResult />);
   }
   
   // Función que comprueba si la clase msg-box--no-results está disponible en el DOM
