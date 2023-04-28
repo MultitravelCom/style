@@ -152,6 +152,10 @@ details {
 }
 /* *********************************************************************************************** */
 /* TASK MULT-30 */
+.msg-box, 
+.msg-box--no-results{
+  display: none;
+}
 .page-header-bar {
   padding: 0 !important;
 }
@@ -229,6 +233,7 @@ letter-spacing: 1px;
 
   .bannerNoResultr_text>h2 {
     font-size: 40px;
+    text-align: center
   }
 
   .bannerNoResultr_text__p1,
