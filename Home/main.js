@@ -18,7 +18,6 @@ window.addEventListener('load', () => {
 
     // cambiar el texto del label
     label.text('Multidestino');
-
     document.querySelector('.radio').style.display = 'inline-block';
 
 });
