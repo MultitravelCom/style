@@ -138,6 +138,15 @@ const Card = () => {
 const CardContainer = ({ btnStyles, destinos }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
+    const [destinos, setDestinos] = React.useState([]);
+
+    React.useEffect(() => {
+        fetchDestinos().then(data => {
+            setDestinos(data.destinos);
+            setLoaded(true);
+        });
+    }, []);
+
     const setupGlider = () => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
         const btnRightElement = document.querySelector(`.${btnRight}`);
