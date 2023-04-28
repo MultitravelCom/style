@@ -10,7 +10,7 @@ function addGliderStylesheet() {
     const link = document.createElement('link');
 
     link.rel = 'stylesheet';
-    link.href = 'https://cdn.jsdelivr.net/npm/glider-js/glider.min.css';
+    link.href = 'https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css';
 
     head.appendChild(meta);
     head.appendChild(link);
