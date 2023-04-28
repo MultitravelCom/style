@@ -267,14 +267,10 @@ function App() {
     const [destinos, setDestinos] = React.useState([]);
 
     React.useEffect(() => {
-       fetchDestinos()
-          .then(data => {
+        fetchDestinos().then(data => {
             setDestinos(data.destinos);
-            console.log(data.destinos);
-          })
-          .catch(error => {
-            console.log(error);
-          });
+            setLoaded(true);
+        });
     }, []);
 
     return (
