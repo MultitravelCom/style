@@ -1,110 +1,118 @@
 /* Alojamiento */
-    :root {
-        --border-radius-divs: 8px 40px 8px 40px;
-        --margin-section: 3rem;
-        --border-solid-card: 2px solid #dddd;
-        --fondo-card: #ffffff;
-        --box-shadow: 10px 10px 6px -5px rgba(0,0,0,0.120);
-        --fondo-btn: #0d4e88;
-        --fondo-btn-hover: #324352;
+:root {
+    --border-radius-divs: 8px 40px 8px 40px;
+    --margin-section: 3rem;
+    --border-solid-card: 2px solid #dddd;
+    --fondo-card: #ffffff;
+    --box-shadow: 10px 10px 6px -5px rgba(0, 0, 0, 0.120);
+    --fondo-btn: #0d4e88;
+    --fondo-btn-hover: #324352;
+}
+
+/* ESTILOS GENERALES Hotels */
+
+.hotel-result {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.main-content {
+    background-color: white !important;
+}
+
+.promo_mobile {
+    display: revert;
+}
+
+.main__conteiner-principal {
+    margin-top: -92px;
+}
+
+.promo_mobile_cards {
+    display: none;
+}
+
+.text_center {
+    padding: 0;
+    margin: 0;
+}
+
+.img-horizontal {
+    width: 100%;
+}
+
+.main__conteiner__s2 {
+    margin: 4rem 0;
+}
+
+.main__conteiner__titulo {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+}
+
+/* SECCION DESTACODOS */
+
+.uno {
+    width: 382px;
+    height: 100%;
+}
+
+.dos {
+    width: 382px;
+    height: 100%;
+}
+
+.tres {
+    width: 382px;
+    height: 100%;
+}
+
+
+/* MOBILE */
+/* SCROLL CARDS */
+
+@media (max-width: 600px) {
+    .main__conteiner__s2__doble {
+        display: flex;
+        flex-wrap: wrap;
     }
 
-    /* ESTILOS GENERALES Hotels */
-    
-    .hotel-result{
-        border-radius: 1rem;
-        overflow: hidden;
+    .main__conteiner__s3__triple {
+        flex-direction: column;
     }
 
-    .main-content {
-        background-color: white !important;
+    .main__conteiner__s3__triple__card {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 77px;
     }
 
-    .promo_mobile {
-        display: revert;
-    }
-
-    .main__conteiner-principal {
-        margin-top: -92px;
-    }
-    .promo_mobile_cards{
-            display: none;
-        }
-
-    .text_center{
-        padding: 0;
-        margin: 0;
-    }
-    .img-horizontal {
+    .main__conteiner__s3__triple__card__texto {
         width: 100%;
     }
-    .main__conteiner__s2 {
-        margin: 4rem 0;
+
+    .main__conteiner__s3__triple__card__img {
+        border-radius: 0 8px;
+        width: 147px;
     }
 
-    .main__conteiner__titulo {
-        font-weight: 700;
-        margin-bottom: 1rem;
-	font-size: 20px;
-	letter-spacing: 0.1px;
+    .pagos__card__texto__btn {
+        display: none
     }
 
-    /* SECCION DESTACODOS */
-
-    .uno {
-        width: 382px;
-        height: 100%;
+    /* Estilos btn buscar mobile */
+    .pull-right {
+        width: 100%;
     }
 
-    .dos {
-        width: 382px;
-        height: 100%;
+    /* Estilo caja de busqueda */
+    #hotel-searcher {
+        border-radius: 1rem;
+        margin: 8px;
+    }
 }
-	
-    .tres {
-        width: 382px;
-        height: 100%;
-    }
-
-
-     /* MOBILE */
-    /* SCROLL CARDS */
-
-    @media (max-width: 600px) {
-        .main__conteiner__s2__doble {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .main__conteiner__s3__triple{
-            flex-direction: column;
-        }
-        .main__conteiner__s3__triple__card {
-            display: flex;
-            flex-direction: row-reverse;
-            height: 77px;
-        }
-        .main__conteiner__s3__triple__card__texto{
-            width: 100%;
-        }
-        .main__conteiner__s3__triple__card__img{
-            border-radius: 0 8px;
-            width: 147px;
-        }
-        .pagos__card__texto__btn{
-            display: none
-        }
-
-               /* Estilos btn buscar mobile */
-               .pull-right{
-                width:100%;
-            }
-    
-            /* Estilo caja de busqueda */
-            #hotel-searcher{
-                border-radius: 1rem;
-                margin: 8px;
-            }
-    }
 
 
 /* COMENTARIOS */
@@ -365,30 +373,31 @@ span .glyphicon {
 
 }
 
-    @media (max-width: 564px) {
-        .comentarios_seccion {
-            grid-template-columns: repeat(2, minmax(100%, 1fr));
-            grid-template-rows: repeat(1, 1fr);
-        }
-
-        .promo_mobile {
-            display: none;
-        }
-
-        .comentarios_seccion::-webkit-scrollbar {
-            width: 0;
-        }
+@media (max-width: 564px) {
+    .comentarios_seccion {
+        grid-template-columns: repeat(2, minmax(100%, 1fr));
+        grid-template-rows: repeat(1, 1fr);
     }
+
+    .promo_mobile {
+        display: none;
+    }
+
+    .comentarios_seccion::-webkit-scrollbar {
+        width: 0;
+    }
+}
 
 /* MEDIA MOBILE */
 @media (max-width: 767px) {
-/*  Caja de busqueda Alojamiento    */
-    .btn-more-options{
+
+    /*  Caja de busqueda Alojamiento    */
+    .btn-more-options {
         display: none;
-}
+    }
 }
 
 /* Ocular telefono - MULT61 */
-.details-card__phone{
+.details-card__phone {
     display: none;
 }
