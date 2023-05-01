@@ -6,7 +6,7 @@ function Button(props) {
     }
     
     return (
-        <button id="btnStyleBannerSearch" className="btnStyleBannerSearch" onClick={handleClick}>{props.text}</button>
+        <button id={props.id} className={props.style} onClick={handleClick}>{props.text}</button>
         );
 }
 const BannerSearchResult = () => {
@@ -24,7 +24,7 @@ const BannerSearchResult = () => {
                         <source media="(max-width: 767px)" srcSet="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" />
                         <img className="main__container__img__img" src="https://multitravelcom.github.io/MT/Secciones/ResultadoBusqueda/busqueda.webp" alt="Imagen banner contacto personalizado" />
                     </picture>
-                    <Button link="https://wa.link/j47nea" text="Contactarme" />
+                    <Button style="btn btnStyleBannerSearch" link="https://wa.link/j47nea" text="Contactarme" />
                 </div>
             </div>
         </>
