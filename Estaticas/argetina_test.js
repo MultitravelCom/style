@@ -58,7 +58,7 @@ const fetchDestinos = async () => {
 // Filter
 function filtrarDestinos(destinos, nombreDestino) {
     return destinos.filter(destino => destino.lugar === nombreDestino);
-  };
+};
 
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
@@ -122,24 +122,24 @@ const Card = ({ destinosFiltrados }) => {
 
     eact.useEffect(() => {
         fetchDestinos()
-          .then((data) => {
-            // Verificar si data.destinos es un array
-            if (Array.isArray(data.destinos)) {
-              if (data.destinos.length > 0) {
-                setLoaded(true);
-                setDestinos(data.destinos);
-              } else {
-                setLoaded(true);
-                setNoDestinos(true);
-              }
-            } else {
-              console.log("La propiedad 'destinos' no es un array.");
-            }
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      }, []);
+            .then((data) => {
+                // Verificar si data.destinos es un array
+                if (Array.isArray(data.destinos)) {
+                    if (data.destinos.length > 0) {
+                        setLoaded(true);
+                        setDestinos(data.destinos);
+                    } else {
+                        setLoaded(true);
+                        setNoDestinos(true);
+                    }
+                } else {
+                    console.log("La propiedad 'destinos' no es un array.");
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
 
     return (
         <>
@@ -270,7 +270,7 @@ const CardContainer = ({ btnStyles, destinosFiltrados }) => {
     return (
         <>
             <div key={title} className="main__conteiner__s1">
-                <div className="main__conteiner__s1__titulo" id={`seccion${destinosFiltrados}`}>
+                <div className="main__conteiner__s1__titulo" id={`seccion${destino}`}>
                     <h2 key={title}>
                         <strong>{title}</strong>
                     </h2>
@@ -282,7 +282,7 @@ const CardContainer = ({ btnStyles, destinosFiltrados }) => {
                     >
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
-                    <div className={carrusel} id={destinosFiltrados.title}>
+                    <div className={carrusel} id={destino.title}>
                         <Card destinos={destinosFiltrados} />
                     </div>
                     <button
@@ -299,39 +299,39 @@ const CardContainer = ({ btnStyles, destinosFiltrados }) => {
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [destinos, setDestinos] = React.useState([]);
-  
+
     const Bariloche = filtrarDestinos(destinos, "Bariloche");
     const Iguazu = filtrarDestinos(destinos, 'Iguazu');
     const Mendoza = filtrarDestinos(destinos, 'Mendoza');
-  
+
     React.useEffect(() => {
         fetchDestinos().then(data => {
-          setDestinos(data.destinos);
-          setLoaded(true);
+            setDestinos(data.destinos);
+            setLoaded(true);
         });
-      }, []);
-  
+    }, []);
+
     return (
-      <>
-        {!loaded && <Loader />}
-  
-        {loaded && (
-          <>
-            <div className="main_conteiner__s1_medio top_mkt">
-              <BannerTop />
-            </div>
-            <div className="main__conteiner main__conteiner-principal container">
-              <div className="carrusel">
-              <CardContainer btnStyles={btnStyles[0]} destinos={Bariloche} />
-              <CardContainer btnStyles={btnStyles[1]} destinos={Iguazu} />
-              <CardContainer btnStyles={btnStyles[2]} destinos={Mendoza} />
-              </div>
-            </div>
-          </>
-        )}
-      </>
+        <>
+            {!loaded && <Loader />}
+
+            {loaded && (
+                <>
+                    <div className="main_conteiner__s1_medio top_mkt">
+                        <BannerTop />
+                    </div>
+                    <div className="main__conteiner main__conteiner-principal container">
+                        <div className="carrusel">
+                            <CardContainer btnStyles={btnStyles[0]} destinos={Bariloche} />
+                            <CardContainer btnStyles={btnStyles[1]} destinos={Iguazu} />
+                            <CardContainer btnStyles={btnStyles[2]} destinos={Mendoza} />
+                        </div>
+                    </div>
+                </>
+            )}
+        </>
     );
-  }
+}
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
