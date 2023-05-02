@@ -13,25 +13,6 @@ window.addEventListener('load', () => {
     const textBtn = document.querySelector('.btn-tertiary');
     textBtn.textContent = 'Filtrar';
 
-    function ocultarBtnFilter(){
-        const btnFilter = document.querySelector('.results-list__filter-toggle-wrapper');
-        const divCalender = document.querySelectorAll('.start-date');
-    
-        divCalender.forEach(div => {
-            div.addEventListener('change', function() {
-              if (div.classList.contains('active')) {
-                btnFilter.style.display = 'none';
-                console.log("sarasa1");
-              } else {
-                btnFilter.style.display = '';
-                console.log("sarasa2");
-              }
-            });
-          });
-
-        }
-        document.addEventListener('DOMContentLoaded', ocultarBtnFilter);
-
     // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
     // const breakpoint = window.matchMedia('(max-width: 992px)');
@@ -49,5 +30,24 @@ window.addEventListener('load', () => {
     // window.addEventListener('resize', aplicarEstilos);
 
 });
+
+function init() {
+    const boton = document.querySelector('.js-results-list-filter-toggle');
+    const inputIda = document.querySelector('#flight-searcher-_ctl1__ctl1__ctl1_pageBody_pageHeader_searcher__ctl0_ctlDateSelector-start-date-input');
+    const inputVuelta = document.querySelector('#flight-searcher-_ctl1__ctl1__ctl1_pageBody_pageHeader_searcher__ctl0_ctlDateSelector-end-date-input');
+  
+    const checkInputs = function() {
+      if (inputIda.value && inputVuelta.value) {
+        boton.style.display = '';
+      } else {
+        boton.style.display = 'none';
+      }
+    };
+  
+    inputIda.addEventListener('change', checkInputs);
+    inputVuelta.addEventListener('change', checkInputs);
+  }
+  
+  document.addEventListener('DOMContentLoaded', init);
 
 
