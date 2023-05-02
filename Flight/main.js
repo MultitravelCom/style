@@ -41,8 +41,6 @@ window.addEventListener('load', () => {
     // aplicarEstilos();
 
     // window.addEventListener('resize', aplicarEstilos);
-
-
 });
 
 
