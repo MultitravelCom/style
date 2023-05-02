@@ -29,31 +29,25 @@ window.addEventListener('load', () => {
 
     // window.addEventListener('resize', aplicarEstilos);
 
-    const calendarDiv = document.querySelector('.js-calendar-container');
-    const filterButton = document.querySelector('.results-list__filter-toggle-wrapper');
-    
-    // Configuración del observador de mutaciones
-    const observerConfig = { attributes: true, attributeFilter: ['class'] };
-    
-    // Función que se ejecuta cuando cambia el atributo "class" del div del calendario
-    const handleMutation = (mutationsList, observer) => {
-      for (const mutation of mutationsList) {
-        if (mutation.attributeName === 'class') {
-          const calendarClasses = mutation.target.classList;
-          if (calendarClasses.contains('closed')) {
+    const calendarContainers = document.querySelectorAll('.js-calendar-container');
+
+    calendarContainers.forEach((container) => {
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.target.classList.contains('closed')) {
+            // mostrar el botón
+            const filterButton = document.querySelector('.results-list__filter-toggle-wrapper');
             filterButton.style.display = 'block';
-          } else if (calendarClasses.contains('opened')) {
+          } else {
+            // ocultar el botón
+            const filterButton = document.querySelector('.results-list__filter-toggle-wrapper');
             filterButton.style.display = 'none';
           }
-        }
-      }
-    };
+        });
+      });
     
-    // Crea un nuevo observador de mutaciones
-    const observer = new MutationObserver(handleMutation);
-    
-    // Inicia la observación del div del calendario
-    observer.observe(calendarDiv, observerConfig);
+      observer.observe(container, { attributes: true });
+    });
 });
 
 
