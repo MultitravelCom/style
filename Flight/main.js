@@ -35,7 +35,7 @@ const dateInputs = document.querySelectorAll('.datepicker');
 
 dateInputs.forEach(function(input) {
   input.addEventListener('click', function() {
-    const filterButton = document.querySelector('.results-list__filter-toggle');
+    const filterButton = document.querySelector('.results-list__filter-toggle-wrapper');
     const startDate = document.querySelector('.start-date.active');
 
     if (startDate) {
