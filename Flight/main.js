@@ -17,14 +17,14 @@ window.addEventListener('load', () => {
     const divCalender = document.querySelectorAll('.start-date');
 
     divCalender.forEach(div => {
-        div.addEventListener('change', function () {
-            if (div.classList.contains('active')) {
-                btnFilter.style.display = 'none';
-            } else {
-                btnFilter.style.display = '';
-            }
+        div.addEventListener('change', function() {
+          if (div.classList.contains('active')) {
+            btnFilter.style.display = 'none';
+          } else {
+            btnFilter.style.display = '';
+          }
         });
-    });
+      });
 
     // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
@@ -41,7 +41,7 @@ window.addEventListener('load', () => {
     // aplicarEstilos();
 
     // window.addEventListener('resize', aplicarEstilos);
-    
+
 });
 
 
