@@ -56,8 +56,8 @@ const fetchDestinos = async () => {
 
 // ************************************************
 // Filter
-function filtrarDestinos(destinos, destino) {
-    return destinos.filter(destino => destino.lugar === destino);
+function filtrarDestinos(destinos, nombreDestino) {
+    return destinos.filter(destino => destino.lugar === nombreDestino);
   };
 
 const btnStyles = [
@@ -116,30 +116,30 @@ const BannerTop = () => {
         </div>
     )
 }
-const Card = () => {
-    const [destinos, setDestinos] = React.useState([]);
+const Card = ({ destinosFiltrados }) => {
+    const [noDestinos, setNoDestinos] = React.useState(false);
     const [loaded, setLoaded] = React.useState(false);
 
-    React.useEffect(() => {
+    eact.useEffect(() => {
         fetchDestinos()
-            .then(data => {
-                // Verificar si data.destinos es un array
-                if (Array.isArray(data.destinos)) {
-                    setDestinos(data.destinos);
-                    if (data.destinos.length > 0) {
-                        setLoaded(true);
-                    } else {
-                        setLoaded(true);
-                        setNoDestinos(true);
-                    }
-                } else {
-                    console.log("La propiedad 'destinos' no es un array.");
-                }
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    }, []);
+          .then((data) => {
+            // Verificar si data.destinos es un array
+            if (Array.isArray(data.destinos)) {
+              if (data.destinos.length > 0) {
+                setLoaded(true);
+                setDestinos(data.destinos);
+              } else {
+                setLoaded(true);
+                setNoDestinos(true);
+              }
+            } else {
+              console.log("La propiedad 'destinos' no es un array.");
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }, []);
 
     return (
         <>
@@ -193,7 +193,7 @@ const Card = () => {
         </>
     );
 };
-const CardContainer = ({ btnStyles, destinos }) => {
+const CardContainer = ({ btnStyles, destinosFiltrados }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
     const setupGlider = () => {
@@ -270,7 +270,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
     return (
         <>
             <div key={title} className="main__conteiner__s1">
-                <div className="main__conteiner__s1__titulo" id={`seccion${destino}`}>
+                <div className="main__conteiner__s1__titulo" id={`seccion${destinosFiltrados}`}>
                     <h2 key={title}>
                         <strong>{title}</strong>
                     </h2>
@@ -282,7 +282,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
                     >
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
-                    <div className={carrusel} id={destinos.title}>
+                    <div className={carrusel} id={destinosFiltrados.title}>
                         <Card destinos={destinosFiltrados} />
                     </div>
                     <button
