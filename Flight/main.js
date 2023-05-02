@@ -20,8 +20,10 @@ window.addEventListener('load', () => {
         div.addEventListener('change', function() {
           if (div.classList.contains('active')) {
             btnFilter.style.display = 'none';
+            console.log("sarasa1");
           } else {
             btnFilter.style.display = '';
+            console.log("sarasa2");
           }
         });
       });
