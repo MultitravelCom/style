@@ -41,7 +41,7 @@ window.addEventListener('load', () => {
           } else {
             // ocultar el botón
             const filterButton = document.querySelector('.results-list__filter-toggle-wrapper');
-            filterButton.style.display = 'none';
+            filterButton.style.display = 'none !important';
           }
         });
       });
