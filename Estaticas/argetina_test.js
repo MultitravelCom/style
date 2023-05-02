@@ -56,9 +56,9 @@ const fetchDestinos = async () => {
 
 // ************************************************
 // Filter
-const filtrarDestinos = (destinos, destinoFiltrado) => {
-    return destinos.filter(destino => destino.destino === destinoFiltrado);
-}
+function filtrarDestinos(destinos, destino) {
+    return destinos.filter(destino => destino.lugar === destino);
+  }
 
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
@@ -300,7 +300,7 @@ function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [destinos, setDestinos] = React.useState([]);
   
-    const Bariloche = filtrarDestinos(destinos, 'Bariloche');
+    const Bariloche = filtrarDestinos(destinos, "Bariloche");
     const Iguazu = filtrarDestinos(destinos, 'Iguazu');
     const Mendoza = filtrarDestinos(destinos, 'Mendoza');
   
