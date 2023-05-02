@@ -247,3 +247,9 @@ details {
 .booking-data__cross-selling {
   display: none;
 }
+/* ******************************** */
+/* MULT-127 */
+#flights-searcher-more-options > .searcher-row:nth-of-type(2) > .col-xs-6.col-sm-4.col-md-4:nth-child(1),
+#flights-searcher-more-options > .searcher-row:nth-of-type(2) > .col-xs-6.col-sm-4.col-md-4:nth-child(2) {
+  display: none;
+}
