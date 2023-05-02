@@ -26,19 +26,19 @@ window.addEventListener('load', () => {
 
     // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
-    const breakpoint = window.matchMedia('(max-width: 992px)');
+    // const breakpoint = window.matchMedia('(max-width: 992px)');
 
-    function aplicarEstilos() {
-        if (breakpoint.matches) {
-            document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
-        } else {
-            document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'none';
-        }
-    };
+    // function aplicarEstilos() {
+    //     if (breakpoint.matches) {
+    //         document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
+    //     } else {
+    //         document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'none';
+    //     }
+    // };
 
-    aplicarEstilos();
+    // aplicarEstilos();
 
-    window.addEventListener('resize', aplicarEstilos);
+    // window.addEventListener('resize', aplicarEstilos);
 
 
 });
