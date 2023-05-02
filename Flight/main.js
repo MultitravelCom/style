@@ -31,23 +31,19 @@ window.addEventListener('load', () => {
 
 });
 
-function init() {
-    const boton = document.querySelector('.js-results-list-filter-toggle');
-    const inputIda = document.querySelector('#flight-searcher-_ctl1__ctl1__ctl1_pageBody_pageHeader_searcher__ctl0_ctlDateSelector-start-date-input');
-    const inputVuelta = document.querySelector('#flight-searcher-_ctl1__ctl1__ctl1_pageBody_pageHeader_searcher__ctl0_ctlDateSelector-end-date-input');
-  
-    const checkInputs = function() {
-      if (inputIda.value && inputVuelta.value) {
-        boton.style.display = '';
-      } else {
-        boton.style.display = 'none';
-      }
-    };
-  
-    inputIda.addEventListener('change', checkInputs);
-    inputVuelta.addEventListener('change', checkInputs);
-  }
-  
-  document.addEventListener('DOMContentLoaded', init);
+const dateInputs = document.querySelectorAll('.datepicker');
+
+dateInputs.forEach(function(input) {
+  input.addEventListener('click', function() {
+    const filterButton = document.querySelector('.results-list__filter-toggle');
+    const startDate = document.querySelector('.start-date.active');
+
+    if (startDate) {
+      filterButton.classList.add('display-none');
+    } else {
+      filterButton.classList.remove('display-none');
+    }
+  });
+});
 
 
