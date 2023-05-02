@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
         }
     });
 
-    document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
+    // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
     const breakpoint = window.matchMedia('(max-width: 992px)');
 
