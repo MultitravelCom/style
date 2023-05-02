@@ -18,10 +18,10 @@
   }
 
 /* Ocultar mas opciones en caja de busqueda */
-#flight-searcher-more-options,
+/* #flight-searcher-more-options,
 .btn-more-options {
     display: none;
-}
+} */
 #results-searcher{
     flex-direction: column;
 }
@@ -421,9 +421,9 @@ span .glyphicon {
         display: none;
     }
     /* Caja de busqueda vuelos*/
-    .btn-more-options {
+    /* .btn-more-options {
         display: none;
-    }   
+    }    */
 .search-summary{
    display: inline-flex !important;
 }
