@@ -58,7 +58,7 @@ const fetchDestinos = async () => {
 // Filter
 function filtrarDestinos(destinos, destino) {
     return destinos.filter(destino => destino.lugar === destino);
-  }
+  };
 
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
@@ -144,8 +144,8 @@ const Card = () => {
     return (
         <>
             {loaded ? (
-                destinos.length > 0 ? (
-                    destinos.map(destino => (
+                destinosFiltrados.length > 0 ? (
+                    destinosFiltrados.map(destino => (
                         <div key={destino.id} className="carrusel__elemento">
                             <div
                                 className="main__conteiner__s1__destacado__card uno"
@@ -283,7 +283,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div className={carrusel} id={destinos.title}>
-                        <Card destinos={destinos} />
+                        <Card destinos={destinosFiltrados} />
                     </div>
                     <button
                         aria-label="Siguiente"
