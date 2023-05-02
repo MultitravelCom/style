@@ -737,3 +737,8 @@
 .fix-margin>.newsletter__container{
    background: #f7f7f7 !important;
 }
+/* ****************************************************** */
+/* MULT-148 */
+.info-card__description{
+    display: none;
+}
