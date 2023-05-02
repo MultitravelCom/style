@@ -282,7 +282,7 @@ const CardContainer = ({ btnStyles, destinosFiltrados }) => {
                     >
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
-                    <div className={carrusel} id={destino.title}>
+                    <div className={carrusel} id={title}>
                         <Card destinos={destinosFiltrados} />
                     </div>
                     <button
