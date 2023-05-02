@@ -13,6 +13,17 @@ window.addEventListener('load', () => {
     const textBtn = document.querySelector('.btn-tertiary');
     textBtn.textContent = 'Filtrar';
 
+    const btnFilter = document.querySelector('.js-results-list-filter-toggle');
+    const divCalender = document.querySelector('.start-date');
+
+    divCalender.addEventListener('change', function () {
+        if (divCalender.classList.contains('active')) {
+            btnFilter.style.display = 'none';
+        } else {
+            btnFilter.style.display = '';
+        }
+    });
+
     document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
     const breakpoint = window.matchMedia('(max-width: 992px)');
