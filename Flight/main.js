@@ -13,20 +13,24 @@ window.addEventListener('load', () => {
     const textBtn = document.querySelector('.btn-tertiary');
     textBtn.textContent = 'Filtrar';
 
-    const btnFilter = document.querySelector('.results-list__filter-toggle-wrapper');
-    const divCalender = document.querySelectorAll('.start-date');
+    function ocultarBtnFilter(){
+        const btnFilter = document.querySelector('.results-list__filter-toggle-wrapper');
+        const divCalender = document.querySelectorAll('.start-date');
+    
+        divCalender.forEach(div => {
+            div.addEventListener('change', function() {
+              if (div.classList.contains('active')) {
+                btnFilter.style.display = 'none';
+                console.log("sarasa1");
+              } else {
+                btnFilter.style.display = '';
+                console.log("sarasa2");
+              }
+            });
+          });
 
-    divCalender.forEach(div => {
-        div.addEventListener('change', function() {
-          if (div.classList.contains('active')) {
-            btnFilter.style.display = 'none';
-            console.log("sarasa1");
-          } else {
-            btnFilter.style.display = '';
-            console.log("sarasa2");
-          }
-        });
-      });
+          document.addEventListener('DOMContentLoaded', ocultarBtnFilter);
+    }
 
     // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
