@@ -16,14 +16,14 @@ window.addEventListener('load', () => {
     const btnFilter = document.querySelector('.results-list__filter-toggle-wrapper');
     const divCalender = document.querySelectorAll('.start-date');
 
-    divCalender.addEventListener('change', function () {
-        if (divCalender.classList.contains('active')) {
-            btnFilter.style.display = 'none';
-            console.log("aplica estilo")
-        } else {
-            btnFilter.style.display = '';
-            console.log("No aplica estilo")
-        }
+    divCalender.forEach(div => {
+        div.addEventListener('change', function () {
+            if (div.classList.contains('active')) {
+                btnFilter.style.display = 'none';
+            } else {
+                btnFilter.style.display = '';
+            }
+        });
     });
 
     // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
