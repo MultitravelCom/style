@@ -13,8 +13,8 @@ window.addEventListener('load', () => {
     const textBtn = document.querySelector('.btn-tertiary');
     textBtn.textContent = 'Filtrar';
 
-    const btnFilter = document.querySelector('.js-results-list-filter-toggle');
-    const divCalender = document.querySelector('.start-date');
+    const btnFilter = document.querySelector('.results-list__filter-toggle-wrapper');
+    const divCalender = document.querySelectorAll('.start-date');
 
     divCalender.addEventListener('change', function () {
         if (divCalender.classList.contains('active')) {
