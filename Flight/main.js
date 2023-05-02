@@ -29,8 +29,8 @@ window.addEventListener('load', () => {
             });
           });
 
-          document.addEventListener('DOMContentLoaded', ocultarBtnFilter);
-    }
+        }
+        document.addEventListener('DOMContentLoaded', ocultarBtnFilter);
 
     // document.querySelector('.results-list__filter-toggle-wrapper').style.display = 'inline-block';
 
