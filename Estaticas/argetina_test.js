@@ -120,7 +120,7 @@ const Card = ({ destinosFiltrados }) => {
     const [noDestinos, setNoDestinos] = React.useState(false);
     const [loaded, setLoaded] = React.useState(false);
 
-    eact.useEffect(() => {
+    React.useEffect(() => {
         fetchDestinos()
             .then((data) => {
                 // Verificar si data.destinos es un array
