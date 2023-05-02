@@ -28,20 +28,12 @@ window.addEventListener('load', () => {
     // aplicarEstilos();
 
     // window.addEventListener('resize', aplicarEstilos);
-    
-    const dateInputs = document.querySelectorAll('.datepicker');
-    
-    dateInputs.forEach(function(input) {
-      input.addEventListener('click', function() {
+
+    const dateInputs = document.querySelector('#flight-searcher-_ctl1__ctl1__ctl1_pageBody_pageHeader_searcher__ctl0_ctlDateSelector-start-date-input');
+
+    dateInputs.addEventListener('click', function () {
         const filterButton = document.querySelector('.results-list__filter-toggle-wrapper');
-        const startDate = document.querySelector('.start-date.active');
-    
-        if (startDate) {
-            filterButton.style.display = 'none !important';
-          } else {
-            filterButton.style.display = 'block !important';
-          }
-      });
+        filterButton.style.display = 'none !important';
     });
 });
 
