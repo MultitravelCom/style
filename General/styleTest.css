@@ -243,3 +243,7 @@ details {
   }
 
 }
+/* MULT-139 */
+.booking-data>.booking-data__cross-selling {
+  display: none;
+}
