@@ -39,10 +39,10 @@ dateInputs.forEach(function(input) {
     const startDate = document.querySelector('.start-date.active');
 
     if (startDate) {
-      filterButton.classList.add('display-none');
-    } else {
-      filterButton.classList.remove('display-none');
-    }
+        filterButton.style.display = 'none !important';
+      } else {
+        filterButton.style.display = 'block !important';
+      }
   });
 });
 
