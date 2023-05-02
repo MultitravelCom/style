@@ -29,12 +29,31 @@ window.addEventListener('load', () => {
 
     // window.addEventListener('resize', aplicarEstilos);
 
-    const dateInputs = document.querySelector('#flight-searcher-_ctl1__ctl1__ctl1_pageBody_pageHeader_searcher__ctl0_ctlDateSelector-start-date-input');
-
-    dateInputs.addEventListener('click', function () {
-        const filterButton = document.querySelector('.results-list__filter-toggle-wrapper');
-        filterButton.style.display = 'none !important';
-    });
+    const calendarDiv = document.querySelector('.js-calendar-container');
+    const filterButton = document.querySelector('.results-list__filter-toggle-wrapper');
+    
+    // Configuración del observador de mutaciones
+    const observerConfig = { attributes: true, attributeFilter: ['class'] };
+    
+    // Función que se ejecuta cuando cambia el atributo "class" del div del calendario
+    const handleMutation = (mutationsList, observer) => {
+      for (const mutation of mutationsList) {
+        if (mutation.attributeName === 'class') {
+          const calendarClasses = mutation.target.classList;
+          if (calendarClasses.contains('closed')) {
+            filterButton.style.display = 'block';
+          } else if (calendarClasses.contains('opened')) {
+            filterButton.style.display = 'none';
+          }
+        }
+      }
+    };
+    
+    // Crea un nuevo observador de mutaciones
+    const observer = new MutationObserver(handleMutation);
+    
+    // Inicia la observación del div del calendario
+    observer.observe(calendarDiv, observerConfig);
 });
 
 
