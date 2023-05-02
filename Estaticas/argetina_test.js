@@ -45,7 +45,6 @@ function mostrarSeccion() {
     }
 }
 mostrarSeccion();
-// ************************************************
 // ***************************  Conexion a BD ***************************************
 const fetchDestinos = async () => {
     const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
@@ -54,6 +53,12 @@ const fetchDestinos = async () => {
     return data;
 
 };
+
+// ************************************************
+// Filter
+const filtrarDestinos = (destinos, destinoFiltrado) => {
+    return destinos.filter(destino => destino.destino === destinoFiltrado);
+}
 
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
@@ -70,9 +75,15 @@ function Button(props) {
     }
 
     return (
-        <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
+        <button id={props.id} className={props.style} onClick={handleClick}>{props.text}</button>
     );
 }
+const Loader = () => {
+    return (
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    );
+};
+// ************************************************
 
 const BannerTop = () => {
     return (
@@ -130,7 +141,6 @@ const Card = () => {
             });
     }, []);
 
-
     return (
         <>
             {loaded ? (
@@ -167,6 +177,7 @@ const Card = () => {
                                 <div className="priceStyle">{destino.price}</div>
                                 <Button
                                     id={destino.id}
+                                    style="btn_Style_Venta_Per"
                                     link={destino.linkWa}
                                     text="Contactarme"
                                 />
@@ -285,47 +296,42 @@ const CardContainer = ({ btnStyles, destinos }) => {
         </>
     );
 };
-
-const Loader = () => {
-    return (
-        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-    );
-};
-
-// ************************************************
-
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [destinos, setDestinos] = React.useState([]);
-
+  
+    const Bariloche = filtrarDestinos(destinos, 'Bariloche');
+    const Iguazu = filtrarDestinos(destinos, 'Iguazu');
+    const Mendoza = filtrarDestinos(destinos, 'Mendoza');
+  
     React.useEffect(() => {
         fetchDestinos().then(data => {
-            setDestinos(data.destinos);
-            setLoaded(true);
+          setDestinos(data.destinos);
+          setLoaded(true);
         });
-    }, []);
-
+      }, []);
+  
     return (
-        <>
-            {!loaded && <Loader />}
-
-            {loaded && (
-                <>
-                    <div className="main_conteiner__s1_medio top_mkt">
-                        <BannerTop />
-                    </div>
-                    <div className="main__conteiner main__conteiner-principal container">
-                        <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos.destinos1} />
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos.destinos2} />
-                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos.destinos3} />
-                        </div>
-                    </div>
-                </>
-            )}
-        </>
+      <>
+        {!loaded && <Loader />}
+  
+        {loaded && (
+          <>
+            <div className="main_conteiner__s1_medio top_mkt">
+              <BannerTop />
+            </div>
+            <div className="main__conteiner main__conteiner-principal container">
+              <div className="carrusel">
+              <CardContainer btnStyles={btnStyles[0]} destinos={Bariloche} />
+              <CardContainer btnStyles={btnStyles[1]} destinos={Iguazu} />
+              <CardContainer btnStyles={btnStyles[2]} destinos={Mendoza} />
+              </div>
+            </div>
+          </>
+        )}
+      </>
     );
-}
+  }
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
