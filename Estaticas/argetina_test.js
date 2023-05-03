@@ -198,10 +198,10 @@ const Card = ({ destinos }) => {
     );
     
 };
-const CardContainer = ({ btnStyles, destinos }) => {
+const CardContainer = ({ btnStyles, destinosFiltrados }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
-    console.log('destinosFiltrados CardContainer:', destinos);
+    console.log('destinosFiltrados CardContainer:', destinosFiltrados);
 
     const setupGlider = () => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
@@ -290,7 +290,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div className={carrusel} id={title}>
-                        <Card destinos={destinos} />
+                        <Card destinos={destinosFiltrados} />
                     </div>
                     <button
                         aria-label="Siguiente"
