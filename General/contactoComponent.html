@@ -43,6 +43,18 @@
     background: #c4c4c4;
     border-radius: 8px 40px 8px 8px;
   }
+
+  @media (max-width: 767px) {
+    .main__container__bannerTop {
+      overflow-x: scroll;
+      white-space: nowrap;
+      margin-bottom: 0 !important;
+    }
+
+    .main__container__bannerTop::-webkit-scrollbar {
+      width: 0;
+    }
+  }
 </style>
 <div class="container__" id="root"></div>
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.js"></script>
