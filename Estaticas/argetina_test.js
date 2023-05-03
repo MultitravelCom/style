@@ -147,8 +147,8 @@ const Card = ({ destinos }) => {
     return (
         <>
             {loaded ? (
-                destinosFiltrados.length > 0 ? (
-                    destinosFiltrados.map(destino => (
+                destinos.length > 0 ? (
+                    destinos.map(destino => (
                         <div key={destino.id} className="carrusel__elemento">
                             <div
                                 className="main__conteiner__s1__destacado__card uno"
