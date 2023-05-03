@@ -50,17 +50,13 @@ const fetchDestinos = async () => {
     const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
     const data = await response.json();
   
-    console.log(data); // Agregamos un console.log aquí para ver si los datos son correctos
-  
     return data;
   };
 
 // ************************************************
 // Filter
 function filtrarDestinos(destinos, nombreDestino) {
-    console.log('Destinos antes de filtrar:', destinos);
     const destinosFiltrados = destinos.filter(destino => destino.destino === nombreDestino);
-    console.log('Destinos filtrados:', destinosFiltrados);
     return destinosFiltrados;
 }
 
@@ -124,8 +120,6 @@ const Card = ({ destinos }) => {
     const [noDestinos, setNoDestinos] = React.useState(false);
     const [loaded, setLoaded] = React.useState(false);
 
-    console.log('destinosFiltrados Card:', destinos);
-
     React.useEffect(() => {
         fetchDestinos()
             .then((data) => {
@@ -157,7 +151,7 @@ const Card = ({ destinos }) => {
                                 className="main__conteiner__s1__destacado__card uno"
                                 style={{ height: "100%", width: "100%" }}
                             >
-                                {destino.evento === "si" && <div>Evento Ok!</div>}
+                                {destino.events === "si" && <div>Evento Ok!</div>}
                                 <picture>
                                     <map name={destino.id}>
                                         <area
