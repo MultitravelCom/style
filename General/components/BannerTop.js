@@ -1,6 +1,6 @@
 const BannerTop = () => {
     return (
-        <div className="container-fluid main__container__bannerTop">
+        <div className="container-fluid main__container__bannerTop scroll-mobile">
             <div id="bannerTop__left" className="main__container_left">
 
             </div>
