@@ -13,5 +13,4 @@ const BannerTop = () => {
         </div>
     )
 }
-
 ReactDOM.createRoot(document.getElementById('root')).render(<BannerTop />);
