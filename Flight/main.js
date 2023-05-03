@@ -37,7 +37,7 @@ window.addEventListener('load', () => {
           if (mutation.target.classList.contains('closed')) {
             // mostrar el botón
             const filterButton = document.querySelector('.results-list__filter-toggle-wrapper');
-            filterButton.style.display = 'none';
+            filterButton.style.display = 'block';
           } else {
             // ocultar el botón
             const filterButton = document.querySelector('.results-list__filter-toggle-wrapper');
