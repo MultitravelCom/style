@@ -59,7 +59,7 @@ const fetchDestinos = async () => {
 // Filter
 function filtrarDestinos(destinos, nombreDestino) {
     console.log('Destinos antes de filtrar:', destinos);
-    const destinosFiltrados = destinos.filter(destino => destino.lugar === nombreDestino);
+    const destinosFiltrados = destinos.filter(destino => destino.destino === nombreDestino);
     console.log('Destinos filtrados:', destinosFiltrados);
     return destinosFiltrados;
 }
