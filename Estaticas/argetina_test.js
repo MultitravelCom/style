@@ -58,8 +58,11 @@ const fetchDestinos = async () => {
 // ************************************************
 // Filter
 function filtrarDestinos(destinos, nombreDestino) {
-    return destinos.filter(destino => destino.lugar === nombreDestino);
-};
+    console.log('Destinos antes de filtrar:', destinos);
+    const destinosFiltrados = destinos.filter(destino => destino.lugar === nombreDestino);
+    console.log('Destinos filtrados:', destinosFiltrados);
+    return destinosFiltrados;
+}
 
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
