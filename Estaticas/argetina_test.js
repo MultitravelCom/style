@@ -49,10 +49,11 @@ mostrarSeccion();
 const fetchDestinos = async () => {
     const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
     const data = await response.json();
-
+  
+    console.log(data); // Agregamos un console.log aquí para ver si los datos son correctos
+  
     return data;
-
-};
+  };
 
 // ************************************************
 // Filter
@@ -151,6 +152,7 @@ const Card = ({ destinosFiltrados }) => {
                                 className="main__conteiner__s1__destacado__card uno"
                                 style={{ height: "100%", width: "100%" }}
                             >
+                                {evento === "si" && <div>Evento Ok!</div>}
                                 <picture>
                                     <map name={destino.id}>
                                         <area
