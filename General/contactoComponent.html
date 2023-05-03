@@ -45,15 +45,18 @@
   }
 
   @media (max-width: 767px) {
-    .main__container__bannerTop {
-      overflow-x: scroll;
-      white-space: nowrap;
-      margin-bottom: 0 !important;
-    }
-
-    .main__container__bannerTop::-webkit-scrollbar {
-      width: 0;
-    }
+    /* SCROLL HORIZONTAL */
+    .scroll-mobile{
+        max-width: 100%;
+        display: flex;
+        overflow: auto;
+      }
+      .scroll-mobile::-webkit-scrollbar{
+        width: 0;
+      }
+      .scroll-mobile .divStyle {
+        min-width: 258px;
+      }
   }
 </style>
 <div class="container__" id="root"></div>
