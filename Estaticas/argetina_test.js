@@ -121,6 +121,8 @@ const Card = ({ destinosFiltrados }) => {
     const [noDestinos, setNoDestinos] = React.useState(false);
     const [loaded, setLoaded] = React.useState(false);
 
+    console.log(destinosFiltrados);
+
     React.useEffect(() => {
         fetchDestinos()
             .then((data) => {
@@ -194,6 +196,7 @@ const Card = ({ destinosFiltrados }) => {
             )}
         </>
     );
+    
 };
 const CardContainer = ({ btnStyles, destinosFiltrados }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
