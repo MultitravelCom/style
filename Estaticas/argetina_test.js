@@ -117,9 +117,11 @@ const BannerTop = () => {
         </div>
     )
 }
-const Card = ({ destinosFiltrados }) => {
+const Card = ({ destinos }) => {
     const [noDestinos, setNoDestinos] = React.useState(false);
     const [loaded, setLoaded] = React.useState(false);
+
+    console.log('destinosFiltrados Card:', destinos);
 
     React.useEffect(() => {
         fetchDestinos()
@@ -196,10 +198,10 @@ const Card = ({ destinosFiltrados }) => {
     );
     
 };
-const CardContainer = ({ btnStyles, destinosFiltrados }) => {
+const CardContainer = ({ btnStyles, destinos }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
-    console.log('destinosFiltrados:', destinosFiltrados);
+    console.log('destinosFiltrados CardContainer:', destinos);
 
     const setupGlider = () => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
@@ -288,7 +290,7 @@ const CardContainer = ({ btnStyles, destinosFiltrados }) => {
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div className={carrusel} id={title}>
-                        <Card destinos={destinosFiltrados} />
+                        <Card destinos={destinos} />
                     </div>
                     <button
                         aria-label="Siguiente"
@@ -327,9 +329,9 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={Bariloche} />
-                            <CardContainer btnStyles={btnStyles[1]} destinos={Iguazu} />
-                            <CardContainer btnStyles={btnStyles[2]} destinos={Mendoza} />
+                            <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Bariloche} />
+                            <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Iguazu} />
+                            <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={Mendoza} />
                         </div>
                     </div>
                 </>
