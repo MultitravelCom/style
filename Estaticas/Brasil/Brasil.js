@@ -73,9 +73,9 @@ function filtrarDestinos(destinos, nombreDestino) {
 }
 
 const btnStyles = [
-    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
-    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Vuelos Iguazú – Alojamientos Cataratas – Paquetes Cataratas', destino: "Iguazu" },
-    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Vuelos Mendoza – Alojamientos Mendoza – Paquetes Mendoza', destino: "Mendoza" },
+    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Paquetes Florianópolis - Alojamientos Florianópolis', destino: "Florianópolis" },
+    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Paquetes Buzios - Alojamientos Buzios', destino: "Buzios" },
+    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Paquetes Brasil All Inclusive - Alojamientos Brasil All Inclusive', destino: "All Inclusive" },
 ];
 
 // *****************************************************
@@ -220,8 +220,6 @@ const Card = ({ destinos }) => {
 };
 const CardContainer = ({ btnStyles, destinosFiltrados }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
-
-    console.log('destinosFiltrados CardContainer:', destinosFiltrados);
 
     const setupGlider = () => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
