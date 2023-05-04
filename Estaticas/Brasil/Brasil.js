@@ -7,10 +7,15 @@ function addHeaderLinks() {
     meta.setAttribute('name', 'description');
     meta.setAttribute('content', 'Compará paquetes a Argentina y conseguí los mejores precios en alojamiento y vuelos a Bariloche, Iguazú y Mendoza. Solicitá atención personalizada por whatsapp');
 
-    const link = document.createElement('link');
+    const linkCDNGlider = document.createElement('link');
 
-    link.rel = 'stylesheet';
-    link.href = 'https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css';
+    linkCDNGlider.rel = 'stylesheet';
+    linkCDNGlider.href = 'https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css';
+
+    const linkStyle = document.createElement('link');
+
+    linkCDNGlider.rel = 'stylesheet';
+    linkCDNGlider.href = 'https://multitravelcom.github.io/style/Estaticas/styleBrasil.css';
 
     const mailchimp = document.createElement('script');
     mailchimp.id = 'mcjs';
@@ -19,17 +24,11 @@ function addHeaderLinks() {
     mailchimp.textContent = '!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/d09ee86703b1761e8337397e9/6e305f08d149ab3c55d2d9573.js");';
 
     head.appendChild(meta);
-    head.appendChild(link);
+    head.appendChild(linkStyle);
+    head.appendChild(linkCDNGlider);
     head.appendChild(mailchimp);
 }
 addHeaderLinks();
-
-const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
-const linkWaFixed = document.querySelector('.whatsAppFixes a');
-const linkWaHeaderMobile = document.querySelector('.btn.upper-menu__phone-wrapper.features_item a');
-linkWaHeader.href = 'https://wa.link/xetnro';
-linkWaFixed.href = 'https://wa.link/xetnro';
-linkWaHeaderMobile.href = 'https://wa.link/xetnro';
 
 // ************** Ancla *****************************
 function mostrarSeccion() {
@@ -45,13 +44,26 @@ function mostrarSeccion() {
     }
 }
 mostrarSeccion();
+
+// ************************ Modificacion delinks WA **************************
+
+function changeWaLink() {
+    const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
+    const linkWaFixed = document.querySelector('.whatsAppFixes a');
+    const linkWaHeaderMobile = document.querySelector('.btn.upper-menu__phone-wrapper.features_item a');
+    linkWaHeader.href = 'https://wa.link/xetnro';
+    linkWaFixed.href = 'https://wa.link/xetnro';
+    linkWaHeaderMobile.href = 'https://wa.link/xetnro';
+}
+changeWaLink();
+
 // ***************************  Conexion a BD ***************************************
 const fetchDestinos = async () => {
     const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
     const data = await response.json();
-  
+
     return data;
-  };
+};
 
 // ************************************************
 // Filter
@@ -83,6 +95,14 @@ const Loader = () => {
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     );
 };
+const EventImg = (props) => {
+    <div className={props.style}>
+        <img
+            alt={`Imagen evento promocion`}
+            src={props.eventImg}
+        />
+    </div>
+}
 // ************************************************
 
 const BannerTop = () => {
@@ -116,7 +136,6 @@ const BannerTop = () => {
         </div>
     )
 }
-
 const Card = ({ destinos }) => {
     const [noDestinos, setNoDestinos] = React.useState(false);
     const [loaded, setLoaded] = React.useState(false);
@@ -152,7 +171,7 @@ const Card = ({ destinos }) => {
                                 className="main__conteiner__s1__destacado__card uno"
                                 style={{ height: "100%", width: "100%" }}
                             >
-                                {destino.events === "si" && <div>Evento Ok!</div>}
+                                {destino.events === "si" && <EventImg style="eventImg" src={destino.eventImg} />}
                                 <picture>
                                     <map name={destino.id}>
                                         <area
@@ -194,7 +213,7 @@ const Card = ({ destinos }) => {
             )}
         </>
     );
-    
+
 };
 const CardContainer = ({ btnStyles, destinosFiltrados }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
@@ -331,6 +350,7 @@ function App() {
                             <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Iguazu} />
                             <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={Mendoza} />
                         </div>
+
                     </div>
                 </>
             )}
