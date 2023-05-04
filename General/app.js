@@ -270,4 +270,4 @@ const App = () => {
 }
 
 ReactDOM.createRoot(document.getElementById('rootHome')).render(<App />);
-ReactDOM.createRoot(document.getElementById('home-content-5')).render(<BannerTopPreViaje />);
+
