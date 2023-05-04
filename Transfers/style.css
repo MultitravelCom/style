@@ -792,3 +792,6 @@ span .glyphicon {
 .info-card__description {
     display: none;
 }
+.info-card__actions{
+    position: static;
+}
