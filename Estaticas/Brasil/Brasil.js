@@ -15,7 +15,7 @@ function addHeaderLinks() {
     const linkStyle = document.createElement('link');
 
     linkCDNGlider.rel = 'stylesheet';
-    linkCDNGlider.href = 'https://multitravelcom.github.io/style/Estaticas/styleBrasil.css';
+    linkCDNGlider.href = 'https://multitravelcom.github.io/style/Estaticas/Brasil/styleBrasil.css';
 
     const mailchimp = document.createElement('script');
     mailchimp.id = 'mcjs';
