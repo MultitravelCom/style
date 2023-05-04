@@ -1,17 +1,19 @@
 window.addEventListener('load', () => {
 
     // *********** MULT-127 **********************
-
     // Obtener el botón por su clase
     const btn = document.querySelector('.btn-more-options');
 
     // Cambiar el texto del botón y añadir el icono
-    btn.innerHTML = 'Clase y equipaje <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
+    btn.innerHTML = 'Cabina y equipaje <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
 
     // Si el botón no tiene la clase "collapsed", también cambia el texto del atributo "data-toggle-text"
     if (!btn.classList.contains('collapsed')) {
-        btn.setAttribute('data-toggle-text', 'Clase y equipaje');
+        btn.setAttribute('data-toggle-text', 'Cabina y equipaje');
     }
+
+    // Mostrar el botón una vez que se cargue el DOM
+    btn.style.display = 'inline-block';
     // ***************************** **********************
 
     // seleccionar el elemento div por su clase
