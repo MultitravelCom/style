@@ -2,15 +2,20 @@ window.addEventListener('load', () => {
 
     // *********** MULT-127 **********************
     // Obtener el botón por su clase
-    const btn = document.querySelector('.btn-more-options');
+    const btnMoreOptions = document.querySelector('.btn-more-options');
 
     // Cambiar el texto del botón y añadir el icono
-    btn.innerHTML = 'Cabina y equipaje <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
+    btnMoreOptions.innerHTML = 'Cabina y equipaje <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
 
     // Si el botón no tiene la clase "collapsed", también cambia el texto del atributo "data-toggle-text"
-    if (!btn.classList.contains('collapsed')) {
-        btn.setAttribute('data-toggle-text', 'Cabina y equipaje');
+    if (!btnMoreOptions.classList.contains('collapsed')) {
+        btnMoreOptions.setAttribute('data-toggle-text', 'Cabina y equipaje');
     }
+    // Obtener el label por su etiqueta "for"
+    const labelFlights = document.querySelector('label[for="flights-searcher-flightclass"]');
+
+    // Reemplazar el texto "Clase" por "Cabina"
+    labelFlights.textContent = label.textContent.replace('Clase', 'Cabina');
 
     // Mostrar el botón una vez que se cargue el DOM
     btn.style.display = 'inline-block';
@@ -24,6 +29,8 @@ window.addEventListener('load', () => {
     //    Cambio de copy de Multiple vuelos a multiple destinos.
     document.getElementById("flights-searcher-roundtrip-multi").nextSibling.nodeValue = "Multidestino";
     document.querySelector('.radio').style.display = 'inline-block';
+
+
     // ***************************** **********************
 
     // seleccionar el elemento div por su clase
