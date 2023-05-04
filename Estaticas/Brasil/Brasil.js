@@ -96,12 +96,14 @@ const Loader = () => {
     );
 };
 const EventImg = (props) => {
-    <div className={props.style}>
-        <img
-            alt={`Imagen evento promocion`}
-            src={props.eventImg}
-        />
-    </div>
+    return (
+        <div className={props.style}>
+            <img
+                alt={`Imagen evento promocion`}
+                src={props.eventImg}
+            />
+        </div>
+    )
 }
 // ************************************************
 
