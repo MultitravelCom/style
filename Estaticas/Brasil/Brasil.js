@@ -98,10 +98,11 @@ const Loader = () => {
 const EventImg = (props) => {
     return (
         <div className={props.style}>
-            <img
+            <p>OK!</p>
+            {/* <img
                 alt={`Imagen evento promocion`}
                 src={props.eventImg}
-            />
+            /> */}
         </div>
     )
 }
