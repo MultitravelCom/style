@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
     labelFlights.textContent = labelFlights.textContent.replace('Clase', 'Cabina');
 
     // Mostrar el botón una vez que se cargue el DOM
-    btn.style.display = 'inline-block';
+    btnMoreOptions.style.display = 'inline-block';
 
 
     // Mover div fuera del mas opciones.
