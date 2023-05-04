@@ -16,4 +16,15 @@ window.addEventListener('load', () => {
     
     firstOption.classList.remove('hidden');
     displayMaster.style.display = 'inline-block';
+
+    // ********************************* MULT-127 *********************************
+    // Mueve el btn buscar asi abajo.
+    // seleccionar el div a mover
+    const divAMoverBtnBuscar = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
+
+    // seleccionar el div debajo del cual se moverá el div a mover
+    const divObjetivoBtnBuscar = document.getElementById('flight-searcher-more-options');
+
+    // mover el div a mover justo debajo del div objetivo
+    divObjetivoBtnBuscar.parentNode.insertBefore(divAMoverBtnBuscar, divObjetivoBtnBuscar.nextSibling);
   });
