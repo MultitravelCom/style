@@ -438,6 +438,9 @@ source>img {
 
 /* Icono Evento */
 .eventImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 48px;
     height: 48px;
