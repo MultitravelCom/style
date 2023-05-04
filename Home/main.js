@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
     const labelFlights = document.querySelector('label[for="flights-searcher-flightclass"]');
 
     // Reemplazar el texto "Clase" por "Cabina"
-    labelFlights.textContent = label.textContent.replace('Clase', 'Cabina');
+    labelFlights.textContent = labelFlights.textContent.replace('Clase', 'Cabina');
 
     // Mostrar el botón una vez que se cargue el DOM
     btn.style.display = 'inline-block';
