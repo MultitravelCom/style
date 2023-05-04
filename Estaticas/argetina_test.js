@@ -49,16 +49,16 @@ mostrarSeccion();
 const fetchDestinos = async () => {
     const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
     const data = await response.json();
-
+  
     return data;
-
-};
+  };
 
 // ************************************************
 // Filter
 function filtrarDestinos(destinos, nombreDestino) {
-    return destinos.filter(destino => destino.lugar === nombreDestino);
-};
+    const destinosFiltrados = destinos.filter(destino => destino.destino === nombreDestino);
+    return destinosFiltrados;
+}
 
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
@@ -116,7 +116,7 @@ const BannerTop = () => {
         </div>
     )
 }
-const Card = ({ destinosFiltrados }) => {
+const Card = ({ destinos }) => {
     const [noDestinos, setNoDestinos] = React.useState(false);
     const [loaded, setLoaded] = React.useState(false);
 
@@ -144,13 +144,14 @@ const Card = ({ destinosFiltrados }) => {
     return (
         <>
             {loaded ? (
-                destinosFiltrados.length > 0 ? (
-                    destinosFiltrados.map(destino => (
+                destinos.length > 0 ? (
+                    destinos.map(destino => (
                         <div key={destino.id} className="carrusel__elemento">
                             <div
                                 className="main__conteiner__s1__destacado__card uno"
                                 style={{ height: "100%", width: "100%" }}
                             >
+                                {destino.events === "si" && <div>Evento Ok!</div>}
                                 <picture>
                                     <map name={destino.id}>
                                         <area
@@ -192,9 +193,12 @@ const Card = ({ destinosFiltrados }) => {
             )}
         </>
     );
+    
 };
 const CardContainer = ({ btnStyles, destinosFiltrados }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
+
+    console.log('destinosFiltrados CardContainer:', destinosFiltrados);
 
     const setupGlider = () => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
@@ -322,9 +326,9 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={Bariloche} />
-                            <CardContainer btnStyles={btnStyles[1]} destinos={Iguazu} />
-                            <CardContainer btnStyles={btnStyles[2]} destinos={Mendoza} />
+                            <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Bariloche} />
+                            <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Iguazu} />
+                            <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={Mendoza} />
                         </div>
                     </div>
                 </>

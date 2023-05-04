@@ -58,11 +58,6 @@
 .booking-paxes__fidelity {
   display: none !important;
 }
-
-.booking-data__login {
-  margin-bottom: 30px !important;
-}
-
 /************ Seccion Cards *****************/
 /* Titulos */
 .sliding-offers-v3>.offer-title {
@@ -631,3 +626,7 @@
   }
 }
 /* ************************************************ */
+/* MULT-220 */
+.booking-data__login{
+  display: none;
+}
