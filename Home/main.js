@@ -5,8 +5,8 @@ window.addEventListener('load', () => {
     // Obtener el botón por su clase
     const btn = document.querySelector('.btn-more-options');
 
-    // Cambiar el texto del botón
-    btn.textContent = 'Clase y equipaje';
+    // Cambiar el texto del botón y añadir el icono
+    btn.innerHTML = 'Clase y equipaje <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
 
     // Si el botón no tiene la clase "collapsed", también cambia el texto del atributo "data-toggle-text"
     if (!btn.classList.contains('collapsed')) {
