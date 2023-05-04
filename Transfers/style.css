@@ -795,3 +795,6 @@ span .glyphicon {
 .info-card__actions{
     position: static;
 }
+.info-card__location{
+    margin-bottom: 2rem;
+}
