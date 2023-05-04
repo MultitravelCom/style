@@ -747,18 +747,9 @@ MEDIA QUERIES
     padding: 9px;
   }
 }
-
-/* Caja de busqueda */
-/* Ocultar btn mas opciones */
-
-/* ocultar radius */
-/* .supsearcher {
-  display: none;
-} */
-
 .singledestination-only>.checkbox {
   margin-top: 4px !important;
-  margin-bottom: 21px !important;
+  margin-bottom: 10px !important;
 }
 
 .radio {
