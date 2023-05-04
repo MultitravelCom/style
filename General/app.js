@@ -184,75 +184,76 @@ const LoMejorDe = () => {
 }
 
 // PreViaje
-function Button(props) {
+// function Button(props) {
 
-    const handleClick = (event) => {
-        event.preventDefault();
-        window.open(props.link, '_blank');
-    }
+//     const handleClick = (event) => {
+//         event.preventDefault();
+//         window.open(props.link, '_blank');
+//     }
 
-    return (
-        <button className="btn btnStyleBannerPre" onClick={handleClick}>{props.text}</button>
-    );
-}
+//     return (
+//         <button className="btn btnStyleBannerPre" onClick={handleClick}>{props.text}</button>
+//     );
+// }
 
-const BannerTopPreViaje = () => {
+// const BannerTopPreViaje = () => {
 
-    const fechaDeseada = new Date("2023-04-25T23:59:00");
-    const fechaActual = new Date();
+//     const fechaDeseada = new Date("2023-04-25T23:59:00");
+//     const fechaActual = new Date();
 
-    if (fechaActual >= fechaDeseada) {
-        return null;
-    }
+//     if (fechaActual >= fechaDeseada) {
+//         return null;
+//     }
 
-    return (
-        <div id="containerPreViaje" className="container containerPreViaje">
-            <row className="rowStyle">
-                <div className="main__container__left col-8">
-                    <picture>
-                        <source
-                            media="(min-width: 1024px)"
-                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp"
-                        />
-                        <source
-                            media="(min-width: 768px) and (max-width: 1023px)"
-                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp"
-                        />
-                        <source
-                            media="(max-width: 767px)"
-                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp"
-                        />
-                        <img
-                            alt=""
-                            src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp"
-                        />
-                    </picture>
-                </div>
-                <div className="main__container__right col-4">
-                    <picture>
-                        <source
-                            media="(min-width: 1024px)"
-                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp"
-                        />
-                        <source
-                            media="(min-width: 768px) and (max-width: 1023px)"
-                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp"
-                        />
-                        <source
-                            media="(max-width: 767px)"
-                            srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerMobile.webp"
-                        />
-                        <img
-                            alt=""
-                            src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp"
-                        />
-                    </picture>
-                    <Button link="https://www.multitravel.com/promociones/previaje" text="Ver más" />
-                </div>
-            </row>
-        </div>
-    );
-};
+//     return (
+//         <div id="containerPreViaje" className="container containerPreViaje">
+//             <row className="rowStyle">
+//                 <div className="main__container__left col-8">
+//                     <picture>
+//                         <source
+//                             media="(min-width: 1024px)"
+//                             srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp"
+//                         />
+//                         <source
+//                             media="(min-width: 768px) and (max-width: 1023px)"
+//                             srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp"
+//                         />
+//                         <source
+//                             media="(max-width: 767px)"
+//                             srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp"
+//                         />
+//                         <img
+//                             alt=""
+//                             src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp"
+//                         />
+//                     </picture>
+//                 </div>
+//                 <div className="main__container__right col-4">
+//                     <picture>
+//                         <source
+//                             media="(min-width: 1024px)"
+//                             srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp"
+//                         />
+//                         <source
+//                             media="(min-width: 768px) and (max-width: 1023px)"
+//                             srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp"
+//                         />
+//                         <source
+//                             media="(max-width: 767px)"
+//                             srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerMobile.webp"
+//                         />
+//                         <img
+//                             alt=""
+//                             src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp"
+//                         />
+//                     </picture>
+//                     <Button link="https://www.multitravel.com/promociones/previaje" text="Ver más" />
+//                 </div>
+//             </row>
+//         </div>
+//     );
+// };
+
 const App = () => {
     return (
         <>
