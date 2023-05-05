@@ -337,7 +337,7 @@ function App() {
 
     const Florianopolis = filtrarDestinos(destinos, "Florianopolis");
     const Buzios = filtrarDestinos(destinos, 'Buzios');
-    const AllInclusive = filtrarDestinos(destinos, 'ALL INCLUSIVE');
+    const AllInclusive = filtrarDestinos(destinos, 'AllInclusive');
 
     React.useEffect(() => {
         fetchDestinos().then(data => {
