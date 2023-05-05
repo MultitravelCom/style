@@ -41,16 +41,6 @@
             "events": "si"
         },
         {
-            "id": "a5",
-            "destino": "Florianopolis",
-            "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Florianopolis/floria-e%20(1).webpp",
-            "className": "uno",
-            "linkWa": "https://wa.link/dv0ucs",
-            "title": "Vuelo a Bariloche",
-            "price": "$18.600",
-            "events": "si"
-        },
-        {
             "id": "b1",
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-a%20(1).webp",
