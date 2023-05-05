@@ -464,3 +464,14 @@ details {
 
   color: #FFFFFF;
 }
+
+@media(max-width: 767px) {
+  .confirm-booking__promocodes {
+    border-radius: 8px;
+    border: 2px solid #0D4E88;
+    background-color: #DEE9F5;
+    background-image: url(https://raw.githubusercontent.com/MultitravelCom/style/main/General/img/imagen%20cupon%20mobile.svg);
+    position: relative;
+    height: 146px;
+  }
+}
