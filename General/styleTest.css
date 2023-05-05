@@ -370,6 +370,14 @@ details {
   position: relative;
   height: 146px;
 }
+.booking-data__data__text{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: red;
+  width: 100%;
+  height: 49%;
+}
 
 .promocode__apply-button {
   background: #0D4E88;
@@ -470,14 +478,6 @@ details {
     background-image: url(https://raw.githubusercontent.com/MultitravelCom/style/main/General/img/imagen%20cupon%20mobile.svg);
     height: 292px;
     background-size: cover
-  }
-  .booking-data__data__text{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: red;
-    width: 100%;
-    height: 49%;
   }
   .booking-data__data__text__h2{
     left: 12%;
