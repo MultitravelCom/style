@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function (event) {
 
-    const padre = document.querySelector('.booking-data__data');
+    const padre = document.querySelector('.confirm-booking__promocodes');
     const nuevoDiv = document.createElement('div');
 
     nuevoDiv.classList.add('booking-data__data__text');
@@ -20,3 +20,26 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     padre.appendChild(nuevoDiv);
 });
+
+async function cambiarTexto() {
+    await new Promise(resolve => {
+        document.addEventListener("DOMContentLoaded", resolve);
+    });
+
+    // Definir una variable para el temporizador
+    let timer;
+
+    // Función para buscar el span y cambiar su texto
+    function buscarSpan() {
+        const span = document.querySelector('.promocodes__container td:nth-child(2) span');
+        if (span) {
+            span.textContent = 'Ingresá tu código promocional';
+            clearTimeout(timer); // Detener el temporizador
+        }
+    }
+
+    // Ejecutar la función de búsqueda después de 100 ms
+    timer = setTimeout(buscarSpan, 100);
+}
+
+cambiarTexto();
