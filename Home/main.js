@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
 
     // Si el botón no tiene la clase "collapsed", también cambia el texto del atributo "data-toggle-text"
     if (!btnMoreOptions.classList.contains('collapsed')) {
-        btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje');
+        btnMoreOptions.setAttribute('data-toggle-text', 'Cabina y equipaje');
     }
     // // Obtener el label por su etiqueta "for"
     // const labelFlights = document.querySelector('label[for="flights-searcher-flightclass"]');
