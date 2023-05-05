@@ -58,6 +58,7 @@
 .booking-paxes__fidelity {
   display: none !important;
 }
+
 /************ Seccion Cards *****************/
 /* Titulos */
 .sliding-offers-v3>.offer-title {
@@ -625,22 +626,26 @@
     margin-top: 40px
   }
 }
+
 /* ************************************************ */
 /* MULT-220 */
-.booking-data__login{
+.booking-data__login {
   display: none;
 }
+
 /* ****************************************** */
 /* MULT-139 */
 .booking-data__cross-selling,
 .booking-data__section-side-title {
   display: none;
 }
+
 /* ******************************************  */
 /* MULT-150 */
 .confirm-booking__insurances {
   display: none;
 }
+
 /* ************************************************************** */
 /* MULT-127 */
 #flights-searcher-more-options>.searcher-row:nth-of-type(1)>.col-xs-6.col-sm-4.col-md-4:nth-child(2),
@@ -658,18 +663,42 @@
 #flight-searcher-more-options>.searcher-row:nth-of-type(2)>.col-xs-12.col-sm-4:nth-child(3) {
   width: 100%;
 }
+
 .btn-more-options {
   display: none;
 }
+
 .radio {
   display: none;
-} */
-.searcher.flight-searcher .singledestination-only {
-  margin-bottom: 0!important;
+}
+
+*/ .searcher.flight-searcher .singledestination-only {
+  margin-bottom: 0 !important;
   width: 100% !important;
 }
 
 /* .singledestination-only>.checkbox {
   margin-top: 4px !important;
   margin-bottom: 10px !important;
+}
+/* ****************** MULT-209 *************** */
+.main__DivCpyTax {
+  max-width: 314px;
+  min-height: 79px;
+  background: #EAF4FC;
+  border-radius: 8px;
+
+}
+
+.glyphicon-info-circle {
+  color: #2196F3;
+  font-size: 19px;
+  min-width: 32px;
+}
+
+.main__DivCpyTaxc__icon>p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 144%;
 }
