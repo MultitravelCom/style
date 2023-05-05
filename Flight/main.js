@@ -1,5 +1,24 @@
 window.addEventListener('load', () => {
   console.log("test");
+   // ********************************* MULT-127 *********************************
+   const btnBuscar = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
+   const destinoUnico = document.querySelector('.singledestination-only');
+ 
+   // Crear un observador de mutación
+   const observer = new MutationObserver(mutations => {
+     // Iterar a través de todas las mutaciones
+     mutations.forEach(mutation => {
+       // Comprobar si la clase cambió a "collapse in"
+       if (mutation.attributeName === 'class' && destinoUnico.classList.contains('collapse') && destinoUnico.classList.contains('in')) {
+         // Mover el botón debajo del elemento destinoUnico
+         destinoUnico.parentNode.insertBefore(btnBuscar, destinoUnico.nextSibling);
+       }
+     });
+   });
+ 
+   // Observar los cambios en la clase de destinoUnico
+   observer.observe(destinoUnico, { attributes: true });
+   // ***************************************************************************
   // Mover div fuera del mas opciones.
   let divToMove = document.getElementsByClassName("checkbox")[0];
   let divDestination = document.getElementsByClassName("singledestination-only")[0];
@@ -14,27 +33,6 @@ window.addEventListener('load', () => {
   const textBtn = document.querySelector('.btn-tertiary');
   textBtn.textContent = 'Filtrar';
 
-
-  // ********************************* MULT-127 *********************************
-  const btnBuscar = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
-  const destinoUnico = document.querySelector('.singledestination-only');
-
-  // Crear un observador de mutación
-  const observer = new MutationObserver(mutations => {
-    // Iterar a través de todas las mutaciones
-    mutations.forEach(mutation => {
-      // Comprobar si la clase cambió a "collapse in"
-      if (mutation.attributeName === 'class' && destinoUnico.classList.contains('collapse') && destinoUnico.classList.contains('in')) {
-        // Mover el botón debajo del elemento destinoUnico
-        destinoUnico.parentNode.insertBefore(btnBuscar, destinoUnico.nextSibling);
-      }
-    });
-  });
-  console.log("test");
-
-  // Observar los cambios en la clase de destinoUnico
-  observer.observe(destinoUnico, { attributes: true });
-  // ***************************************************************************
   // ********************************* MULT-114 *********************************
   const calendarContainers = document.querySelectorAll('.js-calendar-container');
 
