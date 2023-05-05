@@ -480,16 +480,16 @@ details {
     height: 49%;
   }
   .booking-data__data__text__h2{
-    left: 9%;
-    top: 9%;
+    left: 12%;
+    top: 2%;
   }
   .booking-data__data__text__p>p{
-    right: -5%;
-    bottom: 17%;
+    left: 18%;
+    bottom: 35%;
   }
   .booking-data__data__text__span{
-    right: 20.5%;
-    bottom: 3%;
+    left: 18.5%;
+    bottom: 7%;
   }
   .promocodes__container{
     margin: auto;
