@@ -45,14 +45,14 @@ window.addEventListener('load', () => {
   divObjetivo.parentNode.insertBefore(divAMover, divObjetivo.nextSibling);
   // ***************************************************************************
   // // seleccionar el elemento div por su clase
-  // let multiFlightDiv = $('.flights-searcher-roundtrip-multi');
+   let multiFlightDiv = $('.flights-searcher-roundtrip-multi');
 
   // // seleccionar el label que contiene el texto que deseas cambiar
-  // let label = multiFlightDiv.find('label[for="flight-searcher-roundtrip-multi"]');
+  let label = multiFlightDiv.find('label[for="flight-searcher-roundtrip-multi"]');
 
   // // cambiar el texto del label
-  // label.text('Multidestino');
-  // document.querySelector('.radio').style.display = 'inline-block';
+   label.text('Multidestino');
+  document.querySelector('.radio').style.display = 'inline-block';
 
   // ************************ MULT-209 *******************************
 
@@ -67,4 +67,4 @@ window.addEventListener('load', () => {
 //   `;
 
 //   bookingWidgetBreakdown.appendChild(newDivCpyTax);
-// });
+});
