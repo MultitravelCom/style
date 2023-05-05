@@ -59,7 +59,7 @@ changeWaLink();
 
 // ***************************  Conexion a BD ***************************************
 const fetchDestinos = async () => {
-    const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
+    const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/Brasil/dbBrasil.json');
     const data = await response.json();
 
     return data;
@@ -75,7 +75,7 @@ function filtrarDestinos(destinos, nombreDestino) {
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Paquetes Florianópolis - Alojamientos Florianópolis', destino: "Florianopolis" },
     { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Paquetes Buzios - Alojamientos Buzios', destino: "Buzios" },
-    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Paquetes Brasil All Inclusive - Alojamientos Brasil All Inclusive', destino: "AllInclusive" },
+    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Paquetes Brasil All Inclusive - Alojamientos Brasil All Inclusive', destino: "All Inclusive" },
 ];
 
 // *****************************************************
@@ -325,9 +325,9 @@ function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [destinos, setDestinos] = React.useState([]);
 
-    const Bariloche = filtrarDestinos(destinos, "Bariloche");
-    const Iguazu = filtrarDestinos(destinos, 'Iguazu');
-    const Mendoza = filtrarDestinos(destinos, 'Mendoza');
+    const Bariloche = filtrarDestinos(destinos, "Florianopolis");
+    const Iguazu = filtrarDestinos(destinos, 'Buzios');
+    const Mendoza = filtrarDestinos(destinos, 'AllInclusive');
 
     React.useEffect(() => {
         fetchDestinos().then(data => {
@@ -347,9 +347,9 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Bariloche} />
-                            <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Iguazu} />
-                            <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={Mendoza} />
+                            <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Florianopolis} />
+                            <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Buzios} />
+                            <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={AllInclusive} />
                         </div>
 
                     </div>
