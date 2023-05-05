@@ -15,17 +15,20 @@ window.addEventListener('load', () => {
 
 
  // ********************************* MULT-127 *********************************
- const botonMasOpciones = document.querySelector('.btn-more-options');
- const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
- const contenedorPadre = botonMasOpciones.parentElement.parentElement;
- 
- botonMasOpciones.addEventListener('click', function() {
-   if (botonMasOpciones.getAttribute('aria-expanded') === 'true') {
-     contenedorPadre.insertAdjacentElement('beforeend', divAMover);
-   } else {
-     contenedorPadre.insertAdjacentElement('afterbegin', divAMover);
-   }
- });
+ const btnMoreOptions = document.querySelector('.btn-more-options');
+const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
+const divSingleDestination = document.querySelector('.singledestination-only.collapse');
+
+btnMoreOptions.addEventListener('click', () => {
+  if (divSingleDestination.classList.contains('in')) {
+    divSingleDestination.appendChild(divAMover);
+  } else {
+    // Si el div singledestination-only collapse no tiene la clase "in",
+    // significa que se ha cerrado, entonces movemos el botón de vuelta a su lugar original.
+    const parentDiv = document.querySelector('.searcher-bar');
+    parentDiv.insertBefore(divAMover, parentDiv.children[1]);
+  }
+});
 
 // ***************************************************************************
   // ********************************* MULT-114 *********************************
