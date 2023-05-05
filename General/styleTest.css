@@ -487,12 +487,12 @@ details {
   }
 
   .booking-data__data__text__p>p {
-    left: 18%;
+    left: 20%;
     bottom: 35%;
   }
 
   .booking-data__data__text__span {
-    left: 18.5%;
+    left: 20%;
     bottom: 7%;
   }
 
@@ -532,7 +532,6 @@ details {
 @media(min-width: 768px) and (max-width: 1023px) {
   .confirm-booking__promocodes {
     background-image: url(https://multitravelcom.github.io/MT/Secciones/Booking-2/Cupon/cupon-desktop.webp);
-    height: 292px;
-    background-size: cover
-  }
+    height: 138px;
+}
 }
