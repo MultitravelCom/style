@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function(event) {
 
     const padre = document.querySelector('.booking-data__data');
     const nuevoDiv = document.createElement('div');
