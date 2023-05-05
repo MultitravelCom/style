@@ -15,16 +15,23 @@ window.addEventListener('load', () => {
 
 
   // ********************************* MULT-127 *********************************
-  let singleDestinationCollapse = document.querySelector(".singledestination-only.collapse.in");
-  let botonBuscar = document.querySelector(".hidden-lg.col-xs-6.col-sm-2.pull-right");
-  singleDestinationCollapse.parentNode.insertBefore(botonBuscar, singleDestinationCollapse.nextSibling);
-  let botonMasOpciones = document.querySelector(".btn-more-options");
-  botonMasOpciones.addEventListener("click", function () {
-    let singleDestinationCollapse = document.querySelector(".singledestination-only.collapse.in");
-    let botonBuscar = document.querySelector(".hidden-lg.col-xs-6.col-sm-2.pull-right");
-    singleDestinationCollapse.parentNode.insertBefore(botonBuscar, singleDestinationCollapse.nextSibling);
-  });
+  const button = document.querySelector('.col-xs-2 col-sm-2.col-md-2.pull-right');
 
+  const observer = new MutationObserver((mutationsList, observer) => {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+        const addedNode = mutation.addedNodes[0];
+        if (addedNode.classList.contains('singledestination-only') && addedNode.classList.contains('collapse') && addedNode.classList.contains('in')) {
+          // Aquí mueves el botón debajo del div "singledestination-only collapse in"
+        }
+      }
+    }
+  });
+  const parent = document.querySelector('#flight-searcher-more-options');
+  observer.observe(parent, { childList: true });
+
+  const singleDestination = document.querySelector('.singledestination-only.collapse.in');
+  singleDestination.insertAdjacentElement('afterend', button);
   // ***************************************************************************
   // ********************************* MULT-114 *********************************
   const calendarContainers = document.querySelectorAll('.js-calendar-container');
