@@ -468,7 +468,7 @@ details {
 @media(max-width: 767px) {
   .confirm-booking__promocodes {
     background-image: url(https://raw.githubusercontent.com/MultitravelCom/style/main/General/img/imagen%20cupon%20mobile.svg);
-    height: 259px;
+    height: 292px;
     background-size: cover
   }
   .booking-data__data__text{
@@ -498,7 +498,7 @@ details {
     left: 17%;
     top: 4%;
   }
-  .promocodes__container.td{
+  .promocodes__container td{
     padding: 7px 10px 0;
   }
   .form-control.promocode-input{
