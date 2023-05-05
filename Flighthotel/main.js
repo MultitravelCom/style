@@ -17,16 +17,4 @@ window.addEventListener('load', () => {
     firstOption.classList.remove('hidden');
     displayMaster.style.display = 'inline-block';
 
-    // ********************************* MULT-127 *********************************
-    const botonMasOpciones = document.querySelector('.btn-more-options');
-    const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
-    const contenedorPadre = botonMasOpciones.parentElement.parentElement;
-    
-    botonMasOpciones.addEventListener('click', function() {
-      if (botonMasOpciones.getAttribute('aria-expanded') === 'true') {
-        contenedorPadre.insertAdjacentElement('beforeend', divAMover);
-      } else {
-        contenedorPadre.insertAdjacentElement('afterbegin', divAMover);
-      }
-    });
   });

@@ -13,7 +13,22 @@ window.addEventListener('load', () => {
     const textBtn = document.querySelector('.btn-tertiary');
     textBtn.textContent = 'Filtrar';
 
-    
+
+ // ********************************* MULT-127 *********************************
+ const botonMasOpciones = document.querySelector('.btn-more-options');
+ const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
+ const contenedorPadre = botonMasOpciones.parentElement.parentElement;
+ 
+ botonMasOpciones.addEventListener('click', function() {
+   if (botonMasOpciones.getAttribute('aria-expanded') === 'true') {
+     contenedorPadre.insertAdjacentElement('beforeend', divAMover);
+   } else {
+     contenedorPadre.insertAdjacentElement('afterbegin', divAMover);
+   }
+ });
+
+// ***************************************************************************
+  // ********************************* MULT-114 *********************************
     const calendarContainers = document.querySelectorAll('.js-calendar-container');
 
     calendarContainers.forEach((container) => {
