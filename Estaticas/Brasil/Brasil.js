@@ -115,24 +115,25 @@ const BannerTop = () => {
                 <source
                     media="(min-width: 1024px)"
                     srcSet="
-            https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/bannerLanding%20(1).webp
+            https://multitravelcom.github.io/MT/Evento/Brasil2023/banner-Landing/bannerLanding%20(1).webp
           "
                 />
                 <source
                     media="(min-width: 768px) and (max-width: 1023px)"
                     srcSet="
-            https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/bannerLanding%20(2).webp
-          "
+                    https://multitravelcom.github.io/MT/Evento/Brasil2023/banner-Landing/bannerLanding%20(2).webp
+                    "
                 />
                 <source
                     media="(max-width: 767px)"
                     srcSet="
-            https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/bannerLanding%20(3).webp
-          "
+                    https://multitravelcom.github.io/MT/Evento/Brasil2023/banner-Landing/bannerLanding%20(3).webp
+                    "
                 />
                 <img
                     className="main_conteiner__s1_medio__paquetes__img"
-                    src="https://multitravelcom.github.io/MT/TravelSale2023/Banners/BannerLanding%20(1).jpg"
+                    src="            https://multitravelcom.github.io/MT/Evento/Brasil2023/banner-Landing/bannerLanding%20(1).webp
+                    "
                     alt="Imagen banner promociones"
                 />
             </picture>
