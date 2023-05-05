@@ -366,6 +366,10 @@ details {
   border-radius: 8px;
   border: 2px solid #0D4E88;
   background-color: #DEE9F5;
+  background-image: url(https://raw.githubusercontent.com/MultitravelCom/style/main/General/img/imagen%20cupon.svg);
+  position: relative;
+  width: 783px;
+  height: 146px;
 }
 
 .promocode__apply-button {
@@ -374,6 +378,29 @@ details {
   width: 83px;
   height: 40px;
 }
-.glyphicon-info-circle{
+
+.glyphicon-info-circle {
   display: none;
+}
+
+.promocodes__container {
+  margin: auto;
+  width: 191px;
+  position: absolute;
+  height: 97px;
+  left: 102px;
+  top: 6.5px;
+}
+
+.form-control.promocode-input {
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 8px;
+}
+
+.promocodes__container--title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
 }
