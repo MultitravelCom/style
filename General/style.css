@@ -636,3 +636,8 @@
 .booking-data__section-side-title {
   display: none;
 }
+/* ******************************************  */
+/* MULT-150 */
+.confirm-booking__insurances {
+  display: none;
+}
