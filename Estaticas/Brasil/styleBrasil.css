@@ -529,7 +529,6 @@ source>img {
     padding: 6px 16px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     
 }
 
@@ -546,4 +545,6 @@ source>img {
 .glyphicon-info-circle{
     color: #2196F3;
     font-size: 19px;
+    width: 50px;
+    text-align: center;
 }
