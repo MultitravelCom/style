@@ -368,7 +368,8 @@ details {
   background-color: #DEE9F5;
   background-image: url(https://multitravelcom.github.io/MT/Secciones/Booking-2/Cupon/cupon-desktop.webp);
   position: relative;
-  height: 146px;
+  height: 150px;
+  background-size: 100% 150px;
 }
 
 .booking-data__data__text {
@@ -478,7 +479,8 @@ details {
     background-image: url(https://raw.githubusercontent.com/MultitravelCom/style/main/General/img/imagen%20cupon%20mobile.svg);
     height: 273px;
   }
-  .booking-data__data__text{
+
+  .booking-data__data__text {
     width: 44%;
   }
 
@@ -536,5 +538,5 @@ details {
     background-image: url(https://multitravelcom.github.io/MT/Secciones/Booking-2/Cupon/cupon-desktop.webp);
     height: 138px;
     background-size: contain;
-}
+  }
 }
