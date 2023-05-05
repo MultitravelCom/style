@@ -1,5 +1,4 @@
 window.addEventListener('load', () => {
-  console.log("test");
    // ********************************* MULT-127 *********************************
    const btnBuscar = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
    const destinoUnico = document.querySelector('.singledestination-only');
@@ -33,6 +32,7 @@ window.addEventListener('load', () => {
   const textBtn = document.querySelector('.btn-tertiary');
   textBtn.textContent = 'Filtrar';
 
+  console.log("test");
   // ********************************* MULT-114 *********************************
   const calendarContainers = document.querySelectorAll('.js-calendar-container');
 
