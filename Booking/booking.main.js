@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nuevoDiv = document.createElement('div');
 
     nuevoDiv.classList.add('booking-data__data__text');
-    nuevoDiv.textContent =
+    nuevoDiv.innerHTML =
         `<div class="booking-data__data__text__h2">
     <h2>Aprovecha nuestro cupón 10% OFF en vuelos y paquetes</h2>
 </div>
