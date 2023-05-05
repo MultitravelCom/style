@@ -664,7 +664,8 @@
 .radio {
   display: none;
 } */
-.searcher.flight-searcher.singledestination-only{
+.searcher.flight-searcher .singledestination-only {
+  margin-bottom: 0!important;
   width: 100% !important;
 }
 
