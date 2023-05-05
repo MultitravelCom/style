@@ -476,11 +476,11 @@ details {
     top: 51%;
   }
   .booking-data__data__text__p>p{
-    right: -1%;
+    right: -5%;
     bottom: 17%;
   }
   .booking-data__data__text__span{
-    right: 22.5%;
+    right: 20.5%;
     bottom: 3%;
   }
   .promocodes__container{
@@ -490,5 +490,10 @@ details {
     left: 17%;
     top: 4%;
   }
-
+  .promocodes__container.td{
+    padding: 7px 10px 0;
+  }
+  .form-control.promocode-input{
+    width: 144px;
+  }
 }
