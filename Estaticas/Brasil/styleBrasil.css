@@ -449,6 +449,7 @@ source>img {
     background: #A3A3A3;
     border-radius: 64%;
     text-align: center;
+    overflow: hidden;
 }
 
 
