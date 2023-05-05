@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 async function changePromoText() {
     while (true) {
-      const promoText = document.querySelector('.promocodes__container td:nth-child(2) span:last-child');
+      const promoText = document.querySelector('.promocodes__container td:nth-child(3) span:last-child');
       if (promoText) {
         promoText.textContent = 'Ingresá tu código promocional';
         break;
