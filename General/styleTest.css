@@ -477,7 +477,10 @@ details {
   .confirm-booking__promocodes {
     background-image: url(https://raw.githubusercontent.com/MultitravelCom/style/main/General/img/imagen%20cupon%20mobile.svg);
     height: 292px;
-    background-size: cover
+    background-size: contain;
+  }
+  .booking-data__data__text{
+    width: 44%;
   }
 
   .booking-data__data__text__h2 {
