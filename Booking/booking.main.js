@@ -31,7 +31,7 @@ async function cambiarTexto() {
 
     // Función para buscar el span y cambiar su texto
     function buscarSpan() {
-        const span = document.querySelector('.promocodes__container td:nth-child(2) span');
+        const span = document.querySelector('.promocodes__container td:nth-child(3) span');
         if (span) {
             span.textContent = 'Ingresá tu código promocional';
             clearTimeout(timer); // Detener el temporizador
