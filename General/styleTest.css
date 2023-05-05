@@ -529,4 +529,10 @@ details {
   }
 }
 
-@media(min-width: 768px) and (max-width: 1023px) {}
+@media(min-width: 768px) and (max-width: 1023px) {
+  .confirm-booking__promocodes {
+    background-image: url(https://multitravelcom.github.io/MT/Secciones/Booking-2/Cupon/cupon-desktop.webp);
+    height: 292px;
+    background-size: cover
+  }
+}
