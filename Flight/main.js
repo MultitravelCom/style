@@ -15,23 +15,23 @@ window.addEventListener('load', () => {
 
 
   // ********************************* MULT-127 *********************************
-  const button = document.querySelector('.col-xs-2 col-sm-2.col-md-2.pull-right');
+  const btnBuscar = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
+  const destinoUnico = document.querySelector('.singledestination-only');
 
-  const observer = new MutationObserver((mutationsList, observer) => {
-    for (const mutation of mutationsList) {
-      if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-        const addedNode = mutation.addedNodes[0];
-        if (addedNode.classList.contains('singledestination-only') && addedNode.classList.contains('collapse') && addedNode.classList.contains('in')) {
-          // Aquí mueves el botón debajo del div "singledestination-only collapse in"
-        }
+  // Crear un observador de mutación
+  const observer = new MutationObserver(mutations => {
+    // Iterar a través de todas las mutaciones
+    mutations.forEach(mutation => {
+      // Comprobar si la clase cambió a "collapse in"
+      if (mutation.attributeName === 'class' && destinoUnico.classList.contains('collapse') && destinoUnico.classList.contains('in')) {
+        // Mover el botón debajo del elemento destinoUnico
+        destinoUnico.parentNode.insertBefore(btnBuscar, destinoUnico.nextSibling);
       }
-    }
+    });
   });
-  const parent = document.querySelector('#flight-searcher-more-options');
-  observer.observe(parent, { childList: true });
 
-  const singleDestination = document.querySelector('.singledestination-only.collapse.in');
-  singleDestination.insertAdjacentElement('afterend', button);
+  // Observar los cambios en la clase de destinoUnico
+  observer.observe(destinoUnico, { attributes: true });
   // ***************************************************************************
   // ********************************* MULT-114 *********************************
   const calendarContainers = document.querySelectorAll('.js-calendar-container');
