@@ -15,14 +15,25 @@ window.addEventListener('load', () => {
 
 
  // ********************************* MULT-127 *********************************
-// seleccionar el div a mover
-const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
+// Obtener el botón "btn-more-options" y el div "hidden-lg"
+var btnMoreOptions = document.querySelector('.btn-more-options');
+var divHidden = document.querySelector('.hidden-lg');
 
-// seleccionar el div debajo del cual se moverá el div a mover
-const divObjetivo = document.getElementById('flight-searcher-more-options');
+// Añadir un evento "click" al botón "btn-more-options"
+btnMoreOptions.addEventListener('click', function() {
+  // Obtener el div "singledestination-only collapse in"
+  var divCollapse = document.querySelector('.singledestination-only.collapse.in');
 
-// mover el div a mover justo debajo del div objetivo
-divObjetivo.parentNode.insertBefore(divAMover, divObjetivo.nextSibling);
+  // Si el panel de opciones está desplegado
+  if (divCollapse) {
+    // Mover el div "hidden-lg" justo debajo del "singledestination-only collapse in"
+    divCollapse.parentNode.insertBefore(divHidden, divCollapse.nextSibling);
+  } else {
+    // Volver a poner el div "hidden-lg" en su posición original
+    var divSearcher = document.querySelector('.col-sm-6.col-md-4.col-lg-3');
+    divSearcher.appendChild(divHidden);
+  }
+});
 
 // ***************************************************************************
   // ********************************* MULT-114 *********************************
