@@ -21,25 +21,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
     padre.appendChild(nuevoDiv);
 });
 
-async function cambiarTexto() {
-    await new Promise(resolve => {
-        document.addEventListener("DOMContentLoaded", resolve);
-    });
-
-    // Definir una variable para el temporizador
-    let timer;
-
-    // Función para buscar el span y cambiar su texto
-    function buscarSpan() {
-        const span = document.querySelector('.promocodes__container td:nth-child(3) span');
-        if (span) {
-            span.textContent = 'Ingresá tu código promocional';
-            clearTimeout(timer); // Detener el temporizador
-        }
+async function changePromoText() {
+    while (true) {
+      const promoText = document.querySelector('.promocodes__container td:nth-child(2) span:last-child');
+      if (promoText) {
+        promoText.textContent = 'Ingresá tu código promocional';
+        break;
+      }
+      await new Promise(resolve => setTimeout(resolve, 100));
     }
-
-    // Ejecutar la función de búsqueda después de 100 ms
-    timer = setTimeout(buscarSpan, 100);
-}
-
-cambiarTexto();
+  }
+  
+  changePromoText();
