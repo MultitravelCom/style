@@ -508,7 +508,7 @@ details {
     bottom: 7%;
   }
   .booking-data__data__text__span>p{
-
+    
   }
 
   .promocodes__container {
@@ -539,7 +539,7 @@ details {
 
   .promocodes {
     position: absolute;
-    left: 20%;
+    left: 24%;
     top: 5%;
   }
 }
