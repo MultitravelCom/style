@@ -325,9 +325,9 @@ function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [destinos, setDestinos] = React.useState([]);
 
-    const Bariloche = filtrarDestinos(destinos, "Florianopolis");
-    const Iguazu = filtrarDestinos(destinos, 'Buzios');
-    const Mendoza = filtrarDestinos(destinos, 'AllInclusive');
+    const Florianopolis = filtrarDestinos(destinos, "Florianopolis");
+    const Buzios = filtrarDestinos(destinos, 'Buzios');
+    const AllInclusive = filtrarDestinos(destinos, 'AllInclusive');
 
     React.useEffect(() => {
         fetchDestinos().then(data => {
