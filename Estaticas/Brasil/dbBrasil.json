@@ -1,0 +1,164 @@
+{
+    "destinos": [
+        {
+            "id": "a1",
+            "destino": "Florianopolis",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/v85uue",
+            "title": "Paquete a Florianopolis 7 noches",
+            "price": "$142.300",
+            "events": "si"
+        },
+        {
+            "id": "a2",
+            "destino": "Florianopolis",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-b%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/ggn9q9",
+            "title": "Pousada Barbroch",
+            "price": "$119.100",
+            "events": "si"
+        },
+        {
+            "id": "a3",
+            "destino": "Florianopolis",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-c%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/ybn04x",
+            "title": "Hotel Villa Sofia",
+            "price": "$24.200",
+            "events": "No"
+        },
+        {
+            "id": "a4",
+            "destino": "Florianopolis",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-d%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/camuhg",
+            "title": "Hotel Desing Suites",
+            "price": "$35.300",
+            "events": "si"
+        },
+        {
+            "id": "a5",
+            "destino": "Florianopolis",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-e%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/dv0ucs",
+            "title": "Vuelo a Bariloche",
+            "price": "$18.600",
+            "events": "si"
+        },
+        {
+            "id": "b1",
+            "destino": "Buzios",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-a%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/herruu",
+            "title": "Paquete a Buzios 7 noches",
+            "price": "$85.800",
+            "events": "si"
+        },
+        {
+            "id": "b2",
+            "destino": "Buzios",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-b%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/n7027o",
+            "title": "Pousada Amendoeira",
+            "price": "$66.500",
+            "events": "si"
+        },
+        {
+            "id": "b3",
+            "destino": "Buzios",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-c%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/eg5mga",
+            "title": "Fantasy Guest House",
+            "price": "$17.700",
+            "events": "si"
+        },
+        {
+            "id": "b4",
+            "destino": "Buzios",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-d%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/itwum8",
+            "title": "Pousada Amancay",
+            "price": "$24.700",
+            "events": "si"
+        },
+        {
+            "id": "b5",
+            "destino": "Buzios",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-e%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/mx8riy",
+            "title": "Bahiamarela hotel boutique",
+            "price": "$22.900",
+            "events": "No"
+        },
+        {
+            "id": "c1",
+            "destino": "ALL INCLUSIVE",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-a%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/8i687n",
+            "title": "Paquete all inclusive 7 noches Imbassai",
+            "price": "$117.200",
+            "events": "si"
+        },
+        {
+            "id": "c2",
+            "destino": "ALL INCLUSIVE",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-b%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/bmcq2f",
+            "title": "Paquete all inclusive 7 noches Bahia",
+            "price": "$99.800",
+            "events": "si"
+        },
+        {
+            "id": "c3",
+            "destino": "ALL INCLUSIVE",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-c%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/expg25",
+            "title": "Paquete all inclusive 7 noches Praia do Forte",
+            "price": "$15.900",
+            "events": "si"
+        },
+        {
+            "id": "c4",
+            "destino": "ALL INCLUSIVE",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-d%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/qm4z9i",
+            "title": "Hotel all inclusive Grand Palladium Imbassai",
+            "price": "$28.200",
+            "events": "si"
+        },
+        {
+            "id": "c5",
+            "destino": "ALL INCLUSIVE",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-e%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/bhbqxo",
+            "title": "Hotel all inclusive Iberostar Bahia",
+            "price": "$24.100",
+            "events": "si"
+        },
+        {
+            "id": "c5",
+            "destino": "ALL INCLUSIVE",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-e%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/iz2sym",
+            "title": "Hotel all inclusive Iberostar seleccion Praia do Forte",
+            "price": "$24.100",
+            "events": "si"
+        }
+    ]
+}
