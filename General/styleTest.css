@@ -498,13 +498,17 @@ details {
 
   .booking-data__data__text__p>p {
     left: 20%;
-    bottom: 35%;
-    font-size: 14px;
+    bottom: 40%;
+    font-size: 12px;
+    font-style: normal;
   }
 
   .booking-data__data__text__span {
-    left: 17%;
+    left: 20%;
     bottom: 7%;
+  }
+  .booking-data__data__text__span>p{
+
   }
 
   .promocodes__container {
