@@ -630,3 +630,9 @@
 .booking-data__login{
   display: none;
 }
+/* ****************************************** */
+/* MULT-139 */
+.booking-data__cross-selling,
+.booking-data__section-side-title {
+  display: none;
+}
