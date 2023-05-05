@@ -29,6 +29,7 @@ window.addEventListener('load', () => {
       }
     });
   });
+  console.log("test");
 
   // Observar los cambios en la clase de destinoUnico
   observer.observe(destinoUnico, { attributes: true });
