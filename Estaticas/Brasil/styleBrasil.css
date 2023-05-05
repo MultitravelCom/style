@@ -518,7 +518,24 @@ source>img {
     font-size: 20px;
     font-weight: 700;
 }
-/* Warning Price */
-.main__warningPrice{
 
+/* Warning Price */
+.main__warningPrice {
+    width: 590px;
+    height: 60px;
+    background: #EAF4FC;
+    border: 1px solid #0D4E88;
+    border-radius: 8px;
+}
+
+.main__warningPrice>p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 144%;
+    color: #2196F3;
+}
+.glyphicon-info-circle{
+    color: #2196F3;
+    font-size: 19px;
 }
