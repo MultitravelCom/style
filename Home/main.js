@@ -56,15 +56,15 @@ window.addEventListener('load', () => {
 
   // ************************ MULT-209 *******************************
 
-  const bookingWidgetBreakdown = document.querySelector('.booking__widgetBreakDown');
-  const newDivCpyTax = document.createElement('div');
+//   const bookingWidgetBreakdown = document.querySelector('.booking__widgetBreakDown');
+//   const newDivCpyTax = document.createElement('div');
 
-  newDivCpyTax.innerHTML = `
-  <div clas="container main__DivCpyTax">
-            <div class="main__DivCpyTaxc__icon glyphicon glyphicon-info-circle"></div>
-            <p>En caso de producto internacional, los precios siempre incluyen el impuesto país y las percepciones RG4815 Y RG5272.</p>
-      </div>
-  `;
+//   newDivCpyTax.innerHTML = `
+//   <div clas="container main__DivCpyTax">
+//             <div class="main__DivCpyTaxc__icon glyphicon glyphicon-info-circle"></div>
+//             <p>En caso de producto internacional, los precios siempre incluyen el impuesto país y las percepciones RG4815 Y RG5272.</p>
+//       </div>
+//   `;
 
-  bookingWidgetBreakdown.appendChild(newDivCpyTax);
-});
+//   bookingWidgetBreakdown.appendChild(newDivCpyTax);
+// });
