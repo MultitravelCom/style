@@ -39,7 +39,7 @@ window.addEventListener('load', () => {
   const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
 
   // seleccionar el div debajo del cual se moverá el div a mover
-  const divObjetivo = document.getElementById('flight-searcher-more-options');
+  const divObjetivo = document.getElementById('flights-searcher-more-options');
 
   // mover el div a mover justo debajo del div objetivo
   divObjetivo.parentNode.insertBefore(divAMover, divObjetivo.nextSibling);
