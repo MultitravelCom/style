@@ -34,3 +34,12 @@ async function changeText() {
   }
   
   changeText();
+
+  function showPromocodesDiv() {
+    setTimeout(function() {
+      const promocodesDiv = document.querySelector('.confirm-booking__promocodes');
+      if (promocodesDiv) {
+        promocodesDiv.style.display = 'block';
+      }
+    }, 5000);
+  }
