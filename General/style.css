@@ -641,3 +641,17 @@
 .confirm-booking__insurances {
   display: none;
 }
+/* ************************************************************** */
+/* MULT-127 */
+.btn-more-options {
+  display: none;
+}
+
+.radio {
+  display: none;
+}
+
+.singledestination-only>.checkbox {
+  margin-top: 4px !important;
+  margin-bottom: 10px !important;
+}
