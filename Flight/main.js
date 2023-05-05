@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+  console.log("test");
   // Mover div fuera del mas opciones.
   let divToMove = document.getElementsByClassName("checkbox")[0];
   let divDestination = document.getElementsByClassName("singledestination-only")[0];
