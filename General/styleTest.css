@@ -366,7 +366,7 @@ details {
   border-radius: 8px;
   border: 2px solid #0D4E88;
   background-color: #DEE9F5;
-  background-image: url(https://raw.githubusercontent.com/MultitravelCom/style/main/General/img/imagen%20cupon.svg);
+  background-image: url(https://multitravelcom.github.io/MT/Secciones/Booking-2/Cupon/cupon-desktop.webp);
   position: relative;
   height: 146px;
 }
@@ -476,7 +476,7 @@ details {
 
 @media(max-width: 767px) {
   .confirm-booking__promocodes {
-    background-image: url(https://raw.githubusercontent.com/MultitravelCom/style/main/General/img/imagen%20cupon%20mobile.svg);
+    background-image: url(https://multitravelcom.github.io/MT/Secciones/Booking-2/Cupon/cupon-desktop.webp);
     height: 292px;
     background-size: cover
   }
