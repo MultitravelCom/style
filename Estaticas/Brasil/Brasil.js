@@ -100,9 +100,19 @@ const EventImg = (props) => {
         <div className={props.style}>
             <img
                 alt={`Imagen evento promocion`}
-                src={ "https://multitravelcom.github.io/MT/HotSale2023/iconCardsOff/logohotsale.webp"}
+                src={"https://multitravelcom.github.io/MT/HotSale2023/iconCardsOff/logohotsale.webp"}
             />
         </div>
+    )
+};
+const WarningPrice = () => {
+    return (
+        <div className="container main__warningPrice">
+            <div className="container main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+            <p>Los precios publicados no aplican para fines de semana largo y vacaciones de invierno y verano.
+                De todas maneras puedes comunicarte con nuestros especialistas para que te den información al respecto.</p>
+        </div>
+
     )
 }
 // ************************************************
@@ -348,7 +358,9 @@ function App() {
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Florianopolis} />
+                            <WarningPrice />
                             <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Buzios} />
+                            <WarningPrice />
                             <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={AllInclusive} />
                         </div>
 
