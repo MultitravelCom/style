@@ -24,7 +24,8 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche 7 noches",
-        price: "$142.300"
+        price: "$142.300",
+        events: "si"
     },
     {
         id: "a2",
@@ -33,7 +34,8 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/s507zo",
         title: "Paquete a Bariloche 5 noches",
-        price: "$119.100"
+        price: "$119.100",
+        events: "si"
     },
     {
         id: "a3",
@@ -42,7 +44,8 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/duchkz",
         title: "Hotel Villa Sofia",
-        price: "$24.200"
+        price: "$24.200",
+        events: "si"
     },
     {
         id: "a4",
@@ -51,7 +54,8 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/2z5hpp",
         title: "Hotel Desing Suites",
-        price: "$35.300"
+        price: "$35.300",
+        events: "si"
     },
     {
         id: "a5",
@@ -60,7 +64,8 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
         title: "Vuelo a Bariloche",
-        price: "$18.600"
+        price: "$18.600",
+        events: "si"
     },
 ];
 const destinos2 = [
@@ -71,7 +76,8 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/hxjkgq",
         title: "Paquete Iguazú 5 noches",
-        price: "$85.800"
+        price: "$85.800",
+        events: "si"
     },
     {
         id: "b2",
@@ -80,7 +86,8 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/2rmvhq",
         title: "Paquete Iguazú 3 noches",
-        price: "$66.500"
+        price: "$66.500",
+        events: "si"
     },
     {
         id: "b3",
@@ -89,7 +96,8 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/wbq74i",
         title: "Hotel Kelta",
-        price: "$17.700"
+        price: "$17.700",
+        events: "si"
     },
     {
         id: "b4",
@@ -98,7 +106,8 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/s6nxus",
         title: "Hotel Raices Esturión",
-        price: "$24.700"
+        price: "$24.700",
+        events: "si"
     },
     {
         id: "b5",
@@ -107,7 +116,8 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
         title: "Vuelo a Iguzú",
-        price: "$22.900"
+        price: "$22.900",
+        events: "si"
     },
 ];
 const destinos3 = [
@@ -118,7 +128,8 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/61efbi",
         title: "Paquete Mendoza 7 noches",
-        price: "$117.200"
+        price: "$117.200",
+        events: "si"
     },
     {
         id: "c2",
@@ -127,7 +138,8 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/sbfl7y",
         title: "Paquete Mendoza 5 noches",
-        price: "$99.800"
+        price: "$99.800",
+        events: "si"
     },
     {
         id: "c3",
@@ -136,7 +148,8 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/vs8baw",
         title: "Hotel Cordón del Plata",
-        price: "$15.900"
+        price: "$15.900",
+        events: "si"
     },
     {
         id: "c4",
@@ -145,7 +158,8 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/u8ym55",
         title: "Hotel Raices Aconcagua",
-        price: "$28.200"
+        price: "$28.200",
+        events: "si"
     },
     {
         id: "c5",
@@ -154,7 +168,8 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/wz0152",
         title: "Vuelo a Mendoza",
-        price: "$24.100"
+        price: "$24.100",
+        events: "si"
 
     },
 ];
@@ -222,6 +237,17 @@ function mostrarSeccion() {
 }
 
 mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
+
+const EventImg = (props) => {
+    return (
+        <div className={props.style}>
+            <img
+                alt={`Imagen evento promocion`}
+                src={"https://multitravelcom.github.io/MT/HotSale2023/iconCardsOff/logohotsale.webp"}
+            />
+        </div>
+    )
+};
 
 const WarningPrice = () => {
     return (
