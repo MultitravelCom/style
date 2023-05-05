@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', function (event) {
 
-    const spanPromocodes = document.querySelector(".promocodes__container td:nth-of-type(3) span");
-    spanPromocodes.textContent = "Ingresa el código";
-
     const padre = document.querySelector('.confirm-booking__promocodes');
     const nuevoDiv = document.createElement('div');
 
@@ -23,3 +20,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     padre.appendChild(nuevoDiv);
 });
+
+async function changeText() {
+    const span = document.querySelector('.promocodes__container tr:nth-child(3) td span');
+  
+    if (!span) {
+      await new Promise(resolve => setTimeout(resolve, 100));
+      changeText();
+      return;
+    }
+  
+    span.textContent = 'Ingresá tu código promocional';
+  }
+  
+  changeText();
