@@ -374,11 +374,15 @@ details {
 
 .promocode__apply-button {
   background: #0D4E88;
+  border-color: #0D4E88;
   border-radius: 8px;
   width: 83px;
   height: 40px;
 }
-
+.promocode__apply-button:hover{
+  background: #0D4E88;
+  border-color: #0D4E88;
+}
 .glyphicon-info-circle {
   display: none;
 }
