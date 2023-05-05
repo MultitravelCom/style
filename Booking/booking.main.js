@@ -21,15 +21,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
     padre.appendChild(nuevoDiv);
 });
 
-async function changePromoText() {
-    while (true) {
-      const promoText = document.querySelector('.promocodes__container td:nth-child(3) span:last-child');
-      if (promoText) {
-        promoText.textContent = 'Ingresá tu código promocional';
-        break;
-      }
+async function changeText() {
+    const span = document.querySelector('.promocodes__container span');
+  
+    if (!span) {
       await new Promise(resolve => setTimeout(resolve, 100));
+      changeText();
+      return;
     }
+  
+    span.textContent = 'Ingresá tu código promocional';
   }
   
-  changePromoText();
+  changeText();
