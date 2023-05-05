@@ -487,12 +487,13 @@ details {
   }
 
   .booking-data__data__text__h2 {
-    left: 12%;
+    left: 10%;
     top: 2%;
   }
 
   .booking-data__data__text__h2>h2 {
-    font-size: 14px;
+    font-size: 17px;
+    line-height: 1.2;
   }
 
   .booking-data__data__text__p>p {
@@ -502,7 +503,7 @@ details {
   }
 
   .booking-data__data__text__span {
-    left: 20%;
+    left: 17%;
     bottom: 7%;
   }
 
