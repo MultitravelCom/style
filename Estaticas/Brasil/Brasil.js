@@ -98,11 +98,10 @@ const Loader = () => {
 const EventImg = (props) => {
     return (
         <div className={props.style}>
-            <span>OK!</span>
-            {/* <img
+            <img
                 alt={`Imagen evento promocion`}
-                src={props.eventImg}
-            /> */}
+                src={ "https://multitravelcom.github.io/MT/HotSale2023/iconCardsOff/logohotsale.webp"}
+            />
         </div>
     )
 }
