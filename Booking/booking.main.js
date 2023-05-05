@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const tabla = document.querySelector('.promocodes__container');
 
     const td = tabla.querySelector('td');
-    
-    const tercerTr = td.querySelector('tr:nth-child(3)');
-    const span = tercerTr.querySelector('span');
 
-    span.textContent = 'Ingresá tu código promocional';
+    const tercerTr = td.querySelector('tr:nth-child(3)');
+    const spantercerTr = tercerTr.querySelector('span');
+
+    spantercerTr.textContent = 'Ingresá tu código promocional';
 
     const padre = document.querySelector('.booking-data__data');
     const nuevoDiv = document.createElement('div');
