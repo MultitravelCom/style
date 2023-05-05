@@ -526,6 +526,7 @@ source>img {
     background: #EAF4FC;
     border: 1px solid #0D4E88;
     border-radius: 8px;
+    padding: 6px 16px;
 }
 
 .main__warningPrice>p {
@@ -533,7 +534,9 @@ source>img {
     font-weight: 400;
     font-size: 11px;
     line-height: 144%;
-    color: #2196F3;
+    color: #000000;
+    width: 524px;
+    height: 32px;
 }
 .glyphicon-info-circle{
     color: #2196F3;
