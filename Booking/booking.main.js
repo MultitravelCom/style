@@ -1,9 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Obtener el span que contiene el texto a cambiar
-    const span = document.querySelector('.promocodes__container td:nth-child(2) span');
-
-    // Cambiar el texto del span
-    span.textContent = 'Ingresá tu código promocional';
 
     const padre = document.querySelector('.booking-data__data');
     const nuevoDiv = document.createElement('div');
@@ -24,4 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
 `;
 
     padre.appendChild(nuevoDiv);
+
+     // Obtener el span que contiene el texto a cambiar
+     const spanPromocodes = document.querySelector('.promocodes__container td:nth-child(2) span');
+
+     // Cambiar el texto del span
+     spanPromocodes.textContent = 'Ingresá tu código promocional';
 });
