@@ -223,6 +223,18 @@ function mostrarSeccion() {
 
 mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
 
+const WarningPrice = () => {
+    return (
+        <div className="container main__warningPrice">
+            <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+            <p>Los precios publicados no aplican para fines de semana largo y vacaciones de invierno y verano.
+                De todas maneras puedes comunicarte con nuestros especialistas para que te den información al respecto.</p>
+        </div>
+
+    )
+}
+
+
 const Card = ({ destinos }) => {
     return (
         destinos.map((destino) => (
@@ -411,7 +423,9 @@ function App() {
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
                             {!ocultarComponente ? null : (<BannerTopPreViaje />)}
+                            <WarningPrice />
                             <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} />
+                            <WarningPrice />
                             <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
                         </div>
                     </div>
