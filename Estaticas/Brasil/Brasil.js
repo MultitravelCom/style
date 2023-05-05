@@ -108,7 +108,7 @@ const EventImg = (props) => {
 const WarningPrice = () => {
     return (
         <div className="container main__warningPrice">
-            <div className="container main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+            <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
             <p>Los precios publicados no aplican para fines de semana largo y vacaciones de invierno y verano.
                 De todas maneras puedes comunicarte con nuestros especialistas para que te den información al respecto.</p>
         </div>
