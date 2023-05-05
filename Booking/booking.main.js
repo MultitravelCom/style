@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const tabla = document.querySelector('.promocodes__container');
+    // Obtener el span que contiene el texto a cambiar
+    const span = document.querySelector('.promocodes__container td:nth-child(2) span');
 
-    const td = tabla.querySelector('td');
-
-    const tercerTr = td.querySelector('tr:nth-child(3)');
-    const spantercerTr = tercerTr.querySelector('span');
-
-    spantercerTr.textContent = 'Ingresá tu código promocional';
+    // Cambiar el texto del span
+    span.textContent = 'Ingresá tu código promocional';
 
     const padre = document.querySelector('.booking-data__data');
     const nuevoDiv = document.createElement('div');
