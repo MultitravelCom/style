@@ -64,6 +64,7 @@
   /* ************************************************************** */
   /* BTN STYLE */
   .btnStyleBannerPre {
+    position: absolute;
     bottom: 8%;
     right: 18%;
     width: 64%;
