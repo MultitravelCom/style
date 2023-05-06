@@ -41,6 +41,10 @@ const BannerTop = () => {
         setShowBanner(shouldShow);
     }, []);
 
+    if (shouldShow && !showBanner) {
+        setShowBanner(true);
+      }
+
     return (
         <>
             {showBanner && (
