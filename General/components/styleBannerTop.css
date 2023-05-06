@@ -101,11 +101,7 @@
       padding: 3px 0 0 0;
     }
   }
-  @media (width: 1024px) {
-    .containerPreViaje {
-      margin-top: 40px
-    }
-  }
+
   @media (max-width: 767px) {  
     .main__container__bannerTop{
       margin-top: 2rem;
