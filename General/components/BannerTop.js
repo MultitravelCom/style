@@ -54,7 +54,7 @@ const BannerTop = () => {
                                 : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerMobile-1.webp'
                         }
                     />
-                    <img
+                    <img className="bannerTop__img"
                         alt=""
                         srcSet={
                             showPackageImages
@@ -91,7 +91,7 @@ const BannerTop = () => {
                                 : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerMobile-2.webp'
                         }
                     />
-                    <img
+                    <img className="bannerTop__img"
                         alt=""
                         srcSet={
                             showPackageImages
@@ -129,7 +129,7 @@ const BannerTop = () => {
                                 : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerMobile-3.webp'
                         }
                     />
-                    <img
+                    <img className="bannerTop__img"
                         alt=""
                         srcSet={
                             showPackageImages
