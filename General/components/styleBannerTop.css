@@ -123,4 +123,7 @@
     .bannerTop__left>.btnStyleBannerPre{
       display: none;
     }
+    .bannerTop__center>.btnStyleBannerPre{
+      display: inline;
+    }
   }
