@@ -11,7 +11,7 @@ function addHeaderLinks() {
 addHeaderLinks();
 
 function shouldShowBanner() {
-    const startDate = new Date("2023-05-06T19:59:00");
+    const startDate = new Date("2023-05-06T20:04:00");
     const endDate = new Date("2023-05-10T23:59:00");
     const now = new Date();
 
