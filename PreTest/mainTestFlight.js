@@ -1,9 +1,10 @@
-// Seleccionar el div para insertar después
-const referenceNode = document.querySelector('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
+window.addEventListener('load', () => {
+    // Seleccionar el div para insertar después
+    const referenceNode = document.querySelector('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
 
-const newElement = document.createElement('div');
-newElement.classList.add('mi-nuevo-componente');
-newElement.innerHTML = `
+    const newElement = document.createElement('div');
+    newElement.classList.add('mi-nuevo-componente');
+    newElement.innerHTML = `
 <div class="container main__warningPrice">
             <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
             <p>Los precios publicados no aplican para fines de semana largo y vacaciones de invierno y verano.
@@ -11,4 +12,6 @@ newElement.innerHTML = `
         </div>
 `;
 
-referenceNode.insertAdjacentElement('afterend', newElement);
+    referenceNode.insertAdjacentElement('afterend', newElement);
+
+});
