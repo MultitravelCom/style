@@ -11,7 +11,7 @@ function addHeaderLinks() {
 addHeaderLinks();
 
 const BannerTop = () => {
-    const location = window.useLocation();
+    const location = React.useLocation();
     const showPackageImages = location.pathname.includes('/packages');
 
     return (
