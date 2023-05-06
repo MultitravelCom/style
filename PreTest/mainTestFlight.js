@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    // Seleccionar el div para insertar después
+    //*************************************** MULT-209 *************************** */
     const referenceNode = document.querySelector('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
 
     const newElement = document.createElement('div');
@@ -13,5 +13,5 @@ window.addEventListener('load', () => {
 `;
 
     referenceNode.insertAdjacentElement('afterend', newElement);
-
+//****************************************************************** */
 });
