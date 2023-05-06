@@ -274,7 +274,7 @@ const Card = ({ destinos }) => {
                         <source media="(min-width: 1024px)" srcSet={destino.img} />
                         <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
                         <source media="(max-width: 767px)" srcSet={destino.img} />
-                        <img alt={`Imagen banner ${destino.title}`} src={destino.img} useMap={`#${destino.id}`} />
+                        <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <Button id={destino.id} link={destino.linkWa} text="Contactarme" />
                 </div>
