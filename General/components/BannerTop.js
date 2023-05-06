@@ -36,7 +36,7 @@ const BannerTop = () => {
 
     React.useEffect(() => {
         setShowBanner(shouldShowBanner());
-    }, []);
+    }, [showPackageImages]);
 
     return (
         <>
