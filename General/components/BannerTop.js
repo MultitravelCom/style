@@ -63,7 +63,7 @@ const BannerTop = () => {
                         }
                     />
                 </picture>
-                {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/brasil" text="Ver Más" />)}
+                {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)}
             </div>
             <div id="bannerTop__center" className="main__container_center">
                 <picture>
@@ -138,7 +138,7 @@ const BannerTop = () => {
                         }
                     />
                 </picture>
-                {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)};
+                {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/brasil" text="Ver Más" />)};
             </div>
         </div>
     )

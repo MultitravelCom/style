@@ -43,6 +43,9 @@
     border-radius: 8px 40px 8px 8px;
     overflow: hidden;
   }
+  .bannerTop__center>.btnStyleBannerPre{
+    display: none;
+  }
   
   @media (max-width: 767px) {
     /* SCROLL HORIZONTAL */
@@ -62,6 +65,9 @@
     .main__container_right {
       min-width: 268px;
       height: 304px;
+    }
+    .bannerTop__left>.btnStyleBannerPre{
+      display: none;
     }
   }
   /* ************************************************************** */
