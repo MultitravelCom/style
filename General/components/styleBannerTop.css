@@ -1,6 +1,7 @@
 /* MULT-199 */
 /* BannerTop */
 .main__container__bannerTop {
+  position: relative;
     display: flex;
     justify-content: space-between;
     padding-left: 8px !important;
@@ -63,7 +64,6 @@
   /* ************************************************************** */
   /* BTN STYLE */
   .btnStyleBannerPre {
-    position: absolute;
     bottom: 8%;
     right: 18%;
     width: 64%;
@@ -77,6 +77,10 @@
   .btnStyleBannerPre:hover {
     background-color: #134570;
     color: #F3F3F3;
+  }
+  .main__container_right,
+  .main__container_left{
+    position: relative;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
     .btnStyleBannerPre {
