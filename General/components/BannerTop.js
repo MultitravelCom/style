@@ -4,11 +4,35 @@ function addHeaderLinks() {
     const linkStyle = document.createElement('link');
 
     linkStyle.rel = 'stylesheet';
+    linkStyle.href = 'https://multitravelcom.github.io/style/Estaticas/Brasil/styleBrasil.css';
+
+    head.appendChild(linkStyle);
+}
+addHeaderLinks();
+
+function addHeaderLinks() {
+    const head = document.head || document.getElementsByTagName('head')[0];
+
+    const linkStyle = document.createElement('link');
+
+    linkStyle.rel = 'stylesheet';
     linkStyle.href = 'https://multitravelcom.github.io/style/General/components/styleBannerTop.css';
 
     head.appendChild(linkStyle);
 }
 addHeaderLinks();
+
+function Button(props) {
+
+    const handleClick = (event) => {
+        event.preventDefault();
+        window.open(props.link, '_blank');
+    }
+
+    return (
+        <button className={props.style} onClick={handleClick}>{props.text}</button>
+    );
+}
 
 const BannerTop = () => {
     const showPackageImages = window.location.pathname.includes('/packages');
@@ -25,6 +49,7 @@ const BannerTop = () => {
                                 : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerDesktop-1.webp'
                         }
                     />
+                    {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/brasil" text="Ver Más" />)}
                     <source
                         media="(min-width: 768px) and (max-width: 1023px)"
                         srcSet={
@@ -123,6 +148,7 @@ const BannerTop = () => {
                         }
                     />
                 </picture>
+                {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)}
             </div>
         </div>
     )
