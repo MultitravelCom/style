@@ -4,7 +4,7 @@ function addHeaderLinks() {
     const linkStyle = document.createElement('link');
 
     linkStyle.rel = 'stylesheet';
-    linkStyle.href = 'https://multitravelcom.github.io/style/Estaticas/Brasil/styleBrasil.css';
+    linkStyle.href = 'https://multitravelcom.github.io/style/General/components/styleBannerTop.css';
 
     head.appendChild(linkStyle);
 }
