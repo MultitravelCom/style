@@ -266,7 +266,7 @@ const Card = ({ destinos }) => {
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
-                    {destino.events === "si" && <EventImg style="eventImg" />}
+                    {/* {destino.events === "si" && <EventImg style="eventImg" />} */}
                     <picture>
                         <map name={destino.id}>
                             <area target="_blank" alt={destino.title} title={destino.title} href={destino.linkWa} coords={destino.coords} shape="rect" />
