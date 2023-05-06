@@ -10,18 +10,6 @@ function addHeaderLinks() {
 }
 addHeaderLinks();
 
-function addHeaderLinks() {
-    const head = document.head || document.getElementsByTagName('head')[0];
-
-    const linkStyle = document.createElement('link');
-
-    linkStyle.rel = 'stylesheet';
-    linkStyle.href = 'https://multitravelcom.github.io/style/General/components/styleBannerTop.css';
-
-    head.appendChild(linkStyle);
-}
-addHeaderLinks();
-
 function Button(props) {
 
     const handleClick = (event) => {
