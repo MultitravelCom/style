@@ -49,7 +49,6 @@ const BannerTop = () => {
                                 : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerDesktop-1.webp'
                         }
                     />
-                    {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/brasil" text="Ver Más" />)}
                     <source
                         media="(min-width: 768px) and (max-width: 1023px)"
                         srcSet={
@@ -76,6 +75,7 @@ const BannerTop = () => {
                         }
                     />
                 </picture>
+                {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/brasil" text="Ver Más" />)}
             </div>
             <div id="bannerTop__center" className="main__container_center">
                 <picture>
@@ -148,7 +148,7 @@ const BannerTop = () => {
                         }
                     />
                 </picture>
-                {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)}
+                {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)};
             </div>
         </div>
     )
