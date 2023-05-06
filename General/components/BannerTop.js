@@ -10,13 +10,6 @@ function addHeaderLinks() {
 }
 addHeaderLinks();
 
-function shouldShowBanner() {
-    const startDate = new Date("2023-05-06T20:33:00");
-    const endDate = new Date("2023-05-10T23:59:00");
-    const now = new Date();
-
-    return now >= startDate && now <= endDate;
-}
 
 function Button(props) {
 
@@ -30,9 +23,17 @@ function Button(props) {
     );
 }
 
+function shouldShowBanner() {
+    const startDate = new Date("2023-05-06T20:33:00");
+    const endDate = new Date("2023-05-10T23:59:00");
+    const now = new Date();
+
+    return now >= startDate && now <= endDate;
+}
+
 const BannerTop = () => {
-    const showPackageImages = window.location.pathname.includes('/packages');
     const [showBanner, setShowBanner] = React.useState(false);
+    const showPackageImages = window.location.pathname.includes('/packages');
 
     React.useEffect(() => {
         const shouldShow = shouldShowBanner();
@@ -116,7 +117,7 @@ const BannerTop = () => {
                                 }
                             />
                         </picture>
-                        {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)};
+                        {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)}
 
                     </div>
                     <div id="bannerTop__rigth" className="main__container_right">
