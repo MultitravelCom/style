@@ -36,7 +36,7 @@ const BannerTop = () => {
 
     React.useEffect(() => {
         setShowBanner(shouldShowBanner());
-    }, [window.location.pathname.includes('/packages')]);
+    }, [showPackageImages]);
 
     return (
         <>
