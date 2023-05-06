@@ -11,8 +11,7 @@ function addHeaderLinks() {
 addHeaderLinks();
 
 const BannerTop = () => {
-    const location = React.useLocation();
-    const showPackageImages = location.pathname.includes('/packages');
+    const showPackageImages = window.location.pathname.includes('/packages');
 
     return (
         <div className="container-fluid main__container__bannerTop scroll-mobile">
