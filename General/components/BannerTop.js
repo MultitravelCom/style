@@ -10,6 +10,7 @@ function addHeaderLinks() {
 }
 addHeaderLinks();
 
+const UrlImg = 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal';
 
 function Button(props) {
 
@@ -50,16 +51,16 @@ const BannerTop = () => {
                                 media="(min-width: 1024px)"
                                 srcSet={
                                     showPackageImages
-                                        ? 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes/bannerDesktop-1.webp'
-                                        : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerDesktop-1.webp'
+                                        ? '${UrlImg}/Paquetes/bannerDesktop-1.webp'
+                                        : '${UrlImg}/bannerDesktop-1.webp'
                                 }
                             />
                             <source
                                 media="(min-width: 768px) and (max-width: 1023px)"
                                 srcSet={
                                     showPackageImages
-                                        ? 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes/bannerDesktop-1.webp'
-                                        : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerDesktop-1.webp'
+                                        ? '${UrlImg}/Paquetes/bannerDesktop-1.webp'
+                                        : '${UrlImg}/bannerDesktop-1.webp'
                                 }
 
                             />
@@ -67,16 +68,16 @@ const BannerTop = () => {
                                 media="(max-width: 767px)"
                                 srcSet={
                                     showPackageImages
-                                        ? 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes/bannerMobile-1.webp'
-                                        : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerMobile-1.webp'
+                                        ? '${UrlImg}/Paquetes/bannerMobile-1.webp'
+                                        : '${UrlImg}/bannerMobile-1.webp'
                                 }
                             />
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
                                     showPackageImages
-                                        ? 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes/bannerDesktop-1.webp'
-                                        : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerDesktop-1.webp'
+                                        ? '${UrlImg}/Paquetes/bannerDesktop-1.webp'
+                                        : '${UrlImg}/bannerDesktop-1.webp'
                                 }
                             />
                         </picture>
