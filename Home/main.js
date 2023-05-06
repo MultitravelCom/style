@@ -53,18 +53,4 @@ window.addEventListener('load', () => {
   // // cambiar el texto del label
    label.text('Multidestino');
   document.querySelector('.radio').style.display = 'inline-block';
-
-  // ************************ MULT-209 *******************************
-
-//   const bookingWidgetBreakdown = document.querySelector('.booking__widgetBreakDown');
-//   const newDivCpyTax = document.createElement('div');
-
-//   newDivCpyTax.innerHTML = `
-//   <div clas="container main__DivCpyTax">
-//             <div class="main__DivCpyTaxc__icon glyphicon glyphicon-info-circle"></div>
-//             <p>En caso de producto internacional, los precios siempre incluyen el impuesto país y las percepciones RG4815 Y RG5272.</p>
-//       </div>
-//   `;
-
-//   bookingWidgetBreakdown.appendChild(newDivCpyTax);
 });
