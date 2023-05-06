@@ -42,11 +42,7 @@
     background: #c4c4c4;
     border-radius: 8px 40px 8px 8px;
     overflow: hidden;
-  }
-  .bannerTop__center>.btnStyleBannerPre{
-    display: none;
-  }
-  
+  }  
   @media (max-width: 767px) {
     /* SCROLL HORIZONTAL */
     .scroll-mobile {
@@ -65,9 +61,6 @@
     .main__container_right {
       min-width: 268px;
       height: 304px;
-    }
-    .bannerTop__left>.btnStyleBannerPre{
-      display: none;
     }
   }
   /* ************************************************************** */
@@ -89,8 +82,12 @@
     color: #F3F3F3;
   }
   .main__container_right,
-  .main__container_left{
+  .main__container_left,
+  .main__container_center{
     position: relative;
+  }
+  .bannerTop__center>.btnStyleBannerPre{
+    display: none;
   }
   @media (min-width: 768px) and (max-width: 1023px) {
     .btnStyleBannerPre {
@@ -122,5 +119,8 @@
       border-radius: 12px;
       background: #0D4E88;
       color: #F3F3F3;
+    }
+    .bannerTop__left>.btnStyleBannerPre{
+      display: none;
     }
   }
