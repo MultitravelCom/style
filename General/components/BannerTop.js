@@ -47,8 +47,8 @@ const BannerTop = () => {
                                 media="(min-width: 1024px)"
                                 srcSet={
                                     showPackageImages
-                                        ? '${UrlImg}/Paquetes/bannerDesktop-1.webp'
-                                        : '${UrlImg}/bannerDesktop-1.webp'
+                                        ? `${UrlImg}/Paquetes/bannerDesktop-1.webp`
+                                        : `${UrlImg}/bannerDesktop-1.webp`
                                 }
                             />
                             <source

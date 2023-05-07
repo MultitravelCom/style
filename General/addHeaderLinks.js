@@ -15,7 +15,11 @@ function addHeaderLinks() {
 
 
     const path = window.location.pathname;
-    const shouldAddBanner = path.includes('/fligh');
+    const copyTaxRg = path.includes('/results');
+
+    if(copyTaxRg){
+
+    }
 
 }
 addHeaderLinks();
