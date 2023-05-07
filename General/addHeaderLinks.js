@@ -14,22 +14,10 @@ function addHeaderLinks() {
     head.appendChild(bannerNoResult);
 
 
-    const bannerTopStyle = document.createElement('link');
-    const bannerTopScript = document.createElement('script');
-
-    bannerTopScript.src = 'https://multitravelcom.github.io/style/General/components/BannerTop.js';
-    bannerTopScript.type = "text/babel";
-
-    bannerTopStyle.href = "https://multitravelcom.github.io/style/General/components/styleBannerTop.css";
-    bannerTopStyle.rel = "stylesheet";
-
-    head.appendChild(bannerTopStyle);
-    head.appendChild(bannerTopScript);
-
-
     const path = window.location.pathname;
     const copyTaxRg = path.includes('/flights') || path.includes('/booking/');
     const priceFinalFlight = path.includes('/results');
+    const bannerTop = path.includes('/results');
 
 
     if(copyTaxRg){
@@ -52,6 +40,20 @@ function addHeaderLinks() {
 
 
         head.appendChild(priceFinalFlightScript);
+    }
+
+    if(!bannerTop){
+        const bannerTopStyle = document.createElement('link');
+        const bannerTopScript = document.createElement('script');
+    
+        bannerTopScript.src = 'https://multitravelcom.github.io/style/General/components/BannerTop.js';
+        bannerTopScript.type = "text/babel";
+    
+        bannerTopStyle.href = "https://multitravelcom.github.io/style/General/components/styleBannerTop.css";
+        bannerTopStyle.rel = "stylesheet";
+    
+        head.appendChild(bannerTopStyle);
+        head.appendChild(bannerTopScript);
     }
     // if(cuponSeccion){
     //     const cuponSeccionScript = document.createElement('script');
