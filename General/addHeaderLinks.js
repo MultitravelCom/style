@@ -7,11 +7,15 @@ function addHeaderLinks() {
     bannerNoResult.src = 'https://multitravelcom.github.io/style/General/bannerNoResult.js';
     bannerNoResult.type = "text/babel";
 
-    bannerNoResultStyle.href ="https://multitravelcom.github.io/style/General/noResultStyle.css";
+    bannerNoResultStyle.href = "https://multitravelcom.github.io/style/General/noResultStyle.css";
     bannerNoResultStyle.rel = "stylesheet";
 
     head.appendChild(bannerNoResultStyle);
     head.appendChild(bannerNoResult);
+
+
+    const path = window.location.pathname;
+    const shouldAddBanner = path.includes('/fligh');
 
 }
 addHeaderLinks();
