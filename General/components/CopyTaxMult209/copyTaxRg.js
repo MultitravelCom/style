@@ -15,6 +15,9 @@ window.addEventListener('load', () => {
 
     function agregarElemento(referenceSelector, index = -1) {
         const referenceNode = document.querySelector(referenceSelector);
+        if (!referenceNode) {
+          return; // si no se encuentra el elemento de referencia, se sale de la función
+        }
       
         const newElement = document.createElement('div');
         newElement.classList.add('booking-breakdown__table', 'main__warningPrice');
@@ -30,9 +33,30 @@ window.addEventListener('load', () => {
         }
       }
       
-
-      agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
+      function onElementAddedToDOM(selector, callback) {
+        const observer = new MutationObserver(mutationsList => {
+          for (const mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+              for (const node of mutation.addedNodes) {
+                if (node.nodeType === Node.ELEMENT_NODE && node.matches(selector)) {
+                  callback();
+                }
+              }
+            }
+          }
+        });
       
-      agregarElemento('.flight-selection__box > :nth-child(3) + :nth-child(1)');
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+      }
+      
+      // Ejemplo de uso:
+      onElementAddedToDOM('.flight-selection__box > :nth-child(3) + :nth-child(1)', () => {
+        agregarElemento('.flight-selection__box > :nth-child(3) + :nth-child(1)');
+      });
+      
+      onElementAddedToDOM('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web', () => {
+        agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
+      });
+      
       //****************************************************************** */
 });
