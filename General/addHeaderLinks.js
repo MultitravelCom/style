@@ -45,7 +45,7 @@ function addHeaderLinks() {
         const cuponSeccionScript = document.createElement('script');
         const cuponSeccionStyle = document.createElement('link');
 
-        cuponSeccionScript.src = 'https://multitravelcom.github.io/style/General/components/PrecioFinalFlight/finalPriceFlight.js';
+        cuponSeccionScript.src = 'https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.css';
 
     
         cuponSeccionStyle.href = "https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.js";
