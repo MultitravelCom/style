@@ -18,7 +18,17 @@ function addHeaderLinks() {
     const copyTaxRg = path.includes('/results');
 
     if(copyTaxRg){
-
+        const copyTaxRegStyle = document.createElement('link');
+        const copyTaxRegJs = document.createElement('script');
+    
+        copyTaxRegStyle.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRg.js';
+        copyTaxRegStyle.type = "text/babel";
+    
+        copyTaxRegJs.href = "https://multitravelcom.github.io/style/General/noResultStyle.css";
+        copyTaxRegJs.rel = "stylesheet";
+    
+        head.appendChild(copyTaxRegStyle);
+        head.appendChild(copyTaxRegJs);
     }
 
 }

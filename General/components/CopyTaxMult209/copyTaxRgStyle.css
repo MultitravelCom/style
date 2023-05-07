@@ -1,0 +1,27 @@
+/* ******************** MULT-209 ***************************/
+/* Warning Price */
+.main__warningPrice {
+    background: #EAF4FC;
+    border-radius: 8px;
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .main__warningPrice>p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 144%;
+    color: #000000;
+    max-width: 524px;
+    min-height: 32px;
+    margin: 0 !important;
+  }
+  .glyphicon-info-circle{
+    color: #2196F3;
+    font-size: 19px;
+    min-width: 32px;
+  }
+  /* **********************************************/
