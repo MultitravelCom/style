@@ -37,7 +37,7 @@ window.addEventListener('load', () => {
         observer.observe(document.documentElement, { childList: true, subtree: true });
     }
 
-    onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
+    onElementAddedToDOM('.flight-selection__box', () => {
         agregarElemento('.flight-selection__box');
         console.log("tesT")
       });
