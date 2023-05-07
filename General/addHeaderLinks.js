@@ -45,10 +45,10 @@ function addHeaderLinks() {
         const cuponSeccionScript = document.createElement('script');
         const cuponSeccionStyle = document.createElement('link');
 
-        cuponSeccionScript.src = 'https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.css';
+        cuponSeccionScript.src = 'https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.js';
 
     
-        cuponSeccionStyle.href = "https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.js";
+        cuponSeccionStyle.href = "https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.css";
         cuponSeccionStyle.rel = "stylesheet";
 
         head.appendChild(cuponSeccionStyle);
