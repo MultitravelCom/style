@@ -55,8 +55,8 @@ const BannerTop = () => {
                                 media="(min-width: 768px) and (max-width: 1023px)"
                                 srcSet={
                                     showPackageImages
-                                        ? '${UrlImg}/Paquetes/bannerDesktop-1.webp'
-                                        : '${UrlImg}/bannerDesktop-1.webp'
+                                        ? `${UrlImg}/Paquetes/bannerDesktop-1.webp`
+                                        : `${UrlImg}/bannerDesktop-1.webp'`
                                 }
 
                             />
@@ -64,16 +64,16 @@ const BannerTop = () => {
                                 media="(max-width: 767px)"
                                 srcSet={
                                     showPackageImages
-                                        ? '${UrlImg}/Paquetes/bannerMobile-1.webp'
-                                        : '${UrlImg}/bannerMobile-1.webp'
+                                    ? `${UrlImg}/Paquetes/bannerMobile-1.webp`
+                                    : `${UrlImg}/bannerMobile-1.webp`
                                 }
                             />
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
                                     showPackageImages
-                                        ? '${UrlImg}/Paquetes/bannerDesktop-1.webp'
-                                        : '${UrlImg}/bannerDesktop-1.webp'
+                                    ? `${UrlImg}/Paquetes/bannerDesktop-1.webp`
+                                    : `${UrlImg}/bannerDesktop-1.webp'`
                                 }
                             />
                         </picture>
@@ -85,32 +85,33 @@ const BannerTop = () => {
                                 media="(min-width: 1024px)"
                                 srcSet={
                                     showPackageImages
-                                        ? 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes/bannerDesktop-2.webp'
-                                        : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerDesktop-2.webp'
+                                    ? `${UrlImg}/Paquetes/bannerDesktop-2.webp`
+                                    : `${UrlImg}/bannerDesktop-2.webp`
                                 }
                             />
                             <source
                                 media="(min-width: 768px) and (max-width: 1023px)"
                                 srcSet={
                                     showPackageImages
-                                        ? 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes/bannerDesktop-2.webp'
-                                        : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerDesktop-2.webp'
+                                    ? `${UrlImg}/Paquetes/bannerDesktop-2.webp`
+                                    : `${UrlImg}/bannerDesktop-2.webp`
                                 }
                             />
                             <source
                                 media="(max-width: 767px)"
                                 srcSet={
                                     showPackageImages
-                                        ? 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes/bannerMobile-2.webp'
-                                        : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerMobile-2.webp'
+
+                                        ? `${UrlImg}/Paquetes/bannerMobile-2.webp`
+                                        : `${UrlImg}/bannerMobile-2.webp`
                                 }
                             />
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
                                     showPackageImages
-                                        ? 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes/bannerDesktop-2.webp'
-                                        : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerDesktop-2.webp'
+                                    ? `${UrlImg}/Paquetes/bannerDesktop-2.webp`
+                                    : `${UrlImg}/bannerDesktop-2.webp`
                                 }
                             />
                         </picture>
@@ -123,32 +124,32 @@ const BannerTop = () => {
                                 media="(min-width: 1024px)"
                                 srcSet={
                                     showPackageImages
-                                        ? 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes/bannerDesktop-3.webp'
-                                        : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerDesktop-3.webp'
+                                    ? `${UrlImg}/Paquetes/bannerDesktop-3.webp`
+                                    : `${UrlImg}/bannerDesktop-3.webp`
                                 }
                             />
                             <source
                                 media="(min-width: 768px) and (max-width: 1023px)"
                                 srcSet={
                                     showPackageImages
-                                        ? 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes/bannerDesktop-3.webp'
-                                        : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerDesktop-3.webp'
+                                    ? `${UrlImg}/Paquetes/bannerDesktop-3.webp`
+                                    : `${UrlImg}/bannerDesktop-3.webp`
                                 }
                             />
                             <source
                                 media="(max-width: 767px)"
                                 srcSet={
                                     showPackageImages
-                                        ? 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes/bannerMobile-3.webp'
-                                        : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerMobile-3.webp'
+                                        ? `${UrlImg}/Paquetes/bannerMobile-3.webp`
+                                        : `${UrlImg}/bannerMobile-3.webp`
                                 }
                             />
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
                                     showPackageImages
-                                        ? 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes/bannerDesktop-3.webp'
-                                        : 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerDesktop-3.webp'
+                                    ? `${UrlImg}/Paquetes/bannerDesktop-3.webp`
+                                    : `${UrlImg}/bannerDesktop-3.webp`
                                 }
                             />
                         </picture>
