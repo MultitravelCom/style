@@ -622,7 +622,7 @@
   display: none;
 }
 
-*/ .searcher.flight-searcher .singledestination-only {
+.col-xs-5.col-sm-3.col-md-2.singledestination-only.supsearcher {
   margin-bottom: 0 !important;
   width: 100% !important;
 }
