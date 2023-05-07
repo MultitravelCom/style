@@ -23,7 +23,7 @@ function shouldShowBanner() {
 const BannerTop = () => {
 
 
-    const showPackageImages = true;
+    const showPackageImages = false;
 
     return (
         <>
