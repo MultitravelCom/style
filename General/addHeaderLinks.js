@@ -16,6 +16,7 @@ function addHeaderLinks() {
 
     const path = window.location.pathname;
     const copyTaxRg = path.includes('/flights');
+    const priceFinalFlight = path.includes('onefiveb2b.juniper.es/flights/results.aspx');
 
     if(copyTaxRg){
         const copyTaxRegStyle = document.createElement('link');
@@ -28,6 +29,15 @@ function addHeaderLinks() {
     
         head.appendChild(copyTaxRegStyle);
         head.appendChild(copyTaxRegJs);
+    }
+
+    if(priceFinalFlight){
+        const priceFinalFlight = document.createElement('script');
+    
+        priceFinalFlight.src = 'https://multitravelcom.github.io/style/General/components/PrecioFinalFlight/finalPriceFlight.js';
+
+
+        head.appendChild(priceFinalFlight);
     }
 
 }
