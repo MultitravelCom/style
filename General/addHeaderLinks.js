@@ -16,7 +16,7 @@ function addHeaderLinks() {
 
     const path = window.location.pathname;
     const copyTaxRg = path.includes('/flights');
-    const priceFinalFlight = path.includes('/results') || path.includes('/confirmBooking');
+    const priceFinalFlight = path.includes('/results') || path.includes('/booking/');
 
 
     if(copyTaxRg){
