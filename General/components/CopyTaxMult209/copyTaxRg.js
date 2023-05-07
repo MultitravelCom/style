@@ -41,11 +41,6 @@ window.addEventListener('load', () => {
         agregarElemento('.js-results-list-selection-placeholder > .flight-selection > .flight-selection__box:nth-child(3)');
       });
 
-    // agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
-    
-    const elements = document.querySelectorAll('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
-    if (elements.length >= 2) {
-      agregarElemento(elements[1]);
-    }
-    //****************************************************************** */
+    agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
+        //****************************************************************** */
 });
