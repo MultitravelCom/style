@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
       }
       
       // Ejemplo de uso:
-      onElementAddedToDOM('.flight-selection__box > :nth-child(3) + :nth-child(1)', () => {
+      onElementAddedToDOM('.flight-selection__box', () => {
         agregarElemento('.flight-selection__box > :nth-child(3) + :nth-child(1)');
       });
       
