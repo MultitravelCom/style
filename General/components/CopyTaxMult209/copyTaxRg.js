@@ -51,11 +51,11 @@ window.addEventListener('load', () => {
     }
 
     // Ejemplo de uso:
-    onElementAddedToDOM('.flight-selection__box', () => {
+    onElementAddedToDOM('js-results-list-selection-placeholder', () => {
         agregarElemento('.flight-selection__box > :nth-child(3) + :nth-child(1)');
     });
 
-    onElementAddedToDOM('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web', () => {
+    onElementAddedToDOM('.booking booking-breakdown__table js-booking-breakdown', () => {
         agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
     });
 
