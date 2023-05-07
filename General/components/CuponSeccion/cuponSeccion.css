@@ -109,10 +109,6 @@
       width: 44%;
     }
   
-    .booking-data__data__text__h2 {
-      left: 10%;
-      top: 2%;
-    }
   
     .booking-data__data__text__h2>h2 {
       font-size: 17px;
@@ -120,24 +116,10 @@
     }
   
     .booking-data__data__text__p>p {
-      left: 20%;
-      bottom: 40%;
       font-size: 12px;
       font-style: normal;
     }
   
-    .booking-data__data__text__span {
-      left: 20%;
-      bottom: 7%;
-    }
-  
-    /* .promocodes__container {
-      margin: auto;
-      position: absolute;
-      height: 97px;
-      left: 17%;
-      top: 4%;
-    } */
   
     .promocodes__container td {
       padding: 7px 0 0;
@@ -156,12 +138,7 @@
     .promocodes__container {
       display: contents;
     }
-  
-    .promocodes {
-      position: absolute;
-      left: 24%;
-      top: 5%;
-    }
+
   }
   
   @media(min-width: 768px) and (max-width: 1023px) {
