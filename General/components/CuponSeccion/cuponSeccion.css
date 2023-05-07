@@ -1,7 +1,7 @@
 /* MULT-205 */
 .confirm-booking__promocodes {
     display: flex;
-    justify-content: space-between;
+    gap: 80px;
     align-items: center;
     border-radius: 8px;
     border: 2px solid #0D4E88;
@@ -12,10 +12,7 @@
   }
   
   .booking-data__data__text {
-    bottom: 0;
-    right: 0;
-    width: 46%;
-    height: 100%;
+    padding: 2% 0 0 0;
   }
   
   .promocode__apply-button {
@@ -95,6 +92,9 @@
     width: 50%;
     display: flex;
     justify-content: flex-end;
+  }
+  .promocodes__container td{
+    padding: 12px 12px 0;
   }
   
   @media(max-width: 767px) {
