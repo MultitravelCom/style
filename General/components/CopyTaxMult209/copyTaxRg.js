@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
     //*************************************** MULT-209 *************************** */
-    // function agregarElemento(referenceSelector) {
+    // function agregarElemento(referenceSelector) { 1
     //     const referenceNode = document.querySelector(referenceSelector);
 
     //     const newElement = document.createElement('div');
@@ -52,7 +52,7 @@ window.addEventListener('load', () => {
 
     // Ejemplo de uso:
     onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
-        agregarElemento('.flight-selection__box > :nth-child(3) + :nth-child(1)');
+        agregarElemento('.js-results-list-selection-placeholder > .flight-selection__box > .flight-selection__breakdown');
     });
 
     onElementAddedToDOM('.booking.booking-breakdown__table.js-booking-breakdown', () => {
