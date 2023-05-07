@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
     }
 
     onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
-        agregarElemento('.js-results-list-selection-placeholder>.flight-selection>.flight-selection__box>.flight-selection__booking');
+        agregarElemento('.results-list__item results-list__item--current-flight>.js-results-list-selection-placeholder>.flight-selection');
         console.log("tesT")
       });
 
