@@ -52,7 +52,7 @@ window.addEventListener('load', () => {
 
     // Ejemplo de uso:
     onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
-        agregarElemento('.js-results-list-selection-placeholder > .flight-selection__box');
+        agregarElemento('.js-results-list-selection-placeholder > .flight-selection');
     });
 
     agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
