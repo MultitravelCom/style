@@ -1,16 +1,17 @@
 /* MULT-205 */
 .confirm-booking__promocodes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 8px;
     border: 2px solid #0D4E88;
     background-color: #DEE9F5;
     background-image: url(https://multitravelcom.github.io/MT/Secciones/Booking-2/Cupon/cupon-desktop.webp);
-    position: relative;
     height: auto;
     background-size: 100% auto;
   }
   
   .booking-data__data__text {
-    position: absolute;
     bottom: 0;
     right: 0;
     width: 46%;
@@ -26,17 +27,10 @@
   }
   
   .promocode__apply-button:hover {
-    background: #0D4E88;
-    border-color: #0D4E88;
+    background: #0D4E88 !important;
+    border-color: #0D4E88 !important;
   }
   
-  /* .promocodes__container {
-    margin: auto;
-    position: absolute;
-    height: 97px;
-    left: 16%;
-    top: 4%;
-  } */
   
   .form-control.promocode-input {
     background: #FFFFFF;
@@ -56,11 +50,8 @@
   }
   
   .booking-data__data__text__h2 {
-    position: absolute;
     width: 258px;
     height: 40px;
-    left: 6%;
-    top: 12%;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -72,7 +63,7 @@
   }
   
   .booking-data__data__text__p>p {
-    position: absolute;
+    margin: 9px 0;
     width: 258px;
     height: 22px;
     font-style: italic;
@@ -80,14 +71,9 @@
     font-size: 9px;
     line-height: 11px;
     color: #FFFFFF;
-    bottom: 29%;
-    left: 13%;
   }
   
   .booking-data__data__text__span {
-    position: absolute;
-    left: 13%;
-    bottom: 3%;
     font-style: italic;
     font-weight: 500;
     font-size: 9px;
@@ -104,6 +90,11 @@
     line-height: 20px;
   
     color: #FFFFFF;
+  }
+  .promocodes{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
   }
   
   @media(max-width: 767px) {
