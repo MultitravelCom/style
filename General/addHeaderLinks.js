@@ -14,10 +14,22 @@ function addHeaderLinks() {
     head.appendChild(bannerNoResult);
 
 
+    const bannerTopStyle = document.createElement('link');
+    const bannerTopScript = document.createElement('script');
+
+    bannerTopScript.src = 'https://multitravelcom.github.io/style/General/components/BannerTop.js';
+    bannerTopScript.type = "text/babel";
+
+    bannerTopStyle.href = "https://multitravelcom.github.io/style/General/components/styleBannerTop.css";
+    bannerTopStyle.rel = "stylesheet";
+
+    head.appendChild(bannerTopStyle);
+    head.appendChild(bannerNoResult);
+
+
     const path = window.location.pathname;
     const copyTaxRg = path.includes('/flights') || path.includes('/booking/');
     const priceFinalFlight = path.includes('/results');
-    const cuponSeccion = path.includes('/booking/')
 
 
     if(copyTaxRg){

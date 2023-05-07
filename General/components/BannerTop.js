@@ -1,15 +1,3 @@
-function addHeaderLinks() {
-    const head = document.head || document.getElementsByTagName('head')[0];
-
-    const linkStyle = document.createElement('link');
-
-    linkStyle.rel = 'stylesheet';
-    linkStyle.href = 'https://multitravelcom.github.io/style/General/components/styleBannerTop.css';
-
-    head.appendChild(linkStyle);
-}
-addHeaderLinks();
-
 const UrlImg = 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal';
 
 function Button(props) {
