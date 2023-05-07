@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
     }
 
     onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
-        agregarElemento('.js-results-list-selection-placeholder > flight-selection__breakdown');
+        agregarElemento('.js-results-list-selection-placeholder > .flight-selection > .flight-selection__box div:nth-child(3)');
       });
 
     agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
