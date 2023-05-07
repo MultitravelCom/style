@@ -17,6 +17,7 @@ function addHeaderLinks() {
     const path = window.location.pathname;
     const copyTaxRg = path.includes('/flights') || path.includes('/booking/');
     const priceFinalFlight = path.includes('/results');
+    const cuponSeccion = path.includes('/booking/')
 
 
     if(copyTaxRg){
@@ -39,6 +40,14 @@ function addHeaderLinks() {
 
 
         head.appendChild(priceFinalFlightScript);
+    }
+    if(cuponSeccion){
+        const cuponSeccionStyle = document.createElement('link');
+    
+        cuponSeccionStyle.href = "https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.css";
+        cuponSeccionStyle.rel = "stylesheet";
+
+        head.appendChild(cuponSeccionStyle);
     }
 
 }
