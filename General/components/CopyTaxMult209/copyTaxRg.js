@@ -55,7 +55,10 @@ window.addEventListener('load', () => {
       });
 
     agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
-    agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web[2]');
-
+    
+    const elements = document.querySelectorAll('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
+    if (elements.length >= 2) {
+      agregarElemento(elements[1]);
+    }
     //****************************************************************** */
 });
