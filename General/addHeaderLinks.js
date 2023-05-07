@@ -24,7 +24,7 @@ function addHeaderLinks() {
     bannerTopStyle.rel = "stylesheet";
 
     head.appendChild(bannerTopStyle);
-    head.appendChild(bannerNoResult);
+    head.appendChild(bannerTopScript);
 
 
     const path = window.location.pathname;
@@ -69,3 +69,6 @@ function addHeaderLinks() {
 
 }
 addHeaderLinks();
+
+
+
