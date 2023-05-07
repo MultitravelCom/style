@@ -51,7 +51,7 @@ window.addEventListener('load', () => {
     }
 
     // Ejemplo de uso:
-    onElementAddedToDOM('js-results-list-selection-placeholder', () => {
+    onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
         agregarElemento('.flight-selection__box > :nth-child(3) + :nth-child(1)');
     });
 
