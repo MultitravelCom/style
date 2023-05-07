@@ -35,7 +35,7 @@ function shouldShowBanner() {
 const BannerTop = () => {
 
 
-    const showPackageImages = window.location.pathname.includes('/packages');
+    const showPackageImages = true;
 
     return (
         <>
