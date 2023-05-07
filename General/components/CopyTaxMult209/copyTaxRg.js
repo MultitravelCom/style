@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
     //   }
 
     function agregarElemento(referenceSelector, index = -1) {
-        const referenceNode = document.querySelector(referenceSelector);
+        const referenceNode = document.querySelectorAll(referenceSelector);
         if (!referenceNode) {
             return; // si no se encuentra el elemento de referencia, se sale de la función
         }
@@ -55,6 +55,7 @@ window.addEventListener('load', () => {
       });
 
     agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
+    agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web[2]');
 
     //****************************************************************** */
 });
