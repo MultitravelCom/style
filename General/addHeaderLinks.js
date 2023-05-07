@@ -21,10 +21,10 @@ function addHeaderLinks() {
         const copyTaxRegStyle = document.createElement('link');
         const copyTaxRegJs = document.createElement('script');
     
-        copyTaxRegStyle.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRg.js';
+        copyTaxRegJs.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRg.js';
     
-        copyTaxRegJs.href = "https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgStyle.css";
-        copyTaxRegJs.rel = "stylesheet";
+        copyTaxRegStyle.href = "https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgStyle.css";
+        copyTaxRegStyle.rel = "stylesheet";
     
         head.appendChild(copyTaxRegStyle);
         head.appendChild(copyTaxRegJs);

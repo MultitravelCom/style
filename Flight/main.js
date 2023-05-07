@@ -23,7 +23,6 @@ window.addEventListener('load', () => {
   const textBtn = document.querySelector('.btn-tertiary');
   textBtn.textContent = 'Filtrar';
 
-  console.log("test");
   // ********************************* MULT-114 *********************************
   const calendarContainers = document.querySelectorAll('.js-calendar-container');
 
