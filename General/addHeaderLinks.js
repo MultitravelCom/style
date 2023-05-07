@@ -33,12 +33,12 @@ function addHeaderLinks() {
     }
 
     if(priceFinalFlight){
-        const priceFinalFlight = document.createElement('script');
+        const priceFinalFlightScript = document.createElement('script');
     
-        priceFinalFlight.src = 'https://multitravelcom.github.io/style/General/components/PrecioFinalFlight/finalPriceFlight.js';
+        priceFinalFlightScript.src = 'https://multitravelcom.github.io/style/General/components/PrecioFinalFlight/finalPriceFlight.js';
 
 
-        head.appendChild(priceFinalFlight);
+        head.appendChild(priceFinalFlightScript);
     }
 
 }
