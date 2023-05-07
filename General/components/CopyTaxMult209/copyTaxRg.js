@@ -20,22 +20,22 @@ window.addEventListener('load', () => {
         }
     }
 
-    function onElementAddedToDOM(selector, callback) {
+    function onElementAddedToDOM(referenceNode, callback) {
         const observer = new MutationObserver(mutationsList => {
-            for (const mutation of mutationsList) {
-                if (mutation.type === 'childList') {
-                    for (const node of mutation.addedNodes) {
-                        if (node.nodeType === Node.ELEMENT_NODE && node.matches(selector)) {
-                            callback();
-                            console.log('Element added to DOM:', node);
-                        }
-                    }
+          for (const mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+              for (const node of mutation.addedNodes) {
+                if (node.nodeType === Node.ELEMENT_NODE && node === referenceNode) {
+                  callback();
+                  console.log('Element added to DOM:', node);
                 }
+              }
             }
+          }
         });
-
+      
         observer.observe(document.documentElement, { childList: true, subtree: true });
-    }
+      }
 
     onElementAddedToDOM('.flight-selection__box', () => {
         agregarElemento('.flight-selection__box');
