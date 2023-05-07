@@ -1,20 +1,7 @@
 window.addEventListener('load', () => {
-    //*************************************** MULT-209 *************************** */
-    // function agregarElemento(referenceSelector) { 1
-    //     const referenceNode = document.querySelector(referenceSelector);
-
-    //     const newElement = document.createElement('div');
-    //     newElement.classList.add('booking-breakdown__table', 'main__warningPrice');
-    //     newElement.innerHTML = `
-    //       <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-    //       <p>En caso de producto internacional, los precios siempre incluyen el impuesto país y las percepciones RG4815 Y RG5272.</p>
-    //     `;
-
-    //     referenceNode.insertAdjacentElement('afterend', newElement);
-    //   }
 
     function agregarElemento(referenceSelector, index = -1) {
-        const referenceNode = document.querySelectorAll(referenceSelector);
+        const referenceNode = document.querySelector(referenceSelector);
         if (!referenceNode) {
             return; // si no se encuentra el elemento de referencia, se sale de la función
         }
