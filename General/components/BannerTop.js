@@ -33,21 +33,13 @@ function shouldShowBanner() {
 }
 
 const BannerTop = () => {
-    const [showBanner, setShowBanner] = React.useState(false);
+
+
     const showPackageImages = window.location.pathname.includes('/packages');
-
-    React.useEffect(() => {
-        const shouldShow = shouldShowBanner();
-        setShowBanner(shouldShow);
-    }, []);
-
-    if (shouldShow && !showBanner) {
-        setShowBanner(true);
-      }
 
     return (
         <>
-            {showBanner && (
+            {shouldShowBanner() ? (
                 <div className="container-fluid main__container__bannerTop scroll-mobile">
                     <div id="bannerTop__left" className="main__container_left">
                         <picture>
@@ -163,7 +155,7 @@ const BannerTop = () => {
                         {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/brasil" text="Ver Más" />)};
                     </div>
                 </div>
-            )
+            ): null
             }
         </>
     )
