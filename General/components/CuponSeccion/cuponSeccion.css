@@ -100,9 +100,10 @@
   @media(max-width: 767px) {
     .confirm-booking__promocodes {
       background-image: url(https://multitravelcom.github.io/MT/Secciones/Booking-2/Cupon/cupon-mobile.webp);
-      height: 287px;
       background-position: center;
       background-size: contain;
+      flex-direction: column;
+      gap: 0;
     }
   
     .booking-data__data__text {
@@ -120,6 +121,10 @@
       font-style: normal;
     }
   
+    .promocodes{
+        display: flex;
+        justify-content: flex-end;
+      }
   
     .promocodes__container td {
       padding: 7px 0 0;
