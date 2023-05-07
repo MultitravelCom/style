@@ -24,7 +24,7 @@
     font-size: 19px;
     min-width: 32px;
   }
-  .booking-breakdown__item booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web{
+  .booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web{
     margin-top: 0 !important;
   }
   /* **********************************************/
