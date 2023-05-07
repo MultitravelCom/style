@@ -235,6 +235,8 @@ function mostrarSeccion() {
         setTimeout(mostrarSeccion, 500); // Intentar nuevamente después de 500 milisegundos
     }
 }
+mostrarSeccion();
+
 function shouldShowEvent() {
     const startDate = new Date("2023-05-07T23:59:00");
     const endDate = new Date("2023-05-10T23:59:00");
@@ -242,8 +244,6 @@ function shouldShowEvent() {
 
     return now >= startDate && now <= endDate;
 }
-
-mostrarSeccion(); // Llamar a la función para mostrar la sección al cargar el componente
 
 const EventImg = (props) => {
     return (
