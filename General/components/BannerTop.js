@@ -25,7 +25,7 @@ function Button(props) {
 }
 
 function shouldShowBanner() {
-    const startDate = new Date("2023-05-06T20:33:00");
+    const startDate = new Date("2023-05-07T23:59:00");
     const endDate = new Date("2023-05-10T23:59:00");
     const now = new Date();
 
