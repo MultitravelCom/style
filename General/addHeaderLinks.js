@@ -19,7 +19,6 @@ function addHeaderLinks() {
     const priceFinalFlight = path.includes('/results');
     const bannerTop = path.includes('/results') || path.includes('/booking/');
 
-
     if(copyTaxRg){
         const copyTaxRegStyle = document.createElement('link');
         const copyTaxRegJs = document.createElement('script');
@@ -55,6 +54,7 @@ function addHeaderLinks() {
         head.appendChild(bannerTopStyle);
         head.appendChild(bannerTopScript);
     }
+
     
     // if(cuponSeccion){
     //     const cuponSeccionScript = document.createElement('script');
