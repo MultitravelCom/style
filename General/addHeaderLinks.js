@@ -42,12 +42,17 @@ function addHeaderLinks() {
         head.appendChild(priceFinalFlightScript);
     }
     if(cuponSeccion){
+        const cuponSeccionScript = document.createElement('script');
         const cuponSeccionStyle = document.createElement('link');
+
+        cuponSeccionScript.src = 'https://multitravelcom.github.io/style/General/components/PrecioFinalFlight/finalPriceFlight.js';
+
     
-        cuponSeccionStyle.href = "https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.css";
+        cuponSeccionStyle.href = "https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.js";
         cuponSeccionStyle.rel = "stylesheet";
 
         head.appendChild(cuponSeccionStyle);
+        head.appendChild(cuponSeccionScript);
     }
 
 }
