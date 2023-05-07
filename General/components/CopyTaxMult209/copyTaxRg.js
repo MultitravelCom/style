@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
     }
 
     onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
-        agregarElemento('.results-list__item results-list__item--current-flight>.js-results-list-selection-placeholder>.flight-selection');
+        agregarElemento('.results-list__item.results-list__item--current-flight > .js-results-list-selection-placeholder > .flight-selection__box');
         console.log("tesT")
       });
 
