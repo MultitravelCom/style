@@ -55,9 +55,7 @@ window.addEventListener('load', () => {
         agregarElemento('.js-results-list-selection-placeholder > .flight-selection__box > .flight-selection__breakdown');
     });
 
-    onElementAddedToDOM('.booking.booking-breakdown__table.js-booking-breakdown', () => {
-        agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
-    });
+    agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
 
     //****************************************************************** */
 });
