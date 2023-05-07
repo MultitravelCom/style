@@ -14,5 +14,6 @@ window.addEventListener('load', () => {
       }
 
       agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
-    //****************************************************************** */
+      agregarElemento('.flight-selection__box > :nth-child(3) ~ :nth-child(4)');
+      //****************************************************************** */
 });
