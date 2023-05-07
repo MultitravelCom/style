@@ -428,8 +428,11 @@ details {
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 20px;
+
   color: #FFFFFF;
+}
+.booking-data__data__text__h>h2{
+  line-height: 20px !important;
 }
 
 .booking-data__data__text__p>p {
@@ -547,6 +550,9 @@ details {
 @media(width: 1024px) {
   .promocodes__container {
     left: 13%;
+  }
+  .confirm-booking__promocodes{
+    background-size: 102% 152px;
   }
 }
 
