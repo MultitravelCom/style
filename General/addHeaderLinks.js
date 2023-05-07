@@ -16,7 +16,7 @@ function addHeaderLinks() {
 
     const path = window.location.pathname;
     const copyTaxRg = path.includes('/flights');
-    const priceFinalFlight = path.includes('onefiveb2b.juniper.es/flights/results.aspx');
+    const priceFinalFlight = path.includes('onefiveb2b.juniper.es/flights/results');
 
     if(copyTaxRg){
         const copyTaxRegStyle = document.createElement('link');
