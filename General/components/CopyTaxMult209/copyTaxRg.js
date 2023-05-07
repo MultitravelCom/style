@@ -38,19 +38,7 @@ window.addEventListener('load', () => {
     }
 
     onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
-        const referenceSelector = '.js-results-list-selection-placeholder > .flight-selection > .flight-selection__box';
-        const thirdChildSelector = `${referenceSelector} > div:nth-child(3)`;
-        const fourthChildSelector = `${referenceSelector} > div:nth-child(4)`;
-        
-        const thirdChild = document.querySelector(thirdChildSelector);
-        const fourthChild = document.querySelector(fourthChildSelector);
-      
-        if (thirdChild && fourthChild) {
-          const index = Array.from(thirdChild.parentNode.children).indexOf(fourthChild);
-          agregarElemento(referenceSelector, index);
-        } else {
-          agregarElemento(referenceSelector);
-        }
+    
       });
 
     agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
