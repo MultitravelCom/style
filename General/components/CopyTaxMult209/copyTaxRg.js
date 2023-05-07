@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
     function agregarElemento(referenceSelector, index = -1) {
         const referenceNode = document.querySelector(referenceSelector);
         if (!referenceNode) {
-            return; // si no se encuentra el elemento de referencia, se sale de la función
+            return;
         }
 
         const newElement = document.createElement('div');
@@ -38,7 +38,19 @@ window.addEventListener('load', () => {
     }
 
     onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
-        agregarElemento('.js-results-list-selection-placeholder > .flight-selection');
+        const referenceSelector = '.js-results-list-selection-placeholder > .flight-selection > .flight-selection__box';
+        const thirdChildSelector = `${referenceSelector} > div:nth-child(3)`;
+        const fourthChildSelector = `${referenceSelector} > div:nth-child(4)`;
+        
+        const thirdChild = document.querySelector(thirdChildSelector);
+        const fourthChild = document.querySelector(fourthChildSelector);
+      
+        if (thirdChild && fourthChild) {
+          const index = Array.from(thirdChild.parentNode.children).indexOf(fourthChild);
+          agregarElemento(referenceSelector, index);
+        } else {
+          agregarElemento(referenceSelector);
+        }
       });
 
     agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
