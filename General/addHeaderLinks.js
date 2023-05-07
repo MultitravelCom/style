@@ -55,6 +55,7 @@ function addHeaderLinks() {
         head.appendChild(bannerTopStyle);
         head.appendChild(bannerTopScript);
     }
+    
     // if(cuponSeccion){
     //     const cuponSeccionScript = document.createElement('script');
     //     const cuponSeccionStyle = document.createElement('link');
