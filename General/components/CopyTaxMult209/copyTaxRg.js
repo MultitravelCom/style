@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
         }
 
         const newElement = document.createElement('div');
-        newElement.classList.add('booking-breakdown__table', 'main__warningPrice');
+        newElement.classList.add('main__warningPrice');
         newElement.innerHTML = `
           <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
           <p>En caso de producto internacional, los precios siempre incluyen el impuesto país y las percepciones RG4815 Y RG5272.</p>
