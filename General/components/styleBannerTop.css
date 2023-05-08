@@ -21,6 +21,7 @@
     background: #c4c4c4;
     border-radius: 8px 8px 8px 40px;
     overflow: hidden;
+    box-shadow: 4px 4px 8px -1px rgba(0,0,0,0.20)
   }
   .main__container_center {
     box-sizing: border-box;
@@ -32,6 +33,7 @@
     background: #c4c4c4;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 4px 4px 8px -1px rgba(0,0,0,0.20)
   }
   .main__container_right {
     box-sizing: border-box;
@@ -42,6 +44,7 @@
     background: #c4c4c4;
     border-radius: 8px 40px 8px 8px;
     overflow: hidden;
+    box-shadow: 4px 4px 8px -1px rgba(0,0,0,0.20)
   }  
   @media (max-width: 767px) {
     /* SCROLL HORIZONTAL */
