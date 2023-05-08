@@ -21,29 +21,32 @@ window.addEventListener('load', () => {
     }
 
     function onElementAddedToDOM(selector, callback) {
-        const observer = new MutationObserver(mutationsList => {
-            for (const mutation of mutationsList) {
-                if (mutation.type === 'childList') {
-                    for (const node of mutation.addedNodes) {
-                        if (node.nodeType === Node.ELEMENT_NODE && node.matches(selector)) {
-                            callback();
-                            console.log('Element added to DOM:', node);
-                        }
-                    }
-                }
+        const observer = new MutationObserver(mutations => {
+          mutations.forEach(mutation => {
+            const nodes = Array.from(mutation.addedNodes);
+            const matchingNodes = nodes.filter(node => node.matches && node.matches(selector));
+            if (matchingNodes.length > 0) {
+              callback();
+              observer.disconnect();
             }
+          });
         });
-
         observer.observe(document.documentElement, { childList: true, subtree: true });
-    }
+      }
 
     onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
         agregarElemento('.results-list__item.results-list__item--current-flight > .js-results-list-selection-placeholder > .flight-selection__box');
         console.log("tesT")
-      });
+    });
 
-    agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
-    
-    agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)');
+    onElementAddedToDOM('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web', () => {
+        agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
+        console.log("tesT")
+    });
+
+    onElementAddedToDOM('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)', () => {
+        agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)');
+        console.log("tesT")
+    });
 
 });
