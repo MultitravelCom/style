@@ -27,6 +27,9 @@
     background: #0D4E88 !important;
     border-color: #0D4E88 !important;
   }
+  .promocodes__container--title>.glyphicon-info-circle{
+    display: none;
+  }
   
   @media(min-width: 768px) and (max-width: 1023px) {
     .confirm-booking__promocodes {
