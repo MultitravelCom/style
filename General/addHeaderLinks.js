@@ -18,7 +18,7 @@ function addHeaderLinks() {
     const copyTaxRg = path.includes('/flights') || path.includes('/booking/');
     const priceFinalFlight = path.includes('/results');
     const bannerTop = path.includes('/results') || path.includes('/booking/');
-    const cuponSeccion = path.includes('/booking/');
+    // const cuponSeccion = path.includes('/booking/');
 
     if(copyTaxRg){
         const copyTaxRegStyle = document.createElement('link');
@@ -57,19 +57,19 @@ function addHeaderLinks() {
     }
 
     // 
-    if(cuponSeccion){
-        const cuponSeccionScript = document.createElement('script');
-        const cuponSeccionStyle = document.createElement('link');
+    // if(cuponSeccion){
+    //     const cuponSeccionScript = document.createElement('script');
+    //     const cuponSeccionStyle = document.createElement('link');
 
-        cuponSeccionScript.src = 'https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.js';
+    //     cuponSeccionScript.src = 'https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.js';
 
     
-        cuponSeccionStyle.href = "https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.css";
-        cuponSeccionStyle.rel = "stylesheet";
+    //     cuponSeccionStyle.href = "https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.css";
+    //     cuponSeccionStyle.rel = "stylesheet";
 
-        head.appendChild(cuponSeccionStyle);
-        head.appendChild(cuponSeccionScript);
-    }
+    //     head.appendChild(cuponSeccionStyle);
+    //     head.appendChild(cuponSeccionScript);
+    // }
 
 }
 addHeaderLinks();

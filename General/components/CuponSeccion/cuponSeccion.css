@@ -28,18 +28,6 @@
     border-color: #0D4E88 !important;
   }
   
-
-  @media(max-width: 767px) {
-    .confirm-booking__promocodes {
-      background-image: url(https://multitravelcom.github.io/MT/Secciones/Booking-2/Cupon/cupon-mobile.webp);
-      background-position: center;
-      background-size: contain;
-      flex-direction: column;
-      gap: 0;
-    }
-
-  }
-  
   @media(min-width: 768px) and (max-width: 1023px) {
     .confirm-booking__promocodes {
       background-image: url(https://multitravelcom.github.io/MT/Secciones/Booking-2/Cupon/cupon-desktop.webp);
