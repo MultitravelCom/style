@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
         }
 
         const newElement = document.createElement('div');
-        newElement.classList.add('main__warningPrice');
+        newElement.classList.add('booking-breakdown__table', 'main__warningPrice');
         newElement.innerHTML = `
           <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
           <p>En caso de producto internacional, los precios siempre incluyen el impuesto país y las percepciones RG4815 Y RG5272.</p>
@@ -46,8 +46,8 @@ window.addEventListener('load', () => {
         }
       });
 
-    agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
+    // agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
     
-    agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)');
+    // agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)');
 
 });
