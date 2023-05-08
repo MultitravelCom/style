@@ -61,4 +61,7 @@
 #master-searcher-more-options{
     display: inline;
 }
+.searcher.master-searcher.master-selector.label.more-master-selector-options{
+    display: none;
+}
 
