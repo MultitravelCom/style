@@ -58,3 +58,6 @@
     border-radius: 1rem;
     overflow: hidden;
 }
+#master-searcher-more-options{
+    display: inline;
+}
