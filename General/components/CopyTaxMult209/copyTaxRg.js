@@ -37,13 +37,9 @@ window.addEventListener('load', () => {
         observer.observe(document.documentElement, { childList: true, subtree: true });
     }
 
-    onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
-        const referenceSelector = '.js-results-list-selection-placeholder> article';
-        const referenceNode = document.querySelector(referenceSelector);
-        if (referenceNode && referenceNode.children[0]) {
-            agregarElemento(referenceSelector, 1);
-            console.log("test 1");
-        }
+    onElementAddedToDOM('.flight-selection__header', () => {
+        agregarElemento('.flight-selection__header');
+        console.log("test 1");
     });
     
     onElementAddedToDOM('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web', () => {
