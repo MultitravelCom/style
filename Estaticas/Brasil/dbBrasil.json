@@ -45,6 +45,16 @@
             "destino": "Florianopolis",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Florianopolis/floria-d%20(1).webp",
             "className": "uno",
+            "linkWa": "https://wa.link/ybn04x",
+            "title": "Pousada Maiken",
+            "price": "$20.400",
+            "events": "si"
+        },
+        {
+            "id": "a6",
+            "destino": "Florianopolis",
+            "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Florianopolis/floria-d%20(1).webp",
+            "className": "uno",
             "linkWa": "https://wa.link/camuhg",
             "title": "Hotel Varadero Palace II",
             "price": "$29.200",
