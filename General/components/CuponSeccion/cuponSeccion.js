@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function (event) {
+// document.addEventListener('DOMContentLoaded', function (event) {
 
-    const padre = document.querySelector('.confirm-booking__promocodes');
-    const nuevoDiv = document.createElement('div');
+//     const padre = document.querySelector('.confirm-booking__promocodes');
+//     const nuevoDiv = document.createElement('div');
 
-    nuevoDiv.classList.add('booking-data__data__text');
-    nuevoDiv.innerHTML =
+//     nuevoDiv.classList.add('booking-data__data__text');
+//     nuevoDiv.innerHTML =
 //         `<div class="booking-data__data__text__h2">
 //     <h2>Aprovecha nuestro cupón 10% OFF en vuelos y paquetes</h2>
 // </div>
@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
 // </div>
 // `;
 
-    padre.appendChild(nuevoDiv);
-});
+//     padre.appendChild(nuevoDiv);
+// });
 
 async function changeText() {
     const span = document.querySelector('.promocodes__container tr:nth-child(3) td span');
