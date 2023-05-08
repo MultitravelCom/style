@@ -38,8 +38,12 @@ window.addEventListener('load', () => {
     }
 
     onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
-        agregarElemento('.js-results-list-selection-placeholder>.flight-selection');
-        console.log("tesT")
+        const referenceSelector = '.js-results-list-selection-placeholder> article';
+        const referenceNode = document.querySelector(referenceSelector);
+        if (referenceNode && referenceNode.children[0]) {
+          agregarElemento(referenceSelector, 1);
+          console.log("test");
+        }
       });
 
     agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
