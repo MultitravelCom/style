@@ -5,9 +5,9 @@
             "destino": "Florianopolis",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Florianopolis/floria-a%20(1).webp",
             "className": "uno",
-            "linkWa": "https://wa.link/v85uue",
-            "title": "Paquete a Florianopolis 7 noches",
-            "price": "$246.900",
+            "linkWa": "https://wa.link/n1y7se",
+            "title": "Paquete Pousada Barbroch",
+            "price": "$251.900",
             "events": "si"
         },
         {
@@ -15,9 +15,9 @@
             "destino": "Florianopolis",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Florianopolis/floria-b%20(1).webp",
             "className": "uno",
-            "linkWa": "https://wa.link/ggn9q9",
-            "title": "Pousada Barbroch",
-            "price": "$21.900",
+            "linkWa": "https://wa.link/fsf72k",
+            "title": "Paquete Pousada Maiken",
+            "price": "$246.900",
             "events": "si"
         },
         {
@@ -25,13 +25,23 @@
             "destino": "Florianopolis",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Florianopolis/floria-c%20(1).webp",
             "className": "uno",
-            "linkWa": "https://wa.link/ybn04x",
-            "title": "Pousada Maiken",
-            "price": "$20.400",
+            "linkWa": "https://wa.link/e4ksdi",
+            "title": "Paquete Hotel Varadero",
+            "price": "$276.900",
             "events": "si"
         },
         {
             "id": "a4",
+            "destino": "Florianopolis",
+            "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Florianopolis/floria-d%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/ggn9q9",
+            "title": "Pousada Barbroch",
+            "price": "$21.900",
+            "events": "si"
+        },
+        {
+            "id": "a5",
             "destino": "Florianopolis",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Florianopolis/floria-d%20(1).webp",
             "className": "uno",
@@ -45,8 +55,8 @@
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-a%20(1).webp",
             "className": "uno",
-            "linkWa": "https://wa.link/herruu",
-            "title": "Paquete a Buzios 7 noches",
+            "linkWa": "https://wa.link/np1ex5",
+            "title": "Paquete Pousada Amendoeira",
             "price": "$211.900",
             "events": "si"
         },
@@ -55,9 +65,9 @@
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-b%20(1).webp",
             "className": "uno",
-            "linkWa": "https://wa.link/n7027o",
-            "title": "Pousada Amendoeira",
-            "price": "$15.200",
+            "linkWa": "https://wa.link/atayhg",
+            "title": "Paquete Fantasy Guest House",
+            "price": "$235.900",
             "events": "si"
         },
         {
@@ -65,9 +75,9 @@
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-c%20(1).webp",
             "className": "uno",
-            "linkWa": "https://wa.link/eg5mga",
-            "title": "Fantasy Guest House",
-            "price": "$21.900",
+            "linkWa": "https://wa.link/9dcx8d",
+            "title": "Paquete Pousada Amancay",
+            "price": "$276.900",
             "events": "si"
         },
         {
@@ -75,13 +85,43 @@
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-d%20(1).webp",
             "className": "uno",
+            "linkWa": "https://wa.link/fql9wm",
+            "title": "Paquete Bahiamarela hotel",
+            "price": "$338.100",
+            "events": "si"
+        },
+        {
+            "id": "b5",
+            "destino": "Buzios",
+            "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-e%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/n7027o",
+            "title": "Pousada Amendoeira",
+            "price": "$15.200",
+            "events": "si"
+        },
+        {
+            "id": "b6",
+            "destino": "Buzios",
+            "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-e%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/n7027o",
+            "title": "Fantasy Guest House",
+            "price": "$21.900",
+            "events": "si"
+        },
+        {
+            "id": "b7",
+            "destino": "Buzios",
+            "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-e%20(1).webp",
+            "className": "uno",
             "linkWa": "https://wa.link/itwum8",
             "title": "Pousada Amancay",
             "price": "$33.600",
             "events": "si"
         },
         {
-            "id": "b5",
+            "id": "b8",
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-e%20(1).webp",
             "className": "uno",
@@ -95,8 +135,8 @@
             "destino": "AllInclusive",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/All-Inclusive/brasil-a%20(1).webp",
             "className": "uno",
-            "linkWa": "https://wa.link/8i687n",
-            "title": "Paquete all inclusive 7 noches Imbassai",
+            "linkWa": "https://wa.link/zf67h2",
+            "title": "Paquete Grand Palladium Imbassai",
             "price": "$694.900",
             "events": "si"
         },
@@ -105,8 +145,8 @@
             "destino": "AllInclusive",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/All-Inclusive/brasil-b%20(1).webp",
             "className": "uno",
-            "linkWa": "https://wa.link/bmcq2f",
-            "title": "Paquete all inclusive 7 noches Bahia",
+            "linkWa": "https://wa.link/n7xz02",
+            "title": "Paquete Iberostar Bahia",
             "price": "$613.900",
             "events": "si"
         },
@@ -115,8 +155,8 @@
             "destino": "AllInclusive",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/All-Inclusive/brasil-c%20(1).webp",
             "className": "uno",
-            "linkWa": "https://wa.link/expg25",
-            "title": "Paquete all inclusive 7 noches Praia do Forte",
+            "linkWa": "https://wa.link/lkwcca",
+            "title": "Paquete Iberostar Praia do Forte",
             "price": "$702.500",
             "events": "si"
         },
@@ -126,7 +166,7 @@
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/All-Inclusive/brasil-d%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/qm4z9i",
-            "title": "Hotel all inclusive Grand Palladium Imbassai",
+            "title": "Grand Palladium Imbassai",
             "price": "$112.700",
             "events": "si"
         },
@@ -136,17 +176,17 @@
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/All-Inclusive/brasil-e%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/bhbqxo",
-            "title": "Hotel all inclusive Iberostar Bahia",
+            "title": "Iberostar Bahia",
             "price": "$89.700",
             "events": "si"
         },
         {
-            "id": "c5",
+            "id": "c6",
             "destino": "AllInclusive",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/All-Inclusive/brasil-f%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/iz2sym",
-            "title": "Hotel all inclusive Iberostar seleccion Praia do Forte",
+            "title": "Iberostar Praia do Forte",
             "price": "$115.000",
             "events": "si"
         }

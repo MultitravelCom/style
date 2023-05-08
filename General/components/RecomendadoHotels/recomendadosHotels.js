@@ -1,4 +1,4 @@
-const taxesCopy = document.querySelectorAll('.bestprice__taxincluded');
+const taxesCopy = document.querySelectorAll('.results-list__page');
 
 taxesCopy.forEach(element => {
     taxesCopy.textContent = 'Incluyen el impuesto país y las percepciones';
