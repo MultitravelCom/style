@@ -10,6 +10,9 @@
   .promocodes__container--image{
     display: none;
   }
+  .promocodes__container{
+    margin-bottom: 2rem;
+  }
   
   .promocode__apply-button {
     background: #0D4E88;
@@ -33,44 +36,6 @@
       flex-direction: column;
       gap: 0;
     }
-  
-    .booking-data__data__text {
-      width: 44%;
-    }
-  
-  
-    .booking-data__data__text__h2>h2 {
-      font-size: 17px;
-      line-height: 1.2;
-    }
-  
-    .booking-data__data__text__p>p {
-      font-size: 12px;
-      font-style: normal;
-    }
-  
-    .promocodes{
-        display: flex;
-        justify-content: flex-end;
-      }
-  
-    .promocodes__container td {
-      padding: 7px 0 0;
-    }
-  
-  
-    .form-control.promocode-input {
-      width: 144px;
-    }
-  
-    .booking-data__data__text {
-      width: 100%;
-      height: 50%;
-    }
-  
-    .promocodes__container {
-      display: contents;
-    }
 
   }
   
@@ -79,14 +44,5 @@
       background-image: url(https://multitravelcom.github.io/MT/Secciones/Booking-2/Cupon/cupon-desktop.webp);
       height: 138px;
       background-size: contain;
-    }
-  }
-  
-  @media(width: 1024px) {
-    .promocodes__container {
-      left: 13%;
-    }
-    .confirm-booking__promocodes{
-      background-size: 102% 152px;
     }
   }
