@@ -11,9 +11,6 @@
     background-size: 100% auto;
   }
   
-  .booking-data__data__text {
-    padding: 2% 0 0 0;
-  }
   
   .promocode__apply-button {
     background: #0D4E88;
@@ -28,75 +25,7 @@
     border-color: #0D4E88 !important;
   }
   
-  
-  .form-control.promocode-input {
-    background: #FFFFFF;
-    border: 1px solid #CCCCCC;
-    border-radius: 8px;
-  }
-  
-  .promocodes__container--title {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-  }
-  
-  .promocodes__container--image {
-    display: none;
-  }
-  
-  .booking-data__data__text__h2 {
-    width: 258px;
-    height: 40px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-  
-    color: #FFFFFF;
-  }
-  .booking-data__data__text__h2>h2{
-    line-height: 20px !important;
-  }
-  
-  .booking-data__data__text__p>p {
-    margin: 9px 0;
-    width: 258px;
-    height: 22px;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 9px;
-    line-height: 11px;
-    color: #FFFFFF;
-  }
-  
-  .booking-data__data__text__span {
-    font-style: italic;
-    font-weight: 500;
-    font-size: 9px;
-    line-height: 11px;
-    color: #FFFFFF;
-  }
-  
-  .booking-data__data__text__span>p {
-    width: 186px;
-    height: 20px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-  
-    color: #FFFFFF;
-  }
-  .promocodes{
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-  }
-  .promocodes__container td{
-    padding: 12px 12px 0;
-  }
-  
+
   @media(max-width: 767px) {
     .confirm-booking__promocodes {
       background-image: url(https://multitravelcom.github.io/MT/Secciones/Booking-2/Cupon/cupon-mobile.webp);
