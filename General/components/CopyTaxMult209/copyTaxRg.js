@@ -33,23 +33,17 @@ window.addEventListener('load', () => {
                 }
             }
         });
-    
+
         observer.observe(document.documentElement, { childList: true, subtree: true });
     }
 
-    onElementAddedToDOM('.flight-selection__header', () => {
-        agregarElemento('.flight-selection__header');
-        console.log("test 1");
-    });
+    onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
+        agregarElemento('.results-list__item.results-list__item--current-flight > .js-results-list-selection-placeholder > .flight-selection__box');
+        console.log("tesT")
+      });
+
+    agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
     
-    onElementAddedToDOM('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web', () => {
-        agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
-        console.log("test 2");
-    });
-    
-    onElementAddedToDOM('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)', () => {
-        agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)');
-        console.log("test 3");
-    });
+    agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)');
 
 });
