@@ -39,12 +39,12 @@ function observarCambiosEnDOM() {
                     }
                     const currentItem = node.querySelector('.results-list__item--current-flight');
                     if (currentItem) {
-                        console.log('currentItem encontrado')
+                        console.log("Elemento .results-list__item--current-flight encontrado");
                         const flightSelectionBox = currentItem.closest('.flight-selection__box');
-                        if (flightSelectionBox !== null) {
-                            agregarElemento(flightSelectionBox);
+                        if (flightSelectionBox) {
+                          agregarElemento(flightSelectionBox);
                         }
-                    }
+                      }
                 });
             }
         }
