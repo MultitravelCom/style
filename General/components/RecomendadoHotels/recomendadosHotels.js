@@ -25,12 +25,12 @@ async function observeMutation(elementToObserve, callback) {
     });
   }
   
-  setInterval(() => {
-    const resultsListHotels = document.querySelector('.js-results-list-placeholder');
-    if (resultsListHotels) {
-      observeMutation(resultsListHotels, function(mutationsList, observer) {
-        addTaxCopyToPriceResults();
-      });
-    }
-  }, 1000);
+//   setInterval(() => {
+//     const resultsListHotels = document.querySelector('.js-results-list-placeholder');
+//     if (resultsListHotels) {
+//       observeMutation(resultsListHotels, function(mutationsList, observer) {
+//         addTaxCopyToPriceResults();
+//       });
+//     }
+//   }, 1000);
 // **************************************************************************
