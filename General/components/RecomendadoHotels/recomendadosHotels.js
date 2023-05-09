@@ -1,7 +1,9 @@
 // ***************************** MULT-209 *********************************************
-document.addEventListener("DOMContentLoaded", function () {
-    let resultsListHotels = document.querySelector('.js-results-list-placeholder');
-    let itemsResults = resultsListHotels.querySelectorAll('.results-list__item');
+let resultsListHotels = document.querySelector('.js-results-list-placeholder');
+let itemsResults = resultsListHotels.querySelectorAll('.results-list__item');
+
+
+let observer = new MutationObserver(function (mutationsList, observer) {
 
     itemsResults.forEach(function (item) {
         let priceResults = item.querySelector('.info-card__price');
@@ -12,5 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         priceResults.appendChild(newDivTaxCopy);
     });
 });
+
+observer.observe(resultsListHotels, { childList: true, subtree: true });
 
 // **************************************************************************
