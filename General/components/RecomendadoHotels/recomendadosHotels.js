@@ -17,7 +17,7 @@ function addTaxCopyToResultsList() {
     }
   }
   
-  let observer = new MutationObserver(function(mutationsList) {
+  let resultsListObserver = new MutationObserver(function(mutationsList) {
     for (let mutation of mutationsList) {
       if (mutation.type === 'childList' && mutation.addedNodes.length) {
         mutation.addedNodes.forEach(function(node) {
@@ -29,5 +29,5 @@ function addTaxCopyToResultsList() {
     }
   });
   
-  observer.observe(document.body, { childList: true, subtree: true });
+  resultsListObserver.observe(document.body, { childList: true, subtree: true });
 // **************************************************************************
