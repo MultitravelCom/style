@@ -40,7 +40,7 @@ window.addEventListener('load', () => {
         observer.observe(document.documentElement, { childList: true, subtree: true });
       }
       
-    onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
+    onElementAddedToDOM('.results-list__item--current-flight', () => {
         agregarElemento('.js-results-list-selection-placeholder');
       });
 
