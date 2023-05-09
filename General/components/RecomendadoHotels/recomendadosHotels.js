@@ -12,11 +12,11 @@ window.onload = function () {
     }
 
     // ***************************** MULT-209 *********************************************
+    const itemsResults = document.querySelectorAll('.results-list__item');
     let resultsListHotels = document.querySelector('.js-results-list-placeholder');
-
-    observeMutation('.js-results-list-placeholder', function (mutationsList, observer) {
-
-        const itemsResults = document.querySelectorAll('.results-list__item');
+    
+    observeMutation(resultsListHotels, function (mutationsList, observer) {
+        
         itemsResults.forEach(function (item) {
             const priceResults = item.querySelector('.info-card__price');
             const newDivTaxCopy = document.createElement('div');
