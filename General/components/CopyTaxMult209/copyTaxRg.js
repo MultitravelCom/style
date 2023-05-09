@@ -21,23 +21,27 @@ window.addEventListener('load', () => {
     }
 
     function onElementAddedToDOM(selector, callback) {
-        const observerar = new MutationObserver(mutationsList => {
+        const observer = new MutationObserver((mutationsList, observer) => {
             for (const mutation of mutationsList) {
                 if (mutation.type === 'childList') {
                     for (const node of mutation.addedNodes) {
                         if (node.nodeType === Node.ELEMENT_NODE && node.matches(selector)) {
-                            setTimeout(() => {
-                                callback();
-                            }, 1000); // espera 1 segundo antes de llamar al callback
-                            observerar.disconnect(); // desconecta el observer para que no siga observando cambios en el DOM
-                            break; // detiene el bucle for para evitar ejecutar el callback varias veces
+                            const observer2 = new MutationObserver((mutationsList2, observer2) => {
+                                for (const mutation2 of mutationsList2) {
+                                    if (mutation2.type === 'childList' && mutation2.target.classList.contains('modal-content')) {
+                                        observer2.disconnect(); // se desconecta el observer2 para que no siga observando cambios en el DOM
+                                        callback();
+                                    }
+                                }
+                            });
+                            observer2.observe(node.closest('.modal'), { childList: true, subtree: true });
+                            break; // se detiene el bucle for para evitar ejecutar el callback varias veces
                         }
                     }
                 }
             }
         });
-
-        observerar.observe(document.documentElement, { childList: true, subtree: true });
+        observer.observe(document.documentElement, { childList: true, subtree: true });
     }
 
     const resultsList = document.querySelector('.results-list');
@@ -51,12 +55,13 @@ window.addEventListener('load', () => {
   
       observer.observe(resultsList, { childList: true });
     } else {
-      setTimeout(onResultsListAddedToDOM, 5000);
+      onElementAddedToDOM('.results-list', () => {
+          const placeholderElements = resultsList.querySelectorAll('.js-results-list-selection-placeholder');
+          placeholderElements.forEach((placeholderElement) => {
+            agregarElemento(placeholderElement);
+          });
+      });
     }
-  }
-
-    onResultsListAddedToDOM();
-
 
     onElementAddedToDOM('.results-list__item--current-flight', () => {
         agregarElemento('.js-results-list-selection-placeholder');
@@ -67,3 +72,4 @@ window.addEventListener('load', () => {
     agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)');
 
 });
+
