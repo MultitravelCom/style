@@ -219,7 +219,7 @@ function Button(props) {
     }
 
     return (
-        <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
+        <button id={props.title} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
     );
 }
 
@@ -283,7 +283,7 @@ const Card = ({ destinos }) => {
                         <source media="(max-width: 767px)" srcSet={destino.img} />
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
-                    <Button id={destino.id} link={destino.linkWa} text="Contactarme" />
+                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" />
                 </div>
             </div>
         )));

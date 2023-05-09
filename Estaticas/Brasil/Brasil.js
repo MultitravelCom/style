@@ -87,7 +87,7 @@ function Button(props) {
     }
 
     return (
-        <button id={props.id} className={props.style} onClick={handleClick}>{props.text}</button>
+        <button id={props.title} className={props.style} onClick={handleClick}>{props.text}</button>
     );
 }
 const Loader = () => {
@@ -210,7 +210,7 @@ const Card = ({ destinos }) => {
                                 </picture>
                                 <div className="priceStyle">{destino.price}</div>
                                 <Button
-                                    id={destino.id}
+                                    id={destino.title}
                                     style="btn_Style_Venta_Per"
                                     link={destino.linkWa}
                                     text="Contactarme"
