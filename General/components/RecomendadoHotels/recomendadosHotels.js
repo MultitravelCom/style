@@ -1,14 +1,16 @@
 // ***************************** MULT-209 *********************************************
+document.addEventListener("DOMContentLoaded", function () {
+    let resultsListHotels = document.querySelector('.js-results-list-placeholder');
+    let itemsResults = resultsListHotels.querySelectorAll('.results-list__item');
 
-let resultsListHotels = document.querySelector('.js-results-list-placeholder');
-let itemsResults = resultsListHotels.querySelectorAll('.results-list__item');
+    itemsResults.forEach(function (item) {
+        let priceResults = item.querySelector('.info-card__price');
+        let newDivTaxCopy = document.createElement('div');
+        newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
+        newDivTaxCopy.classList.add("DivTaxCopyStyle");
 
-itemsResults.forEach(function(item) {
-  let priceResults = item.querySelector('.info-card__price');
-  let newDivTaxCopy = document.createElement('div');
-  newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
-  newDivTaxCopy.classList.add("DivTaxCopyStyle");
-
-  priceResults.appendChild(newDivTaxCopy);
+        priceResults.appendChild(newDivTaxCopy);
+    });
 });
+
 // **************************************************************************
