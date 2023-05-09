@@ -38,6 +38,26 @@ window.addEventListener('load', () => {
         });
       
         observer.observe(document.documentElement, { childList: true, subtree: true });
+        
+        // Agregar otro observer para detectar cuándo se agrega el elemento .js-results-list-selection-placeholder al DOM
+        const placeholderObserver = new MutationObserver(mutationsList => {
+          for (const mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+              for (const node of mutation.addedNodes) {
+                if (node.nodeType === Node.ELEMENT_NODE && node.matches('.js-results-list-selection-placeholder')) {
+                  // Llamar a la función agregarElemento() cuando se agrega el elemento .js-results-list-selection-placeholder al DOM
+                  agregarElemento('.js-results-list-selection-placeholder');
+                  // Desconectar el observer para que no siga observando cambios en el DOM
+                  placeholderObserver.disconnect();
+                  break; // Detener el bucle for para evitar ejecutar el callback varias veces
+                }
+              }
+            }
+          }
+        });
+      
+        // Observar el elemento body y todos sus descendientes
+        placeholderObserver.observe(document.body, { childList: true, subtree: true });
       }
       
     onElementAddedToDOM('.results-list__item--current-flight', () => {
