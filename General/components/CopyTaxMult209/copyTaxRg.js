@@ -41,7 +41,7 @@ function observarCambiosEnDOM() {
                     if (currentItem) {
                         console.log('currentItem encontrado')
                         const flightSelectionBox = currentItem.closest('.flight-selection__box');
-                        if (flightSelectionBox) {
+                        if (flightSelectionBox !== null) {
                             agregarElemento(flightSelectionBox);
                         }
                     }
