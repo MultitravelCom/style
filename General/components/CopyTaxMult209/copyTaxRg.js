@@ -50,7 +50,9 @@ function observarCambiosEnDOM() {
     observer.observe(targetNode, { childList: true, subtree: true });
 }
 
-observarCambiosEnDOM();
+document.addEventListener("DOMContentLoaded", () => {
+    observarCambiosEnDOM();
+  });
 
 
 
