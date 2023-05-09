@@ -1,6 +1,12 @@
-const taxesCopy = document.querySelectorAll('.results-list__page');
+// ***************************** MULT-209 *********************************************
 
-taxesCopy.forEach(element => {
-    taxesCopy.textContent = 'Incluyen el impuesto país y las percepciones';
-    taxesCopy.classList.add('display', 'inblock');
+let resultsListHotels = document.querySelector('.js-results-list-placeholder');
+let itemsResults = resultsList.querySelectorAll('.results-list__item');
+
+itemsResults.forEach(function(item) {
+  let priceResults = item.querySelector('.info-card__price');
+  let newDivTaxCopy = document.createElement('div');
+  newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
+  priceResults.appendChild(newDivTaxCopy);
 });
+// **************************************************************************

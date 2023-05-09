@@ -15,11 +15,9 @@ function addHeaderLinks() {
 
 
     const path = window.location.pathname;
-    const copyTaxRg = path.includes('/flights') || path.includes('/booking/') || path.includes('/hotels/');
-    const priceFinalFlight = path.includes('/results');
-    const bannerTop = path.includes('/results') || path.includes('/booking/');
-    // const cuponSeccion = path.includes('/booking/');
 
+
+    const copyTaxRg = path.includes('/flights') || path.includes('/booking/') || path.includes('/hotels/');
     if (copyTaxRg) {
         const copyTaxRegStyle = document.createElement('link');
         const copyTaxRegJs = document.createElement('script');
@@ -33,6 +31,7 @@ function addHeaderLinks() {
         head.appendChild(copyTaxRegJs);
     }
 
+    const priceFinalFlight = path.includes('/results');
     if (priceFinalFlight) {
         const priceFinalFlightScript = document.createElement('script');
 
@@ -41,7 +40,7 @@ function addHeaderLinks() {
 
         head.appendChild(priceFinalFlightScript);
     }
-
+    const bannerTop = path.includes('/results') || path.includes('/booking/');
     if (!bannerTop) {
         const bannerTopStyle = document.createElement('link');
         const bannerTopScript = document.createElement('script');
@@ -56,7 +55,21 @@ function addHeaderLinks() {
         head.appendChild(bannerTopScript);
     }
 
-    // 
+    const recomendadoHotels = path.includes('/hotels/');
+    if (recomendadoHotels) {
+        const recomendadoHotelsStyle = document.createElement('link');
+        const recomendadoHotelsJs = document.createElement('script');
+
+        recomendadoHotelsJs.src = 'https://multitravelcom.github.io/style/General/components/RecomendadoHotels/recomendadosHotels.js';
+
+        recomendadoHotelsStyle.href = "https://multitravelcom.github.io/style/General/components/RecomendadoHotels/recomendadosHotels.css";
+        recomendadoHotelsStyle.rel = "stylesheet";
+
+        head.appendChild(recomendadoHotelsStyle);
+        head.appendChild(recomendadoHotelsJs);
+    }
+
+     // const cuponSeccion = path.includes('/booking/');
     // if(cuponSeccion){
     //     const cuponSeccionScript = document.createElement('script');
     //     const cuponSeccionStyle = document.createElement('link');
@@ -80,12 +93,12 @@ window.addEventListener('load', () => {
     let buttonNewsletter = document.querySelector('button[data-target="#-newsletter-container"]');
     let divNewsletter = buttonNewsletter.querySelector('.quicklink-elem-label');
 
-    divNewsletter.textContent = 'Suscríbete al newsletter';
+    divNewsletter.textContent = 'Suscribite a nuestro Newsletter ';
 
     let modalNewsletter = document.querySelector('#-newsletter-container');
     let titleNewsletter = modalNewsletter.querySelector('.content-title');
 
-    titleNewsletter.textContent = 'Suscríbete al newsletter';
+    titleNewsletter.textContent = 'Suscribite a nuestro Newsletter ';
 
     //*************************************************************************************************** */
 });
