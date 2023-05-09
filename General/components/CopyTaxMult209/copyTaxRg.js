@@ -23,7 +23,7 @@ function agregarElemento(referenceSelector, index = -1) {
 function revisarElemento() {
     const currentItem = document.querySelector('.results-list__item--current-flight');
     if (currentItem) {
-        const flightSelectionBox = currentItem.closest('.flight-selection__box');
+        const flightSelectionBox = currentItem.closest('.js-results-list-selection-placeholder');
         if (flightSelectionBox) {
             agregarElemento(flightSelectionBox);
             clearInterval(intervalId); // detiene la revisión periódica una vez que se ha encontrado el elemento
