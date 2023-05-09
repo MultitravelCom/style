@@ -39,6 +39,7 @@ function observarCambiosEnDOM() {
                     }
                     const currentItem = node.querySelector('.results-list__item--current-flight');
                     if (currentItem) {
+                        console.log('currentItem encontrado')
                         const flightSelectionBox = currentItem.closest('.flight-selection__box');
                         if (flightSelectionBox) {
                             agregarElemento(flightSelectionBox);
