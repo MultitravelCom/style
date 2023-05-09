@@ -84,16 +84,17 @@ function addHeaderLinks() {
     //     head.appendChild(cuponSeccionScript);
     // }
 
-}
-addHeaderLinks();
-
-// *********************** MUTATION FUNCTION *************************
+    // *********************** MUTATION FUNCTION *************************
 
 function observeMutation(elementToObserve, callback) {
     const observer = new MutationObserver(callback);
     observer.observe(elementToObserve, { childList: true, subtree: true });
     return observer;
 }
+
+}
+addHeaderLinks();
+
 
 //************************************ MULT-213*************************************************************** */
 window.addEventListener('load', () => {
