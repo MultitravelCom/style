@@ -15,7 +15,7 @@ function addHeaderLinks() {
 
 
     const path = window.location.pathname;
-    const copyTaxRg = path.includes('/flights') || path.includes('/booking/');
+    const copyTaxRg = path.includes('/flights') || path.includes('/booking/') || path.includes('/hotels/');
     const priceFinalFlight = path.includes('/results');
     const bannerTop = path.includes('/results') || path.includes('/booking/');
     // const cuponSeccion = path.includes('/booking/');
