@@ -27,6 +27,6 @@ function onResultsListChange(mutationsList, observer) {
   resultsObserver.observe(document.querySelector('.js-results-list-placeholder'), { childList: true, subtree: true });
   
   // Ejecuta la función por primera vez en caso de que el elemento ya esté presente en el DOM
-  onResultsListChange([{ target: document.querySelector('.js-results-list-placeholder'), addedNodes: [document.querySelector('.js-results-list-placeholder')] }], observer);
+  onResultsListChange([{ target: document.querySelector('.js-results-list-placeholder'), addedNodes: [document.querySelector('.js-results-list-placeholder')] }], resultsObserver);
   
 // **************************************************************************
