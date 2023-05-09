@@ -23,7 +23,6 @@ function agregarElemento(referenceSelector, index = -1) {
 }
 
 function observarCambiosEnDOM() {
-    console.log('observarCambiosEnDOM llamado');
     const targetNode = document.querySelector('.js-results-list-placeholder');
 
     if (!targetNode) {
@@ -41,7 +40,9 @@ function observarCambiosEnDOM() {
                     const currentItem = node.querySelector('.results-list__item--current-flight');
                     if (currentItem) {
                         const flightSelectionBox = currentItem.closest('.flight-selection__box');
-                        agregarElemento('.flight-selection__box');
+                        if (flightSelectionBox) {
+                            agregarElemento(flightSelectionBox);
+                        }
                     }
                 });
             }
