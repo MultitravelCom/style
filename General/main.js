@@ -18,16 +18,4 @@ document.addEventListener('DOMContentLoaded', () => {
     //    Cambio de copy de Multiple vuelos a multiple destinos.
     document.getElementById("flight-searcher-roundtrip-multi").nextSibling.nodeValue = "Multidestino";
     document.querySelector('.radio').style.display = 'inline-block';
-
-
-    //************************************ MULT-213*************************************************************** */
-
-    let buttonnewsletter = document.querySelector('button[data-target="#-newsletter-container"]');
-    let divnewsletter = buttonnewsletter.querySelector('.quicklink-elem-label');
-    
-    divnewsletter.textContent = 'Suscríbete al newsletter';
-
-
-    //*************************************************************************************************** */
-  
   });
