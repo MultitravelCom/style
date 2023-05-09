@@ -7,6 +7,8 @@ itemsResults.forEach(function(item) {
   let priceResults = item.querySelector('.info-card__price');
   let newDivTaxCopy = document.createElement('div');
   newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
+  newDivTaxCopy.classList.add("bestprice__title");
+  
   priceResults.appendChild(newDivTaxCopy);
 });
 // **************************************************************************
