@@ -77,11 +77,15 @@ addHeaderLinks();
 //************************************ MULT-213*************************************************************** */
 window.addEventListener('load', () => {
 
-    let buttonnewsletter = document.querySelector('button[data-target="#-newsletter-container"]');
-    let divnewsletter = buttonnewsletter.querySelector('.quicklink-elem-label');
+    let buttonNewsletter = document.querySelector('button[data-target="#-newsletter-container"]');
+    let divNewsletter = buttonNewsletter.querySelector('.quicklink-elem-label');
 
-    divnewsletter.textContent = 'Suscríbete al newsletter';
+    divNewsletter.textContent = 'Suscríbete al newsletter';
 
+    let modalNewsletter = document.querySelector('#-newsletter-container');
+    let titleNewsletter = modalNewsletter.querySelector('.content-title');
+
+    titleNewsletter.textContent = 'Suscríbete al newsletter';
 
     //*************************************************************************************************** */
 });
