@@ -4,13 +4,12 @@ function observeMutation(elementToObserve, callback) {
     return observer;
 }
 
-
 // ***************************** MULT-209 *********************************************
 let resultsListHotels = document.querySelector('.js-results-list-placeholder');
+let itemsResults = resultsListHotels.querySelectorAll('.results-list__item');
 
 observeMutation(resultsListHotels, function (mutationsList, observer) {
 
-    let itemsResults = resultsListHotels.querySelectorAll('.results-list__item');
 
     itemsResults.forEach(function (item) {
         let priceResults = item.querySelector('.info-card__price');
