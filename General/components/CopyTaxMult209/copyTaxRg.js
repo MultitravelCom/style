@@ -105,7 +105,7 @@ window.addEventListener('load', () => {
               if (node.nodeType === Node.ELEMENT_NODE && node.matches(selector)) {
                 setTimeout(() => {
                   callback();
-                }, 1000); // espera 1 segundo antes de llamar al callback
+                }, 4000); // espera 1 segundo antes de llamar al callback
                 observer.disconnect(); // desconecta el observer para que no siga observando cambios en el DOM
                 break; // detiene el bucle for para evitar ejecutar el callback varias veces
               }
