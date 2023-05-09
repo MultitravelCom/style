@@ -6,11 +6,11 @@ function onResultsListChange(mutationsList, observer) {
       let itemsResults = mutation.target.querySelectorAll('.results-list__item');
       if (itemsResults.length > 0) {
         itemsResults.forEach(function(item) {
-          if (!item.querySelector('.bestprice__title')) {
+          if (!item.querySelector('.DivTaxCopy')) {
             let priceResults = item.querySelector('.info-card__price');
             let newDivTaxCopy = document.createElement('div');
             newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
-            newDivTaxCopy.classList.add("bestprice__title");
+            newDivTaxCopy.classList.add("DivTaxCopy");
             priceResults.appendChild(newDivTaxCopy);
           }
         });
