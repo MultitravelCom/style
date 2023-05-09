@@ -1,9 +1,9 @@
 // ***************************** MULT-209 *********************************************
 
 function observeResultsList() {
-    const resultsListHotels = document.querySelector('.results-list__container');
+    const resultsListHotels = document.querySelector('.js-results-list-placeholder');
     if (!resultsListHotels) {
-      console.log('No se encontró el selector ".results-list__container"');
+      console.log('No se encontró el selector ".js-results-list-placeholder"');
       return;
     }
   
