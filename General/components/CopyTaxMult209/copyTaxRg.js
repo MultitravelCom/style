@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
                 });
             });
         } else {
-            setTimeout(onResultsListAddedToDOM, 1000); // si no se encuentra el elemento .results-list, se vuelve a intentar después de 1 segundo
+            setTimeout(onResultsListAddedToDOM, 5000); // si no se encuentra el elemento .results-list, se vuelve a intentar después de 1 segundo
         }
     }
 
