@@ -1,5 +1,3 @@
-// ***************************** MULT-209 *********************************************
-
 let divTaxAdded = false;
 
 // Función que se ejecuta cuando se agrega un nuevo elemento con la clase 'results-list__item'
@@ -11,13 +9,13 @@ function onResultsListChange(mutationsList, observer) {
       if (itemsResults.length > 0) {
         itemsResults.forEach(function(item) {
           if (!divTaxAdded) {
-            let priceResults = item.querySelector('.info-card__price');
+            let priceResults = item.querySelectorAll('.info-card__price');
             priceResults.forEach(function(priceResult) {
-                let newDivTaxCopy = document.createElement('div');
-                newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
-                newDivTaxCopy.classList.add("DivTaxCopy");
-                priceResult.appendChild(newDivTaxCopy);
-              });
+              let newDivTaxCopy = document.createElement('div');
+              newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
+              newDivTaxCopy.classList.add("DivTaxCopy");
+              priceResult.appendChild(newDivTaxCopy);
+            });
             divTaxAdded = true;
           }
         });
@@ -34,6 +32,3 @@ resultsObserver.observe(document.querySelector('.js-results-list-placeholder'), 
 
 // Ejecuta la función por primera vez en caso de que el elemento ya esté presente en el DOM
 onResultsListChange([{ target: document.querySelector('.js-results-list-placeholder'), addedNodes: [document.querySelector('.js-results-list-placeholder')] }], resultsObserver);
-
-
-// **************************************************************************
