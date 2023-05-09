@@ -1,11 +1,9 @@
 function agregarElemento(referenceSelector, index = -1) {
-
     console.log('agregarElemento llamado');
     const referenceNode = document.querySelector(referenceSelector);
 
-    
     if (!referenceNode) {
-        return; // si no se encuentra el elemento de referencia, se sale de la función
+        return;
     }
 
     const newElement = document.createElement('div');
@@ -22,41 +20,18 @@ function agregarElemento(referenceSelector, index = -1) {
     }
 }
 
-function observarCambiosEnDOM() {
-    const targetNode = document.querySelector('.js-results-list-placeholder');
-
-    if (!targetNode) {
-        return;
-    }
-
-    const observer = new MutationObserver((mutationsList) => {
-        for (let mutation of mutationsList) {
-            if (mutation.type === 'childList') {
-                const addedNodes = Array.from(mutation.addedNodes);
-                addedNodes.forEach((node) => {
-                    if (node.nodeType !== Node.ELEMENT_NODE) {
-                        return;
-                    }
-                    const currentItem = node.querySelector('.results-list__item--current-flight');
-                    if (currentItem) {
-                        console.log("Elemento .results-list__item--current-flight encontrado");
-                        const flightSelectionBox = currentItem.closest('.flight-selection__box');
-                        if (flightSelectionBox) {
-                          agregarElemento(flightSelectionBox);
-                        }
-                      }
-                });
-            }
+function revisarElemento() {
+    const currentItem = document.querySelector('.results-list__item--current-flight');
+    if (currentItem) {
+        const flightSelectionBox = currentItem.closest('.flight-selection__box');
+        if (flightSelectionBox) {
+            agregarElemento(flightSelectionBox);
+            clearInterval(intervalId); // detiene la revisión periódica una vez que se ha encontrado el elemento
         }
-    });
-
-    observer.observe(targetNode, { childList: true, subtree: true });
+    }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    observarCambiosEnDOM();
-  });
-
+let intervalId = setInterval(revisarElemento, 500);
 
 
 window.addEventListener('load', () => {
