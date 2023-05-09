@@ -1,36 +1,33 @@
-async function observeMutation(elementToObserve, callback) {
-    while (!document.querySelector(elementToObserve)) {
-      // Esperar hasta que el elemento esté disponible en el DOM
-      await new Promise(resolve => requestAnimationFrame(resolve));
-    }
+// ***************************** MULT-209 *********************************************
+
+function addTaxCopyToResultsList() {
+    let resultsListHotels = document.querySelector('.js-results-list-placeholder');
   
-    const observer = new MutationObserver(callback);
-    observer.observe(document.querySelector(elementToObserve), { childList: true, subtree: true });
-    return observer;
-  }
+    if (resultsListHotels) {
+      let itemsResults = resultsListHotels.querySelectorAll('.results-list__item');
   
-  function addTaxCopyToPriceResults() {
-    const itemsResults = document.querySelectorAll('.results-list__item');
-  
-    itemsResults.forEach(function (item) {
-      const priceResults = item.querySelector('.info-card__price');
-      const existingTaxCopy = item.querySelector('.DivTaxCopyStyle');
-  
-      if (!existingTaxCopy) {
-        const newDivTaxCopy = document.createElement('div');
+      itemsResults.forEach(function(item) {
+        let priceResults = item.querySelector('.info-card__price');
+        let newDivTaxCopy = document.createElement('div');
         newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
-        newDivTaxCopy.classList.add('DivTaxCopyStyle');
+        newDivTaxCopy.classList.add("DivTaxCopyStyle");
+  
         priceResults.appendChild(newDivTaxCopy);
-      }
-    });
+      });
+    }
   }
   
-//   setInterval(() => {
-//     const resultsListHotels = document.querySelector('.js-results-list-placeholder');
-//     if (resultsListHotels) {
-//       observeMutation(resultsListHotels, function(mutationsList, observer) {
-//         addTaxCopyToPriceResults();
-//       });
-//     }
-//   }, 1000);
+  let observer = new MutationObserver(function(mutationsList) {
+    for (let mutation of mutationsList) {
+      if (mutation.type === 'childList' && mutation.addedNodes.length) {
+        mutation.addedNodes.forEach(function(node) {
+          if (node.classList && node.classList.contains('js-results-list-placeholder')) {
+            addTaxCopyToResultsList();
+          }
+        });
+      }
+    }
+  });
+  
+  observer.observe(document.body, { childList: true, subtree: true });
 // **************************************************************************
