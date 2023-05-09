@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
             for (const node of mutation.addedNodes) {
               if (node.nodeType === Node.ELEMENT_NODE && node.matches(selector)) {
                 if (!node.querySelector('.main__warningPrice')) {
-                  agregarElemento('.js-results-list-selection-placeholder');
+                  agregarElemento('.js-results-list-selection-placeholder>.flight-selection>.flight-selection__box');
                   console.log('Element added to DOM:', node);
                 }
                 callback();
