@@ -69,7 +69,7 @@ function addHeaderLinks() {
         head.appendChild(recomendadoHotelsJs);
     }
 
-     // const cuponSeccion = path.includes('/booking/');
+    // const cuponSeccion = path.includes('/booking/');
     // if(cuponSeccion){
     //     const cuponSeccionScript = document.createElement('script');
     //     const cuponSeccionStyle = document.createElement('link');
@@ -86,6 +86,14 @@ function addHeaderLinks() {
 
 }
 addHeaderLinks();
+
+// *********************** MUTATION FUNCTION *************************
+
+function observeMutation(elementToObserve, callback) {
+    const observer = new MutationObserver(callback);
+    observer.observe(elementToObserve, { childList: true, subtree: true });
+    return observer;
+}
 
 //************************************ MULT-213*************************************************************** */
 window.addEventListener('load', () => {
