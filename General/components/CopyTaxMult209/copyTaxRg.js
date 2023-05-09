@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
             for (const node of mutation.addedNodes) {
               if (node.nodeType === Node.ELEMENT_NODE && node.matches(selector)) {
                 if (!node.querySelector('.main__warningPrice')) {
-                  agregarElemento('.results-list__item.results-list__item--current-flight > .js-results-list-selection-placeholder > .flight-selection__box');
+                  agregarElemento('.js-results-list-selection-placeholder');
                   console.log('Element added to DOM:', node);
                 }
                 callback();
@@ -54,4 +54,5 @@ window.addEventListener('load', () => {
     addWarningElements();
   
   });
+  
   
