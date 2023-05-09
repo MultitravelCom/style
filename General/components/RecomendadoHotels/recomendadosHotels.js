@@ -1,44 +1,32 @@
 // ***************************** MULT-209 *********************************************
 
-function addTaxCopyToPriceResults(priceResults) {
-    let newDivTaxCopy = document.createElement('div');
-    newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
-    newDivTaxCopy.classList.add("DivTaxCopyStyle");
-    priceResults.appendChild(newDivTaxCopy);
-  }
+// Función que se ejecuta cuando se agrega un nuevo elemento con la clase 'results-list__item'
+function onResultsListChange(mutationsList, observer) {
+    for(let mutation of mutationsList) {
+      if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+        // Verifica si se agregó un elemento con la clase 'results-list__item'
+        let itemsResults = mutation.target.querySelectorAll('.results-list__item');
+        if (itemsResults.length > 0) {
+          itemsResults.forEach(function(item) {
+            let priceResults = item.querySelector('.info-card__price');
+            let newDivTaxCopy = document.createElement('div');
+            newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
+            newDivTaxCopy.classList.add("DivTaxCopy");
   
-  function observeResultsList() {
-    const resultsListHotels = document.querySelector('.js-results-list-placeholder');
-    if (!resultsListHotels) {
-      return; // si el selector no existe, no hacemos nada
-    }
-  
-    const itemsResults = resultsListHotels.querySelectorAll('.results-list__item');
-    if (itemsResults.length > 0) {
-      itemsResults.forEach(function(item) {
-        const priceResults = item.querySelector('.info-card__price');
-        addTaxCopyToPriceResults(priceResults);
-      });
-    }
-  
-    const itemsResultsObserver = new MutationObserver(function(mutationsList, observer) {
-      for (const mutation of mutationsList) {
-        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-          const addedNodes = mutation.addedNodes;
-          for (const node of addedNodes) {
-            if (node.classList && node.classList.contains('results-list__item')) {
-              const priceResults = node.querySelector('.info-card__price');
-              addTaxCopyToPriceResults(priceResults);
-            }
-          }
+            priceResults.appendChild(newDivTaxCopy);
+          });
         }
       }
-    });
-  
-    itemsResultsObserver.observe(resultsListHotels, { childList: true, subtree: true });
+    }
   }
   
-  window.addEventListener('load', function() {
-    observeResultsList();
-  });
+  // Crea una instancia de MutationObserver para observar cambios en el DOM
+  const observer = new MutationObserver(onResultsListChange);
+  
+  // Observa cambios en el elemento con la clase 'js-results-list-placeholder' y sus hijos
+  observer.observe(document.querySelector('.js-results-list-placeholder'), { childList: true, subtree: true });
+  
+  // Ejecuta la función por primera vez en caso de que el elemento ya esté presente en el DOM
+  onResultsListChange([{ target: document.querySelector('.js-results-list-placeholder'), addedNodes: [document.querySelector('.js-results-list-placeholder')] }], observer);
+  
 // **************************************************************************
