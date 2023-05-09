@@ -42,19 +42,23 @@ window.addEventListener('load', () => {
   
   
     function addWarningElements(selector) {
-      if (!document.querySelector(`${selector} .booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web .main__warningPrice`)) {
-        agregarElemento(`${selector} .booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web`);
+        if (!document.querySelector(`${selector} .booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web .main__warningPrice`)) {
+          agregarElemento(`${selector} .booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web`);
+        }
+      
+        if (!document.querySelector(`${selector} .booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2) .main__warningPrice`)) {
+          agregarElemento(`${selector} .booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)`);
+        }
       }
-  
-      if (!document.querySelector(`${selector} .booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2) .main__warningPrice`)) {
-        agregarElemento(`${selector} .booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)`);
-      }
-    }
   
     // Ejemplo de cómo invocar la función para distintos selectores y en distintas partes del proyecto.
     onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
       addWarningElements('.js-results-list-selection-placeholder');
     });
+
+    addWarningElements('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)');
+    addWarningElements('.js-results-list-selection-placeholder');
+
     
   });
   
