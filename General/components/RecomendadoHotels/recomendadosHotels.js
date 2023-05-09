@@ -13,7 +13,7 @@ window.onload = function () {
 
     // ***************************** MULT-209 *********************************************
     const itemsResults = document.querySelectorAll('.results-list__item');
-    let resultsListHotels = document.querySelector('.js-results-list-placeholder');
+    // let resultsListHotels = document.querySelector('.js-results-list-placeholder');
     
     observeMutation(resultsListHotels, function (mutationsList, observer) {
         
