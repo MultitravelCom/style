@@ -60,8 +60,10 @@ window.addEventListener('load', () => {
         placeholderObserver.observe(document.body, { childList: true, subtree: true });
       }
       
-    onElementAddedToDOM('.results-list__item--current-flight', () => {
-        agregarElemento('.js-results-list-selection-placeholder');
+      onElementAddedToDOM('.results-list__item--current-flight', () => {
+        setTimeout(() => {
+          agregarElemento('.js-results-list-selection-placeholder');
+        }, 1000); // espera 1 segundo antes de llamar a la función
       });
     
       onElementRemovedFromDOM('.results-list__item--current-flight', () => {
@@ -69,6 +71,7 @@ window.addEventListener('load', () => {
         if (innertElement) {
           innertElement.remove();
         }
+      });
 
     agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
     
