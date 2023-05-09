@@ -11,9 +11,9 @@ async function observeMutation(elementToObserve, callback) {
 
 // ***************************** MULT-209 *********************************************
 let resultsListHotels = document.querySelector('.js-results-list-placeholder');
+const itemsResults = document.querySelectorAll('.results-list__item');
 
 observeMutation('.js-results-list-placeholder', function (mutationsList, observer) {
-    const itemsResults = document.querySelectorAll('.results-list__item');
    
     itemsResults.forEach(function (item) {
         const priceResults = item.querySelector('.info-card__price');
