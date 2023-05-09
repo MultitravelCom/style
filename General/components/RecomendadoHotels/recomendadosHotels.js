@@ -6,7 +6,7 @@ function onResultsListChange(mutationsList, observer) {
       let itemsResults = mutation.target.querySelectorAll('.results-list__item');
       if (itemsResults.length > 0) {
         itemsResults.forEach(function(item) {
-          if (!item.querySelector('.DivTaxCopy')) {
+          if (!item.querySelector('.bestprice__title')) {
             let priceResults = item.querySelector('.info-card__price');
             let newDivTaxCopy = document.createElement('div');
             newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
