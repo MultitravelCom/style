@@ -22,21 +22,24 @@ window.addEventListener('load', () => {
 
     function onElementAddedToDOM(selector, callback) {
         const observer = new MutationObserver(mutationsList => {
-            for (const mutation of mutationsList) {
-                if (mutation.type === 'childList') {
-                    for (const node of mutation.addedNodes) {
-                        if (node.nodeType === Node.ELEMENT_NODE && node.matches(selector)) {
-                            callback();
-                            console.log('Element added to DOM:', node);
-                        }
-                    }
+          for (const mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+              for (const node of mutation.addedNodes) {
+                if (node.nodeType === Node.ELEMENT_NODE && node.matches(selector)) {
+                  setTimeout(() => {
+                    callback();
+                  }, 1000); // espera 1 segundo antes de llamar al callback
+                  observer.disconnect(); // desconecta el observer para que no siga observando cambios en el DOM
+                  break; // detiene el bucle for para evitar ejecutar el callback varias veces
                 }
+              }
             }
+          }
         });
-
+      
         observer.observe(document.documentElement, { childList: true, subtree: true });
-    }
-
+      }
+      
     onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
         agregarElemento('.js-results-list-selection-placeholder');
       });
