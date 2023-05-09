@@ -39,26 +39,16 @@ window.addEventListener('load', () => {
   
       observer.observe(document.documentElement, { childList: true, subtree: true });
     }
+
   
+    // Invoca la función addWarningElements en la carga inicial de la página.
+    addWarningElements('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)');
+    addWarningElements('.js-results-list-selection-placeholder');
   
-    function addWarningElements(selector) {
-        if (!document.querySelector(`${selector} .booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web .main__warningPrice`)) {
-          agregarElemento(`${selector} .booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web`);
-        }
-      
-        if (!document.querySelector(`${selector} .booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2) .main__warningPrice`)) {
-          agregarElemento(`${selector} .booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)`);
-        }
-      }
-  
-    // Ejemplo de cómo invocar la función para distintos selectores y en distintas partes del proyecto.
+    // Observa si se agrega algún nodo que coincida con el selector '.js-results-list-selection-placeholder', y si es así, invoca la función addWarningElements.
     onElementAddedToDOM('.js-results-list-selection-placeholder', () => {
       addWarningElements('.js-results-list-selection-placeholder');
     });
-
-    addWarningElements('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)');
-    addWarningElements('.js-results-list-selection-placeholder');
-
-    
+  
   });
   
