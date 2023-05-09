@@ -1,4 +1,6 @@
 // ***************************** MULT-209 *********************************************
+
+document.addEventListener('DOMContentLoaded', function() {
 function observeResultsList() {
     const resultsListHotels = document.querySelector('.results-list__item');
     if (!resultsListHotels) {
@@ -41,4 +43,6 @@ function observeResultsList() {
     console.log('DOMContentLoaded!');
     observeResultsList();
   });
+
+});
 // **************************************************************************
