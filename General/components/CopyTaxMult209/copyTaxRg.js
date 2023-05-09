@@ -63,6 +63,12 @@ window.addEventListener('load', () => {
     onElementAddedToDOM('.results-list__item--current-flight', () => {
         agregarElemento('.js-results-list-selection-placeholder');
       });
+    
+      onElementRemovedFromDOM('.results-list__item--current-flight', () => {
+        const innertElement = document.querySelector('.main__warningPrice');
+        if (innertElement) {
+          innertElement.remove();
+        }
 
     agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
     
