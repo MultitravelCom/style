@@ -5,10 +5,8 @@
 }
 
 .DivTaxCopyStyle {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 13px;
-    text-align: right;
-    color: #7B7B7B;
+    font-size: .7857rem;
+    color: #323232;
+    line-height: 1.15;
+    margin-left: auto;
 }
