@@ -1,3 +1,10 @@
+function observeMutation(elementToObserve, callback) {
+    const observer = new MutationObserver(callback);
+    observer.observe(elementToObserve, { childList: true, subtree: true });
+    return observer;
+}
+
+
 // ***************************** MULT-209 *********************************************
 let resultsListHotels = document.querySelector('.js-results-list-placeholder');
 let itemsResults = resultsListHotels.querySelectorAll('.results-list__item');
