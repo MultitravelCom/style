@@ -40,19 +40,20 @@ window.addEventListener('load', () => {
         observerar.observe(document.documentElement, { childList: true, subtree: true });
     }
 
-    function onResultsListAddedToDOM() {
-        const resultsList = document.querySelector('.results-list');
-        if (resultsList) {
-            const placeholderElements = resultsList.querySelectorAll('.js-results-list-selection-placeholder');
-            placeholderElements.forEach((placeholderElement) => {
-                onElementAddedToDOM('.results-list__item--current-flight', () => {
-                    agregarElemento(placeholderElement);
-                });
-            });
-        } else {
-            setTimeout(onResultsListAddedToDOM, 5000); // si no se encuentra el elemento .results-list, se vuelve a intentar después de 1 segundo
-        }
+    const resultsList = document.querySelector('.results-list');
+    if (resultsList) {
+      const observer = new MutationObserver(() => {
+        const placeholderElements = resultsList.querySelectorAll('.js-results-list-selection-placeholder');
+        placeholderElements.forEach((placeholderElement) => {
+          agregarElemento(placeholderElement);
+        });
+      });
+  
+      observer.observe(resultsList, { childList: true });
+    } else {
+      setTimeout(onResultsListAddedToDOM, 5000);
     }
+  }
 
     onResultsListAddedToDOM();
 
