@@ -21,10 +21,10 @@ function onResultsListChange(mutationsList, observer) {
   }
   
   // Crea una instancia de MutationObserver para observar cambios en el DOM
-  const observer = new MutationObserver(onResultsListChange);
+  const resultsObserver = new MutationObserver(onResultsListChange);
   
   // Observa cambios en el elemento con la clase 'js-results-list-placeholder' y sus hijos
-  observer.observe(document.querySelector('.js-results-list-placeholder'), { childList: true, subtree: true });
+  resultsObserver.observe(document.querySelector('.js-results-list-placeholder'), { childList: true, subtree: true });
   
   // Ejecuta la función por primera vez en caso de que el elemento ya esté presente en el DOM
   onResultsListChange([{ target: document.querySelector('.js-results-list-placeholder'), addedNodes: [document.querySelector('.js-results-list-placeholder')] }], observer);
