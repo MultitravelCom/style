@@ -219,7 +219,7 @@ function Button(props) {
     }
 
     return (
-        <button id={props.title} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
+        <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
     );
 }
 

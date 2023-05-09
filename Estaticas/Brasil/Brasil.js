@@ -87,7 +87,7 @@ function Button(props) {
     }
 
     return (
-        <button id={props.title} className={props.style} onClick={handleClick}>{props.text}</button>
+        <button id={props.id} className={props.style} onClick={handleClick}>{props.text}</button>
     );
 }
 const Loader = () => {
