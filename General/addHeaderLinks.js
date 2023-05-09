@@ -20,38 +20,38 @@ function addHeaderLinks() {
     const bannerTop = path.includes('/results') || path.includes('/booking/');
     // const cuponSeccion = path.includes('/booking/');
 
-    if(copyTaxRg){
+    if (copyTaxRg) {
         const copyTaxRegStyle = document.createElement('link');
         const copyTaxRegJs = document.createElement('script');
-    
+
         copyTaxRegJs.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRg.js';
-    
+
         copyTaxRegStyle.href = "https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgStyle.css";
         copyTaxRegStyle.rel = "stylesheet";
-    
+
         head.appendChild(copyTaxRegStyle);
         head.appendChild(copyTaxRegJs);
     }
 
-    if(priceFinalFlight){
+    if (priceFinalFlight) {
         const priceFinalFlightScript = document.createElement('script');
-    
+
         priceFinalFlightScript.src = 'https://multitravelcom.github.io/style/General/components/PrecioFinalFlight/finalPriceFlight.js';
 
 
         head.appendChild(priceFinalFlightScript);
     }
 
-    if(!bannerTop){
+    if (!bannerTop) {
         const bannerTopStyle = document.createElement('link');
         const bannerTopScript = document.createElement('script');
-    
+
         bannerTopScript.src = 'https://multitravelcom.github.io/style/General/components/BannerTop.js';
         bannerTopScript.type = "text/babel";
-    
+
         bannerTopStyle.href = "https://multitravelcom.github.io/style/General/components/styleBannerTop.css";
         bannerTopStyle.rel = "stylesheet";
-    
+
         head.appendChild(bannerTopStyle);
         head.appendChild(bannerTopScript);
     }
@@ -63,7 +63,7 @@ function addHeaderLinks() {
 
     //     cuponSeccionScript.src = 'https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.js';
 
-    
+
     //     cuponSeccionStyle.href = "https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.css";
     //     cuponSeccionStyle.rel = "stylesheet";
 
@@ -73,6 +73,18 @@ function addHeaderLinks() {
 
 }
 addHeaderLinks();
+
+//************************************ MULT-213*************************************************************** */
+window.addEventListener('load', () => {
+
+    let buttonnewsletter = document.querySelector('button[data-target="#-newsletter-container"]');
+    let divnewsletter = buttonnewsletter.querySelector('.quicklink-elem-label');
+
+    divnewsletter.textContent = 'Suscríbete al newsletter';
+
+
+    //*************************************************************************************************** */
+});
 
 
 

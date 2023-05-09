@@ -42,17 +42,4 @@ window.addEventListener('load', () => {
   // // cambiar el texto del label
    label.text('Multidestino');
   document.querySelector('.radio').style.display = 'inline-block';
-
-
-  
-    //************************************ MULT-213*************************************************************** */
-
-    let buttonnewsletter = document.querySelector('button[data-target="#-newsletter-container"]');
-    let divnewsletter = buttonnewsletter.querySelector('.quicklink-elem-label');
-    
-    divnewsletter.textContent = 'Suscríbete al newsletter';
-
-
-    //*************************************************************************************************** */
-  
 });
