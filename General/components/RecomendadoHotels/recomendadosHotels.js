@@ -19,7 +19,7 @@ function addTaxCopyToPriceResults(priceResults) {
         addTaxCopyToPriceResults(priceResults);
       });
     } else {
-      const observer = new MutationObserver(function(mutationsList, observer) {
+      const itemsResultsObserver = new MutationObserver(function(mutationsList, observer) {
         for (const mutation of mutationsList) {
           if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
             const addedNodes = mutation.addedNodes;
@@ -32,7 +32,7 @@ function addTaxCopyToPriceResults(priceResults) {
           }
         }
       });
-      observer.observe(resultsListHotels, { childList: true, subtree: true });
+      itemsResultsObserver.observe(resultsListHotels, { childList: true, subtree: true });
     }
   }
   
