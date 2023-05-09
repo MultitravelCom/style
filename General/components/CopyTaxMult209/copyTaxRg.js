@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
       const newElement = document.createElement('div');
       newElement.classList.add('booking-breakdown__table', 'main__warningPrice');
       newElement.innerHTML = `
-        <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+        <div class="main__warningPrice__icon glyphicon glyphicon-info-circle"></div>
         <p>En caso de producto internacional, los precios siempre incluyen el impuesto país y las percepciones RG4815 Y RG5272.</p>
       `;
   
@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
             for (const node of mutation.addedNodes) {
               if (node.nodeType === Node.ELEMENT_NODE && node.matches(selector)) {
                 if (!node.querySelector('.main__warningPrice')) {
-                  agregarElemento('.js-results-list-selection-placeholder');
+                  agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web');
                   console.log('Element added to DOM:', node);
                 }
                 callback();
@@ -47,6 +47,10 @@ window.addEventListener('load', () => {
   
       if (!document.querySelector('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2) .main__warningPrice')) {
         agregarElemento('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)');
+      }
+  
+      if (!document.querySelector('.js-results-list-selection-placeholder .main__warningPrice')) {
+        agregarElemento('.js-results-list-selection-placeholder>.flight-selection>.flight-selection__box');
       }
     }
   
