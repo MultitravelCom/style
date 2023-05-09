@@ -12,11 +12,12 @@ function onResultsListChange(mutationsList, observer) {
         itemsResults.forEach(function(item) {
           if (!divTaxAdded) {
             let priceResults = item.querySelector('.info-card__price');
-            let newDivTaxCopy = document.createElement('div');
-            newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
-            newDivTaxCopy.classList.add("DivTaxCopy");
-
-            priceResults.appendChild(newDivTaxCopy);
+            priceResults.forEach(function(priceResult) {
+                let newDivTaxCopy = document.createElement('div');
+                newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
+                newDivTaxCopy.classList.add("DivTaxCopy");
+                priceResult.appendChild(newDivTaxCopy);
+              });
             divTaxAdded = true;
           }
         });
