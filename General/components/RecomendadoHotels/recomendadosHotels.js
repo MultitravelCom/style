@@ -18,22 +18,23 @@ function addTaxCopyToPriceResults(priceResults) {
         const priceResults = item.querySelector('.info-card__price');
         addTaxCopyToPriceResults(priceResults);
       });
-    } else {
-      const itemsResultsObserver = new MutationObserver(function(mutationsList, observer) {
-        for (const mutation of mutationsList) {
-          if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-            const addedNodes = mutation.addedNodes;
-            for (const node of addedNodes) {
-              if (node.classList && node.classList.contains('results-list__item')) {
-                const priceResults = node.querySelector('.info-card__price');
-                addTaxCopyToPriceResults(priceResults);
-              }
+    }
+  
+    const itemsResultsObserver = new MutationObserver(function(mutationsList, observer) {
+        console.log('Mutation detected');
+      for (const mutation of mutationsList) {
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+          const addedNodes = mutation.addedNodes;
+          for (const node of addedNodes) {
+            if (node.classList && node.classList.contains('results-list__item')) {
+              const priceResults = node.querySelector('.info-card__price');
+              addTaxCopyToPriceResults(priceResults);
             }
           }
         }
-      });
-      itemsResultsObserver.observe(resultsListHotels, { childList: true, subtree: true });
-    }
+      }
+    });
+    itemsResultsObserver.observe(resultsListHotels, { childList: true, subtree: true });
   }
   
   document.addEventListener('DOMContentLoaded', function() {
