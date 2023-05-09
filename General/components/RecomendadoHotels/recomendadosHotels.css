@@ -1,5 +1,14 @@
-.recomendadoBorde{
+.recomendadoBorde {
     border-color: #1585E6;
     border-width: 4px 2px 2px 2px;
     border-style: solid;
+}
+
+.DivTaxCopyStyle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: right;
+    color: #7B7B7B;
 }
