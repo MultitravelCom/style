@@ -45,9 +45,9 @@
 
 /* MULT-205 */
 .confirm-booking__promocodes {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
-    padding: 20px 0 !important;
+    padding: 6px 0 !important;
     border-radius: 8px;
     border: 2px solid #0D4E88;
     background-color: #DEE9F5;
