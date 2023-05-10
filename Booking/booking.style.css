@@ -207,11 +207,11 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 25px;
-    /* identical to box height */
-
     text-align: center;
-
     color: #0D4E88;
+}
+.modal__content-cupon{  
+    padding: 1rem;
 }
 
 .modal__content-cupon>span {
@@ -273,10 +273,13 @@
 }
 .modal__content-title-circleCalendar{
     display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
 }
 
 .modal__content-uno-logo {
-    width: 100%;
+    width: 63%;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20Multi%20cupon.svg);
@@ -300,4 +303,9 @@
     border-radius: 50%;
     background: white;
     padding: 8px;
+}
+.glyphicon-calendar{
+    color: #2196F3;
+    font-size: 19px;
+    min-width: 32px;
 }
