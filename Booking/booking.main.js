@@ -1,6 +1,8 @@
-function handleClick() {
+function handleClick(event) {
+    event.preventDefault()
     console.log('Click');
-  }
+}
+
 
 
 async function changeText() {
@@ -29,12 +31,12 @@ async function agreeBtn() {
     `;
 
     newElementBookingCupons.querySelector('.cupones__btn__style').addEventListener('click', handleClick);
-    
+
     // Espera a que el elemento padre exista antes de agregar el nuevo elemento
     while (!confirmBooking) {
         await new Promise(resolve => setTimeout(resolve, 100));
     }
-    
+
     confirmBooking.appendChild(newElementBookingCupons);
 }
 
@@ -50,7 +52,31 @@ async function showPromocodesDiv() {
     }
 }
 
+function handleClick() {
+    // Crea el modal
+    const modalCupones = document.createElement('div');
+    modalCupones.classList.add('modal-cupones');
+    modalCupones.innerHTML = `
+      <div class="modal">
+        <div class="modal-content">
+          <span class="close">X</span>
+          <div class="row">
+            <div class="col-md-12 col-lg-4">Contenido del primer div</div>
+            <div class="col-md-12 col-lg-4">Contenido del segundo div</div>
+            <div class="col-md-12 col-lg-4">Contenido del tercer div</div>
+          </div>
+        </div>
+      </div>
+    `;
 
+    // Agrega el modal al DOM
+    document.body.appendChild(modalCupones);
+
+    // Agrega un event listener al botón de cerrar el modal
+    modalCupones.querySelector('.close').addEventListener('click', () => {
+        modalCupones.remove();
+    });
+}
 
 // Ejecuta las funciones en orden y asegúrate de que se completen antes de continuar con la siguiente
 async function run() {
