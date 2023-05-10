@@ -58,9 +58,67 @@ function handleClick(event) {
                 <span class="close">X</span>
             </div>
           <div class="row">
-            <div class="col-md-12 col-lg-4">Contenido del primer div</div>
-            <div class="col-md-12 col-lg-4">Contenido del segundo div</div>
-            <div class="col-md-12 col-lg-4">Contenido del tercer div</div>
+           <div class="col-md-12 col-lg-4" modal__content-uno>
+                <div>
+
+                </div>
+                <div class="modal__content-uno-title">
+                    <h3>10% OFF en vuelos y paquetes</h3>
+                    <div class="modal__content-uno-text">
+                        <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+                        <p>En paquetes, el descuento se aplica solo al aéreo.
+                        Tope de descuento $25.000. Cantidad limitada.</p>
+                    </div>
+                    <div>
+                        <div class="main__warningPric__icon glyphicon glyphicon-info-calendar"></div>
+                        <p>Disponi ble hasta el 10/05/2023 hasta las 23:59.</p>
+                    </div>
+                </div>
+                <div class="modal__content-uno-cupon">
+                    <h2>MULTITRAVELHOTSALE10</h2>
+                    <span>Copia el siguiente código</span>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4" modal__content-dos>
+                <div>
+
+                </div>
+                <div class="modal__content-dos-title">
+                    <h3>15% OFF sobre la tarifa base</h3>
+                    <div class="modal__content-dos-text">
+                        <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+                        <p>Vuelos a Miami y Nueva York con Aerolineas Argentinas.</p>
+                    </div>
+                    <div>
+                        <div class="main__warningPric__icon glyphicon glyphicon-info-calendar"></div>
+                        <p>Disponible hasta el 12/05/2023 hasta las 23:59.</p>
+                    </div>
+                </div>
+                <div class="modal__content-dos-cupon">
+                    <h2>ARMTSALE15</h2>
+                    <span>Copia el siguiente código</span>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4" modal__content-tres>
+                <div>
+
+                </div>
+                <div class="modal__content-tres-title">
+                    <h3>10% OFF sobre la tarifa base</h3>
+                    <div class="modal__content-dos-text">
+                        <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+                        <p>Vuelos a Madrid, Rio de Janeiro, Cancun, Punta Cana, Bogota, Havana, Lima, Roma, Santiago de Chile, Salvador de Bahia, Porto Seguro con Aerolíneas Argentinas.</p>
+                    </div>
+                    <div>
+                        <div class="main__warningPric__icon glyphicon glyphicon-info-calendar"></div>
+                        <p>Disponible hasta el 12/05/2023 hasta las 23:59.</p>
+                    </div>
+                </div>
+                <div class="modal__content-dos-cupon">
+                    <h2>ARMTSALE10</h2>
+                    <span>Copia el siguiente código</span>
+                </div>
+            </div>
           </div>
         </div>
       </div>
