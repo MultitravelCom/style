@@ -29,6 +29,12 @@ async function agreeBtn() {
     }
     
     confirmBooking.appendChild(newElementBookingCupons);
+
+    const modal = document.getElementById("modalCuponera");
+    const openModalBtn = newElementBookingCupons.querySelector('.cupones__btn__style');
+    openModalBtn.addEventListener("click", function() {
+      modal.style.display = "block";
+    });
 }
 
 async function showPromocodesDiv() {
@@ -42,6 +48,16 @@ async function showPromocodesDiv() {
         await new Promise(resolve => setTimeout(resolve, 100));
     }
 }
+
+let modalCupones = document.getElementById('modalCuponera');
+modalCupones.innerHTML = `
+  <div class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Aquí puedes agregar cualquier contenido que desees mostrar en el modal.</p>
+    </div>
+  </div>
+`;
 
 // Ejecuta las funciones en orden y asegúrate de que se completen antes de continuar con la siguiente
 async function run() {
