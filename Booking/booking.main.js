@@ -66,14 +66,16 @@ function handleClick(event) {
                         <div class="modal__content-title-h3">
                             <h3>10% OFF en vuelos y paquetes</h3>
                         </div>
-                        <div class="modal__content-title-circle">
-                            <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-                            <p>En paquetes, el descuento se aplica solo al aéreo.
-                            Tope de descuento $25.000. Cantidad limitada.</p>
-                        </div>
-                        <div class="modal__content-title-calendar">
-                            <div class="main__warningPric__icon glyphicon glyphicon-calendar"></div>
-                            <p>Disponi ble hasta el 10/05/2023 hasta las 23:59.</p>
+                        <div class="modal__content-title-circleCalendar>
+                            <div class="modal__content-title-circle">
+                                <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+                                    <p>En paquetes, el descuento se aplica solo al aéreo.
+                                    Tope de descuento $25.000. Cantidad limitada.</p>
+                                </div>
+                            <div class="modal__content-title-calendar">
+                                <div class="main__warningPric__icon glyphicon glyphicon-calendar"></div>
+                                <p>Disponi ble hasta el 10/05/2023 hasta las 23:59.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="modal__content-cupon">
