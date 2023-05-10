@@ -66,7 +66,7 @@ function handleClick(event) {
                         <div class="modal__content-title-h3">
                             <h3>10% OFF en vuelos y paquetes</h3>
                         </div>
-                        <div class="modal__content-title-circleCalendar>
+                        <div class="modal__content-title-circleCalendar">
                             <div class="modal__content-title-circle">
                                 <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
                                     <p>En paquetes, el descuento se aplica solo al aéreo.
