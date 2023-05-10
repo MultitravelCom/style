@@ -257,6 +257,9 @@
 .modal__content-uno,
 .modal__content-dos,
 .modal__content-tres {
+    display: flex;
+    margin: 1rem;
+    align-items: center;
     background: #FFFFFF;
     border: 1px solid #0D4E88;
     border-radius: 16px;
