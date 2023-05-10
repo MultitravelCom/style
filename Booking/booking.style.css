@@ -256,6 +256,13 @@
 border: 1px solid #0D4E88;
 border-radius: 16px;
 }
+.modal__content-uno-logo{
+    background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20Multi%20cupon.svg);
+}
+.modal__content-dos-logo,
+.modal__content-dos-logo{
+    background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20AA%20cupon.svg);
+}
 
 .close {
     position: absolute;
