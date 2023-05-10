@@ -258,6 +258,7 @@
 .modal__content-dos,
 .modal__content-tres {
     display: flex;
+    justify-content: space-around;
     margin: 1rem;
     align-items: center;
     background: #FFFFFF;
@@ -266,11 +267,15 @@
 }
 
 .modal__content-uno-logo {
+    background-repeat: no-repeat;
+    background-position: center;
     background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20Multi%20cupon.svg);
 }
 
 .modal__content-dos-logo,
 .modal__content-dos-logo {
+    background-repeat: no-repeat;
+    background-position: center;
     background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20AA%20cupon.svg);
 }
 
