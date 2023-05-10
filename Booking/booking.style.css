@@ -269,6 +269,9 @@
     border: 1px solid #0D4E88;
     border-radius: 16px;
 }
+.modal__content-title-circleCalendar{
+    display: flex;
+}
 
 .modal__content-uno-logo {
     width: 100%;
