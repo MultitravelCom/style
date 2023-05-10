@@ -9,9 +9,19 @@ window.addEventListener('load', () => {
         const newElement = document.createElement('div');
         newElement.classList.add('booking-breakdown__table', 'main__warningPrice');
         newElement.innerHTML = `
-        <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-        <p>En caso de producto internacional, los precios siempre incluyen el impuesto país y las percepciones RG4815 Y RG5272.</p>
-      `;
+            <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+            <p>En caso de producto internacional, los precios siempre incluyen impuesto país y percepciones RG4815 Y RG5272.</p>
+        `;
+
+        const infoCardPrice = referenceNode.querySelector('.info-card__price');
+        const taxIncludedElement = infoCardPrice.querySelector('.bestprice__taxincluded');
+        if (taxIncludedElement) {
+            infoCardPrice.appendChild(newElement);
+        }
+
+        if (taxIncludedElement) {
+            taxIncludedElement.style.display = 'none';
+        }
 
         if (index === -1 || index >= referenceNode.children.length) {
             referenceNode.appendChild(newElement);
@@ -25,4 +35,3 @@ window.addEventListener('load', () => {
     agregarElementoBooking('.booking-breakdown__item.booking-breakdown__item--total.booking-breakdown__item--total-price.booking-breakdown__item--is-pay-web:nth-of-type(2)');
 
 });
-
