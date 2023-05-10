@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
         `;
 
         const infoCardPrice = referenceNode.querySelector('.info-card__price');
-        const taxIncludedElement = infoCardPrice.querySelector('.bestprice__taxincluded');
+        const taxIncludedElement = infoCardPrice.querySelector('.bestprice .bestprice__taxincluded');
         if (taxIncludedElement) {
             infoCardPrice.appendChild(newElement);
         }
