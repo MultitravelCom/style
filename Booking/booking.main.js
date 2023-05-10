@@ -22,7 +22,12 @@ async function changeText() {
       </div>
     `;
   
-    const confirmBooking = document.querySelector('.container__conocer__cupones__btn');
+    let confirmBooking;
+    while (!confirmBooking) {
+      confirmBooking = document.querySelector('.container__conocer__cupones__btn');
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+  
     const openModalBtnContainer = newElementBookingCupons.querySelector('#openModalBtnContainer');
     const openModalBtn = newElementBookingCupons.querySelector('#openModalBtn');
   
@@ -33,6 +38,7 @@ async function changeText() {
   
     confirmBooking.appendChild(openModalBtnContainer);
   }
+  
   async function showModal() {
     const modalCupones = document.createElement('div');
     modalCupones.id = 'modalCuponera';
