@@ -60,10 +60,10 @@ function handleClick(event) {
                 </div>
             <div class="row modal-content__cupones-row">
             <div class="col-md-12 col-lg-4" modal__content-uno>
-                    <div>
+                    <div class="modal__content-uno-title">
+                    <div class="modal__content-uno-logo>
 
                     </div>
-                    <div class="modal__content-uno-title">
                         <div class="modal__content-uno-title-h3">
                             <h3>10% OFF en vuelos y paquetes</h3>
                         </div>
