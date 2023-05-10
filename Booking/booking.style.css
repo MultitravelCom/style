@@ -258,9 +258,9 @@
 .modal__content-dos,
 .modal__content-tres {
     display: flex;
-    justify-content: space-around;
     margin: 1rem;
     align-items: center;
+    justify-content: space-between;
     background: #FFFFFF;
     border: 1px solid #0D4E88;
     border-radius: 16px;
