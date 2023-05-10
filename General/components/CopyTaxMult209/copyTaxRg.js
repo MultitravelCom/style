@@ -20,18 +20,48 @@ function agregarElemento(referenceSelector, index = -1) {
     }
 }
 
-function revisarElemento() {
-    const currentItem = document.querySelector('.results-list__item--current-flight');
-    if (currentItem) {
-        const flightSelectionBox = currentItem.closest('.js-results-list-selection-placeholder');
-        if (flightSelectionBox) {
-            agregarElemento(flightSelectionBox);
-            clearInterval(intervalId); // detiene la revisión periódica una vez que se ha encontrado el elemento
-        }
+function observarCambiosEnDOM() {
+    const targetNode = document.querySelector('.js-results-list-placeholder');
+  
+    if (!targetNode) {
+      return;
     }
-}
-
-let intervalId = setInterval(revisarElemento, 500);
+  
+    // Verificar si ya existe el selector '.results-list__item--current-flight' en el DOM
+    const currentItem = targetNode.querySelector('.results-list__item--current-flight');
+    if (currentItem) {
+      const flightSelectionBox = currentItem.closest('.flight-selection__box');
+      if (flightSelectionBox) {
+        agregarElemento(flightSelectionBox);
+      }
+    }
+  
+    const observer = new MutationObserver((mutationsList) => {
+      for (let mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+          const addedNodes = Array.from(mutation.addedNodes);
+          addedNodes.forEach((node) => {
+            if (node.nodeType !== Node.ELEMENT_NODE) {
+              return;
+            }
+            const currentItem = node.querySelector('.results-list__item--current-flight');
+            if (currentItem) {
+              const flightSelectionBox = currentItem.closest('.flight-selection__box');
+              if (flightSelectionBox) {
+                agregarElemento(flightSelectionBox);
+              }
+            }
+          });
+        }
+      }
+    });
+  
+    observer.observe(targetNode, { childList: true, subtree: true });
+  }
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    observarCambiosEnDOM();
+  });
 
 
 window.addEventListener('load', () => {
