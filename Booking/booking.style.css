@@ -118,29 +118,35 @@
 }
 
 @media(max-width: 767px) {
-    .container__conocer__cupones{
+    .container__conocer__cupones {
         width: 100%;
     }
+
     .confirm-booking__promocodes {
         flex-direction: column;
     }
+
     .promocodes__container {
         margin: auto;
     }
 }
-@media(min-width:768px) and (max-width: 1025px){
-    .confirm-booking__promocodes{
+
+@media(min-width:768px) and (max-width: 1025px) {
+    .confirm-booking__promocodes {
         justify-content: flex-end;
     }
+
     .container__conocer__cupones {
         max-width: 304px;
         height: 130px;
 
     }
-    .promocodes__container{
+
+    .promocodes__container {
         margin-left: 0;
     }
 }
+
 /* Estilos del modal */
 .overlay__cupones {
     position: fixed;
@@ -150,9 +156,25 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-  }
-  
-  .modal__cupones {
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__content-title {
+    text-align: center;
+    background-color: #2A91EB;
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    color: #FFFFFF;
+}
+
+.modal__cupones {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -161,13 +183,21 @@
     border: 1px solid #0D4E88;
     border-radius: 16px;
     z-index: 2;
-  }
-  
-  .modal-content__cupones {
+    overflow: hidden;
+}
+
+.modal-content__cupones {
     padding: 20px;
-  }
-  
-  .close {
+}
+
+.modal-content__cupones-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -175,5 +205,4 @@
     font-weight: bold;
     color: #0D4E88;
     cursor: pointer;
-  }
-  
+}

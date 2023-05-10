@@ -54,24 +54,26 @@ function handleClick(event) {
     <div class="overlay__cupones" id="overlay__cupones">
         <div class="modal__cupones">
             <div class="modal-content">
-                <div class="col-md-12 col-lg-4 modal__content-title">
+                <div class="modal__content-title">
                     <h2>Te damos la bienvenida a nuestra cuponera</h2>
                     <span class="close">X</span>
                 </div>
-            <div class="row">
+            <div class="row modal-content__cupones-row">
             <div class="col-md-12 col-lg-4" modal__content-uno>
                     <div>
 
                     </div>
                     <div class="modal__content-uno-title">
-                        <h3>10% OFF en vuelos y paquetes</h3>
-                        <div class="modal__content-uno-text">
+                        <div class="modal__content-uno-title-h3">
+                            <h3>10% OFF en vuelos y paquetes</h3>
+                        </div>
+                        <div class="modal__content-uno-title-circle">
                             <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
                             <p>En paquetes, el descuento se aplica solo al aéreo.
                             Tope de descuento $25.000. Cantidad limitada.</p>
                         </div>
-                        <div>
-                            <div class="main__warningPric__icon glyphicon glyphicon-info-calendar"></div>
+                        <div modal__content-uno-title-calendar>
+                            <div class="main__warningPric__icon glyphicon glyphicon-calendar"></div>
                             <p>Disponi ble hasta el 10/05/2023 hasta las 23:59.</p>
                         </div>
                     </div>
