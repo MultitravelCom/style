@@ -1,10 +1,3 @@
-function handleClick(event) {
-    event.preventDefault()
-    console.log('Click');
-}
-
-
-
 async function changeText() {
     const span = document.querySelector('.promocodes__container tr:nth-child(3) td span');
 
@@ -52,7 +45,8 @@ async function showPromocodesDiv() {
     }
 }
 
-function handleClick() {
+function handleClick(event) {
+    event.preventDefault()
     // Crea el modal
     const modalCupones = document.createElement('div');
     modalCupones.classList.add('modal-cupones');
