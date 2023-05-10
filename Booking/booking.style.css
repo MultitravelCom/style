@@ -249,6 +249,13 @@
     align-items: center;
     justify-content: space-between;
 }
+.modal__content-uno,
+.modal__content-dos,
+.modal__content-tres{
+    background: #FFFFFF;
+border: 1px solid #0D4E88;
+border-radius: 16px;
+}
 
 .close {
     position: absolute;
