@@ -88,11 +88,11 @@ function handleClick(event) {
                         <div class="modal__content-title-h3">
                             <h3>15% OFF sobre la tarifa base</h3>
                         </div>
-                        <div class="modal__content-text">
+                        <div class="modal__content-title-circle">
                             <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
                             <p>Vuelos a Miami y Nueva York con Aerolineas Argentinas.</p>
                         </div>
-                        <div>
+                        <div class="modal__content-title-calendar">
                             <div class="main__warningPric__icon glyphicon glyphicon-calendar"></div>
                             <p>Disponible hasta el 12/05/2023 hasta las 23:59.</p>
                         </div>
@@ -109,11 +109,11 @@ function handleClick(event) {
                         <div class="modal__content-title-h3">
                             <h3>10% OFF sobre la tarifa base</h3>
                         </div>
-                        <div class="modal__content-text">
+                        <div class="modal__content-title-circle">
                             <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
                             <p>Vuelos a Madrid, Rio de Janeiro, Cancun, Punta Cana, Bogota, Havana, Lima, Roma, Santiago de Chile, Salvador de Bahia, Porto Seguro con Aerolíneas Argentinas.</p>
                         </div>
-                        <div>
+                        <div class="modal__content-title-calendar">
                             <div class="main__warningPric__icon glyphicon glyphicon-info-calendar"></div>
                             <p>Disponible hasta el 12/05/2023 hasta las 23:59.</p>
                         </div>
