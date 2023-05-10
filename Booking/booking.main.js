@@ -59,9 +59,9 @@ function handleClick(event) {
                         <span class="close">X</span>
                 </div>
             <div class="row modal-content__cupones-row">
-            <div class="col-md-12 col-lg-4" modal__content-uno>
+            <div class="modal__content-uno">
                     <div class="modal__content-uno-title">
-                        <div class="modal__content-uno-logo>
+                        <div class="modal__content-uno-logo">
                         </div>
                         <div class="modal__content-title-h3">
                             <h3>10% OFF en vuelos y paquetes</h3>
@@ -82,7 +82,7 @@ function handleClick(event) {
                     </div>
                 </div>
                 <div class="modal__content-dos">
-                    <div class="modal__content-dos-logo>
+                    <div class="modal__content-dos-logo">
                     </div>
                     <div class="modal__content-dos-title">
                         <div class="modal__content-title-h3">
@@ -102,8 +102,8 @@ function handleClick(event) {
                         <span>Copia el siguiente código</span>
                     </div>
                 </div>
-                <div class="modal__content-tres>
-                    <div class="modal__content-tres-logo>
+                <div class="modal__content-tres">
+                    <div class="modal__content-tres-logo">
                     </div>
                     <div class="modal__content-tres-title">
                         <div class="modal__content-title-h3">
