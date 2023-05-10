@@ -212,6 +212,7 @@
 }
 .modal__content-cupon{  
     padding: 1rem;
+    text-align: center;
 }
 
 .modal__content-cupon>span {
@@ -279,7 +280,7 @@
 }
 
 .modal__content-uno-logo {
-    width: 63%;
+    width: 43%;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20Multi%20cupon.svg);
