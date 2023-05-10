@@ -339,13 +339,24 @@
 }
 
 @media(max-width: 767px) {
+    .modal__content-title{
+        padding: 0;
+    }
+    .modal__content-title>h2{
+        font-size: 20px;
+    }
     .modal__content-uno-logo {
         height: 64px;
         width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .modal-content__cupones-row{
+        margin: 0 2rem;
     }
 
     .modal__content-title-circleCalendar {
         flex-direction: column;
+        padding: 0.5rem 1rem;
     }
 
     .modal__content-title-h3>h2 {
