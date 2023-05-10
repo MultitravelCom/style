@@ -1,3 +1,8 @@
+function handleClick() {
+    console.log('Click');
+  }
+
+
 async function changeText() {
     const span = document.querySelector('.promocodes__container tr:nth-child(3) td span');
 
@@ -22,6 +27,8 @@ async function agreeBtn() {
             <button class="cupones__btn__style">Conocer cupones</button>
         </div>
     `;
+
+    newElementBookingCupons.querySelector('.cupones__btn__style').addEventListener('click', handleClick);
     
     // Espera a que el elemento padre exista antes de agregar el nuevo elemento
     while (!confirmBooking) {
@@ -42,6 +49,8 @@ async function showPromocodesDiv() {
         await new Promise(resolve => setTimeout(resolve, 100));
     }
 }
+
+
 
 // Ejecuta las funciones en orden y asegúrate de que se completen antes de continuar con la siguiente
 async function run() {
