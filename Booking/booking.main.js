@@ -57,7 +57,7 @@ function handleClick() {
     const modalCupones = document.createElement('div');
     modalCupones.classList.add('modal-cupones');
     modalCupones.innerHTML = `
-      <div class="modal">
+      <div class="modal__cupones">
         <div class="modal-content">
           <span class="close">X</span>
           <div class="row">

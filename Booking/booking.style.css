@@ -142,7 +142,7 @@
     }
 }
 /* Estilos del modal */
-.modal {
+.modal__cupones {
     position: fixed;
     z-index: 1;
     left: 0;
@@ -162,6 +162,12 @@
     width: 80%;
     max-width: 600px;
     position: relative;
+  }
+
+  .modal-content > div {
+    background: #FFFFFF;
+    border: 1px solid #0D4E88;
+    border-radius: 16px;
   }
   
   /* Botón de cerrar */
