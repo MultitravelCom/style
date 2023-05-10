@@ -57,7 +57,7 @@
 }
 
 .container__conocer__cupones {
-    width: 366px;
+    max-width: 366px;
     height: 130px;
     left: 783px;
     top: 8px;
@@ -66,6 +66,7 @@
     border: 1px solid #FFFFFF;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 16px 0px 0 40px;
+    padding: 16px;
 }
 
 .promocodes__container--image {
@@ -82,11 +83,13 @@
     font-size: 16px;
     line-height: 20px;
     text-align: center;
+    margin-bottom: 1.2rem;
+    color: #FFFFFF;
 }
 
 .promocodes__container {
     margin-bottom: 2rem;
-    margin-left: 7rem;
+    margin-left: 9rem;
 }
 
 .promocode__apply-button {
@@ -102,6 +105,9 @@
     border: 1px solid #FFFFFF;
     box-shadow: 0px 4px 8px rgba(13, 78, 136, 0.25);
     border-radius: 8px;
+    align-items: center;
+    padding: 10px;
+    color: #FFFFFF;
 }
 
 .promocode__apply-button:hover {
