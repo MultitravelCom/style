@@ -341,6 +341,7 @@
 @media(max-width: 767px) {
     .modal__content-uno-logo {
         height: 64px;
+        width: 100%;
     }
 
     .modal__content-title-circleCalendar {
@@ -352,5 +353,13 @@
         line-height: 12px;
         text-align: center;
     }
-
+    .modal__content-uno, .modal__content-dos, .modal__content-tres{
+        flex-direction: column;
+    }
+    .modal__content-uno-title{
+        flex-direction: column;
+    }
+    .modal__content-title-circleCalendar{
+        border-bottom: 1px dashed #0D4E88;
+    }
 }
