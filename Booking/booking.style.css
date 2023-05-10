@@ -172,10 +172,12 @@
     font-size: 40px;
     line-height: 49px;
     color: #FFFFFF;
+    padding: .5rem;
 }
 
 .modal__content-uno-logo {
     background: rgba(13, 78, 136, 0.1);
+    border-right: 1px dashed #0D4E88;
 }
 
 .modal__content-title-h3 {
@@ -271,10 +273,13 @@
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
+    top: 6px;
+    right: 12px;
+    font-size: 14px;
     font-weight: bold;
-    color: #0D4E88;
+    color: black;
     cursor: pointer;
+    border-radius: 50%;
+    background: white;
+    padding: 8px;
 }

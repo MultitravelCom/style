@@ -56,7 +56,7 @@ function handleClick(event) {
             <div class="modal-content">
                 <div class="modal__content-title">
                     <h2>Te damos la bienvenida a nuestra cuponera</h2>
-                    <span class="close">X</span>
+                        <span class="close">X</span>
                 </div>
             <div class="row modal-content__cupones-row">
             <div class="col-md-12 col-lg-4" modal__content-uno>
