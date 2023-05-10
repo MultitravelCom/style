@@ -71,7 +71,16 @@
 .promocodes__container--image {
     display: none;
 }
-.container__conocer__cupones__btn{
+
+.container__conocer__cupones__btn {
+    text-align: center;
+}
+
+.container__conocer__cupones__p>p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
     text-align: center;
 }
 
