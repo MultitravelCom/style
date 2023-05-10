@@ -53,7 +53,11 @@ async function changeText() {
       modal.style.display = 'block';
     });
   
-    confirmBooking.appendChild(openModalBtnContainer);
+    if (confirmBooking) {
+        confirmBooking.appendChild(openModalBtnContainer);
+      } else {
+        console.error('No se pudo encontrar el elemento confirmBooking');
+      }
   }
   
   async function showPromocodesDiv() {
