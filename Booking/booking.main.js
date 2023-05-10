@@ -22,7 +22,7 @@ async function changeText() {
       </div>
     `;
   
-    const confirmBooking = document.querySelector('.hprt-form__booking-button-wrapper');
+    const confirmBooking = document.querySelector('.container__conocer__cupones__btn');
     const openModalBtnContainer = newElementBookingCupons.querySelector('#openModalBtnContainer');
     const openModalBtn = newElementBookingCupons.querySelector('#openModalBtn');
   
@@ -31,12 +31,16 @@ async function changeText() {
       const modalCupones = document.createElement('div');
       modalCupones.id = 'modalCuponera';
       modalCupones.innerHTML = `
-        <div class="modal">
-          <div class="modal-content">
-            <span class="close">X</span>
-            <p>Aquí puedes agregar cualquier contenido que desees mostrar en el modal.</p>
+      <div class="modal">
+      <div class="modal-content">
+          <span class="close">X</span>
+          <div class="row">
+              <div class="col-md-12 col-lg-4">Contenido del primer div</div>
+              <div class="col-md-12 col-lg-4">Contenido del segundo div</div>
+              <div class="col-md-12 col-lg-4">Contenido del tercer div</div>
           </div>
-        </div>
+      </div>
+  </div>
       `;
       document.body.appendChild(modalCupones);
   
