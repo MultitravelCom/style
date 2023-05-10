@@ -193,6 +193,7 @@
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
+    margin-bottom: 1rem;
 }
 .modal__content-title-circle>p {
 
@@ -200,6 +201,10 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
+    margin: auto;
+}
+.glyphicon-calendar>p{
+    margin: auto 0;
 }
 
 .modal__content-title-calendar {
@@ -222,6 +227,9 @@
     padding: 1rem;
     text-align: center;
     margin: auto;   
+}
+.glyphicon-info-circle{
+    margin: auto;
 }
 
 .modal__content-cupon>span {
@@ -284,13 +292,13 @@
 .modal__content-title-circleCalendar{
     display: flex;
     flex-direction: column;
-    padding: 1rem 2rem;
+    padding: 1rem;
     border-right: 1px dashed #0D4E88;
 
 }
 
 .modal__content-uno-logo {
-    width: 43%;
+    width: 10%;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20Multi%20cupon.svg);
@@ -298,6 +306,7 @@
 
 .modal__content-dos-logo,
 .modal__content-dos-logo {
+    width: 10%;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20AA%20cupon.svg);
