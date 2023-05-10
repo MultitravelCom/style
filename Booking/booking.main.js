@@ -29,6 +29,8 @@ async function agreeBtn() {
 
 }
 
+agreeBtn();
+
 function showPromocodesDiv() {
     setTimeout(function () {
         const promocodesDiv = document.querySelector('.confirm-booking__promocodes');
