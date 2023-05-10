@@ -50,14 +50,16 @@ async function showPromocodesDiv() {
 }
 
 let modalCupones = document.getElementById('modalCuponera');
-modalCupones.innerHTML = `
-  <div class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Aquí puedes agregar cualquier contenido que desees mostrar en el modal.</p>
+if (modalCupones) {
+  modalCupones.innerHTML = `
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Aquí puedes agregar cualquier contenido que desees mostrar en el modal.</p>
+      </div>
     </div>
-  </div>
-`;
+  `;
+}
 
 // Ejecuta las funciones en orden y asegúrate de que se completen antes de continuar con la siguiente
 async function run() {
