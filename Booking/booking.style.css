@@ -123,8 +123,7 @@
     }
 
     .promocodes__container {
-        margin-bottom: 1rem;
-        margin-left: 1rem;
+        margin: auto;
     }
 }
 
