@@ -81,33 +81,35 @@ function handleClick(event) {
                         <span>Copia el siguiente código</span>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-4" modal__content-dos>
-                    <div>
-
+                <div class="modal__content-dos">
+                    <div class="modal__content-dos-logo>
                     </div>
                     <div class="modal__content-dos-title">
-                        <h3>15% OFF sobre la tarifa base</h3>
-                        <div class="modal__content-dos-text">
+                        <div class="modal__content-title-h3">
+                            <h3>15% OFF sobre la tarifa base</h3>
+                        </div>
+                        <div class="modal__content-text">
                             <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
                             <p>Vuelos a Miami y Nueva York con Aerolineas Argentinas.</p>
                         </div>
                         <div>
-                            <div class="main__warningPric__icon glyphicon glyphicon-info-calendar"></div>
+                            <div class="main__warningPric__icon glyphicon glyphicon-calendar"></div>
                             <p>Disponible hasta el 12/05/2023 hasta las 23:59.</p>
                         </div>
                     </div>
-                    <div class="modal__content-dos-cupon">
+                    <div class="modal__content-cupon">
                         <h2>ARMTSALE15</h2>
                         <span>Copia el siguiente código</span>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-4" modal__content-tres>
-                    <div>
-
+                <div class="modal__content-tres>
+                    <div class="modal__content-tres-logo>
                     </div>
                     <div class="modal__content-tres-title">
-                        <h3>10% OFF sobre la tarifa base</h3>
-                        <div class="modal__content-dos-text">
+                        <div class="modal__content-title-h3">
+                            <h3>10% OFF sobre la tarifa base</h3>
+                        </div>
+                        <div class="modal__content-text">
                             <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
                             <p>Vuelos a Madrid, Rio de Janeiro, Cancun, Punta Cana, Bogota, Havana, Lima, Roma, Santiago de Chile, Salvador de Bahia, Porto Seguro con Aerolíneas Argentinas.</p>
                         </div>
@@ -116,7 +118,7 @@ function handleClick(event) {
                             <p>Disponible hasta el 12/05/2023 hasta las 23:59.</p>
                         </div>
                     </div>
-                    <div class="modal__content-dos-cupon">
+                    <div class="modal__content-cupon">
                         <h2>ARMTSALE10</h2>
                         <span>Copia el siguiente código</span>
                     </div>
