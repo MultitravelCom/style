@@ -77,5 +77,7 @@ async function changeText() {
     await showPromocodesDiv();
   }
   
-  run();
+  document.addEventListener('DOMContentLoaded', function() {
+    run();
+  });
   
