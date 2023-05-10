@@ -15,10 +15,10 @@ async function changeText() {
     newElementBookingCupons.classList.add('container__conocer__cupones');
     newElementBookingCupons.innerHTML = `
       <div class="container__conocer__cupones__p">
-          <p>Conoce y elegí de nuestros diferentes cupones el que más te convenga</p>
+        <p>Conoce y elegí de nuestros diferentes cupones el que más te convenga</p>
       </div>
       <div class="container__conocer__cupones__btn">
-          <button id="openModalBtn" class="cupones__btn__style">Conocer cupones</button>
+        <button id="openModalBtn" class="cupones__btn__style">Conocer cupones</button>
       </div>
     `;
   
@@ -28,38 +28,36 @@ async function changeText() {
   
     openModalBtn.addEventListener('click', function(event) {
       event.preventDefault();
-      const modalCupones = document.createElement('div');
-      modalCupones.id = 'modalCuponera';
-      modalCupones.innerHTML = `
-      <div class="modal">
-      <div class="modal-content">
-          <span class="close">X</span>
-          <div class="row">
-              <div class="col-md-12 col-lg-4">Contenido del primer div</div>
-              <div class="col-md-12 col-lg-4">Contenido del segundo div</div>
-              <div class="col-md-12 col-lg-4">Contenido del tercer div</div>
-          </div>
-      </div>
-  </div>
-      `;
-      document.body.appendChild(modalCupones);
-  
-      const modal = document.getElementById('modalCuponera');
-      const closeModalBtn = modal.querySelector('.close');
-      closeModalBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
-      });
-  
-      modal.style.display = 'block';
+      showModal();
     });
   
-    if (confirmBooking) {
-        confirmBooking.appendChild(openModalBtnContainer);
-      } else {
-        console.error('No se pudo encontrar el elemento confirmBooking');
-      }
+    confirmBooking.appendChild(openModalBtnContainer);
   }
+  async function showModal() {
+    const modalCupones = document.createElement('div');
+    modalCupones.id = 'modalCuponera';
+    modalCupones.innerHTML = `
+      <div class="modal">
+        <div class="modal-content">
+          <span class="close">X</span>
+          <div class="row">
+            <div class="col-md-12 col-lg-4">Contenido del primer div</div>
+            <div class="col-md-12 col-lg-4">Contenido del segundo div</div>
+            <div class="col-md-12 col-lg-4">Contenido del tercer div</div>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modalCupones);
   
+    const modal = document.getElementById('modalCuponera');
+    const closeModalBtn = modal.querySelector('.close');
+    closeModalBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+  
+    modal.style.display = 'block';
+  }
   async function showPromocodesDiv() {
     while (true) {
       const promocodesDiv = document.querySelector('.confirm-booking__promocodes');
