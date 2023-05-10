@@ -83,22 +83,21 @@ function handleClick(event) {
                         <span>Copia el siguiente código</span>
                     </div>
                 </div>
-                <div class="modal__content-uno">
-                    <div class="modal__content-uno-title">
-                        <div class="modal__content-uno-logo">
+                <div class="modal__content-dos">
+                    <div class="modal__content-dos-title">
+                        <div class="modal__content-dos-logo">
                         </div>
                         <div class="modal__content-title-circleCalendar">
                             <div class="modal__content-title-h3">
-                                <h2>10% OFF en vuelos y paquetes</h2>
+                                <h2>15% OFF sobre la tarifa base</h2>
                             </div>
                             <div class="modal__content-title-circle">
                                 <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-                                    <p>En paquetes, el descuento se aplica solo al aéreo.
-                                    Tope de descuento $25.000. Cantidad limitada.</p>
+                                    <p>Vuelos a Miami y Nueva York con Aerolineas Argentinas.</p>
                                 </div>
                             <div class="modal__content-title-calendar">
                                 <div class="main__warningPric__icon glyphicon glyphicon-calendar"></div>
-                                <p>Disponi ble hasta el 10/05/2023 hasta las 23:59.</p>
+                                <p>Disponible hasta el 12/05/2023 hasta las 23:59.</p>
                             </div>
                         </div>
                     </div>
@@ -107,22 +106,21 @@ function handleClick(event) {
                         <span>Copia el siguiente código</span>
                     </div>
                 </div>
-                <div class="modal__content-uno">
-                    <div class="modal__content-uno-title">
-                        <div class="modal__content-uno-logo">
+                <div class="modal__content-tres">
+                    <div class="modal__content-tres-title">
+                        <div class="modal__content-tres-logo">
                         </div>
                         <div class="modal__content-title-circleCalendar">
                             <div class="modal__content-title-h3">
-                                <h2>10% OFF en vuelos y paquetes</h2>
+                                <h2>10% OFF sobre la tarifa base</h2>
                             </div>
                             <div class="modal__content-title-circle">
                                 <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-                                    <p>En paquetes, el descuento se aplica solo al aéreo.
-                                    Tope de descuento $25.000. Cantidad limitada.</p>
+                                    <p>Vuelos a Madrid, Rio de Janeiro, Cancun, Punta Cana, Bogota, Havana, Lima, Roma, Santiago de Chile, Salvador de Bahia, Porto Seguro con Aerolíneas Argentinas.</p>
                                 </div>
                             <div class="modal__content-title-calendar">
                                 <div class="main__warningPric__icon glyphicon glyphicon-calendar"></div>
-                                <p>Disponi ble hasta el 10/05/2023 hasta las 23:59.</p>
+                                <p>Disponible hasta el 12/05/2023 hasta las 23:59.</p>
                             </div>
                         </div>
                     </div>
