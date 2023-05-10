@@ -15,10 +15,10 @@ async function agreeBtn() {
     const newElementBookingCupons = document.createElement('div');
     newElementBookingCupons.classList.add('container__conocer__cupones');
     newElementBookingCupons.innerHTML =
-        `<div class="container__conocer cupones__p">
+        `<div class="container__conocer__cupones__p">
             <p>Conoce y elegí de nuestros diferentes cupones el que más te convenga</p>
         </div>
-        <div class="container__conocer cupones__btn">
+        <div class="container__conocer__cupones__btn">
             <button class="cupones__btn__style">Conocer cupones</button>
         </div>
     `;

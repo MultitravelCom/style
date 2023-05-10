@@ -71,6 +71,9 @@
 .promocodes__container--image {
     display: none;
 }
+.container__conocer__cupones__btn{
+    text-align: center;
+}
 
 .promocodes__container {
     margin-bottom: 2rem;
