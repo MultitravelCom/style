@@ -117,11 +117,13 @@
     display: none;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
+    .container__conocer__cupones{
+        width: 100%;
+    }
     .confirm-booking__promocodes {
         flex-direction: column;
     }
-
     .promocodes__container {
         margin: auto;
     }
