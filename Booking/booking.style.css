@@ -143,9 +143,6 @@
 }
 /* Estilos del modal */
 .modal {
-    /* Mostrar el modal como oculto por defecto */
-    display: none; 
-    /* Centrar el modal en la pantalla */
     position: fixed;
     z-index: 1;
     left: 0;
