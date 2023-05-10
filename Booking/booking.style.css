@@ -246,6 +246,9 @@
     display: flex;
     align-items: center;
 }
+.modal__content-uno-title{
+    display: flex;
+}
 
 .modal-content__cupones-row {
     display: flex;
@@ -268,6 +271,7 @@
 }
 
 .modal__content-uno-logo {
+    width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20Multi%20cupon.svg);
