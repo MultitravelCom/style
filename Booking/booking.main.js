@@ -35,7 +35,7 @@ async function agreeBtn() {
         modalCupones.innerHTML = `
         <div class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close">X</span>
                 <p>Aquí puedes agregar cualquier contenido que desees mostrar en el modal.</p>
             </div>
         </div>
