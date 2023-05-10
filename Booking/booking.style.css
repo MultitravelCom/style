@@ -237,6 +237,11 @@
 .modal-content__cupones {
     padding: 20px;
 }
+.modal__content-uno-title-circle,
+.modal__content-uno-title-calendar{
+    display: flex;
+    align-items: center;
+}
 
 .modal-content__cupones-row {
     display: flex;
