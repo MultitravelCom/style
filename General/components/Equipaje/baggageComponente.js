@@ -16,7 +16,6 @@ function moveBaggageSelection() {
       setTimeout(moveBaggageSelection, 100);
     }
   }
-}
   
   // Inicia la función cuando la página haya terminado de cargar
   window.addEventListener('load', moveBaggageSelection);
