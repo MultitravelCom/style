@@ -30,6 +30,13 @@ function addHeaderLinks() {
         head.appendChild(copyTaxRegStyle);
         head.appendChild(copyTaxRegJs);
     }
+    const copyTaxRgComponent = path.includes('/flights/results');
+
+    if (copyTaxRgComponent) {
+        const copyTaxRgComponentJs = document.createElement('script');
+        copyTaxRgComponentJs.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgComponent.js';
+        head.appendChild(copyTaxRgComponent);
+    }
 
     const priceFinalFlight = path.includes('/results');
     if (priceFinalFlight) {
