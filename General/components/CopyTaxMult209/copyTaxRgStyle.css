@@ -45,4 +45,10 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 144%;
+    color: #0D3C61;
+  }
+  @media (max-witdh: 767px) {
+    .main_container_copyTaxFlight{
+      margin-bottom: 0;
+    }
   }
