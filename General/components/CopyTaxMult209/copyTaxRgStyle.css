@@ -28,3 +28,21 @@
     margin-top: 0 !important;
   }
   /* **********************************************/
+
+  .main_container_copyTaxFlight{
+    display: flex;
+    background: #EAF4FC;
+    border: 1px solid #0D4E88;
+    border-radius: 8px;
+    flex-direction: row;
+    padding: 6px 16px;
+    /* gap: 12px; */
+    margin-bottom: 2rem;
+  }
+  .main__warningPric__icon>p{
+    margin: 0 !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 144%;
+  }

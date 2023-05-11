@@ -8,9 +8,9 @@ const CopyTaxFlight = () => {
 };
 
 
-const flightBestPrices = document.querySelector('.flight-bestprices');
+const flightBestPrices = document.querySelector('.flight-selection__breakdown');
 const ContainerCopyTaxFlight = document.createElement('div');
-ContainerCopyTaxFlight.classList.add('ContainerCopyTaxFlight');
-flightBestPrices.before(ContainerCopyTaxFlight);
+ContainerCopyTaxFlight.classList.add('booking-breakdown__table', 'main__warningPrice');
+flightBestPrices.after(ContainerCopyTaxFlight);
 
 ReactDOM.render(<CopyTaxFlight />, ContainerCopyTaxFlight);
