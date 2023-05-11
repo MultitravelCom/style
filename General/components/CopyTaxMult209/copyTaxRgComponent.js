@@ -22,10 +22,15 @@ const CopyTaxFlight = () => {
       </>
     );
   };
-
-const flightBestPrices = document.querySelector('.flight-selection__box');
-const ContainerCopyTaxFlight = document.createElement('div');
-ContainerCopyTaxFlight.classList.add('booking-breakdown__table', 'main__warningPrice');
-flightBestPrices.before(ContainerCopyTaxFlight);
-
-ReactDOM.render(<CopyTaxFlight />, ContainerCopyTaxFlight);
+  
+  const flightBestPrices = document.querySelector('.flight-selection__box');
+  const ContainerCopyTaxFlight = document.createElement('div');
+  ContainerCopyTaxFlight.classList.add('booking-breakdown__table', 'main__warningPrice');
+  flightBestPrices.before(ContainerCopyTaxFlight);
+  
+  ReactDOM.render(
+    <>
+      {flightBestPrices && <CopyTaxFlight />}
+    </>,
+    ContainerCopyTaxFlight
+  );
