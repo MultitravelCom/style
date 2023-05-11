@@ -16,6 +16,9 @@
     border-radius: 8px;
     flex-direction: column;
 }
+.baggage-selection{
+    gap: 16px;
+}
 
 .bookingPaxes__p{
     color:#2196F3;
