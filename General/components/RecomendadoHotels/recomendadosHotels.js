@@ -8,10 +8,14 @@ function onResultsListChange(mutationsList, observer) {
         itemsResults.forEach(function(item) {
           if (!item.querySelector('.divTaxCopyStyle')) {
             let priceResults = item.querySelector('.info-card__price');
-            let newDivTaxCopy = document.createElement('div');
-            newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
-            newDivTaxCopy.classList.add("divTaxCopyStyle");
-            priceResults.appendChild(newDivTaxCopy);
+            const taxIncludedElement = priceResults.querySelector('.bestprice__taxincluded');
+            if (taxIncludedElement) {
+              let newDivTaxCopy = document.createElement('div');
+              newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
+              newDivTaxCopy.classList.add("divTaxCopyStyle");
+              priceResults.appendChild(newDivTaxCopy);
+              taxIncludedElement.style.display = 'none'; // ocultar el elemento .bestprice__taxincluded
+            }
           }
         });
       }

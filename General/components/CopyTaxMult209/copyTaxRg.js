@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
         newElement.classList.add('booking-breakdown__table', 'main__warningPrice');
         newElement.innerHTML = `
         <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-        <p>En caso de producto internacional, los precios siempre incluyen el impuesto país y las percepciones RG4815 Y RG5272.</p>
+        <p>En caso de producto internacional, los precios siempre incluyen impuesto país y percepciones RG4815 Y RG5272.</p>
       `;
 
         if (index === -1 || index >= referenceNode.children.length) {
