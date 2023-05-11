@@ -5,7 +5,15 @@ const CopyTaxFlight = () => {
       const flightSelectionBox = document.querySelector('.flight-selection__box');
       if (flightSelectionBox) {
         setFlightSelectionBoxExists(true);
-        flightSelectionBox.appendChild(myContainer);
+  
+        const ContainerCopyTaxFlight = document.createElement('div');
+        ContainerCopyTaxFlight.classList.add('booking-breakdown__table', 'main__warningPrice');
+        flightSelectionBox.before(ContainerCopyTaxFlight);
+  
+        ReactDOM.render(
+          <CopyTaxFlight />,
+          ContainerCopyTaxFlight
+        );
       } else {
         setFlightSelectionBoxExists(false);
       }
@@ -23,14 +31,3 @@ const CopyTaxFlight = () => {
     );
   };
   
-  const flightBestPrices = document.querySelector('.flight-selection__box');
-  const ContainerCopyTaxFlight = document.createElement('div');
-  ContainerCopyTaxFlight.classList.add('booking-breakdown__table', 'main__warningPrice');
-  flightBestPrices.before(ContainerCopyTaxFlight);
-  
-  ReactDOM.render(
-    <>
-      {flightBestPrices && <CopyTaxFlight />}
-    </>,
-    ContainerCopyTaxFlight
-  );
