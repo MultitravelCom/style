@@ -46,7 +46,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
-    wight:width: 239px;
+    wight: 82px;
 }
 .main__bookingPaxes__span{
     padding: 0 32px;
@@ -54,7 +54,9 @@
 
 @media(max-width: 767px){
     .booking-paxes__baggage-selection.baggage-selection{
-    align-items: center;
     flex-direction: column;
+}
+.main__bookingPaxes__text{
+    align-items: center;
 }
 }
