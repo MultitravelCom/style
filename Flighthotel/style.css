@@ -26,9 +26,9 @@
     display: none;
 }
 /* **************** MULT-235 ***************/
-.flighthotel>.master-selector>.supsearcher  {
+.label.label-default.more-master-selector-options.supsearcher {
     display: none;
-}
+  }
 
 .main-content {
     background-color: white !important;
