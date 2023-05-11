@@ -84,4 +84,13 @@ padding: 16px !important;
 .main__bookingPaxes__text{
     align-items: center;
 }
+.main__bookingPaxes__style{
+    width: 100%;
+}
+.main__bookingPaxes__btn{
+    width: 78px;
+}
+.baggage-selection__bag.baggage-selection__bag--included{
+    width: 100%;
+}
 }
