@@ -11,21 +11,33 @@ function Button(props) {
 }
 
 const BaggagePax = () => {
-    return (
-        <div className="main__warningPric">
-            <span>Cantidad de equipaje</span>
-            <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-            <p className="main__warningPric__icon__p">Si deseas volver atrás y ver diferentes vuelos con una diferente cantidad de equipaje, utiliza el botón a continuación y utiliza nuestros filtros para realizar tu búsqueda más precisa.</p>
-            <div>
-                <Button id={destino.title} text="< VOLVER" />
-            </div>
-        </div>
-    )
-}
 
-const flightBestPrices = document.querySelector('.flight-bestprices');
-const ContainerCopyTaxFlight = document.createElement('div');
-ContainerCopyTaxFlight.classList.add('booking-breakdown__table');
-flightBestPrices.appendChild(ContainerCopyTaxFlight);
+
+    const [containerReady, setContainerReady] = React.useState(false);
+
+    React.useEffect(() => {
+        const container = document.querySelector('.booking-paxes__baggage-selection');
+        if (container) {
+            setContainerReady(true);
+        }
+    }, []);
+
+
+    return (
+        <>
+            {containerReady &&
+                <div className="main__warningPric">
+                    <span>Cantidad de equipaje</span>
+                    <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+                    <p className="main__warningPric__icon__p">Si deseas volver atrás y ver diferentes vuelos con una diferente cantidad de equipaje, utiliza el botón a continuación y utiliza nuestros filtros para realizar tu búsqueda más precisa.</p>
+                    <div>
+                        <Button id={destino.title} text="< VOLVER" />
+                    </div>
+                </div>
+            }
+        </>
+    );
+
+}
 
 ReactDOM.render(<BaggagePax />, document.querySelector("booking-paxes__baggage-selection"));
