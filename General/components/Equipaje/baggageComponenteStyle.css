@@ -1,0 +1,11 @@
+.main__bookingPaxes{
+    display: flex;
+    padding: 6px 16px;
+    gap: 12px;
+    width: 578px;
+    height: 116px;
+    background: #EAF4FC;
+    border: 1px solid #0D3C61;
+    border-radius: 8px;
+    align-items: center;
+}

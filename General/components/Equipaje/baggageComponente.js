@@ -26,13 +26,19 @@ const BaggagePax = () => {
     return (
         <>
             {containerReady &&
-                <div className="main__warningPric">
-                    <span>Cantidad de equipaje</span>
-                    <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-                    <p className="main__warningPric__icon__p">Si deseas volver atrás y ver diferentes vuelos con una diferente cantidad de equipaje, utiliza el botón a continuación y utiliza nuestros filtros para realizar tu búsqueda más precisa.</p>
-                    <div>
-                        <Button text="< VOLVER" />
+                <div className="main__bookingPaxes">
+                    <div className="main__bookingPaxes__span">
+                        <span>Cantidad de equipaje</span>
                     </div>
+
+                    <div className="main__bookingPaxes__text">
+                        <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+                        <p className="bookingPaxes__p">Si deseas volver atrás y ver diferentes vuelos con una diferente cantidad de equipaje, utiliza el botón a continuación y utiliza nuestros filtros para realizar tu búsqueda más precisa.</p>
+                        <div className="main__bookingPaxes__btn" >
+                            <Button text="< VOLVER" />
+                        </div>
+                    </div>
+
                 </div>
             }
         </>
