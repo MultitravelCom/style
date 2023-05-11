@@ -1,18 +1,20 @@
 function moveBaggageSelection() {
-  const baggageSelections = document.querySelectorAll('.booking-paxes__baggage-selection');
-  if (baggageSelections.length > 0) {
-    const productElement = document.querySelector('.booking-data__product');
-    productElement.insertAdjacentElement('afterend', baggageSelections[0]);
-
-    const baggageSection = baggageSelections[0].querySelector('.baggage-selection__bag-section');
-    if (baggageSection) {
-      baggageSection.style.display = 'block';
+    const baggageSelections = document.querySelectorAll('.booking-paxes__baggage-selection');
+    if (baggageSelections.length > 0) {
+      const productElement = document.querySelector('.booking-data__product');
+      productElement.insertAdjacentElement('afterend', baggageSelections[0]);
+  
+      // Agregar estilo display:flex al primer elemento
+      baggageSelections[0].style.display = 'flex';
+  
+      const baggageSections = document.querySelectorAll('.baggage-selection__bag-section');
+      if (baggageSections.length > 0) {
+        // Agregar clase 'block' solo al primer elemento
+        baggageSections[0].classList.add('block');
+      }
+    } else {
+      setTimeout(moveBaggageSelection, 100);
     }
-
-    // Agregar estilo display:block al elemento movido
-    baggageSelections[0].style.display = 'block';
-  } else {
-    setTimeout(moveBaggageSelection, 100);
   }
 }
   
