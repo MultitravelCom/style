@@ -246,17 +246,6 @@ function shouldShowEvent() {
 }
 
 const EventImg = (props) => {
-    return (
-        <div className={props.style}>
-            <img
-                alt={`Imagen evento promocion`}
-                src={"https://multitravelcom.github.io/MT/HotSale2023/iconCardsOff/logohotsale.webp"}
-            />
-        </div>
-    )
-};
-
-const EventImg = (props) => {
     const startDate = new Date("2023-05-07T23:59:00");
     const endDate = new Date("2023-05-10T23:59:00");
     const now = new Date();
