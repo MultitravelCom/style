@@ -54,12 +54,18 @@
 }
 .baggage-selection__bag.baggage-selection__bag--included{
     background: #EAF4FC;
-border: 1px solid #0D3C61;
-border-radius: 8px
+    border: 1px solid #0D3C61;
+    border-radius: 8px
 }
 .glyphicon-baggage,
 .baggage-selection__bag--name{
     color: #0D3C61 !important;
+}
+.baggage-selection__bag-section{
+    margin: 0 !important;
+}
+.glyphicon-lock{
+    display: none;
 }
 
 @media(max-width: 767px){
