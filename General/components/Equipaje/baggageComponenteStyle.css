@@ -2,6 +2,7 @@
 .booking-paxes__baggage-selection.baggage-selection{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 .booking-paxes__baggage-selection:not(:first-child) {
