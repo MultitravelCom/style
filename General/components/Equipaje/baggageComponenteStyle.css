@@ -90,7 +90,7 @@ padding: 16px !important;
 .main__bookingPaxes__btn{
     width: 78px;
 }
-.baggage-selection__bag.baggage-selection__bag--included{
+.baggage-selection__bag--included{
     width: 100%;
 }
 }
