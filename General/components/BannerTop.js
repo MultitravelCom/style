@@ -12,7 +12,7 @@ function Button(props) {
 
 function cambiarUrlImg() {
   const fechaActual = new Date();
-  const fechaLimite = new Date('2023-05-10T22:38:00');
+  const fechaLimite = new Date('2023-05-10T23:59:00');
   const esAntesDeLaFechaLimite = fechaActual < fechaLimite;
 
   if (esAntesDeLaFechaLimite) {
