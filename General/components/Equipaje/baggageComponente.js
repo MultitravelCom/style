@@ -24,4 +24,4 @@ const BaggagePax = () => {
 }
 
 
-ReactDOM.render(<BaggagePax />, document.getElementsByClassName("baggage-selection__bag-section"));
+ReactDOM.render(<BaggagePax />, document.getElementsByClassName("booking-paxes__baggage-selection"));
