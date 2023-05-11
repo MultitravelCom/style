@@ -23,5 +23,9 @@ const BaggagePax = () => {
     )
 }
 
+const flightBestPrices = document.querySelector('.flight-bestprices');
+const ContainerCopyTaxFlight = document.createElement('div');
+ContainerCopyTaxFlight.classList.add('booking-breakdown__table');
+flightBestPrices.appendChild(ContainerCopyTaxFlight);
 
 ReactDOM.render(<BaggagePax />, document.querySelector("booking-paxes__baggage-selection"));
