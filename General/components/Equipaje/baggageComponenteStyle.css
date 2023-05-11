@@ -86,18 +86,24 @@ padding: 16px !important;
 @media(max-width: 767px){
     .booking-paxes__baggage-selection.baggage-selection{
     flex-direction: column;
+    }
+    .main__bookingPaxes__text{
+        align-items: center;
+    }
+    .main__bookingPaxes__style{
+        width: 100%;
+    }
+    .main__bookingPaxes__btn{
+        width: 88px;
+    }
+    .baggage-selection__bag--included{
+        width: 100%;
+        margin: 10px 0 !important;
+    }
 }
-.main__bookingPaxes__text{
-    align-items: center;
-}
-.main__bookingPaxes__style{
-    width: 100%;
-}
-.main__bookingPaxes__btn{
-    width: 88px;
-}
-.baggage-selection__bag--included{
-    width: 100%;
-    margin: 10px 0 !important;
-}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .baggage-selection{
+        gap: 16px;
+    }
 }
