@@ -51,10 +51,12 @@
     padding: 0 32px;
 }
 .baggage-selection__bag.baggage-selection__bag--included{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: #EAF4FC;
     border: 1px solid #0D3C61;
     border-radius: 8px;
-    width: 192px;
     height: 116px;
 }
 .baggage-selection__bag{
