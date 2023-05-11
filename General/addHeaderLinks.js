@@ -37,7 +37,7 @@ function addHeaderLinks() {
         copyTaxRgComponentJs.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgComponent.js';
         copyTaxRgComponentJs.type = "text/babel";
         
-        head.appendChild(copyTaxRgComponent);
+        head.appendChild(copyTaxRgComponentJs);
     }
 
     const priceFinalFlight = path.includes('/results');
