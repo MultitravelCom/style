@@ -253,7 +253,7 @@ const EventImg = (props) => {
             <div className={props.style}>
                 <img
                     alt={`Imagen evento promocion`}
-                    src={"https://multitravelcom.github.io/MT/HotSale2023/iconCardsOff/logohotsale.webp"}
+                    src={"https://multitravelcom.github.io/MT/HotSale2023/iconCardsOff/iconHotWeek.webp"}
                 />
             </div>
         );
@@ -263,7 +263,7 @@ const EventImg = (props) => {
         <div className={props.style}>
             <img
                 alt={`Imagen evento promocion`}
-                src={"https://multitravelcom.github.io/MT/HotSale2023/iconCardsOff/iconHotWeek.webp"}
+                src={"https://multitravelcom.github.io/MT/HotSale2023/iconCardsOff/logohotsale.webp"}
             />
         </div>
     );
