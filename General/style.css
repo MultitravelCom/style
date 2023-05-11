@@ -657,3 +657,6 @@
   display: none;
 }
 /* **************** MULT-235 ***************/
+.label.label-default.more-master-selector-options.supsearcher {
+  display: none;
+}
