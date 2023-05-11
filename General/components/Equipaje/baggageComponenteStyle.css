@@ -5,6 +5,9 @@
 }
 
 
+.booking-paxes__baggage-selection{
+    display: none;
+}
 .main__bookingPaxes{
     display: flex;
     padding: 6px 16px;

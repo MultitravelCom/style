@@ -1,3 +1,28 @@
+function moveBaggageSelection() {
+    const baggageSelection = document.querySelector('.booking-paxes__baggage-selection');
+    if (baggageSelection) {
+      // Mueve el elemento al lugar correcto
+      const productElement = document.querySelector('.booking-data__product');
+      productElement.insertAdjacentElement('afterend', baggageSelection);
+      
+      // Muestra el elemento
+      baggageSelection.style.display = 'block';
+      
+      // Oculta los demás elementos con el mismo selector
+      const otherBaggageSelections = document.querySelectorAll('.booking-paxes__baggage-selection:not(:first-child)');
+      otherBaggageSelections.forEach(element => {
+        element.style.display = 'none';
+      });
+    } else {
+      // Si el elemento no existe aún, espera 100ms y vuelve a intentarlo
+      setTimeout(moveBaggageSelection, 100);
+    }
+  }
+  
+  // Inicia la función cuando la página haya terminado de cargar
+  window.addEventListener('load', moveBaggageSelection);
+
+
 function Button(props) {
 
     const handleClick = (event) => {
