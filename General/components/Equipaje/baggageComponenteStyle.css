@@ -9,12 +9,13 @@
     display: flex;
     padding: 6px 16px;
     gap: 12px;
-    width: 578px;
+    max-width: 578px;
     height: 116px;
     background: #EAF4FC;
     border: 1px solid #0D3C61;
     border-radius: 8px;
     align-items: center;
+    flex-direction: column;
 }
 
 .bookingPaxes__p{
@@ -33,4 +34,20 @@
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.15px;
+}
+.main__bookingPaxes__text{
+    display: flex;
+}
+.main__bookingPaxes__btn{
+    border: none;
+    background: #EAF4FC;
+    color: #0D3C61;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    wight:width: 239px;
+}
+.main__bookingPaxes__span{
+    padding: 0 32px;
 }
