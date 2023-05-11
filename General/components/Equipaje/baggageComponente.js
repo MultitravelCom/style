@@ -23,9 +23,9 @@ window.addEventListener('load', moveBaggageSelection);
 
 function Button(props) {
 
-    const [hrefDelBotonOriginal, setHrefDelBotonOriginal] = useState('');
+    const [hrefDelBotonOriginal, setHrefDelBotonOriginal] = React.useState('');
 
-    useEffect(() => {
+    React.useEffect(() => {
         const botonOriginal = document.querySelector('.page-header-bar__back-button');
         if (botonOriginal) {
             const href = botonOriginal.getAttribute('href');
