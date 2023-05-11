@@ -71,7 +71,7 @@ padding: 16px !important;
     color: #0D3C61 !important;
 }
 .baggage-selection__bag--included{
-    displya: none;
+    displya: none !important;
     margin: 0 !important;
 }
 .glyphicon-lock{
