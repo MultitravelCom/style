@@ -6,7 +6,7 @@ function moveBaggageSelection() {
       productElement.insertAdjacentElement('afterend', baggageSelections[0]);
       
       // Muestra el primer elemento
-      baggageSelections[0].style.display = 'block';
+      baggageSelections[0].style.display = 'flex';
       
       // Oculta los demás elementos con el mismo selector
       for (let i = 1; i < baggageSelections.length; i++) {
