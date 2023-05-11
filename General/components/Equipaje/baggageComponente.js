@@ -21,7 +21,7 @@ function moveBaggageSelection() {
 window.addEventListener('load', moveBaggageSelection);
 
 
-function Button(props) {
+function ButtonBaggage(props) {
 
     const [hrefDelBotonOriginal, setHrefDelBotonOriginal] = React.useState('');
 
@@ -69,7 +69,7 @@ const BaggagePax = () => {
                         <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
                         <p className="bookingPaxes__p">Si deseas volver atrás y ver diferentes vuelos con una diferente cantidad de equipaje, utiliza el botón a continuación y utiliza nuestros filtros para realizar tu búsqueda más precisa.</p>
                         <div className="main__bookingPaxes__style" >
-                            <Button style="main__bookingPaxes__btn" text="< VOLVER" />
+                            <ButtonBaggage style="main__bookingPaxes__btn" text="< VOLVER" />
                         </div>
                     </div>
 
