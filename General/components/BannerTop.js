@@ -14,13 +14,13 @@ function cambiarUrlImg() {
     const fechaActual = new Date();
     const fechaLimite = new Date('2023-05-10T23:59:00');
     const esAntesDeLaFechaLimite = fechaActual < fechaLimite;
-  
+
     if (esAntesDeLaFechaLimite) {
-      return 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerHotWeek/';
+        return 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal';
     } else {
-      return 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal';
+        return 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerHotWeek/';
     }
-  }
+}
 
 const BannerTop = () => {
 
