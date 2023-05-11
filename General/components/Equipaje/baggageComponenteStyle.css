@@ -70,8 +70,10 @@ padding: 16px !important;
 .baggage-selection__bag--name{
     color: #0D3C61 !important;
 }
+.baggage-selection__bag-section{
+    display: none;
+}
 .baggage-selection__bag--included{
-    displya: none !important;
     margin: 0 !important;
 }
 .glyphicon-lock{
