@@ -75,7 +75,7 @@ function filtrarDestinos(destinos, nombreDestino) {
 const btnStyles = [
     { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Paquetes Florianópolis - Alojamientos Florianópolis', destino: "Florianopolis" },
     { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Paquetes Buzios - Alojamientos Buzios', destino: "Buzios" },
-    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Paquetes Brasil All Inclusive - Alojamientos Brasil All Inclusive', destino: "All Inclusive" },
+    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Paquetes Brasil All Inclusive - Alojamientos Brasil All Inclusive', destino: "AllInclusive" },
 ];
 
 // *****************************************************
