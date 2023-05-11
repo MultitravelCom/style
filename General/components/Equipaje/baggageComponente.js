@@ -1,31 +1,34 @@
 function moveBaggageSelection() {
     const baggageSelections = document.querySelectorAll('.booking-paxes__baggage-selection');
     if (baggageSelections.length > 0) {
-      const productElement = document.querySelector('.booking-data__product');
-      productElement.insertAdjacentElement('afterend', baggageSelections[0]);
-  
-      // Agregar estilo display:flex al primer elemento
-      baggageSelections[0].style.display = 'flex';
-  
-      const baggageSections = document.querySelectorAll('.baggage-selection__bag-section');
-      if (baggageSections.length > 0) {
-        // Agregar clase 'block' solo al primer elemento
-        baggageSections[0].style.display = 'block';
-      }
+        const productElement = document.querySelector('.booking-data__product');
+        productElement.insertAdjacentElement('afterend', baggageSelections[0]);
+
+        // Agregar estilo display:flex al primer elemento
+        baggageSelections[0].style.display = 'flex';
+
+        const baggageSections = document.querySelectorAll('.baggage-selection__bag-section');
+        if (baggageSections.length > 0) {
+            // Agregar clase 'block' solo al primer elemento
+            baggageSections[0].style.display = 'block';
+        }
     } else {
-      setTimeout(moveBaggageSelection, 100);
+        setTimeout(moveBaggageSelection, 100);
     }
-  }
-  
-  // Inicia la función cuando la página haya terminado de cargar
-  window.addEventListener('load', moveBaggageSelection);
+}
+
+// Inicia la función cuando la página haya terminado de cargar
+window.addEventListener('load', moveBaggageSelection);
 
 
 function Button(props) {
 
+    const botonOriginal = document.querySelector('.page-header-bar__back-button');
+    const hrefDelBotonOriginal = botonOriginal.getAttribute('href');
+
     const handleClick = (event) => {
         event.preventDefault();
-        window.history.back();
+        window.location.href = hrefDelBotonOriginal;
     }
 
     return (
