@@ -5,10 +5,6 @@
     margin-bottom: 2rem;
 }
 
-.booking-paxes__baggage-selection {
-    display: none;
-  }
-
   .main__bookingPaxes{
     display: flex;
     padding: 6px 16px;
@@ -75,6 +71,7 @@ padding: 16px !important;
     color: #0D3C61 !important;
 }
 .baggage-selection__bag-section{
+    displya: none;
     margin: 0 !important;
 }
 .glyphicon-lock{
