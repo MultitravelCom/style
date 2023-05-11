@@ -124,7 +124,12 @@
     .confirm-booking__promocodes {
         flex-direction: column;
     }
+    .promocodes{
+        margin: auto;
+        text-align: center;
+    }
     .promocodes__container {
         margin: auto;
     }
+    
 }
