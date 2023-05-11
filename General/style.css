@@ -656,3 +656,7 @@
 .renderPriceTagStyle{
   display: none;
 }
+/* **************** MULT-235 ***************/
+.searcher.master-searcher.master-selector.label.more-master-selector-options{
+  display: none;
+}
