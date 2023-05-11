@@ -18,7 +18,7 @@ function cambiarUrlImg() {
     if (esAntesDeLaFechaLimite) {
         return 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal';
     } else {
-        return 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerHotWeek/';
+        return 'https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/bannerHotWeek';
     }
 }
 
