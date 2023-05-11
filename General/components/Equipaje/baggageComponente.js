@@ -10,7 +10,7 @@ function moveBaggageSelection() {
       const baggageSections = document.querySelectorAll('.baggage-selection__bag-section');
       if (baggageSections.length > 0) {
         // Agregar clase 'block' solo al primer elemento
-        baggageSections[0].classList.add('block');
+        baggageSections[0].style.display = 'block';
       }
     } else {
       setTimeout(moveBaggageSelection, 100);
