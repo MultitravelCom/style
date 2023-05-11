@@ -79,6 +79,9 @@ padding: 16px !important;
 .glyphicon-lock{
     display: none;
 }
+.baggage-selection__journey--route-name {
+    display: none;
+}
 
 @media(max-width: 767px){
     .booking-paxes__baggage-selection.baggage-selection{
@@ -96,6 +99,9 @@ padding: 16px !important;
     .baggage-selection__bag--included{
         width: 100%;
         margin: 10px 0 !important;
+    }
+    .baggage-selection__optional-ph{
+        padding: 6px;
     }
 }
 
