@@ -53,7 +53,9 @@
 .baggage-selection__bag.baggage-selection__bag--included{
     background: #EAF4FC;
     border: 1px solid #0D3C61;
-    border-radius: 8px
+    border-radius: 8px;
+    width: 192px;
+    height: 116px;
 }
 .baggage-selection__bag{
 padding: 16px !important;
