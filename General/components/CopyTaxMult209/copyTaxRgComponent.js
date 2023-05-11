@@ -3,14 +3,14 @@ const observeFlightSelectionBox = () => {
         mutations.forEach((mutation) => {
             if (mutation.addedNodes) {
                 mutation.addedNodes.forEach((node) => {
-                    if (node.classList && node.classList.contains('flight-selection__box')) {
+                    if (node.classList && node.classList.contains('flight-selection__booking')) {
                         renderCopyTaxFlight();
                     }
                 });
             }
             if (mutation.removedNodes) {
                 mutation.removedNodes.forEach((node) => {
-                    if (node.classList && node.classList.contains('flight-selection__box')) {
+                    if (node.classList && node.classList.contains('flight-selection__booking')) {
                         unmountCopyTaxFlight();
                     }
                 });
@@ -45,7 +45,7 @@ const CopyTaxFlight = () => {
 
 
 const renderCopyTaxFlight = () => {
-    const flightBestPrices = document.querySelector('.flight-selection__box');
+    const flightBestPrices = document.querySelector('.flight-selection__booking');
     const ContainerCopyTaxFlight = document.createElement('div');
     ContainerCopyTaxFlight.classList.add('booking-breakdown__table', 'main__warningPrice');
     flightBestPrices.before(ContainerCopyTaxFlight);
