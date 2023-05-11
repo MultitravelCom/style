@@ -660,3 +660,7 @@
 .label.label-default.more-master-selector-options.supsearcher {
   display: none;
 }
+/* ********** MULT-230 ********************** */
+.booking-payment__info.prepayment>p{
+  display: none;
+}
