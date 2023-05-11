@@ -36,7 +36,7 @@
     border: 1px solid #0D4E88;
     border-radius: 8px;
     flex-direction: row;
-    padding: 6px 16px;
+    padding: 16px;
     margin-bottom: 2rem;
   }
   .main_container_copyTaxFlight>p{
