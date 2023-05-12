@@ -78,6 +78,21 @@ function addHeaderLinks() {
         head.appendChild(recomendadoHotelsJs);
     }
 
+    const copyBaggage = path.includes('/flights/booking');
+    if (copyBaggage) {
+        const copyBaggageStyle = document.createElement('link');
+        const copyBaggageScript = document.createElement('script');
+
+        copyBaggageScript.src = 'https://multitravelcom.github.io/style/General/components/Equipaje/baggageComponente.js';
+        copyBaggageScript.type = "text/babel";
+
+        copyBaggageStyle.href = "https://multitravelcom.github.io/style/General/components/Equipaje/baggageComponenteStyle.css";
+        copyBaggageStyle.rel = "stylesheet";
+
+        head.appendChild(copyBaggageScript);
+        head.appendChild(copyBaggageStyle);
+    }
+
     const transferenciaComponent = path.includes('/confirmBooking');
     if (transferenciaComponent) {
         const transferenciaComponentStyle = document.createElement('link');
