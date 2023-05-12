@@ -324,6 +324,7 @@
     border-radius: 50%;
     background: white;
     padding: 8px;
+    opacity: 1 !important;
 }
 
 .glyphicon-calendar {
