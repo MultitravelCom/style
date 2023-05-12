@@ -83,7 +83,7 @@ padding: 16px !important;
     display: none;
 }
 
-@media(max-width: 767px){
+@media(max-width: 1023px){
     .booking-paxes__baggage-selection.baggage-selection{
     flex-direction: column;
     }
@@ -103,9 +103,6 @@ padding: 16px !important;
     .baggage-selection__optional-ph{
         padding: 6px;
     }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
     .baggage-selection{
         gap: 16px;
     }

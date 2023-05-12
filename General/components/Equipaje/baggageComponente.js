@@ -67,7 +67,7 @@ const BaggagePax = () => {
 
                     <div className="main__bookingPaxes__text">
                         <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-                        <p className="bookingPaxes__p">Si deseas volver atrás y ver diferentes vuelos con una diferente cantidad de equipaje, utiliza el botón a continuación y utiliza nuestros filtros para realizar tu búsqueda más precisa.</p>
+                        <p className="bookingPaxes__p">Para ver más vuelos con otra cantidad de equipaje, seleccioná "Volver" y utilizá nuestros filtros para una búsqueda más precisa.</p>
                         <div className="main__bookingPaxes__style" >
                             <ButtonBaggage style="main__bookingPaxes__btn" text="< VOLVER" />
                         </div>

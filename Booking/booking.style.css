@@ -257,6 +257,7 @@
 }
 
 .modal__cupones {
+    max-width: 90%;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -343,6 +344,9 @@
     color: #2196F3;
     font-size: 19px;
     min-width: 32px;
+}
+.booking-steps__item{
+    z-index: 0 !important;
 }
 
 @media(max-width: 767px) {
