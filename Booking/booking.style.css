@@ -309,17 +309,9 @@
     border-radius: 1rem 0 0 1rem;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20Multi%20cupon.svg);
+    background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20AA%20cupon.svg);
     background: rgba(13, 78, 136, 0.1);
     border-right: 1px dashed #0D4E88;
-}
-
-.modal__content-dos-logo,
-.modal__content-tres-logo {
-    width: 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20AA%20cupon.svg);
 }
 
 .close {
