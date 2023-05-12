@@ -404,4 +404,7 @@
     .modal__content-tres-logo {
         height: 67px;
     }
+    .promocodes__container {
+        margin-left: 4rem;
+    }
 }
