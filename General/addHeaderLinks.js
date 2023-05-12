@@ -78,6 +78,21 @@ function addHeaderLinks() {
         head.appendChild(recomendadoHotelsJs);
     }
 
+    const transferenciaComponent = path.includes('/confirmBooking');
+    if (transferenciaComponent) {
+        const transferenciaComponentStyle = document.createElement('link');
+        const transferenciaComponentScript = document.createElement('script');
+
+        transferenciaComponentScript.src = 'https://multitravelcom.github.io/style/General/Transferencias/transferencia.js';
+        transferenciaComponentScript.type = "text/babel";
+
+        transferenciaComponentStyle.href = "https://multitravelcom.github.io/style/General/components/styletransferencia.css";
+        transferenciaComponentStyle.rel = "stylesheet";
+
+        head.appendChild(transferenciaComponentStyle);
+        head.appendChild(transferenciaComponentScript);
+    }
+
     // const cuponSeccion = path.includes('/booking/');
     // if(cuponSeccion){
     //     const cuponSeccionScript = document.createElement('script');
