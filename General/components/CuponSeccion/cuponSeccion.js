@@ -44,6 +44,10 @@ const CuponsCondicion = () => {
           <p>{cupon.fecha}</p>
         </div>
       </div>
+      <div class="modal__content-cupon">
+        <h2>{cupon.cupon}</h2>
+        <span>Copia el siguiente código</span>
+      </div>
     </>
   )
 }
@@ -65,16 +69,22 @@ const CuponsComponente = () => {
 const ModalComponent = () => {
   return (
     <>
-      <div class="overlay__cup<h2>Te damos la bienvenida a nuestra cuponera</h2>
-              <span class="close">X</span>ones" id="overlay__cupones">
-    < div class="modal__cupones" >
-      <div class="modal-content">
-        <div class="modal__content-title">
-
+      <div class="overlay__cupones" id="overlay__cupones">
+        <div class="modal__cupones">
+          <div class="modal-content">
+            <div class="modal__content-title">
+              <h2>Te damos la bienvenida a nuestra cuponera</h2>
+              <span class="close">X</span>
+            </div>
+            <div>
+              <CuponsCondicion />
+            </div>
+          </div>
         </div>
       </div>
-        </ >
-      </div >
     </>
   )
 }
+
+
+ReactDOM.render(<ModalComponent />, document.getElementById("root"));
