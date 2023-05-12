@@ -1,3 +1,11 @@
+const fetchCuponesData = async () => {
+  const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
+  const data = await response.json();
+
+  return data;
+};
+
+
 async function changeText() {
   const span = document.querySelector('.promocodes__container tr:nth-child(3) td span');
 
