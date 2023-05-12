@@ -2,7 +2,6 @@
     "cupones": [
         {
             "id": "a1",
-            "destino": "Bariloche",
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp",
             "title": "10% OFF en vuelos y paquetes",
             "description": "En paquetes, el descuento se aplica solo al aéreo. Tope de descuento $25.000. Cantidad limitada.",
@@ -10,8 +9,8 @@
             "cupon": "MULTITRAVELHOTSALE10si"
         },
         {
-            "id": "a1",
-            "destino": "Bariloche",
+            "id": "a2",
+
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp",
             "title": "10% OFF en vuelos y paquetes",
             "description": "En paquetes, el descuento se aplica solo al aéreo. Tope de descuento $25.000. Cantidad limitada.",
@@ -19,8 +18,7 @@
             "cupon": "MULTITRAVELHOTSALE10si"
         },
         {
-            "id": "a1",
-            "destino": "Bariloche",
+            "id": "a3",
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp",
             "title": "10% OFF en vuelos y paquetes",
             "description": "En paquetes, el descuento se aplica solo al aéreo. Tope de descuento $25.000. Cantidad limitada.",

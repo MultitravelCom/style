@@ -1,5 +1,5 @@
 const fetchCuponesData = async () => {
-  const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
+  const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/General/components/CuponSeccion/cuponesData.json');
   const data = await response.json();
 
   return data;
@@ -39,9 +39,37 @@ modalCupones.innerHTML = `
   </div>
 `;
 
-const CuponsCondicion = () => {
+const CuponsComponente = () => {
+  const [cupones, setCupones] = React.useState([]);
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchCuponesData();
+      setCupones(data);
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
+      <div className="main__cupon">
+        <div className="main__cupon__img"></div>
+        <div className="main__cupon__text">
+          <p>{cupon.titple}</p>
+        </div>
+        {cupones.map((cupon) => (
+          <React.Fragment key={cupon.id}>
+            <CuponsCondicion cupon={cupon} />
+          </React.Fragment>
+        ))}
+      </div>
+    </>
+  );
+};
+
+const CuponsCondicion = ({ cupon }) => {
+  return (
+    <div>
       <div className="main__cupon__text--condiciones">
         <div className="modal__content-title-circle">
           <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
@@ -52,27 +80,14 @@ const CuponsCondicion = () => {
           <p>{cupon.fecha}</p>
         </div>
       </div>
-      <div class="modal__content-cupon">
+      <div className="modal__content-cupon">
         <h2>{cupon.cupon}</h2>
         <span>Copia el siguiente código</span>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-const CuponsComponente = () => {
-  return (
-    <>
-      <div className="main__cupon">
-        <div className="main__cupon__img"></div>
-        <div className="main__cupon__text">
-          <p>{cupon.titple}</p>
-        </div>
-        <CuponsCondicion />
-      </div>
-    </>
-  )
-}
 
 const ModalComponent = () => {
   return (
