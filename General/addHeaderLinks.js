@@ -101,7 +101,7 @@ function addHeaderLinks() {
         transferenciaComponentScript.src = 'https://multitravelcom.github.io/style/General/Transferencias/transferencia.js';
         transferenciaComponentScript.type = "text/babel";
 
-        transferenciaComponentStyle.href = "https://multitravelcom.github.io/style/General/components/styletransferencia.css";
+        transferenciaComponentStyle.href = "https://multitravelcom.github.io/style/General/Transferencias/styletransferencia.css";
         transferenciaComponentStyle.rel = "stylesheet";
 
         head.appendChild(transferenciaComponentStyle);
