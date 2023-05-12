@@ -125,18 +125,16 @@
     .confirm-booking__promocodes {
         flex-direction: column;
     }
-<<<<<<< HEAD
-    .promocodes{
+
+    <<<<<<< HEAD .promocodes {
         margin: auto;
         text-align: center;
     }
-=======
 
->>>>>>> 2f6758d09a97fc757ac4389d1ca9c3326b0db73f
-    .promocodes__container {
+    =======>>>>>>>2f6758d09a97fc757ac4389d1ca9c3326b0db73f .promocodes__container {
         margin: auto;
     }
-    
+
 }
 
 @media(min-width:768px) and (max-width: 1025px) {
@@ -229,7 +227,7 @@
 .modal__content-cupon>h2 {
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 25px;
     text-align: center;
     color: #0D4E88;
@@ -345,8 +343,15 @@
     font-size: 19px;
     min-width: 32px;
 }
-.booking-steps__item{
+
+.booking-steps__item {
     z-index: 0 !important;
+}
+
+@media(max-width: 467) {
+    .promocodes__container {
+        margin-left: 4rem;
+    }
 }
 
 @media(max-width: 1024px) {
@@ -366,6 +371,7 @@
         margin-bottom: 0.5rem;
         background-size: 15%;
     }
+
     .modal__content-cupon {
         padding: 5px;
     }
@@ -404,7 +410,7 @@
     .modal__content-tres-logo {
         height: 67px;
     }
-    .promocodes__container {
-        margin-left: 4rem;
+    .container__conocer__cupones{
+        width: 100%;
     }
 }
