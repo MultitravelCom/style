@@ -355,9 +355,11 @@
     }
 
     .modal__content-uno-logo {
-        height: 64px;
+        height: 35px;
         width: 100%;
         margin-bottom: 0.5rem;
+        background-size: 15%;
+    }
     }
 
     .modal-content__cupones-row {
@@ -370,7 +372,7 @@
     }
 
     .modal__content-title-h3>h2 {
-        font-size: 23px;
+        font-size: 21px;
         line-height: 12px;
         text-align: center;
     }
