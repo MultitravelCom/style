@@ -30,15 +30,15 @@ function addHeaderLinks() {
         head.appendChild(copyTaxRegStyle);
         head.appendChild(copyTaxRegJs);
     }
-    // const copyTaxRgComponent = path.includes('/flights/results');
+    const copyTaxRgComponent = path.includes('/flights/results');
 
-    // if (copyTaxRgComponent) {
-    //     const copyTaxRgComponentJs = document.createElement('script');
-    //     copyTaxRgComponentJs.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgComponent.js';
-    //     copyTaxRgComponentJs.type = "text/babel";
+    if (copyTaxRgComponent) {
+        const copyTaxRgComponentJs = document.createElement('script');
+        copyTaxRgComponentJs.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgComponent.js';
+        copyTaxRgComponentJs.type = "text/babel";
         
-    //     head.appendChild(copyTaxRgComponentJs);
-    // }
+        head.appendChild(copyTaxRgComponentJs);
+    }
 
     const priceFinalFlight = path.includes('/results');
     if (priceFinalFlight) {
