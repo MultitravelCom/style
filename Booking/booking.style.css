@@ -312,6 +312,7 @@
 
 .modal__content-uno-logo {
     width: 100px;
+    border-radius: 1rem 1rem 0 0 ;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20Multi%20cupon.svg);
