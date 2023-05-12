@@ -148,7 +148,7 @@ function handleClick(event) {
 async function run() {
     await changeText();
     await agreeBtn();
-    await showPromocodesDiv();
+    showPromocodesDiv();
 }
 
 run();
