@@ -2,7 +2,7 @@ const TransferenciaComponent = () => {
 
     return (
         <>
-            <div className="main__transferencia container">
+            <div className="main__transferencia">
                 <picture>
                     <source
                         media="(min-width: 1024px)"
