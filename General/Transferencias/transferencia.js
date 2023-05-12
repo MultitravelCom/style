@@ -35,6 +35,7 @@ const secondPaymentInfoContainer = paymentInfoContainers[1];
 document.querySelector('#mostrar-pago-btn').addEventListener('click', function () {
     if (!secondPaymentInfoContainer.classList.contains('hidden')) {
         setIsVisible(true);
+        console.log('isVisible set to true');
     }
 });
 
