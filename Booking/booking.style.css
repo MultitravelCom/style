@@ -126,12 +126,12 @@
         flex-direction: column;
     }
 
-    <<<<<<< HEAD .promocodes {
+    .promocodes {
         margin: auto;
         text-align: center;
     }
 
-    =======>>>>>>>2f6758d09a97fc757ac4389d1ca9c3326b0db73f .promocodes__container {
+    .promocodes__container {
         margin: auto;
     }
 
@@ -312,7 +312,7 @@
 
 .modal__content-uno-logo {
     width: 100px;
-    border-radius: 1rem 1rem 0 0 ;
+    border-radius: 1rem 1rem 0 0;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(https://multitravelcom.github.io/style/General/img/Logo%20Multi%20cupon.svg);
@@ -411,7 +411,8 @@
     .modal__content-tres-logo {
         height: 67px;
     }
-    .container__conocer__cupones{
+
+    .container__conocer__cupones {
         width: 100%;
     }
 }
