@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
 
-    function agregarElementoBooking(referenceSelector, index = -1, tries = 10) {
+    function agregarElementoBooking(referenceSelector, index = -1, tries = 20) {
         const referenceNode = document.querySelector(referenceSelector);
         if (!referenceNode && tries > 0) {
             // Si el nodo de referencia no se encuentra y todavía hay intentos disponibles, se reintentará después de 100ms
