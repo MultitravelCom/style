@@ -661,6 +661,6 @@
   display: none;
 }
 /* ********** MULT-230 ********************** */
-/* .booking-payment__info.prepayment>p{
+.booking-payment__info.prepayment>p{
   display: none;
-} */
+}
