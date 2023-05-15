@@ -2,3 +2,7 @@
 .details-card__phone {
     display: none;
 }
+/***************** MULT-246 ***************/
+.hotel-searcher-withoutdates{
+    display: none;
+}
