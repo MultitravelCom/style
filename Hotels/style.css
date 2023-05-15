@@ -8,6 +8,6 @@
 }
 /* **************************************** */
 /* ***** MULT-249 ******************* */
-.result-option__offer-info{
+.result-option__offer-info>.offer-info{
     display: none;
 }
