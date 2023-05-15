@@ -3,6 +3,6 @@
     display: none;
 }
 /***************** MULT-246 ***************/
-.hotel-searcher-withoutdates{
-    display: none;
+.checkbox.fancy-checkbox.searcher__on-product-fixed-hidden{
+    diplay: none
 }
