@@ -205,7 +205,7 @@ const Card = ({ destinos }) => {
                                 className="main__conteiner__s1__destacado__card uno"
                                 style={{ height: "100%", width: "100%" }}
                             >
-                                {destino.events === "si" && <EventImg style="eventImg" shouldShowEvent={shouldShowEvent} />}
+                                {destino.events === "no" && <EventImg style="eventImg" shouldShowEvent={shouldShowEvent} />}
                                 <picture>
                                     <map name={destino.id}>
                                         <area

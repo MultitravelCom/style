@@ -27,4 +27,3 @@ const TransferenciaComponent = () => {
 
 const paymentInfoContainer = document.querySelector('.booking-payment__info.prepayment');
 ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
-
