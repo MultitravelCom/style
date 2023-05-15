@@ -14,7 +14,10 @@
     }
 }
 /* CIRCUITOS */
-
+/* ***** MULT-255 ************ */
+.btn-more-options[data-target="#super-package-searcher-more-options"]{
+    display: block;
+}
 /* Ocultar logo special */
 .info-card__logo{
     display: none !important;
