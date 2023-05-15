@@ -6,3 +6,8 @@
 .checkbox.fancy-checkbox.searcher__on-product-fixed-hidden{
     display: none;
 }
+/* **************************************** */
+/* ***** MULT-249 ******************* */
+.result-option__offer-info{
+    display: none;
+}

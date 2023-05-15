@@ -396,3 +396,9 @@ details {
 }
 
 /* **********************************************/
+#home-carousel{
+  display: none;
+}
+#flight-searcher{
+ position: inherit;
+}
