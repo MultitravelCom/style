@@ -17,9 +17,8 @@
 }
 
 .deals>.label-info {
-  width: 161px;
-
-  height: 33px;
+  width: 161px !important;
+  height: 33px !important;;
   background-color: #1585e6 !important;
   font-size: 14px;
   font-weight: 600;
@@ -44,9 +43,9 @@
   top: 71px;
 }
 
-/* .map-link {
+.map-link {
   display: none;
-} */
+}
 
 .info-card__options-toggle {
   width: 116px;
