@@ -69,9 +69,9 @@ const btnStyles = [
 // *****************************************************
 // ************** COMPONENTES ********************
 function Button(props) {
-    const [showForm, setShowForm] = useState(false);
+    const [showForm, setShowForm] = React.useState(false);
   
-    useEffect(() => {
+    React.useEffect(() => {
       const script = document.createElement('script');
       script.src = 'https://cdn.bitrix24.com/b19657597/crm/form/loader_40.js';
       script.async = true;
