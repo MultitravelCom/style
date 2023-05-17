@@ -17,8 +17,9 @@
 }
 
 .deals>.label-info {
+  display: block;
   width: 161px !important;
-  height: 33px !important;;
+  height: 33px !important;
   background-color: #1585e6 !important;
   font-size: 14px;
   font-weight: 600;
