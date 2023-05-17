@@ -55,6 +55,9 @@
   background: #DF0032;
   border-radius: 12px;
 }
+.info-card__actions>.btn-small{
+  display: none;
+}
 
 @media (max-width: 767px) {
   .recomendado {
@@ -434,4 +437,8 @@ details {
 
 #flight-searcher {
   position: inherit;
+}
+/* ************ MULT-252 ************ */
+.booking-details__action-item:first-child {
+  display: none;
 }
