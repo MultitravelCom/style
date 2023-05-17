@@ -438,7 +438,3 @@ details {
 #flight-searcher {
   position: inherit;
 }
-/* ************ MULT-252 ************ */
-.booking-details__action-item:first-child {
-  display: none;
-}

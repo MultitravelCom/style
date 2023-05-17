@@ -664,3 +664,7 @@
 .booking-payment__info.prepayment>p{
   display: none;
 }
+/* ************ MULT-252 ************ */
+.booking-details__action-item:first-child {
+  display: none;
+}
