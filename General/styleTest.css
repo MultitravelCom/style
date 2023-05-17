@@ -31,6 +31,19 @@
   border-radius: 8px;
 }
 
+.info-card__category {
+  position: absolute;
+  top: 43px;
+}
+
+.info-card__location--action.js-result-map-toggle {
+  position: absolute;
+  top: 71px;
+}
+.map-link{
+  display: none;
+}
+
 @media (max-width: 767px) {
   .recomendado {
     border: 2px solid #1585e6;
