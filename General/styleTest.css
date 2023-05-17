@@ -17,6 +17,9 @@
 }
 
 .deals>.label-info {
+  width: 161px;
+
+  height: 33px;
   background-color: #1585e6 !important;
   font-size: 14px;
   font-weight: 600;
@@ -40,9 +43,11 @@
   position: absolute;
   top: 71px;
 }
-.map-link{
+
+.map-link {
   display: none;
 }
+
 
 @media (max-width: 767px) {
   .recomendado {
