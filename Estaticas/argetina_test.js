@@ -49,9 +49,9 @@ mostrarSeccion();
 const fetchDestinos = async () => {
     const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/style/main/Estaticas/data.json');
     const data = await response.json();
-  
+
     return data;
-  };
+};
 
 // ************************************************
 // Filter
@@ -69,15 +69,37 @@ const btnStyles = [
 // *****************************************************
 // ************** COMPONENTES ********************
 function Button(props) {
+    const [showForm, setShowForm] = useState(false);
+  
+    useEffect(() => {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.bitrix24.com/b19657597/crm/form/loader_40.js';
+      script.async = true;
+      script.dataset.b24Form = 'inline/40/vgono1';
+      script.dataset.skipMoving = true;
+  
+      document.body.appendChild(script);
+  
+      return () => {
+        document.body.removeChild(script);
+      };
+    }, []);
+  
     const handleClick = (event) => {
-        event.preventDefault();
-        window.open(props.link, '_blank');
+      event.preventDefault();
+      setShowForm(true);
     }
-
+  
     return (
-        <button id={props.id} className={props.style} onClick={handleClick}>{props.text}</button>
+      <div>
+        {showForm ? (
+          <div id="formContainer" data-b24-form="inline/40/vgono1" />
+        ) : (
+          <button id={props.id} className={props.style} onClick={handleClick}>{props.text}</button>
+        )}
+      </div>
     );
-}
+  }
 const Loader = () => {
     return (
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
@@ -194,7 +216,7 @@ const Card = ({ destinos }) => {
             )}
         </>
     );
-    
+
 };
 const CardContainer = ({ btnStyles, destinosFiltrados }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
@@ -331,6 +353,10 @@ function App() {
                             <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Iguazu} />
                             <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={Mendoza} />
                         </div>
+                        <button onclick="openPopup()">Abrir Formulario</button>
+
+                        <div id="popupContainer"></div>
+
                     </div>
                 </>
             )}
