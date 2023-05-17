@@ -44,10 +44,17 @@
   top: 71px;
 }
 
-.map-link {
+/* .map-link {
   display: none;
-}
+} */
 
+.info-card__options-toggle {
+  width: 116px;
+  height: 34px;
+  padding: 10px 24px;
+  background: #DF0032;
+  border-radius: 12px;
+}
 
 @media (max-width: 767px) {
   .recomendado {
