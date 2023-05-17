@@ -14,7 +14,7 @@ function onResultsListChange(mutationsList, observer) {
               newDivTaxCopy.textContent = 'Incluye impuesto pais y percepciones';
               newDivTaxCopy.classList.add("divTaxCopyStyle");
               priceResults.appendChild(newDivTaxCopy);
-              taxIncludedElement.style.display = 'none'; // ocultar el elemento .bestprice__taxincluded
+              taxIncludedElement.style.display = 'none';
             }
           }
         });
