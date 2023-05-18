@@ -57,9 +57,11 @@
 }
 
 .info-card__actions {
+  width: 158px !important;
   bottom: 53px;
   position: absolute;
   right: 18px;
+  padding-right: 0 !important;
 }
 
 .info-card__actions>.btn-small {
