@@ -103,15 +103,15 @@
 
 .main__container__share {
   width: 183px;
-  height: 24px;
-  background: #F3F3F3;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  top: 107px;
-  left: 24px;
+    height: 24px;
+    background: #F3F3F3;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 125px;
+    left: 14px;
 }
 
 .share__icon {
