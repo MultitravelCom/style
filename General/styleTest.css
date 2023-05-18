@@ -144,6 +144,14 @@
 }
 
 @media (max-width: 767px) {
+  .main__container__share{
+    width: 23px;
+    right: 12px;
+  }
+  .share__text{
+    display: none;
+
+  }
   .recomendado {
     border: 2px solid #1585e6;
   }
