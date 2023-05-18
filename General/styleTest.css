@@ -135,6 +135,13 @@
   margin: auto;
 }
 
+.info-card__title{
+  max-width: 100% !important;
+}
+.info-card__action-item{
+  display: none;
+}
+
 @media (max-width: 767px) {
   .recomendado {
     border: 2px solid #1585e6;
