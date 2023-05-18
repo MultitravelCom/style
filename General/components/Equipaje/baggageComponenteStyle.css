@@ -18,7 +18,7 @@
 }
 
 .bookingPaxes__p{
-    color:#2196F3;
+    color:#0D3C61;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -28,7 +28,7 @@
 }
 
 .main__bookingPaxes__span>span {
-    color:#2196F3;
+    color:#0D3C61;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -64,7 +64,7 @@
 padding: 16px !important;
 }
 .main__bookingPaxes__style{
-    width: 228px;
+    width: 177px;
 }
 .glyphicon-baggage,
 .baggage-selection__bag--name{
@@ -105,8 +105,8 @@ padding: 16px !important;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 102px) {
     .baggage-selection{
-        gap: 16px;
+        gap: 12px;
     }
 }

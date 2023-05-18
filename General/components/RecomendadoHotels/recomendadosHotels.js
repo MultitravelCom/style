@@ -11,10 +11,10 @@ function onResultsListChange(mutationsList, observer) {
             const taxIncludedElement = priceResults.querySelector('.bestprice__taxincluded');
             if (taxIncludedElement) {
               let newDivTaxCopy = document.createElement('div');
-              newDivTaxCopy.textContent = 'Incluyen el impuesto país y las percepciones';
+              newDivTaxCopy.textContent = 'Incluye impuesto pais y percepciones';
               newDivTaxCopy.classList.add("divTaxCopyStyle");
               priceResults.appendChild(newDivTaxCopy);
-              taxIncludedElement.style.display = 'none'; // ocultar el elemento .bestprice__taxincluded
+              taxIncludedElement.style.display = 'none';
             }
           }
         });

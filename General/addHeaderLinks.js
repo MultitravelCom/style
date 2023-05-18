@@ -30,15 +30,15 @@ function addHeaderLinks() {
         head.appendChild(copyTaxRegStyle);
         head.appendChild(copyTaxRegJs);
     }
-    // const copyTaxRgComponent = path.includes('/flights/results');
+    const copyTaxRgComponent = path.includes('/flights/results');
 
-    // if (copyTaxRgComponent) {
-    //     const copyTaxRgComponentJs = document.createElement('script');
-    //     copyTaxRgComponentJs.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgComponent.js';
-    //     copyTaxRgComponentJs.type = "text/babel";
+    if (copyTaxRgComponent) {
+        const copyTaxRgComponentJs = document.createElement('script');
+        copyTaxRgComponentJs.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgComponent.js';
+        copyTaxRgComponentJs.type = "text/babel";
         
-    //     head.appendChild(copyTaxRgComponentJs);
-    // }
+        head.appendChild(copyTaxRgComponentJs);
+    }
 
     const priceFinalFlight = path.includes('/results');
     if (priceFinalFlight) {
@@ -77,6 +77,36 @@ function addHeaderLinks() {
         head.appendChild(recomendadoHotelsStyle);
         head.appendChild(recomendadoHotelsJs);
     }
+
+    const copyBaggage = path.includes('/flights/booking');
+    if (copyBaggage) {
+        const copyBaggageStyle = document.createElement('link');
+        const copyBaggageScript = document.createElement('script');
+
+        copyBaggageScript.src = 'https://multitravelcom.github.io/style/General/components/Equipaje/baggageComponente.js';
+        copyBaggageScript.type = "text/babel";
+
+        copyBaggageStyle.href = "https://multitravelcom.github.io/style/General/components/Equipaje/baggageComponenteStyle.css";
+        copyBaggageStyle.rel = "stylesheet";
+
+        head.appendChild(copyBaggageScript);
+        head.appendChild(copyBaggageStyle);
+    }
+
+    // const transferenciaComponent = path.includes('/confirmBooking');
+    // if (transferenciaComponent) {
+    //     const transferenciaComponentStyle = document.createElement('link');
+    //     const transferenciaComponentScript = document.createElement('script');
+
+    //     transferenciaComponentScript.src = 'https://multitravelcom.github.io/style/General/Transferencias/transferencia.js';
+    //     transferenciaComponentScript.type = "text/babel";
+
+    //     transferenciaComponentStyle.href = "https://multitravelcom.github.io/style/General/Transferencias/styletransferencia.css";
+    //     transferenciaComponentStyle.rel = "stylesheet";
+
+    //     head.appendChild(transferenciaComponentStyle);
+    //     head.appendChild(transferenciaComponentScript);
+    // }
 
     // const cuponSeccion = path.includes('/booking/');
     // if(cuponSeccion){

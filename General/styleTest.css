@@ -1,5 +1,5 @@
 /* ******************************************* */
-/* MULT-71 */
+/* MULT-71 // MULT-245*/
 .recomendado {
   box-sizing: border-box;
   border: solid #1585e6;
@@ -13,15 +13,57 @@
 }
 
 .info-card__price {
-  top: 46px !important;
+  top: 55px !important;
 }
 
 .deals>.label-info {
+  display: block;
+  width: 161px !important;
+  height: 33px !important;
   background-color: #1585e6 !important;
   font-size: 14px;
   font-weight: 600;
   border-radius: 8px 0 0 8px !important;
   padding: 0.5rem !important;
+}
+
+.alojamiento-recomendado {
+  border-width: 2px 4px 2px 2px;
+  border-style: solid;
+  border-color: #1585E6;
+  border-radius: 8px;
+}
+
+.info-card__category {
+  position: absolute;
+  top: 43px;
+}
+
+.info-card__location--action.js-result-map-toggle {
+  position: absolute;
+  top: 71px;
+}
+
+.map-link {
+  display: none;
+}
+
+.info-card__options-toggle {
+  width: 116px;
+  height: 34px;
+  padding: 10px 24px;
+  background: #DF0032;
+  border-radius: 12px;
+}
+
+.info-card__actions {
+  bottom: 53px;
+  position: absolute;
+  right: 18px;
+}
+
+.info-card__actions>.btn-small {
+  display: none;
 }
 
 @media (max-width: 767px) {
@@ -391,8 +433,15 @@ details {
 }
 
 /* ********** MULT-230 ********************** */
-.booking-payment__info.prepayment>p{
+.booking-payment__info.prepayment>p {
   display: none;
 }
 
 /* **********************************************/
+#home-carousel {
+  display: none;
+}
+
+#flight-searcher {
+  position: inherit;
+}
