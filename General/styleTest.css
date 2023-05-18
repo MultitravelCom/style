@@ -36,14 +36,14 @@
 
 .info-card__category {
   position: absolute;
-  top: 43px;
+  top: 46px;
   left: -1px;
 }
 
 .info-card__location--action.js-result-map-toggle {
   position: absolute;
-  top: 82px;
-  left: 11px;
+  top: 86px;
+    left: 8px;
 }
 
 .map-link>.glyphicon-map-marker {
@@ -111,7 +111,7 @@
     justify-content: space-between;
     position: absolute;
     top: 125px;
-    left: 14px;
+    left: 12px;
 }
 
 .share__icon {
