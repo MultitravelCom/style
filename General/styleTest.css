@@ -13,7 +13,7 @@
 }
 
 .info-card__price {
-  top: 55px !important;
+  top: 55px;
 }
 
 .deals>.label-info {
@@ -194,22 +194,30 @@
     border-radius: 8px 8px 8px 40px;
   }
 
-  .info-card__image-holder>img {
+  .info-card__image-holder img {
     width: 100%;
   }
 
   .info-card__content {
+    height: 100%;
     position: relative;
   }
 
   .info-card__price {
     position: absolute !important;
-    width: 119px;
+    width: 50%;
+    left: 3px;
+    bottom: 61px;
+    height: 50px;
+
   }
 
   .main__container__share {
     top: -34px;
     right: 12px;
+  }
+  .info-card__category {
+    left: 10px;
   }
 }
 
