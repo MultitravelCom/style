@@ -250,6 +250,9 @@
   .info-card__location--action.js-result-map-toggle {
     top: 76px;
   }
+  .info-card__title--action{
+    line-height: 0.92 !important;
+  }
 }
 
 /* ******************************************* */
