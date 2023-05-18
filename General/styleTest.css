@@ -161,7 +161,7 @@
 
   .deals {
     top: -187px;
-    left: 120px;
+    left: -4px;
   }
 
   .deals>.label-info {
@@ -222,6 +222,7 @@
   }
 
   .info-card__category {
+    top: 44px;
     left: 10px;
   }
 
@@ -230,6 +231,9 @@
     bottom: 1px;
     position: absolute;
     left: 23px;
+  }
+  .info-card__location--action.js-result-map-toggle {
+    top: 76px;
   }
 }
 
