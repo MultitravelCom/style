@@ -43,7 +43,7 @@
 .info-card__location--action.js-result-map-toggle {
   position: absolute;
   top: 86px;
-    left: 8px;
+  left: 8px;
 }
 
 .map-link>.glyphicon-map-marker {
@@ -103,15 +103,15 @@
 
 .main__container__share {
   width: 183px;
-    height: 24px;
-    background: #F3F3F3;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    top: 125px;
-    left: 12px;
+  height: 24px;
+  background: #F3F3F3;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 125px;
+  left: 12px;
 }
 
 .share__icon {
@@ -135,10 +135,11 @@
   margin: auto;
 }
 
-.info-card__title{
+.info-card__title {
   max-width: 100% !important;
 }
-.info-card__action-item{
+
+.info-card__action-item {
   display: none;
 }
 
@@ -154,6 +155,45 @@
 
   .deals>.label-info {
     border-radius: 8px !important;
+  }
+
+  .result.hotel-result {
+    height: 100%;
+
+  }
+
+  .info-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-card__image--action {
+    width: 100%;
+    border-radius: 8px 8px 8px 40px;
+  }
+
+  .info-card__image-holder.js-open-gallery {
+    width: 100%;
+    border-radius: 8px 8px 8px 40px;
+  }
+
+  .info-card__image-holder.js-open-gallery>img {
+    width: 100%;
+  }
+
+  .info-card__content {
+    position: relative;
+  }
+
+  .info-card__price {
+    position: absolute !important;
+    width: 119px;
+  }
+
+  .main__container__share {
+    top: -34px;
+    right: 12px;
   }
 }
 
