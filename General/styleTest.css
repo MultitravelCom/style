@@ -160,8 +160,8 @@
   }
 
   .deals {
-    bottom: 16px;
-    left: 16px;
+    top: -187px;
+    left: 120px;
   }
 
   .deals>.label-info {
@@ -207,11 +207,11 @@
     position: relative;
   }
 
-  .info-card__price {
+  .info-card__content>.info-card__price {
     position: absolute !important;
     width: 135px;
-    left: 3px;
-    bottom: 61px;
+    left: -4px;
+    top: 123px;
     height: 50px;
 
   }
@@ -229,6 +229,7 @@
     display: block;
     bottom: 1px;
     position: absolute;
+    left: 23px;
   }
 }
 
