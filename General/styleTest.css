@@ -57,10 +57,10 @@
 }
 
 .info-card__actions {
-  width: 158px !important;
-  bottom: 53px;
+  width: 117px !important;
+  bottom: 24px;
   position: absolute;
-  right: 18px;
+  right: 32px;
   padding-right: 0 !important;
 }
 
