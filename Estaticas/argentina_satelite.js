@@ -7,9 +7,6 @@ meta.setAttribute('content', 'Compará paquetes a Argentina y conseguí los mejo
 head.appendChild(meta);
 document.title = "Paquetes turísticos a Argentina | Multitravel.com"
 
-document.head.appendChild(modalAtencionStyle);
-document.head.appendChild(modalAtencionsJs);
-
 // const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
 // const linkWaFixed = document.querySelector('.whatsAppFixes a');
 // const linkWaHeaderMobile = document.querySelector('.btn.upper-menu__phone-wrapper.features_item a');
