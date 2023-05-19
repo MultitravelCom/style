@@ -99,7 +99,8 @@ function Button(props) {
         if (window.innerWidth <= 767) {
             // Llamar a un número en dispositivos móviles
             window.location.href = 'tel:08003480003';
-            return;
+        } else {
+            window.open(props.link, '_blank');
         }
     };
 
