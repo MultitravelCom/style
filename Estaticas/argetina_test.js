@@ -89,19 +89,7 @@ const ButtonFormulario = (props) => {
           </button>
           {modalOpen && (
             <div className="modal">
-              <script
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    (function(w, d, u){
-                      var s = d.createElement('script');
-                      s.async = true;
-                      s.src = u + '?' + (Date.now() / 180000 | 0);
-                      var h = d.getElementsByTagName('script')[0];
-                      h.parentNode.insertBefore(s, h);
-                    })(window, document, 'https://cdn.bitrix24.com/b19657597/crm/form/loader_54.js');
-                  `
-                }}
-              />
+                <h2>dfsfd</h2>
               <button onClick={() => setModalOpen(false)}>Cerrar modal</button>
             </div>
           )}
