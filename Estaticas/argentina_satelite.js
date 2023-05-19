@@ -15,17 +15,37 @@ linkWaFixed.href = 'https://wa.link/xetnro';
 linkWaHeaderMobile.href = 'https://wa.link/xetnro';
 
 
-const modalAtencionStyle = document.createElement('link');
-const modalAtencionsJs = document.createElement('script');
-
-modalAtencionsJs.src = 'https://multitravelcom.github.io/components/MULT168/Modal/index.js';
-modalAtencionsJs.type = "text/babel";
-
-modalAtencionStyle.href = "https://multitravelcom.github.io/components/MULT168/Modal/style.css";
-modalAtencionStyle.rel = "stylesheet";
-
-head.appendChild(modalAtencionStyle);
-head.appendChild(modalAtencionsJs);
+function loadModalComponents() {
+    const modalAtencionStyle = document.createElement('link');
+    const modalAtencionsJs = document.createElement('script');
+  
+    modalAtencionsJs.src = 'https://multitravelcom.github.io/components/MULT168/Modal/index.js';
+    modalAtencionsJs.type = 'text/babel';
+  
+    modalAtencionStyle.href = 'https://multitravelcom.github.io/components/MULT168/Modal/style.css';
+    modalAtencionStyle.rel = 'stylesheet';
+  
+    function checkSelectors() {
+      const selectors = document.querySelectorAll('.pull-left .hidden-xs');
+  
+      if (selectors.length !== 3) {
+        // Al menos uno de los selectores no está presente, se vuelve a intentar después de un breve retraso
+        setTimeout(checkSelectors, 100);
+      } else {
+        // Todos los selectores están presentes, se pueden agregar los elementos al DOM
+        document.head.appendChild(modalAtencionStyle);
+        document.head.appendChild(modalAtencionsJs);
+      }
+    }
+  
+    if (document.readyState === 'loading') {
+      // El DOM todavía se está cargando, se espera al evento "DOMContentLoaded"
+      document.addEventListener('DOMContentLoaded', checkSelectors);
+    } else {
+      // El DOM ya está cargado, se comprueban los selectores inmediatamente
+      checkSelectors();
+    }
+  }
 
 // BD
 const destinos1 = [
