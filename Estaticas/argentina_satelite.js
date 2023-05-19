@@ -15,6 +15,18 @@ linkWaFixed.href = 'https://wa.link/xetnro';
 linkWaHeaderMobile.href = 'https://wa.link/xetnro';
 
 
+const modalAtencionStyle = document.createElement('link');
+const modalAtencionsJs = document.createElement('script');
+
+modalAtencionsJs.src = 'https://multitravelcom.github.io/components/MULT168/Modal/index.js';
+modalAtencionsJs.type = "text/babel";
+
+recomendadoHotelsStyle.href = "https://multitravelcom.github.io/components/MULT168/Modal/style.css";
+recomendadoHotelsStyle.rel = "stylesheet";
+
+head.appendChild(modalAtencionStyle);
+head.appendChild(modalAtencionsJs);
+
 // BD
 const destinos1 = [
     {
@@ -286,7 +298,7 @@ const Card = ({ destinos }) => {
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
-                {destino.events === "no" && <EventImg style="eventImg" shouldShowEvent={shouldShowEvent} />}
+                    {destino.events === "no" && <EventImg style="eventImg" shouldShowEvent={shouldShowEvent} />}
                     <picture>
                         <map name={destino.id}>
                             <area target="_blank" alt={destino.title} title={destino.title} href={destino.linkWa} coords={destino.coords} shape="rect" />
