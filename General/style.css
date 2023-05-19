@@ -671,3 +671,6 @@
 .booking-details__action-item:first-child {
   display: none;
 }
+.footer__text>.glyphicon-whatsapp-bottomless{
+  display: none;
+}
