@@ -160,8 +160,8 @@
 
 @media (max-width: 767px) {
   .main__container__share {
-    width: 23px;
-    right: 12px;
+    top: -34px;
+    left: 239px;
   }
 
   .share__text {
