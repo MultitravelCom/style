@@ -155,21 +155,21 @@ let s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
     );
 };
 
-const Card = ({ destinos, handleModalOpen }) => {
+const Card = ({ destinos, onModalOpen }) => {
     const [noDestinos, setNoDestinos] = React.useState(false);
     const [loaded, setLoaded] = React.useState(false);
 
     const handleClick = (event) => {
         event.preventDefault();
-
+    
         if (window.innerWidth <= 767) {
-            // Llamar a un número en dispositivos móviles
-            window.location.href = 'tel:08003480003';
+          // Llamar a un número en dispositivos móviles
+          window.location.href = 'tel:08003480003';
         } else {
-            // Abrir el formulario en dispositivos de escritorio
-            setModalOpen(true);
+          // Abrir el formulario en dispositivos de escritorio
+          onModalOpen();
         }
-    };
+      };
 
     React.useEffect(() => {
         fetchDestinos()
@@ -339,7 +339,7 @@ const CardContainer = ({ btnStyles, destinosFiltrados, onModalOpen }) => {
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div className={carrusel} id={title}>
-                        <Card destinos={destinosFiltrados} onModalOpen={onModalOpen}/>
+                    <Card destinos={destinosFiltrados} onModalOpen={onModalOpen} />
                     </div>
                     <button
                         aria-label="Siguiente"
@@ -392,9 +392,7 @@ function App() {
                             <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={Mendoza} />
                         </div>
                     </div>
-                    {modalOpen && (
-                        <ModalFormulario open={modalOpen} onClose={handleModalClose} />
-                    )}
+                    {modalOpen && <ModalFormulario open={modalOpen} onClose={handleModalClose} />}
                 </>
             )}
         </>
