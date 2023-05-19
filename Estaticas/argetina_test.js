@@ -68,7 +68,7 @@ const btnStyles = [
 
 // *****************************************************
 // ************** COMPONENTES ********************
-const Button = (props) => {
+const ButtonFormulario = (props) => {
     const [modalOpen, setModalOpen] = React.useState(false);
 
     const handleClick = (event) => {
@@ -207,7 +207,7 @@ const Card = ({ destinos }) => {
                                     />
                                 </picture>
                                 <div className="priceStyle">{destino.price}</div>
-                                <Button
+                                <ButtonFormulario
                                     id={destino.id}
                                     style="btn_Style_Venta_Per"
                                     link={destino.linkWa}
