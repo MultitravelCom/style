@@ -120,8 +120,12 @@ function handleClick(event) {
     });
 }
 
-const liElement = document.querySelector('.booking-payment__options-prepayment');
-liElement.textContent = 'Transferencia / Efectivo';
+document.addEventListener('DOMContentLoaded', function() {
+    const liElement = document.querySelector('.booking-payment__options-prepayment');
+    if (liElement) {
+      liElement.textContent = 'Transferencia / Efectivo';
+    }
+  });
 
 // Ejecuta las funciones en orden y asegúrate de que se completen antes de continuar con la siguiente
 async function run() {
