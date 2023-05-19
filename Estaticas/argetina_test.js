@@ -155,7 +155,7 @@ let s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
     );
 };
 
-const Card = ({ destinos, onModalOpen }) => {
+const Card = ({ destinos, handleModalOpen }) => {
     const [noDestinos, setNoDestinos] = React.useState(false);
     const [loaded, setLoaded] = React.useState(false);
 
@@ -232,7 +232,7 @@ const Card = ({ destinos, onModalOpen }) => {
                                     style="btn_Style_Venta_Per"
                                     link={destino.linkWa}
                                     text="Contactarme"
-                                    onModalOpen={onModalOpen}
+                                    onModalOpen={handleModalOpen}
                                 />
                             </div>
                         </div>
