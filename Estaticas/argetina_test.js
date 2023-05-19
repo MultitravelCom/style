@@ -68,34 +68,6 @@ const btnStyles = [
 
 // *****************************************************
 // ************** COMPONENTES ********************
-const ButtonFormulario = (props) => {
-    const [modalOpen, setModalOpen] = React.useState(false);
-
-    const handleClick = (event) => {
-        event.preventDefault();
-
-        if (window.innerWidth <= 767) {
-            // Llamar a un número en dispositivos móviles
-            window.location.href = 'tel:08003480003';
-          } else {
-            // Abrir el formulario en dispositivos de escritorio
-            setModalOpen(true);
-          }
-        };
-    return (
-        <div>
-          <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>
-            {props.text}
-          </button>
-          {modalOpen && (
-            <div className="modal">
-                <h2>dfsfd</h2>
-              <button onClick={() => setModalOpen(false)}>Cerrar modal</button>
-            </div>
-          )}
-        </div>
-      );
-};
 const Loader = () => {
     return (
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
@@ -134,6 +106,59 @@ const BannerTop = () => {
         </div>
     )
 }
+
+const ButtonFormulario = (props) => {
+    const [modalOpen, setModalOpen] = React.useState(false);
+
+    const handleClick = (event) => {
+        event.preventDefault();
+
+        if (window.innerWidth <= 767) {
+            // Llamar a un número en dispositivos móviles
+            window.location.href = 'tel:08003480003';
+        } else {
+            // Abrir el formulario en dispositivos de escritorio
+            setModalOpen(true);
+        }
+    };
+    return (
+        <div>
+        <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>
+          {props.text}
+        </button>
+        {modalOpen && (
+          <ModalFormulario open={modalOpen} onClose={() => setModalOpen(false)} />
+        )}
+      </div>
+    );
+};
+const ModalFormulario = ({ open, onClose }) => {
+
+    if (!open) return null;
+    return (
+        <>
+            <div id="overlay" className="overlay">
+                <div className="container__modal">
+                    <div className='emcabezadoModal'>
+                        <h3>Atención personalizada</h3>
+                        <button className="close-button" onClick={onClose}><span>X</span></button>
+                    </div>
+                    <div className="container-fluid-modal">
+                        <div className="row-modal">
+                            {/* <script data-b24-form="auto/54/02nb6u" data-skip-moving="true">
+                                (function(w,d,u){
+let s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                                let h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+})(window,document,'https://cdn.bitrix24.com/b19657597/crm/form/loader_54.js');
+                            </script> */}
+                            <h2>dfsdfsdfs</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+};
 
 const Card = ({ destinos }) => {
     const [noDestinos, setNoDestinos] = React.useState(false);
