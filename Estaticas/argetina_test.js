@@ -93,6 +93,7 @@ const Button = (props) => {
                         data-skip-moving="true"
                         src="https://cdn.bitrix24.com/b19657597/crm/form/loader_54.js"
                         async
+                        onLoad={handleFormLoad}
                     />
                     <button onClick={() => setModalOpen(false)}>Cerrar modal</button>
                 </div>
