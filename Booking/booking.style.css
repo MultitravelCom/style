@@ -440,8 +440,8 @@
     color: #FFFFFF;
 }
 @media (max-width: 767px) {
-    .booking-payment__options-pos,
-    .booking-payment__options-prepayment{
+    .booking-payment__options li,
+    .booking-payment__options li{
         width: 100%;
         margin-bottom: 8px;
     }
