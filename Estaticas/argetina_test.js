@@ -108,8 +108,6 @@ const BannerTop = () => {
 }
 
 const ButtonFormulario = (props) => {
-    const [modalOpen, setModalOpen] = React.useState(false);
-
     const handleClick = (event) => {
         event.preventDefault();
 
@@ -118,7 +116,7 @@ const ButtonFormulario = (props) => {
             window.location.href = 'tel:08003480003';
         } else {
             // Abrir el formulario en dispositivos de escritorio
-            setModalOpen(true);
+            props.onModalOpen();
         }
     };
     return (
@@ -126,9 +124,6 @@ const ButtonFormulario = (props) => {
             <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>
                 {props.text}
             </button>
-            {modalOpen && (
-                <ModalFormulario open={modalOpen} onClose={() => setModalOpen(false)} />
-            )}
         </div>
     );
 };
@@ -160,7 +155,7 @@ let s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
     );
 };
 
-const Card = ({ destinos }) => {
+const Card = ({ destinos, onModalOpen }) => {
     const [noDestinos, setNoDestinos] = React.useState(false);
     const [loaded, setLoaded] = React.useState(false);
 
@@ -237,6 +232,7 @@ const Card = ({ destinos }) => {
                                     style="btn_Style_Venta_Per"
                                     link={destino.linkWa}
                                     text="Contactarme"
+                                    onModalOpen={onModalOpen}
                                 />
                             </div>
                         </div>
@@ -251,7 +247,7 @@ const Card = ({ destinos }) => {
     );
 
 };
-const CardContainer = ({ btnStyles, destinosFiltrados }) => {
+const CardContainer = ({ btnStyles, destinosFiltrados, onModalOpen }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
     console.log('destinosFiltrados CardContainer:', destinosFiltrados);
@@ -343,7 +339,7 @@ const CardContainer = ({ btnStyles, destinosFiltrados }) => {
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div className={carrusel} id={title}>
-                        <Card destinos={destinosFiltrados} />
+                        <Card destinos={destinosFiltrados} onModalOpen={onModalOpen}/>
                     </div>
                     <button
                         aria-label="Siguiente"
@@ -364,6 +360,10 @@ function App() {
     const Bariloche = filtrarDestinos(destinos, "Bariloche");
     const Iguazu = filtrarDestinos(destinos, 'Iguazu');
     const Mendoza = filtrarDestinos(destinos, 'Mendoza');
+
+    const handleModalOpen = () => {
+        setModalOpen(true);
+      };
 
     React.useEffect(() => {
         fetchDestinos().then(data => {
