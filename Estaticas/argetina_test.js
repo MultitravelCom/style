@@ -68,7 +68,7 @@ const btnStyles = [
 
 // *****************************************************
 // ************** COMPONENTES ********************
-const Button = (event) => {
+const Button = (props) => {
     const [modalOpen, setModalOpen] = React.useState(false);
 
     const handleClick = (event) => {
