@@ -232,7 +232,7 @@ const Card = ({ destinos, onModalOpen }) => {
                                     style="btn_Style_Venta_Per"
                                     link={destino.linkWa}
                                     text="Contactarme"
-                                    onModalOpen={handleModalOpen}
+                                    onModalOpen={props.onModalOpen}
                                 />
                             </div>
                         </div>
