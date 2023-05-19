@@ -21,8 +21,8 @@ const modalAtencionsJs = document.createElement('script');
 modalAtencionsJs.src = 'https://multitravelcom.github.io/components/MULT168/Modal/index.js';
 modalAtencionsJs.type = "text/babel";
 
-recomendadoHotelsStyle.href = "https://multitravelcom.github.io/components/MULT168/Modal/style.css";
-recomendadoHotelsStyle.rel = "stylesheet";
+modalAtencionStyle.href = "https://multitravelcom.github.io/components/MULT168/Modal/style.css";
+modalAtencionStyle.rel = "stylesheet";
 
 head.appendChild(modalAtencionStyle);
 head.appendChild(modalAtencionsJs);

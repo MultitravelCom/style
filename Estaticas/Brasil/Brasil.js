@@ -27,6 +27,18 @@ function addHeaderLinks() {
     head.appendChild(linkStyle);
     head.appendChild(linkCDNGlider);
     head.appendChild(mailchimp);
+
+    const modalAtencionStyle = document.createElement('link');
+    const modalAtencionsJs = document.createElement('script');
+
+    modalAtencionsJs.src = 'https://multitravelcom.github.io/components/MULT168/Modal/index.js';
+    modalAtencionsJs.type = "text/babel";
+
+    modalAtencionStyle.href = "https://multitravelcom.github.io/components/MULT168/Modal/style.css";
+    modalAtencionStyle.rel = "stylesheet";
+
+    head.appendChild(modalAtencionStyle);
+    head.appendChild(modalAtencionsJs);
 }
 addHeaderLinks();
 
