@@ -77,50 +77,36 @@ const Button = (props) => {
         if (window.innerWidth <= 767) {
             // Llamar a un número en dispositivos móviles
             window.location.href = 'tel:08003480003';
-        } else {
+          } else {
             // Abrir el formulario en dispositivos de escritorio
             setModalOpen(true);
-        }
-    };
-
-    React.useEffect(() => {
-        const handleFormLoad = () => {
-            setModalOpen(true);
+          }
         };
-
-        const script = document.createElement('script');
-        script.src = 'https://cdn.bitrix24.com/b19657597/crm/form/loader_54.js';
-        script.async = true;
-        script.onload = handleFormLoad;
-
-        document.body.appendChild(script);
-
-        return () => {
-            document.body.removeChild(script);
-        };
-    }, []);
-
     return (
         <div>
-            <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>
-                {props.text}
-            </button>
-            {modalOpen && (
-                <div className="modal">
-                    <script data-b24-form="inline/54/02nb6u" data-skip-moving="true">
-                        {(function (w, d, u) {
-                            var s = d.createElement('script');
-                            s.async = true;
-                            s.src = u + '?' + (Date.now() / 180000 | 0);
-                            var h = d.getElementsByTagName('script')[0];
-                            h.parentNode.insertBefore(s, h);
-                        })(window, document, 'https://cdn.bitrix24.com/b19657597/crm/form/loader_54.js')}
-                    </script>
-                    <button onClick={() => setModalOpen(false)}>Cerrar modal</button>
-                </div>
-            )}
+          <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>
+            {props.text}
+          </button>
+          {modalOpen && (
+            <div className="modal">
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    (function(w, d, u){
+                      var s = d.createElement('script');
+                      s.async = true;
+                      s.src = u + '?' + (Date.now() / 180000 | 0);
+                      var h = d.getElementsByTagName('script')[0];
+                      h.parentNode.insertBefore(s, h);
+                    })(window, document, 'https://cdn.bitrix24.com/b19657597/crm/form/loader_54.js');
+                  `
+                }}
+              />
+              <button onClick={() => setModalOpen(false)}>Cerrar modal</button>
+            </div>
+          )}
         </div>
-    );
+      );
 };
 const Loader = () => {
     return (
