@@ -387,9 +387,9 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Bariloche} />
-                            <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Iguazu} />
-                            <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={Mendoza} />
+                            <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Bariloche} onModalOpen={handleModalOpen}/>
+                            <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Iguazu} onModalOpen={handleModalOpen}/>
+                            <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={Mendoza} onModalOpen={handleModalOpen}/>
                         </div>
                     </div>
                     {modalOpen && <ModalFormulario open={modalOpen} onClose={handleModalClose} />}
