@@ -7,12 +7,12 @@ meta.setAttribute('content', 'Compará paquetes a Argentina y conseguí los mejo
 head.appendChild(meta);
 document.title = "Paquetes turísticos a Argentina | Multitravel.com"
 
-const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
-const linkWaFixed = document.querySelector('.whatsAppFixes a');
-const linkWaHeaderMobile = document.querySelector('.btn.upper-menu__phone-wrapper.features_item a');
-linkWaHeader.href = 'https://wa.link/xetnro';
-linkWaFixed.href = 'https://wa.link/xetnro';
-linkWaHeaderMobile.href = 'https://wa.link/xetnro';
+// const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
+// const linkWaFixed = document.querySelector('.whatsAppFixes a');
+// const linkWaHeaderMobile = document.querySelector('.btn.upper-menu__phone-wrapper.features_item a');
+// linkWaHeader.href = 'https://wa.link/xetnro';
+// linkWaFixed.href = 'https://wa.link/xetnro';
+// linkWaHeaderMobile.href = 'https://wa.link/xetnro';
 
 
 const modalAtencionStyle = document.createElement('link');
