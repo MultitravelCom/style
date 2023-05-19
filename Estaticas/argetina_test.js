@@ -70,28 +70,36 @@ const btnStyles = [
 // ************** COMPONENTES ********************
 const Button = () => {
     const [modalOpen, setModalOpen] = React.useState(false);
-  
-    const handleClick = () => {
-      setModalOpen(true);
-    };
-  
+
+    const handleClick = (event) => {
+        event.preventDefault();
+        
+        if (window.innerWidth <= 767) {
+          // Llamar a un número en dispositivos móviles
+          window.location.href = 'tel:+123456789';
+        } else {
+          // Abrir el formulario en dispositivos de escritorio
+          setModalOpen(true);
+        }
+      };
+
     return (
-      <div>
-        <button onClick={handleClick}>Abrir modal</button>
-        {modalOpen && (
-          <div className="modal">
-            <script
-              data-b24-form="auto/54/02nb6u"
-              data-skip-moving="true"
-              src="https://cdn.bitrix24.com/b19657597/crm/form/loader_54.js"
-              async
-            />
-            <button onClick={() => setModalOpen(false)}>Cerrar modal</button>
-          </div>
-        )}
-      </div>
+        <div>
+            <button onClick={handleClick}>Abrir modal</button>
+            {modalOpen && (
+                <div className="modal">
+                    <script
+                        data-b24-form="auto/54/02nb6u"
+                        data-skip-moving="true"
+                        src="https://cdn.bitrix24.com/b19657597/crm/form/loader_54.js"
+                        async
+                    />
+                    <button id={props.id} className="btn_Style_Venta_Per" onClick={() => setModalOpen(false)}>{props.text}</button>
+                </div>
+            )}
+        </div>
     );
-  };
+};
 const Loader = () => {
     return (
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
