@@ -123,13 +123,13 @@ const ButtonFormulario = (props) => {
     };
     return (
         <div>
-        <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>
-          {props.text}
-        </button>
-        {modalOpen && (
-          <ModalFormulario open={modalOpen} onClose={() => setModalOpen(false)} />
-        )}
-      </div>
+            <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>
+                {props.text}
+            </button>
+            {modalOpen && (
+                <ModalFormulario open={modalOpen} onClose={() => setModalOpen(false)} />
+            )}
+        </div>
     );
 };
 const ModalFormulario = ({ open, onClose }) => {
@@ -163,6 +163,19 @@ let s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
 const Card = ({ destinos }) => {
     const [noDestinos, setNoDestinos] = React.useState(false);
     const [loaded, setLoaded] = React.useState(false);
+    const [modalOpen, setModalOpen] = React.useState(false);
+
+    const handleClick = (event) => {
+        event.preventDefault();
+
+        if (window.innerWidth <= 767) {
+            // Llamar a un número en dispositivos móviles
+            window.location.href = 'tel:08003480003';
+        } else {
+            // Abrir el formulario en dispositivos de escritorio
+            setModalOpen(true);
+        }
+    };
 
     React.useEffect(() => {
         fetchDestinos()
@@ -234,6 +247,9 @@ const Card = ({ destinos }) => {
                 )
             ) : (
                 <Loader />
+            )}
+            {modalOpen && (
+                <ModalFormulario open={modalOpen} onClose={() => setModalOpen(false)} />
             )}
         </>
     );
