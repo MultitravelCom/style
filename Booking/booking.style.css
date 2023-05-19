@@ -189,6 +189,7 @@
     color: #FFFFFF;
 
 }
+
 .modal__content-title-h3>h2 {
     font-style: normal;
     font-weight: 700;
@@ -244,7 +245,6 @@
     font-size: 12px;
     line-height: 15px;
     text-align: center;
-    width: ;
     color: #CCCCCC;
 
 }
@@ -341,7 +341,8 @@
     .promocodes__container {
         margin-left: 4rem;
     }
-    .modal__cupones{
+
+    .modal__cupones {
         width: 90%;
     }
 }
@@ -362,7 +363,7 @@
         width: 100%;
         margin-bottom: 0.5rem;
         background-size: 15%;
-        border-radius:1rem 1rem 0 0;
+        border-radius: 1rem 1rem 0 0;
         border-right: 0;
     }
 
@@ -405,5 +406,45 @@
 
     .container__conocer__cupones {
         width: 100%;
+    }
+}
+
+/* **** MULT-251 ******* */
+.booking-payment__options>.booking-payment__options-pos,
+.booking-payment__options-prepayment {
+    background: #FFFFFF;
+    border: 1px solid #0D4E88;
+    border-radius: 8px;
+    color: #0D4E88;
+}
+.booking-payment__options li .glyphicon{
+margin-top: 2px;
+}
+
+.booking-payment__options-prepayment {
+    width: 211px;
+    height: 36px;
+}
+
+.glyphicon-md {
+    color: #0D4E88;
+    margin-top:2px ;
+}
+
+.booking-payment__options li.on {
+    background: #0D4E88;
+    color: #FFFFFF;
+    background: #0D4E88;
+    border-radius: 8px;
+}
+
+.booking-payment__options li.on .glyphicon {
+    color: #FFFFFF;
+}
+@media (max-width: 767px) {
+    .booking-payment__options li,
+    .booking-payment__options li{
+        width: 100%;
+        margin-bottom: 8px;
     }
 }

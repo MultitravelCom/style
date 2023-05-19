@@ -39,75 +39,31 @@ modalCupones.innerHTML = `
   </div>
 `;
 
-const CuponsComponente = () => {
-  const [cupones, setCupones] = React.useState([]);
-
-  React.useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchCuponesData();
-      setCupones(data);
-    };
-    fetchData();
-  }, []);
-
-  return (
-    <>
-      <div className="main__cupon">
-        <div className="main__cupon__img"></div>
-        <div className="main__cupon__text">
-          <p>{cupon.titple}</p>
-        </div>
-        {cupones.map((cupon) => (
-          <React.Fragment key={cupon.id}>
-            <CuponsCondicion cupon={cupon} />
-          </React.Fragment>
-        ))}
-      </div>
-    </>
-  );
-};
-
-const CuponsCondicion = ({ cupon }) => {
-  return (
-    <div>
-      <div className="main__cupon__text--condiciones">
-        <div className="modal__content-title-circle">
-          <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-          <p>{cupon.destino}</p>
-        </div>
-        <div className="modal__content-title-calendar">
-          <div className="main__warningPric__icon glyphicon glyphicon-calendar"></div>
-          <p>{cupon.fecha}</p>
-        </div>
-      </div>
-      <div className="modal__content-cupon">
-        <h2>{cupon.cupon}</h2>
-        <span>Copia el siguiente código</span>
-      </div>
-    </div>
-  );
-};
-
-
-const ModalComponent = () => {
-  return (
-    <>
-      <div class="overlay__cupones" id="overlay__cupones">
-        <div class="modal__cupones">
-          <div class="modal-content">
-            <div class="modal__content-title">
-              <h2>Te damos la bienvenida a nuestra cuponera</h2>
-              <span class="close">X</span>
-            </div>
-            <div>
-              <CuponsCondicion />
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
-
-
-ReactDOM.render(<ModalComponent />, document.getElementById("root"));
+// const Cupones = () => {
+//   return (
+//     <div class="modal__content">
+//       <div class="modal__content-uno-title">
+//         <div class="modal__content-uno-logo">
+//         </div>
+//         <div class="modal__content-title-circleCalendar">
+//           <div class="modal__content-title-h3">
+//             <h2>10% OFF en vuelos y paquetes</h2>
+//           </div>
+//           <div class="modal__content-title-circle">
+//             <div class="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+//             <p>En paquetes, el descuento se aplica solo al aéreo.
+//               Tope de descuento $25.000. Cantidad limitada.</p>
+//           </div>
+//           <div class="modal__content-title-calendar">
+//             <div class="main__warningPric__icon glyphicon glyphicon-calendar"></div>
+//             <p>Disponi ble hasta el 10/05/2023 hasta las 23:59.</p>
+//           </div>
+//         </div>
+//       </div>
+//       <div class="modal__content-cupon">
+//         <h2>MULTITRAVELHOTSALE10</h2>
+//         <span>Copia el siguiente código</span>
+//       </div>
+//     </div>
+//   )
+// }

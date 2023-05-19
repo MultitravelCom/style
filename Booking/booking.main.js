@@ -1,21 +1,21 @@
-    async function changeText() {
-        const span = document.querySelector('.promocodes__container tr:nth-child(3) td span');
+async function changeText() {
+    const span = document.querySelector('.promocodes__container tr:nth-child(3) td span');
 
-        if (!span) {
-            await new Promise(resolve => setTimeout(resolve, 100));
-            await changeText();
-        } else {
-            span.textContent = 'Ingresá tu código promocional';
-        }
+    if (!span) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+        await changeText();
+    } else {
+        span.textContent = 'Ingresá tu código promocional';
     }
+}
 
-    async function agreeBtn() {
-        const confirmBooking = document.querySelector('.confirm-booking__promocodes');
+async function agreeBtn() {
+    const confirmBooking = document.querySelector('.confirm-booking__promocodes');
 
-        const newElementBookingCupons = document.createElement('div');
-        newElementBookingCupons.classList.add('container__conocer__cupones');
-        newElementBookingCupons.innerHTML =
-            `<div class="container__conocer__cupones__p">
+    const newElementBookingCupons = document.createElement('div');
+    newElementBookingCupons.classList.add('container__conocer__cupones');
+    newElementBookingCupons.innerHTML =
+        `<div class="container__conocer__cupones__p">
                 <p>Conoce y elegí de nuestros diferentes cupones el que más te convenga</p>
             </div>
             <div class="container__conocer__cupones__btn">
@@ -23,34 +23,34 @@
             </div>
         `;
 
-        newElementBookingCupons.querySelector('.cupones__btn__style').addEventListener('click', handleClick);
+    newElementBookingCupons.querySelector('.cupones__btn__style').addEventListener('click', handleClick);
 
-        // Espera a que el elemento padre exista antes de agregar el nuevo elemento
-        while (!confirmBooking) {
-            await new Promise(resolve => setTimeout(resolve, 100));
-        }
-
-        confirmBooking.appendChild(newElementBookingCupons);
+    // Espera a que el elemento padre exista antes de agregar el nuevo elemento
+    while (!confirmBooking) {
+        await new Promise(resolve => setTimeout(resolve, 100));
     }
 
-    async function showPromocodesDiv() {
-        // Espera a que el elemento exista antes de intentar mostrarlo
-        while (true) {
-            const promocodesDiv = document.querySelector('.confirm-booking__promocodes');
-            if (promocodesDiv) {
-                promocodesDiv.style.display = 'block';
-                break;
-            }
-            await new Promise(resolve => setTimeout(resolve, 100));
-        }
-    }
+    confirmBooking.appendChild(newElementBookingCupons);
+}
 
-    function handleClick(event) {
-        event.preventDefault()
-        // Crea el modal
-        const modalCupones = document.createElement('div');
-        modalCupones.classList.add('modal-cupones');
-        modalCupones.innerHTML = `
+async function showPromocodesDiv() {
+    // Espera a que el elemento exista antes de intentar mostrarlo
+    while (true) {
+        const promocodesDiv = document.querySelector('.confirm-booking__promocodes');
+        if (promocodesDiv) {
+            promocodesDiv.style.display = 'block';
+            break;
+        }
+        await new Promise(resolve => setTimeout(resolve, 100));
+    }
+}
+
+function handleClick(event) {
+    event.preventDefault()
+    // Crea el modal
+    const modalCupones = document.createElement('div');
+    modalCupones.classList.add('modal-cupones');
+    modalCupones.innerHTML = `
         <div class="overlay__cupones" id="overlay__cupones">
         <div class="modal__cupones">
             <div class="modal-content">
@@ -111,20 +111,27 @@
     </div>
         `;
 
-        // Agrega el modal al DOM
-        document.body.appendChild(modalCupones);
+    // Agrega el modal al DOM
+    document.body.appendChild(modalCupones);
 
-        // Agrega un event listener al botón de cerrar el modal
-        modalCupones.querySelector('.close').addEventListener('click', () => {
-            modalCupones.remove();
-        });
-    }
+    // Agrega un event listener al botón de cerrar el modal
+    modalCupones.querySelector('.close').addEventListener('click', () => {
+        modalCupones.remove();
+    });
+}
 
-    // Ejecuta las funciones en orden y asegúrate de que se completen antes de continuar con la siguiente
-    async function run() {
-        await changeText();
-        await agreeBtn();
-        showPromocodesDiv();
-    }
+// document.addEventListener('DOMContentLoaded', function() {
+//     const liElement = document.querySelector('.booking-payment__options-prepayment');
+//     if (liElement) {
+//       liElement.textContent = 'Transferencia / Efectivo';
+//     }
+//   });
+
+// Ejecuta las funciones en orden y asegúrate de que se completen antes de continuar con la siguiente
+async function run() {
+    await changeText();
+    await agreeBtn();
+    showPromocodesDiv();
+}
 
 run();
