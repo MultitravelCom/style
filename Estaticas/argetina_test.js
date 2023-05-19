@@ -163,7 +163,6 @@ let s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
 const Card = ({ destinos }) => {
     const [noDestinos, setNoDestinos] = React.useState(false);
     const [loaded, setLoaded] = React.useState(false);
-    const [modalOpen, setModalOpen] = React.useState(false);
 
     const handleClick = (event) => {
         event.preventDefault();
@@ -247,9 +246,6 @@ const Card = ({ destinos }) => {
                 )
             ) : (
                 <Loader />
-            )}
-            {modalOpen && (
-                <ModalFormulario open={modalOpen} onClose={() => setModalOpen(false)} />
             )}
         </>
     );
@@ -363,6 +359,7 @@ const CardContainer = ({ btnStyles, destinosFiltrados }) => {
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [destinos, setDestinos] = React.useState([]);
+    const [modalOpen, setModalOpen] = React.useState(false);
 
     const Bariloche = filtrarDestinos(destinos, "Bariloche");
     const Iguazu = filtrarDestinos(destinos, 'Iguazu');
@@ -391,6 +388,9 @@ function App() {
                             <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={Mendoza} />
                         </div>
                     </div>
+                    {modalOpen && (
+                        <ModalFormulario open={modalOpen} onClose={handleModalClose} />
+                    )}
                 </>
             )}
         </>
