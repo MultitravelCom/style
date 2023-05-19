@@ -89,7 +89,7 @@ const Button = (props) => {
             {modalOpen && (
                 <div className="modal">
                     <script
-                        data-b24-form="auto/54/02nb6u"
+                        data-b24-form="inline/54/02nb6u"
                         data-skip-moving="true"
                         src="https://cdn.bitrix24.com/b19657597/crm/form/loader_54.js"
                         async
