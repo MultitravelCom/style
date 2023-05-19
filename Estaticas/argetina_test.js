@@ -364,6 +364,10 @@ function App() {
     const handleModalOpen = () => {
         setModalOpen(true);
       };
+    
+      const handleModalClose = () => {
+        setModalOpen(false);
+      };
 
     React.useEffect(() => {
         fetchDestinos().then(data => {
