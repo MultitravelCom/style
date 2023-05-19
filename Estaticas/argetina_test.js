@@ -116,7 +116,7 @@ const ButtonFormulario = (props) => {
             window.location.href = 'tel:08003480003';
         } else {
             // Abrir el formulario en dispositivos de escritorio
-            props.onModalOpen();
+            props.handleModalOpen();
         }
     };
     return (
