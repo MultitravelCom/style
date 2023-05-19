@@ -68,38 +68,30 @@ const btnStyles = [
 
 // *****************************************************
 // ************** COMPONENTES ********************
-function Button(props) {
-    const [showForm, setShowForm] = React.useState(false);
+const Button = () => {
+    const [modalOpen, setModalOpen] = useState(false);
   
-    React.useEffect(() => {
-      const script = document.createElement('script');
-      script.src = 'https://cdn.bitrix24.com/b19657597/crm/form/loader_40.js';
-      script.async = true;
-      script.dataset.b24Form = 'inline/40/vgono1';
-      script.dataset.skipMoving = true;
-  
-      document.body.appendChild(script);
-  
-      return () => {
-        document.body.removeChild(script);
-      };
-    }, []);
-  
-    const handleClick = (event) => {
-      event.preventDefault();
-      setShowForm(true);
-    }
+    const handleClick = () => {
+      setModalOpen(true);
+    };
   
     return (
       <div>
-        {showForm ? (
-          <div id="formContainer" data-b24-form="inline/40/vgono1" />
-        ) : (
-          <button id={props.id} className={props.style} onClick={handleClick}>{props.text}</button>
+        <button onClick={handleClick}>Abrir modal</button>
+        {modalOpen && (
+          <div className="modal">
+            <script
+              data-b24-form="auto/54/02nb6u"
+              data-skip-moving="true"
+              src="https://cdn.bitrix24.com/b19657597/crm/form/loader_54.js"
+              async
+            />
+            <button onClick={() => setModalOpen(false)}>Cerrar modal</button>
+          </div>
         )}
       </div>
     );
-  }
+  };
 const Loader = () => {
     return (
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
