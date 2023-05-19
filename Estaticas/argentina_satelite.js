@@ -7,35 +7,24 @@ meta.setAttribute('content', 'Compará paquetes a Argentina y conseguí los mejo
 head.appendChild(meta);
 document.title = "Paquetes turísticos a Argentina | Multitravel.com"
 
+const modalAtencionStyle = document.createElement('link');
+const modalAtencionsJs = document.createElement('script');
+
+modalAtencionsJs.src = 'https://multitravelcom.github.io/components/MULT168/Modal/index.js';
+modalAtencionsJs.type = 'text/babel';
+
+modalAtencionStyle.href = 'https://multitravelcom.github.io/components/MULT168/Modal/style.css';
+modalAtencionStyle.rel = 'stylesheet';
+
+document.head.appendChild(modalAtencionStyle);
+document.head.appendChild(modalAtencionsJs);
+
 // const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
 // const linkWaFixed = document.querySelector('.whatsAppFixes a');
 // const linkWaHeaderMobile = document.querySelector('.btn.upper-menu__phone-wrapper.features_item a');
 // linkWaHeader.href = 'https://wa.link/xetnro';
 // linkWaFixed.href = 'https://wa.link/xetnro';
 // linkWaHeaderMobile.href = 'https://wa.link/xetnro';
-
-
-// const modalAtencionStyle = document.createElement('link');
-// const modalAtencionsJs = document.createElement('script');
-
-// modalAtencionsJs.src = 'https://multitravelcom.github.io/components/MULT168/Modal/index.js';
-// modalAtencionsJs.type = 'text/babel';
-
-// modalAtencionStyle.href = 'https://multitravelcom.github.io/components/MULT168/Modal/style.css';
-// modalAtencionStyle.rel = 'stylesheet';
-
-// function loadModalComponents() {
-//   document.head.appendChild(modalAtencionStyle);
-//   document.head.appendChild(modalAtencionsJs);
-// }
-
-// if (document.readyState === 'complete') {
-//   // El DOM ya se ha cargado completamente, se pueden agregar los componentes inmediatamente
-//   loadModalComponents();
-// } else {
-//   // El DOM aún no se ha cargado completamente, se espera al evento "load" de window
-//   window.addEventListener('load', loadModalComponents);
-// }
 
 // BD
 const destinos1 = [
