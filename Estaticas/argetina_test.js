@@ -102,9 +102,13 @@ const Button = (props) => {
   
     return (
       <div>
-        <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
+        <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>
+          {props.text}
+        </button>
         {modalOpen && (
           <div className="modal">
+            <h2>Modal de Prueba</h2>
+            <p>Este es un modal de prueba. Puedes agregar aquí el contenido del formulario.</p>
             <button onClick={() => setModalOpen(false)}>Cerrar modal</button>
           </div>
         )}
