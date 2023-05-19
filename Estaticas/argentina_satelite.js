@@ -15,27 +15,27 @@ document.title = "Paquetes turísticos a Argentina | Multitravel.com"
 // linkWaHeaderMobile.href = 'https://wa.link/xetnro';
 
 
-const modalAtencionStyle = document.createElement('link');
-const modalAtencionsJs = document.createElement('script');
+// const modalAtencionStyle = document.createElement('link');
+// const modalAtencionsJs = document.createElement('script');
 
-modalAtencionsJs.src = 'https://multitravelcom.github.io/components/MULT168/Modal/index.js';
-modalAtencionsJs.type = 'text/babel';
+// modalAtencionsJs.src = 'https://multitravelcom.github.io/components/MULT168/Modal/index.js';
+// modalAtencionsJs.type = 'text/babel';
 
-modalAtencionStyle.href = 'https://multitravelcom.github.io/components/MULT168/Modal/style.css';
-modalAtencionStyle.rel = 'stylesheet';
+// modalAtencionStyle.href = 'https://multitravelcom.github.io/components/MULT168/Modal/style.css';
+// modalAtencionStyle.rel = 'stylesheet';
 
-function loadModalComponents() {
-  document.head.appendChild(modalAtencionStyle);
-  document.head.appendChild(modalAtencionsJs);
-}
+// function loadModalComponents() {
+//   document.head.appendChild(modalAtencionStyle);
+//   document.head.appendChild(modalAtencionsJs);
+// }
 
-if (document.readyState === 'complete') {
-  // El DOM ya se ha cargado completamente, se pueden agregar los componentes inmediatamente
-  loadModalComponents();
-} else {
-  // El DOM aún no se ha cargado completamente, se espera al evento "load" de window
-  window.addEventListener('load', loadModalComponents);
-}
+// if (document.readyState === 'complete') {
+//   // El DOM ya se ha cargado completamente, se pueden agregar los componentes inmediatamente
+//   loadModalComponents();
+// } else {
+//   // El DOM aún no se ha cargado completamente, se espera al evento "load" de window
+//   window.addEventListener('load', loadModalComponents);
+// }
 
 // BD
 const destinos1 = [
