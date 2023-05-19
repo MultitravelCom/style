@@ -452,6 +452,9 @@
 .main__container__text>h2 {
   font-weight: 600;
 }
+.main__container__text>p{
+  font-size: 12px;
+}
 
 .main__container__img {
   width: 333px;
