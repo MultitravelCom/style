@@ -76,7 +76,7 @@ const Button = (props) => {
         
         if (window.innerWidth <= 767) {
           // Llamar a un número en dispositivos móviles
-          window.location.href = 'tel:+123456789';
+          window.location.href = 'tel:08003480003';
         } else {
           // Abrir el formulario en dispositivos de escritorio
           setModalOpen(true);
@@ -94,7 +94,7 @@ const Button = (props) => {
                         src="https://cdn.bitrix24.com/b19657597/crm/form/loader_54.js"
                         async
                     />
-                    <button id={props.id} className="btn_Style_Venta_Per" onClick={() => setModalOpen(false)}>{props.text}</button>
+                    <button onClick={() => setModalOpen(false)}>Cerrar modal</button>
                 </div>
             )}
         </div>
