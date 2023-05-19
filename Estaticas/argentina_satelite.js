@@ -214,13 +214,20 @@ const BannerTop = () => {
 function Button(props) {
     const handleClick = (event) => {
         event.preventDefault();
-        window.open(props.link, '_blank');
-    }
+
+        if (window.innerWidth <= 767) {
+            // Llamar a un número en dispositivos móviles
+            window.location.href = 'tel:08003480003';
+        } else {
+            window.open(props.link, '_blank');
+        }
+    };
 
     return (
         <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
     );
 }
+
 
 function mostrarSeccion() {
     let url = window.location.href; // Obtener la URL completa
