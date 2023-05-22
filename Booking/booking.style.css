@@ -421,7 +421,7 @@
 margin-top: 2px;
 }
 
-.booking-payment__options li {
+.booking-payment__options>.booking-payment__options-prepayment {
     width: 211px;
     height: 36px;
 }
