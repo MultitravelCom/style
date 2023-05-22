@@ -632,12 +632,8 @@ details {
 
 .details-card__map {
   height: 226px !important;
+  border-radius: 8px;
 }
-
-.details-card__section {
-  position: relative;
-}
-
 .chevron-down-hotels {
   position: absolute;
   right: 22px;
@@ -645,5 +641,10 @@ details {
   font-size: 28px;
 }
 .details-card__section{
+  position: relative;
   cursor: pointer;
+  border-radius: 8px;
+}
+.gallery__item.item.gallery__item--with-caption{
+  border-radius: 8px;
 }
