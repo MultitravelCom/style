@@ -1,8 +1,8 @@
 function ButtonBannerResult(props) {
 
   const handleClick = (event) => {
-      event.preventDefault();
-      setShowModal(true);
+      // event.preventDefault();
+      // setShowModal(true);
   }
 
   return (
