@@ -140,10 +140,3 @@ async function run() {
 }
 
 run();
-
-
-<li class="booking-payment__options-prepayment">
-    <input type="radio" name="paymentType" value="prepayment" class="js-paymentType hidden">
-        <span class="glyphicon glyphicon-md"></span>
-        Transferencia
-</li>
