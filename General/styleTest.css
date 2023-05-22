@@ -624,10 +624,26 @@ details {
 #flight-searcher {
   position: inherit;
 }
+
 /* ********** MULT-247 ********************** */
-.details-card__section-content{
+.details-card__section-content {
   display: none;
 }
-.details-card__map{
+
+.details-card__map {
   height: 226px !important;
+}
+
+.details-card__section {
+  position: relative;
+}
+
+.chevron-down-hotels {
+  position: absolute;
+  right: 22px;
+  top: 21px;
+  font-size: 28px;
+}
+.details-card__section{
+  cursor: pointer;
 }
