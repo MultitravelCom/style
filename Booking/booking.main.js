@@ -122,9 +122,10 @@ function handleClick(event) {
 
 document.addEventListener('DOMContentLoaded', function () {
     const liElement = document.querySelector('.booking-payment__options-prepayment');
-    const textTransferencia = liElement.textContent.trim();
+    const textTransferencia = liElement.firstChild.textContent.trim();
+
     if (liElement) {
-        liElement.textContent = textTransferencia.replace('Transferencia', 'Transferencia / Efectivo');
+        liElement.firstChild.textContent = textTransferencia.replace('Transferencia', 'Transferencia / Efectivo');
     }
 });
 
