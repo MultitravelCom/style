@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
         liElement.childNodes.forEach(node => {
             if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() === 'Transferencia') {
                 node.textContent = 'Transferencia / Efectivo';
-                bookingPaymentOptions.style.display = 'inline-bloc';
+                bookingPaymentOptions.style.display = 'inline-block';
             }
         });
     }
