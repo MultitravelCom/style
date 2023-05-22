@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     if (liElement) {
-        const textTransferencia = liElement.childNodes[7];
+        const textTransferencia = liElement.childNodes[0];
         textTransferencia.textContent = 'Transferencia / Efectivo';
     }
 });
