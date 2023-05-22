@@ -417,6 +417,9 @@
     border-radius: 8px;
     color: #0D4E88;
 }
+.booking-payment__options{
+    display: none;
+}
 .booking-payment__options li .glyphicon{
 margin-top: 2px;
 }
