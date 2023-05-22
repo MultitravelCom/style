@@ -120,12 +120,13 @@ function handleClick(event) {
     });
 }
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const liElement = document.querySelector('.booking-payment__options-prepayment');
-//     if (liElement) {
-//       liElement.textContent = 'Transferencia / Efectivo';
-//     }
-//   });
+document.addEventListener('DOMContentLoaded', function () {
+    const liElement = document.querySelector('.booking-payment__options-prepayment');
+    const textTransferencia = liElement.textContent.trim();
+    if (liElement) {
+        liElement.textContent = textTransferencia.replace('Transferencia', 'Transferencia / Efectivo');
+    }
+});
 
 // Ejecuta las funciones en orden y asegúrate de que se completen antes de continuar con la siguiente
 async function run() {
