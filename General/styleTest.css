@@ -624,3 +624,7 @@ details {
 #flight-searcher {
   position: inherit;
 }
+/* ********** MULT-247 ********************** */
+.details-card__section-content{
+  display: none;
+}
