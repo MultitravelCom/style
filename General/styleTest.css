@@ -628,3 +628,6 @@ details {
 .details-card__section-content{
   display: none;
 }
+.details-card__map{
+  height: 226px !important;
+}
