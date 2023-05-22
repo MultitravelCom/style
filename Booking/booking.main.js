@@ -124,8 +124,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const liElement = document.querySelector('.booking-payment__options-prepayment');
 
     if (liElement) {
-        const textTransferencia = liElement.childNodes[0];
-        textTransferencia.nodeValue = textNode.nodeValue.replace('Transferencia', 'Transferencia / Efectivo');
+        liElement.childNodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() === 'Transferencia') {
+                node.textContent = 'Transferencia / Efectivo';
+            }
+        });
     }
 });
 
@@ -137,3 +140,10 @@ async function run() {
 }
 
 run();
+
+
+<li class="booking-payment__options-prepayment">
+    <input type="radio" name="paymentType" value="prepayment" class="js-paymentType hidden">
+        <span class="glyphicon glyphicon-md"></span>
+        Transferencia
+</li>
