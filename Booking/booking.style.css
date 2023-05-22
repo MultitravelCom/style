@@ -450,4 +450,7 @@ margin-top: 2px;
         width: 100%;
         margin-bottom: 8px;
     }
+    .booking-payment__options>.booking-payment__options-prepayment {
+        width: 100%;
+    }
 }
