@@ -662,3 +662,7 @@ details {
 .details-card__availability {
   border-radius: 8px;
 }
+/* ************* MULT-249 ***************** */
+ul.select2-results__options li:nth-last-child(-n+2) {
+  display: none;
+}
