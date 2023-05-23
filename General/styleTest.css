@@ -43,7 +43,7 @@
 .info-card__category {
   position: absolute;
   top: 48px;
-  left: -1px;
+  left: 2px;
   display: flex;
   align-items: center;
 }
@@ -51,7 +51,7 @@
 .info-card__location--action.js-result-map-toggle {
   position: absolute;
   top: 86px;
-  left: 8px;
+  left: 10px;
 }
 
 .map-link>.glyphicon-map-marker {
@@ -127,7 +127,7 @@
   justify-content: space-between;
   position: absolute;
   top: 125px;
-  left: 12px;
+  left: 14px;
 }
 
 .share__icon {
