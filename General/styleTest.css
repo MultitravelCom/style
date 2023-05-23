@@ -228,8 +228,8 @@
   .info-card__content>.info-card__price {
     position: absolute !important;
     width: 135px;
-    left: -4px;
-    top: 123px;
+    left: -12px;
+    top: 128px;
     height: 50px;
 
   }
@@ -240,10 +240,11 @@
   }
 
   .info-card__actions .info-card__options-toggle {
+    width: 120px;
     display: block;
-    bottom: 1px;
+    bottom: -9px;
     position: absolute;
-    left: 23px;
+    left: 22px;
   }
 
   .info-card__location--action.js-result-map-toggle {
