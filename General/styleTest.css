@@ -65,7 +65,9 @@
 }
 
 .info-card__options-toggle {
-  width: 116px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: 144px;
   height: 34px;
   padding: 8px 24px;
   background: #DF0032;
@@ -95,9 +97,10 @@
 .bestprice__title {
   color: rgba(0, 0, 0, 1);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 17px;
   text-align: right;
+  margin-bottom: 4px;
 }
 
 .iconStar {
@@ -160,8 +163,9 @@
 
 @media (max-width: 767px) {
   .main__container__share {
+    width: 24px;
     top: -34px;
-    left: 239px;
+    left: 90%;
   }
 
   .share__text {
@@ -228,11 +232,6 @@
     top: 123px;
     height: 50px;
 
-  }
-
-  .main__container__share {
-    top: -34px;
-    right: 12px;
   }
 
   .info-card__category {
