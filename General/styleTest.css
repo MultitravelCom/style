@@ -252,6 +252,7 @@
   }
 
   .info-card__title--action {
+    padding-top: 5px;
     line-height: 0.92 !important;
   }
 
