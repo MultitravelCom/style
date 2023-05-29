@@ -1,40 +1,37 @@
 const CopyTaxFlight = () => {
-  const [shouldShowComponent, setShouldShowComponent] = React.useState(false);
-
-  React.useEffect(() => {
-    const handleDOMChange = () => {
-      const flightSelectionBox = document.querySelector('.flight-selection__box');
-      setShouldShowComponent(flightSelectionBox !== null);
-    };
-
-    // Observar cambios en el DOM usando MutationObserver
-    const observer = new MutationObserver(handleDOMChange);
-    const targetNode = document.documentElement;
-    const config = { childList: true, subtree: true };
-
-    observer.observe(targetNode, config);
-
-    // Detener la observación cuando el componente se desmonta
-    return () => observer.disconnect();
-  }, []);
-
-  return shouldShowComponent ? (
-    <div className="main_container_copyTaxFlight">
-      <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-      <p className="main__warningPric__icon__p">
-        En caso de vuelos internacionales, los precios siempre incluyen impuesto país y percepciones.
-      </p>
-    </div>
-  ) : null;
-};
-
-
-const App = () => {
     return (
-      <div>
-        <CopyTaxFlight />
+      <div className="main_container_copyTaxFlight">
+        <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+        <p className="main__warningPric__icon__p">
+          En caso de vuelos internacionales, los precios siempre incluyen impuesto país y percepciones.
+        </p>
       </div>
     );
   };
   
-  ReactDOM.render(<App />, document.getElementsByClassName('flight-selection__box'));
+  const App = () => {
+    React.useEffect(() => {
+      const observer = new MutationObserver((mutationsList) => {
+        const breakdownContainer = document.querySelector('.flight-selection__breakdown');
+        const copyTaxFlightContainer = breakdownContainer.querySelector('.main_container_copyTaxFlight');
+  
+        if (breakdownContainer && !copyTaxFlightContainer) {
+          const newCopyTaxFlightContainer = document.createElement('div');
+          newCopyTaxFlightContainer.className = 'main_container_copyTaxFlight';
+          breakdownContainer.appendChild(newCopyTaxFlightContainer);
+  
+          ReactDOM.render(<CopyTaxFlight />, newCopyTaxFlightContainer);
+        }
+      });
+  
+      const targetNode = document.body;
+      const config = { childList: true, subtree: true };
+  
+      observer.observe(targetNode, config);
+  
+      return () => observer.disconnect();
+    }, []);
+  
+    return null;
+  };
+  
