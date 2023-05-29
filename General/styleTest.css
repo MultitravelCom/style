@@ -646,6 +646,9 @@ body.home.home--default .home-v5__searcher {
   background-color: #ebe5e5 !important;
   padding: 16px;
 }
+#flights-searcher{
+  position: inherit;
+}
 
 /* ********************** */
 
