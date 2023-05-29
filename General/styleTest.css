@@ -635,9 +635,6 @@ details {
 body.home.home--default .home-v5 .multi-searcher__content{
   position: initial !important;
 }
-body.home.home--default .home-v5 .searcher{
-  position: relative !important;
-}
 #home-carousel{
   position: absolute;
 }
