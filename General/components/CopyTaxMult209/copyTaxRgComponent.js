@@ -10,9 +10,6 @@ const CopyTaxFlight = () => {
   };
   
   // Inserta el componente CopyTaxFlight en el lugar deseado
-  const flightBestPrices = document.querySelector('.flight-bestprices');
-  const ContainerCopyTaxFlight = document.createElement('div');
-  ContainerCopyTaxFlight.classList.add('booking-breakdown__table');
-  flightBestPrices.after(ContainerCopyTaxFlight);
-  
+
+  const ContainerCopyTaxFlight = document.querySelector(".flight-selection")  
   ReactDOM.render(<CopyTaxFlight />, ContainerCopyTaxFlight);
