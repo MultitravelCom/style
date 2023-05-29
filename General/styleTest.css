@@ -631,7 +631,21 @@ details {
 .flight-selection__box .flight-selection__breakdown > *:not(:nth-last-child(-n+3)) {
   display: none;
 }
-/* ************************************************** */
+/* *************** MULT-257 ********************** */
+body.home.home--default .home-v5 .multi-searcher__content{
+  position: initial !important;
+}
+body.home.home--default .home-v5 .searcher{
+  position: relative !important;
+}
+#home-carousel{
+  position: absolute;
+}
+.multi-searcher{
+margin-bottom: 5rem;
+}
+
+/* ********************** */
 
 .details-card__map {
   height: 226px !important;
