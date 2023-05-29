@@ -628,9 +628,10 @@ details {
   position: inherit;
 }
 /* *************** MULT-271 ********************** */
-.flight-selection__box .flight-selection__breakdown > * {
+.flight-selection__box .flight-selection__breakdown > *:not(:nth-last-child(-n+3)) {
   display: none;
 }
+/* ************************************************** */
 
 .details-card__map {
   height: 226px !important;
