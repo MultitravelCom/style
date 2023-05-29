@@ -627,20 +627,30 @@ details {
 #flight-searcher {
   position: inherit;
 }
+
 /* *************** MULT-271 ********************** */
-.flight-selection__box .flight-selection__breakdown > *:not(:nth-last-child(-n+3)) {
+.flight-selection__box .flight-selection__breakdown>*:not(:nth-last-child(-n+3)) {
   display: none;
 }
+
 /* *************** MULT-257 ********************** */
-body.home.home--default .home-v5 .multi-searcher__content{
+body.home.home--default .home-v5 .multi-searcher__content {
   position: initial !important;
 }
-#home-carousel{
+
+#home-carousel {
   position: absolute;
 }
-#flight-searcher{
-margin-bottom: 5rem;
+
+#flight-searcher {
+  margin-bottom: 5rem;
 }
+
+body.home.home--default .home-v5__searcher {
+  background-color: #ebe5e5 !important;
+  padding: 16px;
+}
+
 /* ********************** */
 
 .details-card__map {
