@@ -641,10 +641,9 @@ body.home.home--default .home-v5 .searcher{
 #home-carousel{
   position: absolute;
 }
-.multi-searcher{
+#flight-searcher{
 margin-bottom: 5rem;
 }
-
 /* ********************** */
 
 .details-card__map {
