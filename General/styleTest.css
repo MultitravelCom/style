@@ -43,7 +43,7 @@
 .info-card__category {
   position: absolute;
   top: 48px;
-  left: -1px;
+  left: 2px;
   display: flex;
   align-items: center;
 }
@@ -51,7 +51,7 @@
 .info-card__location--action.js-result-map-toggle {
   position: absolute;
   top: 86px;
-  left: 8px;
+  left: 10px;
 }
 
 .map-link>.glyphicon-map-marker {
@@ -65,11 +65,15 @@
 }
 
 .info-card__options-toggle {
-  width: 116px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: 144px;
   height: 34px;
   padding: 8px 24px;
   background: #DF0032;
   border-radius: 12px;
+  position: relative;
+  right: 14px;
 }
 
 .info-card__actions {
@@ -95,9 +99,10 @@
 .bestprice__title {
   color: rgba(0, 0, 0, 1);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 17px;
   text-align: right;
+  margin-bottom: 4px;
 }
 
 .iconStar {
@@ -122,7 +127,7 @@
   justify-content: space-between;
   position: absolute;
   top: 125px;
-  left: 12px;
+  left: 14px;
 }
 
 .share__icon {
@@ -160,8 +165,9 @@
 
 @media (max-width: 767px) {
   .main__container__share {
+    width: 24px;
     top: -34px;
-    left: 239px;
+    left: 88%;
   }
 
   .share__text {
@@ -224,15 +230,10 @@
   .info-card__content>.info-card__price {
     position: absolute !important;
     width: 135px;
-    left: -4px;
-    top: 123px;
+    left: -12px;
+    top: 128px;
     height: 50px;
 
-  }
-
-  .main__container__share {
-    top: -34px;
-    right: 12px;
   }
 
   .info-card__category {
@@ -241,10 +242,11 @@
   }
 
   .info-card__actions .info-card__options-toggle {
+    width: 120px;
     display: block;
-    bottom: 1px;
+    bottom: -9px;
     position: absolute;
-    left: 23px;
+    left: 15px;
   }
 
   .info-card__location--action.js-result-map-toggle {
@@ -252,6 +254,7 @@
   }
 
   .info-card__title--action {
+    padding-top: 5px;
     line-height: 0.92 !important;
   }
 
@@ -627,4 +630,34 @@ details {
 /* *************** MULT-271 ********************** */
 .flight-selection__box .flight-selection__breakdown > * {
   display: none;
+}
+
+.details-card__map {
+  height: 226px !important;
+  border-radius: 8px;
+}
+
+#js-results-map-container {
+  border-radius: 8px;
+}
+
+.chevron-down-hotels {
+  position: absolute;
+  right: 22px;
+  top: 21px;
+  font-size: 28px;
+}
+
+.details-card__section {
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.gallery__item.item.gallery__item--with-caption {
+  border-radius: 8px;
+}
+
+.details-card__availability {
+  border-radius: 8px;
 }
