@@ -8,7 +8,7 @@ const CopyTaxFlight = () => {
 };
 
 
-const flightBestPrices = document.querySelector('.flight-bestprices');
+const flightBestPrices = document.querySelector('.flight-selection__breakdown-line--total');
 const ContainerCopyTaxFlight = document.createElement('div');
 ContainerCopyTaxFlight.classList.add('booking-breakdown__table');
 flightBestPrices.after(ContainerCopyTaxFlight);
