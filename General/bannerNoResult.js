@@ -15,9 +15,9 @@ function BannerNoResult() {
     <>
       <div className="container-fluid container__bannerNoResultr">
         <div className="bannerNoResultr_text">
-          <h2>Lo sentimos</h2>
-          <p className="bannerNoResultr_text__p1">En este momento no contamos con disponibilidad para esta búsqueda</p>
-          <p className="bannerNoResultr_text__p2">Te invitamos a modificar la fecha o a comunicarte con nuestro equipo de atención personalizada</p>
+          <h2>Lo sentimos...</h2>
+          <p className="bannerNoResultr_text__p1">Estamos trabajando para ampliar nuestra oferta de productos.</p>
+          <p className="bannerNoResultr_text__p2">Te invitamos a que consultes con nuestro equipo de atención personalizada por lo misma u otras alternativas.</p>
           <ButtonBannerResult id="btnBannerSearch" style="btn btn_Style_NoResult" link="https://wa.link/j47nea" text="Contactarme" />
         </div>
         <div className="bannerNoResultr_img">
