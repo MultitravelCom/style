@@ -628,10 +628,29 @@ details {
   position: inherit;
 }
 
-/* ********** MULT-247 ********************** */
-.details-card__section-content {
+/* *************** MULT-271 ********************** */
+.flight-selection__box .flight-selection__breakdown>*:not(:nth-last-child(-n+3)) {
   display: none;
 }
+
+/* *************** MULT-257 ********************** */
+body.home.home--default .home-v5 .multi-searcher__content {
+  position: initial !important;
+}
+
+#home-carousel {
+  position: absolute;
+}
+
+body.home.home--default .home-v5__searcher {
+  background-color: #ebe5e5 !important;
+  padding: 16px;
+}
+#flights-searcher{
+  position: inherit;
+}
+
+/* ********************** */
 
 .details-card__map {
   height: 226px !important;
@@ -661,8 +680,4 @@ details {
 
 .details-card__availability {
   border-radius: 8px;
-}
-/* ************* MULT-249 ***************** */
-ul.select2-results__options li:nth-last-child(-n+2) {
-  display: none;
 }
