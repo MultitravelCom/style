@@ -452,7 +452,8 @@
 .main__container__text>h2 {
   font-weight: 600;
 }
-.main__container__text>p{
+
+.main__container__text>p {
   font-size: 12px;
 }
 
@@ -642,6 +643,7 @@
   border-radius: 8px;
 
 }
+
 .glyphicon-info-circle {
   color: #2196F3;
   font-size: 19px;
@@ -656,22 +658,26 @@
 }
 
 /* Ocultar precio final - Mult- */
-.renderPriceTagStyle{
+.renderPriceTagStyle {
   display: none;
 }
+
 /* **************** MULT-235 ***************/
 .label.label-default.more-master-selector-options.supsearcher {
   display: none;
 }
+
 /* ********** MULT-230 ********************** */
-.booking-payment__info.prepayment>p{
+.booking-payment__info.prepayment>p {
   display: none;
 }
+
 /* ************ MULT-252 ************ */
 .booking-details__action-item:first-child {
   display: none;
 }
-.footer-bottom__link>.glyphicon-whatsapp-bottomless{
+
+.footer-bottom__link>.glyphicon-whatsapp-bottomless {
   display: none;
 }
 
@@ -689,7 +695,8 @@ body.home.home--default .home-v5__searcher,
 #home-carousel>.carousel-inner {
   height: 260px;
 }
-.home-v5__carousel .hidden-xs .hidden-sm{
+
+.home-v5__carousel .hidden-xs .hidden-sm {
   display: none;
 }
 
@@ -708,31 +715,50 @@ body.home.home--default .home-v5__searcher,
   position: inherit !important;
 }
 
-.dropdown .show-more .pull-right{
+.dropdown .show-more .pull-right {
   display: none !important;
 }
-.multi-searcher__content{
+
+.multi-searcher__content {
   border-radius: 0;
 }
-.multi-searcher .dropdown.show-more{
+
+.multi-searcher .dropdown.show-more {
   display: none !important;
 
 }
-.tab-content{
+
+.tab-content {
   margin-top: 0 !important;
 }
+
 @media (max-width: 767px) {
-  body.home.home--default .home-v5 .multi-searcher .tab-content .searcher{
+  body.home.home--default .home-v5 .multi-searcher .tab-content .searcher {
     border-radius: 15px;
   }
+
   #flights-searcher {
     margin: 0;
   }
-  .dropdown .show-more .pull-right{
+
+  .dropdown .show-more .pull-right {
     display: none;
   }
-  body.home.home--default .home-v5__searcher, .multi-searcher__content{
+
+  body.home.home--default .home-v5__searcher,
+  .multi-searcher__content {
     padding: 0;
   }
-}
 
+  #flight-searcher,
+  #master-searcher,
+  #flights-searcher,
+  #hotel-searcher,
+  #super-package-searcher,
+  #service-searcher,
+  #transfer-searcher,
+  #insurance-searcher {
+    border-radius: 1rem;
+    margin: 0 5px;
+  }
+}
