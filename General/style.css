@@ -675,3 +675,45 @@
   display: none;
 }
 
+/* *************** MULT-257 ********************** */
+body.home.home--default .home-v5 .multi-searcher__content {
+  position: initial !important;
+}
+
+body.home.home--default .home-v5__searcher,
+.multi-searcher__content {
+  background-color: #ebe5e5 !important;
+  padding: 1rem 0;
+}
+
+#home-carousel>.carousel-inner {
+  height: 260px;
+}
+.home-v5__carousel .hidden-xs .hidden-sm{
+  display: none;
+}
+
+#home-carousel {
+  display: none !important;
+}
+
+#flight-searcher,
+#master-searcher,
+#flights-searcher,
+#hotel-searcher,
+#super-package-searcher,
+#service-searcher,
+#transfer-searcher,
+#insurance-searcher {
+  position: inherit !important;
+}
+
+.dropdown .show-more .pull-right{
+  display: none !important;
+}
+.multi-searcher__content{
+  border-radius: 0;
+}
+.tab-content{
+  margin-top: 0 !important;
+}

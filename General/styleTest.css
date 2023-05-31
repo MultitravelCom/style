@@ -646,16 +646,21 @@ body.home.home--default .home-v5__searcher,
   display: none !important;
 }
 
-#flight-searcher {
+#flight-searcher,
+#master-searcher,
+#flights-searcher,
+#hotel-searcher,
+#super-package-searcher,
+#service-searcher,
+#transfer-searcher,
+#insurance-searcher {
   position: inherit !important;
 }
-#flights-searcher{
-  position: inherit !important;
-}
+
 .dropdown .show-more .pull-right{
   display: none !important;
 }
-multi-searcher__content{
+.multi-searcher__content{
   border-radius: 0;
 }
 .tab-content{
