@@ -60,9 +60,9 @@
 .btn_Style_NoResult:hover {
   background-color: #1169B7;
 }
-.booking-breakdown__table{
+/* .booking-breakdown__table{
   display: none;
-}
+} */
 @media (max-width: 767px) {
   .container__bannerNoResultr {
     flex-direction: column-reverse;
