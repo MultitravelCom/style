@@ -714,6 +714,25 @@ body.home.home--default .home-v5__searcher,
 .multi-searcher__content{
   border-radius: 0;
 }
+.multi-searcher .dropdown.show-more{
+  display: none !important;
+
+}
 .tab-content{
   margin-top: 0 !important;
 }
+@media (max-width: 767px) {
+  body.home.home--default .home-v5 .multi-searcher .tab-content .searcher{
+    border-radius: 15px;
+  }
+  #flights-searcher {
+    margin: 0;
+  }
+  .dropdown .show-more .pull-right{
+    display: none;
+  }
+  body.home.home--default .home-v5__searcher, .multi-searcher__content{
+    padding: 0;
+  }
+}
+
