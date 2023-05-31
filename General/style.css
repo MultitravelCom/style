@@ -759,6 +759,6 @@ body.home.home--default .home-v5__searcher,
   #transfer-searcher,
   #insurance-searcher {
     border-radius: 1rem;
-    margin: 0 5px;
+    margin: 8px 5px;
   }
 }
