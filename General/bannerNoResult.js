@@ -1,12 +1,12 @@
 function ButtonBannerResult(props) {
 
   const handleClick = (event) => {
-      event.preventDefault();
-      // setShowModal(true);
+    event.preventDefault();
+    // setShowModal(true);
   }
 
   return (
-      <button id={props.id} className={props.style} onClick={handleClick}>{props.text}</button>
+    <button id={props.id} className={props.style} onClick={handleClick}>{props.text}</button>
   );
 }
 
@@ -40,11 +40,7 @@ function checkForClass() {
   if (el) {
     // Si la clase msg-box--no-results está disponible, se renderiza el componente
     renderBannerNoResult();
-
-    if (table) {
-      // Si la clase booking-breakdown__table está disponible, se agrega display: none
-      table.style.display = 'none';
-    }
+    table.style.display = 'none';
 
     observer.disconnect();
   }
