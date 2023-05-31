@@ -649,6 +649,9 @@ body.home.home--default .home-v5__searcher {
 #flights-searcher{
   position: inherit;
 }
+#home-carousel>.carousel-inner {
+  height: 260px;
+}
 
 /* ********************** */
 
