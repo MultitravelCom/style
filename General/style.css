@@ -38,6 +38,11 @@
   margin-bottom: 24px !important;
 }
 
+/****** Caja de busqueda*********** */
+#home-carousel>.carousel-inner {
+  height: 260px;
+}
+
 /* Estilos newsletter */
 .fix-margin>.newsletter__container {
   background: #f7f7f7 !important;
