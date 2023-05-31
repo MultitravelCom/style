@@ -619,15 +619,6 @@ details {
   display: none;
 }
 
-/* **********************************************/
-#home-carousel {
-  display: none;
-}
-
-#flight-searcher {
-  position: inherit;
-}
-
 /* *************** MULT-271 ********************** */
 .flight-selection__box .flight-selection__breakdown>*:not(:nth-last-child(-n+3)) {
   display: none;
@@ -638,21 +629,38 @@ body.home.home--default .home-v5 .multi-searcher__content {
   position: initial !important;
 }
 
-#home-carousel {
-  position: absolute;
+body.home.home--default .home-v5__searcher,
+.multi-searcher__content {
+  background-color: #ebe5e5 !important;
+  padding: 1rem 0;
 }
 
-body.home.home--default .home-v5__searcher {
-  background-color: #ebe5e5 !important;
-  padding: 16px;
-}
-#flights-searcher{
-  position: inherit;
-}
 #home-carousel>.carousel-inner {
   height: 260px;
 }
+.home-v5__carousel .hidden-xs .hidden-sm{
+  display: none;
+}
 
+#home-carousel {
+  display: none !important;
+}
+
+#flight-searcher {
+  position: inherit !important;
+}
+#flights-searcher{
+  position: inherit !important;
+}
+.dropdown .show-more .pull-right{
+  display: none !important;
+}
+multi-searcher__content{
+  border-radius: 0;
+}
+.tab-content{
+  margin-top: 0 !important;
+}
 /* ********************** */
 
 .details-card__map {
