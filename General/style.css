@@ -669,22 +669,3 @@
 .footer-bottom__link>.glyphicon-whatsapp-bottomless{
   display: none;
 }
-/* *************** MULT-257 ********************** */
-body.home.home--default .home-v5 .multi-searcher__content {
-  position: initial !important;
-}
-
-#home-carousel {
-  position: absolute;
-}
-
-body.home.home--default .home-v5__searcher {
-  background-color: #ebe5e5 !important;
-  padding: 16px;
-}
-#flights-searcher{
-  position: inherit;
-}
-#home-carousel>.carousel-inner {
-  height: 260px;
-}
