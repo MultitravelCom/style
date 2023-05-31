@@ -676,7 +676,7 @@
 }
 
 /* *************** MULT-257 ********************** */
-body.home.home--default .home-v5 .multi-searcher__content {
+/* body.home.home--default .home-v5 .multi-searcher__content {
   position: initial !important;
 }
 
@@ -716,4 +716,4 @@ body.home.home--default .home-v5__searcher,
 }
 .tab-content{
   margin-top: 0 !important;
-}
+} */
