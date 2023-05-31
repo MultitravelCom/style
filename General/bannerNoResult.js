@@ -33,12 +33,19 @@ function renderBannerNoResult() {
   ReactDOM.createRoot(document.querySelector('.results-list__body')).render(<BannerNoResult />);
 }
 
-// Función que comprueba si la clase msg-box--no-results está disponible en el DOM
 function checkForClass() {
   const el = document.querySelector('.msg-box--no-results');
+  const table = document.querySelector('.booking-breakdown__table');
+
   if (el) {
-    // Si la clase está disponible, se renderiza el componente
+    // Si la clase msg-box--no-results está disponible, se renderiza el componente
     renderBannerNoResult();
+
+    if (table) {
+      // Si la clase booking-breakdown__table está disponible, se agrega display: none
+      table.style.display = 'none';
+    }
+
     observer.disconnect();
   }
 }
