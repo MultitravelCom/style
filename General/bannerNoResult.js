@@ -15,9 +15,9 @@ function BannerNoResult() {
     <>
       <div className="container-fluid container__bannerNoResultr">
         <div className="bannerNoResultr_text">
-          <h2>Lo sentimos</h2>
-          <p className="bannerNoResultr_text__p1">En este momento no contamos con disponibilidad para esta búsqueda</p>
-          <p className="bannerNoResultr_text__p2">Te invitamos a modificar la fecha o a comunicarte con nuestro equipo de atención personalizada</p>
+          <h2>Lo sentimos...</h2>
+          <p className="bannerNoResultr_text__p1">Estamos trabajando para ampliar nuestra oferta de productos.</p>
+          <p className="bannerNoResultr_text__p2">Te invitamos a que consultes con nuestro equipo de atención personalizada por lo misma u otras alternativas.</p>
           <ButtonBannerResult id="btnBannerSearch" style="btn btn_Style_NoResult" link="https://wa.link/j47nea" text="Contactarme" />
         </div>
         <div className="bannerNoResultr_img">
@@ -33,12 +33,15 @@ function renderBannerNoResult() {
   ReactDOM.createRoot(document.querySelector('.results-list__body')).render(<BannerNoResult />);
 }
 
-// Función que comprueba si la clase msg-box--no-results está disponible en el DOM
 function checkForClass() {
   const el = document.querySelector('.msg-box--no-results');
+  const table = document.querySelector('.booking-breakdown__table');
+
   if (el) {
-    // Si la clase está disponible, se renderiza el componente
+    // Si la clase msg-box--no-results está disponible, se renderiza el componente
     renderBannerNoResult();
+    table.style.display = 'none';
+
     observer.disconnect();
   }
 }
