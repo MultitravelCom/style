@@ -8,10 +8,12 @@
   --fondo-btn: #0d4e88;
   --fondo-btn-hover: #324352;
 }
+
 /* CAja de busqueda  */
-#flight-searcher-onlydirects{
+#flight-searcher-onlydirects {
   display: none;
 }
+
 /* #flights-searcher-more-options{
   display: none
 } */
@@ -399,11 +401,6 @@ source>img {
     width: 100%;
   }
 
-  /* Estilo caja de busqueda */
-  .multi-searcher {
-    margin: 8px;
-  }
-
   .multi-searcher__content {
     border-radius: 1rem !important;
   }
@@ -412,9 +409,6 @@ source>img {
     display: none;
   } */
 
-  #flights-searcher {
-    margin: 8px;
-  }
 }
 
 /* COMENTARIOS */
@@ -747,6 +741,7 @@ MEDIA QUERIES
     padding: 9px;
   }
 }
+
 .singledestination-only>.checkbox {
   margin-top: 4px !important;
   margin-bottom: 10px !important;
@@ -760,6 +755,7 @@ MEDIA QUERIES
 .fix-margin>.newsletter__container {
   background: #f7f7f7 !important;
 }
+
 body.home.home--default .home-v5 .home-row:last-child {
   margin-bottom: 0;
 }
