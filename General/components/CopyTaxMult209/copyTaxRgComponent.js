@@ -28,6 +28,7 @@ function observarCambiosVirtualDOM() {
                 if (placeholderDiv) {
                     renderCopyTaxFlight();
                 }
+                console.log("test");
             });
         },
         queries: [{ element: '.js-results-list-selection-placeholder' }],
