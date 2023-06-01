@@ -18,16 +18,16 @@ function renderCopyTaxFlight() {
 }
 
 function observarCambiosVirtualDOMFlight() {
+    const containerResultsList = document.querySelector('.results-list__item'); // Reemplaza '.container' por el selector de tu contenedor padre común
+
     const observerConfig = {
-        rootNode: document.documentElement,
+        rootNode: containerResultsList, // Observar cambios en el contenedor padre
         callback: () => {
             requestAnimationFrame(() => {
-                const placeholderDiv = document.querySelector('.js-results-list-selection-placeholder');
+                const placeholderDiv = containerResultsList.querySelector('.js-results-list-selection-placeholder'); // Buscar el elemento dentro del contenedor padre
                 if (placeholderDiv) {
                     console.log('Se detectó el elemento js-results-list-selection-placeholder');
-
                     renderCopyTaxFlight();
-
                 }
             });
         },
@@ -36,6 +36,11 @@ function observarCambiosVirtualDOMFlight() {
 
     const observer = new MutationSummary(observerConfig);
 }
+
+document.addEventListener('DOMContentLoaded', async function () {
+    observarCambiosVirtualDOMFlight();
+});
+
 
 document.addEventListener('DOMContentLoaded', async function () {
     observarCambiosVirtualDOMFlight();
