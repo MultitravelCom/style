@@ -17,18 +17,18 @@ function renderCopyTaxFlight() {
     ReactDOM.render(<CopyTaxFlight />, ContainerCopyTaxFlight);
 }
 
-function observarCambiosVirtualDOM() {
+function observarCambiosVirtualDOMFlight() {
     const observerConfig = {
         rootNode: document.documentElement,
-        callback: (summaries) => {
-            summaries.forEach((summary) => {
-                const addedNodes = Array.from(summary.added);
-                const placeholderDiv = addedNodes.find(node => node.classList && node.classList.contains('js-results-list-selection-placeholder'));
-
+        callback: () => {
+            requestAnimationFrame(() => {
+                const placeholderDiv = document.querySelector('.js-results-list-selection-placeholder');
                 if (placeholderDiv) {
+                    console.log('Se detectó el elemento js-results-list-selection-placeholder');
+
                     renderCopyTaxFlight();
+
                 }
-                console.log("test");
             });
         },
         queries: [{ element: '.js-results-list-selection-placeholder' }],
@@ -38,5 +38,5 @@ function observarCambiosVirtualDOM() {
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
-    observarCambiosVirtualDOM();
+    observarCambiosVirtualDOMFlight();
 });
