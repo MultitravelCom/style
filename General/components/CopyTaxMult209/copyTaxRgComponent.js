@@ -8,9 +8,34 @@ const CopyTaxFlight = () => {
 };
 
 
-const flightBestPrices = document.querySelector('.flight-bestprices');
-const ContainerCopyTaxFlight = document.createElement('div');
-ContainerCopyTaxFlight.classList.add('booking-breakdown__table');
-flightBestPrices.after(ContainerCopyTaxFlight);
+function renderCopyTaxFlight() {
+    const flightBestPrices = document.querySelector('.flight-bestprices');
+    const ContainerCopyTaxFlight = document.createElement('div');
+    ContainerCopyTaxFlight.classList.add('booking-breakdown__table');
+    flightBestPrices.after(ContainerCopyTaxFlight);
 
-ReactDOM.render(<CopyTaxFlight />, ContainerCopyTaxFlight);
+    ReactDOM.render(<CopyTaxFlight />, ContainerCopyTaxFlight);
+}
+
+function observarCambiosVirtualDOM() {
+    const observerConfig = {
+        rootNode: document.documentElement,
+        callback: (summaries) => {
+            summaries.forEach((summary) => {
+                const addedNodes = Array.from(summary.added);
+                const placeholderDiv = addedNodes.find(node => node.classList && node.classList.contains('js-results-list-selection-placeholder'));
+
+                if (placeholderDiv) {
+                    renderCopyTaxFlight();
+                }
+            });
+        },
+        queries: [{ element: '.js-results-list-selection-placeholder' }],
+    };
+
+    const observer = new MutationSummary(observerConfig);
+}
+
+document.addEventListener('DOMContentLoaded', async function () {
+    observarCambiosVirtualDOM();
+});
