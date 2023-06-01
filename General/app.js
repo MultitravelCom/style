@@ -183,7 +183,6 @@ const LoMejorDe = () => {
     };
 }
 
-// PreViaje
 // function Button(props) {
 
 //     const handleClick = (event) => {

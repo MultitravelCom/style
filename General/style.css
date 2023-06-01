@@ -389,12 +389,11 @@
   .uno__s3,
   .dos__s3,
   .tres__s3 {
-    border-radius: 8px;
+    border-radius: 0px;
     background-position-y: -65px;
   }
 
   .main__conteiner__s3__piensa__parrafo {
-    width: 200px;
     height: 100%;
     left: 0;
   }
