@@ -731,10 +731,8 @@ MEDIA QUERIES
   }
 
   .main__conteiner__s3__piensa__parrafo {
-    width: 200px;
     height: 100%;
     left: 0;
-    border-radius: 0px 8px 40px 0px;
   }
 
   .main__conteiner__s3__piensa__parrafo>p {
