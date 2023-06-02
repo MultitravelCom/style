@@ -762,3 +762,7 @@ body.home.home--default .home-v5__searcher,
     margin: 8px 5px;
   }
 }
+/* *************** MULT-271 ********************** */
+.flight-selection__box .flight-selection__breakdown>*:not(:nth-last-child(-n+3)) {
+  display: none;
+}
