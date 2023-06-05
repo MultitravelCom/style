@@ -765,3 +765,7 @@ body.home.home--default .home-v5__searcher,
 .flight-selection__box .flight-selection__breakdown>*:not(:nth-last-child(-n+3)) {
   display: none;
 }
+/* *************** MULT- 283 *********************** */
+#results-list> .js-results-pagination{
+  display: none;
+}
