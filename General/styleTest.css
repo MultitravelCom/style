@@ -702,3 +702,8 @@ body.home.home--default .home-v5__searcher,
 #results-list> .js-results-pagination{
   display: none;
 }
+
+/* **************** MULT-265 **************** */
+.upper-menu__login-button{
+  display: none;
+}
