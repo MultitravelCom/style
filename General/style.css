@@ -769,7 +769,6 @@ body.home.home--default .home-v5__searcher,
 #results-list> .js-results-paginatio > ul{
   display: none;
 }
-/* **************** MULT-265 **************** */
-.upper-menu__login-button{
-  display: none;
+.main_container__buttonARSEs{
+    display: none;
 }
