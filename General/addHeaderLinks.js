@@ -127,20 +127,20 @@ function addHeaderLinks() {
 addHeaderLinks();
 
 //************************************ MULT-213*************************************************************** */
-window.addEventListener('load', () => {
+// window.addEventListener('load', () => {
 
-    let buttonNewsletter = document.querySelector('button[data-target="#-newsletter-container"]');
-    let divNewsletter = buttonNewsletter.querySelector('.quicklink-elem-label');
+//     let buttonNewsletter = document.querySelector('button[data-target="#-newsletter-container"]');
+//     let divNewsletter = buttonNewsletter.querySelector('.quicklink-elem-label');
 
-    divNewsletter.textContent = 'Suscribite a nuestro Newsletter ';
+//     divNewsletter.textContent = 'Suscribite a nuestro Newsletter ';
 
-    let modalNewsletter = document.querySelector('#-newsletter-container');
-    let titleNewsletter = modalNewsletter.querySelector('.content-title');
+//     let modalNewsletter = document.querySelector('#-newsletter-container');
+//     let titleNewsletter = modalNewsletter.querySelector('.content-title');
 
-    titleNewsletter.textContent = 'Suscribite a nuestro Newsletter ';
+//     titleNewsletter.textContent = 'Suscribite a nuestro Newsletter ';
 
-    //*************************************************************************************************** */
-});
+// });
 
+//*************************************************************************************************** */
 
 
