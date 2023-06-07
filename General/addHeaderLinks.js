@@ -125,14 +125,13 @@ function addHeaderLinks() {
 
     // ******************************** MULT-285 ****************************************************************
 
-    const metaTag = path.includes('/results.aspx?searchSessionID=') || path.includes('/details.aspx?UID=') || path.includes('/booking/');
-    if (metaTag) {
+    if (path.includes('/results.aspx?searchSessionID=') || path.includes('/details.aspx?UID=') || path.includes('/booking/')) {
         const metaTag = document.createElement('meta');
         metaTag.name = 'robots';
         metaTag.content = 'noindex';
-
-
-        head.appendChild(metaTag);
+    
+        const headElement = document.getElementsByTagName('head')[0];
+        headElement.appendChild(metaTag);
     }
 
 }
