@@ -777,3 +777,7 @@ body.home.home--default .home-v5__searcher,
 .checkbox.fancy-checkbox.searcher__on-product-fixed-hidden{
   display: none;
 }
+/* **************** MULT-265 **************** */
+.upper-menu__login-button{
+  display: none;
+}
