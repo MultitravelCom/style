@@ -36,7 +36,7 @@ function addHeaderLinks() {
     //     const copyTaxRgComponentJs = document.createElement('script');
     //     copyTaxRgComponentJs.src = 'https://multitravelcom.github.io/style/General/components/CopyTaxMult209/copyTaxRgComponent.js';
     //     copyTaxRgComponentJs.type = "text/babel";
-        
+
     //     head.appendChild(copyTaxRgComponentJs);
     // }
 
@@ -125,6 +125,17 @@ function addHeaderLinks() {
 
 }
 addHeaderLinks();
+// ******************************** MULT-285 ****************************************************************
+
+const metaTag = path.includes('/results.aspx?searchSessionID=') || path.includes('/details.aspx?UID=') || path.includes('/booking/');
+if (metaTag) {
+    const metaTag = document.createElement('meta');
+    metaTag.name = 'robots';
+    metaTag.content = 'noindex';
+
+
+    head.appendChild(metaTag);
+}
 
 //************************************ MULT-213*************************************************************** */
 window.addEventListener('load', () => {
