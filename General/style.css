@@ -776,3 +776,8 @@ body.home.home--default .home-v5__searcher,
 .main_container__buttonARSEs {
   display: none;
 }
+
+/* ****************** */
+.checkbox.fancy-checkbox.searcher__on-product-fixed-hidden{
+  display: none;
+}
