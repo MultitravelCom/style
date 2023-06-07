@@ -123,19 +123,20 @@ function addHeaderLinks() {
     //     head.appendChild(cuponSeccionScript);
     // }
 
+    // ******************************** MULT-285 ****************************************************************
+
+    const metaTag = path.includes('/results.aspx?searchSessionID=') || path.includes('/details.aspx?UID=') || path.includes('/booking/');
+    if (metaTag) {
+        const metaTag = document.createElement('meta');
+        metaTag.name = 'robots';
+        metaTag.content = 'noindex';
+
+
+        head.appendChild(metaTag);
+    }
+
 }
 addHeaderLinks();
-// ******************************** MULT-285 ****************************************************************
-
-const metaTag = path.includes('/results.aspx?searchSessionID=') || path.includes('/details.aspx?UID=') || path.includes('/booking/');
-if (metaTag) {
-    const metaTag = document.createElement('meta');
-    metaTag.name = 'robots';
-    metaTag.content = 'noindex';
-
-
-    head.appendChild(metaTag);
-}
 
 //************************************ MULT-213*************************************************************** */
 window.addEventListener('load', () => {
