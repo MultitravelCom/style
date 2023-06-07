@@ -125,7 +125,7 @@ function addHeaderLinks() {
 
     // ******************************** MULT-285 ****************************************************************
 
-    if (path.includes('/results.aspx?searchSessionID=') || path.includes('/details.aspx?UID=') || path.includes('/booking/')) {
+    if (path.includes('/results.aspx?') || path.includes('/details.aspx?') || path.includes('/booking/')) {
         const metaTag = document.createElement('meta');
         metaTag.name = 'robots';
         metaTag.content = 'noindex';
