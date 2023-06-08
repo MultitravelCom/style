@@ -1,5 +1,9 @@
 /* <!-- CSS --> */
 /* container */
+.upper-menu__login-button {
+    display: none;
+}
+
 .page-header-bar {
     padding: 0 !important;
 }
@@ -529,7 +533,7 @@ source>img {
     padding: 6px 16px;
     display: flex;
     align-items: center;
-    
+
 }
 
 .main__warningPrice>p {
@@ -542,7 +546,8 @@ source>img {
     min-height: 32px;
     margin: 0 !important;
 }
-.glyphicon-info-circle{
+
+.glyphicon-info-circle {
     color: #2196F3;
     font-size: 19px;
     min-width: 32px;
