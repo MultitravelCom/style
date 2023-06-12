@@ -744,6 +744,9 @@ body.home.home--default .home-v5__searcher,
   .dropdown .show-more .pull-right {
     display: none;
   }
+  .hidden-sm .hidden-md .col-xs-6 .col-md-2 .pull-right {
+    width: 100%;
+  }
 
   body.home.home--default .home-v5__searcher,
   .multi-searcher__content {
