@@ -744,7 +744,7 @@ body.home.home--default .home-v5__searcher,
   .dropdown .show-more .pull-right {
     display: none;
   }
-  .pull-right {
+  .hotel-searcher>.pull-right {
     width: 100%;
   }
 
