@@ -744,8 +744,8 @@ body.home.home--default .home-v5__searcher,
   .dropdown .show-more .pull-right {
     display: none;
   }
-  .hotel-searcher>.pull-right {
-    width: 100%;
+  .pull-right {
+    width: 100% !important;
   }
 
   body.home.home--default .home-v5__searcher,
