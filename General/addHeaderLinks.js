@@ -125,7 +125,7 @@ function addHeaderLinks() {
 
     // ******************************** MULT-258 ****************************************************************
 
-    if (path.includes('/results') || path.includes('/details') || path.includes('/flights/booking') || path.includes('/hotels/booking') || path.includes('/booking') || path.includes('/packages/results')) {
+    if (path.includes('/results') || path.includes('/details') || path.includes('/flights/booking') || path.includes('/hotels/booking') || path.includes('/booking') || path.includes('/results.aspx')) {
         const metaTag = document.createElement('meta');
         metaTag.name = 'robots';
         metaTag.content = 'noindex';
