@@ -123,9 +123,9 @@ function addHeaderLinks() {
     //     head.appendChild(cuponSeccionScript);
     // }
 
-    // ******************************** MULT-285 ****************************************************************
+    // ******************************** MULT-258 ****************************************************************
 
-    if (path.includes('/results') || path.includes('/details') || path.includes('/flights/booking') || path.includes('/hotels/booking') || path.includes('/booking')) {
+    if (path.includes('/results') || path.includes('/details') || path.includes('/flights/booking') || path.includes('/hotels/booking') || path.includes('/booking') || path.includes('/packages/results.aspx')) {
         const metaTag = document.createElement('meta');
         metaTag.name = 'robots';
         metaTag.content = 'noindex';
