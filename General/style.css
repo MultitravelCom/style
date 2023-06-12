@@ -744,6 +744,7 @@ body.home.home--default .home-v5__searcher,
   .dropdown .show-more .pull-right {
     display: none;
   }
+
   .pull-right {
     width: 100% !important;
   }
@@ -775,15 +776,19 @@ body.home.home--default .home-v5__searcher,
 .js-infinite-scroll-affix-top-anchor>.results-list__pagination.js-results-pagination {
   display: none;
 }
+
 /* ********************************************************** */
-.checkbox.fancy-checkbox.searcher__on-product-fixed-hidden{
+.checkbox.fancy-checkbox.searcher__on-product-fixed-hidden {
   display: none;
 }
+
 /* **************** MULT-265 **************** */
-.upper-menu__login-button{
+.upper-menu__login-button {
   display: none;
 }
+
 /* ***************** MULT-305 **************** */
-.footer__text > .glyphicon-whatsapp-bottomless{
-  display: none;
+.main-footer .footer__text .glyphicon {
+  color: rgba(255, 255, 255, .85) !important;
+  font-size: 1.5rem !important;
 }
