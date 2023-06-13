@@ -129,7 +129,7 @@ function addHeaderLinks() {
         const metaTag = document.createElement('meta');
         metaTag.name = 'robots';
         metaTag.content = 'noindex';
-    
+
         const headElement = document.getElementsByTagName('head')[0];
         headElement.appendChild(metaTag);
     }
