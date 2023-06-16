@@ -794,13 +794,13 @@ body.home.home--default .home-v5__searcher,
 }
 
 /* ************************ MULT-313 ****************** */
-.flight-selection__box > :nth-child(2) {
-  margin-top: 1rem;
-}
+@media (min-width: 1200px) {
+  .flight-selection__box> :nth-child(2) {
+    margin-top: 1rem;
+  }
 
-@media (min-width: 1200px){
   .result-option--extended .result-option__extended-heading,
-.result-option--extended .result-option__heading {
-  width: 60% !important;
-}
+  .result-option--extended .result-option__heading {
+    width: 60% !important;
+  }
 }
