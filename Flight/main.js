@@ -125,7 +125,7 @@ window.addEventListener('load', () => {
 
   // Cambiar texto y estilo del botón Más opciones
   const btnMoreOptions = document.querySelector('.btn-more-options');
-  btnMoreOptions.innerHTML = 'Clase y equipaje <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
-  btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje');
+  btnMoreOptions.innerHTML = 'Clase y equipaje a despachar <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
+  btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje a despachar');
   btnMoreOptions.style.display = 'inline-block';
 });
