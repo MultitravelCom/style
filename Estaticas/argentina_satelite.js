@@ -193,7 +193,7 @@ const destinos3 = [
     {
         id: "c6",
         destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-e%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-f%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/wz0152",
         title: "Hotel Huentala",
