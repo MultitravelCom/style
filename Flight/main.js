@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // MULT-127
   const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
   const divObjetivo = document.getElementById('flight-searcher-more-options');
@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
   let selector = document.querySelector('.select2-container--open');
 
   selector.addEventListener('click', function () {
-    // Aquí puedes agregar el código que deseas ejecutar cuando el usuario hace clic en el selector
     console.log('El usuario hizo clic en el selector');
   });
 });
