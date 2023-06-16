@@ -42,4 +42,22 @@ window.addEventListener('load', () => {
   // // cambiar el texto del label
    label.text('Multidestino');
   document.querySelector('.radio').style.display = 'inline-block';
+
+  function cambiarTextoRecursivo(selector, textoAnterior, textoNuevo) {
+    let elementos = document.querySelectorAll(selector);
+  
+    elementos.forEach(function(elemento) {
+      if (elemento.textContent === textoAnterior) {
+        elemento.textContent = textoNuevo;
+      }
+    });
+  
+    // Recursivamente buscar selectores en los elementos hijos
+    elementos.forEach(function(elemento) {
+      cambiarTextoRecursivo(selector, textoAnterior, textoNuevo);
+    });
+  }
+  
+  cambiarTextoRecursivo('.select2-results__option', 'Con equipaje incluido', 'Con equipaje incluido a despachar');
+  cambiarTextoRecursivo('.select2-results__option', 'Sin equipaje incluido', 'Sin equipaje a despachar');
 });
