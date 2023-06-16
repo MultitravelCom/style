@@ -6,8 +6,8 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/ncvo1x",
-            "title": "Paquete a Bariloche 7 noches",
-            "price": "$142.300",
+            "title": "Paquete a Bariloche",
+            "price": "$73.970",
             "events": "si"
         },
         {
@@ -16,8 +16,8 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-b%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/s507zo",
-            "title": "Paquete a Bariloche 5 noches",
-            "price": "$119.100",
+            "title": "Paquete a Bariloche",
+            "price": "$96.470 ",
             "events": "si"
         },
         {
@@ -26,8 +26,8 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-c%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/duchkz",
-            "title": "Hotel Villa Sofia",
-            "price": "$24.200",
+            "title": "Paquete a Bariloche",
+            "price": "$118.970",
             "events": "No"
         },
         {
@@ -36,8 +36,8 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-d%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/2z5hpp",
-            "title": "Hotel Desing Suites",
-            "price": "$35.300",
+            "title": "Hotel Villa Sofia",
+            "price": "$20.125",
             "events": "si"
         },
         {
@@ -46,8 +46,18 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-e%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/dv0ucs",
-            "title": "Vuelo a Bariloche",
-            "price": "$18.600",
+            "title": "Hotel Kenton Palace Bariloche",
+            "price": "$29.287",
+            "events": "si"
+        },
+        {
+            "id": "a6",
+            "destino": "Bariloche",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-f%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/dv0ucs",
+            "title": "Hotel Design Suites Bariloche",
+            "price": "$38.510",
             "events": "si"
         },
         {
@@ -56,8 +66,8 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-a%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/hxjkgq",
-            "title": "Paquete Iguazú 5 noches",
-            "price": "$85.800",
+            "title": "Paquete a Iguazú",
+            "price": "$64.750",
             "events": "si"
         },
         {
@@ -66,8 +76,8 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-b%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/2rmvhq",
-            "title": "Paquete Iguazú 3 noches",
-            "price": "$66.500",
+            "title": "Paquete a Iguazús",
+            "price": "$88.060",
             "events": "si"
         },
         {
@@ -76,8 +86,8 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-c%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/wbq74i",
-            "title": "Hotel Kelta",
-            "price": "$17.700",
+            "title": "Hotel Merit Iguazú",
+            "price": "$23.000",
             "events": "si"
         },
         {
@@ -86,8 +96,8 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-d%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/s6nxus",
-            "title": "Hotel Raices Esturión",
-            "price": "$24.700",
+            "title": "Hotel Marcopolo Suites Iguazú",
+            "price": "$27.040",
             "events": "si"
         },
         {
@@ -96,8 +106,18 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-e%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/37zsyv",
-            "title": "Vuelo a Iguzú",
-            "price": "$22.900",
+            "title": "Hotel Tourbillon",
+            "price": "$28.910",
+            "events": "No"
+        },
+        {
+            "id": "b6",
+            "destino": "Iguazu",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-f%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/37zsyv",
+            "title": "Hotel Iguazu Grand",
+            "price": "$66.740",
             "events": "No"
         },
         {
@@ -106,8 +126,8 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-a%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/61efbi",
-            "title": "Paquete Mendoza 7 noches",
-            "price": "$117.200",
+            "title": "Paquete a Mendoza",
+            "price": "$70.420",
             "events": "si"
         },
         {
@@ -116,8 +136,8 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-b%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/sbfl7y",
-            "title": "Paquete Mendoza 5 noches",
-            "price": "$99.800",
+            "title": "Paquete a Mendoza",
+            "price": "$92.920",
             "events": "si"
         },
         {
@@ -126,8 +146,8 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-c%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/vs8baw",
-            "title": "Hotel Cordón del Plata",
-            "price": "$15.900",
+            "title": "Paquete a Mendoza",
+            "price": "$117.510",
             "events": "si"
         },
         {
@@ -136,8 +156,8 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-d%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/u8ym55",
-            "title": "Hotel Raices Aconcagua",
-            "price": "$28.200",
+            "title": "Hotel Crillón",
+            "price": "$21.000",
             "events": "si"
         },
         {
@@ -146,8 +166,18 @@
             "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-e%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/wz0152",
-            "title": "Vuelo a Mendoza",
-            "price": "$24.100",
+            "title": "Hotel Cordón del Plata",
+            "price": "$23.430",
+            "events": "si"
+        },
+        {
+            "id": "c6",
+            "destino": "Mendoza",
+            "img": "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-e%20(1).webp",
+            "className": "uno",
+            "linkWa": "https://wa.link/wz0152",
+            "title": "Hotel Huentala",
+            "price": "$41.800",
             "events": "si"
         }
     ]
