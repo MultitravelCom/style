@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', function() {
   // MULT-127
   const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
   const divObjetivo = document.getElementById('flight-searcher-more-options');
