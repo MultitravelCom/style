@@ -63,14 +63,23 @@ function reemplazarTextos() {
             opcion.innerText = 'Sin equipaje a despechar';
           }
         });
-
-        mutationObserver.disconnect();
       }
     });
   });
 
   let config = { childList: true, subtree: true };
-  mutationObserver.observe(targetNode, config);
+
+  document.addEventListener('click', function(event) {
+    if (event.target.matches('.select2.select2-container.select2-container--default.select2-container--below.select2-container--focus')) {
+      let isOpen = event.target.classList.contains('select2-container--open');
+
+      if (isOpen) {
+        console.log('Se hizo clic en el selector');
+        mutationObserver.observe(targetNode, config);
+      }
+    }
+  });
 }
 
+reemplazarTextos();
 reemplazarTextos();
