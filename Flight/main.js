@@ -37,44 +37,29 @@ window.addEventListener('load', () => {
   // *********************************************************************************************
 
   function reemplazarTextos() {
-    let selector = document.querySelector('.select2.select2-container.select2-container--default.select2-container--below.select2-container--focus');
+    let selector = document.querySelector('.select2.select2-container.select2-container--default.select2-container--below.select2-container--focus.select2-container--open');
 
     selector.addEventListener('click', function () {
-      console.log('Selector clickeado');
-
-      // Esperar un breve período de tiempo para que se muestre el desplegable
       setTimeout(function () {
-        // Verificar si el desplegable está abierto
-        let desplegable = document.querySelector('.select2-dropdown.select2-dropdown--below[aria-hidden="false"]');
+        let desplegable = document.querySelectorAll('.select2-dropdown.select2-dropdown--below');
 
-        if (desplegable) {
-          console.log('Desplegable abierto:', desplegable);
-
-          // Obtener los elementos de opción dentro del desplegable
-          let opciones = desplegable.querySelectorAll('.select2-results__option');
+        desplegable.forEach(function (dropdown) {
+          let opciones = dropdown.querySelectorAll('.select2-results__option');
 
           opciones.forEach(function (opcion) {
-            // Obtener el texto de la opción
             let texto = opcion.innerText;
 
-            console.log('Texto de la opción:', texto);
-
-            // Reemplazar los textos correspondientes
             if (texto === 'Con equipaje incluido') {
               opcion.innerText = 'Con equipaje a despechar';
-              console.log('Texto reemplazado por "Con equipaje a despechar"');
             } else if (texto === 'Sin equipaje incluido') {
               opcion.innerText = 'Sin equipaje a despechar';
-              console.log('Texto reemplazado por "Sin equipaje a despechar"');
             }
           });
-        }
-      }, 100); // Ajusta el tiempo según sea necesario para dar tiempo al desplegable a mostrarse
+        });
+      }, 100);
     });
   }
 
-  // Llamar a la función cuando sea necesario
   reemplazarTextos();
-
 
 });
