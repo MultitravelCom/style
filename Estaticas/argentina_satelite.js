@@ -84,8 +84,8 @@ const destinos2 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-a%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/hxjkgq",
-        title: "Paquete Iguazú 5 noches",
-        price: "$85.800",
+        title: "Paquete a Iguazú",
+        price: "$64.750",
         events: "si"
     },
     {
@@ -94,8 +94,8 @@ const destinos2 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-b%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/2rmvhq",
-        title: "Paquete Iguazú 3 noches",
-        price: "$66.500",
+        title: "Paquete a Iguazús",
+        price: "$88.060",
         events: "si"
     },
     {
@@ -104,8 +104,8 @@ const destinos2 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-c%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/wbq74i",
-        title: "Hotel Kelta",
-        price: "$17.700",
+        title: "Hotel Merit Iguazú",
+        price: "$23.000",
         events: "si"
     },
     {
@@ -114,8 +114,8 @@ const destinos2 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-d%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/s6nxus",
-        title: "Hotel Raices Esturión",
-        price: "$24.700",
+        title: "Hotel Marcopolo Suites Iguazú",
+        price: "$27.040",
         events: "si"
     },
     {
@@ -124,9 +124,19 @@ const destinos2 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-e%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
-        title: "Vuelo a Iguzú",
-        price: "$22.900",
-        events: "si"
+        title: "Hotel Tourbillon",
+        price: "$28.910",
+        events: "No"
+    },
+    {
+        id: "b6",
+        destino: "Iguazu",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-f%20(1).webp",
+        className: "uno",
+        linkWa: "https://wa.link/37zsyv",
+        title: "Hotel Iguazu Grand",
+        price: "$66.740",
+        events: "No"
     },
 ];
 const destinos3 = [
