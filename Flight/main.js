@@ -34,7 +34,6 @@ window.addEventListener('load', () => {
   btnMoreOptions.innerHTML = 'Clase y equipaje a despachar <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
   btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje a despachar');
   btnMoreOptions.style.display = 'inline-block';
-  // *********************************************************************************************
-  
+  // ********************************************************************************************
 });
 

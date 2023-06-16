@@ -7,7 +7,7 @@
             "className": "uno",
             "linkWa": "https://wa.link/n1y7se",
             "title": "Paquete Pousada Barbroch",
-            "price": "$251.900",
+            "price": "$285.410",
             "events": "si"
         },
         {
@@ -17,7 +17,7 @@
             "className": "uno",
             "linkWa": "https://wa.link/fsf72k",
             "title": "Paquete Pousada Maiken",
-            "price": "$246.900",
+            "price": "$ 278.960",
             "events": "si"
         },
         {
@@ -27,7 +27,7 @@
             "className": "uno",
             "linkWa": "https://wa.link/e4ksdi",
             "title": "Paquete Hotel Varadero",
-            "price": "$276.900",
+            "price": "$317.675 ",
             "events": "si"
         },
         {
@@ -37,7 +37,7 @@
             "className": "uno",
             "linkWa": "https://wa.link/ggn9q9",
             "title": "Pousada Barbroch",
-            "price": "$21.900",
+            "price": "$26.330",
             "events": "si"
         },
         {
@@ -47,7 +47,7 @@
             "className": "uno",
             "linkWa": "https://wa.link/ybn04x",
             "title": "Pousada Maiken",
-            "price": "$20.400",
+            "price": "$24.575",
             "events": "si"
         },
         {
@@ -56,8 +56,8 @@
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Florianopolis/floria-f%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/camuhg",
-            "title": "Hotel Varadero Palace II",
-            "price": "$29.200",
+            "title": "Hotel Varadero Palace",
+            "price": "$35.110",
             "events": "si"
         },
         {
@@ -67,7 +67,7 @@
             "className": "uno",
             "linkWa": "https://wa.link/np1ex5",
             "title": "Paquete Pousada Amendoeira",
-            "price": "$211.900",
+            "price": "$240.380",
             "events": "si"
         },
         {
@@ -75,9 +75,9 @@
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-b%20(1).webp",
             "className": "uno",
-            "linkWa": "https://wa.link/atayhg",
-            "title": "Paquete Fantasy Guest House",
-            "price": "$235.900",
+            "linkWa": "https://wa.link/9dcx8d",
+            "title": "Paquete Pousada Amancay",
+            "price": "$322.085",
             "events": "si"
         },
         {
@@ -85,9 +85,9 @@
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-c%20(1).webp",
             "className": "uno",
-            "linkWa": "https://wa.link/9dcx8d",
-            "title": "Paquete Pousada Amancay",
-            "price": "$276.900",
+            "linkWa": "https://wa.link/fql9wm",
+            "title": "Paquete Bahiamarela hotel",
+            "price": "$399.480",
             "events": "si"
         },
         {
@@ -95,9 +95,9 @@
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-d%20(1).webp",
             "className": "uno",
-            "linkWa": "https://wa.link/fql9wm",
-            "title": "Paquete Bahiamarela hotel",
-            "price": "$338.100",
+            "linkWa": "https://wa.link/n7027o",
+            "title": "Pousada Amendoeira",
+            "price": "$18.140",
             "events": "si"
         },
         {
@@ -105,9 +105,9 @@
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-e%20(1).webp",
             "className": "uno",
-            "linkWa": "https://wa.link/n7027o",
-            "title": "Pousada Amendoeira",
-            "price": "$15.200",
+            "linkWa": "https://wa.link/itwum8",
+            "title": "Pousada Amancay",
+            "price": "$40.370",
             "events": "si"
         },
         {
@@ -116,30 +116,10 @@
             "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-f%20(1).webp",
             "className": "uno",
             "linkWa": "https://wa.link/n7027o",
-            "title": "Fantasy Guest House",
-            "price": "$21.900",
+            "title": "Bahiamarela Hotel Boutique",
+            "price": "$61.430",
             "events": "si"
-        },
-        {
-            "id": "b7",
-            "destino": "Buzios",
-            "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-g%20(1).webp",
-            "className": "uno",
-            "linkWa": "https://wa.link/itwum8",
-            "title": "Pousada Amancay",
-            "price": "$33.600",
-            "events": "si"
-        },
-        {
-            "id": "b8",
-            "destino": "Buzios",
-            "img": "https://multitravelcom.github.io/MT/Evento/Brasil2023/Buzios/buzios-h%20(1).webp",
-            "className": "uno",
-            "linkWa": "https://wa.link/mx8riy",
-            "title": "Bahiamarela hotel boutique",
-            "price": "$51.200",
-            "events": "si"
-        },
+        },   
         {
             "id": "c1",
             "destino": "AllInclusive",
@@ -147,7 +127,7 @@
             "className": "uno",
             "linkWa": "https://wa.link/zf67h2",
             "title": "Paquete Grand Palladium Imbassai",
-            "price": "$694.900",
+            "price": "$781.870",
             "events": "si"
         },
         {
@@ -157,7 +137,7 @@
             "className": "uno",
             "linkWa": "https://wa.link/n7xz02",
             "title": "Paquete Iberostar Bahia",
-            "price": "$613.900",
+            "price": "$752.150",
             "events": "si"
         },
         {
@@ -167,7 +147,7 @@
             "className": "uno",
             "linkWa": "https://wa.link/lkwcca",
             "title": "Paquete Iberostar Praia do Forte",
-            "price": "$702.500",
+            "price": "$836.490",
             "events": "si"
         },
         {
@@ -177,7 +157,7 @@
             "className": "uno",
             "linkWa": "https://wa.link/qm4z9i",
             "title": "Grand Palladium Imbassai",
-            "price": "$112.700",
+            "price": "$122.560",
             "events": "si"
         },
         {
@@ -187,7 +167,7 @@
             "className": "uno",
             "linkWa": "https://wa.link/bhbqxo",
             "title": "Iberostar Bahia",
-            "price": "$89.700",
+            "price": "$114.475",
             "events": "si"
         },
         {
@@ -197,7 +177,7 @@
             "className": "uno",
             "linkWa": "https://wa.link/iz2sym",
             "title": "Iberostar Praia do Forte",
-            "price": "$115.000",
+            "price": "$137.425",
             "events": "si"
         }
     ]
