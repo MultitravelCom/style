@@ -1,97 +1,3 @@
-// window.addEventListener('load', () => {
-//   // // ********************************* MULT-127 *********************************
-//   // seleccionar el div a mover
-//   const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
-
-//   // seleccionar el div debajo del cual se moverá el div a mover
-//   const divObjetivo = document.getElementById('flight-searcher-more-options');
-
-//   // mover el div a mover justo debajo del div objetivo
-//   divObjetivo.parentNode.insertBefore(divAMover, divObjetivo.nextSibling);
-//   // // ***************************************************************************
-//   // Mover div fuera del mas opciones.
-//   let divToMove = document.getElementsByClassName("checkbox")[0];
-//   let divDestination = document.getElementsByClassName("singledestination-only")[0];
-
-//   divDestination.appendChild(divToMove);
-//   //    Cambio de copy de Multiple vuelos a multiple destinos.
-//   document.getElementById("flight-searcher-roundtrip-multi").nextSibling.nodeValue = "Multidestino";
-//   document.querySelector('.radio').style.display = 'inline-block';
-
-//   // Cambiar texto al btn filtrar y agregar un icons.
-
-//   const textBtn = document.querySelector('.btn-tertiary');
-//   textBtn.textContent = 'Filtrar';
-
-//   // ********************************* MULT-114 *********************************
-//   const calendarContainers = document.querySelectorAll('.js-calendar-container');
-
-//   calendarContainers.forEach((container) => {
-//     const observer = new MutationObserver((mutations) => {
-//       mutations.forEach((mutation) => {
-//         if (mutation.target.classList.contains('closed')) {
-//           // mostrar el botón
-//           const filterButton = document.querySelector('.results-list__filter-toggle-wrapper');
-//           filterButton.style.display = 'block';
-//         } else {
-//           // ocultar el botón
-//           const filterButton = document.querySelector('.results-list__filter-toggle-wrapper');
-//           filterButton.style.display = 'none';
-//         }
-//       });
-//     });
-
-//     observer.observe(container, { attributes: true });
-//   });
-// });
-
-
-// window.addEventListener('load', () => {
-
-//   // *********** MULT-127 **********************
-//   // Obtener el botón por su clase
-//   const btnMoreOptions = document.querySelector('.btn-more-options');
-
-//   // Cambiar el texto del botón y añadir el icono
-//   btnMoreOptions.innerHTML = 'Clase y equipaje <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
-
-//   // Si el botón no tiene la clase "collapsed", también cambia el texto del atributo "data-toggle-text"
-//   if (!btnMoreOptions.classList.contains('collapsed')) {
-//     btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje');
-//   }
-
-//   btnMoreOptions.style.display = 'inline-block';
-
-
-//   // Mover div fuera del mas opciones.
-//   let divToMove = document.getElementsByClassName("checkbox")[0];
-//   let divDestination = document.getElementsByClassName("singledestination-only")[0];
-
-//   divDestination.appendChild(divToMove);
-//   //    Cambio de copy de Multiple vuelos a multiple destinos.
-//   document.getElementById("flights-searcher-roundtrip-multi").nextSibling.nodeValue = "Multidestino";
-//   document.querySelector('.radio').style.display = 'inline-block';
-
-//   // seleccionar el div a mover
-//   const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
-
-//   // seleccionar el div debajo del cual se moverá el div a mover
-//   const divObjetivo = document.getElementById('flights-searcher-more-options');
-
-//   // mover el div a mover justo debajo del div objetivo
-//   divObjetivo.parentNode.insertBefore(divAMover, divObjetivo.nextSibling);
-//   // ***************************************************************************
-//   // // seleccionar el elemento div por su clase
-//    let multiFlightDiv = $('.flights-searcher-roundtrip-multi');
-
-//   // // seleccionar el label que contiene el texto que deseas cambiar
-//   let label = multiFlightDiv.find('label[for="flight-searcher-roundtrip-multi"]');
-
-//   // // cambiar el texto del label
-//    label.text('Multidestino');
-//   document.querySelector('.radio').style.display = 'inline-block';
-// });
-
 window.addEventListener('load', () => {
   // MULT-127
   const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
@@ -128,33 +34,47 @@ window.addEventListener('load', () => {
   btnMoreOptions.innerHTML = 'Clase y equipaje a despachar <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
   btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje a despachar');
   btnMoreOptions.style.display = 'inline-block';
+  // *********************************************************************************************
 
   function reemplazarTextos() {
-    var boton = document.querySelector('.btn-more-options.tabbed');
-    
-    boton.addEventListener('click', function() {
-      // Verificar si el selector está presente en el DOM después de hacer clic en el botón
-      var selector = document.querySelector('.select2-container.select2-container--default.select2-container--open');
-      
-      if (selector) {
-        // Obtener los elementos de opción dentro del selector
-        var opciones = selector.querySelectorAll('.select2-results__option');
-        
-        opciones.forEach(function(opcion) {
-          // Obtener el texto de la opción
-          var texto = opcion.innerText;
-          
-          // Reemplazar los textos correspondientes
-          if (texto === 'Con equipaje incluido') {
-            opcion.innerText = 'Con equipaje a despechar';
-          } else if (texto === 'Sin equipaje incluido') {
-            opcion.innerText = 'Sin equipaje a despechar';
-          }
-        });
-      }
+    let selector = document.querySelector('.select2.select2-container.select2-container--default.select2-container--below.select2-container--focus');
+
+    selector.addEventListener('click', function () {
+      console.log('Selector clickeado');
+
+      // Esperar un breve período de tiempo para que se muestre el desplegable
+      setTimeout(function () {
+        // Verificar si el desplegable está abierto
+        let desplegable = document.querySelector('.select2-dropdown.select2-dropdown--below[aria-hidden="false"]');
+
+        if (desplegable) {
+          console.log('Desplegable abierto:', desplegable);
+
+          // Obtener los elementos de opción dentro del desplegable
+          let opciones = desplegable.querySelectorAll('.select2-results__option');
+
+          opciones.forEach(function (opcion) {
+            // Obtener el texto de la opción
+            let texto = opcion.innerText;
+
+            console.log('Texto de la opción:', texto);
+
+            // Reemplazar los textos correspondientes
+            if (texto === 'Con equipaje incluido') {
+              opcion.innerText = 'Con equipaje a despechar';
+              console.log('Texto reemplazado por "Con equipaje a despechar"');
+            } else if (texto === 'Sin equipaje incluido') {
+              opcion.innerText = 'Sin equipaje a despechar';
+              console.log('Texto reemplazado por "Sin equipaje a despechar"');
+            }
+          });
+        }
+      }, 100); // Ajusta el tiempo según sea necesario para dar tiempo al desplegable a mostrarse
     });
   }
-  
+
   // Llamar a la función cuando sea necesario
   reemplazarTextos();
+
+
 });
