@@ -72,7 +72,7 @@ const BannerTop = () => {
                     {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)}
                 </div>
                 <div id="bannerTop__center" className="main__container_center">
-                    <a href="https://www.multitravel.com/promociones/paquetes-ski" target="_blank">
+                    <a href="https://www.multitravel.com/hotels/results.aspx?destinationID=57648&nationality=AR&endDate=2023-08-04&paxs=20&accion=searchhotels&startDate=2023-08-01&secondarySearch=false" target="_blank">
                         <picture>
                             <source
                                 media="(min-width: 1024px)"
