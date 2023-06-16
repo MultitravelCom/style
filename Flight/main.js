@@ -128,23 +128,33 @@ window.addEventListener('load', () => {
   btnMoreOptions.innerHTML = 'Clase y equipaje a despachar <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
   btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje a despachar');
   btnMoreOptions.style.display = 'inline-block';
-  
-  function cambiarTextoRecursivo(selector, textoAnterior, textoNuevo) {
-    let elementos = document.querySelectorAll(selector);
+
+  function reemplazarTextos() {
+    var boton = document.querySelector('.btn-more-options.tabbed');
     
-    elementos.forEach(function(elemento) {
-      if (elemento.textContent === textoAnterior) {
-        elemento.textContent = textoNuevo;
+    boton.addEventListener('click', function() {
+      // Verificar si el selector está presente en el DOM después de hacer clic en el botón
+      var selector = document.querySelector('.select2-container.select2-container--default.select2-container--open');
+      
+      if (selector) {
+        // Obtener los elementos de opción dentro del selector
+        var opciones = selector.querySelectorAll('.select2-results__option');
+        
+        opciones.forEach(function(opcion) {
+          // Obtener el texto de la opción
+          var texto = opcion.innerText;
+          
+          // Reemplazar los textos correspondientes
+          if (texto === 'Con equipaje incluido') {
+            opcion.innerText = 'Con equipaje a despechar';
+          } else if (texto === 'Sin equipaje incluido') {
+            opcion.innerText = 'Sin equipaje a despechar';
+          }
+        });
       }
-    });
-    
-    // Recursivamente buscar selectores en los elementos hijos
-    elementos.forEach(function(elemento) {
-      cambiarTextoRecursivo(selector, textoAnterior, textoNuevo);
     });
   }
   
-  cambiarTextoRecursivo('.select2-results__option', 'Con equipaje incluido', 'Con equipaje incluido a despachar');
-  cambiarTextoRecursivo('.select2-results__option', 'Sin equipaje incluido', 'Sin equipaje a despachar');
+  // Llamar a la función cuando sea necesario
+  reemplazarTextos();
 });
-  
