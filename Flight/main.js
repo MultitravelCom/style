@@ -80,6 +80,4 @@ function reemplazarTextos() {
     }
   });
 }
-
-reemplazarTextos();
 reemplazarTextos();
