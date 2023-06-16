@@ -33,43 +33,43 @@ const BannerTop = () => {
             <div className="container-fluid main__container__bannerTop scroll-mobile">
                 <div id="bannerTop__left" className="main__container_left">
                     {/* <a href="https://www.multitravel.com/venta-personalizada/argentina" target="_blank"> */}
-                        <picture>
-                            <source
-                                media="(min-width: 1024px)"
-                                srcSet={
-                                    showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-1.webp`
-                                        : `${UrlImg}/bannerDesktop-1.webp`
-                                }
-                            />
-                            <source
-                                media="(min-width: 768px) and (max-width: 1023px)"
-                                srcSet={
-                                    showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-1.webp`
-                                        : `${UrlImg}/bannerDesktop-1.webp`
-                                }
+                    <picture>
+                        <source
+                            media="(min-width: 1024px)"
+                            srcSet={
+                                showPackageImages
+                                    ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-1.webp`
+                                    : `${UrlImg}/bannerDesktop-1.webp`
+                            }
+                        />
+                        <source
+                            media="(min-width: 768px) and (max-width: 1023px)"
+                            srcSet={
+                                showPackageImages
+                                    ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-1.webp`
+                                    : `${UrlImg}/bannerDesktop-1.webp`
+                            }
 
-                            />
-                            <source
-                                media="(max-width: 767px)"
-                                srcSet={
-                                    showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerMobile-1.webp`
-                                        : `${UrlImg}/bannerMobile-1.webp`
-                                }
-                            />
-                            <img className="bannerTop__img"
-                                alt=""
-                                srcSet={
-                                    showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-1.webp`
-                                        : `${UrlImg}/bannerDesktop-1.webp`
-                                }
-                            />
-                        </picture>
+                        />
+                        <source
+                            media="(max-width: 767px)"
+                            srcSet={
+                                showPackageImages
+                                    ? `${UrlImgPaquetes}/Paquetes/bannerMobile-1.webp`
+                                    : `${UrlImg}/bannerMobile-1.webp`
+                            }
+                        />
+                        <img className="bannerTop__img"
+                            alt=""
+                            srcSet={
+                                showPackageImages
+                                    ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-1.webp`
+                                    : `${UrlImg}/bannerDesktop-1.webp`
+                            }
+                        />
+                    </picture>
                     {/* </a> */}
-                    {/* {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)} */}
+                    {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)}
                 </div>
                 <div id="bannerTop__center" className="main__container_center">
                     <a href="https://www.multitravel.com/promociones/paquetes-ski" target="_blank">
