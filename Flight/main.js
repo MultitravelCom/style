@@ -37,39 +37,40 @@ window.addEventListener('load', () => {
   // *********************************************************************************************
 });
 
-
 function reemplazarTextos() {
-  let selector = document.querySelector('.select2.select2-container.select2-container--default.select2-container--below.select2-container--focus');
-  console.log(selector);
+  let targetNode = document.body;
 
-  selector.addEventListener('click', function() {
-    console.log('Se hizo clic en el selector');
+  let mutationObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      let addedNodes = Array.from(mutation.addedNodes);
+      let matches = addedNodes.filter(function(node) {
+        return node.matches && node.matches('.select2-dropdown.select2-dropdown--below');
+      });
 
-    if (selector.classList.contains('select2-container--open')) {
-      console.log('El selector tiene la clase select2-container--open');
+      if (matches.length > 0) {
+        console.log('Se encontró el menú desplegable');
 
-      setTimeout(function() {
-        let desplegable = document.querySelectorAll('.select2-dropdown.select2-dropdown--below');
+        let desplegable = matches[0];
+        let opciones = desplegable.querySelectorAll('.select2-results__option');
 
-        desplegable.forEach(function(dropdown) {
-          console.log('Se encontró el menú desplegable');
+        opciones.forEach(function(opcion) {
+          let texto = opcion.innerText;
+          console.log('Texto encontrado:', texto);
 
-          let opciones = dropdown.querySelectorAll('.select2-results__option');
-
-          opciones.forEach(function(opcion) {
-            let texto = opcion.innerText;
-            console.log('Texto encontrado:', texto);
-
-            if (texto === 'Con equipaje incluido') {
-              opcion.innerText = 'Con equipaje a despechar';
-            } else if (texto === 'Sin equipaje incluido') {
-              opcion.innerText = 'Sin equipaje a despechar';
-            }
-          });
+          if (texto === 'Con equipaje incluido') {
+            opcion.innerText = 'Con equipaje a despechar';
+          } else if (texto === 'Sin equipaje incluido') {
+            opcion.innerText = 'Sin equipaje a despechar';
+          }
         });
-      }, 100);
-    }
+
+        mutationObserver.disconnect();
+      }
+    });
   });
+
+  let config = { childList: true, subtree: true };
+  mutationObserver.observe(targetNode, config);
 }
 
 reemplazarTextos();
