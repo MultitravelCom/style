@@ -5,11 +5,11 @@ window.addEventListener('load', () => {
   const btnMoreOptions = document.querySelector('.btn-more-options');
 
   // Cambiar el texto del botón y añadir el icono
-  btnMoreOptions.innerHTML = 'Clase y equipaje <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
+  btnMoreOptions.innerHTML = 'Clase y equipaje a despachar <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>';
 
   // Si el botón no tiene la clase "collapsed", también cambia el texto del atributo "data-toggle-text"
   if (!btnMoreOptions.classList.contains('collapsed')) {
-    btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje');
+    btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje a despachar');
   }
 
   btnMoreOptions.style.display = 'inline-block';

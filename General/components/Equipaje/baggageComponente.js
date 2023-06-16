@@ -62,12 +62,12 @@ const BaggagePax = () => {
             {containerReady &&
                 <div className="main__bookingPaxes">
                     <div className="main__bookingPaxes__span">
-                        <span>Cantidad de equipaje</span>
+                        <span>Cantidad de equipaje a despachar</span>
                     </div>
 
                     <div className="main__bookingPaxes__text">
                         <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-                        <p className="bookingPaxes__p">Para ver más vuelos con otra cantidad de equipaje, seleccioná "Volver" y utilizá nuestros filtros para una búsqueda más precisa.</p>
+                        <p className="bookingPaxes__p">Para ver más vuelos con otra cantidad de equipaje a despachar, seleccioná "Volver" y utilizá nuestros filtros para una búsqueda más precisa.</p>
                         <div className="main__bookingPaxes__style" >
                             <ButtonBaggage style="main__bookingPaxes__btn" text="< VOLVER" />
                         </div>
