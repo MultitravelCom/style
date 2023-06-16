@@ -792,3 +792,9 @@ body.home.home--default .home-v5__searcher,
   color: rgba(255, 255, 255, .85) !important;
   font-size: 1.5rem !important;
 }
+
+/* ************************ MULT-313 ****************** */
+.result-option--extended .result-option__extended-heading,
+.result-option--extended .result-option__heading {
+  width: 60% !important;
+}
