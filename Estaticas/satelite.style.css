@@ -127,6 +127,14 @@ source>img {
     margin: 10px;
 }
 
+.priceStyle {
+    position: absolute;
+    bottom: 2%;
+    left: 10%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
 /* ---*-*-*-*-*-*-*-*-*-*- */
 
 /* MOBILE */
@@ -222,5 +230,9 @@ MEDIA QUERIES
 
     .main__conteiner__s1 {
         margin-bottom: 0;
+    }
+
+    .priceStyle {
+        font-size: 25px;
     }
 }
