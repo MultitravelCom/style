@@ -35,38 +35,6 @@ window.addEventListener('load', () => {
   btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje a despachar');
   btnMoreOptions.style.display = 'inline-block';
   // *********************************************************************************************
-  function detectarSelector() {
-    // Observador para detectar cambios en el DOM
-    const observadorSelector = new MutationObserver(function(mutationsList) {
-      // Recorrer las mutaciones
-      for (let mutation of mutationsList) {
-        // Verificar si se agregó el selector deseado al DOM
-        if (mutation.addedNodes && mutation.addedNodes.length > 0) {
-          const selectorEncontrado = Array.from(mutation.addedNodes).find(node => {
-            return node.matches && node.matches('.select2.select2-container.select2-container--default.select2-container--below.select2-container--focus');
-          });
-          if (selectorEncontrado) {
-            console.log('El selector está presente en el DOM.');
-            // Aquí puedes agregar cualquier otra lógica que necesites cuando se detecte el selector
-          }
-        }
-      }
-    });
   
-    // Configurar opciones para el observador
-    const opcionesObservador = {
-      childList: true, // Observar cambios en los hijos del nodo objetivo
-      subtree: true, // Observar cambios en todos los niveles del DOM por debajo del nodo objetivo
-    };
-  
-    // Elemento del DOM donde se espera que aparezca el selector deseado
-    const nodoObjetivo = document.body; // Puedes cambiar esto por el elemento específico en el que esperas el selector
-  
-    // Iniciar la observación del nodo objetivo
-    observadorSelector.observe(nodoObjetivo, opcionesObservador);
-  }
-  
-  // Llamar a la función para iniciar la detección del selector
-  detectarSelector();
 });
 
