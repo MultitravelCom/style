@@ -35,5 +35,12 @@ window.addEventListener('load', () => {
   btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje a despachar');
   btnMoreOptions.style.display = 'inline-block';
   // ********************************************************************************************
+
+  let selector = document.querySelector('.select2-container--open');
+
+  selector.addEventListener('click', function () {
+    // Aquí puedes agregar el código que deseas ejecutar cuando el usuario hace clic en el selector
+    console.log('El usuario hizo clic en el selector');
+  });
 });
 
