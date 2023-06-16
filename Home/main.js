@@ -34,13 +34,19 @@ window.addEventListener('load', () => {
   divObjetivo.parentNode.insertBefore(divAMover, divObjetivo.nextSibling);
   // ***************************************************************************
   // // seleccionar el elemento div por su clase
-   let multiFlightDiv = $('.flights-searcher-roundtrip-multi');
+  let multiFlightDiv = $('.flights-searcher-roundtrip-multi');
 
   // // seleccionar el label que contiene el texto que deseas cambiar
   let label = multiFlightDiv.find('label[for="flight-searcher-roundtrip-multi"]');
 
   // // cambiar el texto del label
-   label.text('Multidestino');
+  label.text('Multidestino');
   document.querySelector('.radio').style.display = 'inline-block';
 
+  let selector = document.querySelector('.select2-container--open');
+
+  selector.addEventListener('click', function () {
+    // Aquí puedes agregar el código que deseas ejecutar cuando el usuario hace clic en el selector
+    console.log('El usuario hizo clic en el selector');
+  });
 });
