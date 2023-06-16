@@ -446,7 +446,6 @@ span .glyphicon {
 
     .flight-selection__change-button,
     .flight-selection__booking-button {
-        min-width: 47% !important;
         border-radius: 40px !important;
     }
 
