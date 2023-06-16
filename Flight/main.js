@@ -35,41 +35,40 @@ window.addEventListener('load', () => {
   btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje a despachar');
   btnMoreOptions.style.display = 'inline-block';
   // *********************************************************************************************
-
-  function reemplazarTextos() {
-    let selector = document.querySelector('.select2.select2-container.select2-container--default.select2-container--below.select2-container--focus');
-  
-    selector.addEventListener('click', function() {
-      console.log('Se hizo clic en el selector');
-  
-      if (selector.classList.contains('select2-container--open')) {
-        console.log('El selector tiene la clase select2-container--open');
-  
-        setTimeout(function() {
-          let desplegable = document.querySelectorAll('.select2-dropdown.select2-dropdown--below');
-  
-          desplegable.forEach(function(dropdown) {
-            console.log('Se encontró el menú desplegable');
-  
-            let opciones = dropdown.querySelectorAll('.select2-results__option');
-  
-            opciones.forEach(function(opcion) {
-              let texto = opcion.innerText;
-              console.log('Texto encontrado:', texto);
-  
-              if (texto === 'Con equipaje incluido') {
-                opcion.innerText = 'Con equipaje a despechar';
-              } else if (texto === 'Sin equipaje incluido') {
-                opcion.innerText = 'Sin equipaje a despechar';
-              }
-            });
-          });
-        }, 100);
-      }
-    });
-  }
-  
-  reemplazarTextos();
-  
-
 });
+
+
+function reemplazarTextos() {
+  let selector = document.querySelector('.select2.select2-container.select2-container--default.select2-container--below.select2-container--focus');
+
+  selector.addEventListener('click', function() {
+    console.log('Se hizo clic en el selector');
+
+    if (selector.classList.contains('select2-container--open')) {
+      console.log('El selector tiene la clase select2-container--open');
+
+      setTimeout(function() {
+        let desplegable = document.querySelectorAll('.select2-dropdown.select2-dropdown--below');
+
+        desplegable.forEach(function(dropdown) {
+          console.log('Se encontró el menú desplegable');
+
+          let opciones = dropdown.querySelectorAll('.select2-results__option');
+
+          opciones.forEach(function(opcion) {
+            let texto = opcion.innerText;
+            console.log('Texto encontrado:', texto);
+
+            if (texto === 'Con equipaje incluido') {
+              opcion.innerText = 'Con equipaje a despechar';
+            } else if (texto === 'Sin equipaje incluido') {
+              opcion.innerText = 'Sin equipaje a despechar';
+            }
+          });
+        });
+      }, 100);
+    }
+  });
+}
+
+reemplazarTextos();
