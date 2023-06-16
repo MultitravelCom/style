@@ -129,3 +129,22 @@ window.addEventListener('load', () => {
   btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje a despachar');
   btnMoreOptions.style.display = 'inline-block';
 });
+
+function cambiarTextoRecursivo(selector, textoAnterior, textoNuevo) {
+  let elementos = document.querySelectorAll(selector);
+
+  elementos.forEach(function(elemento) {
+    if (elemento.textContent === textoAnterior) {
+      elemento.textContent = textoNuevo;
+    }
+  });
+
+  // Recursivamente buscar selectores en los elementos hijos
+  elementos.forEach(function(elemento) {
+    cambiarTextoRecursivo(selector, textoAnterior, textoNuevo);
+  });
+}
+
+// Llamada inicial a la función recursiva
+cambiarTextoRecursivo('.select2-results__option', 'Con equipaje incluido', 'Con equipaje incluido a despachar');
+cambiarTextoRecursivo('.select2-results__option', 'Sin equipaje incluido', 'Sin equipaje a despachar');
