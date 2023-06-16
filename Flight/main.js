@@ -40,6 +40,7 @@ window.addEventListener('load', () => {
 
 function reemplazarTextos() {
   let selector = document.querySelector('.select2.select2-container.select2-container--default.select2-container--below.select2-container--focus');
+  console.log(selector);
 
   selector.addEventListener('click', function() {
     console.log('Se hizo clic en el selector');
