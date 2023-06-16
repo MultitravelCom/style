@@ -146,8 +146,8 @@ const destinos3 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-a%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/61efbi",
-        title: "Paquete Mendoza 7 noches",
-        price: "$117.200",
+        title: "Paquete a Mendoza",
+        price: "$70.420",
         events: "si"
     },
     {
@@ -156,8 +156,8 @@ const destinos3 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-b%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/sbfl7y",
-        title: "Paquete Mendoza 5 noches",
-        price: "$99.800",
+        title: "Paquete a Mendoza",
+        price: "$92.920",
         events: "si"
     },
     {
@@ -166,8 +166,8 @@ const destinos3 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-c%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/vs8baw",
-        title: "Hotel Cordón del Plata",
-        price: "$15.900",
+        title: "Paquete a Mendoza",
+        price: "$117.510",
         events: "si"
     },
     {
@@ -176,8 +176,8 @@ const destinos3 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-d%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/u8ym55",
-        title: "Hotel Raices Aconcagua",
-        price: "$28.200",
+        title: "Hotel Crillón",
+        price: "$21.000",
         events: "si"
     },
     {
@@ -186,10 +186,19 @@ const destinos3 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-e%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/wz0152",
-        title: "Vuelo a Mendoza",
-        price: "$24.100",
+        title: "Hotel Cordón del Plata",
+        price: "$23.430",
         events: "si"
-
+    },
+    {
+        id: "c6",
+        destino: "Mendoza",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-e%20(1).webp",
+        className: "uno",
+        linkWa: "https://wa.link/wz0152",
+        title: "Hotel Huentala",
+        price: "$41.800",
+        events: "si"
     },
 ];
 const btnStyles = [
