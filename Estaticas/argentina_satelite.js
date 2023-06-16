@@ -300,6 +300,7 @@ const Card = ({ destinos }) => {
                         <source media="(max-width: 767px)" srcSet={destino.img} />
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
+                    <div className="priceStyle">{destino.price}</div>
                     <Button id={destino.title} link={destino.linkWa} text="Contactarme" />
                 </div>
             </div>
