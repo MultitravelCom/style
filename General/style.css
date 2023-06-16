@@ -794,7 +794,7 @@ body.home.home--default .home-v5__searcher,
 }
 
 /* ************************ MULT-313 ****************** */
-/* .result-option--extended .result-option__extended-heading,
+.result-option--extended .result-option__extended-heading,
 .result-option--extended .result-option__heading {
   width: 60% !important;
-} */
+}
