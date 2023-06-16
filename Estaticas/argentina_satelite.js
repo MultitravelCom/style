@@ -22,8 +22,8 @@ const destinos1 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/ncvo1x",
-        title: "Paquete a Bariloche 7 noches",
-        price: "$142.300",
+        title: "Paquete a Bariloche",
+        price: "$73.970",
         events: "si"
     },
     {
@@ -32,8 +32,8 @@ const destinos1 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-b%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/s507zo",
-        title: "Paquete a Bariloche 5 noches",
-        price: "$119.100",
+        title: "Paquete a Bariloche",
+        price: "$96.470 ",
         events: "si"
     },
     {
@@ -42,9 +42,9 @@ const destinos1 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-c%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/duchkz",
-        title: "Hotel Villa Sofia",
-        price: "$24.200",
-        events: "si"
+        title: "Paquete a Bariloche",
+        price: "$118.970",
+        events: "No"
     },
     {
         id: "a4",
@@ -52,8 +52,8 @@ const destinos1 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-d%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/2z5hpp",
-        title: "Hotel Desing Suites",
-        price: "$35.300",
+        title: "Hotel Villa Sofia",
+        price: "$20.125",
         events: "si"
     },
     {
@@ -62,8 +62,18 @@ const destinos1 = [
         img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-e%20(1).webp",
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
-        title: "Vuelo a Bariloche",
-        price: "$18.600",
+        title: "Hotel Kenton Palace Bariloche",
+        price: "$29.287",
+        events: "si"
+    },
+    {
+        id: "a6",
+        destino: "Bariloche",
+        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-f%20(1).webp",
+        className: "uno",
+        linkWa: "https://wa.link/dv0ucs",
+        title: "Hotel Design Suites Bariloche",
+        price: "$38.510",
         events: "si"
     },
 ];
