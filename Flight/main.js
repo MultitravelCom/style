@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // ********************************************************************************************
 
   function changeSelectText() {
-    var selectElement = document.querySelector('select[name="baggageincluded"]');
-    var labelElement = document.querySelector('label[for="flight-searcher-baggageincluded"]');
+    let selectElement = document.querySelector('select[name="baggageincluded"]');
+    let labelElement = document.querySelector('label[for="flight-searcher-baggageincluded"]');
   
     if (selectElement && labelElement) {
-      var optionElements = selectElement.querySelectorAll('option');
+      let optionElements = selectElement.querySelectorAll('option');
   
       optionElements[1].textContent = "Equipaje a despachar";
       optionElements[2].textContent = "Sin equipaje a despechar";
