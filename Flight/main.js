@@ -37,21 +37,34 @@ document.addEventListener('DOMContentLoaded', function () {
   // ********************************************************************************************
 
   function changeSelectText() {
-    let selectElement = document.querySelector('select[name="baggageincluded"]');
-    let labelElement = document.querySelector('label[for="flight-searcher-baggageincluded"]');
-  
-    if (selectElement && labelElement) {
-      let optionElements = selectElement.querySelectorAll('option');
-  
-      optionElements[1].textContent = "Con equipaje a despachar";
-      optionElements[2].textContent = "Sin equipaje a despechar";
-  
-      labelElement.textContent = "Equipaje a despechar";
+
+    let selectElementNew = document.querySelector('select[name="baggageincluded"]');
+    let labelElementNew = document.querySelector('label[for="flight-searcher-baggageincluded"]');
+    let spanElementNew = document.querySelector('#select2-flights-searcher-baggageincluded-container');
+
+    if (selectElementNew && labelElementNew && spanElementNew) {
+      let optionElementsNew = selectElementNew.querySelectorAll('option');
+
+      for (let i = 0; i < optionElementsNew.length; i++) {
+        if (optionElementsNew[i].textContent.includes("Con equipaje incluido")) {
+          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Con equipaje incluido", "Con equipaje a despachar");
+        } else if (optionElementsNew[i].textContent.includes("Sin equipaje incluido")) {
+          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Sin equipaje incluido", "Sin equipaje a despachar");
+        }
+      }
+
+      if (spanElementNew.getAttribute('title') === "Con equipaje incluido") {
+        spanElementNew.textContent = "Con equipaje a despachar";
+      } else if (spanElementNew.getAttribute('title') === "Sin equipaje incluido") {
+        spanElementNew.textContent = "Sin equipaje a despachar";
+      }
+
+      labelElementNew.textContent = "Equipaje a despachar";
     } else {
-      setTimeout(changeSelectText, 100); // Intentar nuevamente después de 100ms
+      setTimeout(changeSelectTextHome, 100);
     }
   }
-  
+
   changeSelectText();
 });
 
