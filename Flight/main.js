@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if (baggageItemElement) {
             let baggageText = baggageItemElement.getAttribute('data-original-title');
             let baggageCount = baggageText.match(/\d+/)[0];
+            console.log(baggageCount);
   
             let newBaggageText = "Incluye " + baggageCount + " equipaje a despachar";
             baggageText = baggageText.replace("Incluye " + baggageCount + " maletas (LUGG)", newBaggageText);
