@@ -68,35 +68,24 @@ document.addEventListener('DOMContentLoaded', function () {
   changeSelectText();
 
   function changeBaggageText() {
-    let resultsListPlaceholder = document.querySelector('.js-results-list-placeholder');
-  
-    if (resultsListPlaceholder) {
-      let resultsListItems = resultsListPlaceholder.querySelectorAll('.results-list__item');
-  
-      resultsListItems.forEach((item) => {
-        let baggageElement = item.querySelector('.flight-result__baggage');
-  
-        if (baggageElement) {
-          let baggageItemElement = baggageElement.querySelector('.flight-result__baggage-item');
-  
-          if (baggageItemElement) {
-            let baggageText = baggageItemElement.getAttribute('data-original-title');
-            let baggageCount = baggageText.match(/\d+/)[0];
-            console.log(baggageCount);
-  
-            let newBaggageText = "Incluye " + baggageCount + " equipaje a despachar";
-            baggageText = baggageText.replace("Incluye " + baggageCount + " maletas (LUGG)", newBaggageText);
-  
-            baggageItemElement.setAttribute('data-original-title', baggageText);
-            baggageItemElement.querySelector('span').textContent = newBaggageText;
-          }
-        }
-      });
-    } else {
-      setTimeout(changeBaggageText, 100);
-    }
+    let resultsListItems = document.querySelectorAll('.results-list__item');
+
+    resultsListItems.forEach((item) => {
+      let baggageItemElement = item.querySelector('.flight-result__baggage-item');
+      let tooltipElement = item.querySelector('.tooltip-inner');
+
+      if (baggageItemElement && tooltipElement) {
+        let baggageText = baggageItemElement.getAttribute('data-original-title');
+        let baggageCount = baggageText.match(/\d+/)[0];
+
+        let newTooltipText = "Incluye " + baggageCount + " equipaje a despachar";
+        tooltipElement.textContent = newTooltipText;
+      }
+    });
+
+    setTimeout(changeBaggageText, 100);
   }
-  
-  // changeBaggageText();
+
+  changeBaggageText();
 });
 
