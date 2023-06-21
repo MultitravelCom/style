@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let selectElementNew = document.querySelector('select[name="baggageincluded"]');
     let labelElementNew = document.querySelector('label[for="flight-searcher-baggageincluded"]');
-    let spanElementNew = document.querySelector('#select2-flights-searcher-baggageincluded-container');
+    let spanElementNew = document.querySelector('#select2-flight-searcher-baggageincluded-container');
 
     if (selectElementNew && labelElementNew && spanElementNew) {
       let optionElementsNew = selectElementNew.querySelectorAll('option');
