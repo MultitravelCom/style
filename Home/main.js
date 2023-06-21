@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
 
       labelElementNew.textContent = "Equipaje a despachar";
     } else {
-      setTimeout(changeSelectText, 100);
+      setTimeout(changeSelectTextHome, 100);
     }
   }
 
