@@ -46,14 +46,16 @@ window.addEventListener('load', () => {
   function changeSelectTextHome() {
     let selectElementNew = document.querySelector('select[name="baggageincluded"]');
     let labelElementNew = document.querySelector('label[for="flights-searcher-baggageincluded"]');
+    let spanElementNew = document.querySelector('#select2-flights-searcher-baggageincluded-container');
 
-    if (selectElementNew && labelElementNew) {
+    if (selectElementNew && labelElementNew && spanElementNew) {
       let optionElementsNew = selectElementNew.querySelectorAll('option');
 
       optionElementsNew[1].textContent = "Con equipaje a despachar";
       optionElementsNew[2].textContent = "Sin equipaje a despachar";
 
       labelElementNew.textContent = "Equipaje a despachar";
+      spanElementNew.textContent = "Equipaje a despachar";
     } else {
       setTimeout(changeSelectTextHome, 100);
     }
