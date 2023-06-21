@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let selectElementBagge = document.querySelector('select[name="baggageincluded"]');
   
     if (selectElementBagge) {
-      let optionElement = sselectElementBagge.querySelector('option[value="true"]');
+      let optionElement = selectElementBagge.querySelector('option[value="true"]');
       optionElement.innerText = "Equipaje a despechar";
     } else {
       setTimeout(changeSelectText, 100);
