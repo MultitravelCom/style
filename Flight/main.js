@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (selectElement && labelElement) {
       var optionElements = selectElement.querySelectorAll('option');
   
-      optionElements[1].textContent = "Con equipaje incluido";
-      optionElements[2].textContent = "Equipaje a despechar";
+      optionElements[1].textContent = "Equipaje a despachar";
+      optionElements[2].textContent = "Sin equipaje a despechar";
   
       labelElement.textContent = "Equipaje a despechar";
     } else {
