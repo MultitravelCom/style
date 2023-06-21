@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
       optionElements[1].textContent = "Con equipaje incluido";
       optionElements[2].textContent = "Equipaje a despechar";
   
-      labelElement.textContent = "Equipaje incluido";
+      labelElement.textContent = "Equipaje a despechar";
     } else {
       setTimeout(changeSelectText, 100); // Intentar nuevamente después de 100ms
     }
