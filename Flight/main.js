@@ -36,10 +36,16 @@ document.addEventListener('DOMContentLoaded', function () {
   btnMoreOptions.style.display = 'inline-block';
   // ********************************************************************************************
 
-  let selector = document.querySelector('.select2-container--open');
-
-  selector.addEventListener('click', function () {
-    console.log('El usuario hizo clic en el selector');
-  });
+  function changeSelectText() {
+    let selectElement = document.getElementById("flight-searcher-baggageincluded");
+  
+    if (selectElement) {
+      let optionElement = selectElement.querySelector('option[value="true"]');
+      optionElement.innerText = "Equipaje a despechar";
+    } else {
+      setTimeout(changeSelectText, 100);
+    }
+  }
+  changeSelectText();
 });
 
