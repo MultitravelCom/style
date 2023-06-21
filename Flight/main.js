@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       labelElementNew.textContent = "Equipaje a despachar";
     } else {
-      setTimeout(changeSelectTextHome, 100);
+      setTimeout(changeSelectText, 100);
     }
   }
 
