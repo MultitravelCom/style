@@ -43,28 +43,21 @@ window.addEventListener('load', () => {
   label.text('Multidestino');
   document.querySelector('.radio').style.display = 'inline-block';
 
-  let selector = document.querySelector('.select2-container--open');
-
-  selector.addEventListener('click', function () {
-    // Aquí puedes agregar el código que deseas ejecutar cuando el usuario hace clic en el selector
-    console.log('El usuario hizo clic en el selector');
-  });
-
   function changeSelectTextHome() {
     let selectElementNew = document.querySelector('select[name="baggageincluded"]');
     let labelElementNew = document.querySelector('label[for="flights-searcher-baggageincluded"]');
-  
+
     if (selectElementNew && labelElementNew) {
       let optionElementsNew = selectElementNew.querySelectorAll('option');
-  
+
       optionElementsNew[1].textContent = "Con equipaje a despachar";
       optionElementsNew[2].textContent = "Sin equipaje a despachar";
-  
+
       labelElementNew.textContent = "Equipaje a despachar";
     } else {
       setTimeout(changeSelectText, 100);
     }
   }
-  
+
   changeSelectTextHome();
 });
