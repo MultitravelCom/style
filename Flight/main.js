@@ -69,31 +69,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function changeBaggageText() {
     let resultsListPlaceholders = document.querySelectorAll('.js-results-list-placeholder');
-  
+
     resultsListPlaceholders.forEach((placeholder) => {
       let resultsListItems = placeholder.querySelectorAll('.results-list__item');
-  
+
       resultsListItems.forEach((item) => {
         let baggageItemElements = item.querySelectorAll('.flight-result__baggage-item');
         let tooltipElements = item.querySelectorAll('.tooltip-inner');
-  
+
         if (baggageItemElements.length > 0 && tooltipElements.length > 0) {
           baggageItemElements.forEach((baggageItemElement) => {
             let baggageText = baggageItemElement.getAttribute('data-original-title');
-            let baggageCount = baggageText.match(/\d+/)[0];
-  
-            let newTooltipText = "Incluye " + baggageCount + " equipaje a despachar";
-            tooltipElements.forEach((tooltipElement) => {
-              tooltipElement.textContent = newTooltipText;
-            });
+            let baggageCountMatch = baggageText.match(/\d+/);
+
+            if (baggageCountMatch) {
+              let baggageCount = baggageCountMatch[0];
+              let newTooltipText = "Incluye " + baggageCount + " equipaje a despachar";
+
+              tooltipElements.forEach((tooltipElement) => {
+                tooltipElement.textContent = newTooltipText;
+              });
+            }
           });
         }
       });
     });
-  
-    setTimeout(changeBaggageText, 100);
   }
-  
-  changeBaggageText();
+
+  // Agregar evento para capturar la activación del tooltip
+  document.addEventListener('mouseover', function (event) {
+    if (event.target.classList.contains('flight-result__duration')) {
+      changeBaggageText();
+    }
+  });
+
 });
 
