@@ -67,39 +67,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
   changeSelectText();
 
-  function changeBaggageText() {
-    let resultsListPlaceholders = document.querySelectorAll('.js-results-list-placeholder');
+  function changeTooltipText() {
+    let tooltipElements = document.querySelectorAll('.flight-result__baggage-item[title^="Incluye"]');
 
-    resultsListPlaceholders.forEach((placeholder) => {
-      let resultsListItems = placeholder.querySelectorAll('.results-list__item');
+    tooltipElements.forEach((tooltipElement) => {
+      let baggageText = tooltipElement.getAttribute('title');
+      let baggageCountMatch = baggageText.match(/\d+/);
 
-      resultsListItems.forEach((item) => {
-        let baggageItemElements = item.querySelectorAll('.flight-result__baggage-item');
-        let tooltipElements = item.querySelectorAll('.tooltip-inner');
+      if (baggageCountMatch) {
+        let baggageCount = baggageCountMatch[0];
+        let newTooltipText = baggageText.replace(baggageCount, 'X equipaje a despachar');
 
-        if (baggageItemElements.length > 0 && tooltipElements.length > 0) {
-          baggageItemElements.forEach((baggageItemElement) => {
-            let baggageText = baggageItemElement.getAttribute('data-original-title');
-            let baggageCountMatch = baggageText.match(/\d+/);
-
-            if (baggageCountMatch) {
-              let baggageCount = baggageCountMatch[0];
-              let newTooltipText = "Incluye " + baggageCount + " equipaje a despachar";
-
-              tooltipElements.forEach((tooltipElement) => {
-                tooltipElement.textContent = newTooltipText;
-              });
-            }
-          });
-        }
-      });
+        tooltipElement.setAttribute('title', newTooltipText);
+        tooltipElement.dataset.originalTitle = newTooltipText;
+      }
     });
   }
 
   // Agregar evento para capturar la activación del tooltip
   document.addEventListener('mouseover', function (event) {
     if (event.target.classList.contains('flight-result__duration')) {
-      changeBaggageText();
+      changeTooltipText();
     }
   });
 
