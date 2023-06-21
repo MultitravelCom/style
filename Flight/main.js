@@ -68,24 +68,32 @@ document.addEventListener('DOMContentLoaded', function () {
   changeSelectText();
 
   function changeBaggageText() {
-    let resultsListItems = document.querySelectorAll('.results-list__item');
-
-    resultsListItems.forEach((item) => {
-      let baggageItemElement = item.querySelector('.flight-result__baggage-item');
-      let tooltipElement = item.querySelector('.tooltip-inner');
-
-      if (baggageItemElement && tooltipElement) {
-        let baggageText = baggageItemElement.getAttribute('data-original-title');
-        let baggageCount = baggageText.match(/\d+/)[0];
-
-        let newTooltipText = "Incluye " + baggageCount + " equipaje a despachar";
-        tooltipElement.textContent = newTooltipText;
-      }
+    let resultsListPlaceholders = document.querySelectorAll('.js-results-list-placeholder');
+  
+    resultsListPlaceholders.forEach((placeholder) => {
+      let resultsListItems = placeholder.querySelectorAll('.results-list__item');
+  
+      resultsListItems.forEach((item) => {
+        let baggageItemElements = item.querySelectorAll('.flight-result__baggage-item');
+        let tooltipElements = item.querySelectorAll('.tooltip-inner');
+  
+        if (baggageItemElements.length > 0 && tooltipElements.length > 0) {
+          baggageItemElements.forEach((baggageItemElement) => {
+            let baggageText = baggageItemElement.getAttribute('data-original-title');
+            let baggageCount = baggageText.match(/\d+/)[0];
+  
+            let newTooltipText = "Incluye " + baggageCount + " equipaje a despachar";
+            tooltipElements.forEach((tooltipElement) => {
+              tooltipElement.textContent = newTooltipText;
+            });
+          });
+        }
+      });
     });
-
+  
     setTimeout(changeBaggageText, 100);
   }
-
+  
   changeBaggageText();
 });
 
