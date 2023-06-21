@@ -42,8 +42,13 @@ document.addEventListener('DOMContentLoaded', function () {
     if (selectElement) {
       var optionElements = selectElement.querySelectorAll('option');
   
-      optionElements[1].textContent = "Equipaje a despechar";
-      optionElements[2].textContent = "Sin equipaje incluido";
+      optionElements.forEach(function(optionElement) {
+        if (optionElement.textContent === "Equipaje a despechar") {
+          optionElement.textContent = "Sin equipaje incluido";
+        } else if (optionElement.textContent === "Sin equipaje incluido") {
+          optionElement.textContent = "Equipaje a despechar";
+        }
+      });
     } else {
       setTimeout(changeSelectText, 100); // Intentar nuevamente después de 100ms
     }
