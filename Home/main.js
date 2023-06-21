@@ -42,6 +42,7 @@ window.addEventListener('load', () => {
   // // cambiar el texto del label
   label.text('Multidestino');
   document.querySelector('.radio').style.display = 'inline-block';
+// *************************************************************************************************
 
   function changeSelectTextHome() {
     let selectElementNew = document.querySelector('select[name="baggageincluded"]');
@@ -59,13 +60,17 @@ window.addEventListener('load', () => {
         }
       }
   
+      if (spanElementNew.getAttribute('title') === "Con equipaje incluido") {
+        spanElementNew.textContent = "Con equipaje a despachar";
+      } else if (spanElementNew.getAttribute('title') === "Sin equipaje incluido") {
+        spanElementNew.textContent = "Sin equipaje a despachar";
+      }
+  
       labelElementNew.textContent = "Equipaje a despachar";
-      spanElementNew.textContent = "Equipaje a despachar";
     } else {
       setTimeout(changeSelectTextHome, 100);
     }
   }
   
   changeSelectTextHome();
-
 });
