@@ -51,18 +51,18 @@ window.addEventListener('load', () => {
   });
 
   function changeSelectText() {
-    var selectElementNew = document.querySelector('select[name="baggageincluded"]');
-    var labelElementNew = document.querySelector('label[for="flights-searcher-baggageincluded"]');
+    let selectElementNew = document.querySelector('select[name="baggageincluded"]');
+    let labelElementNew = document.querySelector('label[for="flights-searcher-baggageincluded"]');
   
     if (selectElementNew && labelElementNew) {
-      var optionElementsNew = selectElementNew.querySelectorAll('option');
+      let optionElementsNew = selectElementNew.querySelectorAll('option');
   
       optionElementsNew[1].textContent = "Con equipaje a despachar";
       optionElementsNew[2].textContent = "Sin equipaje a despachar";
   
       labelElementNew.textContent = "Equipaje a despachar";
     } else {
-      setTimeout(changeSelectText, 100); // Intentar nuevamente después de 100ms
+      setTimeout(changeSelectText, 100);
     }
   }
   
