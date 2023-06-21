@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
     console.log('El usuario hizo clic en el selector');
   });
 
-  function changeSelectText() {
+  function changeSelectTextHome() {
     let selectElementNew = document.querySelector('select[name="baggageincluded"]');
     let labelElementNew = document.querySelector('label[for="flights-searcher-baggageincluded"]');
   
@@ -66,5 +66,5 @@ window.addEventListener('load', () => {
     }
   }
   
-  changeSelectText();
+  changeSelectTextHome();
 });
