@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
       let optionElements = selectElement.querySelectorAll('option');
   
       optionElements.forEach(function(optionElement) {
-        if (optionElement.textContent === "Con equipaje incluido") {
+        if (optionElement.textContent === "Equipaje a despechar") {
           optionElement.textContent = "Equipaje a despechar";
         } else if (optionElement.textContent === "Sin equipaje incluido") {
           optionElement.textContent = "Sin equipaje incluido";
@@ -54,6 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   
-  changeSelectText();
+  changeSelectText();;
 });
 
