@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // ********************************************************************************************
 
   function changeSelectText() {
-    let selectElement = document.getElementById("flight-searcher-baggageincluded");
+    let selectElementBagge = document.querySelector('select[name="baggageincluded"]');
   
-    if (selectElement) {
-      let optionElement = selectElement.querySelector('option[value="true"]');
+    if (selectElementBagge) {
+      let optionElement = sselectElementBagge.querySelector('option[value="true"]');
       optionElement.innerText = "Equipaje a despechar";
     } else {
       setTimeout(changeSelectText, 100);
