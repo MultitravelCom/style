@@ -38,12 +38,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function changeSelectText() {
     var selectElement = document.querySelector('select[name="baggageincluded"]');
+    var labelElement = document.querySelector('label[for="flight-searcher-baggageincluded"]');
   
-    if (selectElement) {
+    if (selectElement && labelElement) {
       var optionElements = selectElement.querySelectorAll('option');
   
-      optionElements[1].textContent = "Sin equipaje incluido";
+      optionElements[1].textContent = "Con equipaje incluido";
       optionElements[2].textContent = "Equipaje a despechar";
+  
+      labelElement.textContent = "Equipaje incluido";
     } else {
       setTimeout(changeSelectText, 100); // Intentar nuevamente después de 100ms
     }
