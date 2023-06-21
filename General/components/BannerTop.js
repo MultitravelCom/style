@@ -109,7 +109,7 @@ const BannerTop = () => {
                             />
                         </picture>
                     </a>
-                    {/* {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)} */}
+                    {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)}
 
                 </div>
                 <div id="bannerTop__rigth" className="main__container_right">

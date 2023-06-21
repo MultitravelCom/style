@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     } else {
-      setTimeout(changeSelectText, 100); // Intentar nuevamente después de 100ms
+      setTimeout(changeSelectText, 100);
     }
   }
   
