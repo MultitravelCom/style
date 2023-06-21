@@ -37,15 +37,23 @@ document.addEventListener('DOMContentLoaded', function () {
   // ********************************************************************************************
 
   function changeSelectText() {
-    let selectElementBagge = document.querySelector('select[name="baggageincluded"]');
-  
-    if (selectElementBagge) {
-      let optionElement = selectElementBagge.querySelector('option[value="true"]');
-      optionElement.innerText = "Equipaje a despechar";
+    var selectElement = document.querySelector('select[name="baggageincluded"]');
+    
+    if (selectElement) {
+      var optionElements = selectElement.querySelectorAll('option');
+      
+      optionElements.forEach(function(optionElement) {
+        if (optionElement.value === "true") {
+          optionElement.innerText = "Equipaje a despechar";
+        } else if (optionElement.value === "false") {
+          optionElement.innerText = "Sin equipaje incluido";
+        }
+      });
     } else {
-      setTimeout(changeSelectText, 100);
+      setTimeout(changeSelectText, 100); // Intentar nuevamente después de 100ms
     }
   }
+  
   changeSelectText();
 });
 
