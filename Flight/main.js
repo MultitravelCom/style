@@ -33,22 +33,21 @@ document.addEventListener('DOMContentLoaded', function () {
   changeSelectText();
 
   function reemplazarTextoEquipaje() {
-    // Obtén todos los elementos con el selector results-list__item
     let elementosBusqueda = document.querySelectorAll('.results-list__item');
 
-    // Itera sobre cada elemento encontrado
     for (let i = 0; i < elementosBusqueda.length; i++) {
       let elemento = elementosBusqueda[i];
+      let divs = elemento.getElementsByTagName('div');
 
-      // Busca el elemento específico dentro del elemento actual
-      let elementoEquipaje = elemento.querySelector('div:contains("Equipaje:  Incluído")');
-
-      // Verifica si se encontró el elemento específico y modifica el texto si es necesario
-      if (elementoEquipaje) {
-        elementoEquipaje.innerText = "Equipaje: Incluye equipaje a despachar";
+      for (let j = 0; j < divs.length; j++) {
+        let div = divs[j];
+        if (div.innerText.trim() === 'Equipaje:  Incluído') {
+          div.innerText = 'Equipaje: Incluye equipaje a despachar';
+        }
       }
     }
   }
+
   reemplazarTextoEquipaje();
 
   // MULT-127
