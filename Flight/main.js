@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
       let optionElementsNew = selectElementNew.querySelectorAll('option');
 
       for (let i = 0; i < optionElementsNew.length; i++) {
-        if (optionElementsNew[i].textContent.includes("Con equipaje a despachar")) {
-          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Con equipaje a despachar", "Con equipaje a despachar");
-        } else if (optionElementsNew[i].textContent.includes("Sin equipaje a despachar")) {
-          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Sin equipaje a despachar", "Sin equipaje a despachar");
+        if (optionElementsNew[i].textContent.includes("Con equipaje incluido")) {
+          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Con equipaje incluido", "Con equipaje a despachar");
+        } else if (optionElementsNew[i].textContent.includes("Sin equipaje incluido")) {
+          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Sin equipaje incluido", "Sin equipaje a despachar");
         }
       }
 
