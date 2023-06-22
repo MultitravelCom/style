@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
         divs.forEach((div) => {
           let texto = div.textContent.trim();
           
-          if (texto === 'Equipaje:  Incluído') {
+          if (/^Equipaje:\s*Incluído$/.test(texto)) {
             div.textContent = 'Equipaje: Incluye equipaje a despachar';
-          } else if (texto === 'Equipaje: Sin especificar') {
+          } else if (/^Equipaje:\s*Sin\s+especificar$/.test(texto)) {
             div.textContent = 'Equipaje: No incluye equipaje a despachar';
           }
         });
@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   
   reemplazarTextoEquipaje();
+  
   
 
   // MULT-127
