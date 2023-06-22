@@ -804,3 +804,7 @@ body.home.home--default .home-v5__searcher,
     width: 60% !important;
   }
 }
+/* ************ MULT-287 ****************************** */
+.searcher.searcher-is-landscape .searcher-row div:nth-child(4) {
+  display: none;
+}
