@@ -3,36 +3,33 @@ document.addEventListener('DOMContentLoaded', function () {
   function changeSelectText() {
     let selectElementNew = document.querySelector('select[name="baggageincluded"]');
     let labelElementNew = document.querySelector('label[for="flight-searcher-baggageincluded"]');
-    let spanElementNew = document.querySelector('#select2-flight-searcher-baggageincluded-container');
-  
-    if (selectElementNew && labelElementNew && spanElementNew) {
+    let spanElementsNew = document.querySelectorAll('.select2-selection__rendered');
+
+    if (selectElementNew && labelElementNew && spanElementsNew) {
       let optionElementsNew = selectElementNew.querySelectorAll('option');
-  
+
       for (let i = 0; i < optionElementsNew.length; i++) {
-        if (optionElementsNew[i].textContent.includes("Con equipaje incluido")) {
-          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Con equipaje incluido", "Con equipaje a despachar");
-        } else if (optionElementsNew[i].textContent.includes("Sin equipaje incluido")) {
-          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Sin equipaje incluido", "Sin equipaje a despachar");
+        if (optionElementsNew[i].textContent.includes("Con equipaje a despachar")) {
+          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Con equipaje a despachar", "Con equipaje a despachar");
+        } else if (optionElementsNew[i].textContent.includes("Sin equipaje a despachar")) {
+          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Sin equipaje a despachar", "Sin equipaje a despachar");
         }
       }
-  
-      if (spanElementNew.getAttribute('title') === "Con equipaje incluido") {
-        spanElementNew.textContent = "Con equipaje a despachar";
-      } else if (spanElementNew.getAttribute('title') === "Sin equipaje incluido") {
-        spanElementNew.textContent = "Sin equipaje a despachar";
+
+      for (let i = 0; i < spanElementsNew.length; i++) {
+        if (spanElementsNew[i].getAttribute('title') === "Con equipaje a despachar") {
+          spanElementsNew[i].textContent = "Con equipaje a despachar";
+        } else if (spanElementsNew[i].getAttribute('title') === "Sin equipaje a despachar") {
+          spanElementsNew[i].textContent = "Sin equipaje a despachar";
+        }
       }
-  
-      // Actualizar el texto del elemento siguiente (sibling) del span
-      if (spanElementNew.nextSibling) {
-        spanElementNew.nextSibling.textContent = spanElementNew.textContent;
-      }
-  
+
       labelElementNew.textContent = "Equipaje a despachar";
     } else {
       setTimeout(changeSelectText, 100);
     }
   }
-  
+
   changeSelectText();
 
   // MULT-127
