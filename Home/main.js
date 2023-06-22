@@ -43,44 +43,32 @@ window.addEventListener('load', () => {
   label.text('Multidestino');
   document.querySelector('.radio').style.display = 'inline-block';
 // *************************************************************************************************
-
-  // function changeSelectTextHome() {
-  //   let selectElementNew = document.querySelector('select[name="baggageincluded"]');
-  //   let labelElementNew = document.querySelector('label[for="flights-searcher-baggageincluded"]');
-
-  //   if (selectElementNew && labelElementNew) {
-  //     let optionElementsNew = selectElementNew.querySelectorAll('option');
-
-  //     optionElementsNew[1].textContent = "Con equipaje a despachar";
-  //     optionElementsNew[2].textContent = "Sin equipaje a despachar";
-
-  //     labelElementNew.textContent = "Equipaje a despachar";
-  //   } else {
-  //     setTimeout(changeSelectText, 100);
-  //   }
-  // }
-
-  // changeSelectTextHome();
-
   function changeSelectText() {
-    var selectElementNew = document.querySelector('select[name="baggageincluded"]');
-    var labelElementNew = document.querySelector('label[for="flights-searcher-baggageincluded"]');
 
-    if (selectElementNew && labelElementNew) {
-      var optionElementsNew = selectElementNew.querySelectorAll('option');
+    let selectElementNew = document.querySelector('select[name="baggageincluded"]');
+    let labelElementNew = document.querySelector('label[for="flights-searcher-baggageincluded"]');
+    let spanElementNew = document.querySelector('#select2-flights-searcher-baggageincluded-container');
 
-      optionElementsNew[1].textContent = "Con equipaje a despachar";
-      optionElementsNew[2].textContent = "Sin equipaje a despachar";
+    if (selectElementNew && labelElementNew && spanElementNew) {
+      let optionElementsNew = selectElementNew.querySelectorAll('option');
 
-      var selectedOptionNew = selectElementNew.querySelector('option[selected]');
-      if (selectedOptionNew) {
-        var selectedIndexNew = Array.from(optionElementsNew).indexOf(selectedOptionNew);
-        if (selectedIndexNew !== -1) {
-          labelElementNew.textContent = optionElementsNew[selectedIndexNew].textContent;
+      for (let i = 0; i < optionElementsNew.length; i++) {
+        if (optionElementsNew[i].textContent.includes("Con equipaje incluido")) {
+          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Con equipaje incluido", "Con equipaje a despachar");
+        } else if (optionElementsNew[i].textContent.includes("Sin equipaje incluido")) {
+          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Sin equipaje incluido", "Sin equipaje a despachar");
         }
       }
+
+      if (spanElementNew.getAttribute('title') === "Con equipaje incluido") {
+        spanElementNew.textContent = "Con equipaje a despachar";
+      } else if (spanElementNew.getAttribute('title') === "Sin equipaje incluido") {
+        spanElementNew.textContent = "Sin equipaje a despachar";
+      }
+
+      labelElementNew.textContent = "Equipaje a despachar";
     } else {
-      setTimeout(changeSelectText, 100); 
+      setTimeout(changeSelectText, 100);
     }
   }
 
