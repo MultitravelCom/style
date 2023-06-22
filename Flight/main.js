@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // MULT-
-
+  // MULT-277
   function changeSelectText() {
     let selectElementNew = document.querySelector('select[name="baggageincluded"]');
     let labelElementNew = document.querySelector('label[for="flight-searcher-baggageincluded"]');
@@ -26,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
       labelElementNew.textContent = "Equipaje a despachar";
     }
   }
-
   document.querySelector('select[name="baggageincluded"]').addEventListener('change', changeSelectText);
 
   changeSelectText();
+
   // MULT-127
   const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
   const divObjetivo = document.getElementById('flight-searcher-more-options');

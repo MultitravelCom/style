@@ -43,8 +43,8 @@ window.addEventListener('load', () => {
   label.text('Multidestino');
   document.querySelector('.radio').style.display = 'inline-block';
 // *************************************************************************************************
+  // MULT-277
   function changeSelectText() {
-
     let selectElementNew = document.querySelector('select[name="baggageincluded"]');
     let labelElementNew = document.querySelector('label[for="flights-searcher-baggageincluded"]');
     let spanElementNew = document.querySelector('#select2-flights-searcher-baggageincluded-container');
@@ -67,10 +67,9 @@ window.addEventListener('load', () => {
       }
 
       labelElementNew.textContent = "Equipaje a despachar";
-    } else {
-      setTimeout(changeSelectText, 100);
     }
   }
+  document.querySelector('select[name="baggageincluded"]').addEventListener('change', changeSelectText);
 
   changeSelectText();
 });
