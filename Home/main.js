@@ -42,7 +42,7 @@ window.addEventListener('load', () => {
   // // cambiar el texto del label
   label.text('Multidestino');
   document.querySelector('.radio').style.display = 'inline-block';
-// *************************************************************************************************
+  // *************************************************************************************************
   // MULT-277
   function changeSelectText() {
     let selectElementNew = document.querySelector('select[name="baggageincluded"]');
