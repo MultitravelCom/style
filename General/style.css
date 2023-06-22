@@ -805,6 +805,6 @@ body.home.home--default .home-v5__searcher,
   }
 }
 /* ************ MULT-287 ****************************** */
-#hotel-searcher .searcher.searcher-is-landscape .searcher-row div:nth-child(4) {
+/* #hotel-searcher .searcher.searcher-is-landscape .searcher-row div:nth-child(4) {
   display: none;
-}
+} */
