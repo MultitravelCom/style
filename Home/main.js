@@ -79,20 +79,4 @@ window.addEventListener('load', () => {
 
   changeSelectText();
 
-
-  function reemplazarTextoEquipaje() {
-    let segments = document.querySelectorAll('.result-option__extended-info.flight-selection__segments.js-flight-segments');
-  
-    segments.forEach(function (segment) {
-      let equipajeElement = segment.querySelector('.flight-segments__segment-info > div:nth-child(5)');
-      let equipajeTexto = equipajeElement.textContent.trim();
-  
-      if (equipajeTexto === 'Equipaje:  Incluído') {
-        equipajeElement.textContent = 'Equipaje: Incluye equipaje a despachar';
-      }
-    });
-  }
-  
-  // Llamada inicial a la función de reemplazo de texto
-  reemplazarTextoEquipaje();
 });
