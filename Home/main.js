@@ -45,47 +45,37 @@ window.addEventListener('load', () => {
   // *************************************************************************************************
   // MULT-277
   function changeSelectText() {
-    let selectElements = document.querySelectorAll('select[name="baggageincluded"], select[name="flight-searcher-baggageincluded"]');
-    let labelElements = document.querySelectorAll('label[for="flights-searcher-baggageincluded"], label[for="flight-searcher-baggageincluded"]');
-    let spanElements = document.querySelectorAll('#select2-flights-searcher-baggageincluded-container, #select2-flight-searcher-baggageincluded-container');
+    let selectElementNew = document.querySelector('select[name="baggageincluded"]');
+    let labelElementNew = document.querySelector('label[for="flights-searcher-baggageincluded"]');
+    let spanElementNew = document.querySelector('#select2-flights-searcher-baggageincluded-container');
 
-    for (let i = 0; i < selectElements.length; i++) {
-      let selectElement = selectElements[i];
-      let labelElement = labelElements[i];
-      let spanElement = spanElements[i];
+    if (selectElementNew && labelElementNew && spanElementNew) {
+      let optionElementsNew = selectElementNew.querySelectorAll('option');
 
-      if (selectElement && labelElement && spanElement) {
-        let optionElements = selectElement.querySelectorAll('option');
-
-        for (let j = 0; j < optionElements.length; j++) {
-          if (optionElements[j].textContent.includes("Con equipaje incluido")) {
-            optionElements[j].textContent = optionElements[j].textContent.replace("Con equipaje incluido", "Con equipaje a despachar");
-          }
-          if (optionElements[j].textContent.includes("Sin equipaje incluido")) {
-            optionElements[j].textContent = optionElements[j].textContent.replace("Sin equipaje incluido", "Sin equipaje a despachar");
-          }
+      for (let i = 0; i < optionElementsNew.length; i++) {
+        if (optionElementsNew[i].textContent.includes("Con equipaje incluido")) {
+          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Con equipaje incluido", "Con equipaje a despachar");
         }
-
-        let selectedOptionText = selectElement.options[selectElement.selectedIndex].textContent;
-        if (selectedOptionText.includes("Sin equipaje incluido")) {
-          spanElement.textContent = "Sin equipaje a despachar";
-          spanElement.setAttribute('title', 'Sin equipaje a despachar');
+        if (optionElementsNew[i].textContent.includes("Sin equipaje incluido")) {
+          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Sin equipaje incluido", "Sin equipaje a despachar");
         }
-        if (selectedOptionText.includes("Con equipaje incluido")) {
-          spanElement.textContent = "Con equipaje a despachar";
-          spanElement.setAttribute('title', 'Con equipaje a despachar');
-        }
-
-        labelElement.textContent = "Equipaje a despachar";
       }
+
+      let selectedOptionText = selectElementNew.options[selectElementNew.selectedIndex].textContent;
+      if (selectedOptionText.includes("Sin equipaje incluido")) {
+        spanElementNew.textContent = "Sin equipaje a despachar";
+        spanElementNew.setAttribute('title', 'Sin equipaje a despachar');
+      }
+      if (selectedOptionText.includes("Con equipaje incluido")) {
+        spanElementNew.textContent = "Con equipaje a despachar";
+        spanElementNew.setAttribute('title', 'Con equipaje a despachar');
+      }
+
+      labelElementNew.textContent = "Equipaje a despachar";
     }
   }
 
-  let selectElements = document.querySelectorAll('select[name="baggageincluded"], select[name="flight-searcher-baggageincluded"]');
-  for (let i = 0; i < selectElements.length; i++) {
-    let selectElement = selectElements[i];
-    selectElement.addEventListener('focus', changeSelectText);
-  }
+  document.querySelector('select[name="baggageincluded"]').addEventListener('click', changeSelectText);
 
   changeSelectText();
 
