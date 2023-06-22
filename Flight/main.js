@@ -33,22 +33,15 @@ document.addEventListener('DOMContentLoaded', function () {
   changeSelectText();
 
   function reemplazarTextoEquipaje() {
-    // Obtener la lista de elementos "results-list__item" dentro de "results-list__body js-results-list-placeholder"
-    var items = document.querySelectorAll('.results-list__body.js-results-list-placeholder .results-list__item');
+    // Obtén todos los elementos que contienen el texto "Equipaje: Incluído"
+    var elementosEquipaje = document.querySelectorAll('div:contains("Equipaje:  Incluído")');
 
-    // Iterar por cada elemento "results-list__item"
-    items.forEach(function (item) {
-      // Buscar el elemento que contiene el texto "Equipaje: Incluido"
-      var equipajeElement = item.querySelector(':contains("Equipaje: Incluído")');
-
-      // Verificar si se encontró el elemento
-      if (equipajeElement) {
-        // Reemplazar el texto "Equipaje: Incluido" por "Equipaje: Con equipaje a despechar"
-        equipajeElement.innerText = equipajeElement.innerText.replace('Equipaje: Incluío', 'Equipaje: Con equipaje a despechar');
-      }
-    });
+    // Itera sobre cada elemento encontrado y modifica el texto
+    for (var i = 0; i < elementosEquipaje.length; i++) {
+      var elemento = elementosEquipaje[i];
+      elemento.innerText = "Equipaje: Incluye equipaje a despachar";
+    }
   }
-
   reemplazarTextoEquipaje();
 
   // MULT-127
