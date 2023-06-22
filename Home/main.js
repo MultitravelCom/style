@@ -43,45 +43,22 @@ window.addEventListener('load', () => {
   label.text('Multidestino');
   document.querySelector('.radio').style.display = 'inline-block';
 
-  // function changeSelectTextHome() {
-  //   let selectElementNew = document.querySelector('select[name="baggageincluded"]');
-  //   let labelElementNew = document.querySelector('label[for="flights-searcher-baggageincluded"]');
-
-  //   if (selectElementNew && labelElementNew) {
-  //     let optionElementsNew = selectElementNew.querySelectorAll('option');
-
-  //     optionElementsNew[1].textContent = "Con equipaje a despachar";
-  //     optionElementsNew[2].textContent = "Sin equipaje a despachar";
-
-  //     labelElementNew.textContent = "Equipaje a despachar";
-  //   } else {
-  //     setTimeout(changeSelectText, 100);
-  //   }
-  // }
-
-  // changeSelectTextHome();
-
-  function changeSelectText() {
-    var selectElementNew = document.querySelector('select[name="baggageincluded"]');
-    var labelElementNew = document.querySelector('label[for="flights-searcher-baggageincluded"]');
+  function changeSelectTextHome() {
+    let selectElementNew = document.querySelector('select[name="baggageincluded"]');
+    let labelElementNew = document.querySelector('label[for="flights-searcher-baggageincluded"]');
 
     if (selectElementNew && labelElementNew) {
-      var optionElementsNew = selectElementNew.querySelectorAll('option');
+      let optionElementsNew = selectElementNew.querySelectorAll('option');
 
       optionElementsNew[1].textContent = "Con equipaje a despachar";
       optionElementsNew[2].textContent = "Sin equipaje a despachar";
 
-      var selectedOptionNew = selectElementNew.querySelector('option[selected]');
-      if (selectedOptionNew) {
-        var selectedIndexNew = Array.from(optionElementsNew).indexOf(selectedOptionNew);
-        if (selectedIndexNew !== -1) {
-          labelElementNew.textContent = optionElementsNew[selectedIndexNew].textContent;
-        }
-      }
+      labelElementNew.textContent = "Equipaje a despachar";
     } else {
-      setTimeout(changeSelectText, 100); // Intentar nuevamente después de 100ms
+      setTimeout(changeSelectText, 100);
     }
   }
 
-  changeSelectText();
+  changeSelectTextHome();
+
 });
