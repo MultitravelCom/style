@@ -33,18 +33,20 @@ document.addEventListener('DOMContentLoaded', function () {
   changeSelectText();
 
   function reemplazarTextoEquipaje() {
-    var elementosEquipaje = document.getElementsByClassName("flight-result__baggage-item");
+    // Obtener la lista de elementos "results-list__item" dentro de "results-list__body js-results-list-placeholder"
+    var items = document.querySelectorAll('.results-list__body.js-results-list-placeholder .results-list__item');
 
-    // Recorrer los elementos y cambiar el texto
-    for (var i = 0; i < elementosEquipaje.length; i++) {
-      var elemento = elementosEquipaje[i];
+    // Iterar por cada elemento "results-list__item"
+    items.forEach(function (item) {
+      // Buscar el elemento que contiene el texto "Equipaje: Incluido"
+      var equipajeElement = item.querySelector(':contains("Equipaje: Incluido")');
 
-      // Verificar si el texto actual es "Incluido"
-      if (elemento.textContent.trim() === "Incluido") {
-        // Cambiar el texto a "Con equipaje a despechar"
-        elemento.textContent = "Con equipaje a despechar";
+      // Verificar si se encontró el elemento
+      if (equipajeElement) {
+        // Reemplazar el texto "Equipaje: Incluido" por "Equipaje: Con equipaje a despechar"
+        equipajeElement.innerText = equipajeElement.innerText.replace('Equipaje: Incluido', 'Equipaje: Con equipaje a despechar');
       }
-    }
+    });
   }
 
   reemplazarTextoEquipaje();
