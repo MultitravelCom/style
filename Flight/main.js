@@ -33,22 +33,25 @@ document.addEventListener('DOMContentLoaded', function () {
   changeSelectText();
 
   function reemplazarTextoEquipaje() {
-    let elementosBusqueda = document.querySelectorAll('.results-list__item');
+    let elementos = document.querySelectorAll('.flight-segments__segment-info');
 
-    for (let i = 0; i < elementosBusqueda.length; i++) {
-      let elemento = elementosBusqueda[i];
-      let divs = elemento.getElementsByTagName('div');
+    if (elementos.length > 0) {
+      elementos.forEach((elemento) => {
+        let divs = elemento.querySelectorAll('div');
 
-      for (let j = 0; j < divs.length; j++) {
-        let div = divs[j];
-        if (div.innerText.trim() === 'Equipaje:  Incluído') {
-          div.innerText = 'Equipaje: Incluye equipaje a despachar';
-        }
-      }
+        divs.forEach((div) => {
+          if (div.textContent.trim() === 'Equipaje:  Incluído') {
+            div.textContent = 'Equipaje: Incluye equipaje a despachar';
+          }
+        });
+      });
+    } else {
+      setTimeout(reemplazarTextoEquipaje, 100);
     }
   }
 
   reemplazarTextoEquipaje();
+
 
   // MULT-127
   const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
