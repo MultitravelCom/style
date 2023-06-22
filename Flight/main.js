@@ -33,13 +33,20 @@ document.addEventListener('DOMContentLoaded', function () {
   changeSelectText();
 
   function reemplazarTextoEquipaje() {
-    // Obtén todos los elementos que contienen el texto "Equipaje: Incluído"
-    var elementosEquipaje = document.querySelectorAll('div:contains("Equipaje:  Incluído")');
+    // Obtén todos los elementos con el selector results-list__item
+    let elementosBusqueda = document.querySelectorAll('.results-list__item');
 
-    // Itera sobre cada elemento encontrado y modifica el texto
-    for (var i = 0; i < elementosEquipaje.length; i++) {
-      var elemento = elementosEquipaje[i];
-      elemento.innerText = "Equipaje: Incluye equipaje a despachar";
+    // Itera sobre cada elemento encontrado
+    for (let i = 0; i < elementosBusqueda.length; i++) {
+      let elemento = elementosBusqueda[i];
+
+      // Busca el elemento específico dentro del elemento actual
+      let elementoEquipaje = elemento.querySelector('div:contains("Equipaje:  Incluído")');
+
+      // Verifica si se encontró el elemento específico y modifica el texto si es necesario
+      if (elementoEquipaje) {
+        elementoEquipaje.innerText = "Equipaje: Incluye equipaje a despachar";
+      }
     }
   }
   reemplazarTextoEquipaje();
