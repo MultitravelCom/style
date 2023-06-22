@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Iterar por cada elemento "results-list__item"
     items.forEach(function (item) {
       // Buscar el elemento que contiene el texto "Equipaje: Incluido"
-      var equipajeElement = item.querySelector(':contains("Equipaje: Incluido")');
+      var equipajeElement = item.querySelector(':contains("Equipaje: Incluído")');
 
       // Verificar si se encontró el elemento
       if (equipajeElement) {
         // Reemplazar el texto "Equipaje: Incluido" por "Equipaje: Con equipaje a despechar"
-        equipajeElement.innerText = equipajeElement.innerText.replace('Equipaje: Incluido', 'Equipaje: Con equipaje a despechar');
+        equipajeElement.innerText = equipajeElement.innerText.replace('Equipaje: Incluío', 'Equipaje: Con equipaje a despechar');
       }
     });
   }
