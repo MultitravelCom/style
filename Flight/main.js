@@ -34,14 +34,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function reemplazarTextoEquipaje() {
     let elementos = document.querySelectorAll('.flight-segments__segment-info');
-
+  
     if (elementos.length > 0) {
       elementos.forEach((elemento) => {
         let divs = elemento.querySelectorAll('div');
-
+  
         divs.forEach((div) => {
-          if (div.textContent.trim() === 'Equipaje:  Incluído') {
+          let texto = div.textContent.trim();
+          
+          if (texto === 'Equipaje:  Incluído') {
             div.textContent = 'Equipaje: Incluye equipaje a despachar';
+          } else if (texto === 'Equipaje: Sin especificar') {
+            div.textContent = 'Equipaje: No incluye equipaje a despachar';
           }
         });
       });
@@ -49,9 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(reemplazarTextoEquipaje, 100);
     }
   }
-
+  
   reemplazarTextoEquipaje();
-
+  
 
   // MULT-127
   const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
