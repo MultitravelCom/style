@@ -79,5 +79,45 @@ window.addEventListener('load', () => {
 
   changeSelectText();
 
-
+  function reemplazarTextoEquipaje(segment) {
+    let equipajeElement = segment.querySelector('.flight-segments__segment-info > div:nth-child(5)');
+    let equipajeTexto = equipajeElement.textContent.trim();
+  
+    if (equipajeTexto === 'Equipaje:  Incluído') {
+      equipajeElement.textContent = 'Equipaje: A despachar Incluido';
+    }
+  }
+  
+  function observeSegmentChanges(segment) {
+    let observer = new MutationObserver(function (mutationsList) {
+      for (let i = 0; i < mutationsList.length; i++) {
+        let mutation = mutationsList[i];
+        if (mutation.attributeName === 'style') {
+          let target = mutation.target;
+          let displayValue = getComputedStyle(target).display;
+  
+          if (displayValue === 'block') {
+            reemplazarTextoEquipaje(target);
+          }
+        }
+      }
+    });
+  
+    observer.observe(segment, { attributes: true });
+  }
+  
+  function observarCambiosResultadoVuelos() {
+    let resultsList = document.querySelector('.results-list__body.js-results-list-placeholder');
+    let resultItems = resultsList.querySelectorAll('.results-list__item');
+  
+    resultItems.forEach(function (resultItem) {
+      let departureSegments = resultItem.querySelectorAll('.flight-result__route.flight-result__route--departure .result-option__extended-info.flight-selection__segments.js-flight-segments');
+      let returnSegments = resultItem.querySelectorAll('.flight-result__route.flight-result__route--return .result-option__extended-info.flight-selection__segments.js-flight-segments');
+  
+      departureSegments.forEach(observeSegmentChanges);
+      returnSegments.forEach(observeSegmentChanges);
+    });
+  }
+  
+  observarCambiosResultadoVuelos();
 });
