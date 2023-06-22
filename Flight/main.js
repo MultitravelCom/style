@@ -33,19 +33,20 @@ document.addEventListener('DOMContentLoaded', function () {
   changeSelectText();
 
   function reemplazarTextoEquipaje() {
-    let segments = document.querySelectorAll('.result-option__extended-info.flight-selection__segments.js-flight-segments');
-  
-    segments.forEach(function (segment) {
-      let equipajeElement = segment.querySelector('.flight-segments__segment-info > div:nth-child(5)');
-      let equipajeTexto = equipajeElement.textContent.trim();
-  
-      if (equipajeTexto === 'Equipaje:  Incluído') {
-        equipajeElement.textContent = 'Equipaje: Incluye equipaje a despachar';
+    var elementosEquipaje = document.getElementsByClassName("flight-result__baggage-item");
+
+    // Recorrer los elementos y cambiar el texto
+    for (var i = 0; i < elementosEquipaje.length; i++) {
+      var elemento = elementosEquipaje[i];
+
+      // Verificar si el texto actual es "Incluido"
+      if (elemento.textContent.trim() === "Incluido") {
+        // Cambiar el texto a "Con equipaje a despechar"
+        elemento.textContent = "Con equipaje a despechar";
       }
-    });
+    }
   }
-  
-  // Llamada inicial a la función de reemplazo de texto
+
   reemplazarTextoEquipaje();
 
   // MULT-127
