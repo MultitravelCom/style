@@ -53,22 +53,22 @@ window.addEventListener('load', () => {
       let optionElementsNew = selectElementNew.querySelectorAll('option');
   
       for (let i = 0; i < optionElementsNew.length; i++) {
-        if (optionElementsNew[i].textContent.includes("Con equipaje incluido")) {
-          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Con equipaje incluido", "Con equipaje a despachar");
-        } else if (optionElementsNew[i].textContent.includes("Sin equipaje incluido")) {
-          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Sin equipaje incluido", "Sin equipaje a despachar");
+        if (optionElementsNew[i].textContent.includes("Con equipaje a despachar")) {
+          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Con equipaje a despachar", "Con equipaje incluido");
+        } else if (optionElementsNew[i].textContent.includes("Sin equipaje a despachar")) {
+          optionElementsNew[i].textContent = optionElementsNew[i].textContent.replace("Sin equipaje a despachar", "Sin equipaje incluido");
         }
       }
   
-      if (spanElementNew.getAttribute('title') === "Sin equipaje incluido" || spanElementNew.textContent === "Sin equipaje a despachar") {
-        spanElementNew.textContent = "Sin equipaje a despachar";
-        spanElementNew.setAttribute('title', 'Sin equipaje a despachar');
-      } else if (spanElementNew.getAttribute('title') === "Con equipaje incluido" || spanElementNew.textContent === "Con equipaje a despachar") {
-        spanElementNew.textContent = "Con equipaje a despachar";
-        spanElementNew.setAttribute('title', 'Con equipaje a despachar');
+      if (spanElementNew.getAttribute('title') === "Sin equipaje a despachar") {
+        spanElementNew.textContent = "Sin equipaje incluido";
+        spanElementNew.setAttribute('title', 'Sin equipaje incluido');
+      } else if (spanElementNew.getAttribute('title') === "Con equipaje a despachar") {
+        spanElementNew.textContent = "Con equipaje incluido";
+        spanElementNew.setAttribute('title', 'Con equipaje incluido');
       }
   
-      labelElementNew.textContent = "Equipaje a despachar";
+      labelElementNew.textContent = "Equipaje incluido";
     }
   }
   
