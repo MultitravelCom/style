@@ -34,14 +34,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function reemplazarTextoEquipaje() {
     let elementos = document.querySelectorAll('.flight-segments__segment-info');
-  
+
     if (elementos.length > 0) {
       elementos.forEach((elemento) => {
         let divs = elemento.querySelectorAll('div');
-  
+
         divs.forEach((div) => {
           let texto = div.textContent.trim();
-          
+
           if (/^Equipaje:\s*Incluído$/.test(texto)) {
             div.textContent = 'Equipaje: Incluye equipaje a despachar';
           } else if (/^Equipaje:\s*Sin\s+especificar$/.test(texto)) {
@@ -53,10 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(reemplazarTextoEquipaje, 100);
     }
   }
-  
+
   reemplazarTextoEquipaje();
-  
-  
+
 
   // MULT-127
   const divAMover = document.querySelector('.hidden-lg.col-xs-6.col-sm-2.pull-right');
