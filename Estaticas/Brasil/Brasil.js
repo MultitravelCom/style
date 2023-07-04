@@ -42,6 +42,14 @@ function addHeaderLinks() {
 }
 addHeaderLinks();
 
+function cambiarImagenMeta() {
+    var metaTag = document.querySelector('meta[property="og:image"]');
+    metaTag.content = "https://multitravelcom.github.io/MT/multitravel.webp";
+}
+document.addEventListener("DOMContentLoaded", function () {
+    cambiarImagenMeta();
+});
+
 // ************** Ancla *****************************
 function mostrarSeccion() {
     let url = window.location.href; // Obtener la URL completa
