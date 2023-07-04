@@ -110,22 +110,25 @@ addHeaderLinks();
 // **************** MULT-317 **********************************************************
 
 function verificarYActualizarMeta() {
-    var metaTag = document.querySelector('meta[property="og:image"]');
-  
+    let metaTag = document.querySelector('meta[property="og:image"]');
+
     if (metaTag) {
-     
-      metaTag.setAttribute("content", "https://multitravelcom.github.io/MT/multitravel.webp");
+
+        metaTag.setAttribute("content", "https://multitravelcom.github.io/MT/multitravel.webp");
     } else {
-      metaTag = document.createElement("meta");
-      metaTag.setAttribute("property", "og:image");
-      metaTag.setAttribute("content", "https://multitravelcom.github.io/MT/multitravel.webp");
-  
-      var head = document.querySelector("head");
-      head.appendChild(metaTag);
+        metaTag = document.createElement("meta");
+        metaTag.setAttribute("property", "og:image");
+        metaTag.setAttribute("content", "https://multitravelcom.github.io/MT/multitravel.webp");
+
+        let head = document.querySelector("head");
+        head.appendChild(metaTag);
     }
-  
+
     console.log("La etiqueta meta ha sido verificada o actualizada correctamente.");
-  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+    verificarYActualizarMeta();
+});
 
 //************************************ MULT-213*************************************************************** */
 window.addEventListener('load', () => {
