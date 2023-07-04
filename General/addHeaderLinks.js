@@ -110,7 +110,7 @@ addHeaderLinks();
 // **************** MULT-317 **********************************************************
 
 function cambiarImagenMeta() {
-    var metaTag = document.querySelector('meta[property="og:image"]');
+    let metaTag = document.querySelector('meta[property="og:image"]');
     metaTag.content = "https://multitravelcom.github.io/MT/multitravel.webp";
 }
 document.addEventListener("DOMContentLoaded", function () {
