@@ -7,6 +7,23 @@ meta.setAttribute('content', 'Compará paquetes a Argentina y conseguí los mejo
 head.appendChild(meta);
 document.title = "Paquetes turísticos a Argentina | Multitravel.com"
 
+function verificarYActualizarMeta() {
+    let metaTag = document.querySelector('meta[property="og:image"]');
+
+    if (metaTag) {
+        metaTag.setAttribute("content", "https://multitravelcom.github.io/MT/multitravel.webp");
+    } else {
+        metaTag = document.createElement("meta");
+        metaTag.setAttribute("property", "og:image");
+        metaTag.setAttribute("content", "https://multitravelcom.github.io/MT/multitravel.webp");
+
+        let head = document.querySelector("head");
+        head.appendChild(metaTag);
+    }
+    console.log("La etiqueta meta ha sido verificada o actualizada correctamente.");
+}
+verificarYActualizarMeta();
+
 // const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
 // const linkWaFixed = document.querySelector('.whatsAppFixes a');
 // const linkWaHeaderMobile = document.querySelector('.btn.upper-menu__phone-wrapper.features_item a');
