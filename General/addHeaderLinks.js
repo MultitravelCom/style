@@ -113,10 +113,9 @@ function verificarYActualizarMeta() {
     var metaTag = document.querySelector('meta[property="og:image"]');
   
     if (metaTag) {
-      // La etiqueta meta existe en el DOM, actualizar su contenido
+     
       metaTag.setAttribute("content", "https://multitravelcom.github.io/MT/multitravel.webp");
     } else {
-      // La etiqueta meta no se encuentra en el DOM, crearla y agregarla al head
       metaTag = document.createElement("meta");
       metaTag.setAttribute("property", "og:image");
       metaTag.setAttribute("content", "https://multitravelcom.github.io/MT/multitravel.webp");
@@ -125,7 +124,6 @@ function verificarYActualizarMeta() {
       head.appendChild(metaTag);
     }
   
-    // La etiqueta meta ha sido verificada o actualizada correctamente
     console.log("La etiqueta meta ha sido verificada o actualizada correctamente.");
   }
 

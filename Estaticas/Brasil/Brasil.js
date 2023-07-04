@@ -42,22 +42,25 @@ function addHeaderLinks() {
 }
 addHeaderLinks();
 
-function verificarYAgregarMeta() {
+function verificarYActualizarMeta() {
     var metaTag = document.querySelector('meta[property="og:image"]');
-  
-    if (!metaTag) {
-      // La etiqueta meta no se encuentra en el DOM, crearla y agregarla al head
-      metaTag = document.createElement("meta");
-      metaTag.setAttribute("property", "og:image");
-      metaTag.setAttribute("content", "https://multitravelcom.github.io/MT/multitravel.webp");
-  
-      var head = document.querySelector("head");
-      head.appendChild(metaTag);
+
+    if (metaTag) {
+        // La etiqueta meta existe en el DOM, actualizar su contenido
+        metaTag.setAttribute("content", "https://multitravelcom.github.io/MT/multitravel.webp");
+    } else {
+        // La etiqueta meta no se encuentra en el DOM, crearla y agregarla al head
+        metaTag = document.createElement("meta");
+        metaTag.setAttribute("property", "og:image");
+        metaTag.setAttribute("content", "https://multitravelcom.github.io/MT/multitravel.webp");
+
+        var head = document.querySelector("head");
+        head.appendChild(metaTag);
     }
-  
-    // La etiqueta meta ya está presente o se ha creado y agregado al head
-    console.log("La etiqueta meta ha sido verificada o agregada correctamente.");
-  }
+
+    // La etiqueta meta ha sido verificada o actualizada correctamente
+    console.log("La etiqueta meta ha sido verificada o actualizada correctamente.");
+}
 document.addEventListener("DOMContentLoaded", function () {
     verificarYAgregarMeta();
 });
@@ -119,7 +122,8 @@ function Button(props) {
 
         if (window.innerWidth <= 767) {
             // Llamar a un número en dispositivos móviles
-            window.location.href = 'tel:08003480003';}
+            window.location.href = 'tel:08003480003';
+        }
         // } else {
         //     window.open(props.link, '_blank');
         // }
