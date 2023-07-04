@@ -93,36 +93,6 @@ function addHeaderLinks() {
         head.appendChild(copyBaggageStyle);
     }
 
-    // const transferenciaComponent = path.includes('/confirmBooking');
-    // if (transferenciaComponent) {
-    //     const transferenciaComponentStyle = document.createElement('link');
-    //     const transferenciaComponentScript = document.createElement('script');
-
-    //     transferenciaComponentScript.src = 'https://multitravelcom.github.io/style/General/Transferencias/transferencia.js';
-    //     transferenciaComponentScript.type = "text/babel";
-
-    //     transferenciaComponentStyle.href = "https://multitravelcom.github.io/style/General/Transferencias/styletransferencia.css";
-    //     transferenciaComponentStyle.rel = "stylesheet";
-
-    //     head.appendChild(transferenciaComponentStyle);
-    //     head.appendChild(transferenciaComponentScript);
-    // }
-
-    // const cuponSeccion = path.includes('/booking/');
-    // if(cuponSeccion){
-    //     const cuponSeccionScript = document.createElement('script');
-    //     const cuponSeccionStyle = document.createElement('link');
-
-    //     cuponSeccionScript.src = 'https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.js';
-
-
-    //     cuponSeccionStyle.href = "https://multitravelcom.github.io/style/General/components/CuponSeccion/cuponSeccion.css";
-    //     cuponSeccionStyle.rel = "stylesheet";
-
-    //     head.appendChild(cuponSeccionStyle);
-    //     head.appendChild(cuponSeccionScript);
-    // }
-
     // ******************************** MULT-258 ****************************************************************
 
     if (path.includes('/results') || path.includes('/details') || path.includes('/flights/booking') || path.includes('/hotels/booking') || path.includes('/booking')) {
@@ -136,6 +106,14 @@ function addHeaderLinks() {
 
 }
 addHeaderLinks();
+
+// **************** MULT-317 **********************************************************
+
+function cambiarImagenMeta() {
+    var metaTag = document.querySelector('meta[property="og:image"]');
+    metaTag.content = "https://multitravelcom.github.io/MT/multitravel.webp";
+}
+cambiarImagenMeta();
 
 //************************************ MULT-213*************************************************************** */
 window.addEventListener('load', () => {
