@@ -62,7 +62,7 @@ function verificarYActualizarMeta() {
     console.log("La etiqueta meta ha sido verificada o actualizada correctamente.");
 }
 document.addEventListener("DOMContentLoaded", function () {
-    verificarYAgregarMeta();
+    verificarYActualizarMeta();
 });
 
 
