@@ -113,7 +113,9 @@ function cambiarImagenMeta() {
     var metaTag = document.querySelector('meta[property="og:image"]');
     metaTag.content = "https://multitravelcom.github.io/MT/multitravel.webp";
 }
-cambiarImagenMeta();
+document.addEventListener("DOMContentLoaded", function () {
+    cambiarImagenMeta();
+});
 
 //************************************ MULT-213*************************************************************** */
 window.addEventListener('load', () => {
@@ -131,5 +133,3 @@ window.addEventListener('load', () => {
 });
 
 //*************************************************************************************************** */
-
-
