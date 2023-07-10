@@ -809,6 +809,6 @@ body.home.home--default .home-v5__searcher,
   display: none;
 } */
 /* ********************** MULT-336 ************* */
-/* #main-menu-products .nav-elem:nth-child(8) {
+#main-menu-products .nav-elem:nth-child(8) {
   display: none;
-} */
+}
