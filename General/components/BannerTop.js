@@ -69,7 +69,7 @@ const BannerTop = () => {
                         />
                     </picture>
                     </a>
-                    {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)}
+                    {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/caribe" text="Ver Más" />)}
                 </div>
                 <div id="bannerTop__center" className="main__container_center">
                     <a href="https://www.multitravel.com/venta-personalizada/caribe" target="_blank">
