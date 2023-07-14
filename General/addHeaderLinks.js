@@ -141,15 +141,15 @@ window.addEventListener('load', () => {
 
     titleNewsletter.textContent = 'Suscribite a nuestro Newsletter ';
     
-    function ocultarWhatsAppFixesHotels() {
-        if (window.location.href.includes('/hotels/results')) {
-            var elemento = document.querySelector('.whatsAppFixes');
-            if (elemento) {
-                elemento.style.display = 'none';
-            }
+});
+function ocultarWhatsAppFixesHotels() {
+    if (window.location.href.includes('/hotels/results')) {
+        var elemento = document.querySelector('.whatsAppFixes');
+        if (elemento) {
+            elemento.style.display = 'none';
         }
     }
-    ocultarWhatsAppFixesHotels()
-});
+}
+ocultarWhatsAppFixesHotels()
 
 //*************************************************************************************************** */
