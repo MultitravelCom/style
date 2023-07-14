@@ -463,7 +463,9 @@ span .glyphicon {
         left: 24%;
     }
 
-    .whatsAppFixes {
+    #flights > div.whatsAppFixes,
+    #hotels > div.whatsAppFixes
+     {
         display: none;
     }
 
