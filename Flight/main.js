@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
   btnMoreOptions.setAttribute('data-toggle-text', 'Clase y equipaje a despachar');
   btnMoreOptions.style.display = 'inline-block';
   // ********************************************************************************************
-  function ocultarWhatsAppFixes() {
+  function ocultarWhatsAppFixesVuelos() {
     if (window.location.href.includes('/flights/results')) {
       var elemento = document.querySelector('.whatsAppFixes');
       if (elemento) {
@@ -101,6 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   }
-  ocultarWhatsAppFixes()
+  ocultarWhatsAppFixesVuelos()
 });
 
