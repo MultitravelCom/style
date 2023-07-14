@@ -144,3 +144,12 @@ window.addEventListener('load', () => {
 });
 
 //*************************************************************************************************** */
+function ocultarWhatsAppFixesHotels() {
+    if (window.location.href.includes('/hotels/results')) {
+      var elemento = document.querySelector('.whatsAppFixes');
+      if (elemento) {
+        elemento.style.display = 'none';
+      }
+    }
+  }
+  ocultarWhatsAppFixesHotels()
