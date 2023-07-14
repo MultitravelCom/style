@@ -104,16 +104,6 @@ function addHeaderLinks() {
         headElement.appendChild(metaTag);
     }
 
-    function ocultarWhatsAppFixesHotels() {
-        if (window.location.href.includes('/hotels/results')) {
-            var elemento = document.querySelector('.whatsAppFixes');
-            if (elemento) {
-                elemento.style.display = 'none';
-            }
-        }
-    }
-    // ocultarWhatsAppFixesHotels()
-
 }
 addHeaderLinks();
 
@@ -134,8 +124,17 @@ function verificarYActualizarMeta() {
         head.appendChild(metaTag);
     }
 }
+function ocultarWhatsAppFixesHotels() {
+    if (window.location.href.includes('/hotels/results')) {
+        var elemento = document.querySelector('.whatsAppFixes');
+        if (elemento) {
+            elemento.style.display = 'none';
+        }
+    }
+}
 document.addEventListener("DOMContentLoaded", function () {
     verificarYActualizarMeta();
+    ocultarWhatsAppFixesHotels()
 });
 
 //************************************ MULT-213*************************************************************** */
