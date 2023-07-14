@@ -140,16 +140,16 @@ window.addEventListener('load', () => {
     let titleNewsletter = modalNewsletter.querySelector('.content-title');
 
     titleNewsletter.textContent = 'Suscribite a nuestro Newsletter ';
-
+    
+    function ocultarWhatsAppFixesHotels() {
+        if (window.location.href.includes('/hotels/results')) {
+            var elemento = document.querySelector('.whatsAppFixes');
+            if (elemento) {
+                elemento.style.display = 'none';
+            }
+        }
+    }
+    ocultarWhatsAppFixesHotels()
 });
 
 //*************************************************************************************************** */
-function ocultarWhatsAppFixesHotels() {
-    if (window.location.href.includes('/hotels/results')) {
-      var elemento = document.querySelector('.whatsAppFixes');
-      if (elemento) {
-        elemento.style.display = 'none';
-      }
-    }
-  }
-  ocultarWhatsAppFixesHotels()
