@@ -80,7 +80,7 @@ const BannerTop = () => {
                 </div>
                 <div id="bannerTop__center" className="main__container_center">
                     {isMobile ? (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/venta-personalizada/argentina"} target="_blank">
+                        <a href={"https://www.multitravel.com/venta-personalizada/argentina"} target="_blank">
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
@@ -126,7 +126,7 @@ const BannerTop = () => {
                 </div>
                 <div id="bannerTop__right" className="main__container_right">
                     {isMobile ? (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil"} target="_blank">
+                        <a href={"https://www.multitravel.com/venta-personalizada/brasil"} target="_blank">
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
