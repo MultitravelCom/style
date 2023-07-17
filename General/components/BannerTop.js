@@ -26,7 +26,7 @@ const BannerTop = () => {
 
     const showPackageImages = window.location.pathname.includes('/packages');
     const UrlImg = cambiarUrlImg();
-    const UrlImgPaquetes = cambiarUrlImg();
+    const UrlImgPaquetes = "https://multitravelcom.github.io/MT/Secciones/BannerPrincipal";
     const isMobile = window.innerWidth <= 767;
 
     return (
@@ -126,18 +126,18 @@ const BannerTop = () => {
                 </div>
                 <div id="bannerTop__right" className="main__container_right">
                     {isMobile ? (
-                        <a href={"https://www.multitravel.com/venta-personalizada/caribe"} target="_blank">
+                        <a href={"https://www.multitravel.com/venta-personalizada/brasil"} target="_blank">
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImg}/bannerMobile-3.webp`
+                                        ? `${UrlImgPaquetes}/Paquetes/bannerMobile-1.webp`
                                         : `${UrlImg}/bannerMobile-3.webp`
                                 }
                             />
                         </a>
                     ) : (
-                        // <a href="https://www.multitravel.com/venta-personalizada/caribe" target="_blank">
+                        <a href="https://www.multitravel.com/venta-personalizada/caribe" target="_blank">
                         <picture>
                             <source
                                 media="(min-width: 1024px)"
@@ -164,7 +164,7 @@ const BannerTop = () => {
                                 }
                             />
                         </picture>
-                    //  </a>
+                    </a>
                     )}
                     {/* {showPackageImages && (
                         <Button style="btn btnStyleBannerPre" link={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/brasil"} text="Ver Más" />
