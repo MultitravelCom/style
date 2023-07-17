@@ -26,7 +26,7 @@ const BannerTop = () => {
 
     const showPackageImages = window.location.pathname.includes('/packages');
     const UrlImg = cambiarUrlImg();
-    const UrlImgPaquetes = "https://multitravelcom.github.io/MT/Secciones/BannerPrincipal";
+    const UrlImgPaquetes = cambiarUrlImg();
 
     return (
         <>
@@ -56,7 +56,7 @@ const BannerTop = () => {
                             srcSet={
                                 showPackageImages
                                     ? `${UrlImgPaquetes}/Paquetes/bannerMobile-1.webp`
-                                    : `${UrlImg}/bannerMobile-1.webp`
+                                    : `${UrlImg}/bannerMobile-2.webp`
                             }
                         />
                         <img className="bannerTop__img"
@@ -96,7 +96,7 @@ const BannerTop = () => {
                                     showPackageImages
 
                                         ? `${UrlImgPaquetes}/Paquetes/bannerMobile-2.webp`
-                                        : `${UrlImg}/bannerMobile-2.webp`
+                                        : `${UrlImg}/bannerMobile-1.webp`
                                 }
                             />
                             <img className="bannerTop__img"
