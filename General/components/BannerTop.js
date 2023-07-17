@@ -39,7 +39,7 @@ const BannerTop = () => {
                             alt=""
                             srcSet={
                                 showPackageImages
-                                    ? `${UrlImgPaquetes}/Paquetes/bannerMobile-1.webp`
+                                    ? `${UrlImg}/bannerMobile-2.webp`
                                     : `${UrlImg}/bannerMobile-2.webp`
                             }
                         />
@@ -51,7 +51,7 @@ const BannerTop = () => {
                                     media="(min-width: 1024px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-1.webp`
+                                            ? `${UrlImg}/bannerDesktop-1.webp`
                                             : `${UrlImg}/bannerDesktop-1.webp`
                                     }
                                 />
@@ -59,7 +59,7 @@ const BannerTop = () => {
                                     media="(min-width: 768px) and (max-width: 1023px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-1.webp`
+                                            ? `${UrlImg}/bannerDesktop-1.webp`
                                             : `${UrlImg}/bannerDesktop-1.webp`
                                     }
                                 />
@@ -67,16 +67,16 @@ const BannerTop = () => {
                                     alt=""
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-1.webp`
+                                            ? `${UrlImg}/bannerDesktop-1.webp`
                                             : `${UrlImg}/bannerDesktop-1.webp`
                                     }
                                 />
                             </picture>
                         </a>
                     )}
-                    {showPackageImages && (
+                    {/* {showPackageImages && (
                         <Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/caribe" text="Ver Más" />
-                    )}
+                    )} */}
                 </div>
                 <div id="bannerTop__center" className="main__container_center">
                     {isMobile ? (
@@ -85,7 +85,7 @@ const BannerTop = () => {
                                 alt=""
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerMobile-2.webp`
+                                        ? `${UrlImg}/bannerMobile-1.webp`
                                         : `${UrlImg}/bannerMobile-1.webp`
                                 }
                             />
@@ -97,7 +97,7 @@ const BannerTop = () => {
                                 media="(min-width: 1024px)"
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-2.webp`
+                                        ? `${UrlImg}/bannerDesktop-2.webp`
                                         : `${UrlImg}/bannerDesktop-2.webp`
                                 }
                             />
@@ -105,7 +105,7 @@ const BannerTop = () => {
                                 media="(min-width: 768px) and (max-width: 1023px)"
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-2.webp`
+                                        ? `${UrlImg}/bannerDesktop-2.webp`
                                         : `${UrlImg}/bannerDesktop-2.webp`
                                 }
                             />
@@ -113,16 +113,16 @@ const BannerTop = () => {
                                 alt=""
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-2.webp`
+                                        ? `${UrlImg}/bannerDesktop-2.webp`
                                         : `${UrlImg}/bannerDesktop-2.webp`
                                 }
                             />
                         </picture>
                         // </a>
                     )}
-                    {showPackageImages && (
+                    {/* {showPackageImages && (
                         <Button style="btn btnStyleBannerPre" link={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/venta-personalizada/argentina"} text="Ver Más" />
-                    )}
+                    )} */}
                 </div>
                 <div id="bannerTop__right" className="main__container_right">
                     {isMobile ? (
@@ -131,7 +131,7 @@ const BannerTop = () => {
                                 alt=""
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerMobile-3.webp`
+                                        ? `${UrlImg}/bannerMobile-3.webp`
                                         : `${UrlImg}/bannerMobile-3.webp`
                                 }
                             />
@@ -143,7 +143,7 @@ const BannerTop = () => {
                                 media="(min-width: 1024px)"
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-3.webp`
+                                        ? `${UrlImg}/bannerDesktop-3.webp`
                                         : `${UrlImg}/bannerDesktop-3.webp`
                                 }
                             />
@@ -151,7 +151,7 @@ const BannerTop = () => {
                                 media="(min-width: 768px) and (max-width: 1023px)"
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-3.webp`
+                                        ? `${UrlImg}/bannerDesktop-3.webp`
                                         : `${UrlImg}/bannerDesktop-3.webp`
                                 }
                             />
@@ -159,16 +159,16 @@ const BannerTop = () => {
                                 alt=""
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-3.webp`
+                                        ? `${UrlImg}/bannerDesktop-3.webp`
                                         : `${UrlImg}/bannerDesktop-3.webp`
                                 }
                             />
                         </picture>
                         // </a>
                     )}
-                    {showPackageImages && (
+                    {/* {showPackageImages && (
                         <Button style="btn btnStyleBannerPre" link={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/brasil"} text="Ver Más" />
-                    )}
+                    )} */}
                 </div>
             </div>
         </>
