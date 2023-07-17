@@ -812,3 +812,7 @@ body.home.home--default .home-v5__searcher,
 #main-menu-products .nav-elem:nth-child(8) {
   display: none;
 }
+/* ********************** MULT-264 - Ocultar  tu reserva del footer************* */
+/* #main-footer > div > div.row.footer-linksandcontent > div.col-sm-5.col-md-3.col-lg-3.col-xs-12.clearfix{
+  display: none;
+} */

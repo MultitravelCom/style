@@ -126,7 +126,7 @@ const BannerTop = () => {
                 </div>
                 <div id="bannerTop__right" className="main__container_right">
                     {isMobile ? (
-                        // <a href={"https://www.multitravel.com/venta-personalizada/brasil"} target="_blank">
+                        <a href={"https://www.multitravel.com/venta-personalizada/caribe"} target="_blank">
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
@@ -135,9 +135,9 @@ const BannerTop = () => {
                                         : `${UrlImg}/bannerMobile-3.webp`
                                 }
                             />
-                        // </a>
+                        </a>
                     ) : (
-                        // <a href="https://www.multitravel.com/venta-personalizada/argentina" target="_blank">
+                        // <a href="https://www.multitravel.com/venta-personalizada/caribe" target="_blank">
                         <picture>
                             <source
                                 media="(min-width: 1024px)"
@@ -164,7 +164,7 @@ const BannerTop = () => {
                                 }
                             />
                         </picture>
-                        // </a>
+                    //  </a>
                     )}
                     {/* {showPackageImages && (
                         <Button style="btn btnStyleBannerPre" link={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/brasil"} text="Ver Más" />
