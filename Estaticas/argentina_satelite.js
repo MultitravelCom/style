@@ -40,7 +40,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
-        price: "$80.790",
+        price: "$90,735 ",
         events: "si"
     },
     {
@@ -50,7 +50,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/s507zo",
         title: "Paquete a Bariloche",
-        price: "$107.790 ",
+        price: "$117,745",
         events: "si"
     },
     {
@@ -60,7 +60,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/duchkz",
         title: "Paquete a Bariloche",
-        price: "$134.790",
+        price: "$134,790",
         events: "No"
     },
     {
@@ -70,7 +70,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/2z5hpp",
         title: "Hotel Villa Sofia",
-        price: "$24.020 ",
+        price: "$26,545",
         events: "si"
     },
     {
@@ -80,7 +80,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
         title: "Hotel Kenton Palace Bariloche",
-        price: "$33.945 ",
+        price: "$33,075",
         events: "si"
     },
     {
@@ -90,7 +90,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
         title: "Hotel Design Suites Bariloche",
-        price: "$46.390 ",
+        price: "$46,665",
         events: "si"
     },
 ];
@@ -102,7 +102,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/hxjkgq",
         title: "Paquete a Iguazú",
-        price: "$70.750 ",
+        price: "$88,190",
         events: "si"
     },
     {
@@ -112,7 +112,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/2rmvhq",
         title: "Paquete a Iguazús",
-        price: "$98.100 ",
+        price: "$121,740",
         events: "si"
     },
     {
@@ -122,7 +122,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/wbq74i",
         title: "Hotel Merit Iguazú",
-        price: "$31.060 ",
+        price: "$33,155",
         events: "si"
     },
     {
@@ -132,7 +132,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/s6nxus",
         title: "Hotel Marcopolo Suites Iguazú",
-        price: "$31.345 ",
+        price: "$32,340",
         events: "si"
     },
     {
@@ -142,7 +142,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
         title: "Hotel Tourbillon",
-        price: "$31.510 ",
+        price: "$33,395",
         events: "No"
     },
     {
@@ -152,7 +152,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
         title: "Hotel Iguazu Grand",
-        price: "$77.370",
+        price: "$79,820",
         events: "No"
     },
 ];
@@ -164,7 +164,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/61efbi",
         title: "Paquete a Mendoza",
-        price: "$75.140 ",
+        price: "$88,170",
         events: "si"
     },
     {
@@ -174,7 +174,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/sbfl7y",
         title: "Paquete a Mendoza",
-        price: "$100.780",
+        price: "$114,420",
         events: "si"
     },
     {
@@ -184,7 +184,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/vs8baw",
         title: "Paquete a Mendoza",
-        price: "$128.529",
+        price: "$151,170",
         events: "si"
     },
     {
@@ -194,7 +194,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/u8ym55",
         title: "Hotel Crillón",
-        price: "$24.760",
+        price: "$31,700",
         events: "si"
     },
     {
@@ -204,7 +204,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/wz0152",
         title: "Hotel Cordón del Plata",
-        price: "$24.900",
+        price: "$24,900",
         events: "si"
     },
     {
@@ -214,7 +214,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/wz0152",
         title: "Hotel Huentala",
-        price: "$53.670 ",
+        price: "$54,245",
         events: "si"
     },
 ];
