@@ -32,7 +32,7 @@ const BannerTop = () => {
         <>
             <div className="container-fluid main__container__bannerTop scroll-mobile">
                 <div id="bannerTop__left" className="main__container_left">
-                    <a href="https://www.multitravel.com/venta-personalizada/argentina" target="_blank">
+                    {/* <a href="https://www.multitravel.com/venta-personalizada/argentina" target="_blank"> */}
                     <picture>
                         <source
                             media="(min-width: 1024px)"
@@ -68,11 +68,11 @@ const BannerTop = () => {
                             }
                         />
                     </picture>
-                    </a>
+                    {/* </a> */}
                     {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/caribe" text="Ver Más" />)}
                 </div>
                 <div id="bannerTop__center" className="main__container_center">
-                    {/* <a hrf="#" target="_blank"> */}
+                    <a href="https://www.multitravel.com/venta-personalizada/argentina" target="_blank">
                         <picture>
                             <source
                                 media="(min-width: 1024px)"
@@ -108,7 +108,7 @@ const BannerTop = () => {
                                 }
                             />
                         </picture>
-                    {/* </a> */}
+                    </a>
                     {showPackageImages && (<Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/argentina" text="Ver Más" />)}
 
                 </div>
