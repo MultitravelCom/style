@@ -126,7 +126,7 @@ const BannerTop = () => {
                 </div>
                 <div id="bannerTop__right" className="main__container_right">
                     {isMobile ? (
-                        <a href={"https://www.multitravel.com/venta-personalizada/brasil"} target="_blank">
+                        // <a href={"https://www.multitravel.com/venta-personalizada/brasil"} target="_blank">
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
@@ -135,7 +135,7 @@ const BannerTop = () => {
                                         : `${UrlImg}/bannerMobile-3.webp`
                                 }
                             />
-                        </a>
+                        // </a>
                     ) : (
                         // <a href="https://www.multitravel.com/venta-personalizada/argentina" target="_blank">
                         <picture>
