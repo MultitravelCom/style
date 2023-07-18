@@ -119,7 +119,7 @@ const BannerTop = () => {
                                     }
                                 />
                             </picture>
-                        // </a>
+                     </a>
                     )}
                     {/* {showPackageImages && (
                         <Button style="btn btnStyleBannerPre" link={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/venta-personalizada/argentina"} text="Ver Más" />
