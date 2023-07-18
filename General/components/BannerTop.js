@@ -35,15 +35,15 @@ const BannerTop = () => {
                 <div id="bannerTop__left" className="main__container_left">
                     {isMobile ? (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : null} target="_blank">
-                        <img className="bannerTop__img"
-                            alt=""
-                            srcSet={
-                                showPackageImages
-                                    ? `${UrlImgPaquetes}/bannerMobile-1.webp`
-                                    : `${UrlImg}/bannerMobile-2.webp`
-                            }
-                        />
-                        // </a>
+                            <img className="bannerTop__img"
+                                alt=""
+                                srcSet={
+                                    showPackageImages
+                                        ? `${UrlImgPaquetes}/bannerMobile-1.webp`
+                                        : `${UrlImg}/bannerMobile-2.webp`
+                                }
+                            />
+                        </a>
                     ) : (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : " https://www.multitravel.com/venta-personalizada/argentina"} target="_blank">
                             <picture>
@@ -93,32 +93,32 @@ const BannerTop = () => {
                         </a>
                     ) : (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : null} target="_blank">
-                        <picture>
-                            <source
-                                media="(min-width: 1024px)"
-                                srcSet={
-                                    showPackageImages
-                                        ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
-                                        : `${UrlImg}/bannerDesktop-2.webp`
-                                }
-                            />
-                            <source
-                                media="(min-width: 768px) and (max-width: 1023px)"
-                                srcSet={
-                                    showPackageImages
-                                        ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
-                                        : `${UrlImg}/bannerDesktop-2.webp`
-                                }
-                            />
-                            <img className="bannerTop__img"
-                                alt=""
-                                srcSet={
-                                    showPackageImages
-                                        ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
-                                        : `${UrlImg}/bannerDesktop-2.webp`
-                                }
-                            />
-                        </picture>
+                            <picture>
+                                <source
+                                    media="(min-width: 1024px)"
+                                    srcSet={
+                                        showPackageImages
+                                            ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
+                                            : `${UrlImg}/bannerDesktop-2.webp`
+                                    }
+                                />
+                                <source
+                                    media="(min-width: 768px) and (max-width: 1023px)"
+                                    srcSet={
+                                        showPackageImages
+                                            ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
+                                            : `${UrlImg}/bannerDesktop-2.webp`
+                                    }
+                                />
+                                <img className="bannerTop__img"
+                                    alt=""
+                                    srcSet={
+                                        showPackageImages
+                                            ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
+                                            : `${UrlImg}/bannerDesktop-2.webp`
+                                    }
+                                />
+                            </picture>
                         // </a>
                     )}
                     {/* {showPackageImages && (
