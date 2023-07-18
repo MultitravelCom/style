@@ -34,7 +34,7 @@ const BannerTop = () => {
             <div className="container-fluid main__container__bannerTop scroll-mobile">
                 <div id="bannerTop__left" className="main__container_left">
                     {isMobile ? (
-                        <a href={showPackageImages ? "https://www.example.com/mobile-package-link" : "https://www.example.com/mobile-link"} target="_blank">
+                        // <a href={showPackageImages ? "https://www.example.com/mobile-package-link" : "https://www.example.com/mobile-link"} target="_blank">
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
@@ -43,7 +43,7 @@ const BannerTop = () => {
                                         : `${UrlImg}/bannerMobile-2.webp`
                                 }
                             />
-                        </a>
+                        // </a>
                     ) : (
                         <a href="https://www.multitravel.com/venta-personalizada/argentina" target="_blank">
                             <picture>
