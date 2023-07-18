@@ -40,7 +40,7 @@ const BannerTop = () => {
                             srcSet={
                                 showPackageImages
                                     ? `${UrlImgPaquetes}/Paquetes/bannerMobile-1.webp`
-                                    : `${UrlImg}/bannerMobile-1.webp`
+                                    : `${UrlImg}/bannerMobile-2.webp`
                             }
                         />
                         // </a>
@@ -87,7 +87,7 @@ const BannerTop = () => {
                                 srcSet={
                                     showPackageImages
                                         ? `${UrlImgPaquetes}/Paquetes/bannerMobile-2.webp`
-                                        : `${UrlImg}/bannerMobile-2.webp`
+                                        : `${UrlImg}/bannerMobile-1.webp`
                                 }
                             />
                         </a>
