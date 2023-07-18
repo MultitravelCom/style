@@ -26,7 +26,7 @@ const BannerTop = () => {
 
     const showPackageImages = window.location.pathname.includes('/packages');
     const UrlImg = cambiarUrlImg();
-    const UrlImgPaquetes = cambiarUrlImg();
+    const UrlImgPaquetes = "https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes";
     const isMobile = window.innerWidth <= 767;
 
     return (
