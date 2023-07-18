@@ -45,7 +45,7 @@ const BannerTop = () => {
                         />
                         // </a>
                     ) : (
-                        <a href={showPackageImages ? " https://www.multitravel.com/venta-personalizada/brasil" : " https://www.multitravel.com/venta-personalizada/argentina"} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : " https://www.multitravel.com/venta-personalizada/argentina"} target="_blank">
                             <picture>
                                 <source
                                     media="(min-width: 1024px)"
@@ -92,7 +92,7 @@ const BannerTop = () => {
                             />
                         </a>
                     ) : (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : null} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : null} target="_blank">
                         <picture>
                             <source
                                 media="(min-width: 1024px)"
@@ -127,7 +127,7 @@ const BannerTop = () => {
                 </div>
                 <div id="bannerTop__right" className="main__container_right">
                     {isMobile ? (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : "https://www.multitravel.com/venta-personalizada/caribe"} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/caribe"} target="_blank">
 
                             <img className="bannerTop__img"
                                 alt=""
