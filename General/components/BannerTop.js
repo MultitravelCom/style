@@ -45,13 +45,13 @@ const BannerTop = () => {
                             />
                         </a>
                     ) : (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : " https://www.multitravel.com/venta-personalizada/argentina"} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : " https://www.multitravel.com/venta-personalizada/argentina"} target="_blank">
                             <picture>
                                 <source
                                     media="(min-width: 1024px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/bannerDesktop-2.webp`
+                                            ? `${UrlImgPaquetes}/BannerB/bannerMobile-1.webp`
                                             : `${UrlImg}/bannerDesktop-1.webp`
                                     }
                                 />
@@ -59,7 +59,7 @@ const BannerTop = () => {
                                     media="(min-width: 768px) and (max-width: 1023px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/bannerDesktop-2.webp`
+                                            ? `${UrlImgPaquetes}/BannerB/bannerMobile-1.webp`
                                             : `${UrlImg}/bannerDesktop-1.webp`
                                     }
                                 />
@@ -67,7 +67,7 @@ const BannerTop = () => {
                                     alt=""
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/bannerDesktop-2.webp`
+                                            ? `${UrlImgPaquetes}/BannerB/bannerMobile-1.webp`
                                             : `${UrlImg}/bannerDesktop-1.webp`
                                     }
                                 />
@@ -92,7 +92,7 @@ const BannerTop = () => {
                             />
                         </a>
                     ) : (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : null} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : null} target="_blank">
                             <picture>
                                 <source
                                     media="(min-width: 1024px)"
@@ -139,13 +139,13 @@ const BannerTop = () => {
                             />
                         </a>
                     ) : (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : "https://www.multitravel.com/venta-personalizada/caribe"} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/caribe"} target="_blank">
                             <picture>
                                 <source
                                     media="(min-width: 1024px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/BannerB/bannerDesktop-3.webp`
+                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-3.webp`
                                             : `${UrlImg}/bannerDesktop-3.webp`
                                     }
                                 />
@@ -153,7 +153,7 @@ const BannerTop = () => {
                                     media="(min-width: 768px) and (max-width: 1023px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/BannerB/bannerDesktop-3.webp`
+                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-3.webp`
                                             : `${UrlImg}/bannerDesktop-3.webp`
                                     }
                                 />
@@ -161,7 +161,7 @@ const BannerTop = () => {
                                     alt=""
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/BannerB/bannerDesktop-3.webp`
+                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-3.webp`
                                             : `${UrlImg}/bannerDesktop-3.webp`
                                     }
                                 />
