@@ -34,16 +34,16 @@ const BannerTop = () => {
             <div className="container-fluid main__container__bannerTop scroll-mobile">
                 <div id="bannerTop__left" className="main__container_left">
                     {isMobile ? (
-                        // <a href="https://www.example.com/mobile-link" target="_blank">
-                        <img className="bannerTop__img"
-                            alt=""
-                            srcSet={
-                                showPackageImages
-                                    ? `${UrlImg}/bannerMobile-2.webp`
-                                    : `${UrlImg}/bannerMobile-2.webp`
-                            }
-                        />
-                        // </a>
+                        <a href={showPackageImages ? "https://www.example.com/mobile-package-link" : "https://www.example.com/mobile-link"} target="_blank">
+                            <img className="bannerTop__img"
+                                alt=""
+                                srcSet={
+                                    showPackageImages
+                                        ? `${UrlImg}/bannerMobile-2.webp`
+                                        : `${UrlImg}/bannerMobile-2.webp`
+                                }
+                            />
+                        </a>
                     ) : (
                         <a href="https://www.multitravel.com/venta-personalizada/argentina" target="_blank">
                             <picture>
@@ -80,7 +80,8 @@ const BannerTop = () => {
                 </div>
                 <div id="bannerTop__center" className="main__container_center">
                     {isMobile ? (
-                        <a href={"https://www.multitravel.com/venta-personalizada/argentina"} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/venta-personalizada/argentina"} target="_blank">
+
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
@@ -126,7 +127,8 @@ const BannerTop = () => {
                 </div>
                 <div id="bannerTop__right" className="main__container_right">
                     {isMobile ? (
-                        <a href={"https://www.multitravel.com/venta-personalizada/brasil"} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/caribe"} target="_blank">
+
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
@@ -137,34 +139,34 @@ const BannerTop = () => {
                             />
                         </a>
                     ) : (
-                        <a href="https://www.multitravel.com/venta-personalizada/caribe" target="_blank">
-                        <picture>
-                            <source
-                                media="(min-width: 1024px)"
-                                srcSet={
-                                    showPackageImages
-                                        ? `${UrlImg}/bannerDesktop-3.webp`
-                                        : `${UrlImg}/bannerDesktop-3.webp`
-                                }
-                            />
-                            <source
-                                media="(min-width: 768px) and (max-width: 1023px)"
-                                srcSet={
-                                    showPackageImages
-                                        ? `${UrlImg}/bannerDesktop-3.webp`
-                                        : `${UrlImg}/bannerDesktop-3.webp`
-                                }
-                            />
-                            <img className="bannerTop__img"
-                                alt=""
-                                srcSet={
-                                    showPackageImages
-                                        ? `${UrlImg}/bannerDesktop-3.webp`
-                                        : `${UrlImg}/bannerDesktop-3.webp`
-                                }
-                            />
-                        </picture>
-                    </a>
+                        // <a href="https://www.multitravel.com/venta-personalizada/caribe" target="_blank">
+                            <picture>
+                                <source
+                                    media="(min-width: 1024px)"
+                                    srcSet={
+                                        showPackageImages
+                                            ? `${UrlImg}/bannerDesktop-3.webp`
+                                            : `${UrlImg}/bannerDesktop-3.webp`
+                                    }
+                                />
+                                <source
+                                    media="(min-width: 768px) and (max-width: 1023px)"
+                                    srcSet={
+                                        showPackageImages
+                                            ? `${UrlImg}/bannerDesktop-3.webp`
+                                            : `${UrlImg}/bannerDesktop-3.webp`
+                                    }
+                                />
+                                <img className="bannerTop__img"
+                                    alt=""
+                                    srcSet={
+                                        showPackageImages
+                                            ? `${UrlImg}/bannerDesktop-3.webp`
+                                            : `${UrlImg}/bannerDesktop-3.webp`
+                                    }
+                                />
+                            </picture>
+                        // </a>
                     )}
                     {/* {showPackageImages && (
                         <Button style="btn btnStyleBannerPre" link={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/brasil"} text="Ver Más" />
