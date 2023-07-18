@@ -98,7 +98,7 @@ const BannerTop = () => {
                                 media="(min-width: 1024px)"
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-1.webp`
+                                        ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
                                         : `${UrlImg}/bannerDesktop-2.webp`
                                 }
                             />
@@ -106,7 +106,7 @@ const BannerTop = () => {
                                 media="(min-width: 768px) and (max-width: 1023px)"
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-1.webp`
+                                        ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
                                         : `${UrlImg}/bannerDesktop-2.webp`
                                 }
                             />
@@ -114,7 +114,7 @@ const BannerTop = () => {
                                 alt=""
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-1.webp`
+                                        ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
                                         : `${UrlImg}/bannerDesktop-2.webp`
                                 }
                             />
@@ -145,7 +145,7 @@ const BannerTop = () => {
                                     media="(min-width: 1024px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-3.webp`
+                                            ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
                                             : `${UrlImg}/bannerDesktop-3.webp`
                                     }
                                 />
@@ -153,7 +153,7 @@ const BannerTop = () => {
                                     media="(min-width: 768px) and (max-width: 1023px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-3.webp`
+                                            ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
                                             : `${UrlImg}/bannerDesktop-3.webp`
                                     }
                                 />
@@ -161,7 +161,7 @@ const BannerTop = () => {
                                     alt=""
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-3.webp`
+                                            ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
                                             : `${UrlImg}/bannerDesktop-3.webp`
                                     }
                                 />
