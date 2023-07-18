@@ -139,7 +139,7 @@ const BannerTop = () => {
                             />
                         </a>
                     ) : (
-                        // <a href="https://www.multitravel.com/venta-personalizada/caribe" target="_blank">
+                        <a href="https://www.multitravel.com/venta-personalizada/caribe" target="_blank">
                             <picture>
                                 <source
                                     media="(min-width: 1024px)"
@@ -166,7 +166,7 @@ const BannerTop = () => {
                                     }
                                 />
                             </picture>
-                        // </a>
+                        </a>
                     )}
                     {/* {showPackageImages && (
                         <Button style="btn btnStyleBannerPre" link={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/brasil"} text="Ver Más" />
