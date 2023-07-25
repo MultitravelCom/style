@@ -197,7 +197,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/wz0152",
         title: "Hotel Cordón del Plata",
-        price: "$26.6200",
+        price: "$26.620",
         events: "si"
     },
     {
