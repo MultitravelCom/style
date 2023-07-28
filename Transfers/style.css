@@ -657,16 +657,18 @@ span .glyphicon {
         overflow: hidden;
         padding: 7px;
     }
-    .info-card__description{
+
+    .info-card__description {
         max-height: inherit !important;
     }
 }
 
 @media (max-width: 564px) {
-    .searcher-wrapper{
+    .searcher-wrapper {
         margin: 8px;
         border-radius: 8px;
     }
+
     .comentarios_seccion {
         grid-template-columns: repeat(2, minmax(100%, 1fr));
         grid-template-rows: repeat(1, 1fr);
@@ -774,6 +776,12 @@ span .glyphicon {
         padding: 9px;
     }
 
+    .result-option--extended .result-option__extended-heading,
+    .result-option--extended .result-option__heading {
+        width: 100% !important;
+    }
+
+
 }
 
 .flight-bestprices {
@@ -795,12 +803,14 @@ span .glyphicon {
 /* .info-card__description {
     display: none;
 } */
-.info-card__actions{
+.info-card__actions {
     position: static;
 }
-.info-card__location{
+
+.info-card__location {
     margin-bottom: 2rem;
 }
-.body.results.transfers .result-option__main.roundTrip .result-option__title{
+
+.body.results.transfers .result-option__main.roundTrip .result-option__title {
     width: 100% !important;
 }
