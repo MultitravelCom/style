@@ -814,7 +814,7 @@ span .glyphicon {
 .result-option__title {
     width: 100% !important;
 }
-.result-option__heading{
+body.results.transfers .result-option__main.roundTrip .result-option__heading{
     width: 100% !important;
 }
 .results .info-card__description{
