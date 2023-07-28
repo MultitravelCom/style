@@ -814,3 +814,6 @@ span .glyphicon {
 .result-option__title {
     width: 100% !important;
 }
+.result-option__heading{
+    width: 100% !important;
+}
