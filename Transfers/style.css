@@ -817,3 +817,6 @@ span .glyphicon {
 .result-option__heading{
     width: 100% !important;
 }
+.results .info-card__description{
+ margin: 0 0 2rem 0rem;
+}
