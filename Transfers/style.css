@@ -801,3 +801,6 @@ span .glyphicon {
 .info-card__location{
     margin-bottom: 2rem;
 }
+.body.results.transfers .result-option__main.roundTrip .result-option__title{
+    width: 100%;
+}
