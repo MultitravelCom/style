@@ -802,5 +802,5 @@ span .glyphicon {
     margin-bottom: 2rem;
 }
 .body.results.transfers .result-option__main.roundTrip .result-option__title{
-    width: 100%;
+    width: 100% !important;
 }
