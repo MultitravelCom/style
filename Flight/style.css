@@ -439,6 +439,7 @@ span .glyphicon {
 
     /* Cambios btn - MULT-50 */
     .flight-selection__booking {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
