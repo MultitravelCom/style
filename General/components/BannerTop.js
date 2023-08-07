@@ -22,6 +22,18 @@ function cambiarUrlImg() {
     }
 }
 
+function scrollToElement(event) {
+    event.preventDefault(); // Prevenir el comportamiento de navegación predeterminado
+
+    const targetElement = document.getElementById("home-sliding-offers-1");
+
+    if (targetElement) {
+        targetElement.scrollIntoView({
+            behavior: "smooth",
+        });
+    }
+}
+
 const BannerTop = () => {
 
     const showPackageImages = window.location.pathname.includes('/packages');
@@ -80,7 +92,9 @@ const BannerTop = () => {
                 </div>
                 <div id="bannerTop__center" className="main__container_center">
                     {isMobile ? (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/argentina"} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/argentina"}
+                            target="_blank"
+                        >
 
                             <img className="bannerTop__img"
                                 alt=""
@@ -92,7 +106,10 @@ const BannerTop = () => {
                             />
                         </a>
                     ) : (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : null} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : null}
+                            target="_blank"
+                            onClick={scrollAncla}
+                        >
                             <picture>
                                 <source
                                     media="(min-width: 1024px)"
