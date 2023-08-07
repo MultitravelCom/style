@@ -45,7 +45,10 @@
     border-radius: 8px 40px 8px 8px;
     overflow: hidden;
     box-shadow: 4px 4px 8px -1px rgba(0,0,0,0.20)
-  }  
+  }
+  #bannerTop__center{
+    cursor: pointer;
+  }
   @media (max-width: 767px) {
     /* SCROLL HORIZONTAL */
     .scroll-mobile {
