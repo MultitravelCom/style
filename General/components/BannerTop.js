@@ -22,7 +22,7 @@ function cambiarUrlImg() {
     }
 }
 
-function scrollToElement(event) {
+function scrollAncla(event) {
     event.preventDefault(); // Prevenir el comportamiento de navegación predeterminado
 
     const targetElement = document.getElementById("home-sliding-offers-1");
