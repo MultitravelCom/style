@@ -765,6 +765,10 @@ body.home.home--default .home-v5__searcher,
     border-radius: 1rem;
     margin: 8px 5px;
   }
+  /* pop-up cookie */
+  .cookie-policy__content{
+    text-align: left !important;
+  }
 }
 
 /* *************** MULT-271 ********************** */
