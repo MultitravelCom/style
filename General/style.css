@@ -849,3 +849,6 @@ label[for="hotel-searcher-nationality"] {
   font-weight: 700;
   line-height: normal;
 }
+.cookie-policy__content > a {
+  text-decoration: revert;
+}
