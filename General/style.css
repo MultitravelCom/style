@@ -834,6 +834,7 @@ label[for="hotel-searcher-nationality"] {
 }
 
 .cookie-policy__close {
+  width: 100%;
   padding: 8px 24px;
   border-radius: 32px;
   background: #FFF;
