@@ -33,7 +33,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
-        price: "$91.480 ",
+        price: "$91.480",
         events: "si"
     },
     {
@@ -73,7 +73,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
         title: "Hotel Kenton Palace Bariloche",
-        price: "$38.840 ",
+        price: "$38.840",
         events: "si"
     },
     {
@@ -95,7 +95,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/hxjkgq",
         title: "Paquete a Iguazú",
-        price: "$93.450 ",
+        price: "$93.450",
         events: "si"
     },
     {
@@ -145,7 +145,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
         title: "Hotel Iguazu Grand",
-        price: "$81.180 ",
+        price: "$81.180",
         events: "No"
     },
 ];
