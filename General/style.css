@@ -45,7 +45,6 @@
 
 /* Estilos newsletter */
 .fix-margin>.newsletter__container {
-  background: #f7f7f7 !important;
   display: none;
 }
 
