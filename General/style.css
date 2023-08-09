@@ -764,6 +764,10 @@ body.home.home--default .home-v5__searcher,
     border-radius: 1rem;
     margin: 8px 5px;
   }
+  /* pop-up cookie */
+  .cookie-policy__content{
+    text-align: left !important;
+  }
 }
 
 /* *************** MULT-271 ********************** */
@@ -803,6 +807,7 @@ body.home.home--default .home-v5__searcher,
     width: 60% !important;
   }
 }
+
 /* ************ MULT-287 ****************************** */
 /* #hotel-searcher .searcher.searcher-is-landscape .searcher-row div:nth-child(4) {
   display: none;
@@ -811,15 +816,38 @@ body.home.home--default .home-v5__searcher,
 #main-menu-products .nav-elem:nth-child(8) {
   display: none;
 }
+
 /* ********************** MULT-264 - Ocultar  tu reserva del footer************* */
 /* #main-footer > div > div.row.footer-linksandcontent > div.col-sm-5.col-md-3.col-lg-3.col-xs-12.clearfix{
   display: none;
 } */
 /* *********************** MULT-314 ***************************************** */
-.flight-selection__breakdown{
+.flight-selection__breakdown {
   padding: 10px 0 5px 0 !important;
 }
+
 /* *********************** MULT-287 ***************************************** */
 label[for="hotel-searcher-nationality"] {
   display: none;
+}
+
+/* ********* Mejora de popups ***** */
+.cookie-policy__readmore {
+  display: none;
+}
+
+.cookie-policy__close {
+  width: 100%;
+  padding: 8px 24px;
+  border-radius: 32px;
+  background: #FFF;
+  color: #0D4E88;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.cookie-policy__content > a {
+  text-decoration: revert;
 }
