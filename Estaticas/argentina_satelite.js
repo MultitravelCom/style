@@ -254,12 +254,9 @@ function Button(props) {
     const handleClick = (event) => {
         event.preventDefault();
 
-
         if (window.innerWidth <= 767) {
             // Llamar a un número en dispositivos móviles
             window.location.href = 'tel:08003480003';
-        }else{
-            props.onClick();
         }
     };
 
@@ -328,25 +325,6 @@ const WarningPrice = () => {
 
 
 const Card = ({ destinos }) => {
-    const [isFormOpen, setIsFormOpen] = React.useState(false);
-
-    const handleButtonClick = () => {
-        console.log('Button clicked - Changing isFormOpen to true');
-        setIsFormOpen(true);
-    };
-
-    React.useEffect(() => {
-        if (isFormOpen) {
-            console.log('isFormOpen changed to true - Effect triggered');
-            const script = document.createElement("script");
-            script.src = "https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js";
-            script.async = true;
-            script.setAttribute("data-b24-form", "click/56/aj4a4r");
-            script.setAttribute("data-skip-moving", "true");
-            document.body.appendChild(script);
-        }
-    }, [isFormOpen]);
-
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
@@ -362,7 +340,7 @@ const Card = ({ destinos }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="priceStyle">{destino.price}</div>
-                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={handleButtonClick} />
+                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" />
                 </div>
             </div>
         )));
