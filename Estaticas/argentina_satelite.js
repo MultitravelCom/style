@@ -331,11 +331,13 @@ const Card = ({ destinos }) => {
     const [isFormOpen, setIsFormOpen] = React.useState(false);
 
     const handleButtonClick = () => {
+        console.log('Button clicked - Changing isFormOpen to true');
         setIsFormOpen(true);
     };
 
     React.useEffect(() => {
         if (isFormOpen) {
+            console.log('isFormOpen changed to true - Effect triggered');
             const script = document.createElement("script");
             script.src = "https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js";
             script.async = true;
