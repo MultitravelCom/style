@@ -253,11 +253,13 @@ const BannerTop = () => {
 function Button(props) {
     const handleClick = (event) => {
         event.preventDefault();
-        props.onClick();
+
 
         if (window.innerWidth <= 767) {
             // Llamar a un número en dispositivos móviles
             window.location.href = 'tel:08003480003';
+        }else{
+            props.onClick();
         }
     };
 
@@ -329,8 +331,19 @@ const Card = ({ destinos }) => {
     const [isFormOpen, setIsFormOpen] = React.useState(false);
 
     const handleButtonClick = () => {
-        setIsFormOpen(true)
-    }
+        setIsFormOpen(true);
+    };
+
+    React.useEffect(() => {
+        if (isFormOpen) {
+            const script = document.createElement("script");
+            script.src = "https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js";
+            script.async = true;
+            script.setAttribute("data-b24-form", "click/56/aj4a4r");
+            script.setAttribute("data-skip-moving", "true");
+            document.body.appendChild(script);
+        }
+    }, [isFormOpen]);
 
     return (
         destinos.map((destino) => (
