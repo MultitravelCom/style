@@ -327,7 +327,7 @@ const WarningPrice = () => {
 const Card = ({ destinos }) => {
     const [isFormOpen, setIsFormOpen] = React.useState(false);
 
-    const handleButtonClick = () => {
+    const handleButtonClickBitrix = () => {
         setIsFormOpen(true)
         console.log("click")
     }
@@ -347,7 +347,7 @@ const Card = ({ destinos }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="priceStyle">{destino.price}</div>
-                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={handleButtonClick} />
+                    <Button id={destino.title} link={destino.linkWa} text="contactarme" onClick={handleButtonClickBitrix} />
                 </div>
                 {isFormOpen && (
                     <script
