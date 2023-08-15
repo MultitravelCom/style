@@ -329,6 +329,7 @@ const Card = ({ destinos }) => {
 
     const handleButtonClick = () => {
         setIsFormOpen(true)
+        console.log("click")
     }
 
     return (
