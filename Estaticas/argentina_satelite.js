@@ -251,17 +251,27 @@ const BannerTop = () => {
 }
 
 function Button(props) {
-    const handleClick = (event) => {
-        event.preventDefault();
 
-        if (window.innerWidth <= 767) {
-            // Llamar a un número en dispositivos móviles
-            window.location.href = 'tel:08003480003';
+    const [scriptExecuted, setScriptExecuted] = useState(false);
+
+    const bitrixScript = `
+        (function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js');
+    `;
+
+    const handleClick = (event) => {
+        if (!scriptExecuted) {
+            const scriptElement = document.createElement('script');
+            scriptElement.innerHTML = bitrixScript;
+            document.body.appendChild(scriptElement);
+            setScriptExecuted(true);
         }
     };
 
     return (
-        <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
+        <>
+            <div dangerouslySetInnerHTML={{ __html: bitrixScript }} />
+            <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
+        </>
     );
 }
 
