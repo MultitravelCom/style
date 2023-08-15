@@ -325,6 +325,12 @@ const WarningPrice = () => {
 
 
 const Card = ({ destinos }) => {
+    const [isFormOpen, setIsFormOpen] = React.useState(false);
+
+    const handleButtonClick = () => {
+        setIsFormOpen(true)
+    }
+
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
@@ -340,8 +346,15 @@ const Card = ({ destinos }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="priceStyle">{destino.price}</div>
-                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" />
+                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={handleButtonClick} />
                 </div>
+                {isFormOpen && (
+                    <script
+                        data-b24-form="click/56/aj4a4r"
+                        data-skip-moving="true"
+                        src="https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js"
+                    />
+                )}
             </div>
         )));
 };
