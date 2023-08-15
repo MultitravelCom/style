@@ -253,6 +253,7 @@ const BannerTop = () => {
 function Button(props) {
     const handleClick = (event) => {
         event.preventDefault();
+        props.onClick();
 
         if (window.innerWidth <= 767) {
             // Llamar a un número en dispositivos móviles
@@ -327,9 +328,8 @@ const WarningPrice = () => {
 const Card = ({ destinos }) => {
     const [isFormOpen, setIsFormOpen] = React.useState(false);
 
-    const handleButtonClickBitrix = () => {
+    const handleButtonClick = () => {
         setIsFormOpen(true)
-        console.log("click")
     }
 
     return (
@@ -347,15 +347,8 @@ const Card = ({ destinos }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="priceStyle">{destino.price}</div>
-                    <Button id={destino.title} link={destino.linkWa} text="contactarme" onClick={handleButtonClickBitrix} />
+                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={handleButtonClick} />
                 </div>
-                {isFormOpen && (
-                    <script
-                        data-b24-form="click/56/aj4a4r"
-                        data-skip-moving="true"
-                        src="https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js"
-                    />
-                )}
             </div>
         )));
 };
