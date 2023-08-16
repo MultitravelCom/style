@@ -361,7 +361,7 @@ const Card = ({ destinos, onContactClick }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="priceStyle">{destino.price}</div>
-                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={onContactClick} />
+                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={() => onContactClick(destino.id)} />
                 </div>
             </div>
         )));
