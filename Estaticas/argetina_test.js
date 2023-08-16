@@ -266,10 +266,10 @@ function Button(props) {
 
 // FormBitrix
 const BitrixFormComponent = ({ isVisible }) => {
-    console.log('isVisible:', isVisible); // Agrega este console.log
+    const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
 
     React.useEffect(() => {
-        if (isVisible) {
+        if (isVisible && !isScriptLoaded) {
             const script = document.createElement("script");
             script.async = true;
             script.src = "https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js";
@@ -277,12 +277,17 @@ const BitrixFormComponent = ({ isVisible }) => {
             script.setAttribute("data-skip-moving", "true");
             document.getElementById("bitrix-form-container").appendChild(script);
 
-            return () => {
-                const formContainer = document.getElementById("bitrix-form-container");
-                formContainer.innerHTML = "";
-            };
+            setIsScriptLoaded(true);
+        } else if (!isVisible && isScriptLoaded) {
+            // Si isVisible es falso y el script estaba cargado, removemos el script
+            const scriptElement = document.querySelector('script[data-b24-form="inline/56/aj4a4r"]');
+            if (scriptElement) {
+                scriptElement.remove();
+            }
+
+            setIsScriptLoaded(false);
         }
-    }, [isVisible]);
+    }, [isVisible, isScriptLoaded]);
 
     return <div id="bitrix-form-container" />;
 };
