@@ -20,7 +20,6 @@ function verificarYActualizarMeta() {
         let head = document.querySelector("head");
         head.appendChild(metaTag);
     }
-    console.log("La etiqueta meta ha sido verificada o actualizada correctamente.");
 }
 verificarYActualizarMeta();
 
@@ -545,12 +544,12 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} openForm={handleOpenForm}/>
+                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} openForm={handleOpenForm} />
                             {!ocultarComponente ? null : (<BannerTopPreViaje />)}
                             <WarningPrice />
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} openForm={handleOpenForm}/>
+                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} openForm={handleOpenForm} />
                             <WarningPrice />
-                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} openForm={handleOpenForm}/>
+                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} openForm={handleOpenForm} />
                         </div>
                     </div>
                     {isFormVisible && (
