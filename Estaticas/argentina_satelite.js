@@ -437,7 +437,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div className={carrusel} id={destinos.title}>
-                        <Card destinos={destinos} />
+                        <Card destinos={destinos} onContactClick={onContactClick}/>
                     </div>
                     <button
                         aria-label="Siguiente"
@@ -546,12 +546,12 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} openForm={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} onContactClick={handleOpenForm} />
                             {!ocultarComponente ? null : (<BannerTopPreViaje />)}
                             <WarningPrice />
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} openForm={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} onContactClick={handleOpenForm} />
                             <WarningPrice />
-                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} openForm={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} onContactClick={handleOpenForm} />
                         </div>
                     </div>
                     {isFormVisible && (
