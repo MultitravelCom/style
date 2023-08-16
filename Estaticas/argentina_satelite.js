@@ -555,7 +555,7 @@ function App() {
                         </div>
                     </div>
                     {isFormVisible && (
-                        <div className="modal">
+                        <div className="modalBitrix">
                             <div className="modal-content">
                                 <span className="close-button" onClick={handleCloseForm}>
                                     &times;
