@@ -528,6 +528,8 @@ function App() {
     const handleOpenForm = (formId) => {
         setSelectedFormId(formId);
         setIsFormVisible(true);
+        console.log('isFormVisible:', isFormVisible);
+
     };
 
     const handleCloseForm = () => {
