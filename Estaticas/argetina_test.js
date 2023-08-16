@@ -504,7 +504,7 @@ const BannerTopPreViaje = () => {
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [ocultarComponente, setOcultarComponente] = React.useState(true);
-    const [selectedFormId, setSelectedFormId] = React.useState(null);
+    const [selectedFormId, setSelectedFormId] = React.useState(false);
     const [isFormVisible, setIsFormVisible] = React.useState(false);
 
 
