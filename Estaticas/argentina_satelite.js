@@ -266,6 +266,8 @@ function Button(props) {
 
 // FormBitrix
 const BitrixFormComponent = ({ isVisible }) => {
+    console.log('isVisible:', isVisible); // Agrega este console.log
+
     React.useEffect(() => {
         if (isVisible) {
             const script = document.createElement("script");
@@ -528,8 +530,6 @@ function App() {
     const handleOpenForm = (formId) => {
         setSelectedFormId(formId);
         setIsFormVisible(true);
-        console.log('isFormVisible:', isFormVisible);
-
     };
 
     const handleCloseForm = () => {
