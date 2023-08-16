@@ -560,7 +560,7 @@ function App() {
                                 <span className="close-button" onClick={handleCloseForm}>
                                     &times;
                                 </span>
-                                <BitrixFormComponent formId={selectedFormId} />
+                                <BitrixFormComponent isVisible={isFormVisible} formId={selectedFormId} />
                             </div>
                         </div>
                     )}
