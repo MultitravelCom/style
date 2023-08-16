@@ -73,7 +73,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
         title: "Hotel Kenton Palace Bariloche",
-        price: "$39.080 ",
+        price: "$39.080",
         events: "si"
     },
     {
@@ -267,7 +267,7 @@ function Button(props) {
 
 // FormBitrix
 const BitrixFormComponent = ({ isVisible }) => {
-    useEffect(() => {
+    React.useEffect(() => {
         if (isVisible) {
             const script = document.createElement("script");
             script.async = true;
