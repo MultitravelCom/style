@@ -265,6 +265,26 @@ function Button(props) {
     );
 }
 
+// FormBitrix
+const BitrixFormComponent = ({ isVisible }) => {
+    useEffect(() => {
+        if (isVisible) {
+            const script = document.createElement("script");
+            script.async = true;
+            script.src = "https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js";
+            script.setAttribute("data-b24-form", "inline/56/aj4a4r");
+            script.setAttribute("data-skip-moving", "true");
+            document.getElementById("bitrix-form-container").appendChild(script);
+
+            return () => {
+                const formContainer = document.getElementById("bitrix-form-container");
+                formContainer.innerHTML = "";
+            };
+        }
+    }, [isVisible]);
+
+    return <div id="bitrix-form-container" />;
+};
 
 function mostrarSeccion() {
     let url = window.location.href; // Obtener la URL completa
@@ -324,7 +344,7 @@ const WarningPrice = () => {
 }
 
 
-const Card = ({ destinos }) => {
+const Card = ({ destinos, onContactClick }) => {
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
@@ -340,7 +360,7 @@ const Card = ({ destinos }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="priceStyle">{destino.price}</div>
-                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" />
+                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={onContactClick} />
                 </div>
             </div>
         )));
@@ -483,6 +503,9 @@ const BannerTopPreViaje = () => {
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [ocultarComponente, setOcultarComponente] = React.useState(true);
+    const [selectedFormId, setSelectedFormId] = React.useState(null);
+    const [isFormVisible, setIsFormVisible] = React.useState(false);
+
 
     React.useEffect(() => {
         setTimeout(() => {
@@ -503,6 +526,16 @@ function App() {
 
     }, []);
 
+    const handleOpenForm = (formId) => {
+        setSelectedFormId(formId);
+        setIsFormVisible(true);
+    };
+
+    const handleCloseForm = () => {
+        setSelectedFormId(null);
+        setIsFormVisible(false);
+    };
+
     return (
         <>
             {loaded ? (
@@ -512,14 +545,24 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
+                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} openForm={handleOpenForm}/>
                             {!ocultarComponente ? null : (<BannerTopPreViaje />)}
                             <WarningPrice />
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} />
+                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} openForm={handleOpenForm}/>
                             <WarningPrice />
-                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
+                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} openForm={handleOpenForm}/>
                         </div>
                     </div>
+                    {isFormVisible && (
+                        <div className="modal">
+                            <div className="modal-content">
+                                <span className="close-button" onClick={handleCloseForm}>
+                                    &times;
+                                </span>
+                                <BitrixFormComponent formId={selectedFormId} />
+                            </div>
+                        </div>
+                    )}
                 </>
             ) : (
                 <Loader />
