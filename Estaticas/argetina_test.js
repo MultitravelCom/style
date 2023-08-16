@@ -252,11 +252,11 @@ const BannerTop = () => {
 function Button(props) {
     const handleClick = (event) => {
         event.preventDefault();
-
-        if (window.innerWidth <= 767) {
-            // Llamar a un número en dispositivos móviles
-            window.location.href = 'tel:08003480003';
-        }
+        props.onClick();
+        // if (window.innerWidth <= 767) {
+        //     // Llamar a un número en dispositivos móviles
+        //     window.location.href = 'tel:08003480003';
+        // }
     };
 
     return (
@@ -528,8 +528,12 @@ function App() {
     }, []);
 
     const handleOpenForm = (formId) => {
+        console.log("handleOpenForm called with formId:", formId);
+
         setSelectedFormId(formId);
         setIsFormVisible(true);
+
+        console.log("isFormVisible:", isFormVisible);
     };
 
     const handleCloseForm = () => {
