@@ -530,14 +530,16 @@ function App() {
     const handleOpenForm = (formId) => {
         setSelectedFormId(formId);
         setIsFormVisible(true);
-        console.log("isFormVisible:", isFormVisible);
     };
 
     const handleCloseForm = () => {
         setSelectedFormId(null);
         setIsFormVisible(false);
-        console.log("isFormVisible:", isFormVisible);
     };
+
+    React.useEffect(() => {
+        console.log("isFormVisible:", isFormVisible);
+    }, [isFormVisible]);
 
     return (
         <>
