@@ -253,14 +253,14 @@ function Button(props) {
     const handleClick = (event) => {
         event.preventDefault();
         props.onClick();
-        if (window.innerWidth <= 767) {
-            // Llamar a un número en dispositivos móviles
-            window.location.href = 'tel:08003480003';
-        }
+        // if (window.innerWidth <= 767) {
+        //     // Llamar a un número en dispositivos móviles
+        //     window.location.href = 'tel:08003480003';
+        // }
     };
 
     return (
-        <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
+        <button id={props.id} className="btn_Style_Venta_Per btn_from_bitrix" onClick={handleClick}>{props.text}</button>
     );
 }
 
