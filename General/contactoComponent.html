@@ -58,7 +58,8 @@
   .b24-form-control-alert {
     margin-bottom: 0 !important;
   }
-  .b24-form-header-padding{
+
+  .b24-form-header-padding {
     padding: 0 !important;
   }
 
@@ -72,7 +73,11 @@
 
   .bitrixFormTitle_text {
     text-align: center;
-    width: 80%;
+    width: 99%;
+  }
+  .bitrixFormTitle_text >p {
+    font-weight: 600;
+    font-size: 16px;
   }
 
   .close-button {
@@ -387,6 +392,12 @@
     cursor: pointer;
   }
 
+  .btn_from_bitrix {
+    position: initial;
+    z-index: 999999;
+    top: 16px;
+  }
+
   .btn_Style_Venta_Per:hover {
     background-color: #1169B7;
   }
@@ -497,145 +508,154 @@
     .priceStyle {
       font-size: 25px;
     }
-  }
 
-  /* ****************************************************** */
-  /* BannerTop PreViaje4 */
-  .rowStyle {
-    display: flex;
-    gap: 20px;
-  }
-
-  .main__container__left,
-  .main__container__right {
-    border-radius: 40px 8px;
-    overflow: hidden;
-    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-  }
-
-  .main__container__right {
-    position: relative;
-  }
-
-  .btnStyleBannerPre {
-    position: absolute;
-    bottom: 8%;
-    right: 18%;
-    width: 64%;
-    height: 15%;
-    border-radius: 12px;
-    background: #0d4e88;
-    color: #f3f3f3;
+    .bitrixFormTitle-button {
+      margin-top: 8px;
+      width: 100%;
+    }
+    .bitrixFormTitle_text >p {
     font-weight: 600;
+    font-size: 14px;
+  }
   }
 
-  .btnStyleBannerPre:hover {
-    background-color: #134570;
-    color: #f3f3f3;
-  }
-
-  @media (max-width: 767px) {
+    /* ****************************************************** */
+    /* BannerTop PreViaje4 */
     .rowStyle {
-      flex-direction: column;
+      display: flex;
+      gap: 20px;
     }
 
-    .main__container__left {
-      display: none;
+    .main__container__left,
+    .main__container__right {
+      border-radius: 40px 8px;
+      overflow: hidden;
+      box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
     }
 
     .main__container__right {
-      max-width: 334px;
-      margin: auto;
+      position: relative;
     }
 
     .btnStyleBannerPre {
       position: absolute;
-      bottom: 6%;
-      right: 20%;
-      width: 58%;
+      bottom: 8%;
+      right: 18%;
+      width: 64%;
       height: 15%;
       border-radius: 12px;
       background: #0d4e88;
       color: #f3f3f3;
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .btnStyleBannerPre {
-      display: none;
+      font-weight: 600;
     }
 
-    .btnStyleBannerPre {
-      bottom: 23px;
-      right: 51px;
-      width: 59%;
-      height: 13%;
-      border-radius: 12px;
-      background: #0d4e88;
+    .btnStyleBannerPre:hover {
+      background-color: #134570;
       color: #f3f3f3;
-      padding: 3px 0 0 0;
     }
-  }
 
-  @media (width: 1024px) {
-    .containerPreViaje {
-      margin-top: 40px;
+    @media (max-width: 767px) {
+      .rowStyle {
+        flex-direction: column;
+      }
+
+      .main__container__left {
+        display: none;
+      }
+
+      .main__container__right {
+        max-width: 334px;
+        margin: auto;
+      }
+
+      .btnStyleBannerPre {
+        position: absolute;
+        bottom: 6%;
+        right: 20%;
+        width: 58%;
+        height: 15%;
+        border-radius: 12px;
+        background: #0d4e88;
+        color: #f3f3f3;
+      }
     }
-  }
 
-  /* Warning Price */
-  .main__warningPrice {
-    max-width: 590px;
-    min-height: 60px;
-    background: #eaf4fc;
-    border: 1px solid #0d4e88;
-    border-radius: 8px;
-    padding: 6px 16px;
-    display: flex;
-    align-items: center;
-  }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .btnStyleBannerPre {
+        display: none;
+      }
 
-  .main__warningPrice>p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 144%;
-    color: #000000;
-    max-width: 524px;
-    min-height: 32px;
-    margin: 0 !important;
-  }
+      .btnStyleBannerPre {
+        bottom: 23px;
+        right: 51px;
+        width: 59%;
+        height: 13%;
+        border-radius: 12px;
+        background: #0d4e88;
+        color: #f3f3f3;
+        padding: 3px 0 0 0;
+      }
+    }
 
-  .glyphicon-info-circle {
-    color: #2196f3;
-    font-size: 19px;
-    min-width: 32px;
-  }
+    @media (width: 1024px) {
+      .containerPreViaje {
+        margin-top: 40px;
+      }
+    }
 
-  /* EVENTS ICOS */
-  .eventImg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    left: 14px;
-    top: 12px;
-    background: #a3a3a3;
-    border-radius: 64%;
-    text-align: center;
-    overflow: hidden;
-  }
+    /* Warning Price */
+    .main__warningPrice {
+      max-width: 590px;
+      min-height: 60px;
+      background: #eaf4fc;
+      border: 1px solid #0d4e88;
+      border-radius: 8px;
+      padding: 6px 16px;
+      display: flex;
+      align-items: center;
+    }
 
-  @media (max-width: 767px) {
+    .main__warningPrice>p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 144%;
+      color: #000000;
+      max-width: 524px;
+      min-height: 32px;
+      margin: 0 !important;
+    }
+
+    .glyphicon-info-circle {
+      color: #2196f3;
+      font-size: 19px;
+      min-width: 32px;
+    }
+
+    /* EVENTS ICOS */
     .eventImg {
-      width: 38px;
-      height: 38px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      left: 14px;
+      top: 12px;
+      background: #a3a3a3;
+      border-radius: 64%;
+      text-align: center;
+      overflow: hidden;
     }
-  }
+
+    @media (max-width: 767px) {
+      .eventImg {
+        width: 38px;
+        height: 38px;
+      }
+    }
 </style>
 <div class="container__" id="root"></div>
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.js"></script>
