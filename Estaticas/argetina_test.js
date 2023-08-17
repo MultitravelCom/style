@@ -298,7 +298,7 @@ const BitrixFormTitle = () => {
                 <spam>Lun a Vie 10 a 20 Hs | Sab 10 a 15 Hs </spam>
             </div>
             <div className="bitrixFormTitle-button">
-                <Button text="LLAMAR" />
+                <Button text="LLAMAR" className="btn_from_bitrix"/>
             </div>
         </div>
     )
