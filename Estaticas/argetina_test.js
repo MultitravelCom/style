@@ -279,7 +279,6 @@ const BitrixFormComponent = ({ isVisible }) => {
 
             setIsScriptLoaded(true);
         } else if (!isVisible && isScriptLoaded) {
-            // Si isVisible es falso y el script estaba cargado, removemos el script
             const scriptElement = document.querySelector('script[data-b24-form="inline/56/aj4a4r"]');
             if (scriptElement) {
                 scriptElement.remove();
@@ -291,6 +290,19 @@ const BitrixFormComponent = ({ isVisible }) => {
 
     return <div id="bitrix-form-container" />;
 };
+const BitrixFormTitle = () => {
+    return (
+        <div className="BitrixFormTitle">
+            <div className="bitrixFormTitle_text">
+                <p>Completa tus datos para que te contacte un especialistas en viajes, o llamanos</p>
+                <spam>Lun a Vie 10 a 20 Hs | Sab 10 a 15 Hs </spam>
+            </div>
+            <div className="bitrixFormTitle-button">
+                <button>LLAMAR</button>
+            </div>
+        </div>
+    )
+}
 
 function mostrarSeccion() {
     let url = window.location.href; // Obtener la URL completa
@@ -348,7 +360,6 @@ const WarningPrice = () => {
 
     )
 }
-
 
 const Card = ({ destinos, onContactClick }) => {
     return (
@@ -442,7 +453,7 @@ const CardContainer = ({ btnStyles, destinos, onContactClick }) => {
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div className={carrusel} id={destinos.title}>
-                        <Card destinos={destinos} onContactClick={onContactClick}/>
+                        <Card destinos={destinos} onContactClick={onContactClick} />
                     </div>
                     <button
                         aria-label="Siguiente"
@@ -569,10 +580,11 @@ function App() {
                     </div>
                     {isFormVisible && (
                         <div className="modalBitrix">
-                            <div className="modal-content">
+                            <div className="modal-content-Bitrix">
                                 <span className="close-button" onClick={handleCloseForm}>
                                     &times;
                                 </span>
+                                <BitrixFormTitle/>
                                 <BitrixFormComponent isVisible={isFormVisible} formId={selectedFormId} />
                             </div>
                         </div>

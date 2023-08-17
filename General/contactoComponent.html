@@ -1,72 +1,126 @@
-<link
-  href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
-  rel="stylesheet"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css"
-/>
-<script
-  crossorigin
-  src="https://unpkg.com/react@18/umd/react.production.min.js"
-></script>
-<script
-  crossorigin
-  src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
-></script>
+<script src="https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css" />
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<script
-  type="text/babel"
-  src="https://multitravelcom.github.io/components/MULT168/Modal/index.js"
-></script>
-<link
-  href="https://multitravelcom.github.io/components/MULT168/Modal/style.css"
-  rel="stylesheet"
-/>
 
 <style>
-  /* <!-- CSS --> */
+ .modalBitrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-Bitrix {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-content-inner {
+  padding: 20px;
+  overflow: auto; /* Añade desplazamiento si el contenido es demasiado grande */
+}
+
+.modal-content-Bitrix input,
+.modal-content-Bitrix textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.b24-form-wrapper.b24-form-shadow {
+  box-shadow: none !important;
+}
+
+.b24-form-wrapper.b24-form-border-bottom {
+  border-bottom: white !important;
+}
+.b24-form-control-alert{
+  margin-bottom: 0 !important;
+}
+
+  /* Estilos para el bot&#243;n de cierre (la "X" en la esquina superior derecha) */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 999999;
+  }
+
   /* container */
+  .upper-menu__login-button {
+    display: none;
+  }
+
   .page-header-bar {
     padding: 0 !important;
   }
+
   .content-body {
     margin-top: 0;
   }
-  .content-body > .container {
+
+  .content-body>.container {
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
   }
-  .main__conteiner > img {
+
+  .main__conteiner>img {
     width: 100%;
     height: 100%;
   }
+
   .main__conteiner-principal {
     margin-top: -32px;
   }
-  source > img {
+
+  source>img {
     width: 100%;
     height: 100%;
   }
+
   .main-content {
     background-color: white !important;
   }
+
   .main__conteiner__titulo {
     font-weight: 700;
     margin-bottom: 1rem;
     font-size: 20px;
     letter-spacing: 0.1px;
   }
-  .main__conteiner__s1__destacado__card > a {
+
+  .main__conteiner__s1__destacado__card>a {
     display: block;
     height: 100%;
   }
+
   /* /* Banner hero * */
   .main_conteiner__s1_medio {
     width: 100%;
     height: 126px;
   }
+
   .main_conteiner__s1_medio__paquetes {
     width: 100%;
     height: 100%;
@@ -74,22 +128,27 @@
     margin-bottom: 4rem;
     margin-top: 1rem;
   }
+
   .main_conteiner__s1_medio__paquetes__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   .page-header-bar {
     padding: 0 !important;
   }
+
   /* Lo mejor de Multitravel.com */
   .main__conteiner__s1 {
     margin-top: 1rem;
   }
+
   .main__conteiner__s1__titulo {
     padding: 16px 0;
     font-size: 20px;
   }
+
   .main__conteiner__s1__destacado {
     display: flex;
     justify-content: center;
@@ -100,18 +159,22 @@
     overflow: hidden;
     margin-bottom: 4rem;
   }
+
   .main__conteiner__s1__destacado__texto {
     padding-right: 0px;
   }
-  .main__conteiner__s1__destacado__texto > h1 {
+
+  .main__conteiner__s1__destacado__texto>h1 {
     font-size: 32px;
     font-weight: 700;
     line-height: 40px;
     margin-bottom: 0.4rem;
   }
-  .main__conteiner__s1__destacado__texto > p {
+
+  .main__conteiner__s1__destacado__texto>p {
     font-size: 16px;
   }
+
   .main__conteiner__s1__destacado__card {
     overflow: hidden;
     height: 100%;
@@ -120,13 +183,16 @@
     filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
     position: relative;
   }
+
   .main__conteiner__s1__destacado__card__img {
     width: 100%;
     object-fit: contain;
   }
+
   .uno {
     border-radius: 8px;
   }
+
   .dos,
   .tres,
   .cuatro,
@@ -134,11 +200,13 @@
   .seis {
     border-radius: 8px;
   }
+
   /* Carrusel */
   .carrusel__contenedor {
     position: relative;
     margin-bottom: 3rem;
   }
+
   .carrusel__anterior,
   .carrusel__siguiente {
     position: absolute;
@@ -156,23 +224,29 @@
     border-radius: 50%;
     opacity: 100%;
   }
+
   .carrusel__anterior:hover,
   .carrusel__siguiente:hover {
     opacity: 100%;
   }
+
   .carrusel__anterior {
     left: -13px;
   }
+
   .carrusel__siguiente {
     right: -13px;
   }
+
   .carrusel__elemento {
     margin: 10px;
   }
+
   .glider.draggable .glider-slide img {
     user-select: all !important;
     pointer-events: all !important;
   }
+
   /* Spinner */
   .lds-roller {
     display: inline-block;
@@ -183,10 +257,12 @@
     width: 80px;
     height: 80px;
   }
+
   .lds-roller div {
     animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     transform-origin: 40px 40px;
   }
+
   .lds-roller div:after {
     content: " ";
     display: block;
@@ -197,70 +273,89 @@
     background: #fccd07;
     margin: -4px 0 0 -4px;
   }
+
   .lds-roller div:nth-child(1) {
     animation-delay: -0.036s;
   }
+
   .lds-roller div:nth-child(1):after {
     top: 63px;
     left: 63px;
   }
+
   .lds-roller div:nth-child(2) {
     animation-delay: -0.072s;
   }
+
   .lds-roller div:nth-child(2):after {
     top: 68px;
     left: 56px;
   }
+
   .lds-roller div:nth-child(3) {
     animation-delay: -0.108s;
   }
+
   .lds-roller div:nth-child(3):after {
     top: 71px;
     left: 48px;
   }
+
   .lds-roller div:nth-child(4) {
     animation-delay: -0.144s;
   }
+
   .lds-roller div:nth-child(4):after {
     top: 72px;
     left: 40px;
   }
+
   .lds-roller div:nth-child(5) {
     animation-delay: -0.18s;
   }
+
   .lds-roller div:nth-child(5):after {
     top: 71px;
     left: 32px;
   }
+
   .lds-roller div:nth-child(6) {
     animation-delay: -0.216s;
   }
+
   .lds-roller div:nth-child(6):after {
     top: 68px;
     left: 24px;
   }
+
   .lds-roller div:nth-child(7) {
     animation-delay: -0.252s;
   }
+
   .lds-roller div:nth-child(7):after {
     top: 63px;
     left: 17px;
   }
+
   .lds-roller div:nth-child(8) {
     animation-delay: -0.288s;
   }
+
   .lds-roller div:nth-child(8):after {
     top: 56px;
     left: 12px;
   }
+
   @keyframes lds-roller {
     0% {
       transform: rotate(0deg);
     }
+
     100% {
       transform: rotate(360deg);
     }
   }
+
   .btn_Style_Venta_Per {
     position: absolute;
     bottom: 3%;
@@ -273,9 +368,19 @@
     border: none;
     cursor: pointer;
   }
+
   .btn_Style_Venta_Per:hover {
     background-color: #1169B7;
   }
+
+  .priceStyle {
+    position: absolute;
+    bottom: 2%;
+    left: 10%;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
   /* ---*-*-*-*-*-*-*-*-*-*- */
   /* MOBILE */
   @media (max-width: 964px) {
@@ -286,9 +391,11 @@
       overflow-x: auto;
       gap: 1rem;
     }
+
     .glider::-webkit-scrollbar {
       width: 0 !important;
     }
+
     .uno,
     .dos,
     .tres,
@@ -299,67 +406,88 @@
       text-align: center;
       background-color: #ddd;
     }
-    .main__conteiner__s1 > .main__conteiner__titulos {
+
+    .main__conteiner__s1>.main__conteiner__titulos {
       padding-block: 0px;
     }
+
     .pagos__card__texto__btn {
       display: none;
     }
   }
+
   @media (max-width: 600px) {
     .carrusel {
       margin-top: 3rem;
     }
+
     /* Estilos btn buscar mobile */
     .pull-right {
       width: 100%;
     }
+
     /* Estilo caja de busqueda */
     .multi-searcher {
       margin: 8px;
     }
+
     .multi-searcher__content {
       border-radius: 1rem !important;
     }
+
     .show-more {
       display: none;
     }
+
     #flights-searcher {
       margin: 8px;
     }
   }
+
   @media (min-width: 868px) {
     .main__conteiner-principal {
       margin-top: 0;
     }
   }
+
   @media (max-width: 564px) {
+
     /* SECCION 1 */
     .main__conteiner__s1 {
       align-items: flex-start;
       flex-direction: column;
     }
+
     .main__conteiner__s1__titulo {
       display: inline;
       margin-bottom: 1rem;
     }
+
     .main__conteiner__s1__destacado__texto {
       display: none;
     }
+
     .main__conteiner__s1 {
       margin-bottom: 0;
     }
+
     .carrusel__anterior,
     .carrusel__siguiente {
       display: none;
     }
+
+    .priceStyle {
+      font-size: 25px;
+    }
   }
+
   /* ****************************************************** */
   /* BannerTop PreViaje4 */
   .rowStyle {
     display: flex;
     gap: 20px;
   }
+
   .main__container__left,
   .main__container__right {
     border-radius: 40px 8px;
@@ -368,9 +496,11 @@
     -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
   }
+
   .main__container__right {
     position: relative;
   }
+
   .btnStyleBannerPre {
     position: absolute;
     bottom: 8%;
@@ -382,21 +512,26 @@
     color: #f3f3f3;
     font-weight: 600;
   }
+
   .btnStyleBannerPre:hover {
     background-color: #134570;
     color: #f3f3f3;
   }
+
   @media (max-width: 767px) {
     .rowStyle {
       flex-direction: column;
     }
+
     .main__container__left {
       display: none;
     }
+
     .main__container__right {
       max-width: 334px;
       margin: auto;
     }
+
     .btnStyleBannerPre {
       position: absolute;
       bottom: 6%;
@@ -408,10 +543,12 @@
       color: #f3f3f3;
     }
   }
+
   @media (min-width: 768px) and (max-width: 1023px) {
     .btnStyleBannerPre {
       display: none;
     }
+
     .btnStyleBannerPre {
       bottom: 23px;
       right: 51px;
@@ -423,11 +560,13 @@
       padding: 3px 0 0 0;
     }
   }
+
   @media (width: 1024px) {
     .containerPreViaje {
       margin-top: 40px;
     }
   }
+
   /* Warning Price */
   .main__warningPrice {
     max-width: 590px;
@@ -440,7 +579,7 @@
     align-items: center;
   }
 
-  .main__warningPrice > p {
+  .main__warningPrice>p {
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
@@ -450,11 +589,13 @@
     min-height: 32px;
     margin: 0 !important;
   }
+
   .glyphicon-info-circle {
     color: #2196f3;
     font-size: 19px;
     min-width: 32px;
   }
+
   /* EVENTS ICOS */
   .eventImg {
     display: flex;
@@ -470,6 +611,7 @@
     text-align: center;
     overflow: hidden;
   }
+
   @media (max-width: 767px) {
     .eventImg {
       width: 38px;
@@ -478,35 +620,8 @@
   }
 </style>
 <div class="container__" id="root"></div>
-<div id="miModal" style="display: none">
-  <!-- Aqu&#237; ir&#225; tu formulario -->
-  <script data-b24-form="inline/54/02nb6u" data-skip-moving="true">
-    (function (w, d, u) {
-      var s = d.createElement("script");
-      s.async = true;
-      s.src = u + "?" + ((Date.now() / 180000) | 0);
-      var h = d.getElementsByTagName("script")[0];
-      h.parentNode.insertBefore(s, h);
-    })(
-      window,
-      document,
-      "https://cdn.bitrix24.com/b19657597/crm/form/loader_54.js"
-    );
-  </script>
-</div>
-<script>
-  document
-    .getElementById("miBoton")
-    .addEventListener("click", function (event) {
-      event.preventDefault(); // Evita el comportamiento predeterminado del bot&#243;n
-      document.getElementById("miModal").style.display = "block";
-    });
-</script>
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.js"></script>
-<script
-  type="text/babel"
-  src="https://multitravelcom.github.io/style/Estaticas/argentina_satelite.js"
-></script>
+<script type="text/babel" src="https://multitravelcom.github.io/style/Estaticas/argetina_test.js"></script>
 <script id="mcjs">
   !(function (c, h, i, m, p) {
     (m = c.createElement(h)),
