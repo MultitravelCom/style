@@ -253,10 +253,10 @@ function Button(props) {
     const handleClick = (event) => {
         event.preventDefault();
         props.onClick();
-        // if (window.innerWidth <= 767) {
-        //     // Llamar a un número en dispositivos móviles
-        //     window.location.href = 'tel:08003480003';
-        // }
+        if (window.innerWidth <= 767) {
+            // Llamar a un número en dispositivos móviles
+            window.location.href = 'tel:08003480003';
+        }
     };
 
     return (
@@ -298,7 +298,7 @@ const BitrixFormTitle = () => {
                 <spam>Lun a Vie 10 a 20 Hs | Sab 10 a 15 Hs </spam>
             </div>
             <div className="bitrixFormTitle-button">
-                <button>LLAMAR</button>
+                <Button text="LLAMAR" />
             </div>
         </div>
     )
