@@ -554,7 +554,6 @@ function App() {
     }, []);
 
     const handleOpenForm = (formId) => {
-        console.log("handleOpenForm called with formId:", formId);
 
         setSelectedFormId(formId);
         setIsFormVisible(true);

@@ -148,7 +148,7 @@ const ButtonBitrixForm = () => {
 
     return isMobile ? (
         <div className="bitrixFormTitle-button">
-            <button onClick={handleCallButtonClick}>Llamar</button>
+            <button onClick={handleCallButtonClick} className="style__btn__britrix">Llamar</button>
         </div>
     ) : null;
 }
