@@ -429,6 +429,9 @@ source>img {
 .b24-form-control-text .b24-form-control {
     height: 50px;
 }
+.b24-form-control-string .b24-form-control, .b24-form-control-list .b24-form-control, .b24-form-control-text .b24-form-control, .b24-form-control-select .field-item{
+    height: 50px !important;
+  }
 
 /* ---*-*-*-*-*-*-*-*-*-*- */
 /* MOBILE */
