@@ -253,10 +253,6 @@ function Button(props) {
     const handleClick = (event) => {
         event.preventDefault();
         props.onClick();
-        // if (window.innerWidth <= 767) {
-        //     // Llamar a un número en dispositivos móviles
-        //     window.location.href = 'tel:08003480003';
-        // }
     };
 
     return (
@@ -291,11 +287,17 @@ const BitrixFormComponent = ({ isVisible }) => {
     return <div id="bitrix-form-container" />;
 };
 const ButtonBitrixForm = () => {
-    const isMobile = window.innerWidth < 454; // Cambia el valor según tu definición de resolución móvil
+    const isMobile = window.innerWidth < 454;
+
+    const handleCallButtonClick = () => {
+        if (isMobile) {
+            window.location.href = 'tel:08003480003';
+        }
+    };
 
     return isMobile ? (
         <div className="bitrixFormTitle-button">
-            <button>Llamar</button>
+            <button onClick={handleCallButtonClick}>Llamar</button>
         </div>
     ) : null;
 }
