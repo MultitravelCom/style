@@ -289,7 +289,8 @@ const BitrixFormComponent = ({ isVisible }) => {
 const ButtonBitrixForm = () => {
     const isMobile = window.innerWidth < 454;
 
-    const handleCallButtonClick = () => {
+    const handleCallButtonClick = (event) => {
+        event.preventDefault();
         if (isMobile) {
             window.location.href = 'tel:08003480003';
         }
