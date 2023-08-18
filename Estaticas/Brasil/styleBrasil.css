@@ -371,6 +371,7 @@ source>img {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .bitrixFormTitle_text {
