@@ -290,6 +290,15 @@ const BitrixFormComponent = ({ isVisible }) => {
 
     return <div id="bitrix-form-container" />;
 };
+const ButtonBitrixForm = () => {
+    const isMobile = window.innerWidth < 454; // Cambia el valor según tu definición de resolución móvil
+
+    return isMobile ? (
+        <div className="bitrixFormTitle-button">
+            <button>Llamar</button>
+        </div>
+    ) : null;
+}
 const BitrixFormTitle = () => {
     return (
         <div className="BitrixFormTitle">
@@ -297,9 +306,7 @@ const BitrixFormTitle = () => {
                 <p>Completa tus datos para que te contacte un especialistas en viajes, o llamanos</p>
                 <spam>Lun a Vie 10 a 20 Hs | Sab 10 a 15 Hs </spam>
             </div>
-            <div className="bitrixFormTitle-button">
-                <Button text="LLAMAR" className="btn_from_bitrix"/>
-            </div>
+            <ButtonBitrixForm />
         </div>
     )
 }
@@ -584,7 +591,7 @@ function App() {
                                 <span className="close-button" onClick={handleCloseForm}>
                                     &times;
                                 </span>
-                                <BitrixFormTitle/>
+                                <BitrixFormTitle />
                                 <BitrixFormComponent isVisible={isFormVisible} formId={selectedFormId} />
                             </div>
                         </div>
