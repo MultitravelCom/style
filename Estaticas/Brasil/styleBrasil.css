@@ -424,6 +424,9 @@ source>img {
     cursor: pointer;
     z-index: 999999;
 }
+.single-line {
+    white-space: nowrap;
+}
 
 /* ---*-*-*-*-*-*-*-*-*-*- */
 /* MOBILE */
