@@ -406,11 +406,14 @@ source>img {
     border: 1px solid #0d4e88;
     background: #fff;
     color: #0d4e88;
-    color: #0d4e88;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+.style__btn__britrix:hover{
+    background: #0d4e88;
+    color: #fff;
 }
 
 .close-button-bitrix {
