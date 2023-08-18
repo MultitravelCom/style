@@ -308,6 +308,7 @@ source>img {
 
 /* Bitrix */
 
+/* BITRIX */
 .modalBitrix {
     position: fixed;
     top: 0;
@@ -336,7 +337,6 @@ source>img {
 .modal-content-inner {
     padding: 20px;
     overflow: auto;
-    /* Añade desplazamiento si el contenido es demasiado grande */
 }
 
 .modal-content-Bitrix input,
@@ -371,7 +371,6 @@ source>img {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    flex-direction: column;
 }
 
 .bitrixFormTitle_text {
@@ -413,18 +412,22 @@ source>img {
     line-height: normal;
     margin-top: 5px;
 }
-.style__btn__britrix:hover{
+
+.style__btn__britrix:hover {
     background: #0d4e88;
     color: #fff;
 }
 
 .close-button-bitrix {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 3px;
+    right: 12px;
     font-size: 24px;
     cursor: pointer;
     z-index: 999999;
+}
+.b24-form-control-text .b24-form-control {
+    height: 50px;
 }
 
 /* ---*-*-*-*-*-*-*-*-*-*- */
