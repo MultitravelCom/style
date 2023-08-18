@@ -411,6 +411,7 @@ source>img {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    margin-top: 5px;
 }
 .style__btn__britrix:hover{
     background: #0d4e88;
