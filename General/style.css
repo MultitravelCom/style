@@ -768,6 +768,9 @@ body.home.home--default .home-v5__searcher,
   .cookie-policy__content{
     text-align: left !important;
   }
+  #mcjs{
+    display: none;
+  }
 }
 
 /* *************** MULT-271 ********************** */
