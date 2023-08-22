@@ -177,7 +177,6 @@ function disableMailchimpMobile() {
     // Obtener el elemento de script por su ID
     let scriptElement = document.getElementById("mcjs");
 
-    // Verificar si la resolución de pantalla está por encima del umbral y activar o desactivar el script
     if (scriptElement && !isScreenResolutionAboveThreshold(768)) {
         scriptElement.setAttribute("async", "true"); // Deshabilitar la ejecución del script
         console.log("bloqueado")
