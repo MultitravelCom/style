@@ -33,7 +33,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
-        price: "$99.950",
+        price: "$121.860",
         events: "si"
     },
     {
@@ -43,7 +43,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/s507zo",
         title: "Paquete a Bariloche",
-        price: "$132.950",
+        price: "$171.120",
         events: "si"
     },
     {
@@ -53,7 +53,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/duchkz",
         title: "Paquete a Bariloche",
-        price: "$165.955",
+        price: "$213.100",
         events: "No"
     },
     {
@@ -63,7 +63,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/2z5hpp",
         title: "Hotel Villa Sofia",
-        price: "$27.570 ",
+        price: "$35.375",
         events: "si"
     },
     {
@@ -73,7 +73,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
         title: "Hotel Kenton Palace Bariloche",
-        price: "$39.080 ",
+        price: "$55.640",
         events: "si"
     },
     {
@@ -83,7 +83,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
         title: "Hotel Design Suites Bariloche",
-        price: "$57.965",
+        price: "$75.135",
         events: "si"
     },
 ];
@@ -95,7 +95,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/hxjkgq",
         title: "Paquete a Iguazú",
-        price: "$105.650",
+        price: "$138.910",
         events: "si"
     },
     {
@@ -105,7 +105,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/2rmvhq",
         title: "Paquete a Iguazús",
-        price: "$151.270",
+        price: "$189.840",
         events: "si"
     },
     {
@@ -115,7 +115,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/wbq74i",
         title: "Hotel Merit Iguazú",
-        price: "$42.820",
+        price: "$56.210",
         events: "si"
     },
     {
@@ -125,7 +125,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/s6nxus",
         title: "Hotel Complejo Americano",
-        price: "$37.560 ",
+        price: "$38.100",
         events: "si"
     },
     {
@@ -135,7 +135,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
         title: "Hotel Tourbillon",
-        price: "$33.400",
+        price: "$41.830",
         events: "No"
     },
     {
@@ -145,7 +145,7 @@ const destinos2 = [
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
         title: "Hotel Iguazu Grand",
-        price: "$96.480",
+        price: "$139.820",
         events: "No"
     },
 ];
@@ -157,7 +157,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/61efbi",
         title: "Paquete a Mendoza",
-        price: "$106.760",
+        price: "$144.335",
         events: "si"
     },
     {
@@ -167,7 +167,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/sbfl7y",
         title: "Paquete a Mendoza",
-        price: "$150.750",
+        price: "$183.700",
         events: "si"
     },
     {
@@ -177,7 +177,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/vs8baw",
         title: "Paquete a Mendoza",
-        price: "$185.480",
+        price: "$223.100",
         events: "si"
     },
     {
@@ -187,7 +187,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/u8ym55",
         title: "Hotel Crillón",
-        price: "$37.100",
+        price: "$39.770",
         events: "si"
     },
     {
@@ -197,7 +197,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/wz0152",
         title: "Hotel Cordón del Plata",
-        price: "$27.280",
+        price: "$29.110",
         events: "si"
     },
     {
@@ -207,7 +207,7 @@ const destinos3 = [
         className: "uno",
         linkWa: "https://wa.link/wz0152",
         title: "Hotel Huentala",
-        price: "$74.350",
+        price: "$97.430",
         events: "si"
     },
 ];
@@ -217,6 +217,60 @@ const btnStyles = [
     { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Vuelos Mendoza – Alojamientos Mendoza – Paquetes Mendoza', destino: "Mendoza" },
 ];
 // *****************************************************
+// ************** BITRIX ********************
+const BitrixFormComponent = ({ isVisible }) => {
+    const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
+
+    React.useEffect(() => {
+        if (isVisible && !isScriptLoaded) {
+            const script = document.createElement("script");
+            script.async = true;
+            script.src = "https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js";
+            script.setAttribute("data-b24-form", "inline/56/aj4a4r");
+            script.setAttribute("data-skip-moving", "true");
+            document.getElementById("bitrix-form-container").appendChild(script);
+
+            setIsScriptLoaded(true);
+        } else if (!isVisible && isScriptLoaded) {
+            const scriptElement = document.querySelector('script[data-b24-form="inline/56/aj4a4r"]');
+            if (scriptElement) {
+                scriptElement.remove();
+            }
+
+            setIsScriptLoaded(false);
+        }
+    }, [isVisible, isScriptLoaded]);
+
+    return <div id="bitrix-form-container" />;
+};
+const ButtonBitrixForm = () => {
+    const isMobile = window.innerWidth < 454;
+
+    const handleCallButtonClick = (event) => {
+        event.preventDefault();
+        if (isMobile) {
+            window.location.href = 'tel:08003480003';
+        }
+    };
+
+    return isMobile ? (
+        <div className="bitrixFormTitle-button">
+            <button onClick={handleCallButtonClick} className="style__btn__britrix">Llamar</button>
+        </div>
+    ) : null;
+}
+const BitrixFormTitle = () => {
+    return (
+        <div className="BitrixFormTitle">
+            <div className="bitrixFormTitle_text">
+                <p class="single-line">Completa tus datos para que te contacte un especialista.</p>
+                <p>o llamanos al: 0800-348-0003</p>
+                <spam>Lun a Vie 10 a 20 Hs | Sab 10 a 15 Hs</spam>
+            </div>
+            <ButtonBitrixForm />
+        </div>
+    )
+}
 // ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
@@ -253,11 +307,7 @@ const BannerTop = () => {
 function Button(props) {
     const handleClick = (event) => {
         event.preventDefault();
-
-        if (window.innerWidth <= 767) {
-            // Llamar a un número en dispositivos móviles
-            window.location.href = 'tel:08003480003';
-        }
+        props.onClick();
     };
 
     return (
@@ -323,8 +373,7 @@ const WarningPrice = () => {
     )
 }
 
-
-const Card = ({ destinos }) => {
+const Card = ({ destinos, onContactClick }) => {
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
@@ -340,12 +389,12 @@ const Card = ({ destinos }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="priceStyle">{destino.price}</div>
-                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" />
+                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={() => onContactClick(destino.id)} />
                 </div>
             </div>
         )));
 };
-const CardContainer = ({ btnStyles, destinos }) => {
+const CardContainer = ({ btnStyles, destinos, onContactClick }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
     React.useEffect(() => {
@@ -416,7 +465,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div className={carrusel} id={destinos.title}>
-                        <Card destinos={destinos} />
+                        <Card destinos={destinos} onContactClick={onContactClick} />
                     </div>
                     <button
                         aria-label="Siguiente"
@@ -483,6 +532,8 @@ const BannerTopPreViaje = () => {
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [ocultarComponente, setOcultarComponente] = React.useState(true);
+    const [selectedFormId, setSelectedFormId] = React.useState(false);
+    const [isFormVisible, setIsFormVisible] = React.useState(false);
 
     React.useEffect(() => {
         setTimeout(() => {
@@ -503,6 +554,22 @@ function App() {
 
     }, []);
 
+    const handleOpenForm = (formId) => {
+
+        setSelectedFormId(formId);
+        setIsFormVisible(true);
+
+        console.log("isFormVisible:", isFormVisible);
+    };
+
+    const handleCloseForm = () => {
+        setSelectedFormId(null);
+        setIsFormVisible(false);
+    };
+    React.useEffect(() => {
+        console.log("isFormVisible:", isFormVisible);
+    }, [isFormVisible]);
+
     return (
         <>
             {loaded ? (
@@ -512,14 +579,25 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
+                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} onContactClick={handleOpenForm} />
                             {!ocultarComponente ? null : (<BannerTopPreViaje />)}
                             <WarningPrice />
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} />
+                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} onContactClick={handleOpenForm} />
                             <WarningPrice />
-                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
+                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} onContactClick={handleOpenForm} />
                         </div>
                     </div>
+                    {isFormVisible && (
+                        <div className="modalBitrix">
+                            <div className="modal-content-Bitrix">
+                                <span className="close-button-bitrix" onClick={handleCloseForm}>
+                                    &times;
+                                </span>
+                                <BitrixFormTitle />
+                                <BitrixFormComponent isVisible={isFormVisible} formId={selectedFormId} />
+                            </div>
+                        </div>
+                    )}
                 </>
             ) : (
                 <Loader />

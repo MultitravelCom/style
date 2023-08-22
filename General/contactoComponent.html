@@ -1,11 +1,31 @@
 <script src="https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js"></script>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css" />
-<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<link
+  href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css"
+/>
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.production.min.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
+<script
+  type="text/babel"
+  src="https://multitravelcom.github.io/components/MULT168/Modal/index.js"
+></script>
+<link
+  href="https://multitravelcom.github.io/components/MULT168/Modal/style.css"
+  rel="stylesheet"
+/>
 <style>
+  /* BITRIX */
   .modalBitrix {
     position: fixed;
     top: 0;
@@ -24,7 +44,7 @@
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     max-width: 80%;
-    max-height: 90vh;
+    max-height: 95vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -34,7 +54,6 @@
   .modal-content-inner {
     padding: 20px;
     overflow: auto;
-    /* Añade desplazamiento si el contenido es demasiado grande */
   }
 
   .modal-content-Bitrix input,
@@ -65,7 +84,7 @@
 
   .BitrixFormTitle {
     display: flex;
-    padding: 1rem;
+    padding: 1rem 1rem 0.5rem;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -73,22 +92,63 @@
 
   .bitrixFormTitle_text {
     text-align: center;
-    width: 99%;
-  }
-  .bitrixFormTitle_text >p {
-    font-weight: 600;
-    font-size: 16px;
+    width: 98%;
   }
 
-  .close-button {
+  .bitrixFormTitle_text > p {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 !important;
+  }
+
+  .b24-form-content {
+    padding: 0 31px !important;
+  }
+
+  .modal-content-Bitrix input,
+  .modal-content-Bitrix textarea {
+    margin-bottom: 1px !important;
+  }
+
+  .style__btn__britrix {
+    display: flex;
+    width: 193px;
+    height: 26px;
+    padding: 4px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #0d4e88;
+    background: #fff;
+    color: #0d4e88;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 5px;
+  }
+
+  .style__btn__britrix:hover {
+    background: #0d4e88;
+    color: #fff;
+  }
+
+  .close-button-bitrix {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 3px;
+    right: 12px;
     font-size: 24px;
     cursor: pointer;
     z-index: 999999;
   }
-
+  .b24-form-control-text .b24-form-control {
+    height: 50px;
+  }
+  .b24-form-control-string .b24-form-control, .b24-form-control-list .b24-form-control, .b24-form-control-text .b24-form-control, .b24-form-control-select .field-item{
+    height: 50px !important;
+  }
   /* container */
   .upper-menu__login-button {
     display: none;
@@ -102,13 +162,13 @@
     margin-top: 0;
   }
 
-  .content-body>.container {
+  .content-body > .container {
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
   }
 
-  .main__conteiner>img {
+  .main__conteiner > img {
     width: 100%;
     height: 100%;
   }
@@ -117,7 +177,7 @@
     margin-top: -32px;
   }
 
-  source>img {
+  source > img {
     width: 100%;
     height: 100%;
   }
@@ -133,7 +193,7 @@
     letter-spacing: 0.1px;
   }
 
-  .main__conteiner__s1__destacado__card>a {
+  .main__conteiner__s1__destacado__card > a {
     display: block;
     height: 100%;
   }
@@ -187,14 +247,14 @@
     padding-right: 0px;
   }
 
-  .main__conteiner__s1__destacado__texto>h1 {
+  .main__conteiner__s1__destacado__texto > h1 {
     font-size: 32px;
     font-weight: 700;
     line-height: 40px;
     margin-bottom: 0.4rem;
   }
 
-  .main__conteiner__s1__destacado__texto>p {
+  .main__conteiner__s1__destacado__texto > p {
     font-size: 16px;
   }
 
@@ -386,7 +446,7 @@
     padding: 2% 5%;
     color: white;
     min-width: 44%;
-    background-color: #2A8BFE;
+    background-color: #2a8bfe;
     border-radius: 40px;
     border: none;
     cursor: pointer;
@@ -399,7 +459,7 @@
   }
 
   .btn_Style_Venta_Per:hover {
-    background-color: #1169B7;
+    background-color: #1169b7;
   }
 
   .priceStyle {
@@ -436,7 +496,7 @@
       background-color: #ddd;
     }
 
-    .main__conteiner__s1>.main__conteiner__titulos {
+    .main__conteiner__s1 > .main__conteiner__titulos {
       padding-block: 0px;
     }
 
@@ -480,7 +540,6 @@
   }
 
   @media (max-width: 564px) {
-
     /* SECCION 1 */
     .main__conteiner__s1 {
       align-items: flex-start;
@@ -510,156 +569,173 @@
     }
 
     .bitrixFormTitle-button {
+      display: flex;
+      justify-content: center;
       margin-top: 8px;
       width: 100%;
     }
-    .bitrixFormTitle_text >p {
+    .bitrixFormTitle_text > p {
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+
+  /* ****************************************************** */
+  /* BannerTop PreViaje4 */
+  .rowStyle {
+    display: flex;
+    gap: 20px;
+  }
+
+  .main__container__left,
+  .main__container__right {
+    border-radius: 40px 8px;
+    overflow: hidden;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .main__container__right {
+    position: relative;
+  }
+
+  .btnStyleBannerPre {
+    position: absolute;
+    bottom: 8%;
+    right: 18%;
+    width: 64%;
+    height: 15%;
+    border-radius: 12px;
+    background: #0d4e88;
+    color: #f3f3f3;
     font-weight: 600;
-    font-size: 14px;
-  }
   }
 
-    /* ****************************************************** */
-    /* BannerTop PreViaje4 */
+  .btnStyleBannerPre:hover {
+    background-color: #134570;
+    color: #f3f3f3;
+  }
+
+  @media (max-width: 767px) {
     .rowStyle {
-      display: flex;
-      gap: 20px;
+      flex-direction: column;
     }
 
-    .main__container__left,
-    .main__container__right {
-      border-radius: 40px 8px;
-      overflow: hidden;
-      box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-      -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    .main__container__left {
+      display: none;
     }
 
     .main__container__right {
-      position: relative;
+      max-width: 334px;
+      margin: auto;
     }
 
     .btnStyleBannerPre {
       position: absolute;
-      bottom: 8%;
-      right: 18%;
-      width: 64%;
+      bottom: 6%;
+      right: 20%;
+      width: 58%;
       height: 15%;
       border-radius: 12px;
       background: #0d4e88;
       color: #f3f3f3;
-      font-weight: 600;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .btnStyleBannerPre {
+      display: none;
     }
 
-    .btnStyleBannerPre:hover {
-      background-color: #134570;
+    .btnStyleBannerPre {
+      bottom: 23px;
+      right: 51px;
+      width: 59%;
+      height: 13%;
+      border-radius: 12px;
+      background: #0d4e88;
       color: #f3f3f3;
+      padding: 3px 0 0 0;
     }
+  }
 
-    @media (max-width: 767px) {
-      .rowStyle {
-        flex-direction: column;
-      }
-
-      .main__container__left {
-        display: none;
-      }
-
-      .main__container__right {
-        max-width: 334px;
-        margin: auto;
-      }
-
-      .btnStyleBannerPre {
-        position: absolute;
-        bottom: 6%;
-        right: 20%;
-        width: 58%;
-        height: 15%;
-        border-radius: 12px;
-        background: #0d4e88;
-        color: #f3f3f3;
-      }
+  @media (width: 1024px) {
+    .containerPreViaje {
+      margin-top: 40px;
     }
+  }
 
-    @media (min-width: 768px) and (max-width: 1023px) {
-      .btnStyleBannerPre {
-        display: none;
-      }
+  /* Warning Price */
+  .main__warningPrice {
+    max-width: 590px;
+    min-height: 60px;
+    background: #eaf4fc;
+    border: 1px solid #0d4e88;
+    border-radius: 8px;
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+  }
 
-      .btnStyleBannerPre {
-        bottom: 23px;
-        right: 51px;
-        width: 59%;
-        height: 13%;
-        border-radius: 12px;
-        background: #0d4e88;
-        color: #f3f3f3;
-        padding: 3px 0 0 0;
-      }
-    }
+  .main__warningPrice > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 144%;
+    color: #000000;
+    max-width: 524px;
+    min-height: 32px;
+    margin: 0 !important;
+  }
 
-    @media (width: 1024px) {
-      .containerPreViaje {
-        margin-top: 40px;
-      }
-    }
+  .glyphicon-info-circle {
+    color: #2196f3;
+    font-size: 19px;
+    min-width: 32px;
+  }
 
-    /* Warning Price */
-    .main__warningPrice {
-      max-width: 590px;
-      min-height: 60px;
-      background: #eaf4fc;
-      border: 1px solid #0d4e88;
-      border-radius: 8px;
-      padding: 6px 16px;
-      display: flex;
-      align-items: center;
-    }
+  /* EVENTS ICOS */
+  .eventImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 14px;
+    top: 12px;
+    background: #a3a3a3;
+    border-radius: 64%;
+    text-align: center;
+    overflow: hidden;
+  }
 
-    .main__warningPrice>p {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 11px;
-      line-height: 144%;
-      color: #000000;
-      max-width: 524px;
-      min-height: 32px;
-      margin: 0 !important;
-    }
-
-    .glyphicon-info-circle {
-      color: #2196f3;
-      font-size: 19px;
-      min-width: 32px;
-    }
-
-    /* EVENTS ICOS */
+  @media (max-width: 767px) {
     .eventImg {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      width: 48px;
-      height: 48px;
-      left: 14px;
-      top: 12px;
-      background: #a3a3a3;
-      border-radius: 64%;
-      text-align: center;
-      overflow: hidden;
+      width: 38px;
+      height: 38px;
+    }
+    .b24-form-field {
+      margin-bottom: 0px;
     }
 
-    @media (max-width: 767px) {
-      .eventImg {
-        width: 38px;
-        height: 38px;
-      }
+    .b24-form-btn {
+      min-height: 37px;
+      padding: 0;
     }
+
+    .b24-form-control-text .b24-form-control {
+      height: 72px;
+    }
+  }
 </style>
 <div class="container__" id="root"></div>
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.js"></script>
-<script type="text/babel" src="https://multitravelcom.github.io/style/Estaticas/argetina_test.js"></script>
+<script
+  type="text/babel"
+  src="https://multitravelcom.github.io/style/Estaticas/argentina_satelite.js"
+></script>
 <script id="mcjs">
   !(function (c, h, i, m, p) {
     (m = c.createElement(h)),

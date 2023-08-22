@@ -253,11 +253,15 @@ const BannerTop = () => {
 function Button(props) {
     const handleClick = (event) => {
         event.preventDefault();
+<<<<<<< HEAD
 
         if (window.innerWidth <= 767) {
             // Llamar a un número en dispositivos móviles
             window.location.href = 'tel:08003480003';
         }
+=======
+        props.onClick();
+>>>>>>> 1bafd86ab563889021d42b54b735a74970758296
     };
 
     return (
@@ -265,6 +269,63 @@ function Button(props) {
     );
 }
 
+<<<<<<< HEAD
+=======
+// FormBitrix
+const BitrixFormComponent = ({ isVisible }) => {
+    const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
+
+    React.useEffect(() => {
+        if (isVisible && !isScriptLoaded) {
+            const script = document.createElement("script");
+            script.async = true;
+            script.src = "https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js";
+            script.setAttribute("data-b24-form", "inline/56/aj4a4r");
+            script.setAttribute("data-skip-moving", "true");
+            document.getElementById("bitrix-form-container").appendChild(script);
+
+            setIsScriptLoaded(true);
+        } else if (!isVisible && isScriptLoaded) {
+            const scriptElement = document.querySelector('script[data-b24-form="inline/56/aj4a4r"]');
+            if (scriptElement) {
+                scriptElement.remove();
+            }
+
+            setIsScriptLoaded(false);
+        }
+    }, [isVisible, isScriptLoaded]);
+
+    return <div id="bitrix-form-container" />;
+};
+const ButtonBitrixForm = () => {
+    const isMobile = window.innerWidth < 454;
+
+    const handleCallButtonClick = (event) => {
+        event.preventDefault();
+        if (isMobile) {
+            window.location.href = 'tel:08003480003';
+        }
+    };
+
+    return isMobile ? (
+        <div className="bitrixFormTitle-button">
+            <button onClick={handleCallButtonClick} className="style__btn__britrix">Llamar</button>
+        </div>
+    ) : null;
+}
+const BitrixFormTitle = () => {
+    return (
+        <div className="BitrixFormTitle">
+            <div className="bitrixFormTitle_text">
+                <p>Completa tus datos para que te contacte un especialistas en viajes, o llamanos</p>
+                <spam>Lun a Vie 10 a 20 Hs | Sab 10 a 15 Hs </spam>
+            </div>
+            <ButtonBitrixForm />
+        </div>
+    )
+}
+
+>>>>>>> 1bafd86ab563889021d42b54b735a74970758296
 function mostrarSeccion() {
     let url = window.location.href; // Obtener la URL completa
     let hash = url.substring(url.indexOf("#") + 1); // Obtener el ancla de la URL
@@ -501,6 +562,26 @@ function App() {
 
     }, []);
 
+<<<<<<< HEAD
+=======
+    const handleOpenForm = (formId) => {
+
+        setSelectedFormId(formId);
+        setIsFormVisible(true);
+
+        console.log("isFormVisible:", isFormVisible);
+    };
+
+    const handleCloseForm = () => {
+        setSelectedFormId(null);
+        setIsFormVisible(false);
+    };
+
+    React.useEffect(() => {
+        console.log("isFormVisible:", isFormVisible);
+    }, [isFormVisible]);
+
+>>>>>>> 1bafd86ab563889021d42b54b735a74970758296
     return (
         <>
             {loaded ? (
@@ -518,6 +599,20 @@ function App() {
                             <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
                         </div>
                     </div>
+<<<<<<< HEAD
+=======
+                    {isFormVisible && (
+                        <div className="modalBitrix">
+                            <div className="modal-content-Bitrix">
+                                <span className="close-button" onClick={handleCloseForm}>
+                                    &times;
+                                </span>
+                                <BitrixFormTitle />
+                                <BitrixFormComponent isVisible={isFormVisible} formId={selectedFormId} />
+                            </div>
+                        </div>
+                    )}
+>>>>>>> 1bafd86ab563889021d42b54b735a74970758296
                 </>
             ) : (
                 <Loader />
