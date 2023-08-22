@@ -20,6 +20,7 @@ function verificarYActualizarMeta() {
         let head = document.querySelector("head");
         head.appendChild(metaTag);
     }
+    console.log("La etiqueta meta ha sido verificada o actualizada correctamente.");
 }
 verificarYActualizarMeta();
 
@@ -72,7 +73,7 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
         title: "Hotel Kenton Palace Bariloche",
-        price: "$39.080",
+        price: "$39.080 ",
         events: "si"
     },
     {
@@ -252,56 +253,16 @@ const BannerTop = () => {
 function Button(props) {
     const handleClick = (event) => {
         event.preventDefault();
-        props.onClick();
-        // if (window.innerWidth <= 767) {
-        //     // Llamar a un número en dispositivos móviles
-        //     window.location.href = 'tel:08003480003';
-        // }
+
+        if (window.innerWidth <= 767) {
+            // Llamar a un número en dispositivos móviles
+            window.location.href = 'tel:08003480003';
+        }
     };
 
     return (
         <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
     );
-}
-
-// FormBitrix
-const BitrixFormComponent = ({ isVisible }) => {
-    const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
-
-    React.useEffect(() => {
-        if (isVisible && !isScriptLoaded) {
-            const script = document.createElement("script");
-            script.async = true;
-            script.src = "https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js";
-            script.setAttribute("data-b24-form", "inline/56/aj4a4r");
-            script.setAttribute("data-skip-moving", "true");
-            document.getElementById("bitrix-form-container").appendChild(script);
-
-            setIsScriptLoaded(true);
-        } else if (!isVisible && isScriptLoaded) {
-            const scriptElement = document.querySelector('script[data-b24-form="inline/56/aj4a4r"]');
-            if (scriptElement) {
-                scriptElement.remove();
-            }
-
-            setIsScriptLoaded(false);
-        }
-    }, [isVisible, isScriptLoaded]);
-
-    return <div id="bitrix-form-container" />;
-};
-const BitrixFormTitle = () => {
-    return (
-        <div className="BitrixFormTitle">
-            <div className="bitrixFormTitle_text">
-                <p>Completa tus datos para que te contacte un especialistas en viajes, o llamanos</p>
-                <spam>Lun a Vie 10 a 20 Hs | Sab 10 a 15 Hs </spam>
-            </div>
-            <div className="bitrixFormTitle-button">
-                <Button text="LLAMAR" className="btn_from_bitrix"/>
-            </div>
-        </div>
-    )
 }
 
 function mostrarSeccion() {
@@ -361,7 +322,7 @@ const WarningPrice = () => {
     )
 }
 
-const Card = ({ destinos, onContactClick }) => {
+const Card = ({ destinos }) => {
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
@@ -377,12 +338,12 @@ const Card = ({ destinos, onContactClick }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="priceStyle">{destino.price}</div>
-                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={() => onContactClick(destino.id)} />
+                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" />
                 </div>
             </div>
         )));
 };
-const CardContainer = ({ btnStyles, destinos, onContactClick }) => {
+const CardContainer = ({ btnStyles, destinos }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
     React.useEffect(() => {
@@ -453,7 +414,7 @@ const CardContainer = ({ btnStyles, destinos, onContactClick }) => {
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div className={carrusel} id={destinos.title}>
-                        <Card destinos={destinos} onContactClick={onContactClick} />
+                        <Card destinos={destinos} />
                     </div>
                     <button
                         aria-label="Siguiente"
@@ -520,9 +481,6 @@ const BannerTopPreViaje = () => {
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [ocultarComponente, setOcultarComponente] = React.useState(true);
-    const [selectedFormId, setSelectedFormId] = React.useState(false);
-    const [isFormVisible, setIsFormVisible] = React.useState(false);
-
 
     React.useEffect(() => {
         setTimeout(() => {
@@ -543,24 +501,6 @@ function App() {
 
     }, []);
 
-    const handleOpenForm = (formId) => {
-        console.log("handleOpenForm called with formId:", formId);
-
-        setSelectedFormId(formId);
-        setIsFormVisible(true);
-
-        console.log("isFormVisible:", isFormVisible);
-    };
-
-    const handleCloseForm = () => {
-        setSelectedFormId(null);
-        setIsFormVisible(false);
-    };
-
-    React.useEffect(() => {
-        console.log("isFormVisible:", isFormVisible);
-    }, [isFormVisible]);
-
     return (
         <>
             {loaded ? (
@@ -570,25 +510,14 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
                             {!ocultarComponente ? null : (<BannerTopPreViaje />)}
                             <WarningPrice />
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} />
                             <WarningPrice />
-                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
                         </div>
                     </div>
-                    {isFormVisible && (
-                        <div className="modalBitrix">
-                            <div className="modal-content-Bitrix">
-                                <span className="close-button" onClick={handleCloseForm}>
-                                    &times;
-                                </span>
-                                <BitrixFormTitle/>
-                                <BitrixFormComponent isVisible={isFormVisible} formId={selectedFormId} />
-                            </div>
-                        </div>
-                    )}
                 </>
             ) : (
                 <Loader />
