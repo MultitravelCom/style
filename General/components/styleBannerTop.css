@@ -110,6 +110,10 @@
 }
 
 /* ****************** CUPONERA ************* */
+.main__container__CuponeraBannerTop{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, auto);
