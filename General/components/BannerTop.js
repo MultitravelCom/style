@@ -37,7 +37,6 @@ function scrollAncla(event) {
 const CardCuponButton = ({ textToCopy }) => {
     const handleCopyClick = (event) => {
         event.preventDefault();
-
         const textarea = document.createElement('textarea');
         textarea.value = textToCopy;
         document.body.appendChild(textarea);
