@@ -184,19 +184,18 @@
   display: inline-flex;
   padding: 4px 10px;
   justify-content: center;
-  align-items: center;
   gap: 10px;
   border-radius: 20px;
   background: #FDCE07;
-  right: 20px;
-  bottom: -5px;
+  right: 10px;
+  bottom: -15px;
 }
 
 .main_ToolTipButton>p {
   color: #6E37D0;
   font-size: 12px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 18px;
   letter-spacing: -0.12px;
 }
