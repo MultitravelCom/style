@@ -110,10 +110,11 @@
 }
 
 /* ****************** CUPONERA ************* */
-.main__container__CuponeraBannerTop{
+.main__container__CuponeraBannerTop {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -168,5 +169,12 @@
 
   #bannerTop__center>.btnStyleBannerPre {
     display: inline;
+  }
+
+  /* Cuponera */
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    text-align: center;
   }
 }
