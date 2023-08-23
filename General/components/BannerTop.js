@@ -68,7 +68,7 @@ const BannerTop = () => {
 
     return (
         <>
-            <div className="main__container__CuponeraBannerTop" style={{ display: 'none' }}>
+            <div className="container-fluid main__container__CuponeraBannerTop" style={{ display: 'none' }}>
                 <Cuponera />
             </div>
             <div className="container-fluid main__container__bannerTop scroll-mobile">
