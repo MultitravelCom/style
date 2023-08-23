@@ -36,7 +36,7 @@ function scrollAncla(event) {
 // ************* CUPONERA *****************************
 const ToolTipButton = () => {
     return (
-        <div className="main_ToolTipButton">
+        <div className={`main_ToolTipButton ${visible ? 'visible' : ''}`}>
             <p>Copiado</p>
         </div>
     )
@@ -62,9 +62,9 @@ const CardCuponButton = ({ textToCopy }) => {
 
         document.body.removeChild(textarea);
 
-        // setTimeout(() => {
-        //     setShowTooltip(false);
-        // }, 2000);
+        setTimeout(() => {
+            setShowTooltip(false);
+        }, 2000);
     };
 
     return (
@@ -83,7 +83,7 @@ const CardCuponButton = ({ textToCopy }) => {
                     <path d="M14.6665 5.33337H12.6665C11.1665 5.33337 10.6665 4.83337 10.6665 3.33337V1.33337L14.6665 5.33337Z" stroke="#0D4E88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </div>
-            {showTooltip && <ToolTipButton />}
+            {visible = { showTooltip }}
         </button>
     )
 }

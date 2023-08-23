@@ -189,6 +189,12 @@
   background: #FDCE07;
   right: 10px;
   bottom: -15px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.main_ToolTipButton.visible {
+  opacity: 1;
 }
 
 .main_ToolTipButton>p {
