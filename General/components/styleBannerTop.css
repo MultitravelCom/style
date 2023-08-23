@@ -113,7 +113,10 @@
 .main__container__CuponeraBannerTop {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
   gap: 10px;
+  justify-items: center;
+  align-items: center;
 }
 
 .main_cardCupon {
