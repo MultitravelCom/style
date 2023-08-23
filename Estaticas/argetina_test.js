@@ -253,15 +253,7 @@ const BannerTop = () => {
 function Button(props) {
     const handleClick = (event) => {
         event.preventDefault();
-<<<<<<< HEAD
-
-        if (window.innerWidth <= 767) {
-            // Llamar a un número en dispositivos móviles
-            window.location.href = 'tel:08003480003';
-        }
-=======
         props.onClick();
->>>>>>> 1bafd86ab563889021d42b54b735a74970758296
     };
 
     return (
@@ -269,8 +261,6 @@ function Button(props) {
     );
 }
 
-<<<<<<< HEAD
-=======
 // FormBitrix
 const BitrixFormComponent = ({ isVisible }) => {
     const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
@@ -325,7 +315,6 @@ const BitrixFormTitle = () => {
     )
 }
 
->>>>>>> 1bafd86ab563889021d42b54b735a74970758296
 function mostrarSeccion() {
     let url = window.location.href; // Obtener la URL completa
     let hash = url.substring(url.indexOf("#") + 1); // Obtener el ancla de la URL
@@ -562,8 +551,6 @@ function App() {
 
     }, []);
 
-<<<<<<< HEAD
-=======
     const handleOpenForm = (formId) => {
 
         setSelectedFormId(formId);
@@ -581,7 +568,6 @@ function App() {
         console.log("isFormVisible:", isFormVisible);
     }, [isFormVisible]);
 
->>>>>>> 1bafd86ab563889021d42b54b735a74970758296
     return (
         <>
             {loaded ? (
@@ -599,8 +585,6 @@ function App() {
                             <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
                         </div>
                     </div>
-<<<<<<< HEAD
-=======
                     {isFormVisible && (
                         <div className="modalBitrix">
                             <div className="modal-content-Bitrix">
@@ -612,7 +596,6 @@ function App() {
                             </div>
                         </div>
                     )}
->>>>>>> 1bafd86ab563889021d42b54b735a74970758296
                 </>
             ) : (
                 <Loader />
