@@ -111,8 +111,12 @@
 
 /* ****************** CUPONERA ************* */
 .main__container__CuponeraBannerTop {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px; /* Ancho máximo del contenedor principal */
+  margin: 0 auto; /* Centrar el contenedor horizontalmente */
+  padding: 10px; /* Agregar un poco de espacio alrededor del contenedor */
 }
 
 .grid-container {
@@ -125,12 +129,10 @@
 }
 
 .main_cardCupon {
-  width: 366px;
-  /* Ancho máximo para desktop */
-  max-width: 100%;
-  /* Ancho máximo igual al ancho del contenedor */
-  height: 168px;
-  flex-shrink: 0;
+  flex: 0 0 calc(33.33% - 10px); /* 33.33% de ancho para cada item y espacio entre ellos */
+  max-width: 366px; /* Ancho máximo de cada grid-item */
+  margin: 5px; /* Espacio entre los items */
+  height: auto; /* Altura automática */
   border-radius: 16px;
   border: 1px solid #DEDEDE;
   background: #B9FFD5;
