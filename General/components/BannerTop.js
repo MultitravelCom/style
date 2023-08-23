@@ -34,6 +34,29 @@ function scrollAncla(event) {
     }
 }
 
+const CardCupon = () => {
+    return (
+        <>
+            <div className="main_cardCupon">
+
+            </div>
+        </>
+    )
+}
+
+const Cuponera = () => {
+    return (
+        <>
+            <CardCupon />
+            <CardCupon />
+            <CardCupon />
+            <CardCupon />
+            <CardCupon />
+            <CardCupon />
+        </>
+    )
+}
+
 const BannerTop = () => {
 
     const showPackageImages = window.location.pathname.includes('/packages');
@@ -43,6 +66,9 @@ const BannerTop = () => {
 
     return (
         <>
+            <div className="main__container__CuponeraBannerTop" style={{ display: 'none' }}>
+                <Cuponera />
+            </div>
             <div className="container-fluid main__container__bannerTop scroll-mobile">
                 <div id="bannerTop__left" className="main__container_left">
                     {isMobile ? (
