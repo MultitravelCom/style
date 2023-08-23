@@ -62,9 +62,9 @@ const CardCuponButton = ({ textToCopy }) => {
 
         document.body.removeChild(textarea);
 
-        setTimeout(() => {
-            setShowTooltip(false);
-        }, 2000);
+        // setTimeout(() => {
+        //     setShowTooltip(false);
+        // }, 2000);
     };
 
     return (
