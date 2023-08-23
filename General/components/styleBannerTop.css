@@ -114,9 +114,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px; /* Ancho máximo del contenedor principal */
-  margin: 0 auto; /* Centrar el contenedor horizontalmente */
-  padding: 10px; /* Agregar un poco de espacio alrededor del contenedor */
+  max-width: 1200px;
+  /* Ancho máximo del contenedor principal */
+  margin: 0 auto;
+  /* Centrar el contenedor horizontalmente */
+  padding: 10px;
+  /* Agregar un poco de espacio alrededor del contenedor */
 }
 
 .grid-container {
@@ -138,6 +141,20 @@
   background: #B9FFD5;
 }
 
+.cardCuponButtonStyle {
+  display: inline-flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  background: #FFF;
+  color: #0D4E88;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+
 /*  */
 @media (min-width: 768px) and (max-width: 1023px) {
   .btnStyleBannerPre {
@@ -150,10 +167,11 @@
     color: #F3F3F3;
     padding: 3px 0 0 0;
   }
+
   .grid-container {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
-}
+  }
 }
 
 @media (max-width: 767px) {
@@ -182,8 +200,9 @@
 
   /* Cuponera */
   .main__container__CuponeraBannerTop {
-   flex-direction: column;
+    flex-direction: column;
   }
+
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
