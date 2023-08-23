@@ -141,6 +141,9 @@
   border: 1px solid #DEDEDE;
   background: #B9FFD5;
 }
+.main_cardCupon_CuponCode{
+  position: absolute;
+}
 
 .cardCuponButtonStyle {
   position: absolute;
@@ -155,6 +158,20 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
+  bottom: 16px;
+  right: 20px;
+  border: 0;
+}
+
+.cardCuponButtonStyle:hover {
+  background: #FDCE07;
+  color: #0D4E88;
+}
+
+.cardCuponButtonStyle::selection {
+  border: 2px solid #FFF;
+  background: #6E37D0;
+  color: white;
 }
 
 /*  */

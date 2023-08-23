@@ -35,8 +35,16 @@ function scrollAncla(event) {
 }
 // ************* CUPONERA *****************************
 const CardCuponButton = () => {
+    const handleClick = (event) => {
+        event.preventDefault(); 
+        console.log('Botón de copiar fue clickeado');
+    };
+
     return (
-        <button className="cardCuponButtonStyle">
+        <button className="cardCuponButtonStyle" onClick={handleClick}>
+            <div className="cardCuponButtonStyle__copy">
+                Copiar
+            </div>
             <div className="cardCuponButtonStyle__svg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M11.3335 8.93329V10.9333C11.3335 13.6 10.2668 14.6666 7.60016 14.6666H5.06683C2.40016 14.6666 1.3335 13.6 1.3335 10.9333V8.39996C1.3335 5.73329 2.40016 4.66663 5.06683 4.66663H7.06683" stroke="#0D4E88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -47,9 +55,6 @@ const CardCuponButton = () => {
                     <path d="M14.6665 5.33337H12.6665C11.1665 5.33337 10.6665 4.83337 10.6665 3.33337V1.33337L14.6665 5.33337Z" stroke="#0D4E88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </div>
-            <div className="cardCuponButtonStyle__copy">
-                Copiar
-            </div>
         </button>
     )
 }
@@ -57,6 +62,7 @@ const CardCupon = () => {
     return (
         <>
             <div className="main_cardCupon">
+                <h2 className="main_cardCupon_CuponCode">TRAVELARGENTINA</h2>
                 <CardCuponButton />
             </div>
         </>
