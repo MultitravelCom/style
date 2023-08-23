@@ -34,7 +34,7 @@ function scrollAncla(event) {
     }
 }
 // ************* CUPONERA *****************************
-const ToolTipButton = () => {
+const ToolTipButton = ({ visible }) => {
     return (
         <div className={`main_ToolTipButton ${visible ? 'visible' : ''}`}>
             <p>Copiado</p>
