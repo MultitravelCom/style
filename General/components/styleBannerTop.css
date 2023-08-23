@@ -186,6 +186,8 @@
   gap: 10px;
   border-radius: 20px;
   background: #FDCE07;
+  right: 20px;
+  bottom: -5px;
 }
 
 .main_ToolTipButton>p {
