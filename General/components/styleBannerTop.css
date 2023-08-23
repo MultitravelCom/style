@@ -190,11 +190,13 @@
   right: 10px;
   bottom: -15px;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .main_ToolTipButton.visible {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .main_ToolTipButton>p {
