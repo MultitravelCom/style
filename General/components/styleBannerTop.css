@@ -171,7 +171,7 @@
   color: #0D4E88;
 }
 
-.cardCuponButtonStyle::selection {
+.cardCuponButtonStyle:active {
   border: 2px solid #FFF;
   background: #6E37D0;
   color: white;
