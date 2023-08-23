@@ -52,9 +52,8 @@ const CardCuponButton = ({ textToCopy }) => {
         textarea.select();
 
         try {
-            // Intentar copiar el contenido al portapapeles
             document.execCommand('copy');
-            setShowTooltip(true); // Mostrar el mensaje de copiado
+            setShowTooltip(true); 
             console.log('Texto copiado al portapapeles:', textToCopy);
         } catch (error) {
             console.error('Error al copiar el texto:', error);
