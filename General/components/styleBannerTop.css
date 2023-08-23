@@ -111,8 +111,9 @@
 
 /* ****************** CUPONERA ************* */
 .main__container__CuponeraBannerTop {
-  display: flex;
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
 .main_cardCupon {
