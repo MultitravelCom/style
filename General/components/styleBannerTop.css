@@ -126,6 +126,9 @@
 
 .main_cardCupon {
   width: 366px;
+  /* Ancho máximo para desktop */
+  max-width: 100%;
+  /* Ancho máximo igual al ancho del contenedor */
   height: 168px;
   flex-shrink: 0;
   border-radius: 16px;
@@ -176,5 +179,10 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
     text-align: center;
+  }
+
+  .main_cardCupon {
+    width: 100%;
+    max-width: none;
   }
 }
