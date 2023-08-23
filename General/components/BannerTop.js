@@ -35,7 +35,9 @@ function scrollAncla(event) {
 }
 // ************* CUPONERA *****************************
 const CardCuponButton = ({ textToCopy }) => {
-    const handleCopyClick = () => {
+    const handleCopyClick = (event) => {
+        event.preventDefault();
+
         const textarea = document.createElement('textarea');
         textarea.value = textToCopy;
         document.body.appendChild(textarea);
