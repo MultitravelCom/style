@@ -38,7 +38,7 @@ const CardCupon = () => {
     return (
         <>
             <div className="main_cardCupon">
-                
+
             </div>
         </>
     )
@@ -47,12 +47,14 @@ const CardCupon = () => {
 const Cuponera = () => {
     return (
         <>
-            <CardCupon />
-            <CardCupon />
-            <CardCupon />
-            <CardCupon />
-            <CardCupon />
-            <CardCupon />
+            <div className="grid-container">
+                <CardCupon />
+                <CardCupon />
+                <CardCupon />
+                <CardCupon />
+                <CardCupon />
+                <CardCupon />
+            </div>
         </>
     )
 }
