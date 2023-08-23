@@ -42,7 +42,7 @@ const ToolTipButton = () => {
     )
 }
 const CardCuponButton = ({ textToCopy }) => {
-    const [showTooltip, setShowTooltip] = useState(false);
+    const [showTooltip, setShowTooltip] = React.useState(false);
 
     const handleCopyClick = (event) => {
         event.preventDefault();
