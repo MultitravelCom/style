@@ -129,10 +129,10 @@
 }
 
 .main_cardCupon {
-  flex: 0 0 calc(33.33% - 10px); /* 33.33% de ancho para cada item y espacio entre ellos */
-  max-width: 366px; /* Ancho máximo de cada grid-item */
-  margin: 5px; /* Espacio entre los items */
-  height: auto; /* Altura automática */
+  width: 366px;
+  max-width: 100%;
+  height: 168px;
+  flex-shrink: 0;
   border-radius: 16px;
   border: 1px solid #DEDEDE;
   background: #B9FFD5;
