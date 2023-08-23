@@ -141,8 +141,11 @@
   border: 1px solid #DEDEDE;
   background: #B9FFD5;
 }
-.main_cardCupon_CuponCode{
+
+.main_cardCupon_CuponCode {
   position: absolute;
+  bottom: 16px;
+  left: 16px;
 }
 
 .cardCuponButtonStyle {
