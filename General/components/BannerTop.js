@@ -34,7 +34,16 @@ function scrollAncla(event) {
     }
 }
 // ************* CUPONERA *****************************
+const ToolTipButton = () => {
+    return (
+        <div className="main_ToolTipButton">
+            <p>Copiado</p>
+        </div>
+    )
+}
 const CardCuponButton = ({ textToCopy }) => {
+    const [showTooltip, setShowTooltip] = useState(false);
+
     const handleCopyClick = (event) => {
         event.preventDefault();
         const textarea = document.createElement('textarea');
@@ -45,12 +54,17 @@ const CardCuponButton = ({ textToCopy }) => {
         try {
             // Intentar copiar el contenido al portapapeles
             document.execCommand('copy');
+            setShowTooltip(true); // Mostrar el mensaje de copiado
             console.log('Texto copiado al portapapeles:', textToCopy);
         } catch (error) {
             console.error('Error al copiar el texto:', error);
         }
 
         document.body.removeChild(textarea);
+
+        setTimeout(() => {
+            setShowTooltip(false);
+        }, 2000);
     };
 
     return (
