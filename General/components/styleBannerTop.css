@@ -150,6 +150,10 @@
     color: #F3F3F3;
     padding: 3px 0 0 0;
   }
+  .grid-container {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+}
 }
 
 @media (max-width: 767px) {
