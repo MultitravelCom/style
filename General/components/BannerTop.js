@@ -33,7 +33,12 @@ function scrollAncla(event) {
         });
     }
 }
-
+// ************* CUPONERA *****************************
+const CardCuponButton = () =>{
+    return(
+        <button className="cardCuponButtonStyle"></button>
+    )
+}
 const CardCupon = () => {
     return (
         <>
