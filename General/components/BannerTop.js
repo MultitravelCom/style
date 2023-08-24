@@ -33,13 +33,6 @@ function scrollAncla(event) {
         });
     }
 }
-// ************* FETCH ********************************
-const getCouponsFetch = async () => {
-    const res = await fetch('https://raw.githubusercontent.com/MultitravelCom/components/master/MULT205/cuponesDB.json');
-    const data = res.json();
-    console.log(data)
-    return data;
-}
 // ************* CUPONERA *****************************
 const ToolTipButton = ({ visible }) => {
     return (
@@ -50,6 +43,7 @@ const ToolTipButton = ({ visible }) => {
 }
 const CardCuponButton = ({ textToCopy }) => {
     const [showTooltip, setShowTooltip] = React.useState(false);
+
 
     const handleCopyClick = (event) => {
         event.preventDefault();
@@ -94,13 +88,32 @@ const CardCuponButton = ({ textToCopy }) => {
     )
 }
 const CardCupon = () => {
-    const cuponCode = "TRAVELARGENTINA";
+
+    const getCouponsFetch = async () => {
+        const res = await fetch('https://raw.githubusercontent.com/MultitravelCom/components/master/MULT205/cuponesDB.json');
+        const data = res.json();
+        console.log(data)
+        return data;
+    }
+
+    React.useEffect(() => {
+        const fetchData = async () => {
+            const couponsData = await getCouponsFetch();
+            setCoupons(couponsData);
+        };
+        fetchData();
+    }, []);
+
     return (
         <>
-            <div className="main_cardCupon">
-                <h2 className="main_cardCupon_CuponCode">{cuponCode}</h2>
-                <CardCuponButton textToCopy={cuponCode} />
-            </div>
+            {
+                couponsData.map(({ id, cupon }) => {
+                    <div className="main_cardCupon" key={id}>
+                        <h2 className="main_cardCupon_CuponCode">{cupon}</h2>
+                        <CardCuponButton textToCopy={cuponCode} />
+                    </div>
+                })
+            }
         </>
     )
 }
