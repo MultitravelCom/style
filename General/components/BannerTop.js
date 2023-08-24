@@ -123,11 +123,6 @@ const Cuponera = () => {
         <>
             <div className="grid-container">
                 <CardCupon />
-                <CardCupon />
-                <CardCupon />
-                <CardCupon />
-                <CardCupon />
-                <CardCupon />
             </div>
         </>
     )
