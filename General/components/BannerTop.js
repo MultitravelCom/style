@@ -136,9 +136,11 @@ const BannerTop = () => {
 
     return (
         <>
-            <div className="container main__container__CuponeraBannerTop" style={{ display: 'none' }}>
-                <Cuponera />
-            </div>
+            {showPackageImages && (
+                <div className="container main__container__CuponeraBannerTop">
+                    <Cuponera />
+                </div>
+            )}
             <div className="container-fluid main__container__bannerTop scroll-mobile">
                 <div id="bannerTop__left" className="main__container_left">
                     {isMobile ? (
