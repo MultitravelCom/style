@@ -94,7 +94,7 @@ const CardCupon = () => {
         const res = await fetch('https://raw.githubusercontent.com/MultitravelCom/components/master/MULT205/cuponesDB.json');
         const data = res.json();
         console.log(data)
-        return data;
+        return data.cupones;
     }
 
     React.useEffect(() => {
@@ -111,7 +111,7 @@ const CardCupon = () => {
                 couponsData.map(({ id, cupon }) => {
                     <div className="main_cardCupon" key={id}>
                         <h2 className="main_cardCupon_CuponCode">{cupon}</h2>
-                        <CardCuponButton textToCopy={cuponCode} />
+                        <CardCuponButton textToCopy={cupon} />
                     </div>
                 })
             }
