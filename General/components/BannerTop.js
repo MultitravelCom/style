@@ -137,7 +137,7 @@ const BannerTop = () => {
     return (
         <>
             {showPackageImages && (
-                <div className="container main__container__CuponeraBannerTop">
+                <div className="container main__container__CuponeraBannerTop" style={{ display: 'none' }}>
                     <Cuponera />
                 </div>
             )}
