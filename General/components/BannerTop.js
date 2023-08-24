@@ -44,7 +44,6 @@ const ToolTipButton = ({ visible }) => {
 const CardCuponButton = ({ textToCopy }) => {
     const [showTooltip, setShowTooltip] = React.useState(false);
 
-
     const handleCopyClick = (event) => {
         event.preventDefault();
         const textarea = document.createElement('textarea');
@@ -108,12 +107,12 @@ const CardCupon = () => {
     return (
         <>
             {
-                couponsData.map(({ id, cupon }) => {
+                couponsData.map(({ id, cupon }) => (
                     <div className="main_cardCupon" key={id}>
                         <h2 className="main_cardCupon_CuponCode">{cupon}</h2>
                         <CardCuponButton textToCopy={cupon} />
                     </div>
-                })
+                ))
             }
         </>
     )
