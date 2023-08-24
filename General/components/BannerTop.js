@@ -99,8 +99,8 @@ const CardCupon = () => {
 
     React.useEffect(() => {
         const fetchData = async () => {
-            const couponsData = await getCouponsFetch();
-            setCouponsData(couponsData);
+            const data = await getCouponsFetch();
+            setCouponsData(data);
         };
         fetchData();
     }, []);
