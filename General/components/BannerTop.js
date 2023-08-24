@@ -88,6 +88,7 @@ const CardCuponButton = ({ textToCopy }) => {
     )
 }
 const CardCupon = () => {
+    const [couponsData, setCouponsData] = useState([]);
 
     const getCouponsFetch = async () => {
         const res = await fetch('https://raw.githubusercontent.com/MultitravelCom/components/master/MULT205/cuponesDB.json');
@@ -99,7 +100,7 @@ const CardCupon = () => {
     React.useEffect(() => {
         const fetchData = async () => {
             const couponsData = await getCouponsFetch();
-            setCoupons(couponsData);
+            setCouponsData(couponsData);
         };
         fetchData();
     }, []);
