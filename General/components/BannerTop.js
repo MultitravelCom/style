@@ -92,7 +92,7 @@ const CardCupon = () => {
 
     const getCouponsFetch = async () => {
         const res = await fetch('https://raw.githubusercontent.com/MultitravelCom/components/master/MULT205/cuponesDB.json');
-        const data = res.json();
+        const data = await res.json();
         console.log(data)
         return data.cupones;
     }
