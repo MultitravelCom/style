@@ -129,13 +129,14 @@ const Cuponera = () => {
 const BannerTop = () => {
 
     const showPackageImages = window.location.pathname.includes('/packages');
+    const showHotelsCoupons = window.location.pathname.includes('/hotels');
     const UrlImg = cambiarUrlImg();
     const UrlImgPaquetes = "https://multitravelcom.github.io/MT/Secciones/BannerPrincipal";
     const isMobile = window.innerWidth <= 767;
 
     return (
         <>
-            {showPackageImages && (
+            {showHotelsCoupons && (
                 <div className="container main__container__CuponeraBannerTop" style={{ display: 'none' }}>
                     <Cuponera />
                 </div>
