@@ -33,6 +33,13 @@ function scrollAncla(event) {
         });
     }
 }
+// ************* FETCH ********************************
+const getCouponsFetch = async () => {
+    const res = await fetch('https://raw.githubusercontent.com/MultitravelCom/components/master/MULT205/cuponesDB.json');
+    const data = res.json();
+    console.log(data)
+    return data;
+}
 // ************* CUPONERA *****************************
 const ToolTipButton = ({ visible }) => {
     return (
@@ -53,7 +60,7 @@ const CardCuponButton = ({ textToCopy }) => {
 
         try {
             document.execCommand('copy');
-            setShowTooltip(true); 
+            setShowTooltip(true);
             console.log('Texto copiado al portapapeles:', textToCopy);
         } catch (error) {
             console.error('Error al copiar el texto:', error);
@@ -82,7 +89,7 @@ const CardCuponButton = ({ textToCopy }) => {
                     <path d="M14.6665 5.33337H12.6665C11.1665 5.33337 10.6665 4.83337 10.6665 3.33337V1.33337L14.6665 5.33337Z" stroke="#0D4E88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </div>
-            { <ToolTipButton visible={showTooltip}/>}
+            {<ToolTipButton visible={showTooltip} />}
         </button>
     )
 }
