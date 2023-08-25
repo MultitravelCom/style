@@ -34,6 +34,7 @@ const destinos1 = [
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
         price: "$121.860",
+        priceBaja: "",
         events: "si"
     },
     {
@@ -44,6 +45,7 @@ const destinos1 = [
         linkWa: "https://wa.link/s507zo",
         title: "Paquete a Bariloche",
         price: "$171.120",
+        priceBaja: "",
         events: "si"
     },
     {
@@ -54,6 +56,7 @@ const destinos1 = [
         linkWa: "https://wa.link/duchkz",
         title: "Paquete a Bariloche",
         price: "$213.100",
+        priceBaja: "",
         events: "No"
     },
     {
@@ -64,6 +67,7 @@ const destinos1 = [
         linkWa: "https://wa.link/2z5hpp",
         title: "Hotel Villa Sofia",
         price: "$35.375",
+        priceBaja: "",
         events: "si"
     },
     {
@@ -74,6 +78,7 @@ const destinos1 = [
         linkWa: "https://wa.link/dv0ucs",
         title: "Hotel Kenton Palace Bariloche",
         price: "$55.640",
+        priceBaja: "",
         events: "si"
     },
     {
@@ -84,6 +89,7 @@ const destinos1 = [
         linkWa: "https://wa.link/dv0ucs",
         title: "Hotel Design Suites Bariloche",
         price: "$75.135",
+        priceBaja: "",
         events: "si"
     },
 ];
@@ -96,6 +102,7 @@ const destinos2 = [
         linkWa: "https://wa.link/hxjkgq",
         title: "Paquete a Iguazú",
         price: "$138.910",
+        priceBaja: "",
         events: "si"
     },
     {
@@ -106,6 +113,7 @@ const destinos2 = [
         linkWa: "https://wa.link/2rmvhq",
         title: "Paquete a Iguazús",
         price: "$189.840",
+        priceBaja: "",
         events: "si"
     },
     {
@@ -116,6 +124,7 @@ const destinos2 = [
         linkWa: "https://wa.link/wbq74i",
         title: "Hotel Merit Iguazú",
         price: "$56.210",
+        priceBaja: "",
         events: "si"
     },
     {
@@ -126,6 +135,7 @@ const destinos2 = [
         linkWa: "https://wa.link/s6nxus",
         title: "Hotel Complejo Americano",
         price: "$38.100",
+        priceBaja: "",
         events: "si"
     },
     {
@@ -136,6 +146,7 @@ const destinos2 = [
         linkWa: "https://wa.link/37zsyv",
         title: "Hotel Tourbillon",
         price: "$41.830",
+        priceBaja: "",
         events: "No"
     },
     {
@@ -146,6 +157,7 @@ const destinos2 = [
         linkWa: "https://wa.link/37zsyv",
         title: "Hotel Iguazu Grand",
         price: "$139.820",
+        priceBaja: "",
         events: "No"
     },
 ];
@@ -158,6 +170,7 @@ const destinos3 = [
         linkWa: "https://wa.link/61efbi",
         title: "Paquete a Mendoza",
         price: "$144.335",
+        priceBaja: "",
         events: "si"
     },
     {
@@ -168,6 +181,7 @@ const destinos3 = [
         linkWa: "https://wa.link/sbfl7y",
         title: "Paquete a Mendoza",
         price: "$183.700",
+        priceBaja: "",
         events: "si"
     },
     {
@@ -178,6 +192,7 @@ const destinos3 = [
         linkWa: "https://wa.link/vs8baw",
         title: "Paquete a Mendoza",
         price: "$223.100",
+        priceBaja: "",
         events: "si"
     },
     {
@@ -188,6 +203,7 @@ const destinos3 = [
         linkWa: "https://wa.link/u8ym55",
         title: "Hotel Crillón",
         price: "$39.770",
+        priceBaja: "",
         events: "si"
     },
     {
@@ -198,6 +214,7 @@ const destinos3 = [
         linkWa: "https://wa.link/wz0152",
         title: "Hotel Cordón del Plata",
         price: "$29.110",
+        priceBaja: "",
         events: "si"
     },
     {
@@ -208,6 +225,7 @@ const destinos3 = [
         linkWa: "https://wa.link/wz0152",
         title: "Hotel Huentala",
         price: "$97.430",
+        priceBaja: "",
         events: "si"
     },
 ];
