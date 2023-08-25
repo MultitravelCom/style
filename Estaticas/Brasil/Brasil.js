@@ -518,9 +518,9 @@ function App() {
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Florianopolis} onContactClick={handleOpenForm}/>
-                            <WarningPrice />
+                        
                             <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Buzios} onContactClick={handleOpenForm}/>
-                            <WarningPrice />
+                            
                             <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={AllInclusive} onContactClick={handleOpenForm}/>
                         </div>
                     </div>
