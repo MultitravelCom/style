@@ -140,6 +140,7 @@
   border-radius: 16px;
   border: 1px solid #DEDEDE;
   background: #B9FFD5;
+  overflow: hidden;
 }
 
 .main_cardCupon_CuponCode {
