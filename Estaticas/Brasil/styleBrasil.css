@@ -443,12 +443,13 @@ source>img {
     display: none;
     border-radius: 16px;
     background: #6E37D0;
-    width: 1120px;
+    max-width: 1120px;
     height: 144px;
     flex-shrink: 0;
     /* display: flex; */
     align-items: center;
     margin: 40px auto;
+    overflow: hidden;
 }
 
 /* ---*-*-*-*-*-*-*-*-*-*- */
@@ -545,6 +546,12 @@ source>img {
     .carrusel__anterior,
     .carrusel__siguiente {
         display: none;
+    }
+
+    .main__container_BannerTravelSale {
+        min-width: 310px;
+        height: 264px;
+        margin: 20px 10px;
     }
 }
 

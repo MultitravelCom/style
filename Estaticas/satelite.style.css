@@ -126,18 +126,21 @@ source>img {
 .carrusel__elemento {
     margin: 10px;
 }
+
 /* BANNER TRAVEL SALE */
 .main__container_BannerTravelSale {
     display: none;
     border-radius: 16px;
     background: #6E37D0;
-    width: 1120px;
+    max-width: 1120px;
     height: 144px;
     flex-shrink: 0;
     /* display: flex; */
     align-items: center;
     margin: 40px auto;
+    overflow: hidden;
 }
+
 /* ---*-*-*-*-*-*-*-*-*-*- */
 
 /* MOBILE */
@@ -233,5 +236,12 @@ MEDIA QUERIES
 
     .main__conteiner__s1 {
         margin-bottom: 0;
+    }
+
+    /* BANNER TRAVEL SALE */
+    .main__container_BannerTravelSale {
+        min-width: 310px;
+        height: 264px;
+        margin: 20px 10px;
     }
 }
