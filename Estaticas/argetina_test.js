@@ -443,7 +443,7 @@ const Card = ({ destinos, onContactClick }) => {
                     </picture>
                     <div className="main_container_priceStyle">
                         <div className="priceStyle">{destino.price}</div>
-                        <div className="priceStyleBaja">{destino.priceBaja}</div>
+                        <div className="priceStyle">{destino.priceBaja}</div>
                     </div>
                     <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={() => onContactClick(destino.id)} />
                 </div>
