@@ -34,7 +34,7 @@ const destinos1 = [
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
         price: "$121.860",
-        priceBaja:"$121.860",
+        priceBaja: "$121.860",
         events: "si"
     },
     {
@@ -441,7 +441,10 @@ const Card = ({ destinos, onContactClick }) => {
                         <source media="(max-width: 767px)" srcSet={destino.img} />
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
-                    <div className="priceStyle">{destino.price}</div>
+                    <div className="main_container_priceStyle">
+                        <div className="priceStyle">{destino.price}</div>
+                        <div className="priceStyle">{destino.priceBaja}</div>
+                    </div>
                     <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={() => onContactClick(destino.id)} />
                 </div>
             </div>
@@ -637,9 +640,9 @@ function App() {
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} onContactClick={handleOpenForm} />
                             {!ocultarComponente ? null : (<BannerTopPreViaje />)}
-                          
+
                             <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} onContactClick={handleOpenForm} />
-                         
+
                             <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} onContactClick={handleOpenForm} />
                         </div>
                     </div>
