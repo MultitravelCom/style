@@ -29,12 +29,12 @@ const destinos1 = [
     {
         id: "a1",
         destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-a%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Test-DoblePrecio/test-doble.webp",
         className: "uno",
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
         price: "$121.860",
-        priceBaja: "",
+        priceBaja:"$121.860",
         events: "si"
     },
     {
