@@ -383,35 +383,24 @@ function mostrarSeccion() {
 mostrarSeccion();
 
 function shouldShowEvent() {
-    const startDate = new Date("2023-05-07T23:59:00");
-    const endDate = new Date("2023-05-10T23:59:00");
+    const startDate = new Date("2023-08-27T23:59:00");
+    const endDate = new Date("2023-09-02T23:59:00");
     const now = new Date();
 
     return now >= startDate && now <= endDate;
 }
 
 const EventImg = (props) => {
-    const { shouldShowEvent } = props;
-
-    if (!shouldShowEvent()) {
+    if (shouldShowEvent()) {
         return (
             <div className={props.style}>
                 <img
                     alt={`Imagen evento promocion`}
-                    src={"https://multitravelcom.github.io/MT/HotSale2023/iconCardsOff/iconHotWeek.webp"}
+                    src={"https://multitravelcom.github.io/components/MULT324/logotravelsale.svg"}
                 />
             </div>
         );
     }
-
-    return (
-        <div className={props.style}>
-            <img
-                alt={`Imagen evento promocion`}
-                src={"https://multitravelcom.github.io/MT/HotSale2023/iconCardsOff/logohotsale.webp"}
-            />
-        </div>
-    );
 };
 
 const WarningPrice = () => {
@@ -430,8 +419,9 @@ const Card = ({ destinos, onContactClick }) => {
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
-                    {destino.events === "no" && <EventImg style="eventImg" shouldShowEvent={shouldShowEvent} />}
-                    <picture>
+                {destino.events === "si" && shouldShowEvent() && (
+                                    <EventImg style="eventImg" />
+                                )}                    <picture>
                         <map name={destino.id}>
                             <area target="_blank" alt={destino.title} title={destino.title} href={destino.linkWa} coords={destino.coords} shape="rect" />
                         </map>
