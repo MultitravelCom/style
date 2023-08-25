@@ -129,13 +129,13 @@ const Cuponera = () => {
 }
 // **************TIMER***************
 const shouldShowCuponera = () => {
-    const startDate = new Date("2023-08-23T00:00:00");  // Fecha de inicio
-    const endDate = new Date("2023-08-26T23:59:59");    // Fecha de fin
+    const startDate = new Date("2023-08-27T23:59:00");
+    const endDate = new Date("2023-09-02T23:59:00");
     const now = new Date();
 
     return now >= startDate && now <= endDate;
 };
-// 
+// *********************************************
 const BannerTop = () => {
     const showPackageImages = window.location.pathname.includes('/packages');
     const showHotelsCoupons = window.location.pathname.includes('/hotels');
