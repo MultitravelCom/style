@@ -57,7 +57,7 @@ const destinos1 = [
         title: "Paquete a Bariloche",
         priceBaja: "$213.100",
         price: "$276.900",
-        events: "No"
+        events: "si"
     },
     {
         id: "a4",
@@ -147,7 +147,7 @@ const destinos2 = [
         title: "Hotel Tourbillon",
         priceBaja: "$41.830",
         price: "$55.700",
-        events: "No"
+        events: "si"
     },
     {
         id: "b6",
