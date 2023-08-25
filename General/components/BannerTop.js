@@ -128,7 +128,6 @@ const Cuponera = () => {
     )
 }
 const BannerTop = () => {
-
     const showPackageImages = window.location.pathname.includes('/packages');
     const showHotelsCoupons = window.location.pathname.includes('/hotels');
     const UrlImg = cambiarUrlImg();

@@ -230,24 +230,24 @@ const BannerTravelSale = () => {
                     <source
                         media="(min-width: 1024px)"
                         srcSet="
-            https://multitravelcom.github.io/MT/Evento/Caribe/Banner/banner-1.webp
+                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
           "
                     />
                     <source
                         media="(min-width: 768px) and (max-width: 1023px)"
                         srcSet="
-                    https://multitravelcom.github.io/MT/Evento/Caribe/Banner/banner-2.webp
+                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
                     "
                     />
                     <source
                         media="(max-width: 767px)"
                         srcSet="
-                    https://multitravelcom.github.io/MT/Evento/Caribe/Banner/banner-3.webp
+                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Mobile.webp
                     "
                     />
                     <img
                         className="main_conteiner__s1_medio__paquetes__img"
-                        src="            https://multitravelcom.github.io/MT/Evento/Caribe/Banner/banner-1.webp
+                        src="            https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
                     "
                         alt="Imagen banner promociones"
                     />
@@ -347,14 +347,11 @@ const Card = ({ destinos, onContactClick }) => {
                                         useMap={`#${destino.id}`}
                                     />
                                 </picture>
-                                <div className="priceStyle">{destino.price}</div>
-                                <Button
-                                    id={destino.title}
-                                    style="btn_Style_Venta_Per"
-                                    link={destino.linkWa}
-                                    text="Contactarme"
-                                    onClick={() => onContactClick(destino.id)}
-                                />
+                                <div className="main_container_priceStyle">
+                                    <div className="priceStyle left">{destino.price}</div>
+                                    <div className="priceStyle right">{destino.priceBaja}</div>
+                                </div>
+                                <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={() => onContactClick(destino.id)} />
                             </div>
                         </div>
                     ))
@@ -458,7 +455,7 @@ const CardContainer = ({ btnStyles, destinosFiltrados, onContactClick }) => {
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div className={carrusel} id={title}>
-                        <Card destinos={destinosFiltrados} onContactClick={onContactClick}/>
+                        <Card destinos={destinosFiltrados} onContactClick={onContactClick} />
                     </div>
                     <button
                         aria-label="Siguiente"
@@ -517,11 +514,11 @@ function App() {
                     </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Florianopolis} onContactClick={handleOpenForm}/>
-                        
-                            <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Buzios} onContactClick={handleOpenForm}/>
-                            
-                            <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={AllInclusive} onContactClick={handleOpenForm}/>
+                            <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Florianopolis} onContactClick={handleOpenForm} />
+
+                            <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Buzios} onContactClick={handleOpenForm} />
+
+                            <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={AllInclusive} onContactClick={handleOpenForm} />
                         </div>
                     </div>
                     {isFormVisible && (
