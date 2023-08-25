@@ -109,7 +109,7 @@ const CardCupon = () => {
             {
                 couponsData.map(({ id, cupon, imgBackground }) => (
                     <div className="main_cardCupon" key={id}>
-                        <img src={imgBackground} alt={`Cupón ${cupon}`} />
+                        <img  srcSet={imgBackground} alt={`Cupón ${cupon}`} />
                         <h2 className="main_cardCupon_CuponCode">{cupon}</h2>
                         <CardCuponButton textToCopy={cupon} />
                     </div>
