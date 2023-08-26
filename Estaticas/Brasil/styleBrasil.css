@@ -552,7 +552,7 @@ source>img {
     }
 
     .main__container_BannerTravelSale {
-        min-width: 310px;
+        width: 310px;
         height: 264px;
         margin: 20px 10px;
     }
