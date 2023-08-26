@@ -431,8 +431,8 @@ const Card = ({ destinos, onContactClick }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="main_container_priceStyle">
-                        <div className="priceStyle left">{destino.price}</div>
-                        <div className="priceStyle right">{destino.priceBaja}</div>
+                        <div className="priceStyle left">{destino.priceBaja}</div>
+                        <div className="priceStyle right">{destino.price}</div>
                     </div>
                     <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={() => onContactClick(destino.id)} />
                 </div>
@@ -622,9 +622,14 @@ function App() {
                     <div className="main_conteiner__s1_medio top_mkt">
                         <BannerTop />
                     </div>
-                    <div className="main_conteiner__s2_bannerTravelSale">
-                        <BannerTravelSale />
-                    </div>
+                    {shouldShowEvent()
+                        ?
+                        <div className="main_conteiner__s2_bannerTravelSale">
+                            <BannerTravelSale />
+                        </div>
+                        : 
+                        null
+                    }
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} onContactClick={handleOpenForm} />
