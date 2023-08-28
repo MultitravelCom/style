@@ -155,7 +155,11 @@ const BannerTop = () => {
 
     const bannerId = getBannerId();
 
-    console.log(showPackageImages);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleBannerClick = () => {
+        setIsModalOpen(true);
+    }
 
     return (
         <>
@@ -264,7 +268,7 @@ const BannerTop = () => {
                         <Button style="btn btnStyleBannerPre" link={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/venta-personalizada/argentina"} text="Ver Más" />
                     )} */}
                 </div>
-                <div id={`bannerTop__right_${bannerId}`} className="main__container_right">
+                <div id={`bannerTop__right_${bannerId}`} className="main__container_right" onClick={handleBannerClick}>
                     {isMobile ? (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/caribe"} target="_blank">
                             <img className="bannerTop__img"
