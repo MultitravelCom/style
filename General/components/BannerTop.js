@@ -147,6 +147,9 @@ function getBannerId() {
 }
 // *********************************************
 const BannerTop = () => {
+    const [openModal, setOpenModal] = React.useState(false);
+
+
     const showPackageImages = window.location.pathname.includes('/flighthotel/');
     const showHotelsCoupons = window.location.pathname.includes('/hotels');
     const UrlImg = cambiarUrlImg();
@@ -308,6 +311,7 @@ const BannerTop = () => {
                         <Button style="btn btnStyleBannerPre" link={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/brasil"} text="Ver Más" />
                     )} */}
                 </div>
+                <Modal open={openModal} onClose={() => setOpenModal(false)} />
             </div>)
             }
         </>
