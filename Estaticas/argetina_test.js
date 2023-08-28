@@ -440,7 +440,7 @@ const Card = ({ destinos, onContactClick }) => {
                         <div className="priceStyle right">{destino.price}</div>
                     </div>
                     <div className="main__container__buttonsCars">
-                        <Button id={destino.destino} className="btn_Style_Venta_Per" text="Contactarme" onClick={handleBannerClick} />
+                        <Button id={destino.id} className="btn_Style_Venta_Per" text="Contactarme" onClick={handleBannerClick} />
                         <Button id={destino.title} className="btn_Style_Venta_Per" text="Agendar" onClick={() => onContactClick(destino.id)} />
                     </div>
                 </div>
