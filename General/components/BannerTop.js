@@ -150,7 +150,8 @@ const BannerTop = () => {
                     <Cuponera />
                 </div>
             )}
-            <div className="container-fluid main__container__bannerTop scroll-mobile">
+            {showHotelsCoupons && shouldShowCuponera() && 
+            (<div className="container-fluid main__container__bannerTop scroll-mobile">
                 <div id="bannerTop__left" className="main__container_left">
                     {isMobile ? (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : null} target="_blank">
@@ -296,7 +297,8 @@ const BannerTop = () => {
                         <Button style="btn btnStyleBannerPre" link={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/brasil"} text="Ver Más" />
                     )} */}
                 </div>
-            </div>
+            </div>)
+            }
         </>
     )
 }
