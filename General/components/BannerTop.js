@@ -143,6 +143,8 @@ const BannerTop = () => {
     const UrlImgPaquetes = "https://multitravelcom.github.io/MT/Secciones/BannerPrincipal";
     const isMobile = window.innerWidth <= 767;
 
+    console.log(showPackageImages);
+
     return (
         <>
             {showHotelsCoupons && shouldShowCuponera() && (
