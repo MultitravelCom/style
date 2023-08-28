@@ -155,7 +155,7 @@ const BannerTop = () => {
 
     const bannerId = getBannerId();
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = React.useState(false);
 
     const handleBannerClick = () => {
         setIsModalOpen(true);
