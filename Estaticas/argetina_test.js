@@ -419,6 +419,7 @@ const Card = ({ destinos, onContactClick }) => {
     const handleBannerClick = (event) => {
         event.preventDefault();
         setOpenModal(true);
+        console.loog("click modal")
     };
 
     return (
