@@ -140,7 +140,7 @@ const BannerTop = () => {
     const showPackageImages = window.location.pathname.includes('/flighthotel/');
     const showHotelsCoupons = window.location.pathname.includes('/hotels');
     const UrlImg = cambiarUrlImg();
-    const UrlImgPaquetes = "https://multitravelcom.github.io/MT/Secciones/BannerPrincipal";
+    const UrlImgPaquetes = "https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes";
     const isMobile = window.innerWidth <= 767;
 
     console.log(showPackageImages);
@@ -161,7 +161,7 @@ const BannerTop = () => {
                                 alt=""
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/BannerB/bannerMobile-1.webp`
+                                        ? `${UrlImgPaquetes}/bannerMobile-1.webp`
                                         : `${UrlImg}/bannerMobile-2.webp`
                                 }
                             />
@@ -173,7 +173,7 @@ const BannerTop = () => {
                                     media="(min-width: 1024px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/BannerB/bannerDesktop-1.webp`
+                                            ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
                                             : `${UrlImg}/bannerDesktop-1.webp`
                                     }
                                 />
@@ -181,7 +181,7 @@ const BannerTop = () => {
                                     media="(min-width: 768px) and (max-width: 1023px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/BannerB/bannerDesktop-1.webp`
+                                            ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
                                             : `${UrlImg}/bannerDesktop-1.webp`
                                     }
                                 />
@@ -189,7 +189,7 @@ const BannerTop = () => {
                                     alt=""
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/BannerB/bannerDesktop-1.webp`
+                                            ? `${UrlImgPaquetes}/bannerDesktop-1.webp`
                                             : `${UrlImg}/bannerDesktop-1.webp`
                                     }
                                 />
@@ -225,7 +225,7 @@ const BannerTop = () => {
                                     media="(min-width: 1024px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-2.webp`
+                                            ? `${UrlImgPaquetes}/bannerDesktop-2.webp`
                                             : `${UrlImg}/bannerDesktop-2.webp`
                                     }
                                 />
@@ -233,7 +233,7 @@ const BannerTop = () => {
                                     media="(min-width: 768px) and (max-width: 1023px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-2.webp`
+                                            ? `${UrlImgPaquetes}/bannerDesktop-2.webp`
                                             : `${UrlImg}/bannerDesktop-2.webp`
                                     }
                                 />
@@ -241,7 +241,7 @@ const BannerTop = () => {
                                     alt=""
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-2.webp`
+                                            ? `${UrlImgPaquetes}/bannerDesktop-2.webp`
                                             : `${UrlImg}/bannerDesktop-2.webp`
                                     }
                                 />
@@ -260,7 +260,7 @@ const BannerTop = () => {
                                 alt=""
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/BannerB/bannerMobile-3.webp`
+                                        ? `${UrlImgPaquetes}/bannerMobile-3.webp`
                                         : `${UrlImg}/bannerMobile-3.webp`
                                 }
                             />
@@ -272,7 +272,7 @@ const BannerTop = () => {
                                     media="(min-width: 1024px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-3.webp`
+                                            ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
                                             : `${UrlImg}/bannerDesktop-3.webp`
                                     }
                                 />
@@ -280,7 +280,7 @@ const BannerTop = () => {
                                     media="(min-width: 768px) and (max-width: 1023px)"
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-3.webp`
+                                            ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
                                             : `${UrlImg}/bannerDesktop-3.webp`
                                     }
                                 />
@@ -288,7 +288,7 @@ const BannerTop = () => {
                                     alt=""
                                     srcSet={
                                         showPackageImages
-                                            ? `${UrlImgPaquetes}/Paquetes/bannerDesktop-3.webp`
+                                            ? `${UrlImgPaquetes}/bannerDesktop-3.webp`
                                             : `${UrlImg}/bannerDesktop-3.webp`
                                     }
                                 />
