@@ -41,7 +41,7 @@ const ToolTipButton = ({ visible }) => {
         </div>
     )
 }
-const CardCuponButton = ({ textToCopy }) => {
+const CardCuponButtonTop = ({ textToCopy }) => {
     const [showTooltip, setShowTooltip] = React.useState(false);
 
     const handleCopyClick = (event) => {
@@ -111,7 +111,7 @@ const CardCupon = () => {
                     <div className="main_cardCupon" key={id}>
                         <img className="main_cardCuponImg"srcSet={imgBackground} alt={`Cupón ${cupon}`} />
                         <h2 className="main_cardCupon_CuponCode">{cupon}</h2>
-                        <CardCuponButton textToCopy={cupon} />
+                        <CardCuponButtonTop textToCopy={cupon} />
                     </div>
                 ))
             }
