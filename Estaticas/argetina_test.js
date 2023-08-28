@@ -363,7 +363,7 @@ function Button(props) {
     };
 
     return (
-        <button id={props.id} onClick={handleClick}>{props.text}</button>
+        <button id={props.id} className={props.className} onClick={handleClick}>{props.text}</button>
     );
 }
 
@@ -416,7 +416,8 @@ const WarningPrice = () => {
 const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
 
-    const handleBannerClick = () => {
+    const handleBannerClick = (event) => {
+        event.preventDefault();
         setOpenModal(true);
     };
 
@@ -438,8 +439,8 @@ const Card = ({ destinos, onContactClick }) => {
                         <div className="priceStyle right">{destino.price}</div>
                     </div>
                     <div className="main__container__buttonsCars">
-                        <Button id={destino.destino} className="btn_Style_Venta_Per left" text="Contactarme" onClick={handleBannerClick} />
-                        <Button id={destino.title} className="btn_Style_Venta_Per right" text="Agendar" onClick={() => onContactClick(destino.id)} />
+                        <Button id={destino.destino} className="btn_Style_Venta_Per" text="Contactarme" onClick={handleBannerClick} />
+                        <Button id={destino.title} className="btn_Style_Venta_Per" text="Agendar" onClick={() => onContactClick(destino.id)} />
                     </div>
                 </div>
             </div>
@@ -573,8 +574,11 @@ function App() {
     }, []);
 
     const handleOpenForm = (formId) => {
+
         setSelectedFormId(formId);
         setIsFormVisible(true);
+
+        console.log("isFormVisible:", isFormVisible);
     };
 
     const handleCloseForm = () => {
@@ -582,6 +586,7 @@ function App() {
         setIsFormVisible(false);
     };
     React.useEffect(() => {
+        console.log("isFormVisible:", isFormVisible);
     }, [isFormVisible]);
 
     return (
