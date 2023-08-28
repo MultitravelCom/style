@@ -417,7 +417,6 @@ const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
 
     const handleBannerClick = (event) => {
-        event.preventDefault();
         setOpenModal(true);
         console.log("click modal")
     };
