@@ -416,8 +416,7 @@ const WarningPrice = () => {
 const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
 
-    const handleBannerClick = (event) => {
-        event.preventDefault();
+    const handleBannerClick = () => {
         setOpenModal(true);
     };
 
