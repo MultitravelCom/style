@@ -51,7 +51,7 @@
   box-shadow: 4px 4px 8px -1px rgba(0, 0, 0, 0.20)
 }
 
-#bannerTop__center {
+.main__container_center {
   cursor: pointer;
 }
 
@@ -105,7 +105,7 @@
   position: relative;
 }
 
-#bannerTop__center>.btnStyleBannerPre {
+.main__container_center>.btnStyleBannerPre {
   display: none;
 }
 
@@ -250,11 +250,11 @@
     color: #F3F3F3;
   }
 
-  #bannerTop__left>.btnStyleBannerPre {
+  .main__container_left>.btnStyleBannerPre {
     display: none;
   }
 
-  #bannerTop__center>.btnStyleBannerPre {
+  .main__container_center>.btnStyleBannerPre {
     display: inline;
   }
 

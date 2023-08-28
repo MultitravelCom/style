@@ -166,7 +166,7 @@ const BannerTop = () => {
             )}
             {!showHotelsCoupons && shouldShowCuponera() && 
             (<div className="container-fluid main__container__bannerTop scroll-mobile">
-                <div id={`bannerTop__left ${bannerId}`} className="main__container_left">
+                <div id={`bannerTop__left_${bannerId}`} className="main__container_left">
                     {isMobile ? (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : null} target="_blank">
                             <img className="bannerTop__img"
@@ -212,7 +212,7 @@ const BannerTop = () => {
                         <Button style="btn btnStyleBannerPre" link="https://www.multitravel.com/venta-personalizada/caribe" text="Ver Más" />
                     )} */}
                 </div>
-                <div id={`bannerTop__center ${bannerId}`} className="main__container_center">
+                <div id={`bannerTop__center_${bannerId}`} className="main__container_center">
                     {isMobile ? (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : "https://www.multitravel.com/venta-personalizada/argentina"}
                             target="_blank"
@@ -264,7 +264,7 @@ const BannerTop = () => {
                         <Button style="btn btnStyleBannerPre" link={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/venta-personalizada/argentina"} text="Ver Más" />
                     )} */}
                 </div>
-                <div id={`bannerTop__right ${bannerId}`} className="main__container_right">
+                <div id={`bannerTop__right_${bannerId}`} className="main__container_right">
                     {isMobile ? (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/caribe"} target="_blank">
                             <img className="bannerTop__img"
