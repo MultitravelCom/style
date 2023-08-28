@@ -139,7 +139,7 @@ const shouldShowCuponera = () => {
 function getBannerId() {
     const url = window.location.href;
 
-    if (url.includes('flighthotel')) {
+    if (url.includes('/flighthotel')) {
         return 'flighthotel';
     } else {
         return 'no_flighthotel';
