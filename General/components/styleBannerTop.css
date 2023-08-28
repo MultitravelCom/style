@@ -215,6 +215,12 @@
   height: 100%;
 }
 
+.bannerTop__left_no_flighthotel,
+.main__container_center,
+.main__container_right {
+  cursor: pointer;
+}
+
 /*  */
 @media (min-width: 768px) and (max-width: 1023px) {
   .btnStyleBannerPre {
