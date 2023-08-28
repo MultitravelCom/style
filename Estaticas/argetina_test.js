@@ -20,7 +20,6 @@ function verificarYActualizarMeta() {
         let head = document.querySelector("head");
         head.appendChild(metaTag);
     }
-    console.log("La etiqueta meta ha sido verificada o actualizada correctamente.");
 }
 verificarYActualizarMeta();
 
@@ -440,7 +439,7 @@ const Card = ({ destinos, onContactClick }) => {
                         <div className="priceStyle right">{destino.price}</div>
                     </div>
                     <div className="main__container__buttonsCars">
-                        <Button id={destino.destino} text="Contactarme" onClick={() => onClick = { handleBannerClick }} />
+                        <Button id={destino.destino} text="Contactarme" onClick={handleContactButtonClick} />
                         <Button id={destino.title} text="Agendar" onClick={() => onContactClick(destino.id)} />
                     </div>
                 </div>
