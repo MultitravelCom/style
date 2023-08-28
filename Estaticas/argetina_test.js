@@ -414,13 +414,6 @@ const WarningPrice = () => {
 }
 
 const Card = ({ destinos, onContactClick }) => {
-    const [openModal, setOpenModal] = React.useState(false);
-
-    const handleBannerClick = (event) => {
-        setOpenModal(true);
-        console.log("click modal")
-    };
-
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
@@ -439,7 +432,7 @@ const Card = ({ destinos, onContactClick }) => {
                         <div className="priceStyle right">{destino.price}</div>
                     </div>
                     <div className="main__container__buttonsCars">
-                        <Button id={destino.id} className="btn_Style_Venta_Per" text="Contactarme" onClick={handleBannerClick} />
+                        <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Contactarme" onClick={handleBannerClick} />
                         <Button id={destino.title} className="btn_Style_Venta_Per" text="Agendar" onClick={() => onContactClick(destino.id)} />
                     </div>
                 </div>
