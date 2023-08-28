@@ -158,6 +158,13 @@ const BannerTop = () => {
 
     const bannerId = getBannerId();
 
+    const handleBannerClick = (event) => {
+        const clickedElementId = event.currentTarget.id;
+        if (clickedElementId === `bannerTop__right_no_flighthotel`) {
+            setOpenModal(true);
+        }
+    };
+
     return (
         <>
             {showHotelsCoupons && shouldShowCuponera() && (
@@ -265,7 +272,7 @@ const BannerTop = () => {
                         <Button style="btn btnStyleBannerPre" link={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/venta-personalizada/argentina"} text="Ver Más" />
                     )} */}
                 </div>
-                <div id={`bannerTop__right_${bannerId}`} className="main__container_right" onClick={() => setOpenModal(true)}>
+                <div id={`bannerTop__right_${bannerId}`} className="main__container_right" onClick={handleBannerClick}>
                     {isMobile ? (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/caribe"} target="_blank">
                             <img className="bannerTop__img"
