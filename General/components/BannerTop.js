@@ -210,7 +210,7 @@ const BannerTop = () => {
                                 alt=""
                                 srcSet={
                                     showPackageImages
-                                        ? `${UrlImgPaquetes}/Paquetes/bannerMobile-1.webp`
+                                        ? `${UrlImgPaquetes}/bannerMobile-1.webp`
                                         : `${UrlImg}/bannerMobile-1.webp`
                                 }
                             />
