@@ -29,67 +29,67 @@ const destinos1 = [
     {
         id: "a1",
         destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Test-DoblePrecio/test-doble.webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-1.webp",
         className: "uno",
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
-        price: "$121.860",
         priceBaja: "$121.860",
+        price: "$161.200",
         events: "si"
     },
     {
         id: "a2",
         destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-b%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-2.webp",
         className: "uno",
         linkWa: "https://wa.link/s507zo",
         title: "Paquete a Bariloche",
-        price: "$171.120",
-        priceBaja: "",
+        priceBaja: "$171.120",
+        price: "$214.560",
         events: "si"
     },
     {
         id: "a3",
         destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-c%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-3.webp",
         className: "uno",
         linkWa: "https://wa.link/duchkz",
         title: "Paquete a Bariloche",
-        price: "$213.100",
-        priceBaja: "",
-        events: "No"
+        priceBaja: "$213.100",
+        price: "$276.900",
+        events: "si"
     },
     {
         id: "a4",
         destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-d%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-4.webp",
         className: "uno",
         linkWa: "https://wa.link/2z5hpp",
         title: "Hotel Villa Sofia",
-        price: "$35.375",
-        priceBaja: "",
+        priceBaja: "$35.375",
+        price: "$63.590",
         events: "si"
     },
     {
         id: "a5",
         destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-e%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-5.webp",
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
         title: "Hotel Kenton Palace Bariloche",
-        price: "$55.640",
-        priceBaja: "",
+        priceBaja: "$55.640",
+        price: "$67.555",
         events: "si"
     },
     {
         id: "a6",
         destino: "Bariloche",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Bariloche/barilo-f%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-6.webp",
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
         title: "Hotel Design Suites Bariloche",
-        price: "$75.135",
-        priceBaja: "",
+        priceBaja: "$75.135",
+        price: "$79.700",
         events: "si"
     },
 ];
@@ -97,67 +97,67 @@ const destinos2 = [
     {
         id: "b1",
         destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-a%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-7.webp",
         className: "uno",
         linkWa: "https://wa.link/hxjkgq",
         title: "Paquete a Iguazú",
-        price: "$138.910",
-        priceBaja: "",
+        priceBaja: "$138.910",
+        price: "$160.200",
         events: "si"
     },
     {
         id: "b2",
         destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-b%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-8.webp",
         className: "uno",
         linkWa: "https://wa.link/2rmvhq",
         title: "Paquete a Iguazús",
-        price: "$189.840",
-        priceBaja: "",
+        priceBaja: "$189.840",
+        price: "$250.370",
         events: "si"
     },
     {
         id: "b3",
         destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-c%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-9.webp",
         className: "uno",
         linkWa: "https://wa.link/wbq74i",
         title: "Hotel Merit Iguazú",
-        price: "$56.210",
-        priceBaja: "",
+        priceBaja: "$56.210",
+        price: "$63.370",
         events: "si"
     },
     {
         id: "b4",
         destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-d%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-10.webp",
         className: "uno",
         linkWa: "https://wa.link/s6nxus",
         title: "Hotel Complejo Americano",
-        price: "$38.100",
-        priceBaja: "",
+        priceBaja: "$38.100",
+        price: "$76.160",
         events: "si"
     },
     {
         id: "b5",
         destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-e%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-11.webp",
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
         title: "Hotel Tourbillon",
-        price: "$41.830",
-        priceBaja: "",
-        events: "No"
+        priceBaja: "$41.830",
+        price: "$55.700",
+        events: "si"
     },
     {
         id: "b6",
         destino: "Iguazu",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Cataratas/iguazu-f%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-12.webp",
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
         title: "Hotel Iguazu Grand",
-        price: "$139.820",
-        priceBaja: "",
+        priceBaja: "$139.820",
+        price: "$150.500",
         events: "No"
     },
 ];
@@ -165,67 +165,67 @@ const destinos3 = [
     {
         id: "c1",
         destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-a%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-13.webp",
         className: "uno",
         linkWa: "https://wa.link/61efbi",
         title: "Paquete a Mendoza",
+        priceBaja: "$122.690",
         price: "$144.335",
-        priceBaja: "",
         events: "si"
     },
     {
         id: "c2",
         destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-b%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-14.webp",
         className: "uno",
         linkWa: "https://wa.link/sbfl7y",
         title: "Paquete a Mendoza",
-        price: "$183.700",
-        priceBaja: "",
+        priceBaja: "$183.700",
+        price: "$171.300",
         events: "si"
     },
     {
         id: "c3",
         destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-c%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-15.webp",
         className: "uno",
         linkWa: "https://wa.link/vs8baw",
         title: "Paquete a Mendoza",
-        price: "$223.100",
-        priceBaja: "",
+        priceBaja: "$223.100",
+        price: "$216.5000",
         events: "si"
     },
     {
         id: "c4",
         destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-d%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-16.webp",
         className: "uno",
         linkWa: "https://wa.link/u8ym55",
         title: "Hotel Crillón",
-        price: "$39.770",
-        priceBaja: "",
+        priceBaja: "$39.770",
+        price: "$57.960",
         events: "si"
     },
     {
         id: "c5",
         destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-e%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-17.webp",
         className: "uno",
         linkWa: "https://wa.link/wz0152",
         title: "Hotel Cordón del Plata",
-        price: "$29.110",
-        priceBaja: "",
+        priceBaja: "$29.110",
+        price: "$50.570",
         events: "si"
     },
     {
         id: "c6",
         destino: "Mendoza",
-        img: "https://multitravelcom.github.io/MT/Evento/PreViaje/Mendoza/mendoza-f%20(1).webp",
+        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-18.webp",
         className: "uno",
         linkWa: "https://wa.link/wz0152",
         title: "Hotel Huentala",
-        price: "$97.430",
-        priceBaja: "",
+        priceBaja: "$97.430",
+        price: "$110.200",
         events: "si"
     },
 ];
@@ -330,24 +330,24 @@ const BannerTravelSale = () => {
                     <source
                         media="(min-width: 1024px)"
                         srcSet="
-            https://multitravelcom.github.io/MT/Evento/Caribe/Banner/banner-1.webp
+                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
           "
                     />
                     <source
                         media="(min-width: 768px) and (max-width: 1023px)"
                         srcSet="
-                    https://multitravelcom.github.io/MT/Evento/Caribe/Banner/banner-2.webp
+                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
                     "
                     />
                     <source
                         media="(max-width: 767px)"
                         srcSet="
-                    https://multitravelcom.github.io/MT/Evento/Caribe/Banner/banner-3.webp
+                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Mobile.webp
                     "
                     />
                     <img
                         className="main_conteiner__s1_medio__paquetes__img"
-                        src="            https://multitravelcom.github.io/MT/Evento/Caribe/Banner/banner-1.webp
+                        src="            https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
                     "
                         alt="Imagen banner promociones"
                     />
@@ -368,7 +368,6 @@ function Button(props) {
     );
 }
 
-
 function mostrarSeccion() {
     let url = window.location.href; // Obtener la URL completa
     let hash = url.substring(url.indexOf("#") + 1); // Obtener el ancla de la URL
@@ -384,35 +383,24 @@ function mostrarSeccion() {
 mostrarSeccion();
 
 function shouldShowEvent() {
-    const startDate = new Date("2023-05-07T23:59:00");
-    const endDate = new Date("2023-05-10T23:59:00");
+    const startDate = new Date("2023-08-27T22:00:00");
+    const endDate = new Date("2023-09-02T23:00:00");
     const now = new Date();
 
     return now >= startDate && now <= endDate;
 }
 
 const EventImg = (props) => {
-    const { shouldShowEvent } = props;
-
-    if (!shouldShowEvent()) {
+    if (shouldShowEvent()) {
         return (
             <div className={props.style}>
                 <img
                     alt={`Imagen evento promocion`}
-                    src={"https://multitravelcom.github.io/MT/HotSale2023/iconCardsOff/iconHotWeek.webp"}
+                    src={"https://multitravelcom.github.io/components/MULT324/logotravelsale.svg"}
                 />
             </div>
         );
     }
-
-    return (
-        <div className={props.style}>
-            <img
-                alt={`Imagen evento promocion`}
-                src={"https://multitravelcom.github.io/MT/HotSale2023/iconCardsOff/logohotsale.webp"}
-            />
-        </div>
-    );
 };
 
 const WarningPrice = () => {
@@ -427,25 +415,34 @@ const WarningPrice = () => {
 }
 
 const Card = ({ destinos, onContactClick }) => {
+    const [openModal, setOpenModal] = React.useState(false);
+
+    const handleBannerClick = (event) => {
+        event.preventDefault();
+        setOpenModal(true);
+    };
+
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
-                    {destino.events === "no" && <EventImg style="eventImg" shouldShowEvent={shouldShowEvent} />}
+                    {destino.events === "si" && shouldShowEvent() && (
+                        <EventImg style="eventImg" />
+                    )}
                     <picture>
-                        <map name={destino.id}>
-                            <area target="_blank" alt={destino.title} title={destino.title} href={destino.linkWa} coords={destino.coords} shape="rect" />
-                        </map>
                         <source media="(min-width: 1024px)" srcSet={destino.img} />
                         <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
                         <source media="(max-width: 767px)" srcSet={destino.img} />
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="main_container_priceStyle">
-                        <div className="priceStyle left">{destino.price}</div>
-                        <div className="priceStyle right">{destino.priceBaja}</div>
+                        <div className="priceStyle left">{destino.priceBaja}</div>
+                        <div className="priceStyle right">{destino.price}</div>
                     </div>
-                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={() => onContactClick(destino.id)} />
+                    <div className="main__container__buttonsCars">
+                        <Button id={destino.destino} text="Contactarme" onClick={() => onClick = { handleBannerClick }} />
+                        <Button id={destino.title} text="Agendar" onClick={() => onContactClick(destino.id)} />
+                    </div>
                 </div>
             </div>
         )));
@@ -550,39 +547,6 @@ function ButtonPre(props) {
         <button className="btn btnStyleBannerPre" onClick={handleClick}>{props.text}</button>
     );
 }
-const BannerTopPreViaje = () => {
-    return (
-        <>
-            <div id="containerPreViaje" className="container containerPreViaje">
-                <row className="rowStyle">
-                    <div className="main__container__left col-8">
-                        <picture>
-                            <source media="(min-width: 1024px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                            <source media="(min-width: 768px) and (max-width: 1023px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                            <source media="(max-width: 767px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                            <img alt="" src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                        </picture>
-                    </div>
-                    <div className="main__container__right col-4">
-                        <picture>
-                            <source media="(min-width: 1024px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                            <source media="(min-width: 768px) and (max-width: 1023px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                            <source media="(max-width: 767px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerMobile.webp" />
-                            <img alt="" src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                        </picture>
-                        <ButtonPre link="https://www.multitravel.com/promociones/previaje" text="Ver más" />
-                    </div>
-                </row>
-            </div>
-        </>
-    )
-}
 // ************************************************
 
 function App() {
@@ -633,13 +597,17 @@ function App() {
                     <div className="main_conteiner__s1_medio top_mkt">
                         <BannerTop />
                     </div>
-                    <div className="main_conteiner__s2_bannerTravelSale">
-                        <BannerTravelSale />
-                    </div>
+                    {shouldShowEvent()
+                        ?
+                        <div className="main_conteiner__s2_bannerTravelSale">
+                            <BannerTravelSale />
+                        </div>
+                        :
+                        null
+                    }
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} onContactClick={handleOpenForm} />
-                            {!ocultarComponente ? null : (<BannerTopPreViaje />)}
 
                             <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} onContactClick={handleOpenForm} />
 
