@@ -686,7 +686,9 @@ body.home.home--default .home-v5 .multi-searcher__content {
 
 body.home.home--default .home-v5__searcher,
 .multi-searcher__content {
-  background-color: #D3EAFF !important;
+  /* background-color: #D3EAFF !important; */
+  background-color: #D0B1FF !important;
+
   padding: 1rem 0;
 }
 
