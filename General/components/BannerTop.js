@@ -137,7 +137,7 @@ const shouldShowCuponera = () => {
 };
 // *********************************************
 const BannerTop = () => {
-    const showPackageImages = window.location.pathname.includes('/packages') && !window.location.pathname.endsWith('/packages/tours/');
+    const showPackageImages = window.location.pathname.includes('/packages/flighthotel/') && !window.location.pathname.endsWith('/packages/tours/');
     const showHotelsCoupons = window.location.pathname.includes('/hotels');
     const UrlImg = cambiarUrlImg();
     const UrlImgPaquetes = "https://multitravelcom.github.io/MT/Secciones/BannerPrincipal";
