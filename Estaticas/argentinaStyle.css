@@ -506,9 +506,6 @@
  .b24-form-dropdown-container{
   position: inherit;
  }
- .b24-form-dropdown {
-  top: -159px;
-}
  /* ---*-*-*-*-*-*-*-*-*-*- */
  /* MOBILE */
  @media (max-width: 964px) {
