@@ -399,7 +399,6 @@ const EventImg = (props) => {
         );
     }
 };
-
 const WarningPrice = () => {
     return (
         <div className="container main__warningPrice">
@@ -410,7 +409,6 @@ const WarningPrice = () => {
 
     )
 }
-
 const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
 
