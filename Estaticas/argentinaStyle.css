@@ -435,22 +435,24 @@
  }
 
  .btn_Style_Venta_Per:hover {
-  border: 1px solid #2A8BFE;
+   border: 1px solid #2A8BFE;
    background-color: #1169b7;
  }
 
- .btn_FormBitrix{
-  color: #2A8BFE;
-  background-color: #ffffff;
+ .btn_FormBitrix {
+   color: #2A8BFE;
+   background-color: #ffffff;
+   border: 1px solid #2A8BFE;
  }
 
- .btn_FormBitrix:hover{
-  color: #FFFFFF;
-  background: #1480FF;
+ .btn_FormBitrix:hover {
+   color: #FFFFFF;
+   background: #1480FF;
  }
- .btn_FormBitrix::selection{
-  color: #FFFFFF;
-  background: #66ACFF;
+
+ .btn_FormBitrix::selection {
+   color: #FFFFFF;
+   background: #66ACFF;
  }
 
  .main_container_priceStyle {
@@ -487,13 +489,13 @@
  }
 
  .main__container__buttonsCars {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 3.3%;
-  width: 100%;
-  gap: 6px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   bottom: 3.3%;
+   width: 100%;
+   gap: 6px;
  }
 
  /* ---*-*-*-*-*-*-*-*-*-*- */
