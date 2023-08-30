@@ -421,7 +421,7 @@
  .btn_Style_Venta_Per {
    padding: 2% 5%;
    color: white;
-   min-width: 45%;
+   width: 114px;
    background-color: #2a8bfe;
    border-radius: 32px;
    border: none;
