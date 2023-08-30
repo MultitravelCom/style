@@ -282,7 +282,7 @@ const BitrixFormTitle = () => {
             <div className="bitrixFormTitle_text">
                 <p class="single-line">Completa tus datos para que te contacte un especialista.</p>
             </div>
-            <ButtonBitrixForm />
+            {/* <ButtonBitrixForm /> */}
         </div>
     )
 }
