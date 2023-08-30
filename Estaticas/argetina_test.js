@@ -418,7 +418,6 @@ const Card = ({ destinos, onContactClick }) => {
 
     const handleBannerClick = (event) => {
         setOpenModal(true);
-    
     };
 
     return (
@@ -578,17 +577,12 @@ function App() {
         setSelectedFormId(formId);
         setIsFormVisible(true);
 
-        console.log("isFormVisible:", isFormVisible);
     };
 
     const handleCloseForm = () => {
         setSelectedFormId(null);
         setIsFormVisible(false);
     };
-    React.useEffect(() => {
-        console.log("isFormVisible:", isFormVisible);
-    }, [isFormVisible]);
-
     return (
         <>
             {loaded ? (
