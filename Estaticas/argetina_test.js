@@ -416,10 +416,8 @@ const Card = ({ destinos, onContactClick }) => {
 
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
-            // Estás en un dispositivo móvil, realiza la acción de llamar al teléfono
             window.location.href = 'tel:08003480003';
         } else {
-            // Estás en un dispositivo de escritorio, abre el modal
             setOpenModal(true);
         }
     };

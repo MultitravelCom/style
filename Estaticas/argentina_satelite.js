@@ -20,7 +20,6 @@ function verificarYActualizarMeta() {
         let head = document.querySelector("head");
         head.appendChild(metaTag);
     }
-    console.log("La etiqueta meta ha sido verificada o actualizada correctamente.");
 }
 verificarYActualizarMeta();
 
@@ -192,7 +191,7 @@ const destinos3 = [
         linkWa: "https://wa.link/vs8baw",
         title: "Paquete a Mendoza",
         priceBaja: "$223.100",
-        price: "$216.500",
+        price: "$216.5000",
         events: "si"
     },
     {
@@ -282,8 +281,6 @@ const BitrixFormTitle = () => {
         <div className="BitrixFormTitle">
             <div className="bitrixFormTitle_text">
                 <p class="single-line">Completa tus datos para que te contacte un especialista.</p>
-                <p>o llamanos al: 0800-348-0003</p>
-                <spam>Lun a Vie 10 a 20 Hs | Sab 10 a 15 Hs</spam>
             </div>
             <ButtonBitrixForm />
         </div>
@@ -364,7 +361,7 @@ function Button(props) {
     };
 
     return (
-        <button id={props.id} className="btn_Style_Venta_Per" onClick={handleClick}>{props.text}</button>
+        <button id={props.id} className={props.className} onClick={handleClick}>{props.text}</button>
     );
 }
 
@@ -402,7 +399,6 @@ const EventImg = (props) => {
         );
     }
 };
-
 const WarningPrice = () => {
     return (
         <div className="container main__warningPrice">
@@ -413,18 +409,25 @@ const WarningPrice = () => {
 
     )
 }
-
 const Card = ({ destinos, onContactClick }) => {
+    const [openModal, setOpenModal] = React.useState(false);
+
+    const handleBannerClick = () => {
+        if (window.innerWidth <= 768) {
+            window.location.href = 'tel:08003480003';
+        } else {
+            setOpenModal(true);
+        }
+    };
+
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
-                {destino.events === "si" && shouldShowEvent() && (
-                                    <EventImg style="eventImg" />
-                                )}                    <picture>
-                        <map name={destino.id}>
-                            <area target="_blank" alt={destino.title} title={destino.title} href={destino.linkWa} coords={destino.coords} shape="rect" />
-                        </map>
+                    {destino.events === "si" && shouldShowEvent() && (
+                        <EventImg style="eventImg" />
+                    )}
+                    <picture>
                         <source media="(min-width: 1024px)" srcSet={destino.img} />
                         <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
                         <source media="(max-width: 767px)" srcSet={destino.img} />
@@ -434,7 +437,10 @@ const Card = ({ destinos, onContactClick }) => {
                         <div className="priceStyle left">{destino.priceBaja}</div>
                         <div className="priceStyle right">{destino.price}</div>
                     </div>
-                    <Button id={destino.title} link={destino.linkWa} text="Contactarme" onClick={() => onContactClick(destino.id)} />
+                    <div className="main__container__buttonsCars">
+                        <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar ahora" onClick={handleBannerClick} />
+                        <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Agendar llama" onClick={() => onContactClick(destino.id)} />
+                    </div>
                 </div>
             </div>
         )));
@@ -539,39 +545,6 @@ function ButtonPre(props) {
         <button className="btn btnStyleBannerPre" onClick={handleClick}>{props.text}</button>
     );
 }
-const BannerTopPreViaje = () => {
-    return (
-        <>
-            <div id="containerPreViaje" className="container containerPreViaje">
-                <row className="rowStyle">
-                    <div className="main__container__left col-8">
-                        <picture>
-                            <source media="(min-width: 1024px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                            <source media="(min-width: 768px) and (max-width: 1023px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                            <source media="(max-width: 767px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                            <img alt="" src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop.webp" />
-                        </picture>
-                    </div>
-                    <div className="main__container__right col-4">
-                        <picture>
-                            <source media="(min-width: 1024px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                            <source media="(min-width: 768px) and (max-width: 1023px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                            <source media="(max-width: 767px)"
-                                srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerMobile.webp" />
-                            <img alt="" src="https://multitravelcom.github.io/MT/Evento/PreViaje/bannerHome/bannerDesktop-2.webp" />
-                        </picture>
-                        <ButtonPre link="https://www.multitravel.com/promociones/previaje" text="Ver más" />
-                    </div>
-                </row>
-            </div>
-        </>
-    )
-}
 // ************************************************
 
 function App() {
@@ -604,17 +577,12 @@ function App() {
         setSelectedFormId(formId);
         setIsFormVisible(true);
 
-        console.log("isFormVisible:", isFormVisible);
     };
 
     const handleCloseForm = () => {
         setSelectedFormId(null);
         setIsFormVisible(false);
     };
-    React.useEffect(() => {
-        console.log("isFormVisible:", isFormVisible);
-    }, [isFormVisible]);
-
     return (
         <>
             {loaded ? (
@@ -627,13 +595,12 @@ function App() {
                         <div className="main_conteiner__s2_bannerTravelSale">
                             <BannerTravelSale />
                         </div>
-                        : 
+                        :
                         null
                     }
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} onContactClick={handleOpenForm} />
-                            {!ocultarComponente ? null : (<BannerTopPreViaje />)}
 
                             <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} onContactClick={handleOpenForm} />
 
