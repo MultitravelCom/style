@@ -683,6 +683,9 @@
      background: #0d4e88;
      color: #f3f3f3;
    }
+   .carrusel__elemento{
+    width: 285px !important;
+   }
  }
 
  @media (min-width: 768px) and (max-width: 1023px) {
