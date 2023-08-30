@@ -500,6 +500,9 @@
    width: 100%;
    gap: 6px;
  }
+ .carrusel__elemento{
+  width: 265px !important;
+ }
 
  /* ---*-*-*-*-*-*-*-*-*-*- */
  /* MOBILE */
