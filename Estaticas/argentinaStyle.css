@@ -423,7 +423,7 @@
    color: white;
    min-width: 45%;
    background-color: #2a8bfe;
-   border-radius: 40px;
+   border-radius: 32px;
    border: none;
    cursor: pointer;
  }
@@ -442,6 +442,15 @@
  .btn_FormBitrix{
   color: #2A8BFE;
   background-color: #ffffff;
+ }
+
+ .btn_FormBitrix:hover{
+  color: #FFFFFF;
+  background: #1480FF;
+ }
+ .btn_FormBitrix::selection{
+  color: #FFFFFF;
+  background: #66ACFF;
  }
 
  .main_container_priceStyle {
