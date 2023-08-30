@@ -503,6 +503,9 @@
  .carrusel__elemento{
   width: 285px !important;
  }
+ .b24-form-dropdown-container{
+  position: inherit;
+ }
 
  /* ---*-*-*-*-*-*-*-*-*-*- */
  /* MOBILE */
