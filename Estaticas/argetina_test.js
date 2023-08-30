@@ -281,8 +281,6 @@ const BitrixFormTitle = () => {
         <div className="BitrixFormTitle">
             <div className="bitrixFormTitle_text">
                 <p class="single-line">Completa tus datos para que te contacte un especialista.</p>
-                <p>o llamanos al: 0800-348-0003</p>
-                <spam>Lun a Vie 10 a 20 Hs | Sab 10 a 15 Hs</spam>
             </div>
             <ButtonBitrixForm />
         </div>
@@ -416,8 +414,14 @@ const WarningPrice = () => {
 const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
 
-    const handleBannerClick = (event) => {
-        setOpenModal(true);
+    const handleBannerClick = () => {
+        if (window.innerWidth <= 768) {
+            // Estás en un dispositivo móvil, realiza la acción de llamar al teléfono
+            window.location.href = 'tel:08003480003';
+        } else {
+            // Estás en un dispositivo de escritorio, abre el modal
+            setOpenModal(true);
+        }
     };
 
     return (
