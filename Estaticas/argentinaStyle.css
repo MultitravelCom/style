@@ -506,7 +506,9 @@
  .b24-form-dropdown-container{
   position: inherit;
  }
-
+ .b24-form-dropdown {
+  top: -159px;
+}
  /* ---*-*-*-*-*-*-*-*-*-*- */
  /* MOBILE */
  @media (max-width: 964px) {
@@ -577,6 +579,9 @@
    .main__conteiner-principal {
      margin-top: 0;
    }
+   .b24-form-dropdown {
+    top: -159px;
+  }
  }
 
  @media (max-width: 564px) {
