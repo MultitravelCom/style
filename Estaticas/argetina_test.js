@@ -432,7 +432,7 @@ const Card = ({ destinos, onContactClick }) => {
                         <div className="priceStyle right">{destino.price}</div>
                     </div>
                     <div className="main__container__buttonsCars">
-                        <Button id={destino.title} className="btn_Style_Venta_Per classOpenModal" text="Llamar ahora" />
+                        <Button id={destino.title} className="btn_Style_Venta_Per classOpenModal" text="Llamar ahora" onClick={handleBannerClick}/>
                         <Button id={destino.id} className="btn_Style_Venta_Per btn_FormBitrix" text="Agendar llamada" onClick={() => onContactClick(destino.id)} />
                     </div>
                 </div>
@@ -571,7 +571,6 @@ function App() {
         setSelectedFormId(formId);
         setIsFormVisible(true);
 
-        console.log("isFormVisible:", isFormVisible);
     };
 
     const handleCloseForm = () => {
@@ -579,7 +578,6 @@ function App() {
         setIsFormVisible(false);
     };
     React.useEffect(() => {
-        console.log("isFormVisible:", isFormVisible);
     }, [isFormVisible]);
 
     return (
