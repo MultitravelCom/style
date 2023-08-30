@@ -433,7 +433,7 @@ const Card = ({ destinos, onContactClick }) => {
                     </div>
                     <div className="main__container__buttonsCars">
                         <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Contactarme" />
-                        <Button id={destino.title} className="btn_Style_Venta_Per" text="Agendar" onClick={() => onContactClick(destino.id)} />
+                        <Button id={destino.title} className="btn_Style_Venta_Per" text="Agendar llamada" onClick={() => onContactClick(destino.id)} />
                     </div>
                 </div>
             </div>

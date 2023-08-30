@@ -435,7 +435,13 @@
  }
 
  .btn_Style_Venta_Per:hover {
+  border: 1px solid #2A8BFE;
    background-color: #1169b7;
+ }
+
+ .btn_FormBitrix{
+  color: #2A8BFE;
+  background-color: #ffffff;
  }
 
  .main_container_priceStyle {
