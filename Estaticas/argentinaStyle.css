@@ -433,6 +433,7 @@
    position: initial;
    z-index: 999999;
    top: 16px;
+   font-size: 12px;
  }
 
  .btn_Style_Venta_Per:hover {
