@@ -426,14 +426,13 @@
    border-radius: 32px;
    border: none;
    cursor: pointer;
-   font-size: 14px;
+   font-size: 12px;
  }
 
  .btn_from_bitrix {
    position: initial;
    z-index: 999999;
    top: 16px;
-   font-size: 12px;
  }
 
  .btn_Style_Venta_Per:hover {
