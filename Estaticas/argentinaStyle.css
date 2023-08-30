@@ -448,11 +448,13 @@
  .btn_FormBitrix:hover {
    color: #FFFFFF;
    background: #1480FF;
+   border: 1px solid #2A8BFE;
  }
 
  .btn_FormBitrix::selection {
    color: #FFFFFF;
    background: #66ACFF;
+   border: 1px solid #2A8BFE;
  }
 
  .main_container_priceStyle {
