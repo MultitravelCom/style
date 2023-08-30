@@ -539,9 +539,6 @@
    .pagos__card__texto__btn {
      display: none;
    }
-   .btn_Style_Venta_Per{
-    min-width: 110px;
-   }
  }
 
  @media (max-width: 600px) {
