@@ -487,6 +487,9 @@ source>img {
     background: #66ACFF;
     border: 1px solid #66ACFF;
 }
+.b24-form-dropdown-container{
+    position: inherit;
+   }
 
 /* ---*-*-*-*-*-*-*-*-*-*- */
 /* MOBILE */
