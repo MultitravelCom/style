@@ -216,26 +216,19 @@ const BannerTravelSale = () => {
                 <picture>
                     <source
                         media="(min-width: 1024px)"
-                        srcSet="
-                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
-          "
+                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Brasil/Banner-Desktop.webp"
                     />
                     <source
                         media="(min-width: 768px) and (max-width: 1023px)"
-                        srcSet="
-                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
-                    "
+                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Brasil/Banner-Desktop.webp"
                     />
                     <source
                         media="(max-width: 767px)"
-                        srcSet="
-                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Mobile.webp
-                    "
+                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Brasil/Banner-Mobile.webp"
                     />
                     <img
                         className="main_conteiner__s1_medio__paquetes__img"
-                        src="            https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
-                    "
+                        src="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Brasil/Banner-Desktop.webp"
                         alt="Imagen banner promociones"
                     />
                 </picture>
