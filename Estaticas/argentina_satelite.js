@@ -33,7 +33,7 @@ const destinos1 = [
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
         priceBaja: "$121.860",
-        price: "$161.200",
+        price: "$166.700",
         events: "si"
     },
     {
@@ -44,7 +44,7 @@ const destinos1 = [
         linkWa: "https://wa.link/s507zo",
         title: "Paquete a Bariloche",
         priceBaja: "$171.120",
-        price: "$214.560",
+        price: "$225.600",
         events: "si"
     },
     {
@@ -55,7 +55,7 @@ const destinos1 = [
         linkWa: "https://wa.link/duchkz",
         title: "Paquete a Bariloche",
         priceBaja: "$213.100",
-        price: "$276.900",
+        price: "$283.500",
         events: "si"
     },
     {
