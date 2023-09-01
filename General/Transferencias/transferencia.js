@@ -83,6 +83,10 @@ function checkPaymentMethod() {
 //     );
 // };
 
+
+// const buttonPaymentMp = document.querySelector('.booking-payment__options');
+// ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
+
 const TransferenciaComponentMP = () => {
 
     return (
@@ -110,10 +114,6 @@ const TransferenciaComponentMP = () => {
         </>
     );
 };
-
-// const buttonPaymentMp = document.querySelector('.booking-payment__options');
-// ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
-
 
 const TransferenciaComponent = () => {
     return (
