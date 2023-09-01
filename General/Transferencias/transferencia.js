@@ -1,20 +1,20 @@
-// function checkPaymentMethod() {
-//     const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
+function checkPaymentMethod() {
+    const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
 
-//     if (gatewaySelect) {
-//         const selectedOption = gatewaySelect.options[gatewaySelect.selectedIndex];
-//         const dataConfigId = selectedOption.getAttribute('data-config-id');
+    if (gatewaySelect) {
+        const selectedOption = gatewaySelect.options[gatewaySelect.selectedIndex];
+        const dataConfigId = selectedOption.getAttribute('data-config-id');
 
-//         if (dataConfigId) {
-//             const configId = parseInt(dataConfigId);
-//             console.log("se encontro", configId);
+        if (dataConfigId) {
+            const configId = parseInt(dataConfigId);
+            console.log("se encontro", configId);
 
-//             return configId;
-//         }
-//     }
+            return configId;
+        }
+    }
 
-//     return null;
-// }
+    return null;
+}
 
 // const ButtonsPaymentMp = () => {
 //     const [configIdFromCheck, setConfigIdFromCheck] = React.useState(null);
@@ -83,33 +83,33 @@
 //     );
 // };
 
-// const TransferenciaComponentMP = () => {
+const TransferenciaComponentMP = () => {
 
-//     return (
-//         <>
-//             <div className="main__transferencia">
-//                 <picture>
-//                     <source
-//                         media="(min-width: 1024px)"
-//                         srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png"}
-//                     />
-//                     <source
-//                         media="(min-width: 768px) and (max-width: 1023px)"
-//                         srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Tablet.png"}
-//                     />
-//                     <source
-//                         media="(max-width: 767px)"
-//                         srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Mobile.png"}
-//                     />
-//                     <img
-//                         alt=""
-//                         src={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png"}
-//                     />
-//                 </picture>
-//             </div>
-//         </>
-//     );
-// };
+    return (
+        <>
+            <div className="main__transferencia">
+                <picture>
+                    <source
+                        media="(min-width: 1024px)"
+                        srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png"}
+                    />
+                    <source
+                        media="(min-width: 768px) and (max-width: 1023px)"
+                        srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Tablet.png"}
+                    />
+                    <source
+                        media="(max-width: 767px)"
+                        srcSet={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Mobile.png"}
+                    />
+                    <img
+                        alt=""
+                        src={"https://multitravelcom.github.io/MT/Secciones/Booking-2/MercadoPago/MercadoPago-Desktop.png"}
+                    />
+                </picture>
+            </div>
+        </>
+    );
+};
 
 // const buttonPaymentMp = document.querySelector('.booking-payment__options');
 // ReactDOM.render(<ButtonsPaymentMp />, buttonPaymentMp);
@@ -145,11 +145,11 @@ const TransferenciaComponent = () => {
 const paymentInfoContainer = document.querySelector('.booking-payment__info.prepayment');
 ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
 
-// const shouldRenderTransferencia = checkPaymentMethod() === 13;
+const shouldRenderTransferencia = checkPaymentMethod() === 13;
 
-// if (shouldRenderTransferencia) {
-//     const posElement = document.querySelector('.booking-payment__info.pos');
-//     const transferenciaContainer = document.createElement('div');
-//     ReactDOM.render(<TransferenciaComponentMP />, transferenciaContainer);
-//     posElement.appendChild(transferenciaContainer);
-// }
+if (shouldRenderTransferencia) {
+    const posElement = document.querySelector('.booking-payment__info.pos');
+    const transferenciaContainer = document.createElement('div');
+    ReactDOM.render(<TransferenciaComponentMP />, transferenciaContainer);
+    posElement.appendChild(transferenciaContainer);
+}
