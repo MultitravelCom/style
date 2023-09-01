@@ -191,7 +191,7 @@ const destinos3 = [
         linkWa: "https://wa.link/vs8baw",
         title: "Paquete a Mendoza",
         priceBaja: "$223.100",
-        price: "$216.5000",
+        price: "$216.500",
         events: "si"
     },
     {
