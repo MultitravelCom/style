@@ -176,7 +176,7 @@ const BannerTop = () => {
                     <Cuponera />
                 </div>
             )}
-            {!showHotelsCoupons && shouldShowCuponera() && 
+            {!showHotelsCoupons && !shouldShowCuponera() && 
             (<div className="container-fluid main__container__bannerTop scroll-mobile">
                 <div id={`bannerTop__left_${bannerId}`} className="main__container_left" onClick={handleBannerClick}>
                     {isMobile ? (
