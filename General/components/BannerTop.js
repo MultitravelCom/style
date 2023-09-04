@@ -130,7 +130,7 @@ const Cuponera = () => {
 // **************TIMER***************
 const shouldShowCuponera = () => {
     const startDate = new Date("2023-08-27T22:00:00");
-    const endDate = new Date("2023-09-02T23:59:00");
+    const endDate = new Date("2023-09-30T23:59:00");
     const now = new Date();
 
     return now >= startDate && now <= endDate;
@@ -176,7 +176,7 @@ const BannerTop = () => {
                     <Cuponera />
                 </div>
             )}
-            {!showHotelsCoupons && !shouldShowCuponera() && 
+            {!showHotelsCoupons && shouldShowCuponera() && 
             (<div className="container-fluid main__container__bannerTop scroll-mobile">
                 <div id={`bannerTop__left_${bannerId}`} className="main__container_left" onClick={handleBannerClick}>
                     {isMobile ? (
