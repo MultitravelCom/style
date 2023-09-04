@@ -467,7 +467,7 @@ const Card = ({ destinos }) => {
                             <div className="glyphicon glyphicon-whatsapp-bottomless"></div>
                         </Button>
                         <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar" onClick={handleBannerClick} shouldShowButton={true} >
-                            <div className="glyphicon glyphicon-whatsapp-bottomless"></div>
+                            <div className="glyphicon glyphicon-phone"></div>
                         </Button>
                     </div>
                 </div>
