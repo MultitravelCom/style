@@ -508,9 +508,9 @@
   position: inherit;
  }
  /* ---*-*-*-*-*-*-*-*-*-*- */
- .whatsAppFixes{
+ /* .whatsAppFixes{
   display: none;
- }
+ } */
  /* MOBILE */
  @media (max-width: 964px) {
    .main__conteiner__s1__destacado {
