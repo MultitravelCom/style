@@ -352,6 +352,8 @@ function Button(props) {
   
     React.useEffect(() => {
       // Función para obtener la hora y el día actual
+      const { shouldShowButton } = props;
+
       const getCurrentTimeAndDay = () => {
         const currentDate = new Date();
         const currentHour = currentDate.getHours();
@@ -365,8 +367,8 @@ function Button(props) {
         (currentDay >= 1 && currentDay <= 5 && currentHour >= 10 && currentHour < 20) ||
         (currentDay === 6 && currentHour >= 10 && currentHour < 15);
   
-      setIsVisible(isButtonVisible);
-    }, []);
+        setIsVisible(isButtonVisible && shouldShowButton);
+    }, [shouldShowButton]);
   
     const handleClick = () => {
       const whatsappURL = 'https://wa.link/64zdo9';
@@ -461,8 +463,8 @@ const Card = ({ destinos }) => {
                         <div className="priceStyle right">{destino.price}</div>
                     </div>
                     <div className="main__container__buttonsCars">
-                        <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar ahora" onClick={handleBannerClick} />
-                        <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Whatsapp" />
+                        <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar ahora" onClick={handleBannerClick} shouldShowButton={true}/>
+                        <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Whatsapp" shouldShowButton={shouldShowButton}/>
                     </div>
                 </div>
             </div>
