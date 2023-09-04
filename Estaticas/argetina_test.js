@@ -449,43 +449,22 @@ const Card = ({ destinos, onContactClick }) => {
                         <div className="priceStyle right">{destino.price}</div>
                     </div>
                     <div className="main__container__buttonsCars">
-                        {buttonSwitch === "A" && (
-                            <>
-                                <Button
-                                    id={destino.title}
-                                    className="btn_Style_Venta_Per btn_FormBitrix"
-                                    text="Whatsapp"
-                                    onClick={handleWhatsAppClick}
-                                    iconClass="glyphicon-whatsapp-bottomless"
-                                />
-                                <Button
-                                    id={destino.id}
-                                    className="btn_Style_Venta_Per classOpenModal"
-                                    text="Llamar"
-                                    onClick={handleBannerClick}
-                                    iconClass="glyphicon-phone"
-                                />
-                                
-                            </>
-                        )}
-                        {buttonSwitch === "B" && (
-                            <>
-                                <Button
-                                    id={destino.title}
-                                    className="btn_Style_Venta_Per btn_FormBitrix"
-                                    text="Agendar llamada"
-                                    onClick={() => onContactClick(destino.id)}
-                                    iconClass="glyphicon-whatsapp-bottomless"
-                                />
-                                <Button
-                                    id={destino.id}
-                                    className="btn_Style_Venta_Per classOpenModal"
-                                    text="Llamar"
-                                    onClick={handleBannerClick}
-                                    iconClass="glyphicon-phone"
-                                />
-                            </>
-                        )}
+                        <>
+                            <Button
+                                id={destino.title}
+                                className="btn_Style_Venta_Per btn_FormBitrix"
+                                text={buttonSwitch === "A" ? "Whatsapp" : "Agendar llamada"}
+                                onClick={buttonSwitch === "A" ? handleWhatsAppClick : () => onContactClick(destino.id)}
+                                iconClass={buttonSwitch === "A" ? "glyphicon-whatsapp-bottomless" : "glyphicon-calendar"}
+                            />
+                            <Button
+                                id={destino.id}
+                                className="btn_Style_Venta_Per classOpenModal"
+                                text="Llamar"
+                                onClick={handleBannerClick}
+                                iconClass="glyphicon-phone"
+                            />
+                        </>
                     </div>
                 </div>
             </div>
