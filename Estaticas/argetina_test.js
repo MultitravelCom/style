@@ -459,7 +459,7 @@ const Card = ({ destinos, onContactClick }) => {
                                 <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar" onClick={handleBannerClick} />
                             </>
                         )}
-                        {buttonSwitch === "b" && (
+                        {buttonSwitch === "B" && (
                             <>
                                 <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Agendar llamada" onClick={() => onContactClick(destino.id)} />
                                 <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar" onClick={handleBannerClick} />
