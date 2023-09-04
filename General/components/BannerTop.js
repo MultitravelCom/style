@@ -25,7 +25,7 @@ function cambiarUrlImg() {
 function scrollAncla(event) {
     event.preventDefault(); // Prevenir el comportamiento de navegación predeterminado
 
-    const targetElement = document.getElementById("home-sliding-offers-1");
+    const targetElement = document.getElementById("home-sliding-offers-2");
 
     if (targetElement) {
         targetElement.scrollIntoView({
@@ -178,9 +178,9 @@ const BannerTop = () => {
             )}
             {!showHotelsCoupons && 
             (<div className="container-fluid main__container__bannerTop scroll-mobile">
-                <div id={`bannerTop__left_${bannerId}`} className="main__container_left" onClick={handleBannerClick}>
+                <div id={`bannerTop__left_${bannerId}`} className="main__container_left">
                     {isMobile ? (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : null} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/venta-personalizada/argentina"} target="_blank">
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
@@ -228,6 +228,7 @@ const BannerTop = () => {
                     {isMobile ? (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : "https://www.multitravel.com/venta-personalizada/argentina"}
                             target="_blank"
+                            onClick={showPackageImages ? onClick={scrollAncla} : onClick={scrollAncla}}
                         >
 
                             <img className="bannerTop__img"
@@ -240,9 +241,9 @@ const BannerTop = () => {
                             />
                         </a>
                     ) : (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : "https://www.multitravel.com/hotels/"}
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : null }
                             target="_blank"
-                            onClick={showPackageImages ? null : null}
+                            // onClick={showPackageImages ? onClick={scrollAncla} : onClick={scrollAncla}}
                         >
                             <picture>
                                 <source
@@ -276,9 +277,9 @@ const BannerTop = () => {
                         <Button style="btn btnStyleBannerPre" link={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/venta-personalizada/argentina"} text="Ver Más" />
                     )} */}
                 </div>
-                <div id={`bannerTop__right_${bannerId}`} className="main__container_right" onClick={handleBannerClick}>
+                <div id={`bannerTop__right_${bannerId}`} className="main__container_right">
                     {isMobile ? (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/caribe"} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/hotels/" : "https://www.multitravel.com/hotels/"} target="_blank">
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
@@ -289,7 +290,7 @@ const BannerTop = () => {
                             />
                         </a>
                     ) : (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : null } target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/hotels/" : null } target="_blank">
                             <picture>
                                 <source
                                     media="(min-width: 1024px)"

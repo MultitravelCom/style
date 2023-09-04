@@ -360,15 +360,6 @@ function Button(props) {
         props.onClick();
     };
 
-    const handleWhatsAppClick = () => {
-        const { shouldShowButton } = props;
-
-        if (shouldShowButton) {
-            const whatsappURL = 'https://wa.link/64zdo9';
-            window.open(whatsappURL, '_blank');
-        }
-    };
-
     return (
         <button id={props.id} className={props.className} onClick={handleClick}>{props.text}</button>
     );
@@ -395,7 +386,6 @@ function shouldShowEvent() {
 
     return now >= startDate && now <= endDate;
 }
-
 const EventImg = (props) => {
     if (shouldShowEvent()) {
         return (
@@ -408,19 +398,19 @@ const EventImg = (props) => {
         );
     }
 };
-const WarningPrice = () => {
-    return (
-        <div className="container main__warningPrice">
-            <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-            <p>Los precios publicados no aplican para fines de semana largo y vacaciones de invierno y verano.
-                De todas maneras puedes comunicarte con nuestros especialistas para que te den información al respecto.</p>
-        </div>
+// const WarningPrice = () => {
+//     return (
+//         <div className="container main__warningPrice">
+//             <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+//             <p>Los precios publicados no aplican para fines de semana largo y vacaciones de invierno y verano.
+//                 De todas maneras puedes comunicarte con nuestros especialistas para que te den información al respecto.</p>
+//         </div>
 
-    )
-}
+//     )
+// }
 const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
-    const [buttonSwitch, setButtonSwitch] = React.useState("B");
+    const [buttonSwitch, setButtonSwitch] = React.useState("A");
 
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
@@ -559,17 +549,7 @@ const Loader = () => {
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     );
 };
-function ButtonPre(props) {
 
-    const handleClick = (event) => {
-        event.preventDefault();
-        window.open(props.link, '_blank');
-    }
-
-    return (
-        <button className="btn btnStyleBannerPre" onClick={handleClick}>{props.text}</button>
-    );
-}
 // ************************************************
 
 function App() {
