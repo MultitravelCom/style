@@ -348,15 +348,45 @@ const BannerTravelSale = () => {
 }
 
 function Button(props) {
-    const handleClick = () => {
-        const whatsappURL = 'https://wa.link/64zdo9';
-        window.open(whatsappURL, '_blank');
+    const [isVisible, setIsVisible] = React.useState(false);
+  
+    React.useEffect(() => {
+      // Función para obtener la hora y el día actual
+      const getCurrentTimeAndDay = () => {
+        const currentDate = new Date();
+        const currentHour = currentDate.getHours();
+        const currentDay = currentDate.getDay();
+        return { currentHour, currentDay };
       };
-
+  
+      const { currentHour, currentDay } = getCurrentTimeAndDay();
+  
+      const isButtonVisible =
+        (currentDay >= 1 && currentDay <= 5 && currentHour >= 10 && currentHour < 20) ||
+        (currentDay === 6 && currentHour >= 10 && currentHour < 15);
+  
+      setIsVisible(isButtonVisible);
+    }, []);
+  
+    const handleClick = () => {
+      const whatsappURL = 'https://wa.link/64zdo9';
+      window.open(whatsappURL, '_blank');
+    };
+  
+    if (!isVisible) {
+      return null;
+    }
+  
     return (
-        <button id={props.id} className={props.className} onClick={handleClick}>{props.text}</button>
+      <button
+        id={props.id}
+        className={props.className}
+        onClick={handleClick}
+      >
+        {props.text}
+      </button>
     );
-}
+  }
 
 function mostrarSeccion() {
     let url = window.location.href; // Obtener la URL completa
@@ -432,7 +462,7 @@ const Card = ({ destinos }) => {
                     </div>
                     <div className="main__container__buttonsCars">
                         <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar ahora" onClick={handleBannerClick} />
-                        <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Agendar llamada" />
+                        <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Whatsapp" />
                     </div>
                 </div>
             </div>
@@ -529,7 +559,6 @@ const Loader = () => {
 };
 
 // ************************************************
-
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [ocultarComponente, setOcultarComponente] = React.useState(true);
