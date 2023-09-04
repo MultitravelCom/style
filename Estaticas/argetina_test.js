@@ -402,7 +402,7 @@ const WarningPrice = () => {
 
     )
 }
-const Card = ({ destinos, onContactClick }) => {
+const Card = ({ destinos }) => {
     const [openModal, setOpenModal] = React.useState(false);
 
     const handleBannerClick = () => {
