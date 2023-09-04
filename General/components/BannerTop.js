@@ -243,7 +243,7 @@ const BannerTop = () => {
                     ) : (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : null }
                             target="_blank"
-                            onClick={showPackageImages ? null : onClick={scrollAncla}}
+                            onClick={showPackageImages ? null : scrollAncla}
                         >
                             <picture>
                                 <source
