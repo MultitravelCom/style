@@ -465,7 +465,6 @@ const Card = ({ destinos }) => {
                     <div className="main__container__buttonsCars">
                         <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Whatsapp" shouldShowButton={shouldShowButton} />
                         <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar" onClick={handleBannerClick} shouldShowButton={true} />
-
                     </div>
                 </div>
             </div>
