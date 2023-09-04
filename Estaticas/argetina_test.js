@@ -463,8 +463,12 @@ const Card = ({ destinos }) => {
                         <div className="priceStyle right">{destino.price}</div>
                     </div>
                     <div className="main__container__buttonsCars">
-                        <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Whatsapp" shouldShowButton={shouldShowButton} />
-                        <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar" onClick={handleBannerClick} shouldShowButton={true} />
+                        <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Whatsapp" shouldShowButton={shouldShowButton} >
+                            <div className="glyphicon glyphicon-whatsapp-bottomless"></div>
+                        </Button>
+                        <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar" onClick={handleBannerClick} shouldShowButton={true} >
+                            <div className="glyphicon glyphicon-whatsapp-bottomless"></div>
+                        </Button>
                     </div>
                 </div>
             </div>
