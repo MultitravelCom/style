@@ -33,7 +33,7 @@ const destinos1 = [
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
         priceBaja: "$121.860",
-        price: "$161.200",
+        price: "$166.700",
         events: "si"
     },
     {
@@ -44,7 +44,7 @@ const destinos1 = [
         linkWa: "https://wa.link/s507zo",
         title: "Paquete a Bariloche",
         priceBaja: "$171.120",
-        price: "$214.560",
+        price: "$225.600",
         events: "si"
     },
     {
@@ -55,7 +55,7 @@ const destinos1 = [
         linkWa: "https://wa.link/duchkz",
         title: "Paquete a Bariloche",
         priceBaja: "$213.100",
-        price: "$276.900",
+        price: "$283.500",
         events: "si"
     },
     {
@@ -191,7 +191,7 @@ const destinos3 = [
         linkWa: "https://wa.link/vs8baw",
         title: "Paquete a Mendoza",
         priceBaja: "$223.100",
-        price: "$216.5000",
+        price: "$216.500",
         events: "si"
     },
     {
@@ -282,7 +282,7 @@ const BitrixFormTitle = () => {
             <div className="bitrixFormTitle_text">
                 <p class="single-line">Completa tus datos para que te contacte un especialista.</p>
             </div>
-            <ButtonBitrixForm />
+            {/* <ButtonBitrixForm /> */}
         </div>
     )
 }
@@ -326,26 +326,19 @@ const BannerTravelSale = () => {
                 <picture>
                     <source
                         media="(min-width: 1024px)"
-                        srcSet="
-                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
-          "
+                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Argentina/Banner-Desktop.webp"
                     />
                     <source
                         media="(min-width: 768px) and (max-width: 1023px)"
-                        srcSet="
-                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
-                    "
+                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Argentina/Banner-Desktop.webp"
                     />
                     <source
                         media="(max-width: 767px)"
-                        srcSet="
-                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Mobile.webp
-                    "
+                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Argentina/Banner-Mobile.webp"
                     />
                     <img
                         className="main_conteiner__s1_medio__paquetes__img"
-                        src="            https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
-                    "
+                        src="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Argentina/Banner-Desktop.webp"
                         alt="Imagen banner promociones"
                     />
                 </picture>
@@ -355,10 +348,10 @@ const BannerTravelSale = () => {
 }
 
 function Button(props) {
-    const handleClick = (event) => {
-        event.preventDefault();
-        props.onClick();
-    };
+    const handleClick = () => {
+        const whatsappURL = 'https://wa.link/64zdo9';
+        window.open(whatsappURL, '_blank');
+      };
 
     return (
         <button id={props.id} className={props.className} onClick={handleClick}>{props.text}</button>
@@ -439,13 +432,13 @@ const Card = ({ destinos, onContactClick }) => {
                     </div>
                     <div className="main__container__buttonsCars">
                         <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar ahora" onClick={handleBannerClick} />
-                        <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Agendar llama" onClick={() => onContactClick(destino.id)} />
+                        <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Agendar llamada" onClick={handleClick} />
                     </div>
                 </div>
             </div>
         )));
 };
-const CardContainer = ({ btnStyles, destinos, onContactClick }) => {
+const CardContainer = ({ btnStyles, destinos }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
     React.useEffect(() => {
@@ -516,7 +509,7 @@ const CardContainer = ({ btnStyles, destinos, onContactClick }) => {
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div className={carrusel} id={destinos.title}>
-                        <Card destinos={destinos} onContactClick={onContactClick} />
+                        <Card destinos={destinos} />
                     </div>
                     <button
                         aria-label="Siguiente"
@@ -534,24 +527,14 @@ const Loader = () => {
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     );
 };
-function ButtonPre(props) {
 
-    const handleClick = (event) => {
-        event.preventDefault();
-        window.open(props.link, '_blank');
-    }
-
-    return (
-        <button className="btn btnStyleBannerPre" onClick={handleClick}>{props.text}</button>
-    );
-}
 // ************************************************
 
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [ocultarComponente, setOcultarComponente] = React.useState(true);
-    const [selectedFormId, setSelectedFormId] = React.useState(false);
-    const [isFormVisible, setIsFormVisible] = React.useState(false);
+    // const [selectedFormId, setSelectedFormId] = React.useState(false);
+    // const [isFormVisible, setIsFormVisible] = React.useState(false);
 
     React.useEffect(() => {
         setTimeout(() => {
@@ -572,17 +555,17 @@ function App() {
 
     }, []);
 
-    const handleOpenForm = (formId) => {
+    // const handleOpenForm = (formId) => {
 
-        setSelectedFormId(formId);
-        setIsFormVisible(true);
+    //     setSelectedFormId(formId);
+    //     setIsFormVisible(true);
 
-    };
+    // };
 
-    const handleCloseForm = () => {
-        setSelectedFormId(null);
-        setIsFormVisible(false);
-    };
+    // const handleCloseForm = () => {
+    //     setSelectedFormId(null);
+    //     setIsFormVisible(false);
+    // };
     return (
         <>
             {loaded ? (
@@ -607,7 +590,7 @@ function App() {
                             <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} onContactClick={handleOpenForm} />
                         </div>
                     </div>
-                    {isFormVisible && (
+                    {/* {isFormVisible && (
                         <div className="modalBitrix">
                             <div className="modal-content-Bitrix">
                                 <span className="close-button-bitrix" onClick={handleCloseForm}>
@@ -617,7 +600,7 @@ function App() {
                                 <BitrixFormComponent isVisible={isFormVisible} formId={selectedFormId} />
                             </div>
                         </div>
-                    )}
+                    )} */}
                 </>
             ) : (
                 <Loader />
