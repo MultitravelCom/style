@@ -228,7 +228,7 @@ const BannerTop = () => {
                     {isMobile ? (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/argentina"}
                             target="_blank"
-                            onClick={showPackageImages ? null : onClick={scrollAncla}}
+                            onClick={showPackageImages ? null : scrollAncla}
                         >
 
                             <img className="bannerTop__img"
