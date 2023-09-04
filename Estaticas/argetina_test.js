@@ -432,7 +432,7 @@ const Card = ({ destinos }) => {
                     </div>
                     <div className="main__container__buttonsCars">
                         <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar ahora" onClick={handleBannerClick} />
-                        <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Agendar llamada" onClick={handleClick} />
+                        <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Agendar llamada" />
                     </div>
                 </div>
             </div>
