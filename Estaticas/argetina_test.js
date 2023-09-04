@@ -235,57 +235,57 @@ const btnStyles = [
 ];
 // *****************************************************
 // ************** BITRIX ********************
-const BitrixFormComponent = ({ isVisible }) => {
-    const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
+// const BitrixFormComponent = ({ isVisible }) => {
+//     const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
 
-    React.useEffect(() => {
-        if (isVisible && !isScriptLoaded) {
-            const script = document.createElement("script");
-            script.async = true;
-            script.src = "https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js";
-            script.setAttribute("data-b24-form", "inline/56/aj4a4r");
-            script.setAttribute("data-skip-moving", "true");
-            document.getElementById("bitrix-form-container").appendChild(script);
+//     React.useEffect(() => {
+//         if (isVisible && !isScriptLoaded) {
+//             const script = document.createElement("script");
+//             script.async = true;
+//             script.src = "https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js";
+//             script.setAttribute("data-b24-form", "inline/56/aj4a4r");
+//             script.setAttribute("data-skip-moving", "true");
+//             document.getElementById("bitrix-form-container").appendChild(script);
 
-            setIsScriptLoaded(true);
-        } else if (!isVisible && isScriptLoaded) {
-            const scriptElement = document.querySelector('script[data-b24-form="inline/56/aj4a4r"]');
-            if (scriptElement) {
-                scriptElement.remove();
-            }
+//             setIsScriptLoaded(true);
+//         } else if (!isVisible && isScriptLoaded) {
+//             const scriptElement = document.querySelector('script[data-b24-form="inline/56/aj4a4r"]');
+//             if (scriptElement) {
+//                 scriptElement.remove();
+//             }
 
-            setIsScriptLoaded(false);
-        }
-    }, [isVisible, isScriptLoaded]);
+//             setIsScriptLoaded(false);
+//         }
+//     }, [isVisible, isScriptLoaded]);
 
-    return <div id="bitrix-form-container" />;
-};
-const ButtonBitrixForm = () => {
-    const isMobile = window.innerWidth < 454;
+//     return <div id="bitrix-form-container" />;
+// };
+// const ButtonBitrixForm = () => {
+//     const isMobile = window.innerWidth < 454;
 
-    const handleCallButtonClick = (event) => {
-        event.preventDefault();
-        if (isMobile) {
-            window.location.href = 'tel:08003480003';
-        }
-    };
+//     const handleCallButtonClick = (event) => {
+//         event.preventDefault();
+//         if (isMobile) {
+//             window.location.href = 'tel:08003480003';
+//         }
+//     };
 
-    return isMobile ? (
-        <div className="bitrixFormTitle-button">
-            <button onClick={handleCallButtonClick} className="style__btn__britrix">Llamar</button>
-        </div>
-    ) : null;
-}
-const BitrixFormTitle = () => {
-    return (
-        <div className="BitrixFormTitle">
-            <div className="bitrixFormTitle_text">
-                <p class="single-line">Completa tus datos para que te contacte un especialista.</p>
-            </div>
-            {/* <ButtonBitrixForm /> */}
-        </div>
-    )
-}
+//     return isMobile ? (
+//         <div className="bitrixFormTitle-button">
+//             <button onClick={handleCallButtonClick} className="style__btn__britrix">Llamar</button>
+//         </div>
+//     ) : null;
+// }
+// const BitrixFormTitle = () => {
+//     return (
+//         <div className="BitrixFormTitle">
+//             <div className="bitrixFormTitle_text">
+//                 <p class="single-line">Completa tus datos para que te contacte un especialista.</p>
+//             </div>
+//             {/* <ButtonBitrixForm /> */}
+//         </div>
+//     )
+// }
 // ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
@@ -583,11 +583,11 @@ function App() {
                     }
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
 
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} />
 
-                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
                         </div>
                     </div>
                     {/* {isFormVisible && (
