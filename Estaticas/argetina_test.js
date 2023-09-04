@@ -33,7 +33,7 @@ const destinos1 = [
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
         priceBaja: "$121.860",
-        price: "$166.700",
+        price: "$161.200",
         events: "si"
     },
     {
@@ -44,7 +44,7 @@ const destinos1 = [
         linkWa: "https://wa.link/s507zo",
         title: "Paquete a Bariloche",
         priceBaja: "$171.120",
-        price: "$225.600",
+        price: "$214.560",
         events: "si"
     },
     {
@@ -55,7 +55,7 @@ const destinos1 = [
         linkWa: "https://wa.link/duchkz",
         title: "Paquete a Bariloche",
         priceBaja: "$213.100",
-        price: "$283.500",
+        price: "$276.900",
         events: "si"
     },
     {
@@ -191,7 +191,7 @@ const destinos3 = [
         linkWa: "https://wa.link/vs8baw",
         title: "Paquete a Mendoza",
         priceBaja: "$223.100",
-        price: "$216.500",
+        price: "$216.5000",
         events: "si"
     },
     {
@@ -235,57 +235,57 @@ const btnStyles = [
 ];
 // *****************************************************
 // ************** BITRIX ********************
-// const BitrixFormComponent = ({ isVisible }) => {
-//     const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
+const BitrixFormComponent = ({ isVisible }) => {
+    const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
 
-//     React.useEffect(() => {
-//         if (isVisible && !isScriptLoaded) {
-//             const script = document.createElement("script");
-//             script.async = true;
-//             script.src = "https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js";
-//             script.setAttribute("data-b24-form", "inline/56/aj4a4r");
-//             script.setAttribute("data-skip-moving", "true");
-//             document.getElementById("bitrix-form-container").appendChild(script);
+    React.useEffect(() => {
+        if (isVisible && !isScriptLoaded) {
+            const script = document.createElement("script");
+            script.async = true;
+            script.src = "https://cdn.bitrix24.com/b19657597/crm/form/loader_56.js";
+            script.setAttribute("data-b24-form", "inline/56/aj4a4r");
+            script.setAttribute("data-skip-moving", "true");
+            document.getElementById("bitrix-form-container").appendChild(script);
 
-//             setIsScriptLoaded(true);
-//         } else if (!isVisible && isScriptLoaded) {
-//             const scriptElement = document.querySelector('script[data-b24-form="inline/56/aj4a4r"]');
-//             if (scriptElement) {
-//                 scriptElement.remove();
-//             }
+            setIsScriptLoaded(true);
+        } else if (!isVisible && isScriptLoaded) {
+            const scriptElement = document.querySelector('script[data-b24-form="inline/56/aj4a4r"]');
+            if (scriptElement) {
+                scriptElement.remove();
+            }
 
-//             setIsScriptLoaded(false);
-//         }
-//     }, [isVisible, isScriptLoaded]);
+            setIsScriptLoaded(false);
+        }
+    }, [isVisible, isScriptLoaded]);
 
-//     return <div id="bitrix-form-container" />;
-// };
-// const ButtonBitrixForm = () => {
-//     const isMobile = window.innerWidth < 454;
+    return <div id="bitrix-form-container" />;
+};
+const ButtonBitrixForm = () => {
+    const isMobile = window.innerWidth < 454;
 
-//     const handleCallButtonClick = (event) => {
-//         event.preventDefault();
-//         if (isMobile) {
-//             window.location.href = 'tel:08003480003';
-//         }
-//     };
+    const handleCallButtonClick = (event) => {
+        event.preventDefault();
+        if (isMobile) {
+            window.location.href = 'tel:08003480003';
+        }
+    };
 
-//     return isMobile ? (
-//         <div className="bitrixFormTitle-button">
-//             <button onClick={handleCallButtonClick} className="style__btn__britrix">Llamar</button>
-//         </div>
-//     ) : null;
-// }
-// const BitrixFormTitle = () => {
-//     return (
-//         <div className="BitrixFormTitle">
-//             <div className="bitrixFormTitle_text">
-//                 <p class="single-line">Completa tus datos para que te contacte un especialista.</p>
-//             </div>
-//             {/* <ButtonBitrixForm /> */}
-//         </div>
-//     )
-// }
+    return isMobile ? (
+        <div className="bitrixFormTitle-button">
+            <button onClick={handleCallButtonClick} className="style__btn__britrix">Llamar</button>
+        </div>
+    ) : null;
+}
+const BitrixFormTitle = () => {
+    return (
+        <div className="BitrixFormTitle">
+            <div className="bitrixFormTitle_text">
+                <p class="single-line">Completa tus datos para que te contacte un especialista.</p>
+            </div>
+            <ButtonBitrixForm />
+        </div>
+    )
+}
 // ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
@@ -326,19 +326,26 @@ const BannerTravelSale = () => {
                 <picture>
                     <source
                         media="(min-width: 1024px)"
-                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Argentina/Banner-Desktop.webp"
+                        srcSet="
+                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
+          "
                     />
                     <source
                         media="(min-width: 768px) and (max-width: 1023px)"
-                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Argentina/Banner-Desktop.webp"
+                        srcSet="
+                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
+                    "
                     />
                     <source
                         media="(max-width: 767px)"
-                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Argentina/Banner-Mobile.webp"
+                        srcSet="
+                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Mobile.webp
+                    "
                     />
                     <img
                         className="main_conteiner__s1_medio__paquetes__img"
-                        src="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Argentina/Banner-Desktop.webp"
+                        src="            https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
+                    "
                         alt="Imagen banner promociones"
                     />
                 </picture>
@@ -348,45 +355,22 @@ const BannerTravelSale = () => {
 }
 
 function Button(props) {
-    const [isVisible, setIsVisible] = React.useState(false);
-
-    React.useEffect(() => {
-        // Función para obtener la hora y el día actual
-        const { shouldShowButton } = props;
-
-        const getCurrentTimeAndDay = () => {
-            const currentDate = new Date();
-            const currentHour = currentDate.getHours();
-            const currentDay = currentDate.getDay();
-            return { currentHour, currentDay };
-        };
-
-        const { currentHour, currentDay } = getCurrentTimeAndDay();
-
-        const isButtonVisible =
-            (currentDay >= 1 && currentDay <= 5 && currentHour >= 10 && currentHour < 20) ||
-            (currentDay === 6 && currentHour >= 10 && currentHour < 15);
-
-        setIsVisible(isButtonVisible && shouldShowButton);
-    }, [shouldShowButton]);
-
-    const handleClick = () => {
-        const whatsappURL = 'https://wa.link/64zdo9';
-        window.open(whatsappURL, '_blank');
+    const handleClick = (event) => {
+        event.preventDefault();
+        props.onClick();
     };
 
-    if (!isVisible) {
-        return null;
-    }
+    const handleWhatsAppClick = () => {
+        const { shouldShowButton } = props;
+
+        if (shouldShowButton) {
+            const whatsappURL = 'https://wa.link/64zdo9';
+            window.open(whatsappURL, '_blank');
+        }
+    };
 
     return (
-        <button
-            id={props.id}
-            className={props.className}
-            onClick={handleClick}
-        >
-            {props.text}
-        </button>
+        <button id={props.id} className={props.className} onClick={handleClick}>{props.text}</button>
     );
 }
 
@@ -433,9 +417,10 @@ const WarningPrice = () => {
         </div>
 
     )
-};
-const Card = ({ destinos }) => {
+}
+const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
+    const [buttonSwitch, setButtonSwitch] = React.useState("A");
 
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
@@ -443,6 +428,11 @@ const Card = ({ destinos }) => {
         } else {
             setOpenModal(true);
         }
+    };
+
+    const handleWhatsAppClick = () => {
+        const whatsappURL = 'https://wa.link/64zdo9';
+        window.open(whatsappURL, '_blank');
     };
 
     return (
@@ -463,18 +453,24 @@ const Card = ({ destinos }) => {
                         <div className="priceStyle right">{destino.price}</div>
                     </div>
                     <div className="main__container__buttonsCars">
-                        <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Whatsapp" shouldShowButton={shouldShowButton} >
-                            <div className="glyphicon glyphicon-whatsapp-bottomless"></div>
-                        </Button>
-                        <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar" onClick={handleBannerClick} shouldShowButton={true} >
-                            <div className="glyphicon glyphicon-phone"></div>
-                        </Button>
+                        {buttonSwitch === "A" && (
+                            <>
+                                <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Whatsapp" onClick={handleWhatsAppClick} />
+                                <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar" onClick={handleBannerClick} />
+                            </>
+                        )}
+                        {buttonSwitch === "b" && (
+                            <>
+                                <Button id={destino.title} className="btn_Style_Venta_Per btn_FormBitrix" text="Agendar llamada" onClick={() => onContactClick(destino.id)} />
+                                <Button id={destino.id} className="btn_Style_Venta_Per classOpenModal" text="Llamar" onClick={handleBannerClick} />
+                            </>
+                        )}
                     </div>
                 </div>
             </div>
         )));
 };
-const CardContainer = ({ btnStyles, destinos }) => {
+const CardContainer = ({ btnStyles, destinos, onContactClick }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
     React.useEffect(() => {
@@ -545,7 +541,7 @@ const CardContainer = ({ btnStyles, destinos }) => {
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div className={carrusel} id={destinos.title}>
-                        <Card destinos={destinos} />
+                        <Card destinos={destinos} onContactClick={onContactClick} />
                     </div>
                     <button
                         aria-label="Siguiente"
@@ -563,13 +559,24 @@ const Loader = () => {
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     );
 };
+function ButtonPre(props) {
 
+    const handleClick = (event) => {
+        event.preventDefault();
+        window.open(props.link, '_blank');
+    }
+
+    return (
+        <button className="btn btnStyleBannerPre" onClick={handleClick}>{props.text}</button>
+    );
+}
 // ************************************************
+
 function App() {
     const [loaded, setLoaded] = React.useState(false);
     const [ocultarComponente, setOcultarComponente] = React.useState(true);
-    // const [selectedFormId, setSelectedFormId] = React.useState(false);
-    // const [isFormVisible, setIsFormVisible] = React.useState(false);
+    const [selectedFormId, setSelectedFormId] = React.useState(false);
+    const [isFormVisible, setIsFormVisible] = React.useState(false);
 
     React.useEffect(() => {
         setTimeout(() => {
@@ -590,17 +597,17 @@ function App() {
 
     }, []);
 
-    // const handleOpenForm = (formId) => {
+    const handleOpenForm = (formId) => {
 
-    //     setSelectedFormId(formId);
-    //     setIsFormVisible(true);
+        setSelectedFormId(formId);
+        setIsFormVisible(true);
 
-    // };
+    };
 
-    // const handleCloseForm = () => {
-    //     setSelectedFormId(null);
-    //     setIsFormVisible(false);
-    // };
+    const handleCloseForm = () => {
+        setSelectedFormId(null);
+        setIsFormVisible(false);
+    };
     return (
         <>
             {loaded ? (
@@ -618,14 +625,14 @@ function App() {
                     }
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} />
+                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} onContactClick={handleOpenForm} />
 
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} />
+                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} onContactClick={handleOpenForm} />
 
-                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} />
+                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} onContactClick={handleOpenForm} />
                         </div>
                     </div>
-                    {/* {isFormVisible && (
+                    {isFormVisible && (
                         <div className="modalBitrix">
                             <div className="modal-content-Bitrix">
                                 <span className="close-button-bitrix" onClick={handleCloseForm}>
@@ -635,7 +642,7 @@ function App() {
                                 <BitrixFormComponent isVisible={isFormVisible} formId={selectedFormId} />
                             </div>
                         </div>
-                    )} */}
+                    )}
                 </>
             ) : (
                 <Loader />
