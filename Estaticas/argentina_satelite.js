@@ -474,9 +474,9 @@ const Card = ({ destinos, onContactClick }) => {
                             <ButtonLading
                                 id={destino.id}
                                 className="classOpenModal"
-                                text="Llamar"
+                                text={buttonSwitch === "A" ? "Llamar" : "Llamar Ahora"}
                                 onClick={handleBannerClick}
-                                svgType='phone'
+                                svgType={buttonSwitch === "A" ? 'phone' : null }
                             />
                         </>
                     </div>
