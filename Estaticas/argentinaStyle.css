@@ -451,7 +451,7 @@
  .btn_FormBitrix:hover {
    color: #FFFFFF;
    background: #1480FF;
-   border: 1px solid #2A8BFE;
+   border: 1px solid #1480FF;
    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
  }
 

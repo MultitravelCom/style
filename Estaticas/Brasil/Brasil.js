@@ -375,7 +375,7 @@ const Card = ({ destinos, onContactClick }) => {
                                             className={buttonSwitch === "A" ? "btn_Whatsapp" : "btn_FormBitrix"}
                                             text={buttonSwitch === "A" ? "Whatsapp" : "Agendar llamada"}
                                             onClick={buttonSwitch === "A" ? handleWhatsAppClick : () => onContactClick(destino.id)}
-                                            svgType={buttonSwitch === "A" ? 'whatsapp' : 'phone'}
+                                            svgType={buttonSwitch === "A" ? 'whatsapp' : null }
                                         />
                                         <ButtonLading
                                             id={destino.id}

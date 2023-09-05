@@ -478,16 +478,16 @@ source>img {
   } */
 
 .btn_FormBitrix {
-    color: #2A8BFE;
-    background-color: #ffffff;
+    color: white;
+    background-color: #2A8BFE;
     border: 1px solid #2A8BFE;
 }
 
 .btn_FormBitrix:hover {
     color: #FFFFFF;
     background: #1480FF;
-    border: 1px solid #2A8BFE;
-    transition: fill 0.3s ease-in-out;
+    border: 1px solid #1480FF;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .btn_FormBitrix::selection {
