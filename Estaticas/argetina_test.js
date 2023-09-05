@@ -363,7 +363,7 @@ function Button(props) {
     return (
         <button id={props.id} className={props.className} onClick={handleClick}>
             <div className="button-content">
-                <span className={`glyphicon ${props.iconClass}`}>
+                <span className={`"btn_Style_Venta_Per glyphicon ${props.iconClass}`}>
                     {props.text}
                 </span>
             </div>
@@ -452,14 +452,14 @@ const Card = ({ destinos, onContactClick }) => {
                         <>
                             <Button
                                 id={destino.title}
-                                className="btn_Style_Venta_Per btn_FormBitrix"
+                                className={buttonSwitch === "A" ? "btn_Whatsapp" : "btn_FormBitrix"}
                                 text={buttonSwitch === "A" ? "Whatsapp" : "Agendar llamada"}
                                 onClick={buttonSwitch === "A" ? handleWhatsAppClick : () => onContactClick(destino.id)}
-                                iconClass={buttonSwitch === "A" ? "glyphicon-whatsapp-bottomless" : "glyphicon-calendar"}
+                                iconClass={buttonSwitch === "A" ? "glyphicon-whatsapp-bottomless styleWaIcon" : "glyphicon-calendar styleCalenIcon"}
                             />
                             <Button
                                 id={destino.id}
-                                className="btn_Style_Venta_Per classOpenModal"
+                                className="classOpenModal"
                                 text="Llamar"
                                 onClick={handleBannerClick}
                                 iconClass="glyphicon-phone"

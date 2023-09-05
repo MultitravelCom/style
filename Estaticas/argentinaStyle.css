@@ -458,6 +458,10 @@
    background: #66ACFF;
    border: 1px solid #66ACFF;
  }
+ .btn_Whatsapp{
+    color: white;
+    background-color: #03D749;
+ }
 
  .main_container_priceStyle {
    display: flex;
@@ -511,6 +515,7 @@
  /* .whatsAppFixes{
   display: none;
  } */
+
  /* MOBILE */
  @media (max-width: 964px) {
    .main__conteiner__s1__destacado {
