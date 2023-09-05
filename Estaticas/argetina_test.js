@@ -354,7 +354,7 @@ const BannerTravelSale = () => {
     )
 }
 
-function Button(props) {
+function ButtonLading(props) {
     const handleClick = (event) => {
         event.preventDefault();
         props.onClick();
@@ -448,14 +448,14 @@ const Card = ({ destinos, onContactClick }) => {
                     </div>
                     <div className="main__container__buttonsCars">
                         <>
-                            <Button
+                            <ButtonLading
                                 id={destino.title}
                                 className={buttonSwitch === "A" ? "btn_Whatsapp" : "btn_FormBitrix"}
                                 text={buttonSwitch === "A" ? "Whatsapp" : "Agendar llamada"}
                                 onClick={buttonSwitch === "A" ? handleWhatsAppClick : () => onContactClick(destino.id)}
                                 iconClass={buttonSwitch === "A" ? "glyphicon-whatsapp-bottomless styleWaIcon" : "glyphicon-calendar styleCalenIcon"}
                             />
-                            <Button
+                            <ButtonLading
                                 id={destino.id}
                                 className="classOpenModal"
                                 text="Llamar"
