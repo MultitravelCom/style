@@ -464,6 +464,8 @@ const Card = ({ destinos, onContactClick }) => {
           .then((responseData) => {
             console.log(responseData); // Agregar un console.log para ver los datos de la API
             setData(responseData); // Almacena los datos en el estado
+            setButtonSwitch(responseData[0]?.attributes?.Swicher ? "A" : "B");
+
           });
       }, []);
 
