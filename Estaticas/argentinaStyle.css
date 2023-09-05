@@ -421,7 +421,7 @@
  .btn_Style_Venta_Per {
    display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: space-around;
    padding: 2% 5%;
    min-width: 112px;
    height: 35px;
