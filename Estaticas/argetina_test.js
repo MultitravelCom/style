@@ -362,7 +362,7 @@ function Button(props) {
 
     return (
         <button id={props.id} className={props.className} onClick={handleClick}>
-            <span className={`"btn_Style_Venta_Per glyphicon ${props.iconClass}`}>
+            <span className={`btn_Style_Venta_Per ${props.iconClass}`}>
                 {props.text}
             </span>
         </button>
