@@ -290,16 +290,16 @@ const BitrixFormTitle = () => {
 
 function fetchDataFromAPI() {
     return fetch('https://strapicontent.apimultitravel.com/api/button-swichers')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('No se pudo obtener los datos de la API');
-        }
-        return response.json();
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('No se pudo obtener los datos de la API');
+            }
+            return response.json();
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+}
 // ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
@@ -459,17 +459,17 @@ const Card = ({ destinos, onContactClick }) => {
 
     React.useEffect(() => {
         fetchDataFromAPI()
-          .then((responseData) => {
-            console.log(responseData);
-            console.log("buttonSwitch:", buttonSwitch);
-      
-            setData(responseData);
-            const newButtonSwitch = responseData[0]?.attributes?.Swicher ? "A" : "B";
-            setButtonSwitch(newButtonSwitch);
-      
-            console.log('Valor de Swicher en fetchDataFromAPI:', newButtonSwitch);
-          });
-      }, []);
+            .then((responseData) => {
+                console.log(responseData);
+                console.log("buttonSwitch:", buttonSwitch);
+
+                setData(responseData);
+                const newButtonSwitch = responseData[0]?.attributes?.Swicher ? "A" : "B";
+                setButtonSwitch(newButtonSwitch);
+
+                console.log('Valor de Swicher en fetchDataFromAPI:', newButtonSwitch);
+            });
+    }, []);
 
     return (
         destinos.map((destino) => (
@@ -492,17 +492,18 @@ const Card = ({ destinos, onContactClick }) => {
                         <>
                             <ButtonLading
                                 id={destino.title}
-                                className={buttonSwitch === "A" ? "btn_Whatsapp" : "btn_FormBitrix"}
-                                text={buttonSwitch === "A" ? "Whatsapp" : "Agendar llamada"}
-                                onClick={buttonSwitch === "A" ? handleWhatsAppClick : () => onContactClick(destino.id)}
-                                svgType={buttonSwitch === "A" ? 'whatsapp' : null }
+                                className={data[0]?.attributes?.Swicher ? "btn_Whatsapp" : "btn_FormBitrix"}
+                                text={data[0]?.attributes?.Swicher ? "Whatsapp" : "Agendar llamada"}
+                                onClick={data[0]?.attributes?.Swicher ? handleWhatsAppClick : () => onContactClick(destino.id)}
+                                svgType={data[0]?.attributes?.Swicher ? 'whatsapp' : 'phone'} // Asegúrate de configurar 'whatsapp' o 'phone' según corresponda
                             />
+
                             <ButtonLading
                                 id={destino.id}
                                 className="classOpenModal"
-                                text={buttonSwitch === "A" ? "Llamar" : "Llamar Ahora"}
+                                text={data[0]?.attributes?.Swicher ? "Llamar" : "Llamar Ahora"}
                                 onClick={handleBannerClick}
-                                svgType={buttonSwitch === "A" ? 'phone' : null }
+                                svgType={data[0]?.attributes?.Swicher ? 'phone' : null} // Asegúrate de configurar 'phone' o null según corresponda
                             />
                         </>
                     </div>
