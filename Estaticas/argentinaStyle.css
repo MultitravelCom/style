@@ -429,14 +429,6 @@
    border: none;
    cursor: pointer;
    font-size: 14px;
-
-   position: relative;
-   display: inline-block;
-   font-size: 1.143rem;
-   font-style: normal;
-   font-weight: normal;
-   line-height: 1;
-   -webkit-font-smoothing: antialiased;
  }
 
  .btn_from_bitrix {
@@ -551,9 +543,9 @@
  }
 
  /* ---*-*-*-*-*-*-*-*-*-*- */
- /* .whatsAppFixes{
+ .whatsAppFixes{
   display: none;
- } */
+ }
 
  /* MOBILE */
  @media (max-width: 964px) {
