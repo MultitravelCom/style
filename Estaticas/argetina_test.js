@@ -362,11 +362,9 @@ function Button(props) {
 
     return (
         <button id={props.id} className={props.className} onClick={handleClick}>
-            <div className="button-content">
-                <span className={`"btn_Style_Venta_Per glyphicon ${props.iconClass}`}>
-                    {props.text}
-                </span>
-            </div>
+            <span className={`"btn_Style_Venta_Per glyphicon ${props.iconClass}`}>
+                {props.text}
+            </span>
         </button>
     );
 }
