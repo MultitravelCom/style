@@ -490,10 +490,9 @@
    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Agrega transiciones suaves */
 }
 
-.btn_Style_Venta_Per:hover .phone-svg  {
-  background-color: #2A8BFE; /* Cambia el color de fondo al hacer hover */
-   color: white; /* Cambia el color del texto al hacer hover */
-   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Agrega transiciones suaves */
+.btn_Style_Venta_Per:hover svg path {
+  fill: #2A8BFE; /* Cambia el color del relleno del SVG al hacer hover */
+  transition: fill 0.3s ease-in-out; /* Agrega una transición suave para el cambio de color */
 }
 
  .classOpenModal::selection {
