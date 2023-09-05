@@ -463,7 +463,7 @@ const Card = ({ destinos, onContactClick }) => {
         fetchDataFromAPI()
           .then((responseData) => {
             console.log(responseData);
-            console.log("buttonSwitch:", newButtonSwitch); // Agregar este console.log
+            console.log("buttonSwitch:", setButtonSwitch); // Agregar este console.log
  
             setData(responseData); 
             setButtonSwitch(responseData[0]?.attributes?.Swicher ? "A" : "B");
