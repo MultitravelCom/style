@@ -420,10 +420,8 @@
 
  .btn_Style_Venta_Per {
    padding: 2% 5%;
-   color: white;
    min-width: 112px;
    height: 35px;
-   background-color: #2a8bfe;
    border-radius: 32px;
    border: none;
    cursor: pointer;
@@ -436,10 +434,10 @@
    top: 16px;
  }
 
- .btn_Style_Venta_Per:hover {
-  border: 1px solid #1169b7;
+ /* .btn_Style_Venta_Per:hover {
+   border: 1px solid #1169b7;
    background-color: #1169b7;
- }
+ } */
 
  .btn_FormBitrix {
    color: #2A8BFE;
@@ -458,9 +456,36 @@
    background: #66ACFF;
    border: 1px solid #66ACFF;
  }
- .btn_Whatsapp{
-    color: white;
-    background-color: #03D749;
+
+ .btn_Whatsapp {
+   color: white;
+   background-color: #03D749;
+ }
+
+ .btn_Whatsapp:hover {
+   color: white;
+   background-color: #00a94f;
+ }
+
+ .btn_Whatsapp::selection {
+   color: white;
+   background-color: #017738;
+ }
+
+ .classOpenModal {
+   border: 1px solid #2A8BFE;
+   color: #2A8BFE;
+   background-color: white;
+ }
+
+ .classOpenModal:hover {
+   background-color: #2A8BFE;
+   color: white;
+ }
+
+ .classOpenModal::selection {
+   background: #1169B7;
+   color: white;
  }
 
  .main_container_priceStyle {
@@ -505,12 +530,15 @@
    width: 100%;
    gap: 6px;
  }
- .carrusel__elemento{
-  width: 285px !important;
+
+ .carrusel__elemento {
+   width: 285px !important;
  }
- .b24-form-dropdown-container{
-  position: inherit;
+
+ .b24-form-dropdown-container {
+   position: inherit;
  }
+
  /* ---*-*-*-*-*-*-*-*-*-*- */
  /* .whatsAppFixes{
   display: none;
@@ -691,8 +719,9 @@
      background: #0d4e88;
      color: #f3f3f3;
    }
-   .carrusel__elemento{
-    width: 285px !important;
+
+   .carrusel__elemento {
+     width: 285px !important;
    }
  }
 
