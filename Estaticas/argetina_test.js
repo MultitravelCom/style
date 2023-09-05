@@ -361,8 +361,8 @@ function ButtonLading(props) {
     };
 
     return (
-        <button id={props.id} className={props.className} onClick={handleClick}>
-            <span className={`btn_Style_Venta_Per ${props.iconClass}`}>
+        <button id={props.id} className={`btn_Style_Venta_Per ${props.className}`} onClick={handleClick}>
+            <span className={`"glyphicon ${props.iconClass}`}>
                 {props.text}
             </span>
         </button>
