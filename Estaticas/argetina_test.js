@@ -462,6 +462,7 @@ const Card = ({ destinos, onContactClick }) => {
           .then((responseData) => {
             console.log(responseData);
             console.log("buttonSwitch:", buttonSwitch);
+            console.log(data)
       
             setData(responseData);
             const newButtonSwitch = responseData[0]?.attributes?.Swicher ? "A" : "B";
@@ -470,6 +471,9 @@ const Card = ({ destinos, onContactClick }) => {
             console.log('Valor de Swicher en fetchDataFromAPI:', newButtonSwitch);
           });
       }, []);
+
+      console.log("data:", data); // Verifica el valor de data después de la actualización
+
 
     return (
         destinos.map((destino) => (
