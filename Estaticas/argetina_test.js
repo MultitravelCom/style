@@ -462,13 +462,12 @@ const Card = ({ destinos, onContactClick }) => {
           .then((responseData) => {
             console.log(responseData);
             console.log("buttonSwitch:", buttonSwitch);
- 
-            setData(responseData); 
-            setButtonSwitch(responseData[0]?.attributes?.Swicher ? "A" : "B");
-
-            console.log('Valor de Swicher en fetchDataFromAPI:', data[0]?.attributes?.Swicher);
-
-
+      
+            setData(responseData);
+            const newButtonSwitch = responseData[0]?.attributes?.Swicher ? "A" : "B";
+            setButtonSwitch(newButtonSwitch);
+      
+            console.log('Valor de Swicher en fetchDataFromAPI:', newButtonSwitch);
           });
       }, []);
 
