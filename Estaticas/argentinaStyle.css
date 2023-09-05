@@ -428,14 +428,6 @@
    border: none;
    cursor: pointer;
    font-size: 14px;
-   position: relative;
-   display: inline-block;
-   font-family: JBE_Iconset;
-   font-size: 1.143rem;
-   font-style: normal;
-   font-weight: normal;
-   line-height: 1;
-   -webkit-font-smoothing: antialiased;
  }
 
  .btn_from_bitrix {
@@ -445,7 +437,7 @@
  }
 
  .btn_Style_Venta_Per:hover {
-   border: 1px solid #1169b7;
+  border: 1px solid #1169b7;
    background-color: #1169b7;
  }
 
@@ -466,10 +458,9 @@
    background: #66ACFF;
    border: 1px solid #66ACFF;
  }
-
- .btn_Whatsapp {
-   color: white;
-   background-color: #03D749;
+ .btn_Whatsapp{
+    color: white;
+    background-color: #03D749;
  }
 
  .main_container_priceStyle {
@@ -514,15 +505,12 @@
    width: 100%;
    gap: 6px;
  }
-
- .carrusel__elemento {
-   width: 285px !important;
+ .carrusel__elemento{
+  width: 285px !important;
  }
-
- .b24-form-dropdown-container {
-   position: inherit;
+ .b24-form-dropdown-container{
+  position: inherit;
  }
-
  /* ---*-*-*-*-*-*-*-*-*-*- */
  /* .whatsAppFixes{
   display: none;
@@ -703,9 +691,8 @@
      background: #0d4e88;
      color: #f3f3f3;
    }
-
-   .carrusel__elemento {
-     width: 285px !important;
+   .carrusel__elemento{
+    width: 285px !important;
    }
  }
 
