@@ -462,8 +462,10 @@ const Card = ({ destinos, onContactClick }) => {
     React.useEffect(() => {
         fetchDataFromAPI()
           .then((responseData) => {
-            console.log(responseData); // Agregar un console.log para ver los datos de la API
-            setData(responseData); // Almacena los datos en el estado
+            console.log(responseData);
+            console.log("buttonSwitch:", newButtonSwitch); // Agregar este console.log
+ 
+            setData(responseData); 
             setButtonSwitch(responseData[0]?.attributes?.Swicher ? "A" : "B");
 
           });
