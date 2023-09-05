@@ -452,7 +452,7 @@
    color: #FFFFFF;
    background: #1480FF;
    border: 1px solid #2A8BFE;
-   transition: fill 0.3s ease-in-out;
+   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
  }
 
  .btn_FormBitrix::selection {
@@ -469,7 +469,7 @@
  .btn_Whatsapp:hover {
    color: white;
    background-color: #00a94f;
-   transition: fill 0.3s ease-in-out;
+   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
  }
 
  .btn_Whatsapp::selection {
@@ -485,10 +485,17 @@
 
  .classOpenModal:hover,
  .btn_Style_Venta_Per:hover .phone-svg  {
-   background-color: #2A8BFE;
-   color: white;
-   transition: fill 0.3s ease-in-out;
- }
+  background-color: #2A8BFE; /* Cambia el color de fondo al hacer hover */
+   color: white; /* Cambia el color del texto al hacer hover */
+   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Agrega transiciones suaves */
+}
+
+.btn_Style_Venta_Per:hover .phone-svg  {
+  background-color: #2A8BFE; /* Cambia el color de fondo al hacer hover */
+   color: white; /* Cambia el color del texto al hacer hover */
+   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Agrega transiciones suaves */
+}
+
  .classOpenModal::selection {
    background: #1169B7;
    color: white;
