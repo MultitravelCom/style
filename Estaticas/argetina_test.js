@@ -387,10 +387,8 @@ function ButtonLading(props) {
 
     return (
         <button id={props.id} className={`btn_Style_Venta_Per ${props.className}`} onClick={handleClick}>
-
             {props.svgType === 'whatsapp' && svgWA}
             {props.svgType === 'phone' && svgPhone}
-
             <span>
                 {props.text}
             </span>
@@ -467,6 +465,9 @@ const Card = ({ destinos, onContactClick }) => {
  
             setData(responseData); 
             setButtonSwitch(responseData[0]?.attributes?.Swicher ? "A" : "B");
+
+            console.log('Valor de Swicher en fetchDataFromAPI:', data[0]?.attributes?.Swicher);
+
 
           });
       }, []);
