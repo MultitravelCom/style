@@ -288,17 +288,18 @@ const BitrixFormTitle = () => {
 }
 // **************** FETCH API **********************
 
-function fetchDataFromAPI() {
-    return fetch('https://strapicontent.apimultitravel.com/api/button-swichers')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('No se pudo obtener los datos de la API');
-        }
-        return response.json();
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+async function fetchDataFromAPI() {
+    try {
+      const response = await fetch('https://strapicontent.apimultitravel.com/api/button-swichers');
+      if (!response.ok) {
+        throw new Error('No se pudo obtener los datos de la API');
+      }
+      const responseData = await response.json();
+      return responseData;
+    } catch (error) {
+      console.error(error);
+      throw error; // Puedes volver a lanzar el error para que sea manejado en el lugar donde llamas a fetchDataFromAPI
+    }
   }
 // ************** COMPONENTES ********************
 const BannerTop = () => {
@@ -458,18 +459,18 @@ const Card = ({ destinos, onContactClick }) => {
     };
 
     React.useEffect(() => {
-        fetchDataFromAPI()
-          .then((responseData) => {
+        const fetchData = async () => {
+          try {
+            const responseData = await fetchDataFromAPI();
             console.log(responseData);
-            console.log("buttonSwitch:", buttonSwitch);
-            console.log(data)
-      
             setData(responseData);
-            const newButtonSwitch = responseData[0]?.attributes?.Swicher ? "A" : "B";
-            setButtonSwitch(newButtonSwitch);
+            // Asegúrate de que data se actualice correctamente
+          } catch (error) {
+            console.error(error);
+          }
+        };
       
-            console.log('Valor de Swicher en fetchDataFromAPI:', newButtonSwitch);
-          });
+        fetchData();
       }, []);
 
       console.log("data:", data); // Verifica el valor de data después de la actualización
