@@ -362,7 +362,7 @@ function ButtonLading(props) {
 
     return (
         <button id={props.id} className={`btn_Style_Venta_Per ${props.className}`} onClick={handleClick}>
-            <span className={`"glyphicon ${props.iconClass}`}>
+            <span className={`glyphicon ${props.iconClass}`}>
                 {props.text}
             </span>
         </button>
@@ -453,7 +453,7 @@ const Card = ({ destinos, onContactClick }) => {
                                 className={buttonSwitch === "A" ? "btn_Whatsapp" : "btn_FormBitrix"}
                                 text={buttonSwitch === "A" ? "Whatsapp" : "Agendar llamada"}
                                 onClick={buttonSwitch === "A" ? handleWhatsAppClick : () => onContactClick(destino.id)}
-                                iconClass={buttonSwitch === "A" ? "glyphicon-whatsapp-bottomless styleWaIcon" : "glyphicon-calendar styleCalenIcon"}
+                                iconClass={buttonSwitch === "A" ? "glyphicon-whatsapp-bottomless" : "glyphicon-calendar"}
                             />
                             <ButtonLading
                                 id={destino.id}
