@@ -464,7 +464,7 @@ const Card = ({ destinos, onContactClick }) => {
                 const responseData = await fetchDataFromAPI();
                 console.log(responseData);
                 setData(responseData);
-                console.log("Valor de Swicher en la respuesta de la API:", responseData.data[0]?.attributes?.Whatsapp_Activo);
+                console.log("Valor de Swicher en la respuesta de la API:", responseData.data?.attributes?.Whatsapp_Activo);
                 console.log(responseData.data)
 
                 setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
