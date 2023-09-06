@@ -290,7 +290,7 @@ const BitrixFormTitle = () => {
 
 async function fetchDataFromAPI() {
     try {
-        const response = await fetch('https://strapicontent.apimultitravel.com/api/button-swichers');
+        const response = await fetch('https://strapicontent.apimultitravel.com/api/swich-buttons');
         if (!response.ok) {
             throw new Error('No se pudo obtener los datos de la API');
         }
@@ -298,7 +298,7 @@ async function fetchDataFromAPI() {
         return responseData;
     } catch (error) {
         console.error(error);
-        throw error; 
+        throw error;
     }
 }
 // ************** COMPONENTES ********************
