@@ -476,6 +476,11 @@ const Card = ({ destinos, onContactClick }) => {
         fetchData();
     }, []);
 
+    React.useEffect(() => {
+        console.log("buttonSwitch después del llamado a la API:", buttonSwitch);
+        // Aquí puedes realizar otras operaciones basadas en el valor actualizado de buttonSwitch
+    }, [buttonSwitch]);
+
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
