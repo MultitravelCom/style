@@ -464,6 +464,8 @@ const Card = ({ destinos, onContactClick }) => {
                 const responseData = await fetchDataFromAPI();
                 console.log(responseData);
                 setData(responseData);
+                console.log("Valor de Swicher en la respuesta de la API:", responseData[0]?.attributes?.Swicher);
+
                 setButtonSwitch(responseData[0]?.attributes?.Swicher ? "A" : "B");
 
                 console.log("buttonSwitch después del llamado a la API:", buttonSwitch);
