@@ -290,7 +290,7 @@ const BitrixFormTitle = () => {
 
 async function fetchDataFromAPI() {
     try {
-        const response = await fetch('https://strapicontent.apimultitravel.com/api/whatsapp-activos');
+        const response = await fetch('https://strapicontent.apimultitravel.com/api/whatsapp-activo');
         if (!response.ok) {
             throw new Error('No se pudo obtener los datos de la API');
         }
