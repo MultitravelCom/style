@@ -290,7 +290,7 @@ const BitrixFormTitle = () => {
 
 async function fetchDataFromAPI() {
     try {
-        const response = await fetch('https://strapicontent.apimultitravel.com/api/swich-buttons');
+        const response = await fetch('https://strapicontent.apimultitravel.com/api/whatsapp-activos');
         if (!response.ok) {
             throw new Error('No se pudo obtener los datos de la API');
         }
@@ -464,7 +464,7 @@ const Card = ({ destinos, onContactClick }) => {
                 const responseData = await fetchDataFromAPI();
                 console.log(responseData);
                 setData(responseData);
-                console.log("Valor de Swicher en la respuesta de la API:", responseData.data[0]?.attributes?.Swicher);
+                console.log("Valor de Swicher en la respuesta de la API:", responseData.data[0]?.attributes?.Whatsapp_switch);
 
                 setButtonSwitch(responseData.data[0]?.attributes?.Swicher ? "A" : "B");
 
