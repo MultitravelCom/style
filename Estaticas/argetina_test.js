@@ -442,7 +442,7 @@ const EventImg = (props) => {
 // }
 const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
-    const [buttonSwitch, setButtonSwitch] = React.useState("B");
+    const [buttonSwitch, setButtonSwitch] = React.useState(null);
     const [data, setData] = React.useState([]);
 
     const handleBannerClick = () => {
