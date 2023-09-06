@@ -298,7 +298,7 @@ async function fetchDataFromAPI() {
         return responseData;
     } catch (error) {
         console.error(error);
-        throw error; // Puedes volver a lanzar el error para que sea manejado en el lugar donde llamas a fetchDataFromAPI
+        throw error; 
     }
 }
 // ************** COMPONENTES ********************
@@ -466,7 +466,7 @@ const Card = ({ destinos, onContactClick }) => {
                 setData(responseData);
                 console.log("Valor de Swicher en la respuesta de la API:", responseData[0]?.attributes?.Swicher);
 
-                setButtonSwitch(responseData[0]?.attributes?.Swicher ? "A" : "B");
+                setButtonSwitch(responseData.data[0]?.attributes?.Swicher ? "A" : "B");
 
                 console.log("buttonSwitch después del llamado a la API:", buttonSwitch);
 
