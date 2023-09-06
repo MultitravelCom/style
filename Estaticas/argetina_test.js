@@ -290,17 +290,17 @@ const BitrixFormTitle = () => {
 
 async function fetchDataFromAPI() {
     try {
-      const response = await fetch('https://strapicontent.apimultitravel.com/api/button-swichers');
-      if (!response.ok) {
-        throw new Error('No se pudo obtener los datos de la API');
-      }
-      const responseData = await response.json();
-      return responseData;
+        const response = await fetch('https://strapicontent.apimultitravel.com/api/button-swichers');
+        if (!response.ok) {
+            throw new Error('No se pudo obtener los datos de la API');
+        }
+        const responseData = await response.json();
+        return responseData;
     } catch (error) {
-      console.error(error);
-      throw error; // Puedes volver a lanzar el error para que sea manejado en el lugar donde llamas a fetchDataFromAPI
+        console.error(error);
+        throw error; // Puedes volver a lanzar el error para que sea manejado en el lugar donde llamas a fetchDataFromAPI
     }
-  }
+}
 // ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
@@ -460,21 +460,21 @@ const Card = ({ destinos, onContactClick }) => {
 
     React.useEffect(() => {
         const fetchData = async () => {
-          try {
-            const responseData = await fetchDataFromAPI();
-            console.log(responseData);
-            setData(responseData);
-            // Asegúrate de que data se actualice correctamente
-          } catch (error) {
-            console.error(error);
-          }
+            try {
+                const responseData = await fetchDataFromAPI();
+                console.log(responseData);
+                setData(responseData);
+                setButtonSwitch(responseData[0]?.attributes?.Swicher ? "A" : "B");
+
+                console.log("buttonSwitch después del llamado a la API:", buttonSwitch);
+
+            } catch (error) {
+                console.error(error);
+            }
         };
-      
+
         fetchData();
-      }, []);
-
-      console.log("data:", data); // Verifica el valor de data después de la actualización
-
+    }, []);
 
     return (
         destinos.map((destino) => (
@@ -500,14 +500,14 @@ const Card = ({ destinos, onContactClick }) => {
                                 className={buttonSwitch === "A" ? "btn_Whatsapp" : "btn_FormBitrix"}
                                 text={buttonSwitch === "A" ? "Whatsapp" : "Agendar llamada"}
                                 onClick={buttonSwitch === "A" ? handleWhatsAppClick : () => onContactClick(destino.id)}
-                                svgType={buttonSwitch === "A" ? 'whatsapp' : null }
+                                svgType={buttonSwitch === "A" ? 'whatsapp' : null}
                             />
                             <ButtonLading
                                 id={destino.id}
                                 className="classOpenModal"
                                 text={buttonSwitch === "A" ? "Llamar" : "Llamar Ahora"}
                                 onClick={handleBannerClick}
-                                svgType={buttonSwitch === "A" ? 'phone' : null }
+                                svgType={buttonSwitch === "A" ? 'phone' : null}
                             />
                         </>
                     </div>
