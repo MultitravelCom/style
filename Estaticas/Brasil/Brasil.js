@@ -536,6 +536,7 @@ const CardContainer = ({ btnStyles, destinosFiltrados, onContactClick }) => {
     );
 };
 function App() {
+    const [data, setData] = useState(null);
     const [loaded, setLoaded] = React.useState(false);
     const [destinos, setDestinos] = React.useState([]);
     const [selectedFormId, setSelectedFormId] = React.useState(false);
