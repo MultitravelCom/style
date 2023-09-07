@@ -7,7 +7,6 @@ function checkPaymentMethod() {
 
         if (dataConfigId) {
             const configId = parseInt(dataConfigId);
-            console.log("se encontro", configId);
 
             return configId;
         }
