@@ -234,6 +234,19 @@ const btnStyles = [
     { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Vuelos Mendoza – Alojamientos Mendoza – Paquetes Mendoza', destino: "Mendoza" },
 ];
 // *****************************************************
+async function fetchDataFromAPI() {
+    try {
+        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/whatsapp-activo');
+        if (!response.ok) {
+            throw new Error('No se pudo obtener los datos de la API');
+        }
+        const responseData = await response.json();
+        return responseData;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
 // ************** BITRIX ********************
 const BitrixFormComponent = ({ isVisible }) => {
     const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
@@ -430,7 +443,8 @@ const EventImg = (props) => {
 // }
 const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
-    const [buttonSwitch, setButtonSwitch] = React.useState("B");
+    const [buttonSwitch, setButtonSwitch] = React.useState();
+    const [data, setData] = React.useState([]);
 
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
@@ -444,6 +458,31 @@ const Card = ({ destinos, onContactClick }) => {
         const whatsappURL = 'https://wa.link/64zdo9';
         window.open(whatsappURL, '_blank');
     };
+
+    React.useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const responseData = await fetchDataFromAPI();
+                console.log(responseData);
+                setData(responseData);
+                console.log("Valor de Swicher en la respuesta de la API:", responseData.data?.attributes?.Whatsapp_Activo);
+
+                setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
+
+                console.log("buttonSwitch después del llamado a la API:", buttonSwitch);
+
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    React.useEffect(() => {
+        console.log("buttonSwitch después del llamado a la API:", buttonSwitch);
+        // Aquí puedes realizar otras operaciones basadas en el valor actualizado de buttonSwitch
+    }, [buttonSwitch]);
 
     return (
         destinos.map((destino) => (
@@ -469,14 +508,14 @@ const Card = ({ destinos, onContactClick }) => {
                                 className={buttonSwitch === "A" ? "btn_Whatsapp" : "btn_FormBitrix"}
                                 text={buttonSwitch === "A" ? "Whatsapp" : "Agendar llamada"}
                                 onClick={buttonSwitch === "A" ? handleWhatsAppClick : () => onContactClick(destino.id)}
-                                svgType={buttonSwitch === "A" ? 'whatsapp' : null }
+                                svgType={buttonSwitch === "A" ? 'whatsapp' : null}
                             />
                             <ButtonLading
                                 id={destino.id}
                                 className="classOpenModal"
                                 text={buttonSwitch === "A" ? "Llamar" : "Llamar Ahora"}
                                 onClick={handleBannerClick}
-                                svgType={buttonSwitch === "A" ? 'phone' : null }
+                                svgType={buttonSwitch === "A" ? 'phone' : null}
                             />
                         </>
                     </div>
