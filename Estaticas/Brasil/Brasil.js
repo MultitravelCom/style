@@ -571,12 +571,11 @@ function App() {
         fetchData();
     }, []);
 
-    // React.useEffect(() => {
-    //     fetchDestinos().then(data => {
-    //         setDestinos(data.destinos);
-    //         setLoaded(true);
-    //     });
-    // }, []);
+    React.useEffect(() => {
+        fetchDestinos().then(data => {
+            setDestinos(data.destinos);
+        });
+    }, []);
 
     return (
         <>
