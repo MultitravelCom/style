@@ -296,6 +296,7 @@ async function fetchDataFromAPI() {
         }
         const responseData = await response.json();
         setLoaded(true);
+        console.log(setLoaded)
 
         return responseData;
     } catch (error) {
