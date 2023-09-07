@@ -95,6 +95,20 @@ const fetchDestinos = async () => {
     return data;
 };
 
+async function fetchDataFromAPI() {
+    try {
+        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/whatsapp-activo');
+        if (!response.ok) {
+            throw new Error('No se pudo obtener los datos de la API');
+        }
+        const responseData = await response.json();
+        return responseData;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
+
 // ************************************************
 // Filter
 function filtrarDestinos(destinos, nombreDestino) {
@@ -218,16 +232,16 @@ const EventImg = (props) => {
         );
     }
 };
-const WarningPrice = () => {
-    return (
-        <div className="container main__warningPrice">
-            <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
-            <p>Los precios publicados no aplican para fines de semana largo y vacaciones de invierno y verano.
-                De todas maneras puedes comunicarte con nuestros especialistas para que te den información al respecto.</p>
-        </div>
+// const WarningPrice = () => {
+//     return (
+//         <div className="container main__warningPrice">
+//             <div className="main__warningPric__icon glyphicon glyphicon-info-circle"></div>
+//             <p>Los precios publicados no aplican para fines de semana largo y vacaciones de invierno y verano.
+//                 De todas maneras puedes comunicarte con nuestros especialistas para que te den información al respecto.</p>
+//         </div>
 
-    )
-}
+//     )
+// }
 // ************************************************
 const BannerTravelSale = () => {
     return (
@@ -293,6 +307,7 @@ const Card = ({ destinos, onContactClick }) => {
     const [loaded, setLoaded] = React.useState(false);
     const [openModal, setOpenModal] = React.useState(false);
     const [buttonSwitch, setButtonSwitch] = React.useState("B");
+    const [data, setData] = React.useState([]);
 
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
@@ -327,6 +342,26 @@ const Card = ({ destinos, onContactClick }) => {
             .catch((error) => {
                 console.log(error);
             });
+    }, []);
+
+    React.useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const responseData = await fetchDataFromAPI();
+                console.log(responseData);
+                setData(responseData);
+                console.log("Valor de Swicher en la respuesta de la API:", responseData.data?.attributes?.Whatsapp_Activo);
+
+                setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
+
+                console.log("buttonSwitch después del llamado a la API:", buttonSwitch);
+
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchData();
     }, []);
 
     return (
