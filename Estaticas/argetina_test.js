@@ -295,6 +295,8 @@ async function fetchDataFromAPI() {
             throw new Error('No se pudo obtener los datos de la API');
         }
         const responseData = await response.json();
+        setLoaded(true);
+
         return responseData;
     } catch (error) {
         console.error(error);
@@ -440,7 +442,7 @@ const EventImg = (props) => {
 
 //     )
 // }
-const Card = ({ destinos, onContactClick }) => {
+const Card = ({ destinos, onContactClick, onDataFromCard  }) => {
     const [openModal, setOpenModal] = React.useState(false);
     const [buttonSwitch, setButtonSwitch] = React.useState();
     const [data, setData] = React.useState([]);
@@ -464,8 +466,8 @@ const Card = ({ destinos, onContactClick }) => {
                 const responseData = await fetchDataFromAPI();
                 console.log(responseData);
                 setData(responseData);
+                onDataFromCard(responseData);
                 console.log("Valor de Swicher en la respuesta de la API:", responseData.data?.attributes?.Whatsapp_Activo);
-                console.log(responseData.data)
 
                 setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
 
@@ -621,10 +623,9 @@ function App() {
     const [selectedFormId, setSelectedFormId] = React.useState(false);
     const [isFormVisible, setIsFormVisible] = React.useState(false);
 
+    
+
     React.useEffect(() => {
-        setTimeout(() => {
-            setLoaded(true);
-        }, 2000);
 
         const intervalo = setInterval(() => {
             const fechaDeseada = new Date("2023-04-25T19:40:00");
@@ -641,7 +642,6 @@ function App() {
     }, []);
 
     const handleOpenForm = (formId) => {
-
         setSelectedFormId(formId);
         setIsFormVisible(true);
 
