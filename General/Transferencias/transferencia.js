@@ -144,10 +144,6 @@ const TransferenciaComponent = () => {
     );
 };
 
-
-const paymentInfoContainer = document.querySelector('.booking-payment__info.prepayment');
-ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
-
 const shouldRenderTransferencia = checkPaymentMethod() === 13;
 
 if (shouldRenderTransferencia) {
@@ -156,3 +152,6 @@ if (shouldRenderTransferencia) {
     ReactDOM.render(<TransferenciaComponentMP />, transferenciaContainer);
     posElement.appendChild(transferenciaContainer);
 }
+
+const paymentInfoContainer = document.querySelector('.booking-payment__info.prepayment');
+ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
