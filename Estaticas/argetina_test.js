@@ -440,7 +440,7 @@ const EventImg = (props) => {
 
 //     )
 // }
-const Card = ({ destinos, onContactClick, onDataFromCard  }) => {
+const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
     const [buttonSwitch, setButtonSwitch] = React.useState();
     const [data, setData] = React.useState([]);
@@ -464,7 +464,6 @@ const Card = ({ destinos, onContactClick, onDataFromCard  }) => {
                 const responseData = await fetchDataFromAPI();
                 console.log(responseData);
                 setData(responseData);
-                onDataFromCard(responseData);
                 console.log("Valor de Swicher en la respuesta de la API:", responseData.data?.attributes?.Whatsapp_Activo);
 
                 setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
