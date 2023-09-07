@@ -295,9 +295,6 @@ async function fetchDataFromAPI() {
             throw new Error('No se pudo obtener los datos de la API');
         }
         const responseData = await response.json();
-        setLoaded(true);
-        console.log(setLoaded)
-
         return responseData;
     } catch (error) {
         console.error(error);
@@ -627,6 +624,9 @@ function App() {
     
 
     React.useEffect(() => {
+        setTimeout(() => {
+            setLoaded(true);
+        }, 2000);
 
         const intervalo = setInterval(() => {
             const fechaDeseada = new Date("2023-04-25T19:40:00");
