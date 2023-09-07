@@ -142,14 +142,16 @@ const TransferenciaComponent = () => {
     );
 };
 
-const paymentInfoContainer = document.querySelector('.booking-payment__info.prepayment');
-ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
+document.addEventListener('DOMContentLoaded', async function () {
+    const paymentInfoContainer = document.querySelector('.booking-payment__info.prepayment');
+    ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
 
-const shouldRenderTransferencia = checkPaymentMethod() === 13;
+    const shouldRenderTransferencia = checkPaymentMethod() === 13;
 
-if (shouldRenderTransferencia) {
-    const posElement = document.querySelector('.booking-payment__info.pos');
-    const transferenciaContainer = document.createElement('div');
-    ReactDOM.render(<TransferenciaComponentMP />, transferenciaContainer);
-    posElement.appendChild(transferenciaContainer);
-}
+    if (shouldRenderTransferencia) {
+        const posElement = document.querySelector('.booking-payment__info.pos');
+        const transferenciaContainer = document.createElement('div');
+        ReactDOM.render(<TransferenciaComponentMP />, transferenciaContainer);
+        posElement.appendChild(transferenciaContainer);
+    }
+});
