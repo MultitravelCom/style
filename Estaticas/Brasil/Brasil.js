@@ -560,7 +560,7 @@ function App() {
     React.useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await getDataFromStrapi(); // Llamada a la función existente
+            const response = await fetchDataFromAPI(); // Llamada a la función existente
             setData(response);
             setLoaded(true);
           } catch (error) {
