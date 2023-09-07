@@ -559,13 +559,27 @@ function App() {
         setIsFormVisible(false);
     };
 
-
     React.useEffect(() => {
-        fetchDestinos().then(data => {
-            setDestinos(data.destinos);
+        const fetchData = async () => {
+          try {
+            const response = await getDataFromStrapi(); // Llamada a la función existente
+            setData(response);
             setLoaded(true);
-        });
-    }, []);
+          } catch (error) {
+            console.error('Error al obtener datos:', error);
+            setLoaded(false);
+          }
+        };
+    
+        fetchData();
+      }, []);
+
+    // React.useEffect(() => {
+    //     fetchDestinos().then(data => {
+    //         setDestinos(data.destinos);
+    //         setLoaded(true);
+    //     });
+    // }, []);
 
     return (
         <>
