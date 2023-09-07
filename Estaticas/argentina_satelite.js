@@ -614,10 +614,20 @@ function App() {
     const [isFormVisible, setIsFormVisible] = React.useState(false);
 
     React.useEffect(() => {
-        setTimeout(() => {
-            setLoaded(true);
-        }, 2000);
+        const fetchData = async () => {
+            try {
+                await fetchDataFromAPI(); // Llamada a la función existente
+                setLoaded(true);
+            } catch (error) {
+                console.error('Error al obtener datos:', error);
+                setLoaded(false);
+            }
+        };
 
+        fetchData();
+    }, []);
+
+    React.useEffect(() => {
         const intervalo = setInterval(() => {
             const fechaDeseada = new Date("2023-04-25T19:40:00");
             const fechaActual = new Date();
