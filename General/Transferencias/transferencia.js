@@ -2,6 +2,8 @@ function checkPaymentMethod() {
     const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
 
     if (gatewaySelect) {
+        console.log("Se encontró el selector gatewaySelect:", gatewaySelect);
+
         const selectedOption = gatewaySelect.options[gatewaySelect.selectedIndex];
         const dataConfigId = selectedOption.getAttribute('data-config-id');
 
