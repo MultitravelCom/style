@@ -536,7 +536,6 @@ const CardContainer = ({ btnStyles, destinosFiltrados, onContactClick }) => {
     );
 };
 function App() {
-    const [data, setData] = useState(null);
     const [loaded, setLoaded] = React.useState(false);
     const [destinos, setDestinos] = React.useState([]);
     const [selectedFormId, setSelectedFormId] = React.useState(false);
@@ -560,18 +559,17 @@ function App() {
 
     React.useEffect(() => {
         const fetchData = async () => {
-          try {
-            const response = await fetchDataFromAPI(); // Llamada a la función existente
-            setData(response);
-            setLoaded(true);
-          } catch (error) {
-            console.error('Error al obtener datos:', error);
-            setLoaded(false);
-          }
+            try {
+                await fetchDataFromAPI(); // Llamada a la función existente
+                setLoaded(true);
+            } catch (error) {
+                console.error('Error al obtener datos:', error);
+                setLoaded(false);
+            }
         };
-    
+
         fetchData();
-      }, []);
+    }, []);
 
     // React.useEffect(() => {
     //     fetchDestinos().then(data => {
