@@ -1,3 +1,6 @@
 /* .booking-payment__info.prepayment>p{
     display: none;
 } */
+ div.booking-payment__info.pos > div.pos {
+display: none;
+}
