@@ -620,7 +620,7 @@ function App() {
                 setLoaded(true);
             } catch (error) {
                 console.error('Error al obtener datos:', error);
-                setLoaded(false);
+                setLoaded(true);
             }
         };
 
