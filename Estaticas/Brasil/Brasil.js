@@ -329,10 +329,10 @@ const Card = ({ destinos, onContactClick }) => {
                 // Verificar si data.destinos es un array
                 if (Array.isArray(data.destinos)) {
                     if (data.destinos.length > 0) {
-                        setLoaded(true);
                         setDestinos(data.destinos);
+                        // setLoaded(true);
                     } else {
-                        setLoaded(true);
+                        // setLoaded(true);
                         setNoDestinos(true);
                     }
                 } else {
@@ -350,11 +350,14 @@ const Card = ({ destinos, onContactClick }) => {
                 const responseData = await fetchDataFromAPI();
                 console.log(responseData);
                 setData(responseData);
+                setLoaded(true)
 
                 setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
 
 
             } catch (error) {
+                setLoaded(true)
+
                 console.error(error);
             }
         };
