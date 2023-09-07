@@ -329,7 +329,7 @@ const Card = ({ destinos, onContactClick }) => {
                 // Verificar si data.destinos es un array
                 if (Array.isArray(data.destinos)) {
                     if (data.destinos.length > 0) {
-                        setDestinos(data.destinos);
+                        // setDestinos(data.destinos);
                         // setLoaded(true);
                     } else {
                         // setLoaded(true);
@@ -348,7 +348,6 @@ const Card = ({ destinos, onContactClick }) => {
         const fetchData = async () => {
             try {
                 const responseData = await fetchDataFromAPI();
-                console.log(responseData);
                 setData(responseData);
                 setLoaded(true)
 
