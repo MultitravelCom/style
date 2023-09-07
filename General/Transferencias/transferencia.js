@@ -2,8 +2,6 @@ function checkPaymentMethod() {
     const gatewaySelect = document.querySelector('.js-enhanced-select.pos__field-select');
 
     if (gatewaySelect) {
-        console.log("Se encontró el selector gatewaySelect:", gatewaySelect);
-
         const selectedOption = gatewaySelect.options[gatewaySelect.selectedIndex];
         const dataConfigId = selectedOption.getAttribute('data-config-id');
 
@@ -145,6 +143,7 @@ const TransferenciaComponent = () => {
 };
 
 const shouldRenderTransferencia = checkPaymentMethod() === 13;
+const paymentInfoContainer = document.querySelector('.booking-payment__info.prepayment');
 
 if (shouldRenderTransferencia) {
     const posElement = document.querySelector('.booking-payment__info.pos');
@@ -152,6 +151,6 @@ if (shouldRenderTransferencia) {
     ReactDOM.render(<TransferenciaComponentMP />, transferenciaContainer);
     posElement.appendChild(transferenciaContainer);
 }
-
-const paymentInfoContainer = document.querySelector('.booking-payment__info.prepayment');
-ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
+if (paymentInfoContainer){
+    ReactDOM.render(<TransferenciaComponent />, paymentInfoContainer);
+}
