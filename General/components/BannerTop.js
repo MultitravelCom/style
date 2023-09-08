@@ -130,7 +130,7 @@ const Cuponera = () => {
 // **************TIMER***************
 const shouldShowCuponera = () => {
     const startDate = new Date("2023-08-27T22:00:00");
-    const endDate = new Date("2023-09-07T23:59:00");
+    const endDate = new Date("2023-09-08T23:59:00");
     const now = new Date();
 
     return now >= startDate && now <= endDate;
