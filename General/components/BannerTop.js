@@ -22,16 +22,17 @@ function cambiarUrlImg() {
     }
 }
 
-function scrollAncla(event) {
+function scrollAncla(event, targetId) {
     event.preventDefault();
 
-    const targetElement = document.getElementById("home-sliding-offers-1");
+    const targetElement = document.getElementById(targetId);
     if (targetElement) {
         targetElement.scrollIntoView({
             behavior: "smooth",
         });
     }
 }
+
 // ************* CUPONERA *****************************
 const ToolTipButton = ({ visible }) => {
     return (
@@ -180,7 +181,7 @@ const BannerTop = () => {
                     <div id={`bannerTop__left_${bannerId}`} className="main__container_left">
                         {isMobile ? (
                             <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/hotels/"} target="_blank"
-                                onClick={showPackageImages ? null : scrollAncla}
+                                onClick={showPackageImages ? null : (event) => scrollAncla(event, "home-sliding-offers-1")}
                             >
                                 <img className="bannerTop__img"
                                     alt=""
@@ -192,7 +193,9 @@ const BannerTop = () => {
                                 />
                             </a>
                         ) : (
-                            <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/hotels/"} target="_blank">
+                            <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/hotels/"} target="_blank"
+                                onClick={showPackageImages ? null : (event) => scrollAncla(event, "home-sliding-offers-1")}
+                            >
                                 <picture>
                                     <source
                                         media="(min-width: 1024px)"
@@ -229,7 +232,7 @@ const BannerTop = () => {
                         {isMobile ? (
                             <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : null}
                                 target="_blank"
-                                onClick={showPackageImages ? null : scrollAncla}
+                                onClick={showPackageImages ? null : (event) => scrollAncla(event, "home-sliding-offers-2")}
                             >
 
                                 <img className="bannerTop__img"
@@ -244,7 +247,7 @@ const BannerTop = () => {
                         ) : (
                             <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : null}
                                 target="_blank"
-                                onClick={showPackageImages ? null : scrollAncla}
+                                onClick={showPackageImages ? null : (event) => scrollAncla(event, "home-sliding-offers-1")}
                             >
                                 <picture>
                                     <source
@@ -281,7 +284,7 @@ const BannerTop = () => {
                     <div id={`bannerTop__right_${bannerId}`} className="main__container_right">
                         {isMobile ? (
                             <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : null} target="_blank"
-                                onClick={showPackageImages ? null : scrollAncla}
+                                onClick={showPackageImages ? null : null}
                             >
                                 <img className="bannerTop__img"
                                     alt=""
@@ -294,7 +297,7 @@ const BannerTop = () => {
                             </a>
                         ) : (
                             <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : null} target="_blank"
-                                onClick={showPackageImages ? null : scrollAncla}
+                                onClick={showPackageImages ? null : null}
                             >
                                 <picture>
                                     <source
