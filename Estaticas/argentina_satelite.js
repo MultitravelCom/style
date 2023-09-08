@@ -236,7 +236,7 @@ const btnStyles = [
 // *****************************************************
 async function fetchDataFromAPI() {
     try {
-        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/whatsapp-activo');
+        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-whatsapp');
         if (!response.ok) {
             throw new Error('No se pudo obtener los datos de la API');
         }
