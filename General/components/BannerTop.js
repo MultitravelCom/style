@@ -180,7 +180,7 @@ const BannerTop = () => {
             (<div className="container-fluid main__container__bannerTop scroll-mobile">
                 <div id={`bannerTop__left_${bannerId}`} className="main__container_left">
                     {isMobile ? (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/venta-personalizada/argentina"} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/hotels/"} target="_blank">
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
@@ -191,7 +191,7 @@ const BannerTop = () => {
                             />
                         </a>
                     ) : (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/venta-personalizada/argentina"} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/argentina" : "https://www.multitravel.com/hotels/"} target="_blank">
                             <picture>
                                 <source
                                     media="(min-width: 1024px)"
@@ -226,9 +226,9 @@ const BannerTop = () => {
                 </div>
                 <div id={`bannerTop__center_${bannerId}`} className="main__container_center">
                     {isMobile ? (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/argentina"}
+                        <a href={showPackageImages ? null : null}
                             target="_blank"
-                            onClick={showPackageImages ? null : scrollAncla}
+                            onClick={showPackageImages ? scrollAncla : scrollAncla}
                         >
 
                             <img className="bannerTop__img"
@@ -241,9 +241,9 @@ const BannerTop = () => {
                             />
                         </a>
                     ) : (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : null }
+                        <a href={showPackageImages ? null : null }
                             target="_blank"
-                            onClick={showPackageImages ? null : scrollAncla}
+                            onClick={showPackageImages ? scrollAncla : scrollAncla}
                         >
                             <picture>
                                 <source
@@ -279,7 +279,7 @@ const BannerTop = () => {
                 </div>
                 <div id={`bannerTop__right_${bannerId}`} className="main__container_right">
                     {isMobile ? (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : "https://www.multitravel.com/hotels/"} target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : null } target="_blank">
                             <img className="bannerTop__img"
                                 alt=""
                                 srcSet={
@@ -290,7 +290,7 @@ const BannerTop = () => {
                             />
                         </a>
                     ) : (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : "https://www.multitravel.com/hotels/" } target="_blank">
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/caribe" : null } target="_blank">
                             <picture>
                                 <source
                                     media="(min-width: 1024px)"
