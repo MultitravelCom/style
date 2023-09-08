@@ -32,8 +32,8 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
-        priceBaja: "$121.860",
-        price: "$161.200",
+        priceBaja: "$117.800",
+        price: "$174.500",
         events: "si"
     },
     {
@@ -43,8 +43,8 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/s507zo",
         title: "Paquete a Bariloche",
-        priceBaja: "$171.120",
-        price: "$214.560",
+        priceBaja: "$167.500",
+        price: "$231.900",
         events: "si"
     },
     {
@@ -54,8 +54,8 @@ const destinos1 = [
         className: "uno",
         linkWa: "https://wa.link/duchkz",
         title: "Paquete a Bariloche",
-        priceBaja: "$213.100",
-        price: "$276.900",
+        priceBaja: "$209.500",
+        price: "$287.800",
         events: "si"
     },
     {
@@ -191,7 +191,7 @@ const destinos3 = [
         linkWa: "https://wa.link/vs8baw",
         title: "Paquete a Mendoza",
         priceBaja: "$223.100",
-        price: "$216.5000",
+        price: "$216.500",
         events: "si"
     },
     {
