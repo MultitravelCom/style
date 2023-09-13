@@ -150,8 +150,8 @@ const BannerTop = () => {
     const [openModal, setOpenModal] = React.useState(false);
 
 
-    const showPackageImages = window.location.pathname.includes('/flighthotel/');
     const showHotelsCoupons = window.location.pathname.includes('/hotels');
+    const showPackageImages = window.location.pathname.includes('/flighthotel/');
     const UrlImg = cambiarUrlImg();
     const UrlImgPaquetes = "https://multitravelcom.github.io/MT/Secciones/BannerPrincipal/Paquetes";
     const isMobile = window.innerWidth <= 767;
