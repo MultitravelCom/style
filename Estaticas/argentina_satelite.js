@@ -660,7 +660,6 @@ function App() {
                     <div className="main_conteiner__s2_bannerTravelSale">
                         <BannerTravelSale />
                     </div>
-
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} onContactClick={handleOpenForm} />
