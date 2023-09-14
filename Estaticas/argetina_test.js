@@ -565,11 +565,11 @@ const Card = ({ destinos, onContactClick }) => {
                             {console.log('pricesByDestino:', pricesByDestino)}
                             {console.log('Tarifa_Temporada_Alta:', pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Alta)}
                             {console.log('Tarifa_Temporada_Baja:', pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja)}
-                            {pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja}
-                            {pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja}
+                            {/* {pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja}
+                            {pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja} */}
                         </div>
                         <div className="priceStyle right">
-                            {pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Alta}
+                            {/* {pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Alta} */}
                         </div>
 
                     </div>
