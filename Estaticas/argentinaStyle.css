@@ -523,13 +523,12 @@
 
  .main__container_BannerTravelSale {
    border-radius: 16px;
-   background: #6E37D0;
    max-width: 1120px;
    height: 144px;
    flex-shrink: 0;
    display: flex;
    align-items: center;
-   margin: 40px auto;
+   margin-top: 3rem;
    overflow: hidden;
  }
 
@@ -824,3 +823,23 @@
      height: 72px;
    }
  }
+ /* ********* Mejora de popups ***** */
+.cookie-policy__readmore {
+  display: none;
+}
+
+.cookie-policy__close {
+  width: 100%;
+  padding: 8px 24px;
+  border-radius: 32px;
+  background: #FFF;
+  color: #0D4E88;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.cookie-policy__content > a {
+  text-decoration: revert;
+}

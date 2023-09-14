@@ -340,25 +340,21 @@ const BannerTravelSale = () => {
                     <source
                         media="(min-width: 1024px)"
                         srcSet="
-                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
+                        https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/BannerMKT-Desktop.webp
           "
                     />
                     <source
                         media="(min-width: 768px) and (max-width: 1023px)"
                         srcSet="
-                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
-                    "
+                        https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/BannerMKT-Desktop.webp"
                     />
                     <source
                         media="(max-width: 767px)"
-                        srcSet="
-                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Mobile.webp
-                    "
+                        srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/BannerMKT-Mobile.webp"
                     />
                     <img
                         className="main_conteiner__s1_medio__paquetes__img"
-                        src="            https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
-                    "
+                        src="https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/BannerMKT-Desktop.webp"
                         alt="Imagen banner promociones"
                     />
                 </picture>
@@ -659,14 +655,10 @@ function App() {
                     <div className="main_conteiner__s1_medio top_mkt">
                         <BannerTop />
                     </div>
-                    {shouldShowEvent()
-                        ?
-                        <div className="main_conteiner__s2_bannerTravelSale">
-                            <BannerTravelSale />
-                        </div>
-                        :
-                        null
-                    }
+
+                    <div className="main_conteiner__s2_bannerTravelSale">
+                        <BannerTravelSale />
+                    </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} onContactClick={handleOpenForm} />
