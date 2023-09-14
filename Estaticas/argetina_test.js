@@ -234,6 +234,16 @@ const btnStyles = [
     { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Vuelos Mendoza – Alojamientos Mendoza – Paquetes Mendoza', destino: "Mendoza" },
 ];
 // *****************************************************
+const mapDataByDestino = (apiData) => {
+    return apiData.reduce((result, item) => {
+        const destino = item.attributes.Destino;
+        if (!result[destino]) {
+            result[destino] = [];
+        }
+        result[destino].push(item.attributes);
+        return result;
+    }, {});
+};
 // ************** BITRIX ********************
 const BitrixFormComponent = ({ isVisible }) => {
     const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
@@ -296,6 +306,20 @@ async function fetchDataFromAPI() {
         }
         const responseData = await response.json();
         return responseData;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
+
+async function fetchDataFromAPIPrice() {
+    try {
+        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-argentinas');
+        if (!response.ok) {
+            throw new Error('No se pudo obtener los datos de la API');
+        }
+        const responseDataPrice = await response.json();
+        return responseDataPrice;
     } catch (error) {
         console.error(error);
         throw error;
@@ -444,6 +468,7 @@ const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
     const [buttonSwitch, setButtonSwitch] = React.useState();
     const [data, setData] = React.useState([]);
+    const [pricesByDestino, setPricesByDestino] = React.useState({});
 
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
@@ -462,27 +487,38 @@ const Card = ({ destinos, onContactClick }) => {
         const fetchData = async () => {
             try {
                 const responseData = await fetchDataFromAPI();
-                console.log(responseData);
                 setData(responseData);
-                console.log("Valor de Swicher en la respuesta de la API:", responseData.data?.attributes?.Whatsapp_Activo);
-
                 setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
+            } catch (error) {
+                console.error(error);
+            }
+        };
 
-                console.log("buttonSwitch después del llamado a la API:", buttonSwitch);
-
+        const fetchDataPrecio = async () => {
+            try {
+                const responseDataPrecio = await fetchDataPrecioFromAPI(); // Asegúrate de utilizar la función correcta para obtener los precios.
+                // Obtén los precios y organízalos por destino y orden de card
+                const prices = responseDataPrecio.data.reduce((acc, item) => {
+                    const destino = item.attributes.Destino;
+                    const card = item.attributes.Card;
+                    if (!acc[destino]) {
+                        acc[destino] = [];
+                    }
+                    acc[destino][card] = {
+                        Tarifa_Temporada_Alta: item.attributes.Tarifa_Temporada_Alta,
+                        Tarifa_Temporada_Baja: item.attributes.Tarifa_Temporada_Baja,
+                    };
+                    return acc;
+                }, {});
+                setPricesByDestino(prices);
             } catch (error) {
                 console.error(error);
             }
         };
 
         fetchData();
+        fetchDataPrecio();
     }, []);
-
-    React.useEffect(() => {
-        console.log("buttonSwitch después del llamado a la API:", buttonSwitch);
-        // Aquí puedes realizar otras operaciones basadas en el valor actualizado de buttonSwitch
-    }, [buttonSwitch]);
-
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
@@ -497,8 +533,8 @@ const Card = ({ destinos, onContactClick }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="main_container_priceStyle">
-                        <div className="priceStyle left">{destino.priceBaja}</div>
-                        <div className="priceStyle right">{destino.price}</div>
+                        <div className="priceStyle left">{pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja}</div>
+                        <div className="priceStyle right">{pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Alta}</div>
                     </div>
                     <div className="main__container__buttonsCars">
                         <>
@@ -620,7 +656,7 @@ function App() {
     const [selectedFormId, setSelectedFormId] = React.useState(false);
     const [isFormVisible, setIsFormVisible] = React.useState(false);
 
-    
+
 
     React.useEffect(() => {
         setTimeout(() => {
