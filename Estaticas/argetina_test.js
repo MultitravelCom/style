@@ -33,7 +33,7 @@ const destinos1 = [
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
         priceBaja: "$121.860",
-        price: "$161.201",
+        price: "$161.200",
         events: "si"
     },
     {
@@ -297,6 +297,7 @@ const BitrixFormTitle = () => {
     )
 }
 // **************** FETCH API **********************
+
 async function fetchDataFromAPI() {
     try {
         const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/whatsapp-activo');
@@ -313,23 +314,17 @@ async function fetchDataFromAPI() {
 
 async function fetchDataFromAPIPrice() {
     try {
-        console.log('fetchDataFromAPIPrice se está ejecutando');
-
         const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-argentinas');
         if (!response.ok) {
             throw new Error('No se pudo obtener los datos de la API');
         }
-        
         const responseDataPrice = await response.json();
-        console.log('Respuesta de la API:', responseDataPrice); // Agrega este console.log
-        
         return responseDataPrice;
     } catch (error) {
         console.error(error);
         throw error;
     }
 }
-
 // ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
@@ -470,12 +465,11 @@ const EventImg = (props) => {
 //     )
 // }
 const Card = ({ destinos, onContactClick }) => {
-    console.log('El componente Card se está montando');
-
     const [openModal, setOpenModal] = React.useState(false);
     const [buttonSwitch, setButtonSwitch] = React.useState();
     const [data, setData] = React.useState([]);
     const [pricesByDestino, setPricesByDestino] = React.useState({});
+
 
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
@@ -491,16 +485,27 @@ const Card = ({ destinos, onContactClick }) => {
     };
 
     React.useEffect(() => {
-        console.log('useEffect en Card se está ejecutando');
         const fetchData = async () => {
             try {
                 const responseData = await fetchDataFromAPI();
                 setData(responseData);
                 setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
-                
-                // Mover la llamada a fetchDataPrecio aquí
-                const responseDataPrecio = await fetchDataFromAPIPrice();
-                const prices = responseDataPrecio.data.reduce((acc, item) => {
+
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchData();
+
+        const fetchDataPrecio = async () => {
+            try {
+                const responseData = await fetchDataFromAPI();
+                setData(responseData);
+                setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
+
+                // Obtén los precios y organízalos por destino y orden de card
+                const prices = responseData.data.reduce((acc, item) => {
                     const destino = item.attributes.Destino;
                     const card = item.attributes.Card;
                     if (!acc[destino]) {
@@ -510,8 +515,6 @@ const Card = ({ destinos, onContactClick }) => {
                         Tarifa_Temporada_Alta: item.attributes.Tarifa_Temporada_Alta,
                         Tarifa_Temporada_Baja: item.attributes.Tarifa_Temporada_Baja,
                     };
-                    console.log(`Destino: ${destino}, Card: ${card}, Tarifa_Temporada_Alta: ${item.attributes.Tarifa_Temporada_Alta}, Tarifa_Temporada_Baja: ${item.attributes.Tarifa_Temporada_Baja}`);
-        
                     return acc;
                 }, {});
                 setPricesByDestino(prices);
@@ -520,35 +523,9 @@ const Card = ({ destinos, onContactClick }) => {
             }
         };
 
-        // const fetchDataPrecio = async () => {
-        //     try {
-        //         console.log('Datos de la API:', responseDataPrecio); // Agrega este console.log
-        //         const responseDataPrecio = await fetchDataFromAPIPrice();
-
-        //         const prices = responseDataPrecio.data.reduce((acc, item) => {
-        //             const destino = item.attributes.Destino;
-        //             const card = item.attributes.Card;
-        //             if (!acc[destino]) {
-        //                 acc[destino] = [];
-        //             }
-        //             acc[destino][card] = {
-        //                 Tarifa_Temporada_Alta: item.attributes.Tarifa_Temporada_Alta,
-        //                 Tarifa_Temporada_Baja: item.attributes.Tarifa_Temporada_Baja,
-        //             };
-        //             console.log(`Destino: ${destino}, Card: ${card}, Tarifa_Temporada_Alta: ${item.attributes.Tarifa_Temporada_Alta}, Tarifa_Temporada_Baja: ${item.attributes.Tarifa_Temporada_Baja}`);
-
-        //             return acc;
-        //         }, {});
-        //         setPricesByDestino(prices);
-        //     } catch (error) {
-        //         console.error(error);
-        //     }
-        // };
-
-        fetchData();
-        // fetchDataPrecio();
-
+        fetchDataPrecio();
     }, []);
+
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
@@ -563,17 +540,8 @@ const Card = ({ destinos, onContactClick }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="main_container_priceStyle">
-                        <div className="priceStyle left">
-                            {console.log('pricesByDestino:', pricesByDestino)}
-                            {console.log('Tarifa_Temporada_Alta:', pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Alta)}
-                            {console.log('Tarifa_Temporada_Baja:', pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja)}
-                            {/* {pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja}
-                            {pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja} */}
-                        </div>
-                        <div className="priceStyle right">
-                            {/* {pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Alta} */}
-                        </div>
-
+                        <div className="priceStyle left">{pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja}</div>
+                        <div className="priceStyle right">{pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Alta}</div>
                     </div>
                     <div className="main__container__buttonsCars">
                         <>
