@@ -313,12 +313,16 @@ async function fetchDataFromAPI() {
 }
 
 async function fetchDataFromAPIPrice() {
+    console.log('El componente Card se está montando');
+
     try {
         const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-argentinas');
         if (!response.ok) {
             throw new Error('No se pudo obtener los datos de la API');
         }
         const responseDataPrice = await response.json();
+        console.log('Datos obtenidos de la API:', responseDataPrice); // Agrega este console.log
+
         return responseDataPrice;
     } catch (error) {
         console.error(error);
@@ -497,14 +501,14 @@ const Card = ({ destinos, onContactClick }) => {
         };
 
         fetchData();
+    }, []);
 
+    React.useEffect(() => {
         const fetchDataPrecio = async () => {
             try {
-                const responseData = await fetchDataFromAPI();
-                setData(responseData);
-                setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
+                const responseData = await fetchDataFromAPIPrice();
+                console.log('Datos obtenidos de la API en useEffect:', responseData); // Agrega este console.log
 
-                // Obtén los precios y organízalos por destino y orden de card
                 const prices = responseData.data.reduce((acc, item) => {
                     const destino = item.attributes.Destino;
                     const card = item.attributes.Card;
@@ -517,14 +521,17 @@ const Card = ({ destinos, onContactClick }) => {
                     };
                     return acc;
                 }, {});
+                console.log('Precios organizados:', prices); // Agrega este console.log
+
                 setPricesByDestino(prices);
             } catch (error) {
                 console.error(error);
             }
         };
-
+    
         fetchDataPrecio();
-    }, []);
+    }, []); // El segundo argumento vacío [] indica que este efecto se ejecuta solo una vez al montar el componente
+    
 
     return (
         destinos.map((destino) => (
