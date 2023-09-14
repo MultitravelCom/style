@@ -470,6 +470,8 @@ const EventImg = (props) => {
 //     )
 // }
 const Card = ({ destinos, onContactClick }) => {
+    console.log('El componente Card se está montando');
+
     const [openModal, setOpenModal] = React.useState(false);
     const [buttonSwitch, setButtonSwitch] = React.useState();
     const [data, setData] = React.useState([]);
