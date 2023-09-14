@@ -319,13 +319,17 @@ async function fetchDataFromAPIPrice() {
         if (!response.ok) {
             throw new Error('No se pudo obtener los datos de la API');
         }
+        
         const responseDataPrice = await response.json();
+        console.log('Respuesta de la API:', responseDataPrice); // Agrega este console.log
+        
         return responseDataPrice;
     } catch (error) {
         console.error(error);
         throw error;
     }
 }
+
 // ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
