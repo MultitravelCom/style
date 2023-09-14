@@ -313,6 +313,8 @@ async function fetchDataFromAPI() {
 
 async function fetchDataFromAPIPrice() {
     try {
+        console.log('fetchDataFromAPIPrice se está ejecutando');
+
         const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-argentinas');
         if (!response.ok) {
             throw new Error('No se pudo obtener los datos de la API');
