@@ -491,16 +491,9 @@ const Card = ({ destinos, onContactClick }) => {
                 const responseData = await fetchDataFromAPI();
                 setData(responseData);
                 setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
-            } catch (error) {
-                console.error(error);
-            }
-        };
-
-        const fetchDataPrecio = async () => {
-            try {
+                
+                // Mover la llamada a fetchDataPrecio aquí
                 const responseDataPrecio = await fetchDataFromAPIPrice();
-                console.log('Datos de la API:', responseDataPrecio); // Agrega este console.log
-
                 const prices = responseDataPrecio.data.reduce((acc, item) => {
                     const destino = item.attributes.Destino;
                     const card = item.attributes.Card;
@@ -512,7 +505,7 @@ const Card = ({ destinos, onContactClick }) => {
                         Tarifa_Temporada_Baja: item.attributes.Tarifa_Temporada_Baja,
                     };
                     console.log(`Destino: ${destino}, Card: ${card}, Tarifa_Temporada_Alta: ${item.attributes.Tarifa_Temporada_Alta}, Tarifa_Temporada_Baja: ${item.attributes.Tarifa_Temporada_Baja}`);
-
+        
                     return acc;
                 }, {});
                 setPricesByDestino(prices);
@@ -521,8 +514,33 @@ const Card = ({ destinos, onContactClick }) => {
             }
         };
 
+        // const fetchDataPrecio = async () => {
+        //     try {
+        //         console.log('Datos de la API:', responseDataPrecio); // Agrega este console.log
+        //         const responseDataPrecio = await fetchDataFromAPIPrice();
+
+        //         const prices = responseDataPrecio.data.reduce((acc, item) => {
+        //             const destino = item.attributes.Destino;
+        //             const card = item.attributes.Card;
+        //             if (!acc[destino]) {
+        //                 acc[destino] = [];
+        //             }
+        //             acc[destino][card] = {
+        //                 Tarifa_Temporada_Alta: item.attributes.Tarifa_Temporada_Alta,
+        //                 Tarifa_Temporada_Baja: item.attributes.Tarifa_Temporada_Baja,
+        //             };
+        //             console.log(`Destino: ${destino}, Card: ${card}, Tarifa_Temporada_Alta: ${item.attributes.Tarifa_Temporada_Alta}, Tarifa_Temporada_Baja: ${item.attributes.Tarifa_Temporada_Baja}`);
+
+        //             return acc;
+        //         }, {});
+        //         setPricesByDestino(prices);
+        //     } catch (error) {
+        //         console.error(error);
+        //     }
+        // };
+
         fetchData();
-        fetchDataPrecio();
+        // fetchDataPrecio();
 
     }, []);
     return (
