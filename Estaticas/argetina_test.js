@@ -496,8 +496,7 @@ const Card = ({ destinos, onContactClick }) => {
 
         const fetchDataPrecio = async () => {
             try {
-                const responseDataPrecio = await fetchDataPrecioFromAPI(); // Asegúrate de utilizar la función correcta para obtener los precios.
-                // Obtén los precios y organízalos por destino y orden de card
+                const responseDataPrecio = await fetchDataFromAPIPrice();
                 const prices = responseDataPrecio.data.reduce((acc, item) => {
                     const destino = item.attributes.Destino;
                     const card = item.attributes.Card;
@@ -508,6 +507,8 @@ const Card = ({ destinos, onContactClick }) => {
                         Tarifa_Temporada_Alta: item.attributes.Tarifa_Temporada_Alta,
                         Tarifa_Temporada_Baja: item.attributes.Tarifa_Temporada_Baja,
                     };
+                    console.log(`Destino: ${destino}, Card: ${card}, Tarifa_Temporada_Alta: ${item.attributes.Tarifa_Temporada_Alta}, Tarifa_Temporada_Baja: ${item.attributes.Tarifa_Temporada_Baja}`);
+
                     return acc;
                 }, {});
                 setPricesByDestino(prices);
