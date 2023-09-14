@@ -33,7 +33,7 @@ const destinos1 = [
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
         priceBaja: "$121.860",
-        price: "$161.200",
+        price: "$161.201",
         events: "si"
     },
     {
