@@ -297,7 +297,6 @@ const BitrixFormTitle = () => {
     )
 }
 // **************** FETCH API **********************
-
 async function fetchDataFromAPI() {
     try {
         const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/whatsapp-activo');
@@ -497,6 +496,8 @@ const Card = ({ destinos, onContactClick }) => {
         const fetchDataPrecio = async () => {
             try {
                 const responseDataPrecio = await fetchDataFromAPIPrice();
+                console.log('Datos de la API:', responseDataPrecio); // Agrega este console.log
+
                 const prices = responseDataPrecio.data.reduce((acc, item) => {
                     const destino = item.attributes.Destino;
                     const card = item.attributes.Card;
