@@ -523,6 +523,7 @@ const Card = ({ destinos, onContactClick }) => {
 
         fetchData();
         fetchDataPrecio();
+
     }, []);
     return (
         destinos.map((destino) => (
@@ -538,8 +539,17 @@ const Card = ({ destinos, onContactClick }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="main_container_priceStyle">
-                        <div className="priceStyle left">{pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja}</div>
-                        <div className="priceStyle right">{pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Alta}</div>
+                        <div className="priceStyle left">
+                            {console.log('pricesByDestino:', pricesByDestino)}
+                            {console.log('Tarifa_Temporada_Alta:', pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Alta)}
+                            {console.log('Tarifa_Temporada_Baja:', pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja)}
+                            {pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja}
+                            {pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja}
+                        </div>
+                        <div className="priceStyle right">
+                            {pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Alta}
+                        </div>
+
                     </div>
                     <div className="main__container__buttonsCars">
                         <>
