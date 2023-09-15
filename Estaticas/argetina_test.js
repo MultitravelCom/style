@@ -504,6 +504,7 @@ const Card = ({ destinos, onContactClick }) => {
     }, []);
 
     React.useEffect(() => {
+        console.log('El useEffect se está ejecutando');
         const fetchDataPrecio = async () => {
             try {
                 const responseData = await fetchDataFromAPIPrice();
