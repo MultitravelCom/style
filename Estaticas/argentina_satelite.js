@@ -236,7 +236,7 @@ const btnStyles = [
 // *****************************************************
 async function fetchDataFromAPI() {
     try {
-        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-argentinas');
+        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-whatsapp');
         if (!response.ok) {
             throw new Error('No se pudo obtener los datos de la API');
         }
@@ -458,12 +458,15 @@ const Card = ({ destinos, onContactClick }) => {
         const fetchData = async () => {
             try {
                 const responseData = await fetchDataFromAPI();
-                console.log(responseData);
                 setData(responseData);
+                setLoaded(true)
 
                 setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
 
+
             } catch (error) {
+                setLoaded(true)
+
                 console.error(error);
             }
         };
