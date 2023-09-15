@@ -347,18 +347,6 @@ async function fetchDataFromAPIPrice() {
         throw error;
     }
 }
-// ********** PARSEAR NUMERO ********************
-function formatearNumeroConPuntos(numero) {
-    const numeroComoCadena = numero.toString();
-    const partes = [];
-    let i = numeroComoCadena.length;
-
-    while (i > 0) {
-        partes.unshift(numeroComoCadena.substring(Math.max(i - 3, 0), i));
-        i -= 3;
-    }
-    return partes.join('.');
-}
 // ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
@@ -504,6 +492,7 @@ const Card = ({ destinos, onContactClick }) => {
     const [data, setData] = React.useState([]);
     const [pricesByDestino, setPricesByDestino] = React.useState({});
 
+
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
             window.location.href = 'tel:08003480003';
@@ -565,14 +554,11 @@ const Card = ({ destinos, onContactClick }) => {
                 console.error(error);
             }
         };
-        const tarifaTemporadaBaja = pricesByDestino.Tarifa_Temporada_Baja;
-        const tarifaTemporadaAlta = pricesByDestino.Tarifa_Temporada_Alta;
 
-        const tarifaTemporadaBajaFormateada = formatearNumeroConPuntos(tarifaTemporadaBaja);
-        const tarifaTemporadaAltaFormateada = formatearNumeroConPuntos(tarifaTemporadaAlta);
 
         fetchDataPrecio();
     }, []);
+
 
     return (
 
@@ -595,8 +581,8 @@ const Card = ({ destinos, onContactClick }) => {
                         {pricesByDestino[destino.destino] && (
                             pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
                                 <div key={index} className="main_container_priceStyle">
-                                    <div className="priceStyle left">${tarifaTemporadaBajaFormateada}</div>
-                                    <div className="priceStyle left">${tarifaTemporadaAltaFormateada}</div>
+                                    <div className="priceStyle left">${tarifa.Tarifa_Temporada_Baja}</div>
+                                    <div className="priceStyle right">$ {tarifa.Tarifa_Temporada_Alta}</div>
                                 </div>
                             ))
                         )}
