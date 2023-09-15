@@ -508,27 +508,35 @@ const Card = ({ destinos, onContactClick }) => {
         const fetchDataPrecio = async () => {
             try {
                 const responseData = await fetchDataFromAPIPrice();
-                console.log('Datos obtenidos de la API en useEffect:', responseData); // Agrega este console.log
-
+                console.log('Datos obtenidos de la API en useEffect:', responseData);
+        
                 const prices = responseData.data.reduce((acc, item) => {
                     const destino = item.attributes.Destino;
                     const card = item.attributes.Card;
+        
                     if (!acc[destino]) {
-                        acc[destino] = [];
+                        acc[destino] = {};
                     }
-                    acc[destino][card] = {
+        
+                    if (!acc[destino][card]) {
+                        acc[destino][card] = [];
+                    }
+        
+                    acc[destino][card].push({
                         Tarifa_Temporada_Alta: item.attributes.Tarifa_Temporada_Alta,
                         Tarifa_Temporada_Baja: item.attributes.Tarifa_Temporada_Baja,
-                    };
+                    });
+        
                     return acc;
                 }, {});
-                console.log('Precios organizados:', prices); // Agrega este console.log
-
+                console.log('Precios organizados:', prices);
+        
                 setPricesByDestino(prices);
             } catch (error) {
                 console.error(error);
             }
         };
+        
 
         fetchDataPrecio();
     }, []);
