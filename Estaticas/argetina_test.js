@@ -554,8 +554,8 @@ const Card = ({ destinos, onContactClick }) => {
 
                         { (
                             <div className="main_container_priceStyle">
-                                <div className="priceStyle left">{pricesByDestino?.Tarifa_Temporada_Baja}</div>
-                                <div className="priceStyle right">{pricesByDestino?.Tarifa_Temporada_Alta}</div>
+                                <div className="priceStyle left">{pricesByDestino[destino.destino][destino.card].Tarifa_Temporada_Baja}</div>
+                                <div className="priceStyle right">{pricesByDestino[destino.destino][destino.card].Tarifa_Temporada_Alta}</div>
                             </div>
                         )}
                     </div>
