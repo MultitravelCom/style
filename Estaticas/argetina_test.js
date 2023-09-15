@@ -28,6 +28,7 @@ const destinos1 = [
     {
         id: "a1",
         destino: "Bariloche",
+        cardOrden: "Card 1",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-1.webp",
         className: "uno",
         linkWa: "https://wa.link/ncvo1x",
@@ -39,6 +40,7 @@ const destinos1 = [
     {
         id: "a2",
         destino: "Bariloche",
+        cardOrden: "Card 2",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-2.webp",
         className: "uno",
         linkWa: "https://wa.link/s507zo",
@@ -50,6 +52,7 @@ const destinos1 = [
     {
         id: "a3",
         destino: "Bariloche",
+        cardOrden: "Card 3",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-3.webp",
         className: "uno",
         linkWa: "https://wa.link/duchkz",
@@ -61,6 +64,7 @@ const destinos1 = [
     {
         id: "a4",
         destino: "Bariloche",
+        cardOrden: "Card 4",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-4.webp",
         className: "uno",
         linkWa: "https://wa.link/2z5hpp",
@@ -72,6 +76,7 @@ const destinos1 = [
     {
         id: "a5",
         destino: "Bariloche",
+        cardOrden: "Card 5",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-5.webp",
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
@@ -83,6 +88,7 @@ const destinos1 = [
     {
         id: "a6",
         destino: "Bariloche",
+        cardOrden: "Card 6",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-6.webp",
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
@@ -96,6 +102,7 @@ const destinos2 = [
     {
         id: "b1",
         destino: "Iguazu",
+        cardOrden: "Card 2",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-7.webp",
         className: "uno",
         linkWa: "https://wa.link/hxjkgq",
@@ -107,6 +114,7 @@ const destinos2 = [
     {
         id: "b2",
         destino: "Iguazu",
+        cardOrden: "Card 3",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-8.webp",
         className: "uno",
         linkWa: "https://wa.link/2rmvhq",
@@ -118,6 +126,7 @@ const destinos2 = [
     {
         id: "b3",
         destino: "Iguazu",
+        cardOrden: "Card 4",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-9.webp",
         className: "uno",
         linkWa: "https://wa.link/wbq74i",
@@ -129,6 +138,7 @@ const destinos2 = [
     {
         id: "b4",
         destino: "Iguazu",
+        cardOrden: "Card 4",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-10.webp",
         className: "uno",
         linkWa: "https://wa.link/s6nxus",
@@ -140,6 +150,7 @@ const destinos2 = [
     {
         id: "b5",
         destino: "Iguazu",
+        cardOrden: "Card 5",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-11.webp",
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
@@ -151,6 +162,7 @@ const destinos2 = [
     {
         id: "b6",
         destino: "Iguazu",
+        cardOrden: "Card 6",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-12.webp",
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
@@ -164,6 +176,7 @@ const destinos3 = [
     {
         id: "c1",
         destino: "Mendoza",
+        cardOrden: "Card 1",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-13.webp",
         className: "uno",
         linkWa: "https://wa.link/61efbi",
@@ -175,6 +188,7 @@ const destinos3 = [
     {
         id: "c2",
         destino: "Mendoza",
+        cardOrden: "Card 2",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-14.webp",
         className: "uno",
         linkWa: "https://wa.link/sbfl7y",
@@ -186,6 +200,7 @@ const destinos3 = [
     {
         id: "c3",
         destino: "Mendoza",
+        cardOrden: "Card 3",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-15.webp",
         className: "uno",
         linkWa: "https://wa.link/vs8baw",
@@ -197,6 +212,7 @@ const destinos3 = [
     {
         id: "c4",
         destino: "Mendoza",
+        cardOrden: "Card 4",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-16.webp",
         className: "uno",
         linkWa: "https://wa.link/u8ym55",
@@ -208,6 +224,7 @@ const destinos3 = [
     {
         id: "c5",
         destino: "Mendoza",
+        cardOrden: "Card 5",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-17.webp",
         className: "uno",
         linkWa: "https://wa.link/wz0152",
@@ -219,6 +236,7 @@ const destinos3 = [
     {
         id: "c6",
         destino: "Mendoza",
+        cardOrden: "Card 6",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-18.webp",
         className: "uno",
         linkWa: "https://wa.link/wz0152",
@@ -557,10 +575,10 @@ const Card = ({ destinos, onContactClick }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="main_container_priceStyle">
-                        {console.log('Valor de destino.card:', destino.destino)}
-                        {console.log('Valor de title.card:', destino.card)}
+                        {console.log('Valor de destino.destino:', destino.destino)}
+                        {console.log('Valor de destino.card:', destino.cardOrden)}
 
-                        {pricesByDestino[destino.destino] && pricesByDestino[destino.destino][destino.card] && (
+                        {pricesByDestino[destino.destino] && (
                             pricesByDestino[destino.destino][destino.card].map((tarifa, index) => (
                                 <div key={index} className="main_container_priceStyle">
                                     <div className="priceStyle left">{tarifa.Tarifa_Temporada_Baja}</div>
