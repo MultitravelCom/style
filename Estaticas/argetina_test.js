@@ -549,7 +549,9 @@ const Card = ({ destinos, onContactClick }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="main_container_priceStyle">
-                        {console.log('Precios por destino:', pricesByDestino)}
+                        {console.log('Valor de destino.card:', destino.card)}
+                        {console.log('Valor de title.card:', destino.title)}
+
                         {pricesByDestino[destino.title] && pricesByDestino[destino.title][destino.card] && (
                             <div className="main_container_priceStyle">
                                 <div className="priceStyle left">{pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja}</div>
