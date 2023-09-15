@@ -558,7 +558,7 @@ const Card = ({ destinos, onContactClick, pricesByDestino }) => {
                     </picture>
                     <div className="main_container_priceStyle">
                         {console.log('Valor de destino.card:', destino.destino)}
-                        {console.log('Valor de title.card:', destino.title)}
+                        {console.log('Valor de title.card:', destino.card)}
 
                         {pricesByDestino[destino.destino] && pricesByDestino[destino.destino][destino.card] && (
                             pricesByDestino[destino.destino][destino.card].map((tarifa, index) => (
