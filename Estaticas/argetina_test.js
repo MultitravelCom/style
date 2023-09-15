@@ -468,7 +468,7 @@ const EventImg = (props) => {
 
 //     )
 // }
-const Card = ({ destinos, onContactClick, pricesByDestino }) => {
+const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
     const [buttonSwitch, setButtonSwitch] = React.useState();
     const [data, setData] = React.useState([]);
