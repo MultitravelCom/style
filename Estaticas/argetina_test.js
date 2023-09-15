@@ -529,12 +529,13 @@ const Card = ({ destinos, onContactClick }) => {
                 console.error(error);
             }
         };
-    
+
         fetchDataPrecio();
-    }, []); // El segundo argumento vacío [] indica que este efecto se ejecuta solo una vez al montar el componente
-    
+    }, []);
+
 
     return (
+
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
@@ -548,6 +549,7 @@ const Card = ({ destinos, onContactClick }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="main_container_priceStyle">
+                        {console.log('Precios por destino:', pricesByDestino)}
                         <div className="priceStyle left">{pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja}</div>
                         <div className="priceStyle right">{pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Alta}</div>
                     </div>
