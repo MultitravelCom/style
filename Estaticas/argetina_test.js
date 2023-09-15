@@ -581,8 +581,8 @@ const Card = ({ destinos, onContactClick }) => {
                         {pricesByDestino[destino.destino] && (
                             pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
                                 <div key={index} className="main_container_priceStyle">
-                                    <div className="priceStyle left">{tarifa.Tarifa_Temporada_Baja}</div>
-                                    <div className="priceStyle right">{tarifa.Tarifa_Temporada_Alta}</div>
+                                    <div className="priceStyle left">${tarifa.Tarifa_Temporada_Baja}</div>
+                                    <div className="priceStyle right">${tarifa.Tarifa_Temporada_Baja}</div>
                                 </div>
                             ))
                         )}
