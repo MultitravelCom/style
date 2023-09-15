@@ -468,7 +468,7 @@ const EventImg = (props) => {
 
 //     )
 // }
-const Card = ({ destinos, onContactClick }) => {
+const Card = ({ destinos, onContactClick, pricesByDestino }) => {
     const [openModal, setOpenModal] = React.useState(false);
     const [buttonSwitch, setButtonSwitch] = React.useState();
     const [data, setData] = React.useState([]);
@@ -509,34 +509,34 @@ const Card = ({ destinos, onContactClick }) => {
             try {
                 const responseData = await fetchDataFromAPIPrice();
                 console.log('Datos obtenidos de la API en useEffect:', responseData);
-        
+
                 const prices = responseData.data.reduce((acc, item) => {
                     const destino = item.attributes.Destino;
                     const card = item.attributes.Card;
-        
+
                     if (!acc[destino]) {
                         acc[destino] = {};
                     }
-        
+
                     if (!acc[destino][card]) {
                         acc[destino][card] = [];
                     }
-        
+
                     acc[destino][card].push({
                         Tarifa_Temporada_Alta: item.attributes.Tarifa_Temporada_Alta,
                         Tarifa_Temporada_Baja: item.attributes.Tarifa_Temporada_Baja,
                     });
-        
+
                     return acc;
                 }, {});
                 console.log('Precios organizados:', prices);
-        
+
                 setPricesByDestino(prices);
             } catch (error) {
                 console.error(error);
             }
         };
-        
+
 
         fetchDataPrecio();
     }, []);
@@ -560,11 +560,13 @@ const Card = ({ destinos, onContactClick }) => {
                         {console.log('Valor de destino.card:', destino.destino)}
                         {console.log('Valor de title.card:', destino.title)}
 
-                        { (
-                            <div className="main_container_priceStyle">
-                                <div className="priceStyle left">{pricesByDestino[destino.destino][destino.card].Tarifa_Temporada_Baja}</div>
-                                <div className="priceStyle right">{pricesByDestino[destino.destino][destino.card].Tarifa_Temporada_Alta}</div>
-                            </div>
+                        {pricesByDestino[destino.destino] && pricesByDestino[destino.destino][destino.card] && (
+                            pricesByDestino[destino.destino][destino.card].map((tarifa, index) => (
+                                <div key={index} className="main_container_priceStyle">
+                                    <div className="priceStyle left">{tarifa.Tarifa_Temporada_Baja}</div>
+                                    <div className="priceStyle right">{tarifa.Tarifa_Temporada_Alta}</div>
+                                </div>
+                            ))
                         )}
                     </div>
                     <div className="main__container__buttonsCars">
