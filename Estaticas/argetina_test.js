@@ -552,7 +552,7 @@ const Card = ({ destinos, onContactClick }) => {
                         {console.log('Valor de destino.card:', destino.destino)}
                         {console.log('Valor de title.card:', destino.title)}
 
-                        {pricesByDestino[destino.title] && pricesByDestino[destino.title][destino.card] && (
+                        {pricesByDestino[destino.card] && (
                             <div className="main_container_priceStyle">
                                 <div className="priceStyle left">{pricesByDestino[destino.card]?.Tarifa_Temporada_Baja}</div>
                                 <div className="priceStyle right">{pricesByDestino[destino.card]?.Tarifa_Temporada_Alta}</div>
