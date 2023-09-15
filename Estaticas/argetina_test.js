@@ -504,8 +504,6 @@ const Card = ({ destinos, onContactClick }) => {
     const [data, setData] = React.useState([]);
     const [pricesByDestino, setPricesByDestino] = React.useState({});
 
-    const precioNumerico = tarifa.Tarifa_Temporada_Baja;
-
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
             window.location.href = 'tel:08003480003';
@@ -567,8 +565,8 @@ const Card = ({ destinos, onContactClick }) => {
                 console.error(error);
             }
         };
-        const tarifaTemporadaBaja = tarifa.Tarifa_Temporada_Baja;
-        const tarifaTemporadaAlta = tarifa.Tarifa_Temporada_Alta;
+        const tarifaTemporadaBaja = pricesByDestino.Tarifa_Temporada_Baja;
+        const tarifaTemporadaAlta = pricesByDestino.Tarifa_Temporada_Alta;
 
         const tarifaTemporadaBajaFormateada = formatearNumeroConPuntos(tarifaTemporadaBaja);
         const tarifaTemporadaAltaFormateada = formatearNumeroConPuntos(tarifaTemporadaAlta);
