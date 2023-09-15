@@ -550,8 +550,12 @@ const Card = ({ destinos, onContactClick }) => {
                     </picture>
                     <div className="main_container_priceStyle">
                         {console.log('Precios por destino:', pricesByDestino)}
-                        <div className="priceStyle left">{pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja}</div>
-                        <div className="priceStyle right">{pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Alta}</div>
+                        {pricesByDestino[destino.title] && pricesByDestino[destino.title][destino.card] && (
+                            <div className="main_container_priceStyle">
+                                <div className="priceStyle left">{pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Baja}</div>
+                                <div className="priceStyle right">{pricesByDestino[destino.title][destino.card]?.Tarifa_Temporada_Alta}</div>
+                            </div>
+                        )}
                     </div>
                     <div className="main__container__buttonsCars">
                         <>
