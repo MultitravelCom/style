@@ -459,13 +459,13 @@ const Card = ({ destinos, onContactClick }) => {
             try {
                 const responseData = await fetchDataFromAPI();
                 setData(responseData);
-                setLoaded(true)
+                
 
                 setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
 
 
             } catch (error) {
-                setLoaded(true)
+                
 
                 console.error(error);
             }
