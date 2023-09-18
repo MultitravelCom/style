@@ -102,7 +102,7 @@ const destinos2 = [
     {
         id: "b1",
         destino: "Iguazu",
-        cardOrden: "Card 2",
+        cardOrden: "Card 1",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-7.webp",
         className: "uno",
         linkWa: "https://wa.link/hxjkgq",
@@ -114,7 +114,7 @@ const destinos2 = [
     {
         id: "b2",
         destino: "Iguazu",
-        cardOrden: "Card 3",
+        cardOrden: "Card 2",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-8.webp",
         className: "uno",
         linkWa: "https://wa.link/2rmvhq",
@@ -126,7 +126,7 @@ const destinos2 = [
     {
         id: "b3",
         destino: "Iguazu",
-        cardOrden: "Card 4",
+        cardOrden: "Card 3",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-9.webp",
         className: "uno",
         linkWa: "https://wa.link/wbq74i",
