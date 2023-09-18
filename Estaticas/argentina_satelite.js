@@ -512,6 +512,7 @@ const Card = ({ destinos, onContactClick }) => {
         const fetchDataPrecio = async () => {
             try {
                 const responseData = await fetchDataFromAPIPrice();
+                console.log('Datos sin procesar:', responseData.data);
 
                 const prices = responseData.data.reduce((acc, item) => {
                     const destino = item.attributes.Destino;
@@ -527,6 +528,9 @@ const Card = ({ destinos, onContactClick }) => {
 
                     const tarifaTemporadaAlta = item.attributes.Tarifa_Temporada_Alta.toLocaleString().replace(/,/g, '.');
                     const tarifaTemporadaBaja = item.attributes.Tarifa_Temporada_Baja.toLocaleString().replace(/,/g, '.');
+
+                    console.log('Tarifa Temporada Alta:', item.attributes.Tarifa_Temporada_Alta);
+                    console.log('Tarifa Temporada Baja:', item.attributes.Tarifa_Temporada_Baja);
 
                     acc[destino][card].push({
                         Tarifa_Temporada_Alta: tarifaTemporadaAlta,
