@@ -476,6 +476,7 @@ const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
     const [buttonSwitch, setButtonSwitch] = React.useState();
     const [data, setData] = React.useState([]);
+    const [pricesByDestino, setPricesByDestino] = React.useState({});
 
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
