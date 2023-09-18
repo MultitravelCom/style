@@ -525,9 +525,12 @@ const Card = ({ destinos, onContactClick }) => {
                         acc[destino][card] = [];
                     }
 
+                    const tarifaTemporadaAlta = item.attributes.Tarifa_Temporada_Alta.toLocaleString().replace(/,/g, '.');
+                    const tarifaTemporadaBaja = item.attributes.Tarifa_Temporada_Baja.toLocaleString().replace(/,/g, '.');
+
                     acc[destino][card].push({
-                        Tarifa_Temporada_Alta: item.attributes.Tarifa_Temporada_Alta,
-                        Tarifa_Temporada_Baja: item.attributes.Tarifa_Temporada_Baja,
+                        Tarifa_Temporada_Alta: tarifaTemporadaAlta,
+                        Tarifa_Temporada_Baja: tarifaTemporadaBaja,
                     });
 
                     return acc;
