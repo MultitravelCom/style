@@ -252,16 +252,34 @@ const btnStyles = [
     { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Vuelos Mendoza – Alojamientos Mendoza – Paquetes Mendoza', destino: "Mendoza" },
 ];
 // *****************************************************
-const mapDataByDestino = (apiData) => {
-    return apiData.reduce((result, item) => {
-        const destino = item.attributes.Destino;
-        if (!result[destino]) {
-            result[destino] = [];
+async function fetchDataFromAPI() {
+    try {
+        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-whatsapp');
+        if (!response.ok) {
+            throw new Error('No se pudo obtener los datos de la API');
         }
-        result[destino].push(item.attributes);
-        return result;
-    }, {});
-};
+        const responseData = await response.json();
+        return responseData;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
+
+async function fetchDataFromAPIPrice() {
+    try {
+        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-argentinas');
+        if (!response.ok) {
+            throw new Error('No se pudo obtener los datos de la API');
+        }
+        const responseDataPrice = await response.json();
+
+        return responseDataPrice;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
 // ************** BITRIX ********************
 const BitrixFormComponent = ({ isVisible }) => {
     const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
@@ -314,39 +332,6 @@ const BitrixFormTitle = () => {
         </div>
     )
 }
-// **************** FETCH API **********************
-
-async function fetchDataFromAPI() {
-    try {
-        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/whatsapp-activo');
-        if (!response.ok) {
-            throw new Error('No se pudo obtener los datos de la API');
-        }
-        const responseData = await response.json();
-        return responseData;
-    } catch (error) {
-        console.error(error);
-        throw error;
-    }
-}
-
-async function fetchDataFromAPIPrice() {
-    console.log('El componente Card se está montando');
-
-    try {
-        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-argentinas');
-        if (!response.ok) {
-            throw new Error('No se pudo obtener los datos de la API');
-        }
-        const responseDataPrice = await response.json();
-        console.log('Datos obtenidos de la API:', responseDataPrice); // Agrega este console.log
-
-        return responseDataPrice;
-    } catch (error) {
-        console.error(error);
-        throw error;
-    }
-}
 // ************** COMPONENTES ********************
 const BannerTop = () => {
     return (
@@ -388,25 +373,21 @@ const BannerTravelSale = () => {
                     <source
                         media="(min-width: 1024px)"
                         srcSet="
-                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
+                        https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/BannerMKT-Desktop.webp
           "
                     />
                     <source
                         media="(min-width: 768px) and (max-width: 1023px)"
                         srcSet="
-                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
-                    "
+                        https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/BannerMKT-Desktop.webp"
                     />
                     <source
                         media="(max-width: 767px)"
-                        srcSet="
-                        https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Mobile.webp
-                    "
+                        srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/BannerMKT-Mobile.webp"
                     />
                     <img
                         className="main_conteiner__s1_medio__paquetes__img"
-                        src="            https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Banner-Desktop.webp
-                    "
+                        src="https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/BannerMKT-Desktop.webp"
                         alt="Imagen banner promociones"
                     />
                 </picture>
@@ -434,8 +415,10 @@ function ButtonLading(props) {
 
     return (
         <button id={props.id} className={`btn_Style_Venta_Per ${props.className}`} onClick={handleClick}>
+
             {props.svgType === 'whatsapp' && svgWA}
             {props.svgType === 'phone' && svgPhone}
+
             <span>
                 {props.text}
             </span>
@@ -492,7 +475,6 @@ const Card = ({ destinos, onContactClick }) => {
     const [data, setData] = React.useState([]);
     const [pricesByDestino, setPricesByDestino] = React.useState({});
 
-
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
             window.location.href = 'tel:08003480003';
@@ -511,22 +493,24 @@ const Card = ({ destinos, onContactClick }) => {
             try {
                 const responseData = await fetchDataFromAPI();
                 setData(responseData);
+
+
                 setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
 
+
             } catch (error) {
+
+
                 console.error(error);
             }
         };
 
         fetchData();
     }, []);
-
     React.useEffect(() => {
-        console.log('El useEffect se está ejecutando');
         const fetchDataPrecio = async () => {
             try {
                 const responseData = await fetchDataFromAPIPrice();
-                console.log('Datos obtenidos de la API en useEffect:', responseData);
 
                 const prices = responseData.data.reduce((acc, item) => {
                     const destino = item.attributes.Destino;
@@ -557,10 +541,7 @@ const Card = ({ destinos, onContactClick }) => {
 
         fetchDataPrecio();
     }, []);
-
-
     return (
-
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
                 <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
@@ -574,11 +555,12 @@ const Card = ({ destinos, onContactClick }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="main_container_priceStyle">
+
                         {pricesByDestino[destino.destino] && (
                             pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
                                 <div key={index} className="main_container_priceStyle">
-                                    <div className="priceStyle left">${tarifa.Tarifa_Temporada_Baja}</div>
-                                    <div className="priceStyle right">$ {tarifa.Tarifa_Temporada_Alta}</div>
+                                    <div className="priceStyle left">${tarifa.Tarifa_Temporada_Baja.toLocaleString().replace(/,/g, '.')}</div>
+                                    <div className="priceStyle right">$ {tarifa.Tarifa_Temporada_Alta.toLocaleString().replace(/,/g, '.')}</div>
                                 </div>
                             ))
                         )}
@@ -703,13 +685,21 @@ function App() {
     const [selectedFormId, setSelectedFormId] = React.useState(false);
     const [isFormVisible, setIsFormVisible] = React.useState(false);
 
+    React.useEffect(() => {
+        const fetchData = async () => {
+            try {
+                await fetchDataFromAPI(); // Llamada a la función existente
+                setLoaded(true);
+            } catch (error) {
+                console.error('Error al obtener datos:', error);
+                setLoaded(true);
+            }
+        };
 
+        fetchData();
+    }, []);
 
     React.useEffect(() => {
-        setTimeout(() => {
-            setLoaded(true);
-        }, 2000);
-
         const intervalo = setInterval(() => {
             const fechaDeseada = new Date("2023-04-25T19:40:00");
             const fechaActual = new Date();
@@ -725,6 +715,7 @@ function App() {
     }, []);
 
     const handleOpenForm = (formId) => {
+
         setSelectedFormId(formId);
         setIsFormVisible(true);
 
@@ -741,14 +732,10 @@ function App() {
                     <div className="main_conteiner__s1_medio top_mkt">
                         <BannerTop />
                     </div>
-                    {shouldShowEvent()
-                        ?
-                        <div className="main_conteiner__s2_bannerTravelSale">
-                            <BannerTravelSale />
-                        </div>
-                        :
-                        null
-                    }
+
+                    <div className="main_conteiner__s2_bannerTravelSale">
+                        <BannerTravelSale />
+                    </div>
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} onContactClick={handleOpenForm} />
