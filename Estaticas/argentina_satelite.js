@@ -28,67 +28,73 @@ const destinos1 = [
     {
         id: "a1",
         destino: "Bariloche",
+        cardOrden: "Card 1",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-1.webp",
         className: "uno",
         linkWa: "https://wa.link/ncvo1x",
         title: "Paquete a Bariloche",
-        priceBaja: "$153.100",
-        price: "$172.740",
+        priceBaja: "$121.860",
+        price: "$161.200",
         events: "si"
     },
     {
         id: "a2",
         destino: "Bariloche",
+        cardOrden: "Card 2",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-2.webp",
         className: "uno",
         linkWa: "https://wa.link/s507zo",
         title: "Paquete a Bariloche",
-        priceBaja: "$179.750",
-        price: "$227.750",
+        priceBaja: "$171.120",
+        price: "$214.560",
         events: "si"
     },
     {
         id: "a3",
         destino: "Bariloche",
+        cardOrden: "Card 3",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-3.webp",
         className: "uno",
         linkWa: "https://wa.link/duchkz",
         title: "Paquete a Bariloche",
-        priceBaja: "$216.720",
-        price: "$282.730",
+        priceBaja: "$213.100",
+        price: "$276.900",
         events: "si"
     },
     {
         id: "a4",
         destino: "Bariloche",
+        cardOrden: "Card 4",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-4.webp",
         className: "uno",
         linkWa: "https://wa.link/2z5hpp",
         title: "Hotel Villa Sofia",
-        priceBaja: "$42.950",
-        price: "$86.175",
+        priceBaja: "$35.375",
+        price: "$63.590",
         events: "si"
     },
     {
         id: "a5",
         destino: "Bariloche",
+        cardOrden: "Card 5",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-5.webp",
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
         title: "Hotel Kenton Palace Bariloche",
-        priceBaja: "$65.040",
-        price: "$67.385",
+        priceBaja: "$55.640",
+        price: "$67.555",
         events: "si"
     },
     {
         id: "a6",
         destino: "Bariloche",
+        cardOrden: "Card 6",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-6.webp",
         className: "uno",
         linkWa: "https://wa.link/dv0ucs",
         title: "Hotel Design Suites Bariloche",
-        priceBaja: "$83.920",
-        price: "$98.625",
+        priceBaja: "$75.135",
+        price: "$79.700",
         events: "si"
     },
 ];
@@ -96,67 +102,73 @@ const destinos2 = [
     {
         id: "b1",
         destino: "Iguazu",
+        cardOrden: "Card 2",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-7.webp",
         className: "uno",
         linkWa: "https://wa.link/hxjkgq",
         title: "Paquete a Iguazú",
-        priceBaja: "$146.380",
-        price: "$126.920",
+        priceBaja: "$138.910",
+        price: "$160.200",
         events: "si"
     },
     {
         id: "b2",
         destino: "Iguazu",
+        cardOrden: "Card 3",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-8.webp",
         className: "uno",
         linkWa: "https://wa.link/2rmvhq",
         title: "Paquete a Iguazús",
-        priceBaja: "$205.220",
-        price: "$172.565",
+        priceBaja: "$189.840",
+        price: "$250.370",
         events: "si"
     },
     {
         id: "b3",
         destino: "Iguazu",
+        cardOrden: "Card 4",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-9.webp",
         className: "uno",
         linkWa: "https://wa.link/wbq74i",
         title: "Hotel Merit Iguazú",
-        priceBaja: "$58.175",
-        price: "$60.890",
+        priceBaja: "$56.210",
+        price: "$63.370",
         events: "si"
     },
     {
         id: "b4",
         destino: "Iguazu",
+        cardOrden: "Card 4",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-10.webp",
         className: "uno",
         linkWa: "https://wa.link/s6nxus",
-        title: "Hotel Village Cataratas",
-        priceBaja: "$64.100",
-        price: "$65.040",
+        title: "Hotel Complejo Americano",
+        priceBaja: "$38.100",
+        price: "$76.160",
         events: "si"
     },
     {
         id: "b5",
         destino: "Iguazu",
+        cardOrden: "Card 5",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-11.webp",
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
         title: "Hotel Tourbillon",
-        priceBaja: "$56.385",
-        price: "$70.075",
+        priceBaja: "$41.830",
+        price: "$55.700",
         events: "si"
     },
     {
         id: "b6",
         destino: "Iguazu",
+        cardOrden: "Card 6",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-12.webp",
         className: "uno",
         linkWa: "https://wa.link/37zsyv",
         title: "Hotel Iguazu Grand",
-        priceBaja: "$124.850",
-        price: "$133.400",
+        priceBaja: "$139.820",
+        price: "$150.500",
         events: "No"
     },
 ];
@@ -164,54 +176,59 @@ const destinos3 = [
     {
         id: "c1",
         destino: "Mendoza",
+        cardOrden: "Card 1",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-13.webp",
         className: "uno",
         linkWa: "https://wa.link/61efbi",
         title: "Paquete a Mendoza",
-        priceBaja: "$123.550",
-        price: "$135.680",
+        priceBaja: "$122.690",
+        price: "$144.335",
         events: "si"
     },
     {
         id: "c2",
         destino: "Mendoza",
+        cardOrden: "Card 2",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-14.webp",
         className: "uno",
         linkWa: "https://wa.link/sbfl7y",
         title: "Paquete a Mendoza",
-        priceBaja: "$160.100",
-        price: "$186.645",
+        priceBaja: "$183.700",
+        price: "$171.300",
         events: "si"
     },
     {
         id: "c3",
         destino: "Mendoza",
+        cardOrden: "Card 3",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-15.webp",
         className: "uno",
         linkWa: "https://wa.link/vs8baw",
         title: "Paquete a Mendoza",
-        priceBaja: "$205.360",
-        price: "$237.615",
+        priceBaja: "$223.100",
+        price: "$216.5000",
         events: "si"
     },
     {
         id: "c4",
         destino: "Mendoza",
+        cardOrden: "Card 4",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-16.webp",
         className: "uno",
         linkWa: "https://wa.link/u8ym55",
         title: "Hotel Crillón",
-        priceBaja: "$49.185",
-        price: "$62.315",
+        priceBaja: "$39.770",
+        price: "$57.960",
         events: "si"
     },
     {
         id: "c5",
         destino: "Mendoza",
+        cardOrden: "Card 5",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-17.webp",
         className: "uno",
         linkWa: "https://wa.link/wz0152",
-        title: "Hotel Agua del Corral",
+        title: "Hotel Cordón del Plata",
         priceBaja: "$29.110",
         price: "$50.570",
         events: "si"
@@ -219,12 +236,13 @@ const destinos3 = [
     {
         id: "c6",
         destino: "Mendoza",
+        cardOrden: "Card 6",
         img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-18.webp",
         className: "uno",
         linkWa: "https://wa.link/wz0152",
         title: "Hotel Huentala",
-        priceBaja: "$117.790",
-        price: "$104.710",
+        priceBaja: "$97.430",
+        price: "$110.200",
         events: "si"
     },
 ];
@@ -242,6 +260,24 @@ async function fetchDataFromAPI() {
         }
         const responseData = await response.json();
         return responseData;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
+
+async function fetchDataFromAPIPrice() {
+    console.log('El componente Card se está montando');
+
+    try {
+        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-argentinas');
+        if (!response.ok) {
+            throw new Error('No se pudo obtener los datos de la API');
+        }
+        const responseDataPrice = await response.json();
+        console.log('Datos obtenidos de la API:', responseDataPrice); // Agrega este console.log
+
+        return responseDataPrice;
     } catch (error) {
         console.error(error);
         throw error;
@@ -459,13 +495,13 @@ const Card = ({ destinos, onContactClick }) => {
             try {
                 const responseData = await fetchDataFromAPI();
                 setData(responseData);
-                
+
 
                 setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
 
 
             } catch (error) {
-                
+
 
                 console.error(error);
             }
@@ -473,7 +509,42 @@ const Card = ({ destinos, onContactClick }) => {
 
         fetchData();
     }, []);
+    React.useEffect(() => {
+        console.log('El useEffect se está ejecutando');
+        const fetchDataPrecio = async () => {
+            try {
+                const responseData = await fetchDataFromAPIPrice();
+                console.log('Datos obtenidos de la API en useEffect:', responseData);
 
+                const prices = responseData.data.reduce((acc, item) => {
+                    const destino = item.attributes.Destino;
+                    const card = item.attributes.Card;
+
+                    if (!acc[destino]) {
+                        acc[destino] = {};
+                    }
+
+                    if (!acc[destino][card]) {
+                        acc[destino][card] = [];
+                    }
+
+                    acc[destino][card].push({
+                        Tarifa_Temporada_Alta: item.attributes.Tarifa_Temporada_Alta,
+                        Tarifa_Temporada_Baja: item.attributes.Tarifa_Temporada_Baja,
+                    });
+
+                    return acc;
+                }, {});
+
+                setPricesByDestino(prices);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+
+        fetchDataPrecio();
+    }, []);
     return (
         destinos.map((destino) => (
             <div key={destino.id} className="carrusel__elemento">
@@ -488,8 +559,15 @@ const Card = ({ destinos, onContactClick }) => {
                         <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
                     </picture>
                     <div className="main_container_priceStyle">
-                        <div className="priceStyle left">{destino.priceBaja}</div>
-                        <div className="priceStyle right">{destino.price}</div>
+
+                        {pricesByDestino[destino.destino] && (
+                            pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
+                                <div key={index} className="main_container_priceStyle">
+                                    <div className="priceStyle left">${tarifa.Tarifa_Temporada_Baja}</div>
+                                    <div className="priceStyle right">$ {tarifa.Tarifa_Temporada_Alta}</div>
+                                </div>
+                            ))
+                        )}
                     </div>
                     <div className="main__container__buttonsCars">
                         <>
