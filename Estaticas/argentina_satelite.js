@@ -512,7 +512,6 @@ const Card = ({ destinos, onContactClick }) => {
         const fetchDataPrecio = async () => {
             try {
                 const responseData = await fetchDataFromAPIPrice();
-                console.log('Datos sin procesar:', responseData.data);
 
                 const prices = responseData.data.reduce((acc, item) => {
                     const destino = item.attributes.Destino;
@@ -526,15 +525,9 @@ const Card = ({ destinos, onContactClick }) => {
                         acc[destino][card] = [];
                     }
 
-                    const tarifaTemporadaAlta = item.attributes.Tarifa_Temporada_Alta.toLocaleString().replace(/,/g, '.');
-                    const tarifaTemporadaBaja = item.attributes.Tarifa_Temporada_Baja.toLocaleString().replace(/,/g, '.');
-
-                    console.log('Tarifa Temporada Alta:', item.attributes.Tarifa_Temporada_Alta);
-                    console.log('Tarifa Temporada Baja:', item.attributes.Tarifa_Temporada_Baja);
-
                     acc[destino][card].push({
-                        Tarifa_Temporada_Alta: tarifaTemporadaAlta,
-                        Tarifa_Temporada_Baja: tarifaTemporadaBaja,
+                        Tarifa_Temporada_Alta: item.attributes.Tarifa_Temporada_Alta,
+                        Tarifa_Temporada_Baja: item.attributes.Tarifa_Temporada_Baja,
                     });
 
                     return acc;
@@ -566,8 +559,8 @@ const Card = ({ destinos, onContactClick }) => {
                         {pricesByDestino[destino.destino] && (
                             pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
                                 <div key={index} className="main_container_priceStyle">
-                                    <div className="priceStyle left">${tarifaTemporadaAlta}</div>
-                                    <div className="priceStyle right">$ {tarifaTemporadaBaja}</div>
+                                    <div className="priceStyle left">${tarifa.Tarifa_Temporada_Baja}</div>
+                                    <div className="priceStyle right">$ {tarifa.Tarifa_Temporada_Alta}</div>
                                 </div>
                             ))
                         )}
