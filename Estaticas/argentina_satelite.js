@@ -267,15 +267,12 @@ async function fetchDataFromAPI() {
 }
 
 async function fetchDataFromAPIPrice() {
-    console.log('El componente Card se está montando');
-
     try {
         const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-argentinas');
         if (!response.ok) {
             throw new Error('No se pudo obtener los datos de la API');
         }
         const responseDataPrice = await response.json();
-        console.log('Datos obtenidos de la API:', responseDataPrice); // Agrega este console.log
 
         return responseDataPrice;
     } catch (error) {
@@ -511,11 +508,9 @@ const Card = ({ destinos, onContactClick }) => {
         fetchData();
     }, []);
     React.useEffect(() => {
-        console.log('El useEffect se está ejecutando');
         const fetchDataPrecio = async () => {
             try {
                 const responseData = await fetchDataFromAPIPrice();
-                console.log('Datos obtenidos de la API en useEffect:', responseData);
 
                 const prices = responseData.data.reduce((acc, item) => {
                     const destino = item.attributes.Destino;
