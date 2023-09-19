@@ -206,6 +206,7 @@
         },
         {
             "id": "c6",
+            "cardOrden": "Card 6",
             "destino": "AllInclusive",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/allinclusive-15.webp",
             "className": "uno",
