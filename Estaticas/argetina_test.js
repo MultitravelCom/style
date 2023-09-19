@@ -342,6 +342,7 @@ const Card = ({ destinos, onContactClick }) => {
     React.useEffect(() => {
         fetchDestinos()
             .then((data) => {
+                console.log("Datos de destinos:", data);
                 // Verificar si data.destinos es un array
                 if (Array.isArray(data.destinos)) {
                     if (data.destinos.length > 0) {
@@ -384,6 +385,7 @@ const Card = ({ destinos, onContactClick }) => {
         const fetchDataPrecio = async () => {
             try {
                 const responseData = await fetchDataFromAPIPrice();
+                console.log("Datos de precios:", responseData);
 
                 const prices = responseData.data.reduce((acc, item) => {
                     const destino = item.attributes.Destino;
@@ -404,7 +406,7 @@ const Card = ({ destinos, onContactClick }) => {
 
                     return acc;
                 }, {});
-
+                console.log("Precios por destino:", prices);
                 setPricesByDestino(prices);
             } catch (error) {
                 console.error(error);
@@ -451,6 +453,7 @@ const Card = ({ destinos, onContactClick }) => {
                                     />
                                 </picture>
                                 <div className="main_container_priceStyle">
+
                                     {pricesByDestino[destino.destino] && (
                                         pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
                                             <div key={index} className="main_container_priceStyle">
