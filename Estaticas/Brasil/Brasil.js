@@ -100,7 +100,7 @@ async function fetchDataFromAPI() {
         console.error(error);
         throw error;
     }
-}
+};
 
 // ************************************************
 // Filter
