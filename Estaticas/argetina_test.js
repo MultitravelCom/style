@@ -55,7 +55,6 @@ function verificarYActualizarMeta() {
         let head = document.querySelector("head");
         head.appendChild(metaTag);
     }
-    console.log("La etiqueta meta ha sido verificada o actualizada correctamente.");
 }
 verificarYActualizarMeta();
 
@@ -342,7 +341,6 @@ const Card = ({ destinos, onContactClick }) => {
     React.useEffect(() => {
         fetchDestinos()
             .then((data) => {
-                console.log("Datos de destinos:", data);
                 // Verificar si data.destinos es un array
                 if (Array.isArray(data.destinos)) {
                     if (data.destinos.length > 0) {
@@ -385,7 +383,6 @@ const Card = ({ destinos, onContactClick }) => {
         const fetchDataPrecio = async () => {
             try {
                 const responseData = await fetchDataFromAPIPrice();
-                console.log("Datos de precios:", responseData);
 
                 const prices = responseData.data.reduce((acc, item) => {
                     const destino = item.attributes.Destino;
@@ -406,7 +403,6 @@ const Card = ({ destinos, onContactClick }) => {
 
                     return acc;
                 }, {});
-                console.log("Precios por destino:", prices);
                 setPricesByDestino(prices);
             } catch (error) {
                 console.error(error);
