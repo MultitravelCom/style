@@ -77,15 +77,15 @@ mostrarSeccion();
 
 // ************************ Modificacion delinks WA **************************
 
-function changeWaLink() {
-    const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
-    const linkWaFixed = document.querySelector('.whatsAppFixes a');
-    const linkWaHeaderMobile = document.querySelector('.btn.upper-menu__phone-wrapper.features_item a');
-    linkWaHeader.href = 'https://wa.link/0tl29b';
-    linkWaFixed.href = 'https://wa.link/0tl29b';
-    linkWaHeaderMobile.href = 'https://wa.link/0tl29b';
-}
-changeWaLink();
+// function changeWaLink() {
+//     const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
+//     const linkWaFixed = document.querySelector('.whatsAppFixes a');
+//     const linkWaHeaderMobile = document.querySelector('.btn.upper-menu__phone-wrapper.features_item a');
+//     linkWaHeader.href = 'https://wa.link/0tl29b';
+//     linkWaFixed.href = 'https://wa.link/0tl29b';
+//     linkWaHeaderMobile.href = 'https://wa.link/0tl29b';
+// }
+// changeWaLink();
 
 // ***************************  Conexion a BD ***************************************
 const fetchDestinos = async () => {
@@ -111,7 +111,7 @@ async function fetchDataFromAPI() {
 
 async function fetchDataFromAPIPrice() {
     try {
-        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-argentinas');
+        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/lading-brasils');
         if (!response.ok) {
             throw new Error('No se pudo obtener los datos de la API');
         }
