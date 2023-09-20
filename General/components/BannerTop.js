@@ -230,7 +230,7 @@ const BannerTop = () => {
                 </div>
                 <div id={`bannerTop__center_${bannerId}`} className="main__container_center">
                     {isMobile ? (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : null}
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/brasil"}
                             target="_blank"
                             onClick={showPackageImages ? null : (event) => scrollAncla(event, "home-sliding-offers-2")}
                         >
@@ -245,7 +245,7 @@ const BannerTop = () => {
                             />
                         </a>
                     ) : (
-                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : null}
+                        <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/brasil"}
                             target="_blank"
                             onClick={showPackageImages ? null : (event) => scrollAncla(event, "home-sliding-offers-2")}
                         >
