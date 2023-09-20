@@ -33,6 +33,8 @@ function scrollAncla(event, targetId) {
     }
 }
 
+// (event) => scrollAncla(event, null)
+
 // ************* CUPONERA *****************************
 const ToolTipButton = ({ visible }) => {
     return (
@@ -232,7 +234,7 @@ const BannerTop = () => {
                     {isMobile ? (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/brasil"}
                             target="_blank"
-                            onClick={showPackageImages ? null : (event) => scrollAncla(event, null)}
+                            onClick={showPackageImages ? null : null}
                         >
 
                             <img className="bannerTop__img"
@@ -247,7 +249,7 @@ const BannerTop = () => {
                     ) : (
                         <a href={showPackageImages ? "https://www.multitravel.com/venta-personalizada/brasil" : "https://www.multitravel.com/venta-personalizada/brasil"}
                             target="_blank"
-                            onClick={showPackageImages ? null : (event) => scrollAncla(event, null)}
+                            onClick={showPackageImages ? null : null}
                         >
                             <picture>
                                 <source
