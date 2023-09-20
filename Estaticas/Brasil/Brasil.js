@@ -55,7 +55,6 @@ function verificarYActualizarMeta() {
         let head = document.querySelector("head");
         head.appendChild(metaTag);
     }
-    console.log("La etiqueta meta ha sido verificada o actualizada correctamente.");
 }
 verificarYActualizarMeta();
 
@@ -77,15 +76,15 @@ mostrarSeccion();
 
 // ************************ Modificacion delinks WA **************************
 
-function changeWaLink() {
-    const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
-    const linkWaFixed = document.querySelector('.whatsAppFixes a');
-    const linkWaHeaderMobile = document.querySelector('.btn.upper-menu__phone-wrapper.features_item a');
-    linkWaHeader.href = 'https://wa.link/0tl29b';
-    linkWaFixed.href = 'https://wa.link/0tl29b';
-    linkWaHeaderMobile.href = 'https://wa.link/0tl29b';
-}
-changeWaLink();
+// function changeWaLink() {
+//     const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
+//     const linkWaFixed = document.querySelector('.whatsAppFixes a');
+//     const linkWaHeaderMobile = document.querySelector('.btn.upper-menu__phone-wrapper.features_item a');
+//     linkWaHeader.href = 'https://wa.link/0tl29b';
+//     linkWaFixed.href = 'https://wa.link/0tl29b';
+//     linkWaHeaderMobile.href = 'https://wa.link/0tl29b';
+// }
+// changeWaLink();
 
 // ***************************  Conexion a BD ***************************************
 const fetchDestinos = async () => {
@@ -103,6 +102,21 @@ async function fetchDataFromAPI() {
         }
         const responseData = await response.json();
         return responseData;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
+
+async function fetchDataFromAPIPrice() {
+    try {
+        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/lading-brasils');
+        if (!response.ok) {
+            throw new Error('No se pudo obtener los datos de la API');
+        }
+        const responseDataPrice = await response.json();
+
+        return responseDataPrice;
     } catch (error) {
         console.error(error);
         throw error;
@@ -308,6 +322,7 @@ const Card = ({ destinos, onContactClick }) => {
     const [openModal, setOpenModal] = React.useState(false);
     const [buttonSwitch, setButtonSwitch] = React.useState("B");
     const [data, setData] = React.useState([]);
+    const [pricesByDestino, setPricesByDestino] = React.useState({});
 
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
@@ -364,6 +379,40 @@ const Card = ({ destinos, onContactClick }) => {
         fetchData();
     }, []);
 
+    React.useEffect(() => {
+        const fetchDataPrecio = async () => {
+            try {
+                const responseData = await fetchDataFromAPIPrice();
+
+                const prices = responseData.data.reduce((acc, item) => {
+                    const destino = item.attributes.Destino;
+                    const card = item.attributes.Card;
+
+                    if (!acc[destino]) {
+                        acc[destino] = {};
+                    }
+
+                    if (!acc[destino][card]) {
+                        acc[destino][card] = [];
+                    }
+
+                    acc[destino][card].push({
+                        Tarifa_Temporada_Alta: item.attributes.Tarifa_Temporada_Alta,
+                        Tarifa_Temporada_Baja: item.attributes.Tarifa_Temporada_Baja,
+                    });
+
+                    return acc;
+                }, {});
+                setPricesByDestino(prices);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+
+        fetchDataPrecio();
+    }, []);
+
     return (
         <>
             {loaded ? (
@@ -400,8 +449,15 @@ const Card = ({ destinos, onContactClick }) => {
                                     />
                                 </picture>
                                 <div className="main_container_priceStyle">
-                                    <div className="priceStyle left">{destino.priceBaja}</div>
-                                    <div className="priceStyle right">{destino.price}</div>
+
+                                    {pricesByDestino[destino.destino] && (
+                                        pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
+                                            <div key={index} className="main_container_priceStyle">
+                                                <div className="priceStyle left">${tarifa.Tarifa_Temporada_Baja.toLocaleString().replace(/,/g, '.')}</div>
+                                                <div className="priceStyle right">$ {tarifa.Tarifa_Temporada_Alta.toLocaleString().replace(/,/g, '.')}</div>
+                                            </div>
+                                        ))
+                                    )}
                                 </div>
                                 <div className="main__container__buttonsCars">
                                     <>

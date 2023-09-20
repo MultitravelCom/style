@@ -1,11 +1,46 @@
-const head = document.head || document.getElementsByTagName('head')[0];
-const meta = document.createElement('meta');
+function addHeaderLinks() {
+    const head = document.head || document.getElementsByTagName('head')[0];
+    const meta = document.createElement('meta');
 
-meta.setAttribute('name', 'description');
-meta.setAttribute('content', 'Compará paquetes a Argentina y conseguí los mejores precios en alojamiento y vuelos a Bariloche, Iguazú y Mendoza. Solicitá atención personalizada por whatsapp');
+    document.title = "Paquetes turísticos a Brasil | Multitravel.com"
 
-head.appendChild(meta);
-document.title = "Paquetes turísticos a Argentina | Multitravel.com"
+    meta.setAttribute('name', 'description');
+    meta.setAttribute('content', 'Compará paquetes a Brasil y conseguí los mejores precios en alojamiento y vuelos a Bariloche, Iguazú y Mendoza. Solicitá atención personalizada por whatsapp');
+
+    const linkCDNGlider = document.createElement('link');
+
+    linkCDNGlider.rel = 'stylesheet';
+    linkCDNGlider.href = 'https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css';
+
+    const linkStyle = document.createElement('link');
+
+    linkStyle.rel = 'stylesheet';
+    linkStyle.href = 'https://multitravelcom.github.io/style/Estaticas/Brasil/styleBrasil.css';
+
+    const mailchimp = document.createElement('script');
+    mailchimp.id = 'mcjs';
+    mailchimp.async = true;
+    mailchimp.src = 'https://chimpstatic.com/mcjs-connected/js/users/d09ee86703b1761e8337397e9/6e305f08d149ab3c55d2d9573.js';
+    mailchimp.textContent = '!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/d09ee86703b1761e8337397e9/6e305f08d149ab3c55d2d9573.js");';
+
+    head.appendChild(meta);
+    head.appendChild(linkStyle);
+    head.appendChild(linkCDNGlider);
+    head.appendChild(mailchimp);
+
+    const modalAtencionStyle = document.createElement('link');
+    const modalAtencionsJs = document.createElement('script');
+
+    modalAtencionsJs.src = 'https://multitravelcom.github.io/components/MULT168/Modal/index.js';
+    modalAtencionsJs.type = "text/babel";
+
+    modalAtencionStyle.href = "https://multitravelcom.github.io/components/MULT168/Modal/style.css";
+    modalAtencionStyle.rel = "stylesheet";
+
+    head.appendChild(modalAtencionStyle);
+    head.appendChild(modalAtencionsJs);
+}
+addHeaderLinks();
 
 function verificarYActualizarMeta() {
     let metaTag = document.querySelector('meta[property="og:image"]');
@@ -268,7 +303,7 @@ async function fetchDataFromAPI() {
 
 async function fetchDataFromAPIPrice() {
     try {
-        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-argentinas');
+        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/lading-brasils');
         if (!response.ok) {
             throw new Error('No se pudo obtener los datos de la API');
         }
@@ -280,7 +315,18 @@ async function fetchDataFromAPIPrice() {
         throw error;
     }
 }
-// ************** BITRIX ********************
+
+// ************************************************
+// Filter
+function filtrarDestinos(destinos, nombreDestino) {
+    const destinosFiltrados = destinos.filter(destino => destino.destino === nombreDestino);
+    return destinosFiltrados;
+}
+
+// *****************************************************
+// BITRIX
+
+// FormBitrix
 const BitrixFormComponent = ({ isVisible }) => {
     const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
 
@@ -309,8 +355,7 @@ const BitrixFormComponent = ({ isVisible }) => {
 const ButtonBitrixForm = () => {
     const isMobile = window.innerWidth < 454;
 
-    const handleCallButtonClick = (event) => {
-        event.preventDefault();
+    const handleCallButtonClick = () => {
         if (isMobile) {
             window.location.href = 'tel:08003480003';
         }
@@ -328,75 +373,13 @@ const BitrixFormTitle = () => {
             <div className="bitrixFormTitle_text">
                 <p class="single-line">Completa tus datos para que te contacte un especialista.</p>
             </div>
-            <ButtonBitrixForm />
+            {/* <ButtonBitrixForm /> */}
         </div>
     )
 }
 // ************** COMPONENTES ********************
-const BannerTop = () => {
-    return (
-        <div className="main_conteiner__s1_medio__paquetes">
-            <picture>
-                <source
-                    media="(min-width: 1024px)"
-                    srcSet="
-            https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/bannerLanding%20(1).webp
-          "
-                />
-                <source
-                    media="(min-width: 768px) and (max-width: 1023px)"
-                    srcSet="
-            https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/bannerLanding%20(2).webp
-          "
-                />
-                <source
-                    media="(max-width: 767px)"
-                    srcSet="
-            https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/bannerLanding%20(3).webp
-          "
-                />
-                <img
-                    className="main_conteiner__s1_medio__paquetes__img"
-                    src="https://multitravelcom.github.io/MT/TravelSale2023/Banners/BannerLanding%20(1).jpg"
-                    alt="Imagen banner promociones"
-                />
-            </picture>
-        </div>
-    )
-}
-
-const BannerTravelSale = () => {
-    return (
-        <>
-            <div className="main__container_BannerTravelSale">
-                <picture>
-                    <source
-                        media="(min-width: 1024px)"
-                        srcSet="
-                        https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/BannerMKT-Desktop.webp
-          "
-                    />
-                    <source
-                        media="(min-width: 768px) and (max-width: 1023px)"
-                        srcSet="
-                        https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/BannerMKT-Desktop.webp"
-                    />
-                    <source
-                        media="(max-width: 767px)"
-                        srcSet="https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/BannerMKT-Mobile.webp"
-                    />
-                    <img
-                        className="main_conteiner__s1_medio__paquetes__img"
-                        src="https://multitravelcom.github.io/MT/Evento/PreViaje/Banners/BannerMKT-Desktop.webp"
-                        alt="Imagen banner promociones"
-                    />
-                </picture>
-            </div>
-        </>
-    )
-}
-
 function ButtonLading(props) {
+
     const svgWA = (
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
             <path d="M7.54108 2.0471C6.72767 2.0471 5.96119 2.2044 5.24164 2.51901C4.52208 2.82313 3.89378 3.24522 3.35672 3.7853C2.81966 4.32537 2.39992 4.95721 2.0975 5.68081C1.78465 6.4044 1.62823 7.17519 1.62823 7.99316C1.70123 8.56994 1.81072 9.12051 1.95672 9.64485C2.10272 10.1692 2.28521 10.6726 2.50421 11.155L2.48856 11.092L1.89415 13.5932L4.44387 13.0426C4.88186 13.3257 5.36417 13.546 5.8908 13.7033C6.41743 13.8606 6.97273 13.9392 7.55672 13.9392C8.37013 13.9392 9.13661 13.7819 9.85616 13.4673C10.5757 13.1527 11.2014 12.728 11.7333 12.1932C12.2651 11.6583 12.6874 11.0291 13.0003 10.3055C13.3131 9.58193 13.4696 8.81114 13.4696 7.99316C13.4696 7.17519 13.3131 6.4044 13.0003 5.68081C12.6874 4.95721 12.2651 4.32537 11.7333 3.7853C11.2014 3.24522 10.5757 2.82313 9.85616 2.51901C9.13661 2.2044 8.37013 2.0471 7.55672 2.0471C7.54629 2.0471 7.54108 2.0471 7.54108 2.0471ZM11.2796 10.2898L10.7947 10.9819C10.7739 11.0134 10.7504 11.037 10.7243 11.0527C10.6982 11.0684 10.6748 11.0816 10.6539 11.092H10.6383V11.1078C10.1273 11.4119 9.61631 11.5692 9.10532 11.5797C8.59434 11.6007 8.11203 11.5325 7.6584 11.3752C7.20476 11.2179 6.78502 10.9977 6.39918 10.7145C6.01333 10.4419 5.68484 10.1587 5.4137 9.86507C4.62115 9.02612 4.13102 8.28942 3.94331 7.65496C3.7556 7.02051 3.79732 6.35721 4.06845 5.66507C4.13102 5.52874 4.19098 5.40028 4.24834 5.27968C4.3057 5.15908 4.36566 5.0411 4.42823 4.92575L4.41259 4.95721C4.44387 4.92575 4.46733 4.89953 4.48298 4.87856C4.49862 4.85758 4.51687 4.84185 4.53772 4.83137L5.25728 4.43811C5.27813 4.41713 5.30421 4.40403 5.33549 4.39878C5.36678 4.39354 5.39806 4.39092 5.42935 4.39092C5.49191 4.39092 5.54927 4.40403 5.60141 4.43024C5.65355 4.45646 5.69005 4.49579 5.71091 4.54822V4.56395L6.60253 6.10552C6.61296 6.1265 6.62339 6.15271 6.63381 6.18418C6.64424 6.21564 6.64946 6.2471 6.64946 6.27856C6.64946 6.34148 6.63381 6.39916 6.60253 6.45159C6.57124 6.50403 6.52953 6.54597 6.47739 6.57743V6.59316L5.75784 7.00215C5.71612 7.01264 5.67441 7.02051 5.6327 7.02575C5.59098 7.03099 5.54927 7.03361 5.50756 7.03361C5.45542 7.03361 5.40849 7.03099 5.36678 7.02575C5.32506 7.02051 5.28335 7.01264 5.24164 7.00215H5.25728C5.21556 7.30627 5.29117 7.62612 5.48409 7.9617C5.67702 8.29728 5.97162 8.65384 6.36789 9.03137C6.69117 9.33549 7.07702 9.64747 7.52543 9.96732C7.97385 10.2872 8.41705 10.3842 8.85504 10.2583C8.71948 10.0905 8.65691 9.94635 8.66733 9.82575C8.67776 9.70515 8.70383 9.61339 8.74555 9.55047L9.23046 8.85833C9.26175 8.8059 9.30346 8.76657 9.3556 8.74036C9.40774 8.71414 9.45989 8.70103 9.51203 8.70103C9.55374 8.70103 9.59024 8.70365 9.62152 8.70889C9.65281 8.71414 9.67888 8.72725 9.69974 8.74822H9.71538L11.1858 9.77069C11.2379 9.80215 11.277 9.8441 11.3031 9.89653C11.3292 9.94897 11.3422 10.0066 11.3422 10.0696C11.3422 10.1115 11.337 10.1508 11.3266 10.1875C11.3161 10.2243 11.3005 10.2583 11.2796 10.2898ZM7.54108 14.9932C7.54108 14.9932 7.53586 14.9932 7.52543 14.9932C6.93102 14.9932 6.35746 14.9198 5.80476 14.7729C5.25206 14.6261 4.72543 14.4216 4.22488 14.1595L4.2718 14.1752L0.486328 14.9932L1.39359 11.1864C1.1746 10.7145 0.997315 10.2138 0.861747 9.68418C0.726179 9.15459 0.632324 8.60665 0.580183 8.04036V7.99316C0.580183 7.02837 0.757464 6.12125 1.11203 5.27182C1.47702 4.42238 1.97497 3.68043 2.60588 3.04597C3.23679 2.41152 3.9746 1.91077 4.81929 1.54373C5.66398 1.17669 6.56603 0.993165 7.52543 0.993165C8.49527 0.993165 9.40253 1.17669 10.2472 1.54373C11.0919 1.91077 11.8297 2.41152 12.4606 3.04597C13.0915 3.68043 13.5895 4.42238 13.9545 5.27182C14.309 6.12125 14.4863 7.02837 14.4863 7.99316C14.4863 8.95796 14.309 9.86507 13.9545 10.7145C13.5895 11.564 13.0915 12.3059 12.4606 12.9404C11.8297 13.5748 11.0919 14.0756 10.2472 14.4426C9.40253 14.8096 8.50048 14.9932 7.54108 14.9932Z" fill="white" />
@@ -425,21 +408,11 @@ function ButtonLading(props) {
         </button>
     );
 }
-
-function mostrarSeccion() {
-    let url = window.location.href; // Obtener la URL completa
-    let hash = url.substring(url.indexOf("#") + 1); // Obtener el ancla de la URL
-
-    let seccion = document.getElementById(hash); // Buscar el elemento con el ID del ancla
-
-    if (seccion) {
-        seccion.scrollIntoView(); // Mostrar la sección si existe
-    } else {
-        setTimeout(mostrarSeccion, 500); // Intentar nuevamente después de 500 milisegundos
-    }
-}
-mostrarSeccion();
-
+const Loader = () => {
+    return (
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    );
+};
 function shouldShowEvent() {
     const startDate = new Date("2023-08-27T22:00:00");
     const endDate = new Date("2023-09-02T23:00:00");
@@ -447,6 +420,7 @@ function shouldShowEvent() {
 
     return now >= startDate && now <= endDate;
 }
+
 const EventImg = (props) => {
     if (shouldShowEvent()) {
         return (
@@ -469,9 +443,71 @@ const EventImg = (props) => {
 
 //     )
 // }
+// ************************************************
+const BannerTravelSale = () => {
+    return (
+        <>
+            <div className="main__container_BannerTravelSale">
+                <picture>
+                    <source
+                        media="(min-width: 1024px)"
+                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Brasil/Banner-Desktop.webp"
+                    />
+                    <source
+                        media="(min-width: 768px) and (max-width: 1023px)"
+                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Brasil/Banner-Desktop.webp"
+                    />
+                    <source
+                        media="(max-width: 767px)"
+                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Brasil/Banner-Mobile.webp"
+                    />
+                    <img
+                        className="main_conteiner__s1_medio__paquetes__img"
+                        src="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Brasil/Banner-Desktop.webp"
+                        alt="Imagen banner promociones"
+                    />
+                </picture>
+            </div>
+        </>
+    )
+}
+const BannerTop = () => {
+    return (
+        <div className="main_conteiner__s1_medio__paquetes">
+            <picture>
+                <source
+                    media="(min-width: 1024px)"
+                    srcSet="
+            https://multitravelcom.github.io/MT/Evento/Brasil2023/banner-Landing/bannerLanding%20(1).webp
+          "
+                />
+                <source
+                    media="(min-width: 768px) and (max-width: 1023px)"
+                    srcSet="
+                    https://multitravelcom.github.io/MT/Evento/Brasil2023/banner-Landing/bannerLanding%20(2).webp
+                    "
+                />
+                <source
+                    media="(max-width: 767px)"
+                    srcSet="
+                    https://multitravelcom.github.io/MT/Evento/Brasil2023/banner-Landing/bannerLanding%20(3).webp
+                    "
+                />
+                <img
+                    className="main_conteiner__s1_medio__paquetes__img"
+                    src="            https://multitravelcom.github.io/MT/Evento/Brasil2023/banner-Landing/bannerLanding%20(1).webp
+                    "
+                    alt="Imagen banner promociones"
+                />
+            </picture>
+        </div>
+    )
+}
 const Card = ({ destinos, onContactClick }) => {
+    const [noDestinos, setNoDestinos] = React.useState(false);
+    const [loaded, setLoaded] = React.useState(false);
     const [openModal, setOpenModal] = React.useState(false);
-    const [buttonSwitch, setButtonSwitch] = React.useState();
+    const [buttonSwitch, setButtonSwitch] = React.useState("B");
     const [data, setData] = React.useState([]);
     const [pricesByDestino, setPricesByDestino] = React.useState({});
 
@@ -488,18 +524,40 @@ const Card = ({ destinos, onContactClick }) => {
         window.open(whatsappURL, '_blank');
     };
 
+
+    React.useEffect(() => {
+        fetchDestinos()
+            .then((data) => {
+                // Verificar si data.destinos es un array
+                if (Array.isArray(data.destinos)) {
+                    if (data.destinos.length > 0) {
+                        // setDestinos(data.destinos);
+                        // setLoaded(true);
+                    } else {
+                        // setLoaded(true);
+                        setNoDestinos(true);
+                    }
+                } else {
+                    console.log("La propiedad 'destinos' no es un array.");
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
+
     React.useEffect(() => {
         const fetchData = async () => {
             try {
                 const responseData = await fetchDataFromAPI();
                 setData(responseData);
-
+                setLoaded(true)
 
                 setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
 
 
             } catch (error) {
-
+                setLoaded(true)
 
                 console.error(error);
             }
@@ -507,6 +565,7 @@ const Card = ({ destinos, onContactClick }) => {
 
         fetchData();
     }, []);
+
     React.useEffect(() => {
         const fetchDataPrecio = async () => {
             try {
@@ -531,7 +590,6 @@ const Card = ({ destinos, onContactClick }) => {
 
                     return acc;
                 }, {});
-
                 setPricesByDestino(prices);
             } catch (error) {
                 console.error(error);
@@ -541,56 +599,88 @@ const Card = ({ destinos, onContactClick }) => {
 
         fetchDataPrecio();
     }, []);
-    return (
-        destinos.map((destino) => (
-            <div key={destino.id} className="carrusel__elemento">
-                <div className="main__conteiner__s1__destacado__card uno" style={{ height: "100%", width: "100%" }}>
-                    {destino.events === "si" && shouldShowEvent() && (
-                        <EventImg style="eventImg" />
-                    )}
-                    <picture>
-                        <source media="(min-width: 1024px)" srcSet={destino.img} />
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={destino.img} />
-                        <source media="(max-width: 767px)" srcSet={destino.img} />
-                        <img alt={`Imagen banner ${destino.title}`} src={destino.img} />
-                    </picture>
-                    <div className="main_container_priceStyle">
 
-                        {pricesByDestino[destino.destino] && (
-                            pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
-                                <div key={index} className="main_container_priceStyle">
-                                    <div className="priceStyle left">${tarifa.Tarifa_Temporada_Baja.toLocaleString().replace(/,/g, '.')}</div>
-                                    <div className="priceStyle right">$ {tarifa.Tarifa_Temporada_Alta.toLocaleString().replace(/,/g, '.')}</div>
+    return (
+        <>
+            {loaded ? (
+                destinos.length > 0 ? (
+                    destinos.map(destino => (
+                        <div key={destino.id} className="carrusel__elemento">
+                            <div
+                                className="main__conteiner__s1__destacado__card uno"
+                                style={{ height: "100%", width: "100%" }}
+                            >
+                                {destino.events === "si" && shouldShowEvent() && (
+                                    <EventImg style="eventImg" />
+                                )}                                <picture>
+                                    <map name={destino.id}>
+                                        <area
+                                            target="_blank"
+                                            alt={destino.title}
+                                            title={destino.title}
+                                            href={destino.linkWa}
+                                            coords={destino.coords}
+                                            shape="rect"
+                                        />
+                                    </map>
+                                    <source media="(min-width: 1024px)" srcSet={destino.img} />
+                                    <source
+                                        media="(min-width: 768px) and (max-width: 1023px)"
+                                        srcSet={destino.img}
+                                    />
+                                    <source media="(max-width: 767px)" srcSet={destino.img} />
+                                    <img
+                                        alt={`Imagen banner ${destino.title}`}
+                                        src={destino.img}
+                                        useMap={`#${destino.id}`}
+                                    />
+                                </picture>
+                                <div className="main_container_priceStyle">
+
+                                    {pricesByDestino[destino.destino] && (
+                                        pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
+                                            <div key={index} className="main_container_priceStyle">
+                                                <div className="priceStyle left">${tarifa.Tarifa_Temporada_Baja.toLocaleString().replace(/,/g, '.')}</div>
+                                                <div className="priceStyle right">$ {tarifa.Tarifa_Temporada_Alta.toLocaleString().replace(/,/g, '.')}</div>
+                                            </div>
+                                        ))
+                                    )}
                                 </div>
-                            ))
-                        )}
-                    </div>
-                    <div className="main__container__buttonsCars">
-                        <>
-                            <ButtonLading
-                                id={destino.title}
-                                className={buttonSwitch === "A" ? "btn_Whatsapp" : "btn_FormBitrix"}
-                                text={buttonSwitch === "A" ? "Whatsapp" : "Agendar llamada"}
-                                onClick={buttonSwitch === "A" ? handleWhatsAppClick : () => onContactClick(destino.id)}
-                                svgType={buttonSwitch === "A" ? 'whatsapp' : null}
-                            />
-                            <ButtonLading
-                                id={destino.id}
-                                className="classOpenModal"
-                                text={buttonSwitch === "A" ? "Llamar" : "Llamar Ahora"}
-                                onClick={handleBannerClick}
-                                svgType={buttonSwitch === "A" ? 'phone' : null}
-                            />
-                        </>
-                    </div>
-                </div>
-            </div>
-        )));
+                                <div className="main__container__buttonsCars">
+                                    <>
+                                        <ButtonLading
+                                            id={destino.title}
+                                            className={buttonSwitch === "A" ? "btn_Whatsapp" : "btn_FormBitrix"}
+                                            text={buttonSwitch === "A" ? "Whatsapp" : "Agendar llamada"}
+                                            onClick={buttonSwitch === "A" ? handleWhatsAppClick : () => onContactClick(destino.id)}
+                                            svgType={buttonSwitch === "A" ? 'whatsapp' : null}
+                                        />
+                                        <ButtonLading
+                                            id={destino.id}
+                                            className="classOpenModal"
+                                            text={buttonSwitch === "A" ? "Llamar" : "Llamar Ahora"}
+                                            onClick={handleBannerClick}
+                                            svgType={buttonSwitch === "A" ? 'phone' : null}
+                                        />
+                                    </>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                ) : (
+                    <p>No hay destinos disponibles.</p>
+                )
+            ) : (
+                <Loader />
+            )}
+        </>
+    );
+
 };
-const CardContainer = ({ btnStyles, destinos, onContactClick }) => {
+const CardContainer = ({ btnStyles, destinosFiltrados, onContactClick }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
 
-    React.useEffect(() => {
+    const setupGlider = () => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
         const btnRightElement = document.querySelector(`.${btnRight}`);
 
@@ -640,6 +730,25 @@ const CardContainer = ({ btnStyles, destinos, onContactClick }) => {
             ],
             rewind: true,
         });
+    };
+
+    React.useEffect(() => {
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
+                    setupGlider();
+                    observer.disconnect();
+                }
+            });
+        });
+
+        observer.observe(document.querySelector(`.${carrusel}`), {
+            childList: true,
+        });
+
+        return () => {
+            observer.disconnect();
+        };
     }, [btnLeft, btnRight, carrusel]);
 
     return (
@@ -657,8 +766,8 @@ const CardContainer = ({ btnStyles, destinos, onContactClick }) => {
                     >
                         <i className="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
-                    <div className={carrusel} id={destinos.title}>
-                        <Card destinos={destinos} onContactClick={onContactClick} />
+                    <div className={carrusel} id={title}>
+                        <Card destinos={destinosFiltrados} onContactClick={onContactClick} />
                     </div>
                     <button
                         aria-label="Siguiente"
@@ -669,21 +778,29 @@ const CardContainer = ({ btnStyles, destinos, onContactClick }) => {
                 </div>
             </div>
         </>
-    )
-};
-const Loader = () => {
-    return (
-        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     );
 };
-
-// ************************************************
-
 function App() {
     const [loaded, setLoaded] = React.useState(false);
-    const [ocultarComponente, setOcultarComponente] = React.useState(true);
+    const [destinos, setDestinos] = React.useState([]);
     const [selectedFormId, setSelectedFormId] = React.useState(false);
     const [isFormVisible, setIsFormVisible] = React.useState(false);
+
+
+    const Florianopolis = filtrarDestinos(destinos, "Florianopolis");
+    const Buzios = filtrarDestinos(destinos, 'Buzios');
+    const AllInclusive = filtrarDestinos(destinos, 'AllInclusive');
+
+    const handleOpenForm = (formId) => {
+
+        setSelectedFormId(formId);
+        setIsFormVisible(true);
+    };
+
+    const handleCloseForm = () => {
+        setSelectedFormId(null);
+        setIsFormVisible(false);
+    };
 
     React.useEffect(() => {
         const fetchData = async () => {
@@ -700,49 +817,35 @@ function App() {
     }, []);
 
     React.useEffect(() => {
-        const intervalo = setInterval(() => {
-            const fechaDeseada = new Date("2023-04-25T19:40:00");
-            const fechaActual = new Date();
-
-            if (fechaActual >= fechaDeseada) {
-                setOcultarComponente(false);
-                clearInterval(intervalo);
-            }
-        }, 1000);
-
-        return () => clearInterval(intervalo);
-
+        fetchDestinos().then(data => {
+            setDestinos(data.destinos);
+        });
     }, []);
 
-    const handleOpenForm = (formId) => {
-
-        setSelectedFormId(formId);
-        setIsFormVisible(true);
-
-    };
-
-    const handleCloseForm = () => {
-        setSelectedFormId(null);
-        setIsFormVisible(false);
-    };
     return (
         <>
-            {loaded ? (
+            {!loaded && <Loader />}
+
+            {loaded && (
                 <>
                     <div className="main_conteiner__s1_medio top_mkt">
                         <BannerTop />
                     </div>
-
-                    <div className="main_conteiner__s2_bannerTravelSale">
-                        <BannerTravelSale />
-                    </div>
+                    {shouldShowEvent()
+                        ?
+                        <div className="main_conteiner__s2_bannerTravelSale">
+                            <BannerTravelSale />
+                        </div>
+                        :
+                        null
+                    }
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinos={destinos1} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Florianopolis} onContactClick={handleOpenForm} />
 
-                            <CardContainer btnStyles={btnStyles[1]} destinos={destinos2} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Buzios} onContactClick={handleOpenForm} />
 
-                            <CardContainer btnStyles={btnStyles[2]} destinos={destinos3} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={AllInclusive} onContactClick={handleOpenForm} />
                         </div>
                     </div>
                     {isFormVisible && (
@@ -757,11 +860,11 @@ function App() {
                         </div>
                     )}
                 </>
-            ) : (
-                <Loader />
             )}
         </>
     );
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
+
+

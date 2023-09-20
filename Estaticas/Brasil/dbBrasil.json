@@ -2,6 +2,7 @@
     "destinos": [
         {
             "id": "a1",
+            "cardOrden": "Card 1",
             "destino": "Florianopolis",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/florianopolis-16.webp",
             "className": "uno",
@@ -13,6 +14,7 @@
         },
         {
             "id": "a2",
+            "cardOrden": "Card 2",
             "destino": "Florianopolis",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/florianopolis-17.webp",
             "className": "uno",
@@ -24,6 +26,7 @@
         },
         {
             "id": "a3",
+            "cardOrden": "Card 3",
             "destino": "Florianopolis",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/florianopolis-18.webp",
             "className": "uno",
@@ -35,6 +38,7 @@
         },
         {
             "id": "a4",
+            "cardOrden": "Card 4",
             "destino": "Florianopolis",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/florianopolis-19.webp",
             "className": "uno",
@@ -46,6 +50,7 @@
         },
         {
             "id": "a5",
+            "cardOrden": "Card 5",
             "destino": "Florianopolis",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/florianopolis-20.webp",
             "className": "uno",
@@ -57,6 +62,7 @@
         },
         {
             "id": "a6",
+            "cardOrden": "Card 6",
             "destino": "Florianopolis",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/florianopolis-21.webp",
             "className": "uno",
@@ -68,6 +74,7 @@
         },
         {
             "id": "b1",
+            "cardOrden": "Card 1",
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/buzios-15.webp",
             "className": "uno",
@@ -79,6 +86,7 @@
         },
         {
             "id": "b2",
+            "cardOrden": "Card 2",
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/buzios-16.webp",
             "className": "uno",
@@ -91,6 +99,7 @@
         {
             "id": "b3",
             "destino": "Buzios",
+            "cardOrden": "Card 3",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/buzios-17.webp",
             "className": "uno",
             "linkWa": "https://wa.link/fql9wm",
@@ -101,6 +110,7 @@
         },
         {
             "id": "b4",
+            "cardOrden": "Card 4",
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/buzios-19.webp",
             "className": "uno",
@@ -112,6 +122,7 @@
         },
         {
             "id": "b5",
+            "cardOrden": "Card 5",
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/buzios-21.webp",
             "className": "uno",
@@ -123,6 +134,7 @@
         },
         {
             "id": "b6",
+            "cardOrden": "Card 6",
             "destino": "Buzios",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/buzios-22.webp",
             "className": "uno",
@@ -134,6 +146,7 @@
         },   
         {
             "id": "c1",
+            "cardOrden": "Card 1",
             "destino": "AllInclusive",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/allinclusive-4.webp",
             "className": "uno",
@@ -145,6 +158,7 @@
         },
         {
             "id": "c2",
+            "cardOrden": "Card 2",
             "destino": "AllInclusive",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/allinclusive-5.webp",
             "className": "uno",
@@ -156,6 +170,7 @@
         },
         {
             "id": "c3",
+            "cardOrden": "Card 3",
             "destino": "AllInclusive",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/allinclusive-6.webp",
             "className": "uno",
@@ -167,6 +182,7 @@
         },
         {
             "id": "c4",
+            "cardOrden": "Card 4",
             "destino": "AllInclusive",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/allinclusive-7.webp",
             "className": "uno",
@@ -178,6 +194,7 @@
         },
         {
             "id": "c5",
+            "cardOrden": "Card 5",
             "destino": "AllInclusive",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/allinclusive-8.webp",
             "className": "uno",
@@ -189,6 +206,7 @@
         },
         {
             "id": "c6",
+            "cardOrden": "Card 6",
             "destino": "AllInclusive",
             "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/allinclusive-15.webp",
             "className": "uno",
