@@ -2,31 +2,18 @@ function addHeaderLinks() {
     const head = document.head || document.getElementsByTagName('head')[0];
     const meta = document.createElement('meta');
 
-    document.title = "Paquetes turísticos a Brasil | Multitravel.com"
+    document.title = "Paquetes turísticos al caribe | Multitravel.com"
 
     meta.setAttribute('name', 'description');
-    meta.setAttribute('content', 'Compará paquetes a Brasil y conseguí los mejores precios en alojamiento y vuelos a Bariloche, Iguazú y Mendoza. Solicitá atención personalizada por whatsapp');
+    meta.setAttribute('content', 'Compará paquetes al caribe y conseguí los mejores precios en alojamiento y vuelos a Bariloche, Iguazú y Mendoza. Solicitá atención personalizada por whatsapp');
 
     const linkCDNGlider = document.createElement('link');
 
     linkCDNGlider.rel = 'stylesheet';
     linkCDNGlider.href = 'https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css';
 
-    const linkStyle = document.createElement('link');
-
-    linkStyle.rel = 'stylesheet';
-    linkStyle.href = 'https://multitravelcom.github.io/style/Estaticas/Brasil/styleBrasil.css';
-
-    const mailchimp = document.createElement('script');
-    mailchimp.id = 'mcjs';
-    mailchimp.async = true;
-    mailchimp.src = 'https://chimpstatic.com/mcjs-connected/js/users/d09ee86703b1761e8337397e9/6e305f08d149ab3c55d2d9573.js';
-    mailchimp.textContent = '!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/d09ee86703b1761e8337397e9/6e305f08d149ab3c55d2d9573.js");';
-
     head.appendChild(meta);
-    head.appendChild(linkStyle);
     head.appendChild(linkCDNGlider);
-    head.appendChild(mailchimp);
 
     const modalAtencionStyle = document.createElement('link');
     const modalAtencionsJs = document.createElement('script');
@@ -58,235 +45,41 @@ function verificarYActualizarMeta() {
 }
 verificarYActualizarMeta();
 
-// BD
-const destinos1 = [
-    {
-        id: "a1",
-        destino: "Bariloche",
-        cardOrden: "Card 1",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-1.webp",
-        className: "uno",
-        linkWa: "https://wa.link/ncvo1x",
-        title: "Paquete a Bariloche",
-        priceBaja: "$121.860",
-        price: "$161.200",
-        events: "si"
-    },
-    {
-        id: "a2",
-        destino: "Bariloche",
-        cardOrden: "Card 2",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-2.webp",
-        className: "uno",
-        linkWa: "https://wa.link/s507zo",
-        title: "Paquete a Bariloche",
-        priceBaja: "$171.120",
-        price: "$214.560",
-        events: "si"
-    },
-    {
-        id: "a3",
-        destino: "Bariloche",
-        cardOrden: "Card 3",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-3.webp",
-        className: "uno",
-        linkWa: "https://wa.link/duchkz",
-        title: "Paquete a Bariloche",
-        priceBaja: "$213.100",
-        price: "$276.900",
-        events: "si"
-    },
-    {
-        id: "a4",
-        destino: "Bariloche",
-        cardOrden: "Card 4",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-4.webp",
-        className: "uno",
-        linkWa: "https://wa.link/2z5hpp",
-        title: "Hotel Villa Sofia",
-        priceBaja: "$35.375",
-        price: "$63.590",
-        events: "si"
-    },
-    {
-        id: "a5",
-        destino: "Bariloche",
-        cardOrden: "Card 5",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-5.webp",
-        className: "uno",
-        linkWa: "https://wa.link/dv0ucs",
-        title: "Hotel Kenton Palace Bariloche",
-        priceBaja: "$55.640",
-        price: "$67.555",
-        events: "si"
-    },
-    {
-        id: "a6",
-        destino: "Bariloche",
-        cardOrden: "Card 6",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Bariloche-6.webp",
-        className: "uno",
-        linkWa: "https://wa.link/dv0ucs",
-        title: "Hotel Design Suites Bariloche",
-        priceBaja: "$75.135",
-        price: "$79.700",
-        events: "si"
-    },
-];
-const destinos2 = [
-    {
-        id: "b1",
-        destino: "Iguazu",
-        cardOrden: "Card 1",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-7.webp",
-        className: "uno",
-        linkWa: "https://wa.link/hxjkgq",
-        title: "Paquete a Iguazú",
-        priceBaja: "$138.910",
-        price: "$160.200",
-        events: "si"
-    },
-    {
-        id: "b2",
-        destino: "Iguazu",
-        cardOrden: "Card 2",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-8.webp",
-        className: "uno",
-        linkWa: "https://wa.link/2rmvhq",
-        title: "Paquete a Iguazús",
-        priceBaja: "$189.840",
-        price: "$250.370",
-        events: "si"
-    },
-    {
-        id: "b3",
-        destino: "Iguazu",
-        cardOrden: "Card 3",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-9.webp",
-        className: "uno",
-        linkWa: "https://wa.link/wbq74i",
-        title: "Hotel Merit Iguazú",
-        priceBaja: "$56.210",
-        price: "$63.370",
-        events: "si"
-    },
-    {
-        id: "b4",
-        destino: "Iguazu",
-        cardOrden: "Card 4",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-10.webp",
-        className: "uno",
-        linkWa: "https://wa.link/s6nxus",
-        title: "Hotel Complejo Americano",
-        priceBaja: "$38.100",
-        price: "$76.160",
-        events: "si"
-    },
-    {
-        id: "b5",
-        destino: "Iguazu",
-        cardOrden: "Card 5",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-11.webp",
-        className: "uno",
-        linkWa: "https://wa.link/37zsyv",
-        title: "Hotel Tourbillon",
-        priceBaja: "$41.830",
-        price: "$55.700",
-        events: "si"
-    },
-    {
-        id: "b6",
-        destino: "Iguazu",
-        cardOrden: "Card 6",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/Iguazu-12.webp",
-        className: "uno",
-        linkWa: "https://wa.link/37zsyv",
-        title: "Hotel Iguazu Grand",
-        priceBaja: "$139.820",
-        price: "$150.500",
-        events: "No"
-    },
-];
-const destinos3 = [
-    {
-        id: "c1",
-        destino: "Mendoza",
-        cardOrden: "Card 1",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-13.webp",
-        className: "uno",
-        linkWa: "https://wa.link/61efbi",
-        title: "Paquete a Mendoza",
-        priceBaja: "$122.690",
-        price: "$144.335",
-        events: "si"
-    },
-    {
-        id: "c2",
-        destino: "Mendoza",
-        cardOrden: "Card 2",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-14.webp",
-        className: "uno",
-        linkWa: "https://wa.link/sbfl7y",
-        title: "Paquete a Mendoza",
-        priceBaja: "$183.700",
-        price: "$171.300",
-        events: "si"
-    },
-    {
-        id: "c3",
-        destino: "Mendoza",
-        cardOrden: "Card 3",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-15.webp",
-        className: "uno",
-        linkWa: "https://wa.link/vs8baw",
-        title: "Paquete a Mendoza",
-        priceBaja: "$223.100",
-        price: "$216.5000",
-        events: "si"
-    },
-    {
-        id: "c4",
-        destino: "Mendoza",
-        cardOrden: "Card 4",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-16.webp",
-        className: "uno",
-        linkWa: "https://wa.link/u8ym55",
-        title: "Hotel Crillón",
-        priceBaja: "$39.770",
-        price: "$57.960",
-        events: "si"
-    },
-    {
-        id: "c5",
-        destino: "Mendoza",
-        cardOrden: "Card 5",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-17.webp",
-        className: "uno",
-        linkWa: "https://wa.link/wz0152",
-        title: "Hotel Cordón del Plata",
-        priceBaja: "$29.110",
-        price: "$50.570",
-        events: "si"
-    },
-    {
-        id: "c6",
-        destino: "Mendoza",
-        cardOrden: "Card 6",
-        img: "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Argentina/mendoza-18.webp",
-        className: "uno",
-        linkWa: "https://wa.link/wz0152",
-        title: "Hotel Huentala",
-        priceBaja: "$97.430",
-        price: "$110.200",
-        events: "si"
-    },
-];
-const btnStyles = [
-    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Vuelos Bariloche – Alojamientos Bariloche – Paquetes Bariloche', destino: "Bariloche" },
-    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Vuelos Iguazú – Alojamientos Cataratas – Paquetes Cataratas', destino: "Iguazu" },
-    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Vuelos Mendoza – Alojamientos Mendoza – Paquetes Mendoza', destino: "Mendoza" },
-];
-// *****************************************************
+// ************** Ancla *****************************
+function mostrarSeccion() {
+    let url = window.location.href;
+    let hash = url.substring(url.indexOf("#") + 1);
+
+    let seccion = document.getElementById(hash);
+
+    if (seccion) {
+        seccion.scrollIntoView();
+    } else {
+        setTimeout(mostrarSeccion, 500);
+    }
+}
+mostrarSeccion();
+
+// ************************ Modificacion delinks WA **************************
+
+// function changeWaLink() {
+//     const linkWaHeader = document.querySelector('.btn-group.upper-menu__phone-wrapper a');
+//     const linkWaFixed = document.querySelector('.whatsAppFixes a');
+//     const linkWaHeaderMobile = document.querySelector('.btn.upper-menu__phone-wrapper.features_item a');
+//     linkWaHeader.href = 'https://wa.link/0tl29b';
+//     linkWaFixed.href = 'https://wa.link/0tl29b';
+//     linkWaHeaderMobile.href = 'https://wa.link/0tl29b';
+// }
+// changeWaLink();
+
+// ***************************  Conexion a BD ***************************************
+const fetchDestinos = async () => {
+    const response = await fetch('https://raw.githubusercontent.com/MultitravelCom/components/master/MULT324/dbCaribe.json');
+    const data = await response.json();
+
+    return data;
+};
+
 async function fetchDataFromAPI() {
     try {
         const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-whatsapp');
@@ -323,9 +116,15 @@ function filtrarDestinos(destinos, nombreDestino) {
     return destinosFiltrados;
 }
 
-// *****************************************************
-// BITRIX
+const btnStyles = [
+    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Paquetes Cancún  – Alojamientos Cancún', destino: "Cancun" },
+    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Paquetes Playa del Carmen – Alojamientos Playa del Carmen', destino: "PlayaDelCarmen" },
+    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Paquetes Punta Cana - Alojamientos Punta Cana', destino: "PuntaCana" },
+    { carrusel: "carrusel__lista4", btnLeft: "btnLeft4", btnRight: "btnRight4", title: 'Paquetes Panamá - Alojamientos Panamá', destino: "Panama" },
+];
 
+// *****************************************************
+// *********************** BITRIX ******************
 // FormBitrix
 const BitrixFormComponent = ({ isVisible }) => {
     const [isScriptLoaded, setIsScriptLoaded] = React.useState(false);
@@ -355,7 +154,8 @@ const BitrixFormComponent = ({ isVisible }) => {
 const ButtonBitrixForm = () => {
     const isMobile = window.innerWidth < 454;
 
-    const handleCallButtonClick = () => {
+    const handleCallButtonClick = (event) => {
+        event.preventDefault();
         if (isMobile) {
             window.location.href = 'tel:08003480003';
         }
@@ -433,6 +233,7 @@ const EventImg = (props) => {
         );
     }
 };
+
 // const WarningPrice = () => {
 //     return (
 //         <div className="container main__warningPrice">
@@ -444,33 +245,7 @@ const EventImg = (props) => {
 //     )
 // }
 // ************************************************
-const BannerTravelSale = () => {
-    return (
-        <>
-            <div className="main__container_BannerTravelSale">
-                <picture>
-                    <source
-                        media="(min-width: 1024px)"
-                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Brasil/Banner-Desktop.webp"
-                    />
-                    <source
-                        media="(min-width: 768px) and (max-width: 1023px)"
-                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Brasil/Banner-Desktop.webp"
-                    />
-                    <source
-                        media="(max-width: 767px)"
-                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Brasil/Banner-Mobile.webp"
-                    />
-                    <img
-                        className="main_conteiner__s1_medio__paquetes__img"
-                        src="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Brasil/Banner-Desktop.webp"
-                        alt="Imagen banner promociones"
-                    />
-                </picture>
-            </div>
-        </>
-    )
-}
+
 const BannerTop = () => {
     return (
         <div className="main_conteiner__s1_medio__paquetes">
@@ -478,29 +253,56 @@ const BannerTop = () => {
                 <source
                     media="(min-width: 1024px)"
                     srcSet="
-            https://multitravelcom.github.io/MT/Evento/Brasil2023/banner-Landing/bannerLanding%20(1).webp
+            https://multitravelcom.github.io/MT/Evento/Caribe/Banner/banner-1.webp
           "
                 />
                 <source
                     media="(min-width: 768px) and (max-width: 1023px)"
                     srcSet="
-                    https://multitravelcom.github.io/MT/Evento/Brasil2023/banner-Landing/bannerLanding%20(2).webp
+                    https://multitravelcom.github.io/MT/Evento/Caribe/Banner/banner-2.webp
                     "
                 />
                 <source
                     media="(max-width: 767px)"
                     srcSet="
-                    https://multitravelcom.github.io/MT/Evento/Brasil2023/banner-Landing/bannerLanding%20(3).webp
+                    https://multitravelcom.github.io/MT/Evento/Caribe/Banner/banner-3.webp
                     "
                 />
                 <img
                     className="main_conteiner__s1_medio__paquetes__img"
-                    src="            https://multitravelcom.github.io/MT/Evento/Brasil2023/banner-Landing/bannerLanding%20(1).webp
+                    src="            https://multitravelcom.github.io/MT/Evento/Caribe/Banner/banner-1.webp
                     "
                     alt="Imagen banner promociones"
                 />
             </picture>
         </div>
+    )
+}
+const BannerTravelSale = () => {
+    return (
+        <>
+            <div className="main__container_BannerTravelSale">
+                <picture>
+                    <source
+                        media="(min-width: 1024px)"
+                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Caribe/Banner-Desktop.webp"
+                    />
+                    <source
+                        media="(min-width: 768px) and (max-width: 1023px)"
+                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Caribe/Banner-Desktop.webp"
+                    />
+                    <source
+                        media="(max-width: 767px)"
+                        srcSet="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Caribe/Banner-Mobile.webp"
+                    />
+                    <img
+                        className="main_conteiner__s1_medio__paquetes__img"
+                        src="https://multitravelcom.github.io/MT/Evento/TravelSale-2023/Banner-Landing/Caribe/Banner-Desktop.webp"
+                        alt="Imagen banner promociones"
+                    />
+                </picture>
+            </div>
+        </>
     )
 }
 const Card = ({ destinos, onContactClick }) => {
@@ -510,6 +312,7 @@ const Card = ({ destinos, onContactClick }) => {
     const [buttonSwitch, setButtonSwitch] = React.useState("B");
     const [data, setData] = React.useState([]);
     const [pricesByDestino, setPricesByDestino] = React.useState({});
+
 
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
@@ -524,17 +327,15 @@ const Card = ({ destinos, onContactClick }) => {
         window.open(whatsappURL, '_blank');
     };
 
-
     React.useEffect(() => {
         fetchDestinos()
             .then((data) => {
-                // Verificar si data.destinos es un array
                 if (Array.isArray(data.destinos)) {
                     if (data.destinos.length > 0) {
-                        // setDestinos(data.destinos);
-                        // setLoaded(true);
+                        setLoaded(true);
+                        setDestinos(data.destinos);
                     } else {
-                        // setLoaded(true);
+                        setLoaded(true);
                         setNoDestinos(true);
                     }
                 } else {
@@ -545,27 +346,22 @@ const Card = ({ destinos, onContactClick }) => {
                 console.log(error);
             });
     }, []);
-
     React.useEffect(() => {
         const fetchData = async () => {
             try {
                 const responseData = await fetchDataFromAPI();
+                console.log(responseData);
                 setData(responseData);
-                setLoaded(true)
 
                 setButtonSwitch(responseData.data?.attributes?.Whatsapp_Activo ? "A" : "B");
 
-
             } catch (error) {
-                setLoaded(true)
-
                 console.error(error);
             }
         };
 
         fetchData();
     }, []);
-
     React.useEffect(() => {
         const fetchDataPrecio = async () => {
             try {
@@ -612,17 +408,8 @@ const Card = ({ destinos, onContactClick }) => {
                             >
                                 {destino.events === "si" && shouldShowEvent() && (
                                     <EventImg style="eventImg" />
-                                )}                                <picture>
-                                    <map name={destino.id}>
-                                        <area
-                                            target="_blank"
-                                            alt={destino.title}
-                                            title={destino.title}
-                                            href={destino.linkWa}
-                                            coords={destino.coords}
-                                            shape="rect"
-                                        />
-                                    </map>
+                                )}
+                                <picture>
                                     <source media="(min-width: 1024px)" srcSet={destino.img} />
                                     <source
                                         media="(min-width: 768px) and (max-width: 1023px)"
@@ -636,7 +423,6 @@ const Card = ({ destinos, onContactClick }) => {
                                     />
                                 </picture>
                                 <div className="main_container_priceStyle">
-
                                     {pricesByDestino[destino.destino] && (
                                         pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
                                             <div key={index} className="main_container_priceStyle">
@@ -786,15 +572,17 @@ function App() {
     const [selectedFormId, setSelectedFormId] = React.useState(false);
     const [isFormVisible, setIsFormVisible] = React.useState(false);
 
-
-    const Florianopolis = filtrarDestinos(destinos, "Florianopolis");
-    const Buzios = filtrarDestinos(destinos, 'Buzios');
-    const AllInclusive = filtrarDestinos(destinos, 'AllInclusive');
+    const Cancun = filtrarDestinos(destinos, "Cancun");
+    const PlayaDelCarmen = filtrarDestinos(destinos, 'PlayaDelCarmen');
+    const PuntaCana = filtrarDestinos(destinos, 'PuntaCana');
+    const Panama = filtrarDestinos(destinos, 'Panama');
 
     const handleOpenForm = (formId) => {
 
         setSelectedFormId(formId);
         setIsFormVisible(true);
+
+        console.log("isFormVisible:", isFormVisible);
     };
 
     const handleCloseForm = () => {
@@ -805,7 +593,7 @@ function App() {
     React.useEffect(() => {
         const fetchData = async () => {
             try {
-                await fetchDataFromAPI(); // Llamada a la función existente
+                await fetchDataFromAPI();
                 setLoaded(true);
             } catch (error) {
                 console.error('Error al obtener datos:', error);
@@ -841,11 +629,13 @@ function App() {
                     }
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Florianopolis} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Cancun} onContactClick={handleOpenForm} />
 
-                            <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Buzios} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={PlayaDelCarmen} onContactClick={handleOpenForm} />
 
-                            <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={AllInclusive} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={PuntaCana} onContactClick={handleOpenForm} />
+
+                            <CardContainer btnStyles={btnStyles[3]} destinosFiltrados={Panama} onContactClick={handleOpenForm} />
                         </div>
                     </div>
                     {isFormVisible && (
