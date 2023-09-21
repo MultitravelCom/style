@@ -78,6 +78,7 @@ mostrarSeccion();
 //     linkWaHeaderMobile.href = 'https://wa.link/0tl29b';
 // }
 // changeWaLink();
+// *********************************************************************************************
 
 // ***************************  Conexion a BD ***************************************
 const fetchDestinos = async () => {
@@ -419,16 +420,7 @@ const Card = ({ destinos, onContactClick }) => {
                                 {destino.events === "si" && shouldShowEvent() && (
                                     <EventImg style="eventImg" />
                                 )}                                <picture>
-                                    <map name={destino.id}>
-                                        <area
-                                            target="_blank"
-                                            alt={destino.title}
-                                            title={destino.title}
-                                            href={destino.linkWa}
-                                            coords={destino.coords}
-                                            shape="rect"
-                                        />
-                                    </map>
+                                
                                     <source media="(min-width: 1024px)" srcSet={destino.img} />
                                     <source
                                         media="(min-width: 768px) and (max-width: 1023px)"
@@ -438,11 +430,10 @@ const Card = ({ destinos, onContactClick }) => {
                                     <img
                                         alt={`Imagen banner ${destino.title}`}
                                         src={destino.img}
-                                        useMap={`#${destino.id}`}
+                                
                                     />
                                 </picture>
                                 <div className="main_container_priceStyle">
-
                                     {pricesByDestino[destino.destino] && (
                                         pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
                                             <div key={index} className="main_container_priceStyle">
