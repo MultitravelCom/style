@@ -387,6 +387,7 @@ const Card = ({ destinos, onContactClick }) => {
 
                     return acc;
                 }, {});
+                console.log("Prices:", prices);
                 setPricesByDestino(prices);
             } catch (error) {
                 console.error(error);
