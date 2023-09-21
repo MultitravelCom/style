@@ -388,7 +388,6 @@ const Card = ({ destinos, onContactClick }) => {
 
                     return acc;
                 }, {});
-                console.log("Prices:", prices);
                 setPricesByDestino(prices);
                 setPricesLoaded(true);
             } catch (error) {
@@ -426,9 +425,6 @@ const Card = ({ destinos, onContactClick }) => {
                                     />
                                 </picture>
                                 <div className="main_container_priceStyle">
-                                    {console.log("pricesByDestino:", pricesByDestino)}
-                                    {console.log("destino.destino:", destino.destino)}
-                                    {console.log("destino.cardOrden:", destino.cardOrden)}
                                     {pricesByDestino[destino.destino] && pricesByDestino[destino.destino][destino.cardOrden] ? (
                                         pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
                                             <div key={index} className="main_container_priceStyle">
