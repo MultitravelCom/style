@@ -332,10 +332,10 @@ const Card = ({ destinos, onContactClick }) => {
             .then((data) => {
                 if (Array.isArray(data.destinos)) {
                     if (data.destinos.length > 0) {
-                        setLoaded(true);
-                        setDestinos(data.destinos);
+                        // setLoaded(true);
+                        // setDestinos(data.destinos);
                     } else {
-                        setLoaded(true);
+                        // setLoaded(true);
                         setNoDestinos(true);
                     }
                 } else {
