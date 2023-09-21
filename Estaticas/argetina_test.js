@@ -425,19 +425,26 @@ const Card = ({ destinos, onContactClick }) => {
                                         src={destino.img}
                                     />
                                 </picture>
-                                {/* <div className="main_container_priceStyle">
+                                <div className="main_container_priceStyle">
                                     {console.log("pricesByDestino:", pricesByDestino)}
                                     {console.log("destino.destino:", destino.destino)}
                                     {console.log("destino.cardOrden:", destino.cardOrden)}
-                                    {pricesByDestino[destino.destino] && (
+                                    {pricesByDestino[destino.destino] && pricesByDestino[destino.destino][destino.cardOrden] ? (
                                         pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
                                             <div key={index} className="main_container_priceStyle">
                                                 <div className="priceStyle left">${tarifa.Tarifa_Temporada_Baja.toLocaleString().replace(/,/g, '.')}</div>
                                                 <div className="priceStyle right">${tarifa.Tarifa_Temporada_Alta.toLocaleString().replace(/,/g, '.')}</div>
                                             </div>
                                         ))
+                                    ) : (
+                                        // Manejo de casos donde los datos no están disponibles
+                                        <div className="main_container_priceStyle">
+                                            <div className="priceStyle left">N/A</div>
+                                            <div className="priceStyle right">N/A</div>
+                                        </div>
                                     )}
-                                </div> */}
+
+                                </div>
                                 <div className="main__container__buttonsCars">
                                     <>
                                         <ButtonLading
