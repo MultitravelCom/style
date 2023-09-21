@@ -307,7 +307,8 @@ const BannerTravelSale = () => {
 }
 const Card = ({ destinos, onContactClick }) => {
     const [noDestinos, setNoDestinos] = React.useState(false);
-    const [loaded, setPricesLoaded] = React.useState(false);
+    const [loaded, setLoaded] = React.useState(false);
+    const [pricesLoaded, setPricesLoaded] = React.useState(false);
     const [openModal, setOpenModal] = React.useState(false);
     const [buttonSwitch, setButtonSwitch] = React.useState("B");
     const [data, setData] = React.useState([]);
@@ -401,7 +402,7 @@ const Card = ({ destinos, onContactClick }) => {
 
     return (
         <>
-            {loaded ? (
+            {loaded && pricesLoaded ? (
                 destinos.length > 0 ? (
                     destinos.map(destino => (
                         <div key={destino.id} className="carrusel__elemento">
