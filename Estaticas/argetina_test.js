@@ -425,7 +425,7 @@ const Card = ({ destinos, onContactClick }) => {
                                         src={destino.img}
                                     />
                                 </picture>
-                                <div className="main_container_priceStyle">
+                                {/* <div className="main_container_priceStyle">
                                     {console.log("pricesByDestino:", pricesByDestino)}
                                     {console.log("destino.destino:", destino.destino)}
                                     {console.log("destino.cardOrden:", destino.cardOrden)}
@@ -437,8 +437,8 @@ const Card = ({ destinos, onContactClick }) => {
                                             </div>
                                         ))
                                     )}
-                                </div>
-                                {/* <div className="main__container__buttonsCars">
+                                </div> */}
+                                <div className="main__container__buttonsCars">
                                     <>
                                         <ButtonLading
                                             id={destino.title}
@@ -455,7 +455,7 @@ const Card = ({ destinos, onContactClick }) => {
                                             svgType={buttonSwitch === "A" ? 'phone' : null}
                                         />
                                     </>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                     ))
