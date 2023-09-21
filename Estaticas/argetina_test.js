@@ -438,7 +438,7 @@ const Card = ({ destinos, onContactClick }) => {
                                         ))
                                     )}
                                 </div>
-                                <div className="main__container__buttonsCars">
+                                {/* <div className="main__container__buttonsCars">
                                     <>
                                         <ButtonLading
                                             id={destino.title}
@@ -455,7 +455,7 @@ const Card = ({ destinos, onContactClick }) => {
                                             svgType={buttonSwitch === "A" ? 'phone' : null}
                                         />
                                     </>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     ))
@@ -587,8 +587,6 @@ function App() {
 
         setSelectedFormId(formId);
         setIsFormVisible(true);
-
-        console.log("isFormVisible:", isFormVisible);
     };
 
     const handleCloseForm = () => {
@@ -636,11 +634,8 @@ function App() {
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Cancun} onContactClick={handleOpenForm} />
-
                             <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={PlayaDelCarmen} onContactClick={handleOpenForm} />
-
                             <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={PuntaCana} onContactClick={handleOpenForm} />
-
                             <CardContainer btnStyles={btnStyles[3]} destinosFiltrados={Panama} onContactClick={handleOpenForm} />
                         </div>
                     </div>
