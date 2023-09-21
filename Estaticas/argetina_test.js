@@ -420,7 +420,6 @@ const Card = ({ destinos, onContactClick }) => {
                                     <img
                                         alt={`Imagen banner ${destino.title}`}
                                         src={destino.img}
-                                        useMap={`#${destino.id}`}
                                     />
                                 </picture>
                                 <div className="main_container_priceStyle">
