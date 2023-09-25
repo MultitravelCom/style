@@ -435,8 +435,8 @@ const Card = ({ destinos, onContactClick }) => {
                                     ) : (
                                         // Manejo de casos donde los datos no están disponibles
                                         <div className="main_container_priceStyle">
-                                            <div className="priceStyle left">N/A</div>
-                                            <div className="priceStyle right">N/A</div>
+                                            <div className="priceStyle left">Consultar tarifa</div>
+                                            <div className="priceStyle right">Consultar tarifa</div>
                                         </div>
                                     )}
 
