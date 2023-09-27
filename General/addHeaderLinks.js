@@ -142,9 +142,14 @@ function verificarYActualizarMeta() {
 }
 function ocultarWhatsAppFixesHotels() {
     if (window.location.href.includes('/hotels/results')) {
-        var elemento = document.querySelector('.whatsAppFixes');
+        const elemento = document.querySelector('.whatsAppFixes');
         if (elemento) {
-            elemento.style.display = 'none';
+            // Verificar si la resolución es menor o igual a 768 (puedes ajustar este valor según tus necesidades)
+            if (window.innerWidth <= 768) {
+                elemento.style.display = 'none'; // Ocultar en resoluciones móviles
+            } else {
+                elemento.style.display = 'block'; // Mostrar en escritorio
+            }
         }
     }
 }
