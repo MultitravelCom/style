@@ -323,6 +323,7 @@ const Card = ({ destinos, onContactClick }) => {
             window.location.href = 'tel:08003480003';
         } else {
             setOpenModal(true);
+            console.log(openModal)
         }
     };
 
