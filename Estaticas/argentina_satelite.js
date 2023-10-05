@@ -588,7 +588,7 @@ const Card = ({ destinos, onContactClick }) => {
                                 id={destino.id}
                                 className="btn_FormBitrix"
                                 text="Llamar Ahora"
-                                onClick={() => onContactClick(destino.id)}
+                                onClick={handleBannerClick}
                             />
                         )}
                     </div>
