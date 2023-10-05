@@ -144,11 +144,10 @@ function ocultarWhatsAppFixesHotels() {
     if (window.location.href.includes('/hotels/results')) {
         const elemento = document.querySelector('.whatsAppFixes');
         if (elemento) {
-            // Verificar si la resolución es menor o igual a 768 (puedes ajustar este valor según tus necesidades)
             if (window.innerWidth <= 768) {
-                elemento.style.display = 'none'; // Ocultar en resoluciones móviles
+                elemento.style.display = 'none'; 
             } else {
-                elemento.style.display = 'block'; // Mostrar en escritorio
+                elemento.style.display = 'block';
             }
         }
     }
@@ -184,7 +183,6 @@ function disableMailchimpMobile() {
 
     if (scriptElement && !isScreenResolutionAboveThreshold(768)) {
         scriptElement.setAttribute("async", "true"); // Deshabilitar la ejecución del script
-        console.log("bloqueado")
     }
 }
 
