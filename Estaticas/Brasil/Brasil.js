@@ -318,7 +318,7 @@ const Card = ({ destinos, onContactClick }) => {
     const [data, setData] = React.useState([]);
     const [pricesByDestino, setPricesByDestino] = React.useState({});
 
-    const handleBannerClick = () => {
+    const handleBannerClickLlamar = () => {
         if (window.innerWidth <= 768) {
             window.location.href = 'tel:08003480003';
         } else {
@@ -457,7 +457,7 @@ const Card = ({ destinos, onContactClick }) => {
                                                 id={destino.id}
                                                 className="classOpenModal"
                                                 text="Llamar"
-                                                onClick={handleBannerClick}
+                                                onClick={handleBannerClickLlamar}
                                                 svgType="phone"
                                             />
                                         </>
@@ -466,7 +466,7 @@ const Card = ({ destinos, onContactClick }) => {
                                             id={destino.id}
                                             className="btn_FormBitrix"
                                             text="Llamar Ahora"
-                                            onClick={handleBannerClick}
+                                            onClick={handleBannerClickLlamar}
                                         />
                                     )}
                                 </div>
