@@ -60,8 +60,8 @@ function addHeaderLinks() {
         bannerTopStyle.href = "https://multitravelcom.github.io/style/General/components/styleBannerTop.css";
         bannerTopStyle.rel = "stylesheet";
 
-        // head.appendChild(bannerTopStyle);
-        head.appendChild(bannerTopScript);
+        head.appendChild(bannerTopStyle);
+        // head.appendChild(bannerTopScript);
     }
 
     const recomendadoHotels = path.includes('/hotels/');
