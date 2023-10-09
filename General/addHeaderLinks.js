@@ -52,7 +52,7 @@ function addHeaderLinks() {
     const bannerTop = path.includes('/results') || path.includes('/booking/');
     if (!bannerTop) {
         const bannerTopStyle = document.createElement('link');
-        const bannerTopScript = document.createElement('script');
+        // const bannerTopScript = document.createElement('script');
 
         // bannerTopScript.src = 'https://multitravelcom.github.io/style/General/components/BannerTop.js';
         // bannerTopScript.type = "text/babel";
@@ -60,7 +60,7 @@ function addHeaderLinks() {
         bannerTopStyle.href = "https://multitravelcom.github.io/style/General/components/styleBannerTop.css";
         bannerTopStyle.rel = "stylesheet";
 
-        head.appendChild(bannerTopStyle);
+        // head.appendChild(bannerTopStyle);
         head.appendChild(bannerTopScript);
     }
 
