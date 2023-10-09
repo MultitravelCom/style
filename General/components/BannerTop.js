@@ -1,14 +1,14 @@
-// function Button(props) {
+function Button(props) {
 
-//     const handleClick = (event) => {
-//         event.preventDefault();
-//         window.open(props.link, '_blank');
-//     }
+    const handleClick = (event) => {
+        event.preventDefault();
+        window.open(props.link, '_blank');
+    }
 
-//     return (
-//         <button className={props.style} onClick={handleClick}>{props.text}</button>
-//     );
-// }
+    return (
+        <button className={props.style} onClick={handleClick}>{props.text}</button>
+    );
+}
 
 function cambiarUrlImg() {
     const fechaActual = new Date();
