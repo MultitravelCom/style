@@ -141,7 +141,7 @@ function verificarYActualizarMeta() {
     }
 }
 function ocultarWhatsAppFixesHotels() {
-    if (window.location.href.includes('/hotels/results')) {
+    if (window.location.href.includes('/hotels/results') || window.location.href.includes('/flights/results')) {
         const elemento = document.querySelector('.whatsAppFixes');
         if (elemento) {
             if (window.innerWidth <= 768) {
