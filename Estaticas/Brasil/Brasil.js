@@ -221,8 +221,8 @@ const Loader = () => {
     );
 };
 function shouldShowEvent() {
-    const startDate = new Date("2023-08-27T22:00:00");
-    const endDate = new Date("2023-09-02T23:00:00");
+    const startDate = new Date("2023-11-02T23:30:00");
+    const endDate = new Date("2023-11-12T23:30:00");
     const now = new Date();
 
     return now >= startDate && now <= endDate;
@@ -234,7 +234,7 @@ const EventImg = (props) => {
             <div className={props.style}>
                 <img
                     alt={`Imagen evento promocion`}
-                    src={"https://multitravelcom.github.io/components/MULT324/logotravelsale.svg"}
+                    src={"https://multitravelcom.github.io/MT/icons/LogoCyber.webp"}
                 />
             </div>
         );
@@ -638,14 +638,14 @@ function App() {
                     <div className="main_conteiner__s1_medio top_mkt">
                         <BannerTop />
                     </div>
-                    {shouldShowEvent()
+                    {/* {shouldShowEvent()
                         ?
                         <div className="main_conteiner__s2_bannerTravelSale">
                             <BannerTravelSale />
                         </div>
                         :
                         null
-                    }
+                    } */}
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
                             <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Florianopolis} onContactClick={handleOpenForm} />
