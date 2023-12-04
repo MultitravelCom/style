@@ -857,6 +857,6 @@ label[for="hotel-searcher-nationality"] {
   text-decoration: revert;
 }
 
-#main-menu-products > ul > li.nav-elem.active{
+/* #main-menu-products > ul > li.nav-elem.active{
   display: none;
-}
+} */
