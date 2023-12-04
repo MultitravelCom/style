@@ -856,3 +856,7 @@ label[for="hotel-searcher-nationality"] {
 .cookie-policy__content > a {
   text-decoration: revert;
 }
+
+#main-menu-products > ul > li.nav-elem.active{
+  display: none;
+}
