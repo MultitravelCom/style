@@ -860,3 +860,7 @@ label[for="hotel-searcher-nationality"] {
 /* #main-menu-products > ul > li.nav-elem.active{
   display: none;
 } */
+
+#main-menu-products > ul > li:nth-child(4){
+  display: none;
+}
