@@ -221,7 +221,7 @@ source>img {
     height: 100%;
     background-color: gainsboro;
     border-radius: 136px 8px 8px 0;
-    background-image: url(https://www.multitravel.com/images/upload//LandingPage/Vuelos/pagovuelos.jpg);
+    background-image: url(https://ar.multitravel.com/images/upload//LandingPage/Vuelos/pagovuelos.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -247,7 +247,7 @@ source>img {
 }
 
 .uno__s3 {
-    background-image: url(https://www.multitravel.com/images/upload//LandingPage/Vuelos/alojamineto-vuelos.jpg);
+    background-image: url(https://ar.multitravel.com/images/upload//LandingPage/Vuelos/alojamineto-vuelos.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px 8px 8px 40px;
@@ -259,7 +259,7 @@ source>img {
 }
 
 .dos__s3 {
-    background-image: url(https://www.multitravel.com/images/upload//LandingPage/Vuelos/paquetes-vuelos.jpg);
+    background-image: url(https://ar.multitravel.com/images/upload//LandingPage/Vuelos/paquetes-vuelos.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px;
@@ -270,7 +270,7 @@ source>img {
 }
 
 .tres__s3 {
-    background-image: url(https://www.multitravel.com/images/upload//LandingPage/Vuelos/actividades-vuelos.jpg);
+    background-image: url(https://ar.multitravel.com/images/upload//LandingPage/Vuelos/actividades-vuelos.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px 40px 8px 8px;

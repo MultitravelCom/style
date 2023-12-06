@@ -5,7 +5,7 @@
 //     return (
 //         <div className="main_conteiner__s1_medio bannerTop">
 //             <div className="main_conteiner__s1_medio__paquetes">
-//                 <a href="https://www.multitravel.com/venta-personalizada/travelsale" target="_blank">
+//                 <a href="https://ar.multitravel.com/venta-personalizada/travelsale" target="_blank">
 //                     <picture>
 //                         <source media="(min-width: 1024px)" srcSet={`${imageBasePath}(1).jpg`} />
 //                         <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={`${imageBasePath}(2).jpg`} />
@@ -59,7 +59,7 @@ const MediosDePagos = () => {
                         <h4>Vos decid&#237;s</h4>
                         <p>Encontr&#225; todos los medios de pagos exclusivos para vos</p>
                         <button className="main__conteiner__s2__pagos__btn">
-                            <a href="https://www.multitravel.com/medios-de-pago" target="_blank"
+                            <a href="https://ar.multitravel.com/medios-de-pago" target="_blank"
                                 style={{ color: "white", textDecoration: "none" }}>Descubrir</a>
                         </button>
                     </div>
@@ -71,7 +71,7 @@ const MediosDePagos = () => {
                     </div>
                 </div>
                 <div className="main__conteiner__s2__pagos__card dos__s2">
-                    <a href="https://www.multitravel.com/ahora12" target="_blank">
+                    <a href="https://ar.multitravel.com/ahora12" target="_blank">
                         <source media="(min-width: 1024px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/ahora12/ahora12-01.webp" />
                         <source media="(min-width: 768px) and (max-width: 1023px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/ahora12/ahora12-02.webp" />
                         <source media="(max-width: 767px)" srcSet="https://multitravelcom.github.io/MT/Secciones/MediosPagos/ahora12/ahora12-03.webp" />
@@ -121,13 +121,13 @@ const LoMejorDe = () => {
             <>
                 <Ofertas
                     seccion1="Alojamientos"
-                    url1="https://www.multitravel.com/hotels/"
+                    url1="https://ar.multitravel.com/hotels/"
                     className1="uno__s3"
                     seccion2="Paquetes"
-                    url2="https://www.multitravel.com/packages/flighthotel/"
+                    url2="https://ar.multitravel.com/packages/flighthotel/"
                     className2="dos__s3"
                     seccion3="Asistencias"
-                    url3="https://www.multitravel.com/insurances/"
+                    url3="https://ar.multitravel.com/insurances/"
                     className3="tres__s3"
                 />
             </>
@@ -137,13 +137,13 @@ const LoMejorDe = () => {
             <>
                 <Ofertas
                     seccion1="Paquetes"
-                    url1="https://www.multitravel.com/hotels/"
+                    url1="https://ar.multitravel.com/hotels/"
                     className1="uno__s3"
                     seccion2="Vuelos"
-                    url2="https://www.multitravel.com/flights/"
+                    url2="https://ar.multitravel.com/flights/"
                     className2="dos__s3"
                     seccion3="Asistencias"
-                    url3="https://www.multitravel.com/insurances/"
+                    url3="https://ar.multitravel.com/insurances/"
                     className3="tres__s3"
                 />
             </>
@@ -153,13 +153,13 @@ const LoMejorDe = () => {
             <>
                 <Ofertas
                     seccion1="Alojamientos"
-                    url1="https://www.multitravel.com/hotels/"
+                    url1="https://ar.multitravel.com/hotels/"
                     className1="uno__s3"
                     seccion2="Vuelos"
-                    url2="https://www.multitravel.com/flights/"
+                    url2="https://ar.multitravel.com/flights/"
                     className2="dos__s3"
                     seccion3="Asistencias"
-                    url3="https://www.multitravel.com/insurances/"
+                    url3="https://ar.multitravel.com/insurances/"
                     className3="tres__s3"
                 />
             </>
@@ -169,13 +169,13 @@ const LoMejorDe = () => {
             <>
                 <Ofertas
                     seccion1="Alojamientos"
-                    url1="https://www.multitravel.com/hotels/"
+                    url1="https://ar.multitravel.com/hotels/"
                     className1="uno__s3"
                     seccion2="Vuelos"
-                    url2="https://www.multitravel.com/flights/"
+                    url2="https://ar.multitravel.com/flights/"
                     className2="dos__s3"
                     seccion3="Paquetes"
-                    url3="https://www.multitravel.com/packages/flighthotel/"
+                    url3="https://ar.multitravel.com/packages/flighthotel/"
                     className3="tres__s3"
                 />
             </>
