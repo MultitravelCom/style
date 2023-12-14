@@ -32,6 +32,15 @@ function addHeaderLinks() {
 
     head.appendChild(modalAtencionStyle);
     head.appendChild(modalAtencionsJs);
+
+    const linkElement = document.createElement('link');
+
+    linkElement.setAttribute('rel', 'alternate');
+    linkElement.setAttribute('hreflang', 'es-ar');
+    linkElement.setAttribute('href', 'https://ar.multitravel.com');
+  
+
+    document.head.appendChild(linkElement);
 }
 addHeaderLinks();
 
