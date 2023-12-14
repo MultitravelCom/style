@@ -187,12 +187,11 @@ function disableMailchimpMobile() {
     // *****************************************************
     const linkElement = document.createElement('link');
 
-    // Establecer los atributos del enlace
     linkElement.setAttribute('rel', 'alternate');
     linkElement.setAttribute('hreflang', 'es-ar');
     linkElement.setAttribute('href', 'https://ar.multitravel.com');
   
-    // Agregar el elemento <link> al head del documento HTML
+
     document.head.appendChild(linkElement);
 }
 
