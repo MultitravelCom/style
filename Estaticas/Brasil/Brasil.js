@@ -447,9 +447,17 @@ const Card = ({ destinos, onContactClick }) => {
                                     {pricesByDestino[destino.destino] && (
                                         pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
                                             <div key={index} className="main_container_priceStyle">
-                                                <div className="priceStyle left">${tarifa.Tarifa_Temporada_Baja.toLocaleString().replace(/,/g, '.')}</div>
-                                                <div className="priceStyle right">${tarifa.Tarifa_Temporada_Alta.toLocaleString().replace(/,/g, '.')}</div>
-                                            </div>
+                                {(tarifa.Tarifa_Temporada_Baja || tarifa.Tarifa_Temporada_Alta) && ( // Show if either value exists
+                                    <div className="main_container_priceStyle">
+                                    {tarifa.Tarifa_Temporada_Baja && ( // Show if Tarifa_Temporada_Baja exists
+                                        <div className="priceStyle left">${tarifa.Tarifa_Temporada_Baja.toLocaleString().replace(/,/g, '.')}</div>
+                                    )}
+                                    {tarifa.Tarifa_Temporada_Alta && ( // Show if Tarifa_Temporada_Alta exists
+                                        <div className="priceStyle right">${tarifa.Tarifa_Temporada_Alta.toLocaleString().replace(/,/g, '.')}</div>
+                                    )}
+                                    </div>
+                                )}
+                             </div>  
                                         ))
                                     )}
                                 </div>
