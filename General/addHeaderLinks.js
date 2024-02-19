@@ -198,12 +198,20 @@ function disableMailchimpMobile() {
 disableMailchimpMobile();
 // ***********************************************************************
 document.addEventListener('DOMContentLoaded', function () {
-    function cambiarHrefNuevoDestino() {
+    function cambiarHrefNavBar() {
+        const linkFlightsNav = document.querySelector('#menu-option-flights');
+        if (linkFlightsNav) {
+            linkFlightsNav.href = "https://multitravel.com.ar/flights";
+        }
+    }
+
+    function cambiarHreLogoHeader() {
         const linkLogo = document.querySelector('#logo');
         if (linkLogo) {
             linkLogo.href = "https://multitravel.com.ar/";
         }
     }
 
-    cambiarHrefNuevoDestino();
+    // cambiarHreLogoHeader();
+    // cambiarHrefNavBar();
 });
