@@ -212,6 +212,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // cambiarHreLogoHeader();
-    // cambiarHrefNavBar();
+    cambiarHreLogoHeader();
+    cambiarHrefNavBar();
 });
