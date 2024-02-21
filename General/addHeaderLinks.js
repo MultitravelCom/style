@@ -145,7 +145,7 @@ function ocultarWhatsAppFixesHotels() {
         const elemento = document.querySelector('.whatsAppFixes');
         if (elemento) {
             if (window.innerWidth <= 768) {
-                elemento.style.display = 'none'; 
+                elemento.style.display = 'none';
             } else {
                 elemento.style.display = 'block';
             }
@@ -190,7 +190,7 @@ function disableMailchimpMobile() {
     linkElement.setAttribute('rel', 'alternate');
     linkElement.setAttribute('hreflang', 'es-ar');
     linkElement.setAttribute('href', 'https://ar.multitravel.com');
-  
+
 
     document.head.appendChild(linkElement);
 }
@@ -212,6 +212,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+
+    function homeElementDisplayNone() {
+        const homeElementDisplayNone = document.getElementById('home');
+        if (homeElementDisplayNone) {
+            document.body.style.display = 'none';
+        }
+
+    }
+
     cambiarHreLogoHeader();
     cambiarHrefNavBar();
+    homeElementDisplayNone();
 });
