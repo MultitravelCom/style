@@ -212,7 +212,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-
     function homeElementDisplayNone() {
         const homeElementDisplayNone = document.getElementById('home');
         if (homeElementDisplayNone) {
@@ -225,3 +224,13 @@ document.addEventListener('DOMContentLoaded', function () {
     cambiarHrefNavBar();
     homeElementDisplayNone();
 });
+
+function homeElementDisplayNone() {
+    const homeElementDisplayNone = document.getElementById('home');
+    if (homeElementDisplayNone) {
+        document.body.style.display = 'none';
+    }
+
+}
+
+homeElementDisplayNone();
