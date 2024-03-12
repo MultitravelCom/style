@@ -356,7 +356,7 @@ const Card = ({ destinos, onContactClick }) => {
                 // Verificar si data.destinos es un array
                 if (Array.isArray(data.destinos)) {
                     if (data.destinos.length > 0) {
-                   
+
                     } else {
                         setNoDestinos(true);
                     }
@@ -415,10 +415,6 @@ const Card = ({ destinos, onContactClick }) => {
                         Imagen_Card: item?.attributes?.Imagen_Card?.data[0]?.attributes?.url
                     });
 
-                    console.log("Datos de la tarjeta:", acc[destino][card]);
-                    console.log("URL de la Imagen_Card[0] de la tarjeta:", item?.attributes?.Imagen_Card?.data[0]?.attributes?.url);
-
-
                     return acc;
                 }, {});
                 setPricesByDestino(prices);
@@ -467,28 +463,32 @@ const Card = ({ destinos, onContactClick }) => {
                                         pricesByDestino[destino.destino][destino.cardOrden].map(
                                             (tarifa, index) => (
                                                 <div key={index} className="main_container_priceStyle">
-                                                    <div className="priceStyle left">
-                                                        {tarifa.Divisa_Izquierda === "ARS"
-                                                            ? "$ "
-                                                            : `${tarifa.Divisa_Izquierda} `}
-                                                        {tarifa.Tarifa_Izquierda
-                                                            ? tarifa.Tarifa_Izquierda.toLocaleString().replace(
-                                                                /,/g,
-                                                                "."
-                                                            )
-                                                            : "Consultar tarifa"}
-                                                    </div>
-                                                    <div className="priceStyle right">
-                                                        {tarifa.Divisa_Derecha === "ARS"
-                                                            ? "$ "
-                                                            : `${tarifa.Divisa_Derecha} `}
-                                                        {tarifa.Tarifa_Derecha
-                                                            ? tarifa.Tarifa_Derecha.toLocaleString().replace(
-                                                                /,/g,
-                                                                "."
-                                                            )
-                                                            : "Consultar tarifa"}
-                                                    </div>
+                                                    {tarifa.Tarifa_Izquierda <= 0 ?
+                                                        (<div className="priceStyle left">
+                                                            {tarifa.Divisa_Izquierda === "ARS"
+                                                                ? "$ "
+                                                                : `${tarifa.Divisa_Izquierda} `}
+                                                            {tarifa.Tarifa_Izquierda
+                                                                ? tarifa.Tarifa_Izquierda.toLocaleString().replace(
+                                                                    /,/g,
+                                                                    "."
+                                                                )
+                                                                : "Consultar tarifa"}
+                                                        </div>) : (null)
+                                                    }
+                                                    {tarifa.Divisa_Derecha <= 0 ?
+                                                        (<div className="priceStyle right">
+                                                            {tarifa.Divisa_Derecha === "ARS"
+                                                                ? "$ "
+                                                                : `${tarifa.Divisa_Derecha} `}
+                                                            {tarifa.Tarifa_Derecha
+                                                                ? tarifa.Tarifa_Derecha.toLocaleString().replace(
+                                                                    /,/g,
+                                                                    "."
+                                                                )
+                                                                : "Consultar tarifa"}
+                                                        </div>) : (null)}
+
                                                 </div>
                                             )
                                         )
