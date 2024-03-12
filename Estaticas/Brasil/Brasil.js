@@ -326,14 +326,14 @@ const Card = ({ destinos, onContactClick }) => {
     const [data, setData] = React.useState([]);
     const [pricesByDestino, setPricesByDestino] = React.useState({});
 
-    // const handleBannerClickLlamar = () => {
-    //     if (window.innerWidth <= 768) {
-    //         window.location.href = 'tel:08003480003';
-    //     } else {
-    //         setOpenModal(true);
-    //         console.log(openModal)
-    //     }
-    // };
+    const handleBannerClickLlamar = () => {
+        if (window.innerWidth <= 768) {
+            window.location.href = 'tel:08003480003';
+        } else {
+            setOpenModal(true);
+            console.log(openModal)
+        }
+    };
 
     const handleWhatsAppClick = () => {
         const whatsappURL = 'https://wa.link/64zdo9';
@@ -400,15 +400,15 @@ const Card = ({ destinos, onContactClick }) => {
                     }
 
                     acc[destino][card].push({
-                        Tarifa_Izquierda: item.attributes.Tarifa_Izquierda,
-                        Tarifa_Derecha: item.attributes.Tarifa_Derecha,
-                        Divisa_Izquierda: item.attributes.Divisa_Izquierda,
-                        Divisa_Derecha: item.attributes.Divisa_Derecha,
-                        Imagen_Card: item.attributes.Imagen_Card.data.attributes.url,
+                        Tarifa_Izquierda: item?.attributes?.Tarifa_Izquierda,
+                        Tarifa_Derecha: item?.attributes?.Tarifa_Derecha,
+                        Divisa_Izquierda: item?.attributes?.Divisa_Izquierda,
+                        Divisa_Derecha: item?.attributes?.Divisa_Derecha,
+                        Imagen_Card: item?.attributes?.Imagen_Card?.data?.attributes.url,
                     });
 
                     return acc;
-                }, {});
+                });
                 setPricesByDestino(prices);
             } catch (error) {
                 console.error(error);
