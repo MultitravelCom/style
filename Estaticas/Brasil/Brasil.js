@@ -451,7 +451,7 @@ const Card = ({ destinos, onContactClick }) => {
                                                 <source media="(min-width: 1024px)" srcSet={tarifa.Imagen_Card} />
                                                 <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={tarifa.Imagen_Card} />
                                                 <source media="(max-width: 767px)" srcSet={tarifa.Imagen_Card} />
-                                                <img alt={`Imagen Card ${tarifa.Imagen_Card}`} src={tarifa.Imagen_Card} />
+                                                <img alt={`Imagen Card ${tarifa.Card}`} src={tarifa.Imagen_Card} />
                                             </picture>
                                         )
                                     )

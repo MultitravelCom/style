@@ -4,7 +4,6 @@
             "id": "a1",
             "cardOrden": "Card 1",
             "destino": "Seccion_1",
-            "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/florianopolis-16.webp",
             "className": "uno",
             "title": "Paquete a Rio de Janeiro - Fecha 05 de Abril",
             "events": "si"
@@ -13,7 +12,6 @@
             "id": "a2",
             "cardOrden": "Card 2",
             "destino": "Seccion_1",
-            "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/florianopolis-17.webp",
             "className": "uno",
             "title": "Paquete a Rio de Janeiro - Fecha 07 de Junio",
             "events": "si"
@@ -22,7 +20,6 @@
             "id": "a3",
             "cardOrden": "Card 3",
             "destino": "Seccion_1",
-            "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/florianopolis-18.webp",
             "className": "uno",
             "title": "Paquete a Rio de Janeiro - Fecha 19 de Julio",
             "events": "si"
@@ -31,7 +28,6 @@
             "id": "a4",
             "cardOrden": "Card 4",
             "destino": "Seccion_1",
-            "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/florianopolis-19.webp",
             "className": "uno",
             "title": "Paquete a Fortaleza - Fecha 13 de Julio",
             "events": "si"
@@ -41,7 +37,6 @@
             "id": "b1",
             "cardOrden": "Card 1",
             "destino": "Seccion_2",
-            "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/buzios-15.webp",
             "className": "uno",
             "title": "Paquete a Buzios - Fecha 16 de Junio",
             "events": "si"
@@ -50,7 +45,6 @@
             "id": "b2",
             "cardOrden": "Card 2",
             "destino": "Seccion_2",
-            "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/buzios-16.webp",
             "className": "uno",
             "title": "Paquete a Buzios - Fecha 13 de Julio",
             "events": "si"
@@ -59,7 +53,6 @@
             "id": "b3",
             "destino": "Seccion_2",
             "cardOrden": "Card 3",
-            "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/buzios-17.webp",
             "className": "uno",
             "title": "Paquete a Porto Galinhas - Fecha 13 de Julio",
             "events": "si"
@@ -68,7 +61,6 @@
             "id": "b4",
             "cardOrden": "Card 4",
             "destino": "Seccion_2",
-            "img": "https://multitravelcom.github.io/MT/Evento/Landings-Doble/Brasil/buzios-19.webp",
             "className": "uno",
             "title": "Paquete a Maragogi - Fecha 13 de Julio",
             "events": "si"
