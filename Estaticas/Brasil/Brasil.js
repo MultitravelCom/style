@@ -340,6 +340,13 @@ const Card = ({ destinos, onContactClick }) => {
         window.open(whatsappURL, '_blank');
     };
 
+    const handleBannerClick = () => {
+        if (window.innerWidth <= 768) {
+          window.location.href = "tel:08003480003";
+        } else {
+          setOpenModal(true);
+        }
+      };
 
     React.useEffect(() => {
         fetchDestinos()
@@ -670,7 +677,7 @@ function App() {
     React.useEffect(() => {
         const fetchData = async () => {
             try {
-                await fetchDataFromAPI(); // Llamada a la función existente
+                await fetchDataFromAPI();
                 setLoaded(true);
             } catch (error) {
                 console.error('Error al obtener datos:', error);
