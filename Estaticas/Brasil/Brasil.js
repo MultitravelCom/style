@@ -415,10 +415,12 @@ const Card = ({ destinos, onContactClick }) => {
                         Imagen_Card: item?.attributes?.Imagen_Card?.data?.attributes?.url,
                     });
 
+                    console.log("Datos de la tarjeta:", acc[destino][card]);
+
                     return acc;
                 }, {});
                 setPricesByDestino(prices);
-                setPricesLoaded(true);
+               
             } catch (error) {
                 console.error(error);
             }
