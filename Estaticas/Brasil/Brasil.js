@@ -326,14 +326,14 @@ const Card = ({ destinos, onContactClick }) => {
     const [data, setData] = React.useState([]);
     const [pricesByDestino, setPricesByDestino] = React.useState({});
 
-    const handleBannerClickLlamar = () => {
-        if (window.innerWidth <= 768) {
-            window.location.href = 'tel:08003480003';
-        } else {
-            setOpenModal(true);
-            console.log(openModal)
-        }
-    };
+    // const handleBannerClickLlamar = () => {
+    //     if (window.innerWidth <= 768) {
+    //         window.location.href = 'tel:08003480003';
+    //     } else {
+    //         setOpenModal(true);
+    //         console.log(openModal)
+    //     }
+    // };
 
     const handleWhatsAppClick = () => {
         const whatsappURL = 'https://wa.link/64zdo9';
