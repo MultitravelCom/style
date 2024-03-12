@@ -416,7 +416,7 @@ const Card = ({ destinos, onContactClick }) => {
                     });
 
                     console.log("Datos de la tarjeta:", acc[destino][card]);
-                    console.log("URL de la imagen de la tarjeta:", item?.attributes?.Imagen_Card?.data?.attributes?.url);
+                    console.log("URL de la imagen de la tarjeta:", item?.attributes?.Imagen_Card[0]?.data?.attributes?.url);
 
 
                     return acc;
