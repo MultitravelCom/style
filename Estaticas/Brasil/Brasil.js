@@ -356,10 +356,8 @@ const Card = ({ destinos, onContactClick }) => {
                 // Verificar si data.destinos es un array
                 if (Array.isArray(data.destinos)) {
                     if (data.destinos.length > 0) {
-                        // setDestinos(data.destinos);
-                        // setLoaded(true);
+                   
                     } else {
-                        // setLoaded(true);
                         setNoDestinos(true);
                     }
                 } else {
@@ -414,10 +412,12 @@ const Card = ({ destinos, onContactClick }) => {
                         Tarifa_Derecha: item?.attributes?.Tarifa_Derecha,
                         Divisa_Izquierda: item?.attributes?.Divisa_Izquierda,
                         Divisa_Derecha: item?.attributes?.Divisa_Derecha,
-                        Imagen_Card: item?.attributes?.Imagen_Card?.data?.attributes?.url,
+                        Imagen_Card: item?.attributes?.Imagen_Card?.data?.attributes?.url
                     });
 
                     console.log("Datos de la tarjeta:", acc[destino][card]);
+                    console.log("URL de la imagen de la tarjeta:", item?.attributes?.Imagen_Card?.data?.attributes?.url);
+
 
                     return acc;
                 }, {});
