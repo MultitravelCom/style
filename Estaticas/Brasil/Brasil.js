@@ -412,11 +412,11 @@ const Card = ({ destinos, onContactClick }) => {
                         Tarifa_Derecha: item?.attributes?.Tarifa_Derecha,
                         Divisa_Izquierda: item?.attributes?.Divisa_Izquierda,
                         Divisa_Derecha: item?.attributes?.Divisa_Derecha,
-                        Imagen_Card: item?.attributes?.Imagen_Card?.data?.attributes?.url
+                        Imagen_Card: item?.attributes?.Imagen_Card?.data[0]?.attributes?.url
                     });
 
                     console.log("Datos de la tarjeta:", acc[destino][card]);
-                    console.log("URL de la Imagen_Card[0] de la tarjeta:", item?.attributes?.Imagen_Card?.data?.attributes?.url);
+                    console.log("URL de la Imagen_Card[0] de la tarjeta:", item?.attributes?.Imagen_Card?.data[0]?.attributes?.url);
 
 
                     return acc;
