@@ -113,7 +113,7 @@ async function fetchDataFromAPI() {
 
 async function fetchDataFromAPIPrice() {
     try {
-        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-brasils');
+        const response = await fetch('https://32tpwbxjq7.us-east-1.awsapprunner.com/api/landing-brasils?populate=*');
         if (!response.ok) {
             throw new Error('No se pudo obtener los datos de la API');
         }
