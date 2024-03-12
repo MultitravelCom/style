@@ -416,8 +416,9 @@ const Card = ({ destinos, onContactClick }) => {
                     });
 
                     return acc;
-                });
+                }, {});
                 setPricesByDestino(prices);
+                setPricesLoaded(true);
             } catch (error) {
                 console.error(error);
             }
