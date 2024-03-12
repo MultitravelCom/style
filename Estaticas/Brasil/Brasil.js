@@ -129,7 +129,9 @@ async function fetchDataFromAPIPrice() {
 // ************************************************
 // Filter
 function filtrarDestinos(destinos, nombreDestino) {
-    const destinosFiltrados = destinos.filter(destino => destino.destino === nombreDestino);
+    const destinosFiltrados = destinos.filter(
+        (destino) => destino.destino === nombreDestino
+    );
     return destinosFiltrados;
 }
 
@@ -420,7 +422,7 @@ const Card = ({ destinos, onContactClick }) => {
                     return acc;
                 }, {});
                 setPricesByDestino(prices);
-               
+
             } catch (error) {
                 console.error(error);
             }
