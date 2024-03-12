@@ -342,11 +342,11 @@ const Card = ({ destinos, onContactClick }) => {
 
     const handleBannerClick = () => {
         if (window.innerWidth <= 768) {
-          window.location.href = "tel:08003480003";
+            window.location.href = "tel:08003480003";
         } else {
-          setOpenModal(true);
+            setOpenModal(true);
         }
-      };
+    };
 
     React.useEffect(() => {
         fetchDestinos()
@@ -407,11 +407,12 @@ const Card = ({ destinos, onContactClick }) => {
                     }
 
                     acc[destino][card].push({
+                        Card: item?.attributes?.Card,
                         Tarifa_Izquierda: item?.attributes?.Tarifa_Izquierda,
                         Tarifa_Derecha: item?.attributes?.Tarifa_Derecha,
                         Divisa_Izquierda: item?.attributes?.Divisa_Izquierda,
                         Divisa_Derecha: item?.attributes?.Divisa_Derecha,
-                        Imagen_Card: item?.attributes?.Imagen_Card?.data?.attributes.url,
+                        Imagen_Card: item?.attributes?.Imagen_Card?.data?.attributes?.url,
                     });
 
                     return acc;
@@ -444,22 +445,10 @@ const Card = ({ destinos, onContactClick }) => {
                                     pricesByDestino[destino.destino][destino.cardOrden].map(
                                         (tarifa, index) => (
                                             <picture key={index}>
-                                                <source
-                                                    media="(min-width: 1024px)"
-                                                    srcSet={tarifa.Imagen_Card}
-                                                />
-                                                <source
-                                                    media="(min-width: 768px) and (max-width: 1023px)"
-                                                    srcSet={tarifa.Imagen_Card}
-                                                />
-                                                <source
-                                                    media="(max-width: 767px)"
-                                                    srcSet={tarifa.Imagen_Card}
-                                                />
-                                                <img
-                                                    alt={`Imagen banner ${tarifa.Imagen_Card}`}
-                                                    src={tarifa.Imagen_Card}
-                                                />
+                                                <source media="(min-width: 1024px)" srcSet={tarifa.Imagen_Card} />
+                                                <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={tarifa.Imagen_Card} />
+                                                <source media="(max-width: 767px)" srcSet={tarifa.Imagen_Card} />
+                                                <img alt={`Imagen Card ${tarifa.Imagen_Card}`} src={tarifa.Card} />
                                             </picture>
                                         )
                                     )
