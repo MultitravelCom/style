@@ -230,7 +230,6 @@ function homeElementDisplayNone() {
     if (homeElementDisplayNone) {
         document.body.style.display = 'none';
     }
-
 }
 
 homeElementDisplayNone();

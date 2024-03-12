@@ -38,7 +38,7 @@ function addHeaderLinks() {
     linkElement.setAttribute('rel', 'alternate');
     linkElement.setAttribute('hreflang', 'es-ar');
     linkElement.setAttribute('href', 'https://ar.multitravel.com');
-  
+
 
     document.head.appendChild(linkElement);
 }
@@ -134,9 +134,8 @@ function filtrarDestinos(destinos, nombreDestino) {
 }
 
 const btnStyles = [
-    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Paquetes Florianópolis - Alojamientos Florianópolis', destino: "Florianopolis" },
-    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: 'Paquetes Buzios - Alojamientos Buzios', destino: "Buzios" },
-    { carrusel: "carrusel__lista3", btnLeft: "btnLeft3", btnRight: "btnRight3", title: 'Costa Cruceros - MSC cruceros ', destino: "AllInclusive" },
+    { carrusel: "carrusel__lista", btnLeft: "btnLeft", btnRight: "btnRight", title: 'Paquetes a Brasil', destino: "Seccion_1" },
+    { carrusel: "carrusel__lista2", btnLeft: "btnLeft2", btnRight: "btnRight2", title: '', destino: "Seccion_2" },
 ];
 
 // *****************************************************
@@ -401,8 +400,11 @@ const Card = ({ destinos, onContactClick }) => {
                     }
 
                     acc[destino][card].push({
-                        Tarifa_Temporada_Alta: item.attributes.Tarifa_Temporada_Alta,
-                        Tarifa_Temporada_Baja: item.attributes.Tarifa_Temporada_Baja,
+                        Tarifa_Izquierda: item.attributes.Tarifa_Izquierda,
+                        Tarifa_Derecha: item.attributes.Tarifa_Derecha,
+                        Divisa_Izquierda: item.attributes.Divisa_Izquierda,
+                        Divisa_Derecha: item.attributes.Divisa_Derecha,
+                        Imagen_Card: item.attributes.Imagen_Card.data.attributes.url,
                     });
 
                     return acc;
@@ -427,38 +429,73 @@ const Card = ({ destinos, onContactClick }) => {
                                 className="main__conteiner__s1__destacado__card uno"
                                 style={{ height: "100%", width: "100%" }}
                             >
-                                {destino.events === "si" && shouldShowEvent() && (
+                                {/* {destino.events === "si" && shouldShowEvent() && (
                                     <EventImg style="eventImg" />
-                                )}                                <picture>
-
-                                    <source media="(min-width: 1024px)" srcSet={destino.img} />
-                                    <source
-                                        media="(min-width: 768px) and (max-width: 1023px)"
-                                        srcSet={destino.img}
-                                    />
-                                    <source media="(max-width: 767px)" srcSet={destino.img} />
-                                    <img
-                                        alt={`Imagen banner ${destino.title}`}
-                                        src={destino.img}
-
-                                    />
-                                </picture>
-                                <div className="main_container_priceStyle">
-                                    {pricesByDestino[destino.destino] && (
-                                        pricesByDestino[destino.destino][destino.cardOrden].map((tarifa, index) => (
-                                            <div key={index} className="main_container_priceStyle">
-                                {(tarifa.Tarifa_Temporada_Baja || tarifa.Tarifa_Temporada_Alta) && ( 
-                                    <div className="main_container_priceStyle">
-                                    {tarifa.Tarifa_Temporada_Baja && ( 
-                                        <div className="priceStyle left">${tarifa.Tarifa_Temporada_Baja.toLocaleString().replace(/,/g, '.')}</div>
-                                    )}
-                                    {tarifa.Tarifa_Temporada_Alta && ( 
-                                        <div className="priceStyle right">${tarifa.Tarifa_Temporada_Alta.toLocaleString().replace(/,/g, '.')}</div>
-                                    )}
-                                    </div>
+                                )} */}
+                                {pricesByDestino[destino.destino] &&
+                                    pricesByDestino[destino.destino][destino.cardOrden] ? (
+                                    pricesByDestino[destino.destino][destino.cardOrden].map(
+                                        (tarifa, index) => (
+                                            <picture key={index}>
+                                                <source
+                                                    media="(min-width: 1024px)"
+                                                    srcSet={tarifa.Imagen_Card}
+                                                />
+                                                <source
+                                                    media="(min-width: 768px) and (max-width: 1023px)"
+                                                    srcSet={tarifa.Imagen_Card}
+                                                />
+                                                <source
+                                                    media="(max-width: 767px)"
+                                                    srcSet={tarifa.Imagen_Card}
+                                                />
+                                                <img
+                                                    alt={`Imagen banner ${tarifa.Imagen_Card}`}
+                                                    src={tarifa.Imagen_Card}
+                                                />
+                                            </picture>
+                                        )
+                                    )
+                                ) : (
+                                    <p>No hay destinos disponibles.</p>
                                 )}
-                             </div>  
-                                        ))
+
+                                <div className="main_container_priceStyle">
+                                    {pricesByDestino[destino.destino] &&
+                                        pricesByDestino[destino.destino][destino.cardOrden] ? (
+                                        pricesByDestino[destino.destino][destino.cardOrden].map(
+                                            (tarifa, index) => (
+                                                <div key={index} className="main_container_priceStyle">
+                                                    <div className="priceStyle left">
+                                                        {tarifa.Divisa_Izquierda === "ARS"
+                                                            ? "$ "
+                                                            : `${tarifa.Divisa_Izquierda} `}
+                                                        {tarifa.Tarifa_Izquierda
+                                                            ? tarifa.Tarifa_Izquierda.toLocaleString().replace(
+                                                                /,/g,
+                                                                "."
+                                                            )
+                                                            : "Consultar tarifa"}
+                                                    </div>
+                                                    <div className="priceStyle right">
+                                                        {tarifa.Divisa_Derecha === "ARS"
+                                                            ? "$ "
+                                                            : `${tarifa.Divisa_Derecha} `}
+                                                        {tarifa.Tarifa_Derecha
+                                                            ? tarifa.Tarifa_Derecha.toLocaleString().replace(
+                                                                /,/g,
+                                                                "."
+                                                            )
+                                                            : "Consultar tarifa"}
+                                                    </div>
+                                                </div>
+                                            )
+                                        )
+                                    ) : (
+                                        <div className="main_container_priceStyle">
+                                            <div className="priceStyle left">Consultar tarifa</div>
+                                            <div className="priceStyle right">Consultar tarifa</div>
+                                        </div>
                                     )}
                                 </div>
                                 <div className="main__container__buttonsCars">
@@ -475,7 +512,7 @@ const Card = ({ destinos, onContactClick }) => {
                                                 id={destino.id}
                                                 className="classOpenModal"
                                                 text="Llamar"
-                                                onClick={handleBannerClickLlamar}
+                                                onClick={handleBannerClick}
                                                 svgType="phone"
                                             />
                                         </>
@@ -484,7 +521,7 @@ const Card = ({ destinos, onContactClick }) => {
                                             id={destino.id}
                                             className="btn_FormBitrix"
                                             text="Llamar Ahora"
-                                            onClick={handleBannerClickLlamar}
+                                            onClick={handleBannerClick}
                                         />
                                     )}
                                 </div>
@@ -503,6 +540,7 @@ const Card = ({ destinos, onContactClick }) => {
 };
 const CardContainer = ({ btnStyles, destinosFiltrados, onContactClick }) => {
     const { title, btnRight, btnLeft, carrusel, destino } = btnStyles;
+    const mostrarFechas = destinosFiltrados.length > 4;
 
     const setupGlider = () => {
         const btnLeftElement = document.querySelector(`.${btnLeft}`);
@@ -584,21 +622,25 @@ const CardContainer = ({ btnStyles, destinosFiltrados, onContactClick }) => {
                     </h2>
                 </div>
                 <div className="carrusel__contenedor">
-                    <button
-                        aria-label="Anterior"
-                        className={`carrusel__anterior ${btnLeft}`}
-                    >
-                        <i className="fa fa-chevron-left" aria-hidden="true"></i>
-                    </button>
+                    {mostrarFechas && (
+                        <button
+                            aria-label="Anterior"
+                            className={`carrusel__anterior ${btnLeft}`}
+                        >
+                            <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                    )}
                     <div className={carrusel} id={title}>
                         <Card destinos={destinosFiltrados} onContactClick={onContactClick} />
                     </div>
-                    <button
-                        aria-label="Siguiente"
-                        className={`carrusel__siguiente ${btnRight}`}
-                    >
-                        <i className="fa fa-chevron-right" aria-hidden="true"></i>
-                    </button>
+                    {mostrarFechas && (
+                        <button
+                            aria-label="Siguiente"
+                            className={`carrusel__siguiente ${btnRight}`}
+                        >
+                            <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    )}
                 </div>
             </div>
         </>
@@ -611,9 +653,8 @@ function App() {
     const [isFormVisible, setIsFormVisible] = React.useState(false);
 
 
-    const Florianopolis = filtrarDestinos(destinos, "Florianopolis");
-    const Buzios = filtrarDestinos(destinos, 'Buzios');
-    const AllInclusive = filtrarDestinos(destinos, 'AllInclusive');
+    const seccion_uno = filtrarDestinos(destinos, "Seccion_1");
+    const seccion_dos = filtrarDestinos(destinos, 'Seccion_2');
 
     const handleOpenForm = (formId) => {
 
@@ -665,11 +706,10 @@ function App() {
                     } */}
                     <div className="main__conteiner main__conteiner-principal container">
                         <div className="carrusel">
-                            <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={Florianopolis} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[0]} destinosFiltrados={seccion_uno} onContactClick={handleOpenForm} />
 
-                            <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={Buzios} onContactClick={handleOpenForm} />
+                            <CardContainer btnStyles={btnStyles[1]} destinosFiltrados={seccion_dos} onContactClick={handleOpenForm} />
 
-                            <CardContainer btnStyles={btnStyles[2]} destinosFiltrados={AllInclusive} onContactClick={handleOpenForm} />
                         </div>
                     </div>
                     {isFormVisible && (
