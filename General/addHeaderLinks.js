@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function cambiarHrefNavBarPaquetes() {
-        const linkFlightsNav = document.querySelector('menu-option-trips');
+        const linkFlightsNav = document.querySelector('#menu-option-trips');
         if (linkFlightsNav) {
             linkFlightsNav.href = "https://multitravel.com.ar/paquetes-turisticos";
         }
