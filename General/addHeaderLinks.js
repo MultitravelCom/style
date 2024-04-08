@@ -205,6 +205,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function cambiarHrefNavBarPaquetes() {
+        const linkFlightsNav = document.querySelector('menu-option-trips');
+        if (linkFlightsNav) {
+            linkFlightsNav.href = "https://multitravel.com.ar/paquetes-turisticos";
+        }
+    }
+
     function cambiarHreLogoHeader() {
         const linkLogo = document.querySelector('#logo');
         if (linkLogo) {
@@ -223,6 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
     cambiarHreLogoHeader();
     cambiarHrefNavBar();
     homeElementDisplayNone();
+    cambiarHrefNavBarPaquetes();
 });
 
 function homeElementDisplayNone() {
