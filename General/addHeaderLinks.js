@@ -213,9 +213,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function cambiarHreLogoHeader() {
-        const linkLogo = document.querySelector('#logo');
-        if (linkLogo) {
-            linkLogo.href = "https://multitravel.com.ar/";
+        const linkHrefAloja = document.querySelector('#logo');
+        if (linkHrefAloja) {
+            linkHrefAloja.href = "https://multitravel.com.ar/";
         }
     }
 
