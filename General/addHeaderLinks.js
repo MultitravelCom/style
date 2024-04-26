@@ -219,16 +219,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function cambiarHrefNavBarAloja() {
+        const linkFlightsNav = document.querySelector('#menu-option-hotels');
+        if (linkFlightsNav) {
+            linkFlightsNav.href = "https://multitravel.com.ar/hotels";
+        }
+    }
+
+
     function homeElementDisplayNone() {
         const homeElementDisplayNone = document.getElementById('home');
         if (homeElementDisplayNone) {
             document.body.style.display = 'none';
         }
-
     }
 
     cambiarHreLogoHeader();
     cambiarHrefNavBar();
+    cambiarHrefNavBarAloja()
     homeElementDisplayNone();
     cambiarHrefNavBarPaquetes();
 });
