@@ -158,7 +158,6 @@ function ocultarSuplementosAmichi() {
 
     if (elements) {
         elements.forEach(function(element) {
-            console.los("Se encontraron elementos para ocultar.")
             element.style.display = 'none';
         });
     } else {
