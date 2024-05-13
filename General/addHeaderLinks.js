@@ -152,9 +152,23 @@ function ocultarWhatsAppFixesHotels() {
         }
     }
 }
+
+function ocultarSuplementosAmichi() {
+    let elements = document.querySelectorAll('.booking-data__section.booking-data__supplements.js-hotel-supplements-placeholder');
+
+    if (elements) {
+        elements.forEach(function(element) {
+            element.style.display = 'none';
+        });
+    } else {
+        console.log('No se encontraron elementos para ocultar.');
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     verificarYActualizarMeta();
-    ocultarWhatsAppFixesHotels()
+    ocultarWhatsAppFixesHotels();
+    ocultarElementos();
 });
 
 //************************************ MULT-213*************************************************************** */
@@ -247,5 +261,4 @@ function homeElementDisplayNone() {
         document.body.style.display = 'none';
     }
 }
-
 homeElementDisplayNone();
