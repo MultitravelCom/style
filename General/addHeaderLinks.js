@@ -169,7 +169,7 @@ function ocultarSuplementosAmichi() {
 document.addEventListener("DOMContentLoaded", function () {
     verificarYActualizarMeta();
     ocultarWhatsAppFixesHotels();
-    ocultarElementos();
+    ocultarSuplementosAmichi();
 });
 
 //************************************ MULT-213*************************************************************** */
