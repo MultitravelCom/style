@@ -17,7 +17,7 @@ function addHeaderLinks() {
     const path = window.location.pathname;
 
 
-    const copyTaxRg = path.includes('/flights') || path.includes('/booking/') || path.includes('/hotels/');
+    const copyTaxRg = path.includes('/vuelos') || path.includes('/booking/') || path.includes('/hotels/');
     if (copyTaxRg) {
         const copyTaxRegStyle = document.createElement('link');
         const copyTaxRegJs = document.createElement('script');
@@ -30,7 +30,7 @@ function addHeaderLinks() {
         head.appendChild(copyTaxRegStyle);
         head.appendChild(copyTaxRegJs);
     }
-    const copyTaxRgComponent = path.includes('/flights/results');
+    const copyTaxRgComponent = path.includes('/vuelos/results');
 
     // if (copyTaxRgComponent) {
     //     const copyTaxRgComponentJs = document.createElement('script');
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function cambiarHrefNavBar() {
         const linkFlightsNav = document.querySelector('#menu-option-flights');
         if (linkFlightsNav) {
-            linkFlightsNav.href = "https://multitravel.com.ar/flights";
+            linkFlightsNav.href = "https://multitravel.com.ar/vuelos";
         }
     }
 
