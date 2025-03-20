@@ -211,49 +211,49 @@ function disableMailchimpMobile() {
 
 disableMailchimpMobile();
 // ***********************************************************************
-document.addEventListener('DOMContentLoaded', function () {
-    function cambiarHrefNavBar() {
-        const linkFlightsNav = document.querySelector('#menu-option-flights');
-        if (linkFlightsNav) {
-            linkFlightsNav.href = "https://multitravel.com.ar/vuelos";
-        }
-    }
+// document.addEventListener('DOMContentLoaded', function () {
+//     function cambiarHrefNavBar() {
+//         const linkFlightsNav = document.querySelector('#menu-option-flights');
+//         if (linkFlightsNav) {
+//             linkFlightsNav.href = "https://multitravel.com.ar/vuelos";
+//         }
+//     }
 
-    function cambiarHrefNavBarPaquetes() {
-        const linkFlightsNav = document.querySelector('#menu-option-trips');
-        if (linkFlightsNav) {
-            linkFlightsNav.href = "https://multitravel.com.ar/paquetes-prearmados";
-        }
-    }
+//     function cambiarHrefNavBarPaquetes() {
+//         const linkFlightsNav = document.querySelector('#menu-option-trips');
+//         if (linkFlightsNav) {
+//             linkFlightsNav.href = "https://multitravel.com.ar/paquetes-prearmados";
+//         }
+//     }
 
-    function cambiarHreLogoHeader() {
-        const linkHrefAloja = document.querySelector('#logo');
-        if (linkHrefAloja) {
-            linkHrefAloja.href = "https://multitravel.com.ar/";
-        }
-    }
+//     function cambiarHreLogoHeader() {
+//         const linkHrefAloja = document.querySelector('#logo');
+//         if (linkHrefAloja) {
+//             linkHrefAloja.href = "https://multitravel.com.ar/";
+//         }
+//     }
 
-    function cambiarHrefNavBarAloja() {
-        const linkFlightsNav = document.querySelector('#menu-option-hotels');
-        if (linkFlightsNav) {
-            linkFlightsNav.href = "https://multitravel.com.ar/hoteles";
-        }
-    }
+//     function cambiarHrefNavBarAloja() {
+//         const linkFlightsNav = document.querySelector('#menu-option-hotels');
+//         if (linkFlightsNav) {
+//             linkFlightsNav.href = "https://multitravel.com.ar/hoteles";
+//         }
+//     }
 
 
-    function homeElementDisplayNone() {
-        const homeElementDisplayNone = document.getElementById('home');
-        if (homeElementDisplayNone) {
-            document.body.style.display = 'none';
-        }
-    }
+//     function homeElementDisplayNone() {
+//         const homeElementDisplayNone = document.getElementById('home');
+//         if (homeElementDisplayNone) {
+//             document.body.style.display = 'none';
+//         }
+//     }
 
-    cambiarHreLogoHeader();
-    cambiarHrefNavBar();
-    cambiarHrefNavBarAloja()
-    homeElementDisplayNone();
-    cambiarHrefNavBarPaquetes();
-});
+//     cambiarHreLogoHeader();
+//     cambiarHrefNavBar();
+//     cambiarHrefNavBarAloja()
+//     homeElementDisplayNone();
+//     cambiarHrefNavBarPaquetes();
+// });
 
 function homeElementDisplayNone() {
     const homeElementDisplayNone = document.getElementById('home');
